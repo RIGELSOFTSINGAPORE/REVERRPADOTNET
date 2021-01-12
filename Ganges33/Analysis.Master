@@ -96,9 +96,9 @@
 	font-weight: bold;
 }
 
-/*	.ui-widget-header a {
+	.ui-widget-header a {
 		color: #eaf5f7;
-	}*/
+	}
 
 	/* Interaction states   Ram
 ----------------------------------*/
