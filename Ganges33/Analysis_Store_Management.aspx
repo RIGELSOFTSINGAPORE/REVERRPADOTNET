@@ -685,13 +685,13 @@
         <asp:Button ID="ImageButton4" runat="server" OnClick="ImageButton4_Click" Text="Send"  Class="btn btn-primary pull-right" />
     </div>
 
-       <div class="table-responsive"  runat="server" id="Table5">
+       <div class="table-responsive col-sm-12"  runat="server" id="Table5">
                      
                         <table class="table">
                           <thead class=" text-primary">
                             
                             <tr>
-                              <th style="background: transparent;border: none;"></th>
+                            
                                 <th colspan="2">
                               <asp:Label ID="Label44" runat="server" Text="SSC1"></asp:Label>
                             </th>
@@ -731,7 +731,7 @@
                           </thead>
                           <tbody>
                             <tr>
-                            <td style="background: transparent;border: none;"></td>
+         
                               <td><asp:Label ID="Label72" runat="server" Text="IW"></asp:Label></td>
                                 <td>
                           <asp:Label ID="Label80" runat="server" Text="OW"></asp:Label>                               
@@ -799,7 +799,7 @@
                               </td>
                             </tr>
                               <tr>
-                                  <td style="background: transparent;border: none;"></td>
+                                 
                              <td >
                             <asp:Label ID="lblSSC1IW" runat="server" Text=""></asp:Label>
                         </td>
@@ -860,7 +860,7 @@
                         </td>
                     </tr>
                     <tr>
-                       <td style="background: transparent;border: none;"></td>
+                      
                         <td colspan="2">
                             <asp:Label ID="lblIO1" runat="server" Text=""></asp:Label>
                         </td>
@@ -898,7 +898,7 @@
                           </tbody>
                         </table>
                       </div>
-        <div class="table-responsive" runat="server" id="Table7">
+        <div class="table-responsive col-sm-12" runat="server" id="Table7">
                      
                         <table class="table">
                           <thead class=" text-primary">
@@ -940,7 +940,7 @@
                         </th>
                     </tr>
                                <tr>
-                       
+                    
                         <td >
                             <asp:Label ID="lblRWTSSC1" Class="bmd-label-floating" runat="server" Text=""></asp:Label>
                         </td>
@@ -977,10 +977,11 @@
                     </tr>
                               </table>
             </div>
-      <div id="tblSingle" runat="server" class="row" >
-          <div class="col-sm-4"></div>
-         
-                  <table class="table"  style="width:400px;  text-align:center">
+      <br />
+      <div id="tblSingle" runat="server" class="row col-sm-12" >
+          
+         <div >
+                  <table class="table"  style="width:400px;margin-left:50%; text-align:center">
                           <thead class=" text-primary">
                     <tr>
                        
@@ -1017,13 +1018,13 @@
                 </table>
           
           </div>
-     
+     </div>
                 <br />
-          <div id="tblSingleRWT" runat="server" class="row" >
+          <div id="tblSingleRWT" runat="server" class="row col-sm-12" >
 
-              <div class="col-sm-4"></div>
+           
               <div>
-                <table class="table" style="width:400px; ">
+                <table class="table" style="width:400px; margin-left:50% ">
    <thead class=" text-primary">
                     <tr>
                         

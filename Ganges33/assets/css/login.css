@@ -10,7 +10,7 @@ text-transform: capitalize;
 }
 .workSpace {
     display: flex;
-    position: absolute;
+    position: fixed;
     min-width: 420px;
     left: 50%;
     top: 50%;

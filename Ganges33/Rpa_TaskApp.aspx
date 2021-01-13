@@ -49,7 +49,7 @@
                   <h3 class="card-title ">RPA Task</h3>
                   <p class="card-category"></p>
                 </div>
-                <div  class="card-body   scrollbar "  id="style-10" >
+                <div  class="card-body   scrollbar "  id="style-10" style="height:460px" >
                   <div class="form-group">
             <asp:Label ID="lblInfo" Class="bmd-label-floating" runat="server"></asp:Label>
         </div>
@@ -102,7 +102,7 @@
 
 </Columns>
 </asp:GridView><br />
-                <asp:Button id="btnUpDateGspnPwd" runat="server" class="btn btn-primary pull-right" Text="Update GSPN password"/>
+                <asp:Button id="btnUpDateGspnPwd" runat="server" class="btn btn-primary btn-lbl pull-right" Text="Update GSPN password"/>
             <br />     
             </div>
                 <br />
@@ -356,8 +356,7 @@
         </div>
      </div>
     <asp:Button ID="btnUploadPrg" runat="server" style="display:none;" class="btn btn-primary btn-lbl"  Text="New Task (Python Code)  " />
-             &nbsp;&nbsp;&nbsp;&nbsp;
-
+            
      <div id="dialog" title="message" style="display:none;"> >
         <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
     </div>

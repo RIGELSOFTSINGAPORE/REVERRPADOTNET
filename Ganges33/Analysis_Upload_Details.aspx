@@ -38,7 +38,7 @@
     
 
    
-   <div class="wrapper  col-sm-12 sidebar-wrapper position-fixed scrolbar contain" id="style-10">
+   <div class="wrapper  col-sm-12 sidebar-wrapper position-fixed scrolbar contain" style="padding-right: 22px;" id="style-10">
    
     <div class="content" >
       

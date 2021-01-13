@@ -13,6 +13,14 @@
     <script type="text/javascript"  src="assets/jquery-ui.min_lips.js"></script>
 
 
+	  <link href="assets/jquery-ui_theme.css" rel="stylesheet" />
+    <link href="assets/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript"  src="assets/jquery-ui.min_lips.js"></script>
+
+
+
+    <link href="CSS/Common/Login.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/login.css" rel="stylesheet" />
 
     <link href="CSS/Common/Login.css" rel="stylesheet" type="text/css" />
     <link href="assets/css/login.css" rel="stylesheet" />

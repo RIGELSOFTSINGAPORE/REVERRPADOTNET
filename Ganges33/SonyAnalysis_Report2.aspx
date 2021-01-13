@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Analysis.Master" CodeBehind="Analysis_Report2.aspx.vb" Inherits="Ganges33.Analysis_Report2" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/SonyAnalysis.Master" CodeBehind="SonyAnalysis_Report2.aspx.vb" Inherits="Ganges33.SonyAnalysis_Report2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
@@ -45,7 +45,7 @@
               
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h3 class="card-title ">Review Activity Report</h3>
+                  <h3 class="card-title ">Review Sony Activity Report</h3>
                   <p class="card-category"></p>
                 </div>
                   <div class="card-body scrollbar" id="style-10">
@@ -54,12 +54,31 @@
                         <div class="row col-sm-10">
                         <div class="col-sm-3">
                             <br />
-                             <Label ID="Label6" runat="server" CssClass="bmd-label-floating ">Activity Month</Label>
+                             <Label ID="Label6" runat="server" CssClass="bmd-label-floating serverlbl">Activity Month</Label>
                             <asp:Label ID="lblMonNow" runat="server" Font-Bold="true" CssClass="bmd-label-floating serverlbl"></asp:Label>
                             
                         </div>
-                            <div>
-                                 </div>
+                            <div class="col-sm-1">
+                                <br />
+                            <asp:Label ID="Label1"  CssClass="bmd-label-floating serverlbl" runat="server" GroupName="gender"  Text="All"></asp:Label>
+                  <asp:RadioButton ID="RadioAll" runat="server" AutoPostBack="true" Checked="True" />
+                            </div>
+                            <div >
+                                <br />
+                     <asp:Label ID="Label2"  CssClass="bmd-label-floating serverlbl" runat="server" GroupName="gender"  Text="Service"></asp:Label>
+                   <asp:RadioButton ID="RadioService" runat="server" AutoPostBack="true" />
+                             </div>
+                            <div class="col-sm-1">
+                                <br />
+                        <asp:Label ID="Label3"  CssClass="bmd-label-floating serverlbl" runat="server" GroupName="gender"  Text="D&I"></asp:Label>
+                    <asp:RadioButton ID="RadioD_I" runat="server" AutoPostBack="true" />
+                         </div>
+                            <div >
+                                <br />
+                        <asp:Label ID="Label4"  CssClass="bmd-label-floating serverlbl" runat="server" GroupName="gender"  Text="Total"></asp:Label>
+                   <asp:RadioButton ID="RadioTotal" runat="server" AutoPostBack="true" />
+                           </div> 
+                            
                         </div>
                         <div class="col-sm-12">
                             <div >
@@ -67,13 +86,14 @@
                                 </div>
                             <div>
                                 <asp:Button ID="btnBack" runat="server" text="Back" CssClass="btn btn-primary pull-right" />
-                             
-                               
-                               <br />
-                 <br />
+                              
+                
+
                             </div>
-                          
-                              <div style="height:5px"></div>
+                              <div >
+                                  <asp:Button ID="btnSend" runat="server" text="Send" CssClass="btn btn-primary pull-right" />
+                     
+                              </div>
                         </div>
                           
                     </div>
@@ -105,7 +125,8 @@
 
         <asp:Button ID="BtnCancel" runat="server" Text="Button" style="display:none;"/>
         <asp:Button ID="BtnOK" runat="server" Text="Button" style="display:none;" />
-     
+   
+
     <div id="dialog" title="message" style="display:none;"> >
         <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
     </div>

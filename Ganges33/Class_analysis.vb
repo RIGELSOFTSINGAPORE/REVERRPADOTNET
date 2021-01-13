@@ -46,6 +46,30 @@ Public Class Class_analysis
         Dim Labor As Decimal
         Dim Parts As Decimal
     End Structure
+    ''SonyDailyStatement_Repart
+    Public Structure SONYDAILYSTATEMENTREPART
+        Dim IW_Labor As Decimal  '③
+        Dim IW_Parts As Decimal　'④　
+        Dim IW_Transport As Decimal
+        Dim IW_Others As Decimal
+        Dim IW_Tax As Decimal　　'⑤　
+        Dim IW_total As Decimal　'⑥
+        Dim OW_Labor As Decimal　'⑦
+        Dim OW_Parts As Decimal  '⑧   
+        Dim OW_Transport As Decimal
+        Dim OW_Others As Decimal
+        Dim OW_Tax As Decimal　　'⑨
+        Dim OW_total As Decimal　'⑩
+        Dim IW_goods_total As Integer　'①
+        Dim OW_goods_total As Integer　'②
+        Dim IW_Count As Integer
+        Dim OW_Count As Integer
+        Dim Billing_date As String
+        Dim GoodsDelivered_date As String
+        'Comment on 20190916
+        Dim Labor As Decimal
+        Dim Parts As Decimal
+    End Structure
     'GSPNシステムのhtmlデータ
     Public Structure PAID_CHEK
         Dim Billing_Doc As String
@@ -63,6 +87,92 @@ Public Class Class_analysis
         Dim Goods_Delivered As Integer
         Dim Pending_Calls As Integer
         Dim Cancelled_Calls As Integer
+        Dim day As String  'mon-dd' 例）jun-01
+        Dim day2 As String 'YYYY/MM/DD'
+        Dim youbi As String
+        Dim month As String 'YYYY/MM'
+        Dim ActYear As String 'YYYY /* Added Mon Year VJ 20100106*/
+        Dim ActMonth As String  'MM /* Added Mon Year VJ 20100106*/
+        Dim note As String
+        Dim location As String
+
+        'Comment on 20200106
+        Dim Labor As Decimal
+        Dim Parts As Decimal
+        Dim Billing_date As String
+
+    End Structure
+
+    'Sony_Activity_Report
+    Public Structure SONY_ACTIVITY_REPORT
+        'Dim Service As Integer
+        'Dim Type As Integer
+        'Dim Customer_Visit As Integer
+        'Dim Call_Registerd As Integer
+        'Dim Repair_Completed As Integer
+        'Dim Goods_Delivered As Integer
+        'Dim Pending_Calls As Integer
+        'Dim Cancelled_Calls As Integer
+        'Dim Reservation As Integer
+        'Dim Total As Integer
+
+        Dim Customer_Visit_S As Decimal
+        Dim Call_Registerd_S As Decimal
+        Dim Repair_Completed_S As Decimal
+        Dim Goods_Delivered_S As Decimal
+        Dim Pending_Calls_S As Decimal
+        Dim Cancelled_Calls_S As Decimal
+        Dim Reservation_S As Decimal
+
+
+        Dim Customer_Visit_D As Decimal
+        Dim Call_Registerd_D As Decimal
+        Dim Repair_Completed_D As Decimal
+        Dim Goods_Delivered_D As Decimal
+        Dim Pending_Calls_D As Decimal
+        Dim Cancelled_Calls_D As Decimal
+        Dim Reservation_D As Decimal
+
+
+        Dim Customer_Visit_T As Decimal
+        Dim Call_Registerd_T As Decimal
+        Dim Repair_Completed_T As Decimal
+        Dim Goods_Delivered_T As Decimal
+        Dim Pending_Calls_T As Decimal
+        Dim Cancelled_Calls_T As Decimal
+        Dim Reservation_T As Decimal
+
+        Dim WarrantyNumber As Decimal
+        Dim INWarrantyNumber As Decimal
+        Dim OutWarrantyNumber As Decimal
+        Dim InWarrantyAmount As Decimal
+        Dim InWarrantyLabor As Decimal
+        Dim InWarrantyparts As Decimal
+        Dim InWarrantyTransport As Decimal
+        Dim InWarrantyothers As Decimal
+        Dim OutwarrantyAmount As Decimal
+        Dim OutwarrantyLabor As Decimal
+        Dim Outwarrantyparts As Decimal
+        Dim Outwarrantytransports As Decimal
+        Dim Outwarrantyothers As Decimal
+        Dim Sawdiscountlabor As Decimal
+        Dim Sawdiscountparts As Decimal
+        Dim OutwarrantyLaborwSAWDisc As Decimal
+        Dim OutlaborFee As Decimal
+        Dim HomeServiceFee As Decimal
+        Dim LongFee As Decimal
+        Dim OutWarrantyPartswSAWDisc As Decimal
+        Dim RevenueWithoutTax As String
+        Dim IWPartsConsumed As Decimal
+        Dim TotalPartsConsumed As Decimal
+        Dim PrimeCostTotal As Decimal
+        Dim GrossProfit As String
+        Dim TotalPercentage As String
+
+
+
+
+
         Dim day As String  'mon-dd' 例）jun-01
         Dim day2 As String 'YYYY/MM/DD'
         Dim youbi As String
@@ -110,6 +220,17 @@ Public Class Class_analysis
         Dim customer_name As String
         Dim customer_tel As String
         Dim samsung_claim_no As String
+        Dim product_name As String
+        Dim cash As Decimal
+        Dim ship_code As String
+    End Structure
+
+    'SonyCustody
+    Public Structure SONYCUSTODY
+        Dim keep_no As String
+        Dim customer_name As String
+        Dim customer_tel As String
+        Dim sony_claim_no As String
         Dim product_name As String
         Dim cash As Decimal
         Dim ship_code As String
@@ -281,9 +402,179 @@ Public Class Class_analysis
         Dim payment As String
         'Comment on 20190809
         'Added
+    End Structure
+
+    ''SonyWTyExcel
+    Public Structure SONYWTY_EXCEL
+        Dim OW_Labor As String
+        Dim OW_Parts As String
+        Dim OW_total As String
+        Dim OW_Tax As String
+        Dim ASC_Code As String
+        Dim Branch_Code As String
+        Dim ASC_Claim_No As String
+        Dim Sony_Claim_No As String
+        Dim Service_Type As String
+        Dim Consumer_Name As String
+        Dim Consumer_Addr1 As String
+        Dim Consumer_Addr2 As String
+        Dim Consumer_Telephone As String
+        Dim Consumer_Fax As String
+        Dim Postal_Code As String
+        Dim Model As String
+        Dim Serial_No As String
+        Dim IMEI_No As String
+        Dim Defect_Type As String
+        Dim Condition As String
+        Dim Symptom As String
+        Dim Defect_Code As String
+        Dim Repair_Code As String
+        Dim Defect_Desc As String
+        Dim Repair_Description As String
+        Dim Purchase_Date As String
+        Dim Repair_Received_Date As String
+        Dim Completed_Date As String
+        Dim Delivery_Date As String
+        Dim Production_Date As String
+        Dim Labor_Amount As Decimal
+        Dim Parts_Amount As Decimal
+        Dim Tax As String
+        Dim Freight As String
+        Dim Other As String
+        Dim Parts_SGST As Decimal
+        Dim Parts_UTGST As Decimal
+        Dim Parts_CGST As Decimal
+        Dim Parts_IGST As Decimal
+        Dim Parts_Cess As Decimal
+        Dim SGST As Decimal
+        Dim UTGST As Decimal
+        Dim CGST As Decimal
+        Dim IGST As Decimal
+        Dim Cess As Decimal
+        Dim Total_Invoice_Amount As String
+        Dim Remark As String
+        Dim Tr_No As String
+        Dim Tr_Type As String
+        Dim Status As String
+        Dim Engineer As String
+        Dim Collection_Point As String
+        Dim Collection_Point_Name As String
+        Dim Location_1 As String
+        Dim Part_1 As String
+        Dim Qty_1 As String
+        Dim Unit_Price_1 As String
+        Dim Doc_Num_1 As String
+        Dim Matrial_Serial_1 As String
+        Dim Location_2 As String
+        Dim Part_2 As String
+        Dim Qty_2 As String
+        Dim Unit_Price_2 As String
+        Dim Doc_Num_2 As String
+        Dim Matrial_Serial_2 As String
+        Dim Location_3 As String
+        Dim Part_3 As String
+        Dim Qty_3 As String
+        Dim Unit_Price_3 As String
+        Dim Doc_Num_3 As String
+        Dim Matrial_Serial_3 As String
+        Dim Location_4 As String
+        Dim Part_4 As String
+        Dim Qty_4 As String
+        Dim Unit_Price_4 As String
+        Dim Doc_Num_4 As String
+        Dim Matrial_Serial_4 As String
+        Dim Location_5 As String
+        Dim Part_5 As String
+        Dim Qty_5 As String
+        Dim Unit_Price_5 As String
+        Dim Doc_Num_5 As String
+        Dim Matrial_Serial_5 As String
+        Dim Location_6 As String
+        Dim Part_6 As String
+        Dim Qty_6 As String
+        Dim Unit_Price_6 As String
+        Dim Doc_Num_6 As String
+        Dim Matrial_Serial_6 As String
+        Dim Location_7 As String
+        Dim Part_7 As String
+        Dim Qty_7 As String
+        Dim Unit_Price_7 As String
+        Dim Doc_Num_7 As String
+        Dim Matrial_Serial_7 As String
+        Dim Location_8 As String
+        Dim Part_8 As String
+        Dim Qty_8 As String
+        Dim Unit_Price_8 As String
+        Dim Doc_Num_8 As String
+        Dim Matrial_Serial_8 As String
+        Dim Location_9 As String
+        Dim Part_9 As String
+        Dim Qty_9 As String
+        Dim Unit_Price_9 As String
+        Dim Doc_Num_9 As String
+        Dim Matrial_Serial_9 As String
+        Dim Location_10 As String
+        Dim Part_10 As String
+        Dim Qty_10 As String
+        Dim Unit_Price_10 As String
+        Dim Doc_Num_10 As String
+        Dim Matrial_Serial_10 As String
+        Dim Location_11 As String
+        Dim Part_11 As String
+        Dim Qty_11 As String
+        Dim Unit_Price_11 As String
+        Dim Doc_Num_11 As String
+        Dim Matrial_Serial_11 As String
+        Dim Location_12 As String
+        Dim Part_12 As String
+        Dim Qty_12 As String
+        Dim Unit_Price_12 As String
+        Dim Doc_Num_12 As String
+        Dim Matrial_Serial_12 As String
+        Dim Location_13 As String
+        Dim Part_13 As String
+        Dim Qty_13 As String
+        Dim Unit_Price_13 As String
+        Dim Doc_Num_13 As String
+        Dim Matrial_Serial_13 As String
+        Dim Location_14 As String
+        Dim Part_14 As String
+        Dim Qty_14 As String
+        Dim Unit_Price_14 As String
+        Dim Doc_Num_14 As String
+        Dim Matrial_Serial_14 As String
+        Dim Location_15 As String
+        Dim Part_15 As String
+        Dim Qty_15 As String
+        Dim Unit_Price_15 As String
+        Dim Doc_Num_15 As String
+        Dim Matrial_Serial_15 As String
+        '税金種類毎の合計
+        Dim SGST_Payable As Decimal
+        Dim CGST_Payable As Decimal
+        Dim IGST_Payable As Decimal
+        Dim Sum_Tax_Amount As Decimal
+        Dim Sum_Total_Invoice_Amount As Decimal
+        'InvoiceNo_Final
+        Dim InvoiceNo_Final As String
+        'parts種類の個数　例）part1,part2使用なら2
+        Dim partsCount As Integer
+        'parts情報の構造体(part1～part15の情報をセット)
+        Dim partsInfo() As PARTSINFO
+        'Invoice_updateの情報⇓
+        Dim Invoice As Decimal
+        Dim Labor As Decimal
+        Dim Parts As Decimal
+        Dim Parts_invoice_No As String
+        Dim Labor_Invoice_No As String
+        'payment情報（cash_trackテーブルより取得してセット）
+        Dim payment As String
+        'Comment on 20190809
+        'Added
 
 
     End Structure
+
     Public Structure PARTSINFO
         Dim PartsName As String
         Dim Qty As String
@@ -300,6 +591,27 @@ Public Class Class_analysis
         Dim Serial As String
         Dim Product As String
         Dim Serivice As String
+        Dim Defect_Code As String
+        Dim Currency As String
+        Dim Invoice As String
+        Dim Labor As String
+        Dim Parts As String
+        Dim Felight As String
+        Dim Other As String
+        Dim Tax As String
+    End Structure
+    'Sony Invoice
+    Public Structure SONYINVOICE
+        Dim Parts_invoice_No As String
+        Dim Labor_Invoice_No As String
+        Dim Invoice_date As DateTime
+        Dim number As String
+        Dim sony_Ref_No As String
+        Dim Your_Ref_No As String
+        Dim Model As String
+        Dim Serial As String
+        Dim Product As String
+        Dim Service As String
         Dim Defect_Code As String
         Dim Currency As String
         Dim Invoice As String
@@ -339,6 +651,39 @@ Public Class Class_analysis
         Dim SumTax As Decimal
         Dim SumTotal As Decimal
     End Structure
+
+    'SonyBilling
+    Public Structure SONYBILLINGINFODETAIL
+        'good_recived
+        Dim delivery_date As String    'Invoice Date
+        Dim GR_Date As String
+        Dim Invoice_No As String       'delivery_No
+        Dim local_invoice_No As String
+        Dim Items As String
+        Dim GR_Status As String
+        'Billing_Info
+        Dim Branch_Code As String
+        Dim Ship_Branch As String
+        Dim Invoice_No2 As String
+        Dim Delivery_No As String
+        Dim Amount As Decimal
+        Dim SGST_UTGST As Decimal
+        Dim CGST As Decimal
+        Dim IGST As Decimal
+        Dim Cess As Decimal
+        Dim Tax As Decimal
+        Dim Total As Decimal
+
+        '出力時に、Invoice_No毎に下記項目の合計値をセット
+        Dim SumAmount As Decimal
+        Dim SumSGST_UTGST As Decimal
+        Dim SumCGST As Decimal
+        Dim SumIGST As Decimal
+        Dim SumCess As Decimal
+        Dim SumTax As Decimal
+        Dim SumTotal As Decimal
+    End Structure
+
     Public Structure DELETE_LOG
         Dim del_user As String
         Dim del_datetime As String
@@ -1281,8 +1626,8 @@ Public Class Class_analysis
                     dr2("IW_Labor_total") = totalDailyStatementRepart(i).IW_Labor
                     dr2("IW_Parts_total") = totalDailyStatementRepart(i).IW_Parts
                     'Comment on 20190924
-                    '''dr2("IW_Transport_total") = 0
-                    '''dr2("IW_Others_total") = 0
+                    'dr2("IW_Transport_total") = 0
+                    'dr2("IW_Others_total") = 0
                     dr2("IW_Transport_total") = totalDailyStatementRepart(i).IW_Transport
                     dr2("IW_Others_total") = totalDailyStatementRepart(i).IW_Others
                     dr2("IW_Tax_total") = totalDailyStatementRepart(i).IW_Tax
@@ -1290,8 +1635,8 @@ Public Class Class_analysis
                     dr2("OW_Labor_total") = totalDailyStatementRepart(i).OW_Labor
                     dr2("OW_Parts_total") = totalDailyStatementRepart(i).OW_Parts
                     'Comment on 20190924
-                    '''dr2("OW_Transport_total") = 0
-                    '''dr2("OW_Others_total") = 0
+                    'dr2("OW_Transport_total") = 0
+                    'dr2("OW_Others_total") = 0
                     dr2("OW_Transport_total") = totalDailyStatementRepart(i).OW_Transport
                     dr2("OW_Others_total") = totalDailyStatementRepart(i).OW_Others
                     dr2("OW_Tax_total") = totalDailyStatementRepart(i).OW_Tax
@@ -3159,6 +3504,791 @@ Public Class Class_analysis
 
     End Sub
 
+    ''SonyWtyExcel
+    Public Sub SonysetWtyExcelDown(ByRef dsWtyExcel As DataSet, ByRef wtyData() As SONYWTY_EXCEL, ByVal userid As String, ByVal userName As String, ByVal shipCode As String, ByVal exportShipName As String, ByRef errFlg As Integer, ByVal setMon As String, ByVal dateFrom As String, ByVal dateTo As String)
+
+        'コネクションを取得
+        Dim con As SqlConnection = New SqlConnection(ConfigurationManager.ConnectionStrings("cnstr").ConnectionString)
+        con.Open()
+
+        'トランザクション開始＆コネクションオープン
+        Dim trn As SqlTransaction = con.BeginTransaction(IsolationLevel.ReadCommitted)
+
+        Try
+            Dim clsSetCommon As New Class_common
+            Dim dtNow As DateTime = clsSetCommon.dtIndia
+
+            '■更新対象を取得
+            Dim select_sql As String = ""
+            Dim ds As New DataSet
+
+            select_sql &= "SELECT B.OW_Labor, B.OW_Parts, B.OW_total, B.OW_Tax, A.* "
+            select_sql &= "FROM dbo.SonyWty_Excel A "
+            select_sql &= ",SonySC_DSR B "
+            select_sql &= "WHERE A.DELFG = 0 "
+            select_sql &= "AND A.ASC_Claim_No = B.ServiceOrder_No "
+            select_sql &= "AND A.Status = '80' "
+            select_sql &= "AND B.Branch_name = '" & exportShipName & "' "
+            select_sql &= "AND A.Branch_Code = '" & shipCode & "' "
+            select_sql &= "AND A.Delivery_Date = B.Billing_date "
+
+            If setMon = "00" Then
+                If dateTo <> "" Then
+                    If dateFrom <> "" Then
+                        select_sql &= "And LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),10) <= '" & dateTo & "' "
+                        select_sql &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),10) >= '" & dateFrom & "';"
+                    Else
+                        select_sql &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),10) <= '" & dateTo & "';"
+                    End If
+                Else
+                    If dateFrom <> "" Then
+                        select_sql &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),10) >= '" & dateFrom & "';"
+                    End If
+                End If
+
+            Else
+                select_sql &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),7) = '" & dtNow.ToLongDateString.Substring(0, 4) & "/" & setMon & "'; "
+            End If
+
+            Dim sqlSelect As New SqlCommand(select_sql, con, trn)
+            Dim Adapter As New SqlDataAdapter(sqlSelect)
+
+            Adapter.Fill(ds)
+
+            If ds.Tables(0).Rows.Count <> 0 Then
+
+                ReDim wtyData(ds.Tables(0).Rows.Count - 1)
+
+                For i = 0 To ds.Tables(0).Rows.Count - 1
+
+                    Dim dr As DataRow = ds.Tables(0).Rows(i)
+
+                    If dr("OW_Labor") IsNot DBNull.Value Then
+                        wtyData(i).OW_Labor = dr("OW_Labor")
+                    Else
+                        wtyData(i).OW_Labor = "0.00"
+                    End If
+
+                    If dr("OW_Parts") IsNot DBNull.Value Then
+                        wtyData(i).OW_Parts = dr("OW_Parts")
+                    Else
+                        wtyData(i).OW_Parts = "0.00"
+                    End If
+
+                    If dr("OW_total") IsNot DBNull.Value Then
+                        wtyData(i).OW_total = dr("OW_total")
+                    Else
+                        wtyData(i).OW_total = "0.00"
+                    End If
+
+                    If dr("OW_Tax") IsNot DBNull.Value Then
+                        wtyData(i).OW_Tax = dr("OW_Tax")
+                    Else
+                        wtyData(i).OW_Tax = "0.00"
+                    End If
+
+                    If dr("ASC_Claim_No") IsNot DBNull.Value Then
+                        wtyData(i).ASC_Claim_No = dr("ASC_Claim_No")
+                    End If
+
+                    If dr("Sony_Claim_No") IsNot DBNull.Value Then
+                        wtyData(i).Sony_Claim_No = dr("Sony_Claim_No")
+                    End If
+
+                Next i
+
+                '■更新
+                For i = 0 To wtyData.Length - 1
+
+                    Dim select_sql2 As String = ""
+                    select_sql2 &= "SELECT A.* "
+                    select_sql2 &= "FROM dbo.SonyWty_Excel A "
+                    select_sql2 &= "WHERE A.DELFG = 0 "
+                    select_sql2 &= "AND A.Status = '80' "
+                    select_sql2 &= "AND A.Branch_Code = '" & shipCode & "' "
+                    select_sql2 &= "AND A.ASC_Claim_No = '" & wtyData(i).ASC_Claim_No & "' "
+                    select_sql2 &= "AND A.Sony_Claim_No = '" & wtyData(i).Sony_Claim_No & "' "
+
+                    If setMon = "00" Then
+                        If dateTo <> "" Then
+                            If dateFrom <> "" Then
+                                select_sql2 &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),10) <= '" & dateTo & "' "
+                                select_sql2 &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),10) >= '" & dateFrom & "';"
+                            Else
+                                select_sql2 &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),10) <= '" & dateTo & "';"
+                            End If
+                        Else
+                            If dateFrom <> "" Then
+                                select_sql2 &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),10) >= '" & dateFrom & "';"
+                            End If
+                        End If
+
+                    Else
+                        select_sql2 &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),7) = '" & dtNow.ToLongDateString.Substring(0, 4) & "/" & setMon & "'; "
+                    End If
+
+                    Dim sqlSelect2 As New SqlCommand(select_sql2, con, trn)
+                    Dim Adapter2 As New SqlDataAdapter(sqlSelect2)
+                    Dim Builder2 As New SqlCommandBuilder(Adapter2)
+                    Dim ds2 As New DataSet
+
+                    Adapter2.Fill(ds2)
+
+                    If ds2.Tables(0).Rows.Count = 1 Then
+
+                        Dim dr As DataRow = ds2.Tables(0).Rows(0)
+
+                        dr("Labor_Amount_I") = wtyData(i).OW_Labor
+                        dr("Parts_Amount_I") = wtyData(i).OW_Parts
+                        dr("Total_Invoice_Amount_I") = wtyData(i).OW_total
+                        'dr("Tax") = wtyData(i).OW_Tax
+                        dr("UPDDT") = dtNow
+                        dr("UPDCD") = userid
+                        dr("upload_date") = dtNow
+                        dr("upload_user") = userName
+
+                        '更新
+                        Adapter2.Update(ds2)
+
+                    End If
+
+                Next i
+
+                '■コミット
+                trn.Commit()
+
+                '■更新後の情報を取得
+                Dim select_sql3 As String = ""
+                'Comment on 20190809
+                'Modified
+                '''''''''''Option1: Orginal
+                'select_sql3 &= "SELECT B.OW_Tax, A.* "
+                ''''''''''Option2: Feature
+                ''''''''''select_sql3 &= "SELECT C.Parts_invoice_No, C.Labor_Invoice_No,B.OW_Tax, A.* "
+                ''''''''''select_sql3 &= "AND C.samsung_Ref_No = B.ServiceOrder_No "
+                ''''''''''Option3: Runttion
+                select_sql3 &= "SELECT (SELECT TOP 1 Parts_invoice_No FROM SonyInvoice_update WHERE sony_Ref_No=A.ASC_Claim_No) AS 'Parts_invoice_No', "
+                select_sql3 &= " (SELECT TOP 1 Labor_Invoice_No FROM SonyInvoice_update WHERE sony_Ref_No=A.ASC_Claim_No) AS 'Labor_Invoice_No', "
+                select_sql3 &= " B.OW_Tax, A.* "
+                select_sql3 &= "FROM dbo.SonyWty_Excel A "
+                select_sql3 &= ",SonySC_DSR B "
+                select_sql3 &= "WHERE A.DELFG = 0 "
+                select_sql3 &= "AND A.ASC_Claim_No = B.ServiceOrder_No "
+                select_sql3 &= "AND A.Delivery_Date = B.Billing_date "
+                select_sql3 &= "AND A.Status = '80' "
+                select_sql3 &= "AND B.Branch_name = '" & exportShipName & "' "
+                select_sql3 &= "AND A.Branch_Code = '" & shipCode & "' "
+
+                If setMon = "00" Then
+                    If dateTo <> "" Then
+                        If dateFrom <> "" Then
+                            select_sql3 &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),10) <= '" & dateTo & "' "
+                            select_sql3 &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),10) >= '" & dateFrom & "';"
+                        Else
+                            select_sql3 &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),10) <= '" & dateTo & "';"
+                        End If
+                    Else
+                        If dateFrom <> "" Then
+                            select_sql3 &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),10) >= '" & dateFrom & "';"
+                        End If
+                    End If
+
+                Else
+                    select_sql3 &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),7) = '" & dtNow.ToLongDateString.Substring(0, 4) & "/" & setMon & "'; "
+                End If
+
+                Dim sqlSelect3 As New SqlCommand(select_sql3, con, trn)
+                Dim Adapter3 As New SqlDataAdapter(sqlSelect3)
+
+                Adapter3.Fill(dsWtyExcel)
+
+                If dsWtyExcel.Tables(0).Rows.Count = 0 Then
+                    dsWtyExcel = Nothing
+                Else
+
+                    '出力対象を構造体に設定
+                    ReDim wtyData(dsWtyExcel.Tables(0).Rows.Count - 1)
+
+                    For i = 0 To dsWtyExcel.Tables(0).Rows.Count - 1
+
+                        Dim dr As DataRow = dsWtyExcel.Tables(0).Rows(i)
+
+                        If dr("ASC_Code") IsNot DBNull.Value Then
+                            wtyData(i).ASC_Code = dr("ASC_Code")
+                        End If
+
+                        If dr("Branch_Code") IsNot DBNull.Value Then
+                            wtyData(i).Branch_Code = dr("Branch_Code")
+                        End If
+
+                        If dr("ASC_Claim_No") IsNot DBNull.Value Then
+                            wtyData(i).ASC_Claim_No = dr("ASC_Claim_No")
+                        End If
+
+                        If dr("Sony_Claim_No") IsNot DBNull.Value Then
+                            wtyData(i).Sony_Claim_No = dr("Sony_Claim_No")
+                        End If
+
+                        If dr("Service_Type") IsNot DBNull.Value Then
+                            wtyData(i).Service_Type = dr("Service_Type")
+                        End If
+
+                        If dr("Consumer_Name") IsNot DBNull.Value Then
+                            wtyData(i).Consumer_Name = dr("Consumer_Name")
+                        End If
+
+                        If dr("Consumer_Addr1") IsNot DBNull.Value Then
+                            wtyData(i).Consumer_Addr1 = dr("Consumer_Addr1")
+                        End If
+
+                        If dr("Consumer_Addr2") IsNot DBNull.Value Then
+                            wtyData(i).Consumer_Addr2 = dr("Consumer_Addr2")
+                        End If
+
+                        If dr("Consumer_Telephone") IsNot DBNull.Value Then
+                            wtyData(i).Consumer_Telephone = dr("Consumer_Telephone")
+                        End If
+
+                        If dr("Consumer_Fax") IsNot DBNull.Value Then
+                            wtyData(i).Consumer_Fax = dr("Consumer_Fax")
+                        End If
+
+                        If dr("Postal_Code") IsNot DBNull.Value Then
+                            wtyData(i).Postal_Code = dr("Postal_Code")
+                        End If
+
+                        If dr("Model") IsNot DBNull.Value Then
+                            wtyData(i).Model = dr("Model")
+                        End If
+
+                        If dr("Serial_No") IsNot DBNull.Value Then
+                            wtyData(i).Serial_No = dr("Serial_No")
+                        End If
+
+                        If dr("IMEI_No") IsNot DBNull.Value Then
+                            wtyData(i).IMEI_No = dr("IMEI_No")
+                        End If
+
+                        If dr("Defect_Type") IsNot DBNull.Value Then
+                            wtyData(i).Defect_Type = dr("Defect_Type")
+                        End If
+
+                        If dr("Condition") IsNot DBNull.Value Then
+                            wtyData(i).Condition = dr("Condition")
+                        End If
+
+                        If dr("Symptom") IsNot DBNull.Value Then
+                            wtyData(i).Symptom = dr("Symptom")
+                        End If
+
+                        If dr("Defect_Code") IsNot DBNull.Value Then
+                            wtyData(i).Defect_Code = dr("Defect_Code")
+                        End If
+
+                        If dr("Repair_Code") IsNot DBNull.Value Then
+                            wtyData(i).Repair_Code = dr("Repair_Code")
+                        End If
+
+                        If dr("Defect_Desc") IsNot DBNull.Value Then
+                            wtyData(i).Defect_Desc = dr("Defect_Desc")
+                        End If
+
+                        If dr("Repair_Description") IsNot DBNull.Value Then
+                            wtyData(i).Repair_Description = dr("Repair_Description")
+                        End If
+
+                        If dr("Purchase_Date") IsNot DBNull.Value Then
+                            wtyData(i).Purchase_Date = dr("Purchase_Date")
+                        End If
+
+                        If dr("Repair_Received_Date") IsNot DBNull.Value Then
+                            wtyData(i).Repair_Received_Date = dr("Repair_Received_Date")
+                        End If
+
+                        If dr("Completed_Date") IsNot DBNull.Value Then
+                            wtyData(i).Completed_Date = dr("Completed_Date")
+                        End If
+
+                        If dr("Delivery_Date") IsNot DBNull.Value Then
+                            wtyData(i).Delivery_Date = dr("Delivery_Date")
+                        End If
+
+                        If dr("Production_Date") IsNot DBNull.Value Then
+                            wtyData(i).Production_Date = dr("Production_Date")
+                        End If
+
+                        If dr("Labor_Amount_I") IsNot DBNull.Value Then
+                            wtyData(i).Labor_Amount = dr("Labor_Amount_I")
+                        End If
+
+                        If dr("Parts_Amount_I") IsNot DBNull.Value Then
+                            wtyData(i).Parts_Amount = dr("Parts_Amount_I")
+                        End If
+
+                        If dr("OW_Tax") IsNot DBNull.Value Then
+                            wtyData(i).Tax = dr("OW_Tax")
+                        End If
+                        '''''''''''''''''''''''''''''''
+                        'Comment on 20190809
+                        'Modified 
+                        '''''''''''''''''''''''''''''
+                        '''
+                        If dr("Parts_invoice_No") IsNot DBNull.Value Then
+                            wtyData(i).Parts_invoice_No = dr("Parts_invoice_No")
+                        End If
+                        If dr("Labor_Invoice_No") IsNot DBNull.Value Then
+                            wtyData(i).Labor_Invoice_No = dr("Labor_Invoice_No")
+                        End If
+
+                        If dr("Freight") IsNot DBNull.Value Then
+                            wtyData(i).Freight = dr("Freight")
+                        End If
+                        If dr("Other") IsNot DBNull.Value Then
+                            wtyData(i).Other = dr("Other")
+                        End If
+                        If dr("Parts_SGST") IsNot DBNull.Value Then
+                            wtyData(i).Parts_SGST = dr("Parts_SGST")
+                        End If
+                        If dr("Parts_UTGST") IsNot DBNull.Value Then
+                            wtyData(i).Parts_UTGST = dr("Parts_UTGST")
+                        End If
+                        If dr("Parts_CGST") IsNot DBNull.Value Then
+                            wtyData(i).Parts_CGST = dr("Parts_CGST")
+                        End If
+                        If dr("Parts_IGST") IsNot DBNull.Value Then
+                            wtyData(i).Parts_IGST = dr("Parts_IGST")
+                        End If
+                        If dr("Parts_Cess") IsNot DBNull.Value Then
+                            wtyData(i).Parts_Cess = dr("Parts_Cess")
+                        End If
+                        If dr("SGST") IsNot DBNull.Value Then
+                            wtyData(i).SGST = dr("SGST")
+                        End If
+                        If dr("UTGST") IsNot DBNull.Value Then
+                            wtyData(i).UTGST = dr("UTGST")
+                        End If
+                        If dr("CGST") IsNot DBNull.Value Then
+                            wtyData(i).CGST = dr("CGST")
+                        End If
+                        If dr("IGST") IsNot DBNull.Value Then
+                            wtyData(i).IGST = dr("IGST")
+                        End If
+                        If dr("Cess") IsNot DBNull.Value Then
+                            wtyData(i).Cess = dr("Cess")
+                        End If
+                        ''''''''''''''''''''''''End
+                        If dr("Total_Invoice_Amount_I") IsNot DBNull.Value Then
+                            wtyData(i).Total_Invoice_Amount = dr("Total_Invoice_Amount_I")
+                        End If
+
+                        If dr("Remark") IsNot DBNull.Value Then
+                            wtyData(i).Remark = dr("Remark")
+                        End If
+
+                        If dr("Tr_No") IsNot DBNull.Value Then
+                            wtyData(i).Tr_No = dr("Tr_No")
+                        End If
+
+                        If dr("Tr_Type") IsNot DBNull.Value Then
+                            wtyData(i).Tr_Type = dr("Tr_Type")
+                        End If
+
+                        If dr("Status") IsNot DBNull.Value Then
+                            wtyData(i).Status = dr("Status")
+                        End If
+
+                        If dr("Engineer") IsNot DBNull.Value Then
+                            wtyData(i).Engineer = dr("Engineer")
+                        End If
+
+                        If dr("Collection_Point") IsNot DBNull.Value Then
+                            wtyData(i).Collection_Point = dr("Collection_Point")
+                        End If
+
+                        If dr("Collection_Point_Name") IsNot DBNull.Value Then
+                            wtyData(i).Collection_Point_Name = dr("Collection_Point_Name")
+                        End If
+
+                        If dr("Location_1") IsNot DBNull.Value Then
+                            wtyData(i).Location_1 = dr("Location_1")
+                        End If
+
+                        If dr("Part_1") IsNot DBNull.Value Then
+                            wtyData(i).Part_1 = dr("Part_1")
+                        End If
+
+                        If dr("Qty_1") IsNot DBNull.Value Then
+                            wtyData(i).Qty_1 = dr("Qty_1")
+                        End If
+
+                        If dr("Unit_Price_1") IsNot DBNull.Value Then
+                            wtyData(i).Unit_Price_1 = dr("Unit_Price_1")
+                        End If
+
+                        If dr("Doc_Num_1") IsNot DBNull.Value Then
+                            wtyData(i).Doc_Num_1 = dr("Doc_Num_1")
+                        End If
+
+                        If dr("Matrial_Serial_1") IsNot DBNull.Value Then
+                            wtyData(i).Matrial_Serial_1 = dr("Matrial_Serial_1")
+                        End If
+
+                        If dr("Location_2") IsNot DBNull.Value Then
+                            wtyData(i).Location_2 = dr("Location_2")
+                        End If
+
+                        If dr("Part_2") IsNot DBNull.Value Then
+                            wtyData(i).Part_2 = dr("Part_2")
+                        End If
+
+                        If dr("Qty_2") IsNot DBNull.Value Then
+                            wtyData(i).Qty_2 = dr("Qty_2")
+                        End If
+
+                        If dr("Unit_Price_2") IsNot DBNull.Value Then
+                            wtyData(i).Unit_Price_2 = dr("Unit_Price_2")
+                        End If
+
+                        If dr("Doc_Num_2") IsNot DBNull.Value Then
+                            wtyData(i).Doc_Num_2 = dr("Doc_Num_2")
+                        End If
+
+                        If dr("Matrial_Serial_2") IsNot DBNull.Value Then
+                            wtyData(i).Matrial_Serial_2 = dr("Matrial_Serial_2")
+                        End If
+
+                        If dr("Location_3") IsNot DBNull.Value Then
+                            wtyData(i).Location_3 = dr("Location_3")
+                        End If
+
+                        If dr("Part_3") IsNot DBNull.Value Then
+                            wtyData(i).Part_3 = dr("Part_3")
+                        End If
+
+                        If dr("Qty_3") IsNot DBNull.Value Then
+                            wtyData(i).Qty_3 = dr("Qty_3")
+                        End If
+
+                        If dr("Unit_Price_3") IsNot DBNull.Value Then
+                            wtyData(i).Unit_Price_3 = dr("Unit_Price_3")
+                        End If
+
+                        If dr("Doc_Num_3") IsNot DBNull.Value Then
+                            wtyData(i).Doc_Num_3 = dr("Doc_Num_3")
+                        End If
+
+                        If dr("Matrial_Serial_3") IsNot DBNull.Value Then
+                            wtyData(i).Matrial_Serial_3 = dr("Matrial_Serial_3")
+                        End If
+
+                        If dr("Location_4") IsNot DBNull.Value Then
+                            wtyData(i).Location_4 = dr("Location_4")
+                        End If
+
+                        If dr("Part_4") IsNot DBNull.Value Then
+                            wtyData(i).Part_4 = dr("Part_4")
+                        End If
+
+                        If dr("Qty_4") IsNot DBNull.Value Then
+                            wtyData(i).Qty_4 = dr("Qty_4")
+                        End If
+
+                        If dr("Unit_Price_4") IsNot DBNull.Value Then
+                            wtyData(i).Unit_Price_4 = dr("Unit_Price_4")
+                        End If
+
+                        If dr("Doc_Num_4") IsNot DBNull.Value Then
+                            wtyData(i).Doc_Num_4 = dr("Doc_Num_4")
+                        End If
+
+                        If dr("Matrial_Serial_4") IsNot DBNull.Value Then
+                            wtyData(i).Matrial_Serial_4 = dr("Matrial_Serial_4")
+                        End If
+
+                        If dr("Location_5") IsNot DBNull.Value Then
+                            wtyData(i).Location_5 = dr("Location_5")
+                        End If
+
+                        If dr("Part_5") IsNot DBNull.Value Then
+                            wtyData(i).Part_5 = dr("Part_5")
+                        End If
+
+                        If dr("Qty_5") IsNot DBNull.Value Then
+                            wtyData(i).Qty_5 = dr("Qty_5")
+                        End If
+
+                        If dr("Unit_Price_5") IsNot DBNull.Value Then
+                            wtyData(i).Unit_Price_5 = dr("Unit_Price_5")
+                        End If
+
+                        If dr("Doc_Num_5") IsNot DBNull.Value Then
+                            wtyData(i).Doc_Num_5 = dr("Doc_Num_5")
+                        End If
+
+                        If dr("Matrial_Serial_5") IsNot DBNull.Value Then
+                            wtyData(i).Matrial_Serial_5 = dr("Matrial_Serial_5")
+                        End If
+
+                        If dr("Location_6") IsNot DBNull.Value Then
+                            wtyData(i).Location_6 = dr("Location_6")
+                        End If
+
+                        If dr("Part_6") IsNot DBNull.Value Then
+                            wtyData(i).Part_6 = dr("Part_6")
+                        End If
+
+                        If dr("Qty_6") IsNot DBNull.Value Then
+                            wtyData(i).Qty_6 = dr("Qty_6")
+                        End If
+
+                        If dr("Unit_Price_6") IsNot DBNull.Value Then
+                            wtyData(i).Unit_Price_6 = dr("Unit_Price_6")
+                        End If
+
+                        If dr("Doc_Num_6") IsNot DBNull.Value Then
+                            wtyData(i).Doc_Num_6 = dr("Doc_Num_6")
+                        End If
+
+                        If dr("Matrial_Serial_6") IsNot DBNull.Value Then
+                            wtyData(i).Matrial_Serial_6 = dr("Matrial_Serial_6")
+                        End If
+
+                        If dr("Location_7") IsNot DBNull.Value Then
+                            wtyData(i).Location_7 = dr("Location_7")
+                        End If
+
+                        If dr("Part_7") IsNot DBNull.Value Then
+                            wtyData(i).Part_7 = dr("Part_7")
+                        End If
+
+                        If dr("Qty_7") IsNot DBNull.Value Then
+                            wtyData(i).Qty_7 = dr("Qty_7")
+                        End If
+
+                        If dr("Unit_Price_7") IsNot DBNull.Value Then
+                            wtyData(i).Unit_Price_7 = dr("Unit_Price_7")
+                        End If
+
+                        If dr("Doc_Num_7") IsNot DBNull.Value Then
+                            wtyData(i).Doc_Num_7 = dr("Doc_Num_7")
+                        End If
+
+                        If dr("Matrial_Serial_7") IsNot DBNull.Value Then
+                            wtyData(i).Matrial_Serial_7 = dr("Matrial_Serial_7")
+                        End If
+
+                        If dr("Location_8") IsNot DBNull.Value Then
+                            wtyData(i).Location_8 = dr("Location_8")
+                        End If
+
+                        If dr("Part_8") IsNot DBNull.Value Then
+                            wtyData(i).Part_8 = dr("Part_8")
+                        End If
+
+                        If dr("Qty_8") IsNot DBNull.Value Then
+                            wtyData(i).Qty_8 = dr("Qty_8")
+                        End If
+
+                        If dr("Unit_Price_8") IsNot DBNull.Value Then
+                            wtyData(i).Unit_Price_8 = dr("Unit_Price_8")
+                        End If
+
+                        If dr("Doc_Num_8") IsNot DBNull.Value Then
+                            wtyData(i).Doc_Num_8 = dr("Doc_Num_8")
+                        End If
+
+                        If dr("Matrial_Serial_8") IsNot DBNull.Value Then
+                            wtyData(i).Matrial_Serial_8 = dr("Matrial_Serial_8")
+                        End If
+
+                        If dr("Location_9") IsNot DBNull.Value Then
+                            wtyData(i).Location_9 = dr("Location_9")
+                        End If
+
+                        If dr("Part_9") IsNot DBNull.Value Then
+                            wtyData(i).Part_9 = dr("Part_9")
+                        End If
+
+                        If dr("Qty_9") IsNot DBNull.Value Then
+                            wtyData(i).Qty_9 = dr("Qty_9")
+                        End If
+
+                        If dr("Unit_Price_9") IsNot DBNull.Value Then
+                            wtyData(i).Unit_Price_9 = dr("Unit_Price_9")
+                        End If
+
+                        If dr("Doc_Num_9") IsNot DBNull.Value Then
+                            wtyData(i).Doc_Num_9 = dr("Doc_Num_9")
+                        End If
+
+                        If dr("Matrial_Serial_9") IsNot DBNull.Value Then
+                            wtyData(i).Matrial_Serial_9 = dr("Matrial_Serial_9")
+                        End If
+
+                        If dr("Location_10") IsNot DBNull.Value Then
+                            wtyData(i).Location_10 = dr("Location_10")
+                        End If
+
+                        If dr("Part_10") IsNot DBNull.Value Then
+                            wtyData(i).Part_10 = dr("Part_10")
+                        End If
+
+                        If dr("Qty_10") IsNot DBNull.Value Then
+                            wtyData(i).Qty_10 = dr("Qty_10")
+                        End If
+
+                        If dr("Unit_Price_10") IsNot DBNull.Value Then
+                            wtyData(i).Unit_Price_10 = dr("Unit_Price_10")
+                        End If
+
+                        If dr("Doc_Num_10") IsNot DBNull.Value Then
+                            wtyData(i).Doc_Num_10 = dr("Doc_Num_10")
+                        End If
+
+                        If dr("Matrial_Serial_10") IsNot DBNull.Value Then
+                            wtyData(i).Matrial_Serial_10 = dr("Matrial_Serial_10")
+                        End If
+
+                        If dr("Location_11") IsNot DBNull.Value Then
+                            wtyData(i).Location_11 = dr("Location_11")
+                        End If
+
+                        If dr("Part_11") IsNot DBNull.Value Then
+                            wtyData(i).Part_11 = dr("Part_11")
+                        End If
+
+                        If dr("Qty_11") IsNot DBNull.Value Then
+                            wtyData(i).Qty_11 = dr("Qty_11")
+                        End If
+
+                        If dr("Unit_Price_11") IsNot DBNull.Value Then
+                            wtyData(i).Unit_Price_11 = dr("Unit_Price_11")
+                        End If
+
+                        If dr("Doc_Num_11") IsNot DBNull.Value Then
+                            wtyData(i).Doc_Num_11 = dr("Doc_Num_11")
+                        End If
+
+                        If dr("Matrial_Serial_11") IsNot DBNull.Value Then
+                            wtyData(i).Matrial_Serial_11 = dr("Matrial_Serial_11")
+                        End If
+
+                        If dr("Location_12") IsNot DBNull.Value Then
+                            wtyData(i).Location_12 = dr("Location_12")
+                        End If
+
+                        If dr("Part_12") IsNot DBNull.Value Then
+                            wtyData(i).Part_12 = dr("Part_12")
+                        End If
+
+                        If dr("Qty_12") IsNot DBNull.Value Then
+                            wtyData(i).Qty_12 = dr("Qty_12")
+                        End If
+
+                        If dr("Unit_Price_12") IsNot DBNull.Value Then
+                            wtyData(i).Unit_Price_12 = dr("Unit_Price_12")
+                        End If
+
+                        If dr("Doc_Num_12") IsNot DBNull.Value Then
+                            wtyData(i).Doc_Num_12 = dr("Doc_Num_12")
+                        End If
+
+                        If dr("Matrial_Serial_12") IsNot DBNull.Value Then
+                            wtyData(i).Matrial_Serial_12 = dr("Matrial_Serial_12")
+                        End If
+
+                        If dr("Location_13") IsNot DBNull.Value Then
+                            wtyData(i).Location_13 = dr("Location_13")
+                        End If
+
+                        If dr("Part_13") IsNot DBNull.Value Then
+                            wtyData(i).Part_13 = dr("Part_13")
+                        End If
+
+                        If dr("Qty_13") IsNot DBNull.Value Then
+                            wtyData(i).Qty_13 = dr("Qty_13")
+                        End If
+
+                        If dr("Unit_Price_13") IsNot DBNull.Value Then
+                            wtyData(i).Unit_Price_13 = dr("Unit_Price_13")
+                        End If
+
+                        If dr("Doc_Num_13") IsNot DBNull.Value Then
+                            wtyData(i).Doc_Num_13 = dr("Doc_Num_13")
+                        End If
+
+                        If dr("Matrial_Serial_13") IsNot DBNull.Value Then
+                            wtyData(i).Matrial_Serial_13 = dr("Matrial_Serial_13")
+                        End If
+
+                        If dr("Location_14") IsNot DBNull.Value Then
+                            wtyData(i).Location_14 = dr("Location_14")
+                        End If
+
+                        If dr("Part_14") IsNot DBNull.Value Then
+                            wtyData(i).Part_14 = dr("Part_14")
+                        End If
+
+                        If dr("Qty_14") IsNot DBNull.Value Then
+                            wtyData(i).Qty_14 = dr("Qty_14")
+                        End If
+
+                        If dr("Unit_Price_14") IsNot DBNull.Value Then
+                            wtyData(i).Unit_Price_14 = dr("Unit_Price_14")
+                        End If
+
+                        If dr("Doc_Num_14") IsNot DBNull.Value Then
+                            wtyData(i).Doc_Num_14 = dr("Doc_Num_14")
+                        End If
+
+                        If dr("Matrial_Serial_14") IsNot DBNull.Value Then
+                            wtyData(i).Matrial_Serial_14 = dr("Matrial_Serial_14")
+                        End If
+
+                        If dr("Location_15") IsNot DBNull.Value Then
+                            wtyData(i).Location_15 = dr("Location_15")
+                        End If
+
+                        If dr("Part_15") IsNot DBNull.Value Then
+                            wtyData(i).Part_15 = dr("Part_15")
+                        End If
+
+                        If dr("Qty_15") IsNot DBNull.Value Then
+                            wtyData(i).Qty_15 = dr("Qty_15")
+                        End If
+
+                        If dr("Unit_Price_15") IsNot DBNull.Value Then
+                            wtyData(i).Unit_Price_15 = dr("Unit_Price_15")
+                        End If
+
+                        If dr("Doc_Num_15") IsNot DBNull.Value Then
+                            wtyData(i).Doc_Num_15 = dr("Doc_Num_15")
+                        End If
+
+                        If dr("Matrial_Serial_15") IsNot DBNull.Value Then
+                            wtyData(i).Matrial_Serial_15 = dr("Matrial_Serial_15")
+                        End If
+
+                    Next i
+
+                End If
+
+            Else
+                dsWtyExcel = Nothing
+            End If
+
+        Catch ex As Exception
+            trn.Rollback()
+            errFlg = 1
+        Finally
+            'DB接続クローズ
+            If con.State <> ConnectionState.Closed Then
+                con.Close()
+            End If
+        End Try
+
+    End Sub
+
     '****************************************************
     '処理：Sales_Invoice2samsung
     '引数：dsInvoiceUpdate　出力対象をセット
@@ -3286,6 +4416,130 @@ Public Class Class_analysis
         End Try
 
     End Sub
+
+
+    ''SonySetInvoice
+    Public Sub SonysetInvoice(ByRef invoiceData() As SONYINVOICE, ByVal exportShipName As String, ByRef errFlg As Integer, ByVal setMon As String, ByVal number As String)
+
+        'コネクションを取得
+        Dim con As SqlConnection = New SqlConnection(ConfigurationManager.ConnectionStrings("cnstr").ConnectionString)
+        con.Open()
+
+        'トランザクション開始＆コネクションオープン
+        Dim trn As SqlTransaction = con.BeginTransaction(IsolationLevel.ReadCommitted)
+
+        Try
+            Dim clsSetCommon As New Class_common
+            Dim dtNow As DateTime = clsSetCommon.dtIndia
+
+            '■出力対象を取得
+            Dim dsInvoiceUpdate As New DataSet
+            Dim select_sql As String = ""
+            select_sql &= "SELECT A.* "
+            select_sql &= "FROM dbo.SonyInvoice_update A "
+            select_sql &= "WHERE A.DELFG = 0 "
+            select_sql &= "AND LEFT(CONVERT(VARCHAR, A.Invoice_date,111), 7) = '" & dtNow.ToShortDateString.Substring(0, 4) & "/" & setMon & "' "
+            select_sql &= "AND A.upload_Branch = '" & exportShipName & "' "
+            select_sql &= "AND A.number ='" & number & "';"
+
+            Dim sqlSelect As New SqlCommand(select_sql, con, trn)
+            Dim Adapter As New SqlDataAdapter(sqlSelect)
+
+            Adapter.Fill(dsInvoiceUpdate)
+
+            '出力対象を構造体に設定
+            If dsInvoiceUpdate.Tables(0).Rows.Count <> 0 Then
+
+                ReDim invoiceData(dsInvoiceUpdate.Tables(0).Rows.Count - 1)
+
+                For i = 0 To dsInvoiceUpdate.Tables(0).Rows.Count - 1
+
+                    Dim dr As DataRow = dsInvoiceUpdate.Tables(0).Rows(i)
+
+                    If dr("sony_Ref_No") IsNot DBNull.Value Then
+                        invoiceData(i).sony_Ref_No = dr("sony_Ref_No")
+                    End If
+
+                    If dr("Your_Ref_No") IsNot DBNull.Value Then
+                        invoiceData(i).Your_Ref_No = dr("Your_Ref_No")
+                    End If
+
+                    If dr("Model") IsNot DBNull.Value Then
+                        invoiceData(i).Model = dr("Model")
+                    End If
+
+                    If dr("Serial") IsNot DBNull.Value Then
+                        invoiceData(i).Serial = dr("Serial")
+                    End If
+
+                    If dr("Product") IsNot DBNull.Value Then
+                        invoiceData(i).Product = dr("Product")
+                    End If
+
+                    If dr("Service") IsNot DBNull.Value Then
+                        invoiceData(i).Service = dr("Service")
+                    End If
+
+                    If dr("Defect_Code") IsNot DBNull.Value Then
+                        invoiceData(i).Defect_Code = dr("Defect_Code")
+                    End If
+
+                    If dr("Currency") IsNot DBNull.Value Then
+                        invoiceData(i).Currency = dr("Currency")
+                    End If
+
+                    If dr("Invoice") IsNot DBNull.Value Then
+                        invoiceData(i).Invoice = dr("Invoice")
+                    End If
+
+                    If dr("Labor") IsNot DBNull.Value Then
+                        invoiceData(i).Labor = dr("Labor")
+                    End If
+
+                    If dr("Parts") IsNot DBNull.Value Then
+                        invoiceData(i).Parts = dr("Parts")
+                    End If
+
+                    If dr("Felight") IsNot DBNull.Value Then
+                        invoiceData(i).Felight = dr("Felight")
+                    End If
+
+                    If dr("Other") IsNot DBNull.Value Then
+                        invoiceData(i).Other = dr("Other")
+                    End If
+
+                    'If dr("Tax") IsNot DBNull.Value Then
+                    '    invoiceData(i).Tax = dr("Tax")
+                    'End If
+
+                    If dr("Parts_invoice_No") IsNot DBNull.Value Then
+                        invoiceData(i).Parts_invoice_No = dr("Parts_invoice_No")
+                    End If
+
+                    If dr("Labor_Invoice_No") IsNot DBNull.Value Then
+                        invoiceData(i).Labor_Invoice_No = dr("Labor_Invoice_No")
+                    End If
+
+                    If dr("Invoice_date") IsNot DBNull.Value Then
+                        invoiceData(i).Invoice_date = dr("Invoice_date")
+                    End If
+
+                Next i
+
+            End If
+
+        Catch ex As Exception
+            trn.Rollback()
+            errFlg = 1
+        Finally
+            'DB接続クローズ
+            If con.State <> ConnectionState.Closed Then
+                con.Close()
+            End If
+        End Try
+
+    End Sub
+
 
     '****************************************************
     '処理：setPurchaseRegister
@@ -3505,6 +4759,221 @@ Public Class Class_analysis
         End Try
 
     End Sub
+
+
+    'SonyPurchaseRegister
+    Public Sub SonysetPurchaseRegister(ByRef purchaseData2() As SONYBILLINGINFODETAIL, ByVal exportShipName As String, ByVal shipCode As String, ByRef errFlg As Integer, ByVal setMon As String, ByVal dateFrom As String, ByVal dateTo As String)
+
+        'コネクションを取得
+        Dim con As SqlConnection = New SqlConnection(ConfigurationManager.ConnectionStrings("cnstr").ConnectionString)
+        con.Open()
+
+        'トランザクション開始＆コネクションオープン
+        Dim trn As SqlTransaction = con.BeginTransaction(IsolationLevel.ReadCommitted)
+
+        Try
+
+            Dim clsSetCommon As New Class_common
+            Dim dtNow As DateTime = clsSetCommon.dtIndia
+
+            '■出力対象を取得
+            'good_recivedテーブルよりユニークデータ取得
+            Dim i, j As Integer
+
+            Dim select_sql As String = ""
+            select_sql &= "SELECT A.* , B.* "
+            select_sql &= "FROM dbo.good_recived A "
+            select_sql &= ",Billing_Info B "
+            select_sql &= "WHERE A.DELFG = 0 "
+            select_sql &= "AND A.delivery_No = B.Invoice_No "
+            select_sql &= "AND A.upload_Branch = '" & exportShipName & "' "
+            select_sql &= "AND B.Branch_Code = '" & shipCode & "' "
+
+            If setMon = "00" Then
+                If dateTo <> "" Then
+                    If dateFrom <> "" Then
+                        select_sql &= "AND LEFT(CONVERT(VARCHAR, A.delivery_date,111), 10) <= '" & dateTo & "' "
+                        select_sql &= "AND LEFT(CONVERT(VARCHAR, A.delivery_date,111), 10) >= '" & dateFrom & "' "
+                        select_sql &= "ORDER BY A.delivery_No;"
+                    Else
+                        select_sql &= "AND LEFT(CONVERT(VARCHAR, A.delivery_date,111), 10) <= '" & dateTo & "' "
+                        select_sql &= "ORDER BY A.delivery_No;"
+                    End If
+                Else
+                    If dateFrom <> "" Then
+                        select_sql &= "AND LEFT(CONVERT(VARCHAR, A.delivery_date,111), 10) >= '" & dateFrom & "' "
+                        select_sql &= "ORDER BY A.delivery_No;"
+                    End If
+                End If
+            Else
+                select_sql &= "AND LEFT(CONVERT(VARCHAR, A.delivery_date,111), 7) = '" & dtNow.ToShortDateString.Substring(0, 4) & "/" & setMon & "' "
+                select_sql &= "ORDER BY A.delivery_No;"
+            End If
+
+            Dim sqlSelect As New SqlCommand(select_sql, con, trn)
+            Dim Adapter As New SqlDataAdapter(sqlSelect)
+            Dim dsgoodRecived As New DataSet
+
+            Adapter.Fill(dsgoodRecived)
+
+            '出力対象を構造体に設定
+            If dsgoodRecived.Tables(0).Rows.Count <> 0 Then
+
+                Dim purchaseData() As Class_analysis.BILLINGINFODETAIL  'tmp用
+
+                ReDim purchaseData(dsgoodRecived.Tables(0).Rows.Count - 1)
+
+                For i = 0 To dsgoodRecived.Tables(0).Rows.Count - 1
+
+                    Dim dr As DataRow = dsgoodRecived.Tables(0).Rows(i)
+
+                    If dr("delivery_date") IsNot DBNull.Value Then
+                        purchaseData(i).delivery_date = dr("delivery_date")
+                    End If
+
+                    If dr("GR_Date") IsNot DBNull.Value Then
+                        purchaseData(i).GR_Date = dr("GR_Date")
+                    End If
+
+                    If dr("delivery_No") IsNot DBNull.Value Then
+                        purchaseData(i).Invoice_No = dr("delivery_No")
+                    End If
+
+                    If dr("local_invoice_No") IsNot DBNull.Value Then
+                        purchaseData(i).local_invoice_No = dr("local_invoice_No")
+                    End If
+
+                    If dr("Items") IsNot DBNull.Value Then
+                        purchaseData(i).Items = dr("Items")
+                    End If
+
+                    If dr("GR_Status") IsNot DBNull.Value Then
+                        purchaseData(i).GR_Status = dr("GR_Status")
+                    End If
+
+                    If dr("Branch_Code") IsNot DBNull.Value Then
+                        purchaseData(i).Branch_Code = dr("Branch_Code")
+                    End If
+
+                    If dr("Ship_Branch") IsNot DBNull.Value Then
+                        purchaseData(i).Ship_Branch = dr("Ship_Branch")
+                    End If
+
+                    If dr("Delivery_No") IsNot DBNull.Value Then
+                        purchaseData(i).Delivery_No = dr("Delivery_No")
+                    End If
+
+                    If dr("Amount") IsNot DBNull.Value Then
+                        purchaseData(i).Amount = dr("Amount")
+                    End If
+
+                    If dr("SGST_UTGST") IsNot DBNull.Value Then
+                        purchaseData(i).SGST_UTGST = dr("SGST_UTGST")
+                    End If
+
+                    If dr("CGST") IsNot DBNull.Value Then
+                        purchaseData(i).CGST = dr("CGST")
+                    End If
+
+                    If dr("IGST") IsNot DBNull.Value Then
+                        purchaseData(i).IGST = dr("IGST")
+                    End If
+
+                    If dr("Cess") IsNot DBNull.Value Then
+                        purchaseData(i).Cess = dr("Cess")
+                    End If
+
+                    If dr("Tax") IsNot DBNull.Value Then
+                        purchaseData(i).Tax = dr("Tax")
+                    End If
+
+                    If dr("Total") IsNot DBNull.Value Then
+                        purchaseData(i).Total = dr("Total")
+                    End If
+
+                    If dr("Total") IsNot DBNull.Value Then
+                        purchaseData(i).Invoice_No2 = dr("Invoice_No")
+                    End If
+
+                Next i
+
+                Dim jStart As Integer
+                Dim Cnt As Integer
+                Dim sumAmount As Decimal
+                Dim sumSGST_UTGST As Decimal
+                Dim sumCGST As Decimal
+                Dim sumIGST As Decimal
+                Dim sumCess As Decimal
+                Dim sumTax As Decimal
+                Dim sumTotal As Decimal
+
+                For i = 0 To purchaseData.Length - 1
+
+                    'item数分処理
+                    For j = jStart To (jStart + purchaseData(i).Items) - 1
+
+                        If purchaseData(j).Invoice_No = purchaseData(j).Invoice_No2 Then
+                            sumAmount = sumAmount + purchaseData(j).Amount
+                            sumSGST_UTGST = sumSGST_UTGST + purchaseData(j).SGST_UTGST
+                            sumCGST = sumCGST + purchaseData(j).CGST
+                            sumIGST = sumIGST + purchaseData(j).IGST
+                            sumCess = sumCess + purchaseData(j).Cess
+                            sumTax = sumTax + purchaseData(j).Tax
+                            sumTotal = sumTotal + purchaseData(j).Total
+                        End If
+
+                    Next j
+
+                    ReDim Preserve purchaseData2(Cnt)
+
+                    purchaseData2(Cnt).Branch_Code = purchaseData(i).Branch_Code
+                    purchaseData2(Cnt).Ship_Branch = purchaseData(i).Ship_Branch
+                    purchaseData2(Cnt).delivery_date = purchaseData(i).delivery_date
+                    purchaseData2(Cnt).GR_Date = purchaseData(i).GR_Date
+                    purchaseData2(Cnt).Invoice_No = purchaseData(i).Invoice_No
+                    purchaseData2(Cnt).local_invoice_No = purchaseData(i).local_invoice_No
+                    purchaseData2(Cnt).Delivery_No = purchaseData(i).Delivery_No
+                    purchaseData2(Cnt).Items = purchaseData(i).Items
+
+                    purchaseData2(Cnt).SumAmount = sumAmount
+                    purchaseData2(Cnt).SumSGST_UTGST = sumSGST_UTGST
+                    purchaseData2(Cnt).SumCGST = sumCGST
+                    purchaseData2(Cnt).SumIGST = sumIGST
+                    purchaseData2(Cnt).SumCess = sumCess
+                    purchaseData2(Cnt).SumTax = sumTax
+                    purchaseData2(Cnt).SumTotal = sumTotal
+
+                    purchaseData2(Cnt).GR_Status = purchaseData(i).GR_Status
+
+                    Cnt = Cnt + 1
+
+                    i = (j - 1)
+                    jStart = j
+
+                    sumAmount = 0
+                    sumSGST_UTGST = 0
+                    sumCGST = 0
+                    sumIGST = 0
+                    sumCess = 0
+                    sumTax = 0
+                    sumTotal = 0
+
+                Next i
+
+            End If
+
+        Catch ex As Exception
+            trn.Rollback()
+            errFlg = 1
+        Finally
+            'DB接続クローズ
+            If con.State <> ConnectionState.Closed Then
+                con.Close()
+            End If
+        End Try
+
+    End Sub
+
 
     '****************************************************
     '処理：setSalesRegister_IW_OTHER
@@ -4279,6 +5748,774 @@ Public Class Class_analysis
 
     End Sub
 
+
+    ''SonySalesRegister
+
+    Public Sub SonysetSalesRegister_IW_OTHER(ByRef wtyDataIW() As SonyWTY_EXCEL, ByVal exportShipName As String, ByVal shipCode As String, ByVal userid As String, ByVal userName As String, ByRef errFlg As Integer, ByVal setMon As String, ByVal dateFrom As String, ByVal dateTo As String, ByVal kind As String)
+
+        'コネクションを取得
+        Dim con As SqlConnection = New SqlConnection(ConfigurationManager.ConnectionStrings("cnstr").ConnectionString)
+        con.Open()
+
+        'トランザクション開始＆コネクションオープン
+        Dim trn As SqlTransaction = con.BeginTransaction(IsolationLevel.ReadCommitted)
+
+        Try
+
+            '■出力対象を取得
+
+            Dim clsSetCommon As New Class_common
+            Dim dtNow As DateTime = clsSetCommon.dtIndia
+
+            Dim dsWtyExcel As New DataSet
+            Dim select_sql As String = ""
+
+            If kind = "IW" Then
+
+                select_sql &= "SELECT B.Invoice, B.Labor, B.Parts, B.Parts_Invoice_No, B.Labor_Invoice_No, A.* "
+                select_sql &= "FROM dbo.SonyWty_Excel A "
+                select_sql &= ",Invoice_update B "
+                select_sql &= "WHERE A.DELFG = 0 "
+                select_sql &= "AND A.Sony_Claim_No = B.sony_Ref_No "
+                select_sql &= "And A.upload_Branch = B.upload_Branch "
+                select_sql &= "AND A.upload_Branch = '" & exportShipName & "' "
+                select_sql &= "AND A.Status IN ('10','20') "
+
+            ElseIf kind = "OTHER" Then
+
+                select_sql &= "SELECT B.Invoice, B.Labor, B.Parts, B.Parts_Invoice_No, B.Labor_Invoice_No, A.* "
+                select_sql &= "FROM dbo.SonyWty_Excel A "
+                select_sql &= ",Invoice_update B "
+                select_sql &= "WHERE A.DELFG = 0 "
+                select_sql &= "AND A.Sony_Claim_No = B.sony_Ref_No "
+                select_sql &= "And A.upload_Branch = B.upload_Branch "
+                select_sql &= "AND A.upload_Branch = '" & exportShipName & "' "
+                select_sql &= "AND A.Status = '80' "
+                select_sql &= "AND (B.Invoice <> '0.00' and  B.Invoice is not NULL) "
+
+            End If
+
+            If setMon = "00" Then
+                If dateTo <> "" Then
+                    If dateFrom <> "" Then
+                        select_sql &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111), 10) <= '" & dateTo & "' "
+                        select_sql &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111), 10) >= '" & dateFrom & "' "
+                        select_sql &= "ORDER BY A.Sony_Claim_No;"
+                    Else
+                        select_sql &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111), 10) <= '" & dateTo & "' "
+                        select_sql &= "ORDER BY A.Sony_Claim_No;"
+                    End If
+                Else
+                    If dateFrom <> "" Then
+                        select_sql &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111), 10) >= '" & dateFrom & "' "
+                        select_sql &= "ORDER BY A.Sony_Claim_No;"
+                    End If
+                End If
+            Else
+                select_sql &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111), 7) = '" & dtNow.ToShortDateString.Substring(0, 4) & "/" & setMon & "' "
+                select_sql &= "ORDER BY A.Sony_Claim_No;"
+            End If
+
+            Dim sqlSelect As New SqlCommand(select_sql, con, trn)
+            Dim Adapter As New SqlDataAdapter(sqlSelect)
+
+            Adapter.Fill(dsWtyExcel)
+
+            If dsWtyExcel.Tables(0).Rows.Count <> 0 Then
+
+                Dim i As Integer
+
+                ReDim wtyDataIW(dsWtyExcel.Tables(0).Rows.Count - 1)
+
+                For i = 0 To dsWtyExcel.Tables(0).Rows.Count - 1
+
+                    Dim dr As DataRow = dsWtyExcel.Tables(0).Rows(i)
+
+                    '出力情報を構造体にセット
+                    If dr("ASC_Code") IsNot DBNull.Value Then
+                        wtyDataIW(i).ASC_Code = dr("ASC_Code")
+                    End If
+
+                    If dr("Branch_Code") IsNot DBNull.Value Then
+                        wtyDataIW(i).Branch_Code = dr("Branch_Code")
+                    End If
+
+                    If dr("ASC_Claim_No") IsNot DBNull.Value Then
+                        wtyDataIW(i).ASC_Claim_No = dr("ASC_Claim_No")
+                    End If
+
+                    If dr("Sony_Claim_No") IsNot DBNull.Value Then
+                        wtyDataIW(i).Sony_Claim_No = dr("Sony_Claim_No")
+                    End If
+
+                    If dr("Service_Type") IsNot DBNull.Value Then
+                        wtyDataIW(i).Service_Type = dr("Service_Type")
+                    End If
+
+                    If dr("Consumer_Name") IsNot DBNull.Value Then
+                        wtyDataIW(i).Consumer_Name = dr("Consumer_Name")
+                    End If
+
+                    If dr("Consumer_Addr1") IsNot DBNull.Value Then
+                        wtyDataIW(i).Consumer_Addr1 = dr("Consumer_Addr1")
+                    End If
+
+                    If dr("Consumer_Addr2") IsNot DBNull.Value Then
+                        wtyDataIW(i).Consumer_Addr2 = dr("Consumer_Addr2")
+                    End If
+
+                    If dr("Consumer_Telephone") IsNot DBNull.Value Then
+                        wtyDataIW(i).Consumer_Telephone = dr("Consumer_Telephone")
+                    End If
+
+                    If dr("Consumer_Fax") IsNot DBNull.Value Then
+                        wtyDataIW(i).Consumer_Fax = dr("Consumer_Fax")
+                    End If
+
+                    If dr("Postal_Code") IsNot DBNull.Value Then
+                        wtyDataIW(i).Postal_Code = dr("Postal_Code")
+                    End If
+
+                    If dr("Model") IsNot DBNull.Value Then
+                        wtyDataIW(i).Model = dr("Model")
+                    End If
+
+                    If dr("Serial_No") IsNot DBNull.Value Then
+                        wtyDataIW(i).Serial_No = dr("Serial_No")
+                    End If
+
+                    If dr("IMEI_No") IsNot DBNull.Value Then
+                        wtyDataIW(i).IMEI_No = dr("IMEI_No")
+                    End If
+
+                    If dr("Defect_Type") IsNot DBNull.Value Then
+                        wtyDataIW(i).Defect_Type = dr("Defect_Type")
+                    End If
+
+                    If dr("Condition") IsNot DBNull.Value Then
+                        wtyDataIW(i).Condition = dr("Condition")
+                    End If
+
+                    If dr("Symptom") IsNot DBNull.Value Then
+                        wtyDataIW(i).Symptom = dr("Symptom")
+                    End If
+
+                    If dr("Defect_Code") IsNot DBNull.Value Then
+                        wtyDataIW(i).Defect_Code = dr("Defect_Code")
+                    End If
+
+                    If dr("Repair_Code") IsNot DBNull.Value Then
+                        wtyDataIW(i).Repair_Code = dr("Repair_Code")
+                    End If
+
+                    If dr("Defect_Desc") IsNot DBNull.Value Then
+                        wtyDataIW(i).Defect_Desc = dr("Defect_Desc")
+                    End If
+
+                    If dr("Repair_Description") IsNot DBNull.Value Then
+                        wtyDataIW(i).Repair_Description = dr("Repair_Description")
+                    End If
+
+                    If dr("Purchase_Date") IsNot DBNull.Value Then
+                        wtyDataIW(i).Purchase_Date = dr("Purchase_Date")
+                    End If
+
+                    If dr("Repair_Received_Date") IsNot DBNull.Value Then
+                        wtyDataIW(i).Repair_Received_Date = dr("Repair_Received_Date")
+                    End If
+
+                    If dr("Completed_Date") IsNot DBNull.Value Then
+                        wtyDataIW(i).Completed_Date = dr("Completed_Date")
+                    End If
+
+                    If dr("Delivery_Date") IsNot DBNull.Value Then
+                        wtyDataIW(i).Delivery_Date = dr("Delivery_Date")
+                    End If
+
+                    If dr("Production_Date") IsNot DBNull.Value Then
+                        wtyDataIW(i).Production_Date = dr("Production_Date")
+                    End If
+
+                    If dr("Labor_Amount") IsNot DBNull.Value Then
+                        wtyDataIW(i).Labor_Amount = dr("Labor_Amount")
+                    End If
+
+                    If dr("Parts_Amount") IsNot DBNull.Value Then
+                        wtyDataIW(i).Parts_Amount = dr("Parts_Amount")
+                    End If
+
+                    If dr("Freight") IsNot DBNull.Value Then
+                        wtyDataIW(i).Freight = dr("Freight")
+                    End If
+
+                    If dr("Other") IsNot DBNull.Value Then
+                        wtyDataIW(i).Other = dr("Other")
+                    End If
+
+                    If dr("Parts_SGST") IsNot DBNull.Value Then
+                        wtyDataIW(i).Parts_SGST = dr("Parts_SGST")
+                    End If
+
+                    If dr("Parts_UTGST") IsNot DBNull.Value Then
+                        wtyDataIW(i).Parts_UTGST = dr("Parts_UTGST")
+                    End If
+
+                    If dr("Parts_CGST") IsNot DBNull.Value Then
+                        wtyDataIW(i).Parts_CGST = dr("Parts_CGST")
+                    End If
+
+                    If dr("Parts_IGST") IsNot DBNull.Value Then
+                        wtyDataIW(i).Parts_IGST = dr("Parts_IGST")
+                    End If
+
+                    If dr("Parts_Cess") IsNot DBNull.Value Then
+                        wtyDataIW(i).Parts_Cess = dr("Parts_Cess")
+                    End If
+
+                    If dr("SGST") IsNot DBNull.Value Then
+                        wtyDataIW(i).SGST = dr("SGST")
+                    End If
+
+                    If dr("UTGST") IsNot DBNull.Value Then
+                        wtyDataIW(i).UTGST = dr("UTGST")
+                    End If
+
+                    If dr("CGST") IsNot DBNull.Value Then
+                        wtyDataIW(i).CGST = dr("CGST")
+                    End If
+
+                    If dr("IGST") IsNot DBNull.Value Then
+                        wtyDataIW(i).IGST = dr("IGST")
+                    End If
+
+                    If dr("Cess") IsNot DBNull.Value Then
+                        wtyDataIW(i).Cess = dr("Cess")
+                    End If
+
+                    'If dr("Tax") IsNot DBNull.Value Then
+                    '    wtyDataIW(i).Tax = dr("Tax")
+                    'End If
+
+                    If dr("Total_Invoice_Amount") IsNot DBNull.Value Then
+                        wtyDataIW(i).Total_Invoice_Amount = dr("Total_Invoice_Amount")
+                    End If
+
+                    If dr("Remark") IsNot DBNull.Value Then
+                        wtyDataIW(i).Remark = dr("Remark")
+                    End If
+
+                    If dr("Tr_No") IsNot DBNull.Value Then
+                        wtyDataIW(i).Tr_No = dr("Tr_No")
+                    End If
+
+                    If dr("Tr_Type") IsNot DBNull.Value Then
+                        wtyDataIW(i).Tr_Type = dr("Tr_Type")
+                    End If
+
+                    If dr("Status") IsNot DBNull.Value Then
+                        wtyDataIW(i).Status = dr("Status")
+                    End If
+
+                    If dr("Engineer") IsNot DBNull.Value Then
+                        wtyDataIW(i).Engineer = dr("Engineer")
+                    End If
+
+                    If dr("Collection_Point") IsNot DBNull.Value Then
+                        wtyDataIW(i).Collection_Point = dr("Collection_Point")
+                    End If
+
+                    If dr("Collection_Point_Name") IsNot DBNull.Value Then
+                        wtyDataIW(i).Collection_Point_Name = dr("Collection_Point_Name")
+                    End If
+
+                    If dr("Location_1") IsNot DBNull.Value Then
+                        wtyDataIW(i).Location_1 = dr("Location_1")
+                    End If
+
+                    If dr("Part_1") IsNot DBNull.Value Then
+                        wtyDataIW(i).Part_1 = dr("Part_1")
+                    End If
+
+                    If dr("Qty_1") IsNot DBNull.Value Then
+                        wtyDataIW(i).Qty_1 = dr("Qty_1")
+                    End If
+
+                    If dr("Unit_Price_1") IsNot DBNull.Value Then
+                        wtyDataIW(i).Unit_Price_1 = dr("Unit_Price_1")
+                    End If
+
+                    If dr("Doc_Num_1") IsNot DBNull.Value Then
+                        wtyDataIW(i).Doc_Num_1 = dr("Doc_Num_1")
+                    End If
+
+                    If dr("Matrial_Serial_1") IsNot DBNull.Value Then
+                        wtyDataIW(i).Matrial_Serial_1 = dr("Matrial_Serial_1")
+                    End If
+
+                    If dr("Location_2") IsNot DBNull.Value Then
+                        wtyDataIW(i).Location_2 = dr("Location_2")
+                    End If
+
+                    If dr("Part_2") IsNot DBNull.Value Then
+                        wtyDataIW(i).Part_2 = dr("Part_2")
+                    End If
+
+                    If dr("Qty_2") IsNot DBNull.Value Then
+                        wtyDataIW(i).Qty_2 = dr("Qty_2")
+                    End If
+
+                    If dr("Unit_Price_2") IsNot DBNull.Value Then
+                        wtyDataIW(i).Unit_Price_2 = dr("Unit_Price_2")
+                    End If
+
+                    If dr("Doc_Num_2") IsNot DBNull.Value Then
+                        wtyDataIW(i).Doc_Num_2 = dr("Doc_Num_2")
+                    End If
+
+                    If dr("Matrial_Serial_2") IsNot DBNull.Value Then
+                        wtyDataIW(i).Matrial_Serial_2 = dr("Matrial_Serial_2")
+                    End If
+
+                    If dr("Location_3") IsNot DBNull.Value Then
+                        wtyDataIW(i).Location_3 = dr("Location_3")
+                    End If
+
+                    If dr("Part_3") IsNot DBNull.Value Then
+                        wtyDataIW(i).Part_3 = dr("Part_3")
+                    End If
+
+                    If dr("Qty_3") IsNot DBNull.Value Then
+                        wtyDataIW(i).Qty_3 = dr("Qty_3")
+                    End If
+
+                    If dr("Unit_Price_3") IsNot DBNull.Value Then
+                        wtyDataIW(i).Unit_Price_3 = dr("Unit_Price_3")
+                    End If
+
+                    If dr("Doc_Num_3") IsNot DBNull.Value Then
+                        wtyDataIW(i).Doc_Num_3 = dr("Doc_Num_3")
+                    End If
+
+                    If dr("Matrial_Serial_3") IsNot DBNull.Value Then
+                        wtyDataIW(i).Matrial_Serial_3 = dr("Matrial_Serial_3")
+                    End If
+
+                    If dr("Location_4") IsNot DBNull.Value Then
+                        wtyDataIW(i).Location_4 = dr("Location_4")
+                    End If
+
+                    If dr("Part_4") IsNot DBNull.Value Then
+                        wtyDataIW(i).Part_4 = dr("Part_4")
+                    End If
+
+                    If dr("Qty_4") IsNot DBNull.Value Then
+                        wtyDataIW(i).Qty_4 = dr("Qty_4")
+                    End If
+
+                    If dr("Unit_Price_4") IsNot DBNull.Value Then
+                        wtyDataIW(i).Unit_Price_4 = dr("Unit_Price_4")
+                    End If
+
+                    If dr("Doc_Num_4") IsNot DBNull.Value Then
+                        wtyDataIW(i).Doc_Num_4 = dr("Doc_Num_4")
+                    End If
+
+                    If dr("Matrial_Serial_4") IsNot DBNull.Value Then
+                        wtyDataIW(i).Matrial_Serial_4 = dr("Matrial_Serial_4")
+                    End If
+
+                    If dr("Location_5") IsNot DBNull.Value Then
+                        wtyDataIW(i).Location_5 = dr("Location_5")
+                    End If
+
+                    If dr("Part_5") IsNot DBNull.Value Then
+                        wtyDataIW(i).Part_5 = dr("Part_5")
+                    End If
+
+                    If dr("Qty_5") IsNot DBNull.Value Then
+                        wtyDataIW(i).Qty_5 = dr("Qty_5")
+                    End If
+
+                    If dr("Unit_Price_5") IsNot DBNull.Value Then
+                        wtyDataIW(i).Unit_Price_5 = dr("Unit_Price_5")
+                    End If
+
+                    If dr("Doc_Num_5") IsNot DBNull.Value Then
+                        wtyDataIW(i).Doc_Num_5 = dr("Doc_Num_5")
+                    End If
+
+                    If dr("Matrial_Serial_5") IsNot DBNull.Value Then
+                        wtyDataIW(i).Matrial_Serial_5 = dr("Matrial_Serial_5")
+                    End If
+
+                    If dr("Location_6") IsNot DBNull.Value Then
+                        wtyDataIW(i).Location_6 = dr("Location_6")
+                    End If
+
+                    If dr("Part_6") IsNot DBNull.Value Then
+                        wtyDataIW(i).Part_6 = dr("Part_6")
+                    End If
+
+                    If dr("Qty_6") IsNot DBNull.Value Then
+                        wtyDataIW(i).Qty_6 = dr("Qty_6")
+                    End If
+
+                    If dr("Unit_Price_6") IsNot DBNull.Value Then
+                        wtyDataIW(i).Unit_Price_6 = dr("Unit_Price_6")
+                    End If
+
+                    If dr("Doc_Num_6") IsNot DBNull.Value Then
+                        wtyDataIW(i).Doc_Num_6 = dr("Doc_Num_6")
+                    End If
+
+                    If dr("Matrial_Serial_6") IsNot DBNull.Value Then
+                        wtyDataIW(i).Matrial_Serial_6 = dr("Matrial_Serial_6")
+                    End If
+
+                    If dr("Location_7") IsNot DBNull.Value Then
+                        wtyDataIW(i).Location_7 = dr("Location_7")
+                    End If
+
+                    If dr("Part_7") IsNot DBNull.Value Then
+                        wtyDataIW(i).Part_7 = dr("Part_7")
+                    End If
+
+                    If dr("Qty_7") IsNot DBNull.Value Then
+                        wtyDataIW(i).Qty_7 = dr("Qty_7")
+                    End If
+
+                    If dr("Unit_Price_7") IsNot DBNull.Value Then
+                        wtyDataIW(i).Unit_Price_7 = dr("Unit_Price_7")
+                    End If
+
+                    If dr("Doc_Num_7") IsNot DBNull.Value Then
+                        wtyDataIW(i).Doc_Num_7 = dr("Doc_Num_7")
+                    End If
+
+                    If dr("Matrial_Serial_7") IsNot DBNull.Value Then
+                        wtyDataIW(i).Matrial_Serial_7 = dr("Matrial_Serial_7")
+                    End If
+
+                    If dr("Location_8") IsNot DBNull.Value Then
+                        wtyDataIW(i).Location_8 = dr("Location_8")
+                    End If
+
+                    If dr("Part_8") IsNot DBNull.Value Then
+                        wtyDataIW(i).Part_8 = dr("Part_8")
+                    End If
+
+                    If dr("Qty_8") IsNot DBNull.Value Then
+                        wtyDataIW(i).Qty_8 = dr("Qty_8")
+                    End If
+
+                    If dr("Unit_Price_8") IsNot DBNull.Value Then
+                        wtyDataIW(i).Unit_Price_8 = dr("Unit_Price_8")
+                    End If
+
+                    If dr("Doc_Num_8") IsNot DBNull.Value Then
+                        wtyDataIW(i).Doc_Num_8 = dr("Doc_Num_8")
+                    End If
+
+                    If dr("Matrial_Serial_8") IsNot DBNull.Value Then
+                        wtyDataIW(i).Matrial_Serial_8 = dr("Matrial_Serial_8")
+                    End If
+
+                    If dr("Location_9") IsNot DBNull.Value Then
+                        wtyDataIW(i).Location_9 = dr("Location_9")
+                    End If
+
+                    If dr("Part_9") IsNot DBNull.Value Then
+                        wtyDataIW(i).Part_9 = dr("Part_9")
+                    End If
+
+                    If dr("Qty_9") IsNot DBNull.Value Then
+                        wtyDataIW(i).Qty_9 = dr("Qty_9")
+                    End If
+
+                    If dr("Unit_Price_9") IsNot DBNull.Value Then
+                        wtyDataIW(i).Unit_Price_9 = dr("Unit_Price_9")
+                    End If
+
+                    If dr("Doc_Num_9") IsNot DBNull.Value Then
+                        wtyDataIW(i).Doc_Num_9 = dr("Doc_Num_9")
+                    End If
+
+                    If dr("Matrial_Serial_9") IsNot DBNull.Value Then
+                        wtyDataIW(i).Matrial_Serial_9 = dr("Matrial_Serial_9")
+                    End If
+
+                    If dr("Location_10") IsNot DBNull.Value Then
+                        wtyDataIW(i).Location_10 = dr("Location_10")
+                    End If
+
+                    If dr("Part_10") IsNot DBNull.Value Then
+                        wtyDataIW(i).Part_10 = dr("Part_10")
+                    End If
+
+                    If dr("Qty_10") IsNot DBNull.Value Then
+                        wtyDataIW(i).Qty_10 = dr("Qty_10")
+                    End If
+
+                    If dr("Unit_Price_10") IsNot DBNull.Value Then
+                        wtyDataIW(i).Unit_Price_10 = dr("Unit_Price_10")
+                    End If
+
+                    If dr("Doc_Num_10") IsNot DBNull.Value Then
+                        wtyDataIW(i).Doc_Num_10 = dr("Doc_Num_10")
+                    End If
+
+                    If dr("Matrial_Serial_10") IsNot DBNull.Value Then
+                        wtyDataIW(i).Matrial_Serial_10 = dr("Matrial_Serial_10")
+                    End If
+
+                    If dr("Location_11") IsNot DBNull.Value Then
+                        wtyDataIW(i).Location_11 = dr("Location_11")
+                    End If
+
+                    If dr("Part_11") IsNot DBNull.Value Then
+                        wtyDataIW(i).Part_11 = dr("Part_11")
+                    End If
+
+                    If dr("Qty_11") IsNot DBNull.Value Then
+                        wtyDataIW(i).Qty_11 = dr("Qty_11")
+                    End If
+
+                    If dr("Unit_Price_11") IsNot DBNull.Value Then
+                        wtyDataIW(i).Unit_Price_11 = dr("Unit_Price_11")
+                    End If
+
+                    If dr("Doc_Num_11") IsNot DBNull.Value Then
+                        wtyDataIW(i).Doc_Num_11 = dr("Doc_Num_11")
+                    End If
+
+                    If dr("Matrial_Serial_11") IsNot DBNull.Value Then
+                        wtyDataIW(i).Matrial_Serial_11 = dr("Matrial_Serial_11")
+                    End If
+
+                    If dr("Location_12") IsNot DBNull.Value Then
+                        wtyDataIW(i).Location_12 = dr("Location_12")
+                    End If
+
+                    If dr("Part_12") IsNot DBNull.Value Then
+                        wtyDataIW(i).Part_12 = dr("Part_12")
+                    End If
+
+                    If dr("Qty_12") IsNot DBNull.Value Then
+                        wtyDataIW(i).Qty_12 = dr("Qty_12")
+                    End If
+
+                    If dr("Unit_Price_12") IsNot DBNull.Value Then
+                        wtyDataIW(i).Unit_Price_12 = dr("Unit_Price_12")
+                    End If
+
+                    If dr("Doc_Num_12") IsNot DBNull.Value Then
+                        wtyDataIW(i).Doc_Num_12 = dr("Doc_Num_12")
+                    End If
+
+                    If dr("Matrial_Serial_12") IsNot DBNull.Value Then
+                        wtyDataIW(i).Matrial_Serial_12 = dr("Matrial_Serial_12")
+                    End If
+
+                    If dr("Location_13") IsNot DBNull.Value Then
+                        wtyDataIW(i).Location_13 = dr("Location_13")
+                    End If
+
+                    If dr("Part_13") IsNot DBNull.Value Then
+                        wtyDataIW(i).Part_13 = dr("Part_13")
+                    End If
+
+                    If dr("Qty_13") IsNot DBNull.Value Then
+                        wtyDataIW(i).Qty_13 = dr("Qty_13")
+                    End If
+
+                    If dr("Unit_Price_13") IsNot DBNull.Value Then
+                        wtyDataIW(i).Unit_Price_13 = dr("Unit_Price_13")
+                    End If
+
+                    If dr("Doc_Num_13") IsNot DBNull.Value Then
+                        wtyDataIW(i).Doc_Num_13 = dr("Doc_Num_13")
+                    End If
+
+                    If dr("Matrial_Serial_13") IsNot DBNull.Value Then
+                        wtyDataIW(i).Matrial_Serial_13 = dr("Matrial_Serial_13")
+                    End If
+
+                    If dr("Location_14") IsNot DBNull.Value Then
+                        wtyDataIW(i).Location_14 = dr("Location_14")
+                    End If
+
+                    If dr("Part_14") IsNot DBNull.Value Then
+                        wtyDataIW(i).Part_14 = dr("Part_14")
+                    End If
+
+                    If dr("Qty_14") IsNot DBNull.Value Then
+                        wtyDataIW(i).Qty_14 = dr("Qty_14")
+                    End If
+
+                    If dr("Unit_Price_14") IsNot DBNull.Value Then
+                        wtyDataIW(i).Unit_Price_14 = dr("Unit_Price_14")
+                    End If
+
+                    If dr("Doc_Num_14") IsNot DBNull.Value Then
+                        wtyDataIW(i).Doc_Num_14 = dr("Doc_Num_14")
+                    End If
+
+                    If dr("Matrial_Serial_14") IsNot DBNull.Value Then
+                        wtyDataIW(i).Matrial_Serial_14 = dr("Matrial_Serial_14")
+                    End If
+
+                    If dr("Location_15") IsNot DBNull.Value Then
+                        wtyDataIW(i).Location_15 = dr("Location_15")
+                    End If
+
+                    If dr("Part_15") IsNot DBNull.Value Then
+                        wtyDataIW(i).Part_15 = dr("Part_15")
+                    End If
+
+                    If dr("Qty_15") IsNot DBNull.Value Then
+                        wtyDataIW(i).Qty_15 = dr("Qty_15")
+                    End If
+
+                    If dr("Unit_Price_15") IsNot DBNull.Value Then
+                        wtyDataIW(i).Unit_Price_15 = dr("Unit_Price_15")
+                    End If
+
+                    If dr("Doc_Num_15") IsNot DBNull.Value Then
+                        wtyDataIW(i).Doc_Num_15 = dr("Doc_Num_15")
+                    End If
+
+                    If dr("Matrial_Serial_15") IsNot DBNull.Value Then
+                        wtyDataIW(i).Matrial_Serial_15 = dr("Matrial_Serial_15")
+                    End If
+
+                    '⇓Invoice_updateより取得した情報を出力構造体にセット⇓
+                    If dr("Invoice") IsNot DBNull.Value Then
+
+                        If kind = "IW" Then
+
+                            wtyDataIW(i).Invoice = dr("Invoice")
+
+                        ElseIf kind = "OTHER" Then
+
+                            Dim tmp As Decimal = dr("Invoice")
+                            tmp = tmp * -1
+                            wtyDataIW(i).Invoice = tmp
+
+                        End If
+
+                    End If
+
+                    If dr("Labor") IsNot DBNull.Value Then
+
+                        If kind = "IW" Then
+
+                            wtyDataIW(i).Labor = dr("Labor")
+
+                        ElseIf kind = "OTHER" Then
+
+                            Dim tmp As Decimal = dr("Labor")
+                            tmp = tmp * -1
+                            wtyDataIW(i).Labor = tmp
+
+                        End If
+
+                    End If
+
+                    If dr("Parts") IsNot DBNull.Value Then
+
+                        If kind = "IW" Then
+                            wtyDataIW(i).Parts = dr("Parts")
+
+                        ElseIf kind = "OTHER" Then
+
+                            Dim tmp As Decimal = dr("Parts")
+                            tmp = tmp * -1
+                            wtyDataIW(i).Parts = tmp
+
+                        End If
+
+                    End If
+
+                    If dr("Parts_invoice_No") IsNot DBNull.Value Then
+                        wtyDataIW(i).Parts_invoice_No = dr("Parts_invoice_No")
+                    End If
+
+                    If dr("Labor_Invoice_No") IsNot DBNull.Value Then
+                        wtyDataIW(i).Labor_Invoice_No = dr("Labor_Invoice_No")
+                    End If
+
+                Next i
+
+                '■更新
+                For i = 0 To wtyDataIW.Length - 1
+
+                    Dim select_sql2 As String = ""
+
+                    If kind = "IW" Then
+
+                        select_sql2 &= "SELECT A.* "
+                        select_sql2 &= "FROM dbo.SonyWty_Excel A "
+                        select_sql2 &= "WHERE A.DELFG = 0 "
+                        select_sql2 &= "AND A.upload_Branch = '" & exportShipName & "' "
+                        select_sql2 &= "AND A.Status IN ('10','20') "
+                        select_sql2 &= "AND A.Sony_Claim_No = '" & wtyDataIW(i).Sony_Claim_No & "' "
+
+                    ElseIf kind = "OTHER" Then
+
+                        select_sql2 &= "SELECT A.* "
+                        select_sql2 &= "FROM dbo.SonyWty_Excel A "
+                        select_sql2 &= "WHERE A.DELFG = 0 "
+                        select_sql2 &= "AND A.upload_Branch = '" & exportShipName & "' "
+                        select_sql2 &= "AND A.Status = '80' "
+                        select_sql2 &= "AND A.Sony_Claim_No = '" & wtyDataIW(i).Sony_Claim_No & "' "
+
+                    End If
+
+                    Dim sqlSelect2 As New SqlCommand(select_sql2, con, trn)
+                    Dim Adapter2 As New SqlDataAdapter(sqlSelect2)
+                    Dim Builder2 As New SqlCommandBuilder(Adapter2)
+                    Dim ds2 As New DataSet
+
+                    Adapter2.Fill(ds2)
+
+                    If ds2.Tables(0).Rows.Count = 1 Then
+
+                        Dim dr As DataRow = ds2.Tables(0).Rows(0)
+
+                        dr("Labor_Amount_I") = wtyDataIW(i).Labor
+                        dr("Parts_Amount_I") = wtyDataIW(i).Parts
+                        dr("Total_Invoice_Amount_I") = wtyDataIW(i).Invoice
+                        dr("UPDDT") = dtNow
+                        dr("UPDCD") = userid
+                        dr("upload_date") = dtNow
+                        dr("upload_user") = userName
+
+                        '更新
+                        Adapter2.Update(ds2)
+
+                    End If
+
+                Next i
+
+            End If
+
+            '■コミット
+            trn.Commit()
+
+        Catch ex As Exception
+            trn.Rollback()
+            errFlg = 1
+        Finally
+            'DB接続クローズ
+            If con.State <> ConnectionState.Closed Then
+                con.Close()
+            End If
+        End Try
+
+    End Sub
+
+
+
     '****************************************************
     '処理：setSAW_Discount_Details
     '引数：wtyDataIW()　　出力対象をセット
@@ -4404,6 +6641,123 @@ Public Class Class_analysis
 
     End Sub
 
+    'SonyDiscount Details
+    Public Sub SonysetSAW_Discount_Details(ByRef wtyDataOther() As SONYWTY_EXCEL, ByVal exportShipName As String, ByVal shipCode As String, ByVal userid As String, ByVal userName As String, ByRef errFlg As Integer, ByVal setMon As String, ByVal dateFrom As String, ByVal dateTo As String)
+
+        'コネクションを取得
+        Dim con As SqlConnection = New SqlConnection(ConfigurationManager.ConnectionStrings("cnstr").ConnectionString)
+        con.Open()
+
+        'トランザクション開始＆コネクションオープン
+        Dim trn As SqlTransaction = con.BeginTransaction(IsolationLevel.ReadCommitted)
+
+        Try
+
+            '■出力対象を取得
+
+            Dim clsSetCommon As New Class_common
+            Dim dtNow As DateTime = clsSetCommon.dtIndia
+
+            Dim dsWtyExcel As New DataSet
+            Dim select_sql As String = ""
+
+            select_sql &= "SELECT B.Invoice, B.Labor, B.Parts, B.Parts_Invoice_No, B.Labor_Invoice_No, A.* "
+            select_sql &= "FROM dbo.SonyWty_Excel A "
+            select_sql &= ",SonyInvoice_update B "
+            select_sql &= "WHERE A.DELFG = 0 "
+            select_sql &= "AND A.Sony_Claim_No = B.sony_Ref_No "
+            select_sql &= "And A.upload_Branch = B.upload_Branch "
+            select_sql &= "AND A.upload_Branch = '" & exportShipName & "' "
+            select_sql &= "AND A.Status = '80' "
+            select_sql &= "AND (B.Invoice <> '0.00' and  B.Invoice is not NULL) "
+
+
+            If setMon = "00" Then
+                If dateTo <> "" Then
+                    If dateFrom <> "" Then
+                        select_sql &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111), 10) <= '" & dateTo & "' "
+                        select_sql &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111), 10) >= '" & dateFrom & "' "
+                        select_sql &= "ORDER BY A.Samsung_Claim_No;"
+                    Else
+                        select_sql &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111), 10) <= '" & dateTo & "' "
+                        select_sql &= "ORDER BY A.Samsung_Claim_No;"
+                    End If
+                Else
+                    If dateFrom <> "" Then
+                        select_sql &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111), 10) >= '" & dateFrom & "' "
+                        select_sql &= "ORDER BY A.Samsung_Claim_No;"
+                    End If
+                End If
+            Else
+                select_sql &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111), 7) = '" & dtNow.ToShortDateString.Substring(0, 4) & "/" & setMon & "' "
+                select_sql &= "ORDER BY A.Sony_Claim_No;"
+            End If
+
+            Dim sqlSelect As New SqlCommand(select_sql, con, trn)
+            Dim Adapter As New SqlDataAdapter(sqlSelect)
+
+            Adapter.Fill(dsWtyExcel)
+
+            If dsWtyExcel.Tables(0).Rows.Count <> 0 Then
+
+                Dim i As Integer
+
+                ReDim wtyDataOther(dsWtyExcel.Tables(0).Rows.Count - 1)
+
+                For i = 0 To dsWtyExcel.Tables(0).Rows.Count - 1
+
+                    Dim dr As DataRow = dsWtyExcel.Tables(0).Rows(i)
+
+                    '出力情報を構造体にセット
+                    If dr("ASC_Code") IsNot DBNull.Value Then
+                        wtyDataOther(i).ASC_Code = dr("ASC_Code")
+                    End If
+
+                    If dr("Branch_Code") IsNot DBNull.Value Then
+                        wtyDataOther(i).Branch_Code = dr("Branch_Code")
+                    End If
+
+                    If dr("ASC_Claim_No") IsNot DBNull.Value Then
+                        wtyDataOther(i).ASC_Claim_No = dr("ASC_Claim_No")
+                    End If
+
+                    If dr("Sony_Claim_No") IsNot DBNull.Value Then
+                        wtyDataOther(i).Sony_Claim_No = dr("Sony_Claim_No")
+                    End If
+
+                    If dr("Model") IsNot DBNull.Value Then
+                        wtyDataOther(i).Model = dr("Model")
+                    End If
+
+                    '⇓Invoice_updateより取得した情報を出力構造体にセット⇓
+                    If dr("Parts_invoice_No") IsNot DBNull.Value Then
+                        wtyDataOther(i).Parts_invoice_No = dr("Parts_invoice_No")
+                    End If
+
+                    If dr("Labor_Invoice_No") IsNot DBNull.Value Then
+                        wtyDataOther(i).Labor_Invoice_No = dr("Labor_Invoice_No")
+                    End If
+
+                Next i
+
+            End If
+
+            '■コミット
+            trn.Commit()
+
+        Catch ex As Exception
+            trn.Rollback()
+            errFlg = 1
+        Finally
+            'DB接続クローズ
+            If con.State <> ConnectionState.Closed Then
+                con.Close()
+            End If
+        End Try
+
+    End Sub
+
+
     '****************************************************
     '処理：CSVファイルのヘッダ情報を確認
     '引数：colsHead()   　読み込んだCSVファイルのヘッダ情報 1行目
@@ -4505,8 +6859,6 @@ Public Class Class_analysis
             End If
 
         ElseIf csvKind = 2 Then
-
-
 
 
             If Trim(colsHead(0)) <> "ASC Code" Then
@@ -5352,6 +7704,189 @@ Public Class Class_analysis
         End Try
 
     End Sub
+
+    'Added for Sony Activity Report
+
+    Public Sub setSonyActivityReport(ByVal report1 As SONY_ACTIVITY_REPORT, ByVal userid As String, ByVal userName As String, ByVal setDay As String, ByRef errFlg As Integer, ByVal shipCode As String, ByRef tourokuFlg As Integer)
+
+        'コネクションを取得
+        Dim con As SqlConnection = New SqlConnection(ConfigurationManager.ConnectionStrings("cnstr").ConnectionString)
+        con.Open()
+
+        'トランザクション開始＆コネクションオープン
+        Dim trn As SqlTransaction = con.BeginTransaction(IsolationLevel.ReadCommitted)
+
+        Try
+            Dim clsSetCommon As New Class_common
+            Dim dtNow As DateTime = clsSetCommon.dtIndia
+
+            '■UPDATE Activity_report ※登録済か確認
+            Dim select_sql As String = ""
+            '/* Added Mon Year VJ 20100106*/
+            'select_sql = "SELECT * FROM dbo.Activity_report WHERE month = '" & dtNow.ToShortDateString.Substring(0, 5) & report.month & "' AND day = '" & setDay & "' AND DELFG = 0 AND location = '" & shipCode & "';"
+            select_sql = "SELECT * FROM dbo.SONY_ACTIVITY_REPORT WHERE month = '" & report1.ActYear & "/" & report1.ActMonth & "' AND day = '" & setDay & "' AND DELFG = 0 AND location = '" & shipCode & "';"
+            Dim sqlSelect As New SqlCommand(select_sql, con, trn)
+            Dim Adapter As New SqlDataAdapter(sqlSelect)
+            Dim Builder As New SqlCommandBuilder(Adapter)
+            Dim ds As New DataSet
+            Dim dr1 As DataRow
+            Adapter.Fill(ds)
+
+            If ds.Tables(0).Rows.Count = 1 Then
+
+                '上書き登録
+                tourokuFlg = 1
+                dr1 = ds.Tables(0).Rows(0)
+                dr1("UPDDT") = dtNow
+                dr1("UPDCD") = userid
+                dr1("UPDPG") = "Class_analysis.vb"
+                dr1("DELFG") = 0
+                dr1("update_user") = userName
+                dr1("update_datetime") = dtNow
+                'dr1("month") = dtNow.ToShortDateString.Substring(0, 5) & report.month '/* Added Mon Year VJ 20100106*/
+                dr1("month") = report1.ActYear & "/" & report1.ActMonth '/* Added Mon Year VJ 20100106*/
+                dr1("day") = setDay
+                dr1("note") = report1.note
+                'dr1("Service") = report1.Service
+                'dr1("D_I") = report1.D_I
+                'dr1("Type") = report1.Type
+                'dr1("Customer_Visit") = report1.Customer_Visit
+                'dr1("Call_Registerd") = report1.Call_Registerd
+                'dr1("Repair_Completed") = report1.Repair_Completed
+                'dr1("Goods_Delivered") = report1.Goods_Delivered
+                'dr1("Pending_Calls") = report1.Pending_Calls
+                'dr1("Cancelled_Calls") = report1.Cancelled_Calls
+                'dr1("Reservation") = report1.Reservation
+                'dr1("Total") = report1.Total
+                dr1("Customer_Visit_S") = report1.Customer_Visit_S
+                dr1("Call_Registerd_S") = report1.Call_Registerd_S
+                dr1("Repair_Completed_S") = report1.Repair_Completed_S
+                dr1("Goods_Delivered_S") = report1.Goods_Delivered_S
+                dr1("Pending_Calls_S") = report1.Pending_Calls_S
+                dr1("Cancelled_Calls_S") = report1.Cancelled_Calls_S
+                dr1("Reservation_S") = report1.Reservation_S
+
+
+                dr1("Customer_Visit_D") = report1.Customer_Visit_D
+                dr1("Call_Registerd_D") = report1.Call_Registerd_D
+                dr1("Repair_Completed_D") = report1.Repair_Completed_D
+                dr1("Goods_Delivered_D") = report1.Goods_Delivered_D
+                dr1("Pending_Calls_D") = report1.Pending_Calls_D
+                dr1("Cancelled_Calls_D") = report1.Cancelled_Calls_D
+                dr1("Reservation_D") = report1.Reservation_D
+
+
+                dr1("Customer_Visit_T") = report1.Customer_Visit_T
+                dr1("Call_Registerd_T") = report1.Call_Registerd_T
+                dr1("Repair_Completed_T") = report1.Repair_Completed_T
+                dr1("Goods_Delivered_T") = report1.Goods_Delivered_T
+                dr1("Pending_Calls_T") = report1.Pending_Calls_T
+                dr1("Cancelled_Calls_T") = report1.Cancelled_Calls_T
+                dr1("Reservation_T") = report1.Reservation_T
+
+
+
+
+
+
+
+                dr1("location") = shipCode
+
+                '更新
+                Adapter.Update(ds)
+            Else
+                '■INSERT　SC_DSR_infoの空テーブル取得
+                Dim select_sql1 As String = ""
+                select_sql1 = "SELECT * FROM dbo.SONY_ACTIVITY_REPORT WHERE update_user IS NULL;"
+
+                Dim sqlSelect1 As New SqlCommand(select_sql1, con, trn)
+                Dim Adapter1 As New SqlDataAdapter(sqlSelect1)
+                Dim Builder1 As New SqlCommandBuilder(Adapter1)
+                Dim ds1 As New DataSet
+                Adapter1.Fill(ds1)
+
+                '新規DR取得
+                dr1 = ds1.Tables(0).NewRow
+
+                dr1("CRTDT") = dtNow
+                dr1("CRTCD") = userid
+                dr1("UPDPG") = "Class_analysis.vb"
+                dr1("DELFG") = 0
+                dr1("update_user") = userName
+                dr1("update_datetime") = dtNow
+                'dr1("month") = dtNow.ToShortDateString.Substring(0, 5) & report.month '/* Added Mon Year VJ 20100106*/
+                dr1("month") = report1.ActYear & "/" & report1.ActMonth '/* Added Mon Year VJ 20100106*/
+                dr1("day") = setDay
+                dr1("note") = report1.note
+                'dr1("Service") = report1.Service
+                'dr1("D_I") = report1.D_I
+                'dr1("Type") = report1.Type
+                'dr1("Customer_Visit") = report1.Customer_Visit
+                'dr1("Call_Registerd") = report1.Call_Registerd
+                'dr1("Repair_Completed") = report1.Repair_Completed
+                'dr1("Goods_Delivered") = report1.Goods_Delivered
+                'dr1("Pending_Calls") = report1.Pending_Calls
+                'dr1("Cancelled_Calls") = report1.Cancelled_Calls
+                'dr1("Reservation") = report1.Reservation
+                'dr1("Total") = report1.Total
+
+                dr1("Customer_Visit_S") = report1.Customer_Visit_S
+                dr1("Call_Registerd_S") = report1.Call_Registerd_S
+                dr1("Repair_Completed_S") = report1.Repair_Completed_S
+                dr1("Goods_Delivered_S") = report1.Goods_Delivered_S
+                dr1("Pending_Calls_S") = report1.Pending_Calls_S
+                dr1("Cancelled_Calls_S") = report1.Cancelled_Calls_S
+                dr1("Reservation_S") = report1.Reservation_S
+
+
+                dr1("Customer_Visit_D") = report1.Customer_Visit_D
+                dr1("Call_Registerd_D") = report1.Call_Registerd_D
+                dr1("Repair_Completed_D") = report1.Repair_Completed_D
+                dr1("Goods_Delivered_D") = report1.Goods_Delivered_D
+                dr1("Pending_Calls_D") = report1.Pending_Calls_D
+                dr1("Cancelled_Calls_D") = report1.Cancelled_Calls_D
+                dr1("Reservation_D") = report1.Reservation_D
+
+
+                dr1("Customer_Visit_T") = report1.Customer_Visit_T
+                dr1("Call_Registerd_T") = report1.Call_Registerd_T
+                dr1("Repair_Completed_T") = report1.Repair_Completed_T
+                dr1("Goods_Delivered_T") = report1.Goods_Delivered_T
+                dr1("Pending_Calls_T") = report1.Pending_Calls_T
+                dr1("Cancelled_Calls_T") = report1.Cancelled_Calls_T
+                dr1("Reservation_T") = report1.Reservation_T
+
+
+
+
+
+
+
+                dr1("location") = shipCode
+
+                '新規DRをDataTableに追加
+                ds1.Tables(0).Rows.Add(dr1)
+                Adapter1.Update(ds1)
+            End If
+
+            '■コミット
+            trn.Commit()
+
+        Catch ex As Exception
+            trn.Rollback()
+            errFlg = 1
+        Finally
+            'DB接続クローズ
+            If con.State <> ConnectionState.Closed Then
+                con.Close()
+            End If
+        End Try
+
+    End Sub
+
+
+
+
     '****************************************************
     '処理：cash_trackデータの登録
     '引数：cashTrackData   画面からの請求、支払い情報
@@ -6889,6 +9424,630 @@ Public Class Class_analysis
         End Try
 
     End Sub
+
+    'SonyFinalReport
+    Public Sub SonysetFinalReport(ByRef dsWtyExcel As DataSet, ByRef wtyData() As SONYWTY_EXCEL, ByVal userid As String, ByVal userName As String, ByVal shipCode As String, ByVal exportShipName As String, ByRef errFlg As Integer, ByVal setMon As String, ByVal dateFrom As String, ByVal dateTo As String, ByVal InvoiceNoMax As Long)
+
+        'コネクションを取得
+        Dim con As SqlConnection = New SqlConnection(ConfigurationManager.ConnectionStrings("cnstr").ConnectionString)
+        con.Open()
+
+        'トランザクション開始＆コネクションオープン
+        Dim trn As SqlTransaction = con.BeginTransaction(IsolationLevel.ReadCommitted)
+
+        Try
+
+            Dim clsSetCommon As New Class_common
+            Dim dtNow As DateTime = clsSetCommon.dtIndia
+
+            Dim select_sql As String = ""
+            select_sql &= "SELECT B.OW_Labor, B.OW_Parts, B.OW_total, B.OW_Tax, A.* "
+            select_sql &= "FROM dbo.SonyWty_Excel A "
+            select_sql &= ",SonySC_DSR B "
+            select_sql &= "WHERE A.DELFG = 0 "
+            select_sql &= "AND A.ASC_Claim_No = B.ServiceOrder_No "
+            select_sql &= "AND A.Branch_Code = '" & shipCode & "' "
+            select_sql &= "AND B.Branch_name = '" & exportShipName & "' "
+            select_sql &= "AND (A.Part_1 is not NULL and  A.Part_1 <> '') "
+            select_sql &= "AND A.Status = '80' "
+            select_sql &= "AND A.Delivery_Date = B.Billing_date "
+            select_sql &= "AND B.Branch_name  = A.upload_Branch "
+
+            If setMon = "00" Then
+                If dateTo <> "" Then
+                    If dateFrom <> "" Then
+                        select_sql &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),10) <= '" & dateTo & "' "
+                        select_sql &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),10) >= '" & dateFrom & "';"
+                    Else
+                        select_sql &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),10) <= '" & dateTo & "';"
+                    End If
+                Else
+                    If dateFrom <> "" Then
+                        select_sql &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),10) >= '" & dateFrom & "';"
+                    End If
+                End If
+
+            Else
+                select_sql &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),7) = '" & dtNow.ToLongDateString.Substring(0, 4) & "/" & setMon & "'; "
+            End If
+
+            Dim sqlSelect As New SqlCommand(select_sql, con, trn)
+            Dim Adapter As New SqlDataAdapter(sqlSelect)
+
+            Adapter.Fill(dsWtyExcel)
+
+            If dsWtyExcel.Tables(0).Rows.Count = 0 Then
+                dsWtyExcel = Nothing
+            Else
+
+                '出力対象を構造体に設定
+                ReDim wtyData(dsWtyExcel.Tables(0).Rows.Count - 1)
+
+                For i = 0 To dsWtyExcel.Tables(0).Rows.Count - 1
+
+                    Dim dr As DataRow = dsWtyExcel.Tables(0).Rows(i)
+
+                    If dr("Branch_Code") IsNot DBNull.Value Then
+                        wtyData(i).Branch_Code = dr("Branch_Code")
+                    End If
+
+                    If dr("ASC_Claim_No") IsNot DBNull.Value Then
+                        wtyData(i).ASC_Claim_No = dr("ASC_Claim_No")
+                    End If
+
+                    If dr("Sony_Claim_No") IsNot DBNull.Value Then
+                        wtyData(i).Sony_Claim_No = dr("Sony_Claim_No")
+                    End If
+
+                    If dr("Delivery_Date") IsNot DBNull.Value Then
+                        wtyData(i).Delivery_Date = dr("Delivery_Date")
+                    End If
+
+                    If dr("Labor_Amount") IsNot DBNull.Value Then
+                        wtyData(i).Labor_Amount = dr("Labor_Amount")
+                    End If
+
+                    If dr("Parts_Amount") IsNot DBNull.Value Then
+                        wtyData(i).Parts_Amount = dr("Parts_Amount")
+                    End If
+
+                    If dr("Total_Invoice_Amount") IsNot DBNull.Value Then
+                        wtyData(i).Total_Invoice_Amount = dr("Total_Invoice_Amount")
+                    End If
+
+                    If dr("Parts_SGST") IsNot DBNull.Value Then
+                        wtyData(i).Parts_SGST = dr("Parts_SGST")
+                    End If
+
+                    If dr("Parts_CGST") IsNot DBNull.Value Then
+                        wtyData(i).Parts_CGST = dr("Parts_CGST")
+                    End If
+
+                    If dr("Parts_IGST") IsNot DBNull.Value Then
+                        wtyData(i).Parts_IGST = dr("Parts_IGST")
+                    End If
+
+                    If dr("SGST") IsNot DBNull.Value Then
+                        wtyData(i).SGST = dr("SGST")
+                    End If
+
+                    If dr("CGST") IsNot DBNull.Value Then
+                        wtyData(i).CGST = dr("CGST")
+                    End If
+
+                    If dr("IGST") IsNot DBNull.Value Then
+                        wtyData(i).IGST = dr("IGST")
+                    End If
+
+                    If dr("Location_1") IsNot DBNull.Value Then
+                        wtyData(i).Location_1 = dr("Location_1")
+                    End If
+
+                    If dr("Part_1") IsNot DBNull.Value Then
+                        wtyData(i).Part_1 = dr("Part_1")
+                    End If
+
+                    If dr("Qty_1") IsNot DBNull.Value Then
+                        wtyData(i).Qty_1 = dr("Qty_1")
+                    End If
+
+                    If dr("Unit_Price_1") IsNot DBNull.Value Then
+                        wtyData(i).Unit_Price_1 = dr("Unit_Price_1")
+                    End If
+
+                    If dr("Doc_Num_1") IsNot DBNull.Value Then
+                        wtyData(i).Doc_Num_1 = dr("Doc_Num_1")
+                    End If
+
+                    If dr("Matrial_Serial_1") IsNot DBNull.Value Then
+                        wtyData(i).Matrial_Serial_1 = dr("Matrial_Serial_1")
+                    End If
+
+                    If dr("Location_2") IsNot DBNull.Value Then
+                        wtyData(i).Location_2 = dr("Location_2")
+                    End If
+
+                    If dr("Part_2") IsNot DBNull.Value Then
+                        wtyData(i).Part_2 = dr("Part_2")
+                    End If
+
+                    If dr("Qty_2") IsNot DBNull.Value Then
+                        wtyData(i).Qty_2 = dr("Qty_2")
+                    End If
+
+                    If dr("Unit_Price_2") IsNot DBNull.Value Then
+                        wtyData(i).Unit_Price_2 = dr("Unit_Price_2")
+                    End If
+
+                    If dr("Doc_Num_2") IsNot DBNull.Value Then
+                        wtyData(i).Doc_Num_2 = dr("Doc_Num_2")
+                    End If
+
+                    If dr("Matrial_Serial_2") IsNot DBNull.Value Then
+                        wtyData(i).Matrial_Serial_2 = dr("Matrial_Serial_2")
+                    End If
+
+                    If dr("Location_3") IsNot DBNull.Value Then
+                        wtyData(i).Location_3 = dr("Location_3")
+                    End If
+
+                    If dr("Part_3") IsNot DBNull.Value Then
+                        wtyData(i).Part_3 = dr("Part_3")
+                    End If
+
+                    If dr("Qty_3") IsNot DBNull.Value Then
+                        wtyData(i).Qty_3 = dr("Qty_3")
+                    End If
+
+                    If dr("Unit_Price_3") IsNot DBNull.Value Then
+                        wtyData(i).Unit_Price_3 = dr("Unit_Price_3")
+                    End If
+
+                    If dr("Doc_Num_3") IsNot DBNull.Value Then
+                        wtyData(i).Doc_Num_3 = dr("Doc_Num_3")
+                    End If
+
+                    If dr("Matrial_Serial_3") IsNot DBNull.Value Then
+                        wtyData(i).Matrial_Serial_3 = dr("Matrial_Serial_3")
+                    End If
+
+                    If dr("Location_4") IsNot DBNull.Value Then
+                        wtyData(i).Location_4 = dr("Location_4")
+                    End If
+
+                    If dr("Part_4") IsNot DBNull.Value Then
+                        wtyData(i).Part_4 = dr("Part_4")
+                    End If
+
+                    If dr("Qty_4") IsNot DBNull.Value Then
+                        wtyData(i).Qty_4 = dr("Qty_4")
+                    End If
+
+                    If dr("Unit_Price_4") IsNot DBNull.Value Then
+                        wtyData(i).Unit_Price_4 = dr("Unit_Price_4")
+                    End If
+
+                    If dr("Doc_Num_4") IsNot DBNull.Value Then
+                        wtyData(i).Doc_Num_4 = dr("Doc_Num_4")
+                    End If
+
+                    If dr("Matrial_Serial_4") IsNot DBNull.Value Then
+                        wtyData(i).Matrial_Serial_4 = dr("Matrial_Serial_4")
+                    End If
+
+                    If dr("Location_5") IsNot DBNull.Value Then
+                        wtyData(i).Location_5 = dr("Location_5")
+                    End If
+
+                    If dr("Part_5") IsNot DBNull.Value Then
+                        wtyData(i).Part_5 = dr("Part_5")
+                    End If
+
+                    If dr("Qty_5") IsNot DBNull.Value Then
+                        wtyData(i).Qty_5 = dr("Qty_5")
+                    End If
+
+                    If dr("Unit_Price_5") IsNot DBNull.Value Then
+                        wtyData(i).Unit_Price_5 = dr("Unit_Price_5")
+                    End If
+
+                    If dr("Doc_Num_5") IsNot DBNull.Value Then
+                        wtyData(i).Doc_Num_5 = dr("Doc_Num_5")
+                    End If
+
+                    If dr("Matrial_Serial_5") IsNot DBNull.Value Then
+                        wtyData(i).Matrial_Serial_5 = dr("Matrial_Serial_5")
+                    End If
+
+                    If dr("Location_6") IsNot DBNull.Value Then
+                        wtyData(i).Location_6 = dr("Location_6")
+                    End If
+
+                    If dr("Part_6") IsNot DBNull.Value Then
+                        wtyData(i).Part_6 = dr("Part_6")
+                    End If
+
+                    If dr("Qty_6") IsNot DBNull.Value Then
+                        wtyData(i).Qty_6 = dr("Qty_6")
+                    End If
+
+                    If dr("Unit_Price_6") IsNot DBNull.Value Then
+                        wtyData(i).Unit_Price_6 = dr("Unit_Price_6")
+                    End If
+
+                    If dr("Doc_Num_6") IsNot DBNull.Value Then
+                        wtyData(i).Doc_Num_6 = dr("Doc_Num_6")
+                    End If
+
+                    If dr("Matrial_Serial_6") IsNot DBNull.Value Then
+                        wtyData(i).Matrial_Serial_6 = dr("Matrial_Serial_6")
+                    End If
+
+                    If dr("Location_7") IsNot DBNull.Value Then
+                        wtyData(i).Location_7 = dr("Location_7")
+                    End If
+
+                    If dr("Part_7") IsNot DBNull.Value Then
+                        wtyData(i).Part_7 = dr("Part_7")
+                    End If
+
+                    If dr("Qty_7") IsNot DBNull.Value Then
+                        wtyData(i).Qty_7 = dr("Qty_7")
+                    End If
+
+                    If dr("Unit_Price_7") IsNot DBNull.Value Then
+                        wtyData(i).Unit_Price_7 = dr("Unit_Price_7")
+                    End If
+
+                    If dr("Doc_Num_7") IsNot DBNull.Value Then
+                        wtyData(i).Doc_Num_7 = dr("Doc_Num_7")
+                    End If
+
+                    If dr("Matrial_Serial_7") IsNot DBNull.Value Then
+                        wtyData(i).Matrial_Serial_7 = dr("Matrial_Serial_7")
+                    End If
+
+                    If dr("Location_8") IsNot DBNull.Value Then
+                        wtyData(i).Location_8 = dr("Location_8")
+                    End If
+
+                    If dr("Part_8") IsNot DBNull.Value Then
+                        wtyData(i).Part_8 = dr("Part_8")
+                    End If
+
+                    If dr("Qty_8") IsNot DBNull.Value Then
+                        wtyData(i).Qty_8 = dr("Qty_8")
+                    End If
+
+                    If dr("Unit_Price_8") IsNot DBNull.Value Then
+                        wtyData(i).Unit_Price_8 = dr("Unit_Price_8")
+                    End If
+
+                    If dr("Doc_Num_8") IsNot DBNull.Value Then
+                        wtyData(i).Doc_Num_8 = dr("Doc_Num_8")
+                    End If
+
+                    If dr("Matrial_Serial_8") IsNot DBNull.Value Then
+                        wtyData(i).Matrial_Serial_8 = dr("Matrial_Serial_8")
+                    End If
+
+                    If dr("Location_9") IsNot DBNull.Value Then
+                        wtyData(i).Location_9 = dr("Location_9")
+                    End If
+
+                    If dr("Part_9") IsNot DBNull.Value Then
+                        wtyData(i).Part_9 = dr("Part_9")
+                    End If
+
+                    If dr("Qty_9") IsNot DBNull.Value Then
+                        wtyData(i).Qty_9 = dr("Qty_9")
+                    End If
+
+                    If dr("Unit_Price_9") IsNot DBNull.Value Then
+                        wtyData(i).Unit_Price_9 = dr("Unit_Price_9")
+                    End If
+
+                    If dr("Doc_Num_9") IsNot DBNull.Value Then
+                        wtyData(i).Doc_Num_9 = dr("Doc_Num_9")
+                    End If
+
+                    If dr("Matrial_Serial_9") IsNot DBNull.Value Then
+                        wtyData(i).Matrial_Serial_9 = dr("Matrial_Serial_9")
+                    End If
+
+                    If dr("Location_10") IsNot DBNull.Value Then
+                        wtyData(i).Location_10 = dr("Location_10")
+                    End If
+
+                    If dr("Part_10") IsNot DBNull.Value Then
+                        wtyData(i).Part_10 = dr("Part_10")
+                    End If
+
+                    If dr("Qty_10") IsNot DBNull.Value Then
+                        wtyData(i).Qty_10 = dr("Qty_10")
+                    End If
+
+                    If dr("Unit_Price_10") IsNot DBNull.Value Then
+                        wtyData(i).Unit_Price_10 = dr("Unit_Price_10")
+                    End If
+
+                    If dr("Doc_Num_10") IsNot DBNull.Value Then
+                        wtyData(i).Doc_Num_10 = dr("Doc_Num_10")
+                    End If
+
+                    If dr("Matrial_Serial_10") IsNot DBNull.Value Then
+                        wtyData(i).Matrial_Serial_10 = dr("Matrial_Serial_10")
+                    End If
+
+                    If dr("Location_11") IsNot DBNull.Value Then
+                        wtyData(i).Location_11 = dr("Location_11")
+                    End If
+
+                    If dr("Part_11") IsNot DBNull.Value Then
+                        wtyData(i).Part_11 = dr("Part_11")
+                    End If
+
+                    If dr("Qty_11") IsNot DBNull.Value Then
+                        wtyData(i).Qty_11 = dr("Qty_11")
+                    End If
+
+                    If dr("Unit_Price_11") IsNot DBNull.Value Then
+                        wtyData(i).Unit_Price_11 = dr("Unit_Price_11")
+                    End If
+
+                    If dr("Doc_Num_11") IsNot DBNull.Value Then
+                        wtyData(i).Doc_Num_11 = dr("Doc_Num_11")
+                    End If
+
+                    If dr("Matrial_Serial_11") IsNot DBNull.Value Then
+                        wtyData(i).Matrial_Serial_11 = dr("Matrial_Serial_11")
+                    End If
+
+                    If dr("Location_12") IsNot DBNull.Value Then
+                        wtyData(i).Location_12 = dr("Location_12")
+                    End If
+
+                    If dr("Part_12") IsNot DBNull.Value Then
+                        wtyData(i).Part_12 = dr("Part_12")
+                    End If
+
+                    If dr("Qty_12") IsNot DBNull.Value Then
+                        wtyData(i).Qty_12 = dr("Qty_12")
+                    End If
+
+                    If dr("Unit_Price_12") IsNot DBNull.Value Then
+                        wtyData(i).Unit_Price_12 = dr("Unit_Price_12")
+                    End If
+
+                    If dr("Doc_Num_12") IsNot DBNull.Value Then
+                        wtyData(i).Doc_Num_12 = dr("Doc_Num_12")
+                    End If
+
+                    If dr("Matrial_Serial_12") IsNot DBNull.Value Then
+                        wtyData(i).Matrial_Serial_12 = dr("Matrial_Serial_12")
+                    End If
+
+                    If dr("Location_13") IsNot DBNull.Value Then
+                        wtyData(i).Location_13 = dr("Location_13")
+                    End If
+
+                    If dr("Part_13") IsNot DBNull.Value Then
+                        wtyData(i).Part_13 = dr("Part_13")
+                    End If
+
+                    If dr("Qty_13") IsNot DBNull.Value Then
+                        wtyData(i).Qty_13 = dr("Qty_13")
+                    End If
+
+                    If dr("Unit_Price_13") IsNot DBNull.Value Then
+                        wtyData(i).Unit_Price_13 = dr("Unit_Price_13")
+                    End If
+
+                    If dr("Doc_Num_13") IsNot DBNull.Value Then
+                        wtyData(i).Doc_Num_13 = dr("Doc_Num_13")
+                    End If
+
+                    If dr("Matrial_Serial_13") IsNot DBNull.Value Then
+                        wtyData(i).Matrial_Serial_13 = dr("Matrial_Serial_13")
+                    End If
+
+                    If dr("Location_14") IsNot DBNull.Value Then
+                        wtyData(i).Location_14 = dr("Location_14")
+                    End If
+
+                    If dr("Part_14") IsNot DBNull.Value Then
+                        wtyData(i).Part_14 = dr("Part_14")
+                    End If
+
+                    If dr("Qty_14") IsNot DBNull.Value Then
+                        wtyData(i).Qty_14 = dr("Qty_14")
+                    End If
+
+                    If dr("Unit_Price_14") IsNot DBNull.Value Then
+                        wtyData(i).Unit_Price_14 = dr("Unit_Price_14")
+                    End If
+
+                    If dr("Doc_Num_14") IsNot DBNull.Value Then
+                        wtyData(i).Doc_Num_14 = dr("Doc_Num_14")
+                    End If
+
+                    If dr("Matrial_Serial_14") IsNot DBNull.Value Then
+                        wtyData(i).Matrial_Serial_14 = dr("Matrial_Serial_14")
+                    End If
+
+                    If dr("Location_15") IsNot DBNull.Value Then
+                        wtyData(i).Location_15 = dr("Location_15")
+                    End If
+
+                    If dr("Part_15") IsNot DBNull.Value Then
+                        wtyData(i).Part_15 = dr("Part_15")
+                    End If
+
+                    If dr("Qty_15") IsNot DBNull.Value Then
+                        wtyData(i).Qty_15 = dr("Qty_15")
+                    End If
+
+                    If dr("Unit_Price_15") IsNot DBNull.Value Then
+                        wtyData(i).Unit_Price_15 = dr("Unit_Price_15")
+                    End If
+
+                    If dr("Doc_Num_15") IsNot DBNull.Value Then
+                        wtyData(i).Doc_Num_15 = dr("Doc_Num_15")
+                    End If
+
+                    If dr("Matrial_Serial_15") IsNot DBNull.Value Then
+                        wtyData(i).Matrial_Serial_15 = dr("Matrial_Serial_15")
+                    End If
+
+                    'dailyReportより税金の合計情報を設定
+                    wtyData(i).Sum_Tax_Amount = dr("OW_Tax")
+                    wtyData(i).SGST_Payable = wtyData(i).Sum_Tax_Amount / 2
+                    wtyData(i).CGST_Payable = wtyData(i).Sum_Tax_Amount / 2
+
+                    'dailyReportよりtotal情報を取得
+                    If dr("OW_Labor") IsNot DBNull.Value Then
+                        wtyData(i).OW_Labor = dr("OW_Labor")
+                    End If
+
+                    If dr("OW_Parts") IsNot DBNull.Value Then
+                        wtyData(i).OW_Parts = dr("OW_Parts")
+                    End If
+
+                    If dr("OW_total") IsNot DBNull.Value Then
+                        wtyData(i).OW_total = dr("OW_total")
+                    End If
+
+                Next i
+
+            End If
+
+            '■Wty_Excelへ採番情報更新、payment情報取得
+            For i = 0 To wtyData.Length - 1
+
+                Dim select_sql2 As String = ""
+                select_sql2 &= "SELECT A.* "
+                select_sql2 &= "FROM dbo.SonyWty_Excel A "
+                select_sql2 &= "WHERE A.DELFG = 0 "
+                select_sql2 &= "AND A.Status = '80' "
+                select_sql2 &= "AND A.Branch_Code = '" & shipCode & "' "
+                select_sql2 &= "AND A.ASC_Claim_No = '" & wtyData(i).ASC_Claim_No & "' "
+                select_sql2 &= "AND A.Sony_Claim_No = '" & wtyData(i).Sony_Claim_No & "' "
+                select_sql2 &= "AND A.upload_Branch = '" & exportShipName & "' "
+
+                If setMon = "00" Then
+                    If dateTo <> "" Then
+                        If dateFrom <> "" Then
+                            select_sql2 &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),10) <= '" & dateTo & "' "
+                            select_sql2 &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),10) >= '" & dateFrom & "';"
+                        Else
+                            select_sql2 &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),10) <= '" & dateTo & "';"
+                        End If
+                    Else
+                        If dateFrom <> "" Then
+                            select_sql2 &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),10) >= '" & dateFrom & "';"
+                        End If
+                    End If
+
+                Else
+                    select_sql2 &= "AND LEFT(CONVERT(VARCHAR, A.Delivery_Date,111),7) = '" & dtNow.ToLongDateString.Substring(0, 4) & "/" & setMon & "'; "
+                End If
+
+                Dim sqlSelect2 As New SqlCommand(select_sql2, con, trn)
+                Dim Adapter2 As New SqlDataAdapter(sqlSelect2)
+                Dim Builder2 As New SqlCommandBuilder(Adapter2)
+                Dim ds2 As New DataSet
+
+                Adapter2.Fill(ds2)
+
+                If ds2.Tables(0).Rows.Count = 1 Then
+
+                    Dim dr As DataRow = ds2.Tables(0).Rows(0)
+
+                    If wtyData(i).OW_Labor = "" Then
+                        dr("Labor_Amount_I") = 0
+                    Else
+                        dr("Labor_Amount_I") = wtyData(i).OW_Labor
+                    End If
+
+                    If wtyData(i).OW_Parts = "" Then
+                        dr("Parts_Amount_I") = 0
+                    Else
+                        dr("Parts_Amount_I") = wtyData(i).OW_Parts
+                    End If
+
+                    If wtyData(i).OW_total = "" Then
+                        dr("Total_Invoice_Amount_I") = 0
+                    Else
+                        dr("Total_Invoice_Amount_I") = wtyData(i).OW_total
+                    End If
+
+                    dr("tax_total") = wtyData(i).Sum_Tax_Amount
+
+                    dr("SGST_total") = wtyData(i).SGST_Payable
+
+                    dr("CGST_total") = wtyData(i).CGST_Payable
+
+                    dr("UPDDT") = Now
+                    dr("UPDCD") = userid
+                    dr("upload_date") = Now
+                    dr("upload_user") = userName
+
+                    'Invocie Numberの採番設定
+                    If dr("InvoiceNo_Final") Is DBNull.Value Then
+                        dr("InvoiceNo_Final") = "GSS" & exportShipName & "-" & InvoiceNoMax.ToString("0000000")
+                        InvoiceNoMax = InvoiceNoMax + 1
+                        wtyData(i).InvoiceNo_Final = dr("InvoiceNo_Final")
+                    Else
+                        '採番済の情報を取得
+                        wtyData(i).InvoiceNo_Final = dr("InvoiceNo_Final")
+                    End If
+
+                    '更新
+                    Adapter2.Update(ds2)
+
+                    'payment情報取得
+                    Dim select_sql3 As String = ""
+                    select_sql3 &= "SELECT * "
+                    select_sql3 &= "FROM dbo.cash_track "
+                    select_sql3 &= "WHERE DELFG = 0 "
+                    select_sql3 &= "AND location = '" & shipCode & "' "
+                    select_sql3 &= "AND claim_no = '" & wtyData(i).ASC_Claim_No & "' "
+
+                    Dim sqlSelect3 As New SqlCommand(select_sql3, con, trn)
+                    Dim Adapter3 As New SqlDataAdapter(sqlSelect3)
+                    Dim ds3 As New DataSet
+
+                    Adapter3.Fill(ds3)
+
+                    If ds3.Tables(0).Rows.Count = 1 Then
+
+                        Dim dr2 As DataRow = ds3.Tables(0).Rows(0)
+
+                        If dr2("payment") IsNot DBNull.Value Then
+                            wtyData(i).payment = dr2("payment")
+                        End If
+
+                    End If
+
+                End If
+
+            Next i
+
+            '■コミット
+            trn.Commit()
+
+        Catch ex As Exception
+            trn.Rollback()
+            errFlg = 1
+        Finally
+            'DB接続クローズ
+            If con.State <> ConnectionState.Closed Then
+                con.Close()
+            End If
+        End Try
+
+    End Sub
+
     '****************************************************
     '処理名　：exportData
     '処理概要：cash_trackよりWarranty毎の情報を取得
@@ -7172,6 +10331,153 @@ Public Class Class_analysis
 
     End Sub
 
+    'Added for SonyExport
+    Public Sub exportDataSonyActivityReport(ByRef dsActivity_report As DataSet, ByRef SonyactivityReportData() As Class_analysis.SONY_ACTIVITY_REPORT, ByRef SonyactivityReportDataSum As Class_analysis.SONY_ACTIVITY_REPORT, ByVal setMon As String, ByVal shipCode As String, ByRef errFlg As Integer)
+
+        'コネクションを取得
+        Dim con As SqlConnection = New SqlConnection(ConfigurationManager.ConnectionStrings("cnstr").ConnectionString)
+        con.Open()
+
+        'トランザクション開始＆コネクションオープン
+        Dim trn As SqlTransaction = con.BeginTransaction(IsolationLevel.ReadCommitted)
+
+        Try
+
+            Dim strSQL As String = "SELECT * FROM dbo.Sony_Activity_Report "
+            strSQL &= "WHERE DELFG = 0 AND Month = '" & setMon & "' "
+            strSQL &= "AND location = '" & shipCode & "';"
+
+            Dim sqlSelect As New SqlCommand(strSQL, con, trn)
+            Dim Adapter As New SqlDataAdapter(sqlSelect)
+
+            Adapter.Fill(dsActivity_report)
+
+            If dsActivity_report.Tables(0).Rows.Count = 0 Then
+                dsActivity_report = Nothing
+            Else
+
+
+                '出力対象を構造体に設定
+                ReDim SonyactivityReportData(dsActivity_report.Tables(0).Rows.Count - 1)
+
+                For i = 0 To dsActivity_report.Tables(0).Rows.Count - 1
+
+                    Dim dr As DataRow = dsActivity_report.Tables(0).Rows(i)
+
+                    If dr("month") IsNot DBNull.Value Then
+                        SonyactivityReportData(i).month = dr("month")
+                    End If
+
+                    If dr("day") IsNot DBNull.Value Then
+                        SonyactivityReportData(i).day = dr("day")
+                    End If
+
+                    If dr("note") IsNot DBNull.Value Then
+                        SonyactivityReportData(i).note = dr("note")
+                    End If
+
+                    'If dr("Service") IsNot DBNull.Value Then
+                    '    SonyactivityReportData(i).Service = dr("Service")
+                    'End If
+
+                    'If dr("D_I") IsNot DBNull.Value Then
+                    '    SonyactivityReportData(i).D_I = dr("D_I")
+                    'End If
+
+
+                    'If dr("Customer_Visit") IsNot DBNull.Value Then
+                    '    SonyactivityReportData(i).Customer_Visit = dr("Customer_Visit")
+                    'End If
+
+                    'If dr("Call_Registerd") IsNot DBNull.Value Then
+                    '    SonyactivityReportData(i).Call_Registerd = dr("Call_Registerd")
+                    'End If
+
+                    'If dr("Repair_Completed") IsNot DBNull.Value Then
+                    '    SonyactivityReportData(i).Repair_Completed = dr("Repair_Completed")
+                    'End If
+
+                    'If dr("Goods_Delivered") IsNot DBNull.Value Then
+                    '    SonyactivityReportData(i).Goods_Delivered = dr("Goods_Delivered")
+                    'End If
+
+                    'If dr("Pending_Calls") IsNot DBNull.Value Then
+                    '    SonyactivityReportData(i).Pending_Calls = dr("Pending_Calls")
+                    'End If
+
+                    'If dr("Cancelled_Calls") IsNot DBNull.Value Then
+                    '    SonyactivityReportData(i).Cancelled_Calls = dr("Cancelled_Calls")
+                    'End If
+
+                    If dr("location") IsNot DBNull.Value Then
+                        SonyactivityReportData(i).location = dr("location")
+                    End If
+
+                Next i
+
+            End If
+
+            Dim strSQL2 As String = "SELECT SUM(Service) AS Service, SUM(D_I) AS DandI,SUM(Customer_Visit) AS Customer_Visit, SUM(Call_Registerd) AS Call_Registerd, SUM(Repair_Completed) AS Repair_Completed, SUM(Goods_Delivered) AS Goods_Delivered, SUM(Pending_Calls) AS Pending_Calls, SUM(Cancelled_Calls) AS Cancelled_Calls FROM dbo.Sony_Activity_Report "
+            strSQL2 &= "WHERE DELFG = 0 AND Month = '" & setMon & "' "
+            strSQL2 &= "AND location = '" & shipCode & "';"
+
+            Dim sqlSelect2 As New SqlCommand(strSQL2, con, trn)
+            Dim Adapter2 As New SqlDataAdapter(sqlSelect2)
+            Dim Builder2 As New SqlCommandBuilder(Adapter2)
+            Dim ds As New DataSet
+
+            Adapter2.Fill(ds)
+
+            If ds.Tables(0).Rows.Count = 1 Then
+
+                Dim dr As DataRow = ds.Tables(0).Rows(0)
+
+                'If dr("Service") IsNot DBNull.Value Then
+                '    SonyactivityReportDataSum.Service = dr("Service")
+                'End If
+                'If dr("DandI") IsNot DBNull.Value Then
+                '    SonyactivityReportDataSum.D_I = dr("DandI")
+                'End If
+
+                'If dr("Customer_Visit") IsNot DBNull.Value Then
+                '    SonyactivityReportDataSum.Customer_Visit = dr("Customer_Visit")
+                'End If
+
+                'If dr("Call_Registerd") IsNot DBNull.Value Then
+                '    SonyactivityReportDataSum.Call_Registerd = dr("Call_Registerd")
+                'End If
+
+                'If dr("Repair_Completed") IsNot DBNull.Value Then
+                '    SonyactivityReportDataSum.Repair_Completed = dr("Repair_Completed")
+                'End If
+
+                'If dr("Goods_Delivered") IsNot DBNull.Value Then
+                '    SonyactivityReportDataSum.Goods_Delivered = dr("Goods_Delivered")
+                'End If
+
+                'If dr("Pending_Calls") IsNot DBNull.Value Then
+                '    SonyactivityReportDataSum.Pending_Calls = dr("Pending_Calls")
+                'End If
+
+                'If dr("Cancelled_Calls") IsNot DBNull.Value Then
+                '    SonyactivityReportDataSum.Cancelled_Calls = dr("Cancelled_Calls")
+                'End If
+
+            End If
+
+        Catch ex As Exception
+            trn.Rollback()
+            errFlg = 1
+        Finally
+            'DB接続クローズ
+            If con.State <> ConnectionState.Closed Then
+                con.Close()
+            End If
+        End Try
+
+    End Sub
+
+
     '****************************************************
     '処理：setRefresh
     '処理概要：不要なデータの削除処理
@@ -7344,6 +10650,172 @@ Public Class Class_analysis
         End Try
 
     End Sub
+    ''SonySetRefresh
+
+    Public Sub SonysetRefresh(ByVal setMon As String, ByVal dateTo As String, ByVal dateFrom As String, ByVal targetShipname As String, ByVal targetDelData As String, ByVal userid As String, ByVal userName As String, ByVal setShipCode As String, ByRef errFlg As Integer, ByRef tourokuFlg As Integer)
+
+        'コネクションを取得
+        Dim con As SqlConnection = New SqlConnection(ConfigurationManager.ConnectionStrings("cnstr").ConnectionString)
+        con.Open()
+
+        'トランザクション開始＆コネクションオープン
+        Dim trn As SqlTransaction = con.BeginTransaction(IsolationLevel.ReadCommitted)
+        Dim clsSetCommon As New Class_common
+        Dim dtNow As DateTime = clsSetCommon.dtIndia
+
+        'テーブル名指定
+        Dim tblNo As Integer = Left(targetDelData, 1)
+        Dim tblName As String
+        Dim branchKey As String
+        Dim targetDate As String
+
+        Select Case tblNo
+            Case 1
+                tblName = "SonySC_DSR_info"
+                branchKey = "AND Branch_name = '" & targetShipname & "' "
+                targetDate = "Billing_date"
+            Case 2
+                tblName = "SonyWty_Excel"
+                branchKey = "AND Branch_Code = '" & setShipCode & "' "
+                targetDate = "Delivery_Date"
+            Case 3
+                'tblName = "Billing_Info"
+                'branchKey = "AND Branch_Code = '" & setShipCode & "' "
+                'targetDate = "Billing_Date"
+        End Select
+
+        Try
+
+            '日付キー、削除内容の設定
+            Dim delData As String
+            Dim targetDateKey As String
+            If setMon <> "00" Then
+                '月指定
+                targetDateKey = "AND LEFT(CONVERT(VARCHAR, " & targetDate & ", 111), 7) = '" & Left(dtNow.ToShortDateString, 5) & setMon & "' "
+                delData = targetDelData & "_mon: " & setMon
+            Else
+                '日付指定
+                If dateTo <> "" Then
+                    If dateFrom <> "" Then
+                        targetDateKey &= "AND LEFT(CONVERT(VARCHAR, " & targetDate & ", 111), 10) <= '" & dateTo & "' "
+                        targetDateKey &= "AND LEFT(CONVERT(VARCHAR, " & targetDate & ", 111), 10) >= '" & dateFrom & "' "
+                        delData = targetDelData & "_day: " & dateFrom & " ～ " & dateTo
+                    End If
+                End If
+            End If
+
+            'SQL設定
+            Dim select_sql As String = ""
+            select_sql &= "SELECT * "
+            select_sql &= "FROM dbo." & tblName & " WHERE DELFG = 0 "
+            select_sql &= branchKey
+            select_sql &= targetDateKey
+
+            Dim sqlSelect As New SqlCommand(select_sql, con, trn)
+            Dim Adapter As New SqlDataAdapter(sqlSelect)
+            Dim Builder As New SqlCommandBuilder(Adapter)
+            Dim ds As New DataSet
+
+            Adapter.Fill(ds)
+
+            If ds.Tables(0).Rows.Count <> 0 Then
+
+                For i = 0 To ds.Tables(0).Rows.Count - 1
+
+                    Dim dr As DataRow = ds.Tables(0).Rows(0)
+
+                    dr.Delete()
+
+                    '更新
+                    Adapter.Update(ds)
+
+                Next i
+
+                If tblNo = 1 Then
+
+                    '二つ目のテーブルデータ内を削除
+                    Dim select_sql2 As String = ""
+                    select_sql2 &= "SELECT * "
+                    select_sql2 &= "FROM dbo.SonySC_DSR WHERE DELFG = 0 "
+                    select_sql2 &= branchKey
+                    select_sql2 &= targetDateKey
+
+                    Dim sqlSelect2 As New SqlCommand(select_sql2, con, trn)
+                    Dim Adapter2 As New SqlDataAdapter(sqlSelect2)
+                    Dim Builder2 As New SqlCommandBuilder(Adapter2)
+                    Dim ds2 As New DataSet
+
+                    Adapter2.Fill(ds2)
+
+                    If ds2.Tables(0).Rows.Count <> 0 Then
+
+                        For i = 0 To ds2.Tables(0).Rows.Count - 1
+
+                            Dim dr2 As DataRow = ds2.Tables(0).Rows(0)
+
+                            dr2.Delete()
+
+                            '更新
+                            Adapter2.Update(ds2)
+
+                        Next i
+
+                    End If
+
+                End If
+
+                '■INSERT　cash_trackの空テーブル取得
+                Dim select_sql3 As String = ""
+                select_sql3 = "SELECT * FROM dbo.delete_log WHERE del_user IS NULL;"
+
+                Dim sqlSelect3 As New SqlCommand(select_sql3, con, trn)
+                Dim Adapter3 As New SqlDataAdapter(sqlSelect3)
+                Dim Builder3 As New SqlCommandBuilder(Adapter3)
+                Dim ds3 As New DataSet
+                Adapter3.Fill(ds3)
+
+                '新規DR取得
+                Dim dr3 As DataRow = ds3.Tables(0).NewRow
+
+                dr3("CRTDT") = dtNow
+                dr3("CRTCD") = userid
+                'dr3("UPDDT") = dtNow
+                'dr3("UPDCD") = userid
+                dr3("UPDPG") = "Class_analysis.vb"
+                dr3("DELFG") = 0
+                dr3("del_user") = userName
+                dr3("del_datetime") = dtNow
+                dr3("del_location") = targetShipname
+                dr3("del_data") = delData
+
+                '新規DRをDataTableに追加
+                ds3.Tables(0).Rows.Add(dr3)
+                Adapter3.Update(ds3)
+
+                '■コミット
+                trn.Commit()
+
+                tourokuFlg = 1
+
+            End If
+
+        Catch ex As Exception
+            errFlg = 1
+            trn.Rollback()
+        Finally
+            'DB接続クローズ
+            If con.State <> ConnectionState.Closed Then
+                con.Close()
+            End If
+        End Try
+
+    End Sub
+
+
+
+
+
+
 
     '****************************************************
     '処理名　：set_deleteLog

@@ -131,8 +131,24 @@ Public Class ScDsrControl
 
                 sqlStr = ""
 
+                Dim dtCurYear As String = ""
+                dtCurYear = Year(queryParams.DateFrom)
+                Dim dtDefYear As String = ""
+                Dim IsShipChanged As Boolean = False
+
+                Dim GetPreviousDate As String = ""
                 If (_dtDateFrom.Rows.Count > 0) Then
-                    Dim GetPreviousDate As String = _dtDateFrom.Rows(0)("datefrom")
+                    GetPreviousDate = _dtDateFrom.Rows(0)("datefrom")
+                    dtDefYear = Left(GetPreviousDate, 4)
+                    If dtCurYear = dtDefYear Then
+                        IsShipChanged = True
+                    End If
+                End If
+
+                'If (_dtDateFrom.Rows.Count > 0) Then ' Changed 
+
+                If (IsShipChanged = True) Then
+                    GetPreviousDate = _dtDateFrom.Rows(0)("datefrom")
                     If queryParams.DateFrom <= GetPreviousDate And queryParams.DateTo <= GetPreviousDate Then
                         'no need to combine
                         sqlStr = sqlStr & "select  Branch_name, SUM(IW_goods_total) "
@@ -544,6 +560,13 @@ Public Class ScDsrControl
         Next
         If _DataTable.Rows.Count = 0 Then
 
+            If _DataTable.Columns.Count = 0 Then
+                _DataTable.Columns.Add("Branch_name")
+                _DataTable.Columns.Add("IW_goods_total")
+                _DataTable.Columns.Add("OW_goods_total")
+                _DataTable.Columns.Add("TotalGoods")
+            End If
+
             For Each branch As String In SplitBrances
                 Dim R As DataRow = _DataTable.NewRow
                 R("Branch_name") = branch.Replace("'", "")
@@ -800,6 +823,219 @@ Public Class ScDsrControl
             R("RevWoTax") = Convert.ToDecimal(In_Ward) + Convert.ToDecimal(Out_Ward) + Convert.ToDecimal(Labor) + Convert.ToDecimal(Parts)
             _DataTable.Rows.Add(R)
         Next
+        Return _DataTable
+    End Function
+
+    Public Function StoreManagement_DailyRevenue(ByVal queryParams As ScDsrModel) As DataTable
+        Log4NetControl.ComInfoLogWrite(Log4NetControl.UserID)
+        Dim _DataTable As DataTable = New DataTable()
+        _DataTable.Columns.Add("DAYS", GetType(Integer))
+        '_DataTable.Columns.Add("ROW_NUM", GetType(Integer))
+        _DataTable.Columns.Add("TARGET_DATE", GetType(DateTime))
+        _DataTable.Columns.Add("SSCNAME", GetType(String))
+        _DataTable.Columns.Add("TARGET_DAY_AMOUNT", GetType(Decimal))
+        _DataTable.Columns.Add("DRS_AMOUNT", GetType(Decimal))
+        _DataTable.Columns.Add("ACCUM_TARGET_DAY_AMOUNT", GetType(Decimal))
+        _DataTable.Columns.Add("ACCUM_DRS_AMOUNT", GetType(Decimal))
+
+
+        Dim sqlStr As String
+        Dim listquery As New List(Of String)
+        Dim SplitBrances As String() = queryParams.BranchName.Split(New Char() {","c})
+        Dim strSQL2 As String = ""
+        Dim strSQL3 As String = ""
+        Dim strSQL4 As String = ""
+        Dim strShipCode As String = ""
+        Dim dsActivity_report As New DataSet
+        Dim dsDailyTarget As New DataSet
+        Dim dsSC_DSR_info As New DataSet
+        Dim comcontrol As New CommonControl
+        Dim errMsg As String
+        Dim errFlg As Integer
+        Dim Labor As Decimal
+        Dim Parts As Decimal
+        Dim In_Ward As Decimal
+        Dim Out_Ward As Decimal
+        Dim tmpDay As DateTime
+
+        For Each branch As String In SplitBrances
+
+
+            'Dim R As DataRow = _DataTable.NewRow
+            branch = branch.Replace("'", "")
+
+
+            Dim shipdtl As DataRow() = _ShipBaseControl.SelectShipBaseDetails().Select("ship_name = '" & branch & "'")
+            Dim shipdtlParent As DataRow() = _ShipBaseControl.SelectShipBaseDetails().Select("ship_name = '" & branch & "' AND IsChildShip = 1 AND DELFG = 0")
+            Dim shipdtlChild As DataRow() = _ShipBaseControl.SelectShipBaseDetails().Select("Parent_Ship_Name = '" & branch & "' AND IsChildShip = 1 AND DELFG = 0")
+
+            Dim shipName As String = "'" & branch & "'"
+
+            If (shipdtl.Count() > 0) Then
+                For Each row As DataRow In shipdtl
+                    strShipCode = row.Item("ship_code").ToString()
+                    ' DataTable.ImportRow(row)
+                Next
+            End If
+
+            'Dim shipname As String
+            If (shipdtlParent.Count() > 0) Then
+                For Each row As DataRow In shipdtlParent
+                    shipName &= ",'" & row.Item("Parent_Ship_Name").ToString() & "'"
+                    ' DataTable.ImportRow(row)
+                Next
+            End If
+            If (shipdtlChild.Count() > 0) Then
+                For Each row As DataRow In shipdtlChild
+                    shipName &= ",'" & row.Item("ship_name").ToString() & "'"
+                    'DataTable.ImportRow(row)
+                Next
+
+            End If
+
+            'shipName Invoice update 
+
+            'Declare @fromdate datetime
+            'Declare @todate datetime
+            'Declare @SSCName varchar(5)
+            '    Declare @PCSSCName varchar(50)
+            '--set @fromdate = '1/15/2020'
+            'Set @fromdate = '1/15/2020'
+            'Set @todate = '10/7/2020'
+            '--set @SSCName = 'SSC1'
+            '--set @PCSSCName = 'SSC1,SSC2'
+            'Set @SSCName = 'SSC3'
+            'Set @PCSSCName = 'SSC3'
+
+            strSQL4 = "Select ROW_NUMBER() OVER ( "
+            strSQL4 &= "	ORDER BY TDATE.Date "
+            strSQL4 &= "  ) ROW_NUM,Days DAYS, "
+            strSQL4 &= " TDATE.Date TARGET_DATE, '" & branch & "' SSCNAME, "
+            '--TDATE.Yer,
+            '--TDATE.Mon,TDATE.Days,
+            strSQL4 &= " isnull(TS.TARGET_DAY_AMOUNT,0) TARGET_DAY_AMOUNT, "
+            '--isnull(IWOW.In_Warranty,0) In_Warranty,
+            '--isnull(IWOW.Out_Warranty,0) Out_Warranty,
+            '--isnull(IWOW.IWOW_Total,0) IWOW_Total,
+            '--isnull(SAWD.SAWDISCOUNT,0) SAWDISCOUNT
+            strSQL4 &= " (isnull(IWOW.IWOW_Total,0) + isnull(SAWD.SAWDISCOUNT,0)) DRS_AMOUNT, "
+            strSQL4 &= " SUM (isnull(TS.TARGET_DAY_AMOUNT,0)) OVER (ORDER BY TDATE.Date) AS ACCUM_TARGET_DAY_AMOUNT, "
+            strSQL4 &= " SUM((isnull(IWOW.IWOW_Total, 0) + isnull(SAWD.SAWDISCOUNT, 0))) OVER (ORDER BY TDATE.Date) As ACCUM_DRS_AMOUNT "
+            strSQL4 &= " from "
+            strSQL4 &= " ( "
+            strSQL4 &= " Select TOP(DATEDIFF(DAY, '" & queryParams.DateFrom & "', '" & queryParams.DateTo & "') + 1) "
+            strSQL4 &= " Date = DATEADD(DAY, ROW_NUMBER() OVER(ORDER BY a.object_id) - 1, '" & queryParams.DateFrom & "'), "
+            strSQL4 &= " Days = day(DATEADD(DAY, ROW_NUMBER() OVER(ORDER BY a.object_id) - 1, '" & queryParams.DateFrom & "')), "
+            strSQL4 &= " Mon = month(DATEADD(DAY, ROW_NUMBER() OVER(ORDER BY a.object_id) - 1, '" & queryParams.DateFrom & "')), "
+            strSQL4 &= " Yer = year(DATEADD(DAY, ROW_NUMBER() OVER(ORDER BY a.object_id) - 1, '" & queryParams.DateFrom & "')) "
+            strSQL4 &= " FROM    sys.all_objects a "
+            strSQL4 &= " CROSS JOIN sys.all_objects "
+            strSQL4 &= " ) TDATE "
+            strSQL4 &= " left join [dbo].[SSC_TARGET_SET] TS "
+            strSQL4 &= " On TS.TARGET_MONTH = TDATE.Mon "
+            strSQL4 &= " And TS.TARGET_YEAR = TDATE.Yer "
+            strSQL4 &= " And TS.SHIP_TO_BRANCH = '" & branch & "' AND TS.DELFG = 0 "
+            strSQL4 &= " left join "
+            strSQL4 &= " ( "
+            strSQL4 &= " Select DSR.Billing_date, "
+            strSQL4 &= " isnull(sum(IW_Labor_total+IW_Transport_total+IW_Others_total),0.0) 'In_Warranty', "
+            strSQL4 &= " isnull(sum(OW_Labor_total+OW_Parts_total+OW_Transport_total+OW_Others_total),0.00) 'Out_Warranty', "
+            strSQL4 &= " isnull(sum(IW_Labor_total+IW_Transport_total+IW_Others_total+OW_Labor_total+OW_Parts_total+OW_Transport_total+OW_Others_total),0) IWOW_Total "
+            strSQL4 &= " from dbo.SC_DSR_info DSR "
+            strSQL4 &= " JOIN DBO.M_ship_base SB On DSR.Branch_name = SB.ship_name "
+            strSQL4 &= " Join Activity_report AR On AR.location = SB.ship_code "
+            strSQL4 &= " WHERE DSR.DELFG = 0 And AR.DELFG = 0 "
+            strSQL4 &= " And Branch_name = '" & branch & "'"
+            strSQL4 &= " And (CONVERT(DATETIME, AR.month + '/' + AR.day)) = DSR.Billing_date AND (CONVERT(DATETIME, AR.month + '/' + AR.day)) <= CONVERT(DATETIME, '" & queryParams.DateTo & "') "
+            strSQL4 &= " And (CONVERT(DATETIME, AR.month + '/' + AR.day)) >= CONVERT(DATETIME, '" & queryParams.DateFrom & "') "
+            strSQL4 &= " Group by DSR.Billing_date "
+            strSQL4 &= " ) IWOW on IWOW.Billing_date = TDATE.Date "
+            strSQL4 &= " left join "
+            strSQL4 &= " ( "
+            strSQL4 &= " Select DSR.Billing_date, "
+            '--DSR.ServiceOrder_No
+            '--,WE.ASC_Claim_No,convert(varchar,WE.Samsung_Claim_No) Samsung_Claim_No,
+            '--IU.Your_Ref_No,
+            '--IU.Labor,IU.Parts
+            strSQL4 &= " isnull(sum(IU.Labor+IU.Parts),0) SAWDISCOUNT "
+            strSQL4 &= " from "
+            strSQL4 &= " ( "
+            strSQL4 &= " Select distinct ServiceOrder_No ,SC_DSR.Billing_date "
+            strSQL4 &= " from SC_DSR where SC_DSR.DELFG!=1 "
+            strSQL4 &= " And  ( (DAY(SC_DSR.Billing_date) = 1 And SC_DSR.Billing_date "
+            strSQL4 &= " between  LEFT(Convert(VARCHAR, DateAdd(D, -3, SC_DSR.Billing_date), 111), 10) "
+            strSQL4 &= " And LEFT(CONVERT(VARCHAR, SC_DSR.Billing_date, 111), 10) ) "
+            strSQL4 &= " Or (DAY(SC_DSR.Billing_date) != 1 And SC_DSR.Billing_date between "
+            strSQL4 &= " LEFT(CONVERT(VARCHAR, SC_DSR.Billing_date, 111), 10) "
+            strSQL4 &= " And LEFT(CONVERT(VARCHAR, SC_DSR.Billing_date, 111), 10) )) "
+            strSQL4 &= " And SC_DSR.Billing_date between '" & queryParams.DateFrom & "' And '" & queryParams.DateTo & "'"
+            '--And month(SC_DSR.Billing_date) = 9
+            '--And year(SC_DSR.Billing_date) = 2020
+            strSQL4 &= " And Branch_name = '" & branch & "'"
+            strSQL4 &= " ) DSR "
+            strSQL4 &= " left join "
+            strSQL4 &= " ( "
+            strSQL4 &= " Select distinct ASC_Claim_No,Samsung_Claim_No from Wty_Excel where Wty_Excel.DELFG!=1 "
+            '	--And  Wty_Excel.Branch_Code='0002242734' 
+            strSQL4 &= " And  Wty_Excel.Branch_Code in (select ship_code from M_ship_base where ship_name = '" & branch & "') "
+            strSQL4 &= " ) WE on WE.ASC_Claim_No = DSR.ServiceOrder_No "
+            strSQL4 &= " LEFT JOIN "
+            strSQL4 &= " ( "
+            strSQL4 &= " Select LABOR,Parts,Your_Ref_No FROM  Invoice_update "
+            strSQL4 &= " where upload_Branch In (" & shipName & ") And Number = 'OWC' "
+            strSQL4 &= " ) IU on IU.Your_Ref_No = DSR.ServiceOrder_No "
+            strSQL4 &= " where Labor Is Not null Or Parts Is Not null "
+            strSQL4 &= " group by DSR.Billing_date "
+            strSQL4 &= " ) SAWD ON SAWD.Billing_date = TDATE.Date "
+            strSQL4 &= " order by Row_Num "
+
+            'VJ 20201005 Added condition in Invoice update table for Labor and Parts
+            dsDailyTarget = DBCommon.Get_DS(strSQL4, errFlg)
+            If errFlg <> 1 Then 'If other than Error
+                If dsDailyTarget IsNot Nothing Then
+                    If dsDailyTarget.Tables(0).Rows.Count <> 0 Then
+                        Dim dr1 As DataRow
+                        For k = 0 To dsDailyTarget.Tables(0).Rows.Count - 1
+                            dr1 = dsDailyTarget.Tables(0).Rows(k)
+                            Dim R As DataRow = _DataTable.NewRow
+                            R("DAYS") = dr1("Days")
+                            R("TARGET_DATE") = dr1("TARGET_DATE")
+                            R("SSCNAME") = dr1("SSCNAME")
+                            R("TARGET_DAY_AMOUNT") = dr1("TARGET_DAY_AMOUNT")
+                            R("DRS_AMOUNT") = dr1("DRS_AMOUNT")
+                            R("ACCUM_TARGET_DAY_AMOUNT") = dr1("ACCUM_TARGET_DAY_AMOUNT")
+                            R("ACCUM_DRS_AMOUNT") = dr1("ACCUM_DRS_AMOUNT")
+                            _DataTable.Rows.Add(R)
+                        Next
+                    End If
+                End If
+            Else ' If Error is occured, then default assign zero
+            End If
+
+        Next
+
+        If SplitBrances.Count() > 1 Then
+
+            Dim targetGroups = _DataTable.AsEnumerable().
+                GroupBy(Function(row) New With {
+                    Key .DAYS = row.Field(Of Integer)("DAYS"),
+                    Key .TARGET_DATE = row.Field(Of DateTime)("TARGET_DATE")
+                })
+
+            Dim tableResult = _DataTable.Clone()
+            For Each grp In targetGroups
+                tableResult.Rows.Add(grp.Key.DAYS, grp.Key.TARGET_DATE, "SSC ALL", grp.Sum(Function(row) row.Field(Of Decimal)("TARGET_DAY_AMOUNT")), grp.Sum(Function(row) row.Field(Of Decimal)("DRS_AMOUNT")), grp.Sum(Function(row) row.Field(Of Decimal)("ACCUM_TARGET_DAY_AMOUNT")), grp.Sum(Function(row) row.Field(Of Decimal)("ACCUM_DRS_AMOUNT")))
+            Next
+
+            _DataTable.Merge(tableResult)
+        End If
+
+
+        'Dim fruitGroups = _DataTable.AsEnumerable().GroupBy(Function(row) row.Field(Of DateTime)("TARGET_DATE"))
+        'Dim tableResult = _DataTable.Clone() ' empty table with same columns
+        'For Each grp In fruitGroups
+        '    tableResult.Rows.Add(Function(row) row.Field(Of Integer)("ROW_NUM"), Function(row) row.Field(Of DateTime)("TARGET_DATE"), "SSC ALL", grp.Key, grp.Sum(Function(row) row.Field(Of Decimal)("TARGET_DAY_AMOUNT")), grp.Sum(Function(row) row.Field(Of Decimal)("DRS_AMOUNT")), grp.Sum(Function(row) row.Field(Of Decimal)("ACCUM_TARGET_DAY_AMOUNT")), grp.First().Field(Of Decimal)("ACCUM_DRS_AMOUNT"))
+        'Next
         Return _DataTable
     End Function
 End Class

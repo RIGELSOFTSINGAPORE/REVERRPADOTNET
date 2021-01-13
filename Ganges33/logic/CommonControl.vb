@@ -61,6 +61,10 @@ Namespace Ganges33.logic
         Public Shared Function isDate(ByVal str As String) As Boolean
             Return System.Text.RegularExpressions.Regex.IsMatch(str, "^(\d{4})/(\d{1,2})/(\d{1,2})$")
         End Function
+        Public Shared Function ChkIsDate(input As String) As Boolean
+            Dim result As DateTime
+            Return DateTime.TryParse(input, result)
+        End Function
 
         Public Shared Function GetLastDayOfMonth(intMonth, intYear) As Date
             GetLastDayOfMonth = DateSerial(intYear, intMonth + 1, 0)

@@ -315,7 +315,7 @@ Public Class Login
                 '20200813
                 'Sony / Samsung 
                 If Left(DropListLocation.SelectedItem.Value, 3) = "SID" Then
-                    Response.Redirect("SonyMenu.aspx")
+                    Response.Redirect("SonyAnalysis_Fileupload.aspx")
                 Else
                     Response.Redirect("Analysis_FileUpload.aspx")
                 End If

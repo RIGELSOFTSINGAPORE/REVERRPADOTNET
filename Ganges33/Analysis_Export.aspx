@@ -128,14 +128,16 @@
                               <asp:ListItem Text="21" Value="21"></asp:ListItem>
                </asp:DropDownList>
                                   
-                      <asp:DropDownList ID="DropDownDTSub" runat="server" CssClass="form-control dropdown-toggle"  style="width: 100%; height:33px;" Visible="false" >
-                              <asp:ListItem Text="Select..." Value="0"></asp:ListItem>
-                            <asp:ListItem Text="DT1" Value="DT1"></asp:ListItem>
-                              <asp:ListItem Text="DT2" Value="DT2"></asp:ListItem>
-                 </asp:DropDownList>
+                     
                           <asp:DropDownList ID="DropDownGR" runat="server" CssClass="form-control dropdown-toggle"  style="width: 100%; height:33px;" Visible="false" >
                             <asp:ListItem Text="GR" Value="GR"></asp:ListItem>
                               <asp:ListItem Text="GD" Value="GD"></asp:ListItem>
+                 </asp:DropDownList>
+                              <br />
+                               <asp:DropDownList ID="DropDownDTSub" runat="server" CssClass="form-control dropdown-toggle"  style="width:120%; height:33px;" Visible="false" >
+                              <asp:ListItem Text="Select..." Value="0"></asp:ListItem>
+                            <asp:ListItem Text="DT1" Value="DT1"></asp:ListItem>
+                              <asp:ListItem Text="DT2" Value="DT2"></asp:ListItem>
                  </asp:DropDownList>
                          </div>
 					  </div>
@@ -222,8 +224,8 @@
                              <br />
                            
                  <asp:TextBox ID="TextDateFrom" runat="server" class="form-file-upload  date serverlbl" AutoCompleteType="Disabled" style="width: 40%;"></asp:TextBox>&nbsp;&nbsp;&nbsp;
-                      <%--<ajaxToolkit:CalendarExtender ID="TextDateFrom_CalendarExtender" runat="server" BehaviorID="TextDateFrom_CalendarExtender" TargetControlID="TextDateFrom" PopupPosition="Left">
-                      </ajaxToolkit:CalendarExtender> --%>             
+                      <ajaxToolkit:CalendarExtender ID="TextDateFrom_CalendarExtender" runat="server" BehaviorID="TextDateFrom_CalendarExtender" TargetControlID="TextDateFrom" PopupPosition="Left">
+                      </ajaxToolkit:CalendarExtender>              
               <label runat="server" ID="Label7" class="bmd-label-floating fontFamily">To</label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <asp:TextBox ID="TextDateTo" runat="server" class="form-file-upload date serverlbl" AutoCompleteType="Disabled" style="width: 40%;"></asp:TextBox>
@@ -253,8 +255,7 @@
     <div id="dialog" title="message" style="display:none;"> >
         <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
     </div>
-        </body>
-    </html>
+        
     <div style="visibility:hidden">
          <div class="form-group row">
                             <div class="col-sm-2">

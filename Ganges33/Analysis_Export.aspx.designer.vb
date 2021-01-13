@@ -59,15 +59,6 @@ Partial Public Class Analysis_Export
     Protected WithEvents DropDownDaySub As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''DropDownDTSub control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents DropDownDTSub As Global.System.Web.UI.WebControls.DropDownList
-
-    '''<summary>
     '''DropDownGR control.
     '''</summary>
     '''<remarks>
@@ -75,6 +66,15 @@ Partial Public Class Analysis_Export
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents DropDownGR As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''DropDownDTSub control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents DropDownDTSub As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''DropDownExportFile control.
@@ -111,6 +111,15 @@ Partial Public Class Analysis_Export
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents TextDateFrom As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''TextDateFrom_CalendarExtender control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents TextDateFrom_CalendarExtender As Global.AjaxControlToolkit.CalendarExtender
 
     '''<summary>
     '''Label7 control.

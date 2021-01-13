@@ -1,63 +1,106 @@
 ﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/SonyAnalysis.Master" CodeBehind="SonyAnalysis_FileUpload.aspx.vb" Inherits="Ganges33.SonyAnalysis_FileUpload" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+   
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
     <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/start/jquery-ui.css" rel="stylesheet">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-    <link type="text/css" href="CSS/Common/Analysis_FileUploaded_1.css" rel="stylesheet" />
-        <style type="text/css">
-        
-        </style>
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+
+   
+
+    <link href="assets/jquery-ui_theme.css" rel="stylesheet" />
+    <link href="assets/jquery-ui.css" rel="stylesheet" />
+    <script type="text/javascript"  src="assets/jquery-ui.min_lips.js"></script>
+
+
+    <link href="assets/css/material-dashboard.css" rel="stylesheet" />  
+    <link href="assets/css/material-dashboard-rtl.css" rel="stylesheet" />
+    <link href="assets/css/material-dashboard.min.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" name="msapplication-tap-highlight" content="IE=edge,chrome=1" />
+  
+  <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+   <link href="assets/css/material-dashboard.css" rel="stylesheet" /> 
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="assets/demo/demo.css" rel="stylesheet" />
+    <style type="text/css">
+
+        .container{
+    -ms-overflow-style: none;
+    overflow: auto;
+}
+       
+   </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-    <div class="div-background-image" style="background-image: url('pagewall_2/wall_analysis-2.png')">
-      <div class="div-Entirepage">
-        <br />           
-                <div>
-          <table class="table-EntirePage">
-              <tr>
-                  <td class="td-Blank1"></td>
-                  <td class="td-btnAnalysis">
-                      <asp:ImageButton ID="btnAnalysis" runat="server" CssClass="btn-Analysis" ImageUrl="~/icon/analysis.png" />
-                  </td>
-                  <td class="td-AnalysisFileUpload">
-                      <asp:Label ID="Label3" runat="server" CssClass="lbl3-AnalysisFileUpload" Text="Sony File Upload"></asp:Label>
-                  </td>
-                  <td class="td-Blank2"></td>
-                  <td class="td-Blank3"></td>
-                  <td class="td-Blank4"></td>
-              </tr>
-              <tr>
-                  <td class="td-Blank-5-6"></td>
-                  <td class="td-lbl-1-2-Currentlocation-CurrentUsername" colspan = "2">
-                      <asp:Label ID="Label1" runat="server" Text="Current Location : " CssClass="fontFamily"></asp:Label>
-                      <asp:Label ID="lblLoc" runat="server" CssClass="fontFamily"></asp:Label>
-                  </td>
-                  <td class="td-Blank-7-8"></td>
-                  <td class="td-lbl4-droplistlocation-td-Blank9">
-                      <asp:Label ID="Label4" runat="server" CssClass="fontFamily" Text="Upload Branch"></asp:Label>&nbsp;&nbsp;&nbsp;
-                      <asp:DropDownList ID="DropListLocation" runat="server" CssClass="droplistlocation">
+    
+
+   
+   <div class="wrapper  col-sm-12 sidebar-wrapper position-fixed scrolbar contain" id="style-10">
+   
+    <div class="content" >
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h3 class="card-title ">Analysis File Upload</h3>
+                  <p class="card-category"></p>
+                </div>
+                <div class="card-body " >
+<br /><br />
+  <div class="row col-sm-12">
+
+           <div class="row col-sm-6"> 
+              
+                        <div class="col-sm-4">
+                            
+                             <label id="" class="fontFamily bmd-label-floating">Upload Branch</label>
+                       </div>
+                         <div class="col-sm-8">
+                             
+                            <asp:DropDownList class="form-control  " ID="DropListLocation" runat="server" style="width: 100%;height:33px; ">
+
                       </asp:DropDownList>
-                  </td>
-                  <td class="td-Blank-9-10"></td>
-              </tr>
-              <tr>
-                  <td class="td-Blank-5-6"></td>
-                  <td class="td-lbl-1-2-Currentlocation-CurrentUsername" colspan = "2">
-                      <asp:Label ID="Label2" runat="server" Text="Current Username : " CssClass="fontFamily"></asp:Label>
-                      <asp:Label ID="lblName" runat="server" CssClass="fontFamily"></asp:Label>
-                      <br />
-                  </td>
-                  <td class="td-Blank-7-8"></td>
-                  <td class="td-lbl4-droplistlocation-td-Blank9"></td>
-                  <td class="td-Blank-9-10"></td>
-              </tr>
-              <tr>
-                  <td class="td-Blank23"></td>
-                  <td class="td-Blank24-DropDownList" colspan = "2" rowspan = "2">
-                     
-                                          <asp:DropDownList ID="drpTask" runat="server" CssClass="DropDownList" AutoPostBack="true"  OnSelectedIndexChanged="OnSelectedIndexChanged">
+                        </div>
+               </div>
+               
+                        
+          <div class="col-sm-6 row">
+              <div class="col-sm-12">
+              <div  class="col-sm-7">
+                   <div  class="col-sm-12">
+                           <label id="" class="fontFamily bmd-label-floating">Parts Invoice No</label>
+                                </div>
+                                </div>
+                            <div class="col-sm-5">
+                                 <asp:TextBox ID="TextPartsInvoiceNo" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" />
+                    </div>
+      </div>
+      </div>
+</div>
+
+          
+                  <div class="col-sm-12 row">
+
+
+
+                      <div class="col-sm-6 row">
+                           <div  class="col-sm-4">
+                                <br />
+                        <label id="" class=" bmd-label-floating">Task Name</label>
+                               </div>
+                        <div class="col-sm-8">
+                             <br />
+                               <asp:DropDownList ID="drpTask" runat="server"  AutoPostBack="true"  OnSelectedIndexChanged="OnSelectedIndexChanged"  class="form-control" style="width: 100%;height:33px;">
                                            <asp:ListItem Text="Select..." Value="0"></asp:ListItem>
 
                                 
@@ -104,7 +147,184 @@
 
 
                       </asp:DropDownList>
- 
+                            </div>
+                      </div>
+                      
+                         <div class="col-sm-6 row">
+                             <div class="col-sm-12">
+                            <div  class="col-sm-7">
+                                 <br />
+                                 <div  class="col-sm-12">
+                          <label id="" class="fontFamily bmd-label-floating">labor Invoice No</label>
+                                </div>
+                                </div>
+                            <div class="col-sm-5">
+                                 <br />
+                                <asp:TextBox ID="TextLaborInvoiceNo" runat="server" Height="33px" Width="100%" value="" class="form-file-upload serverlbl" />  
+              </div>
+                          </div>
+                          </div>
+                   </div>
+                    <div class="col-sm-12 row">
+                        <div class="col-sm-6 row">
+    <div  class="col-sm-4">
+         <br />
+                         <label  class="fontFamily bmd-label-floating">Invoice Date</label>
+                  </div>
+                         <div class="col-sm-8">
+                              <br />
+                      <span class=" fontFamily"><asp:RadioButton type="radio"  value="RadioBtnMM" disabled="disabled"  ID="RadioBtnMM" runat="server" />&nbsp;&nbsp;<label>MM/DD/YYYY</label></span>
+                      <span class="fontFamily">&nbsp;&nbsp;</span>&nbsp;&nbsp; &nbsp;<span class=" fontFamily"><asp:RadioButton ID="RadioBtnDD" runat="server" AutoPostBack="True" type="radio" value="RadioBtnDD" disabled="disabled" />&nbsp;&nbsp;<label>DD/MM/YYYY</label></span>
+                      
+                 </div>
+                    </div>
+                        <div class="col-sm-6 row">
+                            <div class="col-sm-12">
+                          <div  class="col-sm-7">
+                                <br />
+                               <div  class="col-sm-12">
+                    <label id="" class="fontFamily bmd-label-floating" >Invoice Date(DD/MM/YYYY)</label>
+                    </div>
+                    </div>
+                            
+                      <div class="col-sm-5">
+                            <br />
+                          <asp:TextBox value="" ID="TextInvoiceDate" runat="server" Height="33px" Width="100%" AutoCompleteType="Disabled" class="form-file-upload serverlbl date  " />
+                   <%--   <ajaxToolkit:CalendarExtender ID="TextInvoiceDate_CalendarExtender" runat="server"  CssClass="date" BehaviorID="TextInvoiceDate_CalendarExtender" TargetControlID="TextInvoiceDate" PopupPosition="right">
+                      </ajaxToolkit:CalendarExtender>--%>
+                          </div>
+                          </div>
+                        </div>
+                    </div>
+                    
+                
+                    <div class="col-sm-12 row">
+                        <div class="col-sm-6 row">
+                           <div class="col-sm-12">
+                                 <br />
+                               <asp:FileUpload ID="FileUploadAnalysis" runat="server" Class="serverlbl" />
+                      
+                               </div>
+
+                        </div>
+                                
+                        <div class="col-sm-6 row">
+                            <div class="col-sm-12">
+                              <div  class="col-sm-7">
+                                   <br />
+                                   <div  class="col-sm-12">
+                    <label id="" class="fontFamily bmd-label-floating">Date</label>
+                    </div>
+                    </div>
+
+                      <div class="col-sm-5">
+                           <br />
+                    <asp:TextBox value="" ID="txtDate" runat="server" Height="33px" Width="100%" AutoCompleteType="Disabled"  class="form-file-upload serverlbl date  calender"  />&nbsp;&nbsp;&nbsp;
+               <%--       <ajaxToolkit:CalendarExtender ID="txtDate_CalendarExtender" runat="server" Format="MM/dd/yyyy" BehaviorID="txtDate_CalendarExtender" TargetControlID="txtDate" PopupPosition="Left">
+                      </ajaxToolkit:CalendarExtender> --%> 
+                          </div>
+                        </div>
+                    </div>
+                        </div>
+                    
+                  
+                          <div class="col-sm-12 row">
+
+                              <div class="col-sm-6 row">
+
+
+                              </div>
+
+                              <div class="col-sm-6 row">
+                                  <div class="col-sm-12">
+                                   <div  class="col-sm-7">
+                                        <br />
+                                        <div  class="col-sm-12">
+                  <label id="" class="  bmd-label-floating">Amount</label>
+               </div>
+               </div>
+                    <div class="col-sm-5">
+                         <br />
+                        <asp:TextBox ID="txtAmount" runat="server" value="" Height="33px" Width="100%" class="form-file-upload serverlbl" />
+                   </div>
+                              </div>
+                              </div>
+
+
+                          </div>
+                   
+                              <div class="col-sm-12 row">
+                                  <div class="col-sm-6 row">
+                                      </div>
+                                  <div class="col-sm-6 row">
+                                      <div class="col-sm-12">
+                                        <div  class="col-sm-7">
+                                             <br />
+                                            <div class="col-sm-12">
+                    <label class="bmd-label-floating">Advice Reference No</label>
+                  </div></div>
+                      <div class="col-sm-5">
+                           <br />
+                          <asp:TextBox ID="txtArNo" runat="server" value="" Height="33px" Width="100%" class="form-control serverlbl" />
+               </div>
+                        
+                                  </div>
+                                  </div>
+
+                                  </div>
+                     
+                  <div class="col-sm-12">
+                      <br />
+                        <asp:Button ID="btnUpload" runat="server" Text="Import" class="btn btn-primary pull-right" />
+                  </div>
+                                         <div class="row col-sm-12">
+                      <div class="col-sm-6">
+                        
+                            <div >
+                            <label class="bmd-label-floating">Message</label>
+                          
+                                </div>
+                          <div>
+                      <select size="4" ID="ListMsg" runat="server" class="listbox form-control" style="Height: 85px;Width: 100%;overflow: auto;">
+                      </select>      
+                        </div>
+                           
+                      </div>
+                      <div class="col-sm-6">
+                    <div>
+                            <label class="bmd-label-floating"> History</label>
+                           </div>
+                          <div>
+                      <select size="4" ID="ListHistory" runat="server" class="listbox form-control" style="Height: 85px;Width: 100%;overflow: auto;">
+                       </select>              
+                        </div>
+                            </div>
+                      </div>
+                 
+                </div>
+              </div>
+               </div>
+            
+     </div>
+            
+    </div>
+        </div>
+       </div>
+    
+    <div id="dialog" title="message" style="display:none;"> >
+        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+    </div>
+                      <div style="visibility:hidden">
+                            <label class="bmd-label-floating">Current Location</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <label class="bmd-label-floating">:</label>
+                            <asp:Label ID="lblLoc" class="bmd-label-floating serverlbl" runat="server"></asp:Label>
+                      
+    
+                       <label class="bmd-label-floating">Current Username</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                         <label class="bmd-label-floating">:</label>
+                            <asp:label class="bmd-label-floating serverlbl" ID="lblName"  runat="server"> </asp:label>
+                      
+                          </div>
                        <asp:DropDownList ID="DropDownMonth" runat="server" CssClass="dropdownmonth" Visible ="false" >
                         		     <asp:ListItem Text="Select..." Value="0"></asp:ListItem>
                              <asp:ListItem Text="January" Value="01"></asp:ListItem>
@@ -130,74 +350,8 @@
                              <asp:ListItem Text="2025" Value="2025"></asp:ListItem>
                          
                       </asp:DropDownList>
-                      <br /><br />
-                      <asp:Label ID="Label10" runat="server" Text="Invoice Date" CssClass="fontFamily"></asp:Label> &nbsp;&nbsp;&nbsp
-                      <asp:RadioButton ID="RadioBtnMM" runat="server" CssClass="fontFamily" AutoPostBack="True" Text="mm/dd/yyyy" /><span class="fontFamily">&nbsp;&nbsp;</span>&nbsp;&nbsp;<asp:RadioButton ID="RadioBtnDD" runat="server" AutoPostBack="True" CssClass="fontFamily" Text="dd/mm/yyyy" /><br /><br />
-                      <asp:FileUpload ID="FileUploadAnalysis" runat="server" CssClass="FileUploadAnalysis"/>
-                  </td>
-                  <td class="td-Blank11"></td>
-                  <td class="td-Blank12">
-                     
-                      <asp:Label ID="Label7" runat="server" Text="Parts Invoice No" CssClass="fontFamily"></asp:Label>&nbsp;&nbsp;&nbsp;
-                      <asp:TextBox ID="TextPartsInvoiceNo" runat="server" CssClass="TextPartsInvoiceNo"></asp:TextBox> <br class="fontFamily" /><br />
-                      <asp:Label ID="Label8" runat="server" Text="Labor Invoice No" CssClass="fontFamily"></asp:Label>&nbsp;&nbsp;
-                      <asp:TextBox ID="TextLaborInvoiceNo" runat="server" CssClass="TextLaborInvoiceNo"></asp:TextBox><br class="fontFamily" /><br />
-                      <asp:Label ID="Label9" runat="server" Text="Invoice Date(mm/dd/yyyy)" CssClass="fontFamily"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-                      <asp:TextBox ID="TextInvoiceDate" runat="server" Height="23px" Width="160px"></asp:TextBox>&nbsp;&nbsp;&nbsp;<ajaxToolkit:CalendarExtender ID="TextInvoiceDate_CalendarExtender" runat="server" BehaviorID="TextInvoiceDate_CalendarExtender" TargetControlID="TextInvoiceDate" PopupPosition="Left">
-                      </ajaxToolkit:CalendarExtender>
-                      &nbsp;&nbsp;&nbsp; <br />
-                  </td>
-                  <td class="td-Blank13"></td>
-              </tr>
-              <tr>
-                  <td class="td-Blank14"></td>
-<%--                  <td  colspan = "2">
-                      <asp:Label ID="Label10" runat="server" Text="Invoice Date" CssClass="auto-style186"></asp:Label> &nbsp;&nbsp;&nbsp
-                      <asp:RadioButton ID="RadioBtnMM" runat="server" CssClass="auto-style186" AutoPostBack="True" Text="mm/dd/yyyy" /><span class="auto-style186">&nbsp;&nbsp;</span>&nbsp;&nbsp;<asp:RadioButton ID="RadioBtnDD" runat="server" AutoPostBack="True" CssClass="auto-style186" Text="dd/mm/yyyy" />
-                  </td>--%>
-                  <td class="td-Blank15"  align = "right" >                      
-                  </td>
-                  <td align = "left" style="vertical-align:middle">
-                       <asp:Label ID="lblDate" runat="server" CssClass="fontFamily">Date</asp:Label>
-                     <asp:TextBox ID="txtDate" runat="server" Width="100px"></asp:TextBox>
-                      <ajaxToolkit:CalendarExtender ID="txtDate_CalendarExtender" runat="server" Format="MM/dd/yyyy" BehaviorID="txtDate_CalendarExtender" TargetControlID="txtDate" PopupPosition="Left">
-                      </ajaxToolkit:CalendarExtender>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <asp:Label ID="lblAmount" runat="server" CssClass="fontFamily">Amount</asp:Label>&nbsp;&nbsp;<asp:TextBox ID="txtAmount" runat="server" Width="100px"></asp:TextBox>
-                        <br /><br />
-                      <asp:Label ID="lblArNo" runat="server" CssClass="fontFamily" Text="Advice Reference No"></asp:Label>&nbsp;&nbsp;<asp:TextBox ID="txtArNo" runat="server" Text="" Enabled="false" ></asp:TextBox>
-                  </td>
-                  <td class="td-btnUpload" align = "left"><asp:ImageButton ID="btnUpload" runat="server" ImageUrl="~/icon/import.png" CssClass="btnUpload" /></td>
-              </tr>
-              <tr><td colspan="4" style="padding-top:10px;"></td></tr>
-              <tr>
-                  <td class="td-Blank16"></td>
-                  <td class="td-lbl5-listmsg" colspan = "3">
-                      <asp:Label ID="Label5" runat="server" Text="Message" CssClass="fontFamily"></asp:Label> <br />
-                      <asp:ListBox ID="ListMsg" runat="server" CssClass="listbox"></asp:ListBox>
-                  </td>
-                  <td class="td-lbl6-ListHistory">
-                      <asp:Label ID="Label6" runat="server" Text="History" CssClass="fontFamily"></asp:Label> <br />
-                      <asp:ListBox ID="ListHistory" runat="server" CssClass="ListHistory"></asp:ListBox>
-                  </td>
-                  <td class="td-Blank17"></td>
-              </tr>
-              <tr>
-                  <td class="td-Blank18">&nbsp;</td>
-                  <td class="td-Blank19">&nbsp;</td>
-                  <td class="td-Blank20">&nbsp;</td>
-                  <td class="td-Blank21">&nbsp;</td>
-                  <td class="td-Blank22">
-                  </td>
-                  <td>&nbsp;</td>
-              </tr>
-          </table>
-        </div>                   
-        <asp:Button ID="BtnCancel" runat="server" Text="Button" style="display:none;"/>
-        <asp:Button ID="BtnOK" runat="server" Text="Button" style="display:none;" />
-      </div>
-   </div>
-    <div id="dialog" title="message" style="display:none;"> >
-        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
-    </div>
+  
+   
+     
+
 </asp:Content>

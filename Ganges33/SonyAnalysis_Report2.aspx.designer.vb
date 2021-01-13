@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class SonyAnalysis_FileUpload
+Partial Public Class SonyAnalysis_Report2
 
     '''<summary>
     '''ScriptManager1 control.
@@ -23,130 +23,148 @@ Partial Public Class SonyAnalysis_FileUpload
     Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
 
     '''<summary>
-    '''DropListLocation control.
+    '''Label6 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents DropListLocation As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents Label6 As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''TextPartsInvoiceNo control.
+    '''lblMonNow control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextPartsInvoiceNo As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents lblMonNow As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''drpTask control.
+    '''Label1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents drpTask As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''TextLaborInvoiceNo control.
+    '''RadioAll control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextLaborInvoiceNo As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents RadioAll As Global.System.Web.UI.WebControls.RadioButton
 
     '''<summary>
-    '''RadioBtnMM control.
+    '''Label2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadioBtnMM As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''RadioBtnDD control.
+    '''RadioService control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RadioBtnDD As Global.System.Web.UI.WebControls.RadioButton
+    Protected WithEvents RadioService As Global.System.Web.UI.WebControls.RadioButton
 
     '''<summary>
-    '''TextInvoiceDate control.
+    '''Label3 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents TextInvoiceDate As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''FileUploadAnalysis control.
+    '''RadioD_I control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents FileUploadAnalysis As Global.System.Web.UI.WebControls.FileUpload
+    Protected WithEvents RadioD_I As Global.System.Web.UI.WebControls.RadioButton
 
     '''<summary>
-    '''txtDate control.
+    '''Label4 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtDate As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Label4 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''txtAmount control.
+    '''RadioTotal control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtAmount As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents RadioTotal As Global.System.Web.UI.WebControls.RadioButton
 
     '''<summary>
-    '''txtArNo control.
+    '''btnDown control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtArNo As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents btnDown As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''btnUpload control.
+    '''btnBack control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnUpload As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnBack As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''ListMsg control.
+    '''btnSend control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ListMsg As Global.System.Web.UI.HtmlControls.HtmlSelect
+    Protected WithEvents btnSend As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''ListHistory control.
+    '''GridInfo control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ListHistory As Global.System.Web.UI.HtmlControls.HtmlSelect
+    Protected WithEvents GridInfo As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''BtnCancel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents BtnCancel As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''BtnOK control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents BtnOK As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''lblMsg control.
@@ -156,40 +174,4 @@ Partial Public Class SonyAnalysis_FileUpload
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblMsg As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''lblLoc control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblLoc As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''lblName control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblName As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''DropDownMonth control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents DropDownMonth As Global.System.Web.UI.WebControls.DropDownList
-
-    '''<summary>
-    '''DropDownYear control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents DropDownYear As Global.System.Web.UI.WebControls.DropDownList
 End Class

@@ -51,6 +51,8 @@
             ElseIf activepage.Contains("Analysis_Upload_Summary.aspx") Then
                 analyis.Attributes.Add("class", "btn_active")
                 drp1.Attributes.Add("class", "liactive collapsed nav-link collapsed text-truncate")
+                summary.Attributes.Add("class", "active")
+                btnUploadSummary.Attributes.Add("class", "btn_active")
             ElseIf activepage.Contains("Analysis_Export_New.aspx") Then
                 analyis.Attributes.Add("class", "btn_active")
                 drp1.Attributes.Add("class", "liactive collapsed nav-link collapsed text-truncate")
@@ -90,15 +92,7 @@
         Dim adminFlg As Boolean = Session("admin_Flg")
 
         If Not (userLevel = "9") Then
-            If userLevel = "0" Or userLevel = "1" Or userLevel = "2" Or adminFlg = True Then
-                Response.Redirect("Menu.aspx")
-            ElseIf userLevel = "6" Then 'VJ 2019/10/29 Add new user level 6 for display only Analysis  Export
-                Response.Redirect("Analysis_Export.aspx")
-            ElseIf userLevel = "8" Then 'VJ 2020/03/03 Add new user level 8 for display only Analysis  Export
-                Response.Redirect("Analysis_Export.aspx")
-            Else
-                Response.Redirect("Menu2.aspx")
-            End If
+            Response.Redirect("Dashboard.aspx")
         End If
 
     End Sub
@@ -221,6 +215,10 @@
     End Sub
 
     Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
+        Response.Redirect("Dashboard.aspx")
+    End Sub
+
+    Private Sub btnadmin_ServerClick(sender As Object, e As EventArgs) Handles btnadmin.ServerClick
         Response.Redirect("Dashboard.aspx")
     End Sub
 End Class

@@ -12,7 +12,7 @@ Option Explicit On
 
 
 Partial Public Class SonyAnalysis
-    
+
     '''<summary>
     '''head control.
     '''</summary>
@@ -21,7 +21,7 @@ Partial Public Class SonyAnalysis
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents head As Global.System.Web.UI.WebControls.ContentPlaceHolder
-    
+
     '''<summary>
     '''form1 control.
     '''</summary>
@@ -30,79 +30,7 @@ Partial Public Class SonyAnalysis
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-    
-    '''<summary>
-    '''HiddenDummyButton control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents HiddenDummyButton As Global.System.Web.UI.WebControls.Button
-    
-    '''<summary>
-    '''BtnHome control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents BtnHome As Global.System.Web.UI.WebControls.ImageButton
-    
-    '''<summary>
-    '''Image1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Image1 As Global.System.Web.UI.WebControls.Image
-    
-    '''<summary>
-    '''LblShipName control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents LblShipName As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''Image2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Image2 As Global.System.Web.UI.WebControls.Image
-    
-    '''<summary>
-    '''lblUser control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblUser As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''BtnLogof control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents BtnLogof As Global.System.Web.UI.WebControls.ImageButton
-    
-    '''<summary>
-    '''ContentPlaceHolder1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
-    
+
     '''<summary>
     '''Panel1 control.
     '''</summary>
@@ -111,7 +39,70 @@ Partial Public Class SonyAnalysis
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Panel1 As Global.System.Web.UI.WebControls.Panel
-    
+
+    '''<summary>
+    '''LblShipName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents LblShipName As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblUser control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblUser As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''BtnLogof control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents BtnLogof As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''BtnHome control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents BtnHome As Global.System.Web.UI.WebControls.ImageButton
+
+    '''<summary>
+    '''dashboard control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents dashboard As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''btnDashboard control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnDashboard As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''fileupload control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents fileupload As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
     '''<summary>
     '''btnFileUpload control.
     '''</summary>
@@ -119,8 +110,17 @@ Partial Public Class SonyAnalysis
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnFileUpload As Global.System.Web.UI.WebControls.ImageButton
-    
+    Protected WithEvents btnFileUpload As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Analysis_Export control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Analysis_Export As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
     '''<summary>
     '''btnExportData control.
     '''</summary>
@@ -128,8 +128,17 @@ Partial Public Class SonyAnalysis
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnExportData As Global.System.Web.UI.WebControls.ImageButton
-    
+    Protected WithEvents btnExportData As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Analysis_Refresh control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Analysis_Refresh As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
     '''<summary>
     '''btnReport control.
     '''</summary>
@@ -137,8 +146,17 @@ Partial Public Class SonyAnalysis
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnReport As Global.System.Web.UI.WebControls.ImageButton
-    
+    Protected WithEvents btnReport As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Analysis_Recovery control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Analysis_Recovery As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
     '''<summary>
     '''btnRecovery control.
     '''</summary>
@@ -146,23 +164,185 @@ Partial Public Class SonyAnalysis
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnRecovery As Global.System.Web.UI.WebControls.ImageButton
-    
+    Protected WithEvents btnRecovery As Global.System.Web.UI.WebControls.Button
+
     '''<summary>
-    '''btnAnalysisData control.
+    '''drp1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnAnalysisData As Global.System.Web.UI.WebControls.ImageButton
-    
+    Protected WithEvents drp1 As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
     '''<summary>
-    '''btnRPA control.
+    '''analyis control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnRPA As Global.System.Web.UI.WebControls.ImageButton
+    Protected WithEvents analyis As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''summary control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents summary As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+    '''<summary>
+    '''btnUploadSummary control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnUploadSummary As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Verfication control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Verfication As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+    '''<summary>
+    '''btnUploadVerification control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnUploadVerification As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''compare control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents compare As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+    '''<summary>
+    '''btnPartsCompare control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnPartsCompare As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''storemanagement control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents storemanagement As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+    '''<summary>
+    '''btnStoreManagement control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnStoreManagement As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''drp2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents drp2 As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+    '''<summary>
+    '''rpa control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents rpa As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''btnscheduler control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnscheduler As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Log control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Log As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+    '''<summary>
+    '''btnRpaLog control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnRpaLog As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''taskapp control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents taskapp As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+    '''<summary>
+    '''btnRpaTaskApp control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnRpaTaskApp As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Onoff control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Onoff As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+    '''<summary>
+    '''btnRpaOnOff control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnRpaOnOff As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''ContentPlaceHolder1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
 End Class

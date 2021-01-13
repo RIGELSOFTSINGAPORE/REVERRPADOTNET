@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Analysis.Master" CodeBehind="Analysis_Upload_Summary.aspx.vb" Inherits="Ganges33.Analysis_Upload_Summary" %>
+﻿<%@ Page Title="Analysis Upload summary" Language="vb" AutoEventWireup="false" MasterPageFile="~/Analysis.Master" CodeBehind="Analysis_Upload_Summary.aspx.vb" Inherits="Ganges33.Analysis_Upload_Summary" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -33,10 +33,16 @@
     <style type="text/css">
  
         </style>
+    
     <script>
+
         $(function () {
-            $('.multiselect-ui').multiselect({
-                includeSelectAllOption: true
+            $('[class*=date]').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "DD/MM/YYYY",
+                language: "tr"
+
             });
         });
     </script>
@@ -58,7 +64,7 @@
                   <h3 class="card-title ">Upload Summary</h3>
                   <p class="card-category"></p>
                 </div>
-                <div class="card-body scrollbar" id="style-10">
+                <div class="card-body scrollbar" >
              
 
                     <br />
@@ -152,7 +158,7 @@
 
        
                     
-               <asp:GridView ID="gvExportReport" runat="server" AutoGenerateColumns="false"
+               <asp:GridView ID="gvExportReport" runat="server" AutoGenerateColumns="false" HorizontalAlign="Center"
              RowStyle-Wrap="false"  HeaderStyle-BackColor="#8e24aa" HeaderStyle-ForeColor="White"   ShowHeaderWhenEmpty="false" HeaderStyle-Wrap="false"  >
             <Columns>
                <asp:BoundField  DataField="Target_Store" HeaderText="Target Store"  ControlStyle-Width="85px" Visible="false" />

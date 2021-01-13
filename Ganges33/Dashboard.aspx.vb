@@ -13,9 +13,15 @@ Public Class WebForm1
 
             'トランザクション開始＆コネクションオープン
             Dim trn As SqlTransaction = con.BeginTransaction(IsolationLevel.ReadCommitted)
+            Dim mon As String
+            Dim mon1 As String
             Dim Year = Today.Year
-            Dim month = Today.Month
-            Dim Mon = Year & "/" & month.ToString
+            Dim month = Today.Month.ToString
+            If month.Length = 1 Then
+                mon1 = "0" & month
+            End If
+
+            mon = Year & "/" & mon1.ToString
 
             Dim strSQL = "If EXISTS (SELECT * FROM Activity_report WHERE month = '" & Mon & "')  BEGIN"
             strSQL = strSQL & " select day   ,(Customer_Visit),(Call_Registerd),(repair_completed),(goods_delivered),(Pending_Calls),(Cancelled_Calls) from Activity_report where month = '" & Mon & "' order by day  END"
@@ -26,16 +32,16 @@ Public Class WebForm1
             strSQL = strSQL & " (VALUES (0)) TempTableName5 (Pending_Calls), (VALUES (0)) TempTableName6 (Cancelled_Calls) END"
             Dim sqlSelect As New SqlCommand(strSQL, con, trn)
             Dim Adapter As New SqlDataAdapter(sqlSelect)
-            Dim ds As New DataSet
-
-            Adapter.Fill(ds)
-
-            Dim strSQL1 = "select day   ,(Call_Registerd),(repair_completed),(goods_delivered),(Pending_Calls),(Cancelled_Calls) from Activity_report where month = '" & Mon & "' order by day"
-
-            Dim sqlSelect1 As New SqlCommand(strSQL1, con, trn)
-            Dim Adapter1 As New SqlDataAdapter(sqlSelect1)
             Dim ds1 As New DataSet
+
             Adapter.Fill(ds1)
+
+            'Dim strSQL1 = "select day   ,(Call_Registerd),(repair_completed),(goods_delivered),(Pending_Calls),(Cancelled_Calls) from Activity_report where month = '" & Mon & "' order by day"
+
+            'Dim sqlSelect1 As New SqlCommand(strSQL1, con, trn)
+            'Dim Adapter1 As New SqlDataAdapter(sqlSelect1)
+            'Dim ds1 As New DataSet
+            'Adapter.Fill(ds1)
 
             Chart1.ChartAreas("ChartArea1").AxisX.MajorGrid.Enabled = False
             Chart1.ChartAreas("ChartArea1").AxisY.MajorGrid.Enabled = False
@@ -65,7 +71,7 @@ Public Class WebForm1
             Chart7.ChartAreas("ChartArea1").AxisY.MajorGrid.Enabled = False
             ' Chart7.ChartAreas("ChartArea1").Area3DStyle.Enable3D = True
 
-            Chart1.DataSource = ds
+            Chart1.DataSource = ds1
             Chart2.DataSource = ds1
             Chart3.DataSource = ds1
             Chart4.DataSource = ds1

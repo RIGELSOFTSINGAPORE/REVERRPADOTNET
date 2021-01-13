@@ -5982,7 +5982,7 @@ Public Class Analysis_Store_Management
     Protected Sub ImageButton3_Click(sender As Object, e As EventArgs)
         Dim GSTIN As String = Trim(TextBox3.Text)
 
-        If DropDownList2.SelectedItem.Text = "select" Then
+        If DropDownList2.SelectedItem.Text = "Select" Then
             Call showMsg("Please select a branch.", "")
             Exit Sub
         End If

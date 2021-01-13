@@ -170,40 +170,37 @@
                            
                          <asp:DropDownList ID="drpTaskExport" CssClass="form-control " runat="server" style="width: 100%; height:33px;" AutoPostBack="true"  >
                               <asp:ListItem Text="Select..." Value="-1"></asp:ListItem>
-                             <asp:ListItem Text="0.PL_Tracking_Sheet" Value="0"></asp:ListItem>
+                    
+                             <%--<asp:ListItem Text="0.PL_Tracking_Sheet" Value="0"></asp:ListItem>--%>
                               <asp:ListItem Text="1.DailyRepairStatement" Value="1"></asp:ListItem>
-                              <asp:ListItem Text="2A.Sales Register from GSPIN software for In warranty" Value="2.1"></asp:ListItem>
-                              <asp:ListItem Text="2B.Sales Register from GSPIN software for Out warranty" Value="2.2"></asp:ListItem>
-                              <asp:ListItem Text="2C.Sales Register from GSPIN software for Other Sales" Value="2.3"></asp:ListItem>
+                              <asp:ListItem Text="2.WarrantyExcel File" Value="2"></asp:ListItem>
+                             <%-- <asp:ListItem Text="2B.Sales Register from GSPIN software for Out warranty" Value="2.2"></asp:ListItem>
+                              <asp:ListItem Text="2C.Sales Register from GSPIN software for Other Sales" Value="2.3"></asp:ListItem>--%>
 
-                             <asp:ListItem Text="3A.Sales Register from GSPN Samsung_C IW" Value="3"></asp:ListItem>
-                               <asp:ListItem Text="3B.Sales Register from GSPN Samsung_EXC IW" Value="-3"></asp:ListItem>
+                             <asp:ListItem Text="3A.Sales Register from GSPN Samsung_C IW" Value="3A"></asp:ListItem>
+                               <asp:ListItem Text="3B.Sales Register from GSPN Samsung_EXC IW" Value="3B"></asp:ListItem>
                               <asp:ListItem Text="4.Sales Register from GSPN OOW" Value="4"></asp:ListItem>
-                               <asp:ListItem Text="5.Debit Note" Value="5"></asp:ListItem>
+                              <%-- <asp:ListItem Text="5.Debit Note" Value="5"></asp:ListItem>--%>
                              <asp:ListItem Text="6.Purchase Register Summary" Value="6"></asp:ListItem>
                               <asp:ListItem Text="7.Purchase Register Detail" Value="7"></asp:ListItem>
-                              <asp:ListItem Text="8.Goods Receiving" Value="8"></asp:ListItem>
+                              <asp:ListItem Text="8A.Goods Receiving Summary" Value="8A"></asp:ListItem>
+                              <asp:ListItem Text="8B.Goods Receiving Detail" Value="8B"></asp:ListItem>
                               <asp:ListItem Text="9.Stockoverview" Value="9"></asp:ListItem>
-                              <asp:ListItem Text="9A.StockoverView Count" Value="9A"></asp:ListItem>
                               <asp:ListItem Text="10.SAW Discount" Value="10"></asp:ListItem>
                              <asp:ListItem Text="11.Parts In and Out History" Value="11"></asp:ListItem>
-                              <asp:ListItem Text="12.Fixed Asset" Value="12"></asp:ListItem>
-                              <asp:ListItem Text="13.Consumable Purchase List" Value="13"></asp:ListItem>
+                            <%--  <asp:ListItem Text="12.Fixed Asset" Value="12"></asp:ListItem>
+                              <asp:ListItem Text="13.Consumable Purchase List" Value="13"></asp:ListItem>--%>
                              <asp:ListItem Text="14.GSS Paid to Samsung" Value="14"></asp:ListItem>
                              <asp:ListItem Text="15.Return Credit" Value="15"></asp:ListItem>
                               <asp:ListItem Text="16.Samsung Ledger" Value="16"></asp:ListItem>
-                             <%--<asp:ListItem Text="18.Debit Note Register & Service Part Return" Value="18A"></asp:ListItem>-VJ 2019/10/14--%>
                              <asp:ListItem Text="18.Debit Note Register" Value="18"></asp:ListItem><%--VJ 2019/10/14--%>
+                             <%--<asp:ListItem Text="18A.Debit Note Register" Value="18A"></asp:ListItem>VJ 2019/10/14--%>
                              <asp:ListItem Text="19.Service Part Return" Value="19"></asp:ListItem><%--VJ 2019/10/14--%>
-                            <asp:ListItem Text="19A.PO Confirmation" Value="19A"></asp:ListItem>
                              <asp:ListItem Text="19B.HSN Code" Value="19B"></asp:ListItem><%--VJ 2019/10/18--%>
-                            <asp:ListItem Text="20.OtherSalesExtendedWarranty" Value="20"></asp:ListItem>
-                            <asp:ListItem Text="21.PO Status" Value="21"></asp:ListItem>
-                            <asp:ListItem Text="22.Activity Report" Value="22"></asp:ListItem>
+                             <asp:ListItem Text="20.OtherSalesExtendedWarranty" Value="20"></asp:ListItem>
+                             <asp:ListItem Text="21.PO Status" Value="21"></asp:ListItem>
                              <asp:ListItem Text="23.PO Confirmation" Value="23"></asp:ListItem>
-                            <asp:ListItem Text="24.Samsung to GSS paid (BOI)" Value="24"></asp:ListItem>							 
-							 <asp:ListItem Text="25.Account Report" Value="25"></asp:ListItem>
-                             <asp:ListItem Text="99.Final_Report" Value="99"></asp:ListItem> <%--VJ 2019/10/14--%>
+                            <%-- <asp:ListItem Text="99.Final_Report" Value="99"></asp:ListItem> <%--VJ 2019/10/14--%>
                              
                             
                       </asp:DropDownList>
@@ -243,6 +240,7 @@
                     <div class="col-sm-12">
                    
                  <b><asp:Label ID ="lblPagesize" CssClass="serverlbl" runat="server">Page Size:</asp:Label></b><asp:TextBox ID="txtPageSize" Class="serverlbl" runat="server" MaxLength="4"  Style="Width: 40px"  AutoPostBack="true" OnTextChanged="txtPageSize_TextChanged"></asp:TextBox>
+                         <br />
           <asp:Label ID ="lblErrorMessage" style="color: red;" Class="serverlbl" runat="server">Please enter a valid Page Size Range betwwwn 1 to 9999</asp:Label>
            <br />
                       <asp:GridView ID="gvExportReport" runat="server" AutoGenerateColumns="false" AllowPaging="true"

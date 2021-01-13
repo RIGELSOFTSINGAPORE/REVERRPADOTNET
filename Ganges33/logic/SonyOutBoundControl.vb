@@ -77,6 +77,12 @@ Public Class SonyOutBoundControl
                 sqlStr = sqlStr & "PIC, "
                 sqlStr = sqlStr & "ACTUAL_SELLING_UNIT_PRICE, "
                 sqlStr = sqlStr & "OW_BASE_PRICE, "
+                sqlStr = sqlStr & "CUSTOMER_NAME, "
+                sqlStr = sqlStr & "FEE_TYPE, "
+                sqlStr = sqlStr & "PART_REGISTERATION_MODEL, "
+                sqlStr = sqlStr & "REMARK, "
+                sqlStr = sqlStr & "FORMNO, "
+
 
                 sqlStr = sqlStr & "FILE_NAME, "
                 sqlStr = sqlStr & "SRC_FILE_NAME "
@@ -106,6 +112,16 @@ Public Class SonyOutBoundControl
                 sqlStr = sqlStr & "@PIC, "
                 sqlStr = sqlStr & "@ACTUAL_SELLING_UNIT_PRICE, "
                 sqlStr = sqlStr & "@OW_BASE_PRICE, "
+                sqlStr = sqlStr & "@CUSTOMER_NAME, "
+                sqlStr = sqlStr & "@FEE_TYPE, "
+                sqlStr = sqlStr & "@PART_REGISTERATION_MODEL, "
+                sqlStr = sqlStr & "@REMARK, "
+                sqlStr = sqlStr & "@FORMNO, "
+
+
+
+
+
 
                 sqlStr = sqlStr & "@FILE_NAME, "
                 sqlStr = sqlStr & "@SRC_FILE_NAME "
@@ -131,6 +147,14 @@ Public Class SonyOutBoundControl
                 dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@PIC", csvData(i)(8)))
                 dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@ACTUAL_SELLING_UNIT_PRICE", csvData(i)(9)))
                 dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@OW_BASE_PRICE", csvData(i)(10)))
+                dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@CUSTOMER_NAME", csvData(i)(11)))
+                dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@FEE_TYPE", csvData(i)(12)))
+                dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@PART_REGISTERATION_MODEL", csvData(i)(13)))
+                dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@REMARK", csvData(i)(14)))
+                dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@FORMNO", csvData(i)(15)))
+
+
+
 
                 dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@FILE_NAME", queryParams.FILE_NAME))
                 dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@SRC_FILE_NAME", queryParams.SRC_FILE_NAME))
@@ -161,7 +185,7 @@ Public Class SonyOutBoundControl
         Dim dbConn As DBUtility = New DBUtility()
         Dim dt As DataTable = New DataTable()
         Dim sqlStr As String = "SELECT "
-        sqlStr = sqlStr & "PART_NO as 'Part No.',PART_DESC as 'Part Desc',QUANTITY as 'Quantity',COST as 'Cost',REF_NUMBER as 'Ref. Number',OUTBOUND_DATE as 'Outbound Date',OUTBOUND_WAY as 'Outbound Way',REQUEST_BY as 'Request By',PIC as 'PIC',ACTUAL_SELLING_UNIT_PRICE as 'Actual Selling Unit Price', OW_BASE_PRICE as 'OW Base Price' "
+        sqlStr = sqlStr & "PART_NO as 'Part No.',PART_DESC as 'Part Desc',QUANTITY as 'Quantity',COST as 'Cost',REF_NUMBER as 'Ref. Number',OUTBOUND_DATE as 'Outbound Date',OUTBOUND_WAY as 'Outbound Way',REQUEST_BY as 'Request By',PIC as 'PIC',ACTUAL_SELLING_UNIT_PRICE as 'Actual Selling Unit Price', OW_BASE_PRICE as 'OW Base Price',CUSTOMER_NAME as 'Customer Name',FEE_TYPE as 'Fee Type',PART_REGISTERATION_MODEL as 'Part Registeration Model',REMARK as 'Remark',FORMNO as 'FormNo' "
         sqlStr = sqlStr & "FROM "
         sqlStr = sqlStr & "SONY_OUT_BOUND "
         sqlStr = sqlStr & "WHERE "

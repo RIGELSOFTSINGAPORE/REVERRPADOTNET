@@ -20,7 +20,7 @@
     <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="X-UA-Compatible" name="msapplication-tap-highlight" content="IE=edge,chrome=1" />
   
   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -31,8 +31,13 @@
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
     <style type="text/css">
- 
-        </style>
+
+        .container{
+    -ms-overflow-style: none;
+    overflow: auto;
+}
+       
+   </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
@@ -50,7 +55,7 @@
                   <h3 class="card-title ">Analysis File Upload</h3>
                   <p class="card-category"></p>
                 </div>
-                <div class="card-body scrollbar" id="style-10">
+                <div class="card-body " >
 <br /><br />
   <div class="row col-sm-12">
 
@@ -95,7 +100,7 @@
                                </div>
                         <div class="col-sm-8">
                              <br />
-                         <asp:DropDownList class="form-control " ID="drpTask" runat="server" AutoPostBack="true"  OnSelectedIndexChanged="OnSelectedIndexChanged"  style="width: 100%;height:33px;" >
+                         <asp:DropDownList   ID="drpTask" runat="server" AutoPostBack="true"  OnSelectedIndexChanged="OnSelectedIndexChanged"  class="form-control" style="width: 100%;height:33px;" >
                             <asp:ListItem Text="Select..." Value="0"></asp:ListItem>
                              <asp:ListItem Text="1.DailyStatementReport" Value="1"></asp:ListItem>
                               <asp:ListItem Text="2.WarrantyExcel File" Value="2"></asp:ListItem>
@@ -264,7 +269,7 @@
                           
                                 </div>
                           <div>
-                      <select size="4" ID="ListMsg" runat="server" class="listbox form-control" style="Height: 70%;Width: 100%;overflow: hidden;">
+                      <select size="4" ID="ListMsg" runat="server" class="listbox form-control" style="Height: 85px;Width: 100%;overflow: auto;">
                       </select>      
                         </div>
                            
@@ -274,7 +279,7 @@
                             <label class="bmd-label-floating"> History</label>
                            </div>
                           <div>
-                      <select size="4" ID="ListHistory" runat="server" class="listbox form-control" style="Height: 70%;Width: 100%;overflow: hidden;">
+                      <select size="4" ID="ListHistory" runat="server" class="listbox form-control" style="Height: 85px;Width: 100%;overflow: auto;">
                        </select>              
                         </div>
                             </div>

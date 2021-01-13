@@ -1,4 +1,4 @@
-﻿<%@ Page Title="QMVAR-Analysis-Report" Language="vb" AutoEventWireup="false" MasterPageFile="~/Analysis.Master" CodeBehind="Analysis_Report.aspx.vb" Inherits="Ganges33.Analysis_Report" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" MasterPageFile="~/SonyAnalysis.Master" CodeBehind="SonyAnalysis_Report.aspx.vb" Inherits="Ganges33.SonyAnalysis_Report" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
    
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
@@ -129,22 +129,23 @@
 
                       
                     </div>
-                     <div class="col-sm-12">
 
+                     <div class="col-sm-12">
+                         <asp:Button ID="Button1" runat="server" Text="Fill Zero"  class="btn btn-primary serverlbl pull-right" />
                         </div>
 
                     <div >
                        
                          <div >
                         
-                        <table class="table">
+                       <table class="table">
                         
                           <thead class=" text-primary">
                             
                             <tr>
                               <th class="" style="background: transparent;border: none;"></th><th>
                               Customer Visit
-                            </th>
+                            </th>s
                             <th class="Serverlbl">
                               Call Registered
                             </th>
@@ -160,33 +161,54 @@
                             <th class="Serverlbl">
                               Cancelled Calls
                             </th>
-                          </tr></thead>
-                          <tbody>
-                            <tr>
-                              <td  style="border: none;"></td>
-                               <td >
-                               <asp:textbox runat="server" ID="TextCustomer_Visit" Class="form-control serverlbl"></asp:textbox>
-                              </td>
-                              <td>
-                                <asp:textbox runat="server" ID="TextCall_Registered" Class="form-control serverlbl"></asp:textbox>
-                              </td>
-                              <td>
-                                <asp:textbox runat="server" ID="TextRepair_Completed" Class="form-control serverlbl"></asp:textbox>
-                              </td>
-                              <td>
-                                <asp:textbox runat="server" ID="TextGoods_Delivered" Class="form-control serverlbl"></asp:textbox>
-                              </td>
-                              <td >
-                                 <asp:textbox runat="server" ID="TextPending_Calls" Class="form-control serverlbl"></asp:textbox>
-                              </td>
-                              <td >
-                                 <asp:textbox runat="server" ID="TextCancelled_Calls" Class="form-control serverlbl"></asp:textbox>
-                              </td>
-                            </tr>
-                           
-                            
-                          </tbody>
-                        </table>
+                                <th class="Serverlbl">
+                              Reservation
+                            </th>
+                          </tr>
+
+                          </thead>
+            
+             
+              <tr>
+           
+                      <td  class="" style="background: transparent;border: none;">
+                   <asp:Label ID="Label23" runat="server" Text="Service" ></asp:Label><br /><br />
+                    <asp:Label ID="Label1344" runat="server" Text="D&I" ></asp:Label>
+                  </td>
+
+                  <td class="">
+                      <asp:TextBox ID="TextCustomer_Visit_S" runat="server" CssClass="form-control serverlbl"></asp:TextBox>
+                      <asp:TextBox ID="TextCustomer_Visit_D" runat="server" CssClass="form-control serverlbl"></asp:TextBox>
+                  </td>
+
+                  <td class="">
+                      <asp:TextBox ID="TextCall_Registerd_S" runat="server" CssClass="form-control serverlbl"></asp:TextBox>
+                      <asp:TextBox ID="TextCall_Registerd_D" runat="server" CssClass="form-control serverlbl"></asp:TextBox>
+                  </td>
+                  <td class="">
+                      <asp:TextBox ID="TextRepair_Completed_S" runat="server" CssClass="form-control serverlbl"></asp:TextBox>
+                 <asp:TextBox ID="TextRepair_Completed_D" runat="server" CssClass="form-control serverlbl"></asp:TextBox>
+                      </td>
+                  <td class="">
+                      <asp:TextBox ID="TextGoods_Delivered_S" runat="server" CssClass="form-control serverlbl"></asp:TextBox>
+                  <asp:TextBox ID="TextGoods_Delivered_D" runat="server" CssClass="form-control serverlbl"></asp:TextBox>
+                  </td>
+                  <td class="">
+                      <asp:TextBox ID="TextPending_Calls_S" runat="server" CssClass="form-control serverlbl"></asp:TextBox>
+                  <asp:TextBox ID="TextPending_Calls_D" runat="server" CssClass="form-control serverlbl"></asp:TextBox>
+                  </td>
+                  <td class="">
+                      <asp:TextBox ID="TextCancelled_Calls_S" runat="server" CssClass="form-control serverlbl"></asp:TextBox>
+                  <asp:TextBox ID="TextCancelled_Calls_D" runat="server" CssClass="form-control serverlbl"></asp:TextBox>
+                  </td>
+                  <td class="">
+                      <asp:TextBox ID="TextReservation_S" runat="server" CssClass="form-control serverlbl"></asp:TextBox>
+                  <asp:TextBox ID="TextReservation_D" runat="server" CssClass="form-control serverlbl"></asp:TextBox>
+                  </td>
+              </tr>
+              </table>
+
+        
                       </div>
 
 

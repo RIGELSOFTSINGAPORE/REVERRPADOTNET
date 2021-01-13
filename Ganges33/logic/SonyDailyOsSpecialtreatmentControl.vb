@@ -232,8 +232,8 @@ Public Class SonyDailyOsSpecialtreatmentControl
         Log4NetControl.ComInfoLogWrite(Log4NetControl.UserID)
         Dim dbConn As DBUtility = New DBUtility()
         Dim dt As DataTable = New DataTable()
-        Dim sqlStr As String = "SELECT * "
-        'sqlStr = sqlStr & "COUNTRY as 'Country',REGION1 as 'Region1',REGION2 as 'Region2',ASC_CODE as 'Asc Code',ASC_NAME as 'Asc Name',SERVICE_SHEET_NO as 'Service Sheet No',MODEL_CODE as 'Model Code',MODEL_NAME as 'Model Name',SERIAL_NO as 'Serial No',CREATE_DATE as 'Create Date', CUSTOMER_NAME as 'Customer Name',REPAIR_STATUS as 'Repair Status',TERMINATED_DATE as 'Terminated Date',STATUS_REMARKS as 'Status Remarks',ST_TYPE as 'St Type',CANCEL_REASON as 'Cancel Reason',REPAIR_CONTENTS as 'Repair Contents' "
+        Dim sqlStr As String = "SELECT "
+        sqlStr = sqlStr & "COUNTRY as 'COUNTRY', REGION as 'REGION', REGION_NAME as 'REGION_NAME',UNIT_CODE as 'UNIT_CODE', ORGANIZATION_NAME as 'ORGANIZATION_NAME', SERVICE_SHEET_NO as 'SERVICE_SHEET_NO', PURCHASE_DATE as 'PURCHASE_DATE', RECEIVED_DATE as 'RECEIVED_DATE', WARRANTY_TYPE as 'WARRANTY_TYPE', WARRANTY_CATEGORY as 'WARRANTY_CATEGORY', PRODUCT_CATEGORY as 'PRODUCT_CATEGORY', PRODUCT_SUB_CATEGORY as 'PRODUCT_SUB_CATEGORY', MODEL_CODE as 'MODEL_CODE', MODEL_DESC as 'MODEL_DESC', SERIAL_NO as 'SERIAL_NO', APPLY_REMARK as 'APPLY_REMARK', FEE_TYPE as 'FEE_TYPE', PART_CODE as 'PART_CODE', PART_DESC as 'PART_DESC', ACCOUNT_RECEIVABLE as 'ACCOUNT_RECEIVABLE', DISCOUNT_FEE as 'DISCOUNT_FEE', USER_PAY as 'USER_PAY', SONY_PAY as 'SONY_PAY', APPLY_FEE as 'APPLY_FEE', APPOVER_DATE as 'APPOVER_DATE', JOB_STATUS as 'JOB_STATUS', COLLECTION_DATE as 'COLLECTION_DATE', CUSTOMER_NAME as 'CUSTOMER_NAME', ST_TYPE as 'ST_TYPE', Apply_Date as 'Apply_Date', Approve_status as 'Approve_status', Remark as 'Remark', Approval_result as 'Approval_result' "
         sqlStr = sqlStr & "FROM "
         sqlStr = sqlStr & "SONY_DAILY_OS_SPECIALTREATMENT "
         sqlStr = sqlStr & "WHERE "

@@ -127,6 +127,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin.aspx" />
     <Content Include="Analysis_Cash_Tracking.aspx" />
     <Content Include="Analysis_Cash_Tracking2.aspx" />
     <Content Include="Analysis_Cash_Tracking_imp.aspx" />
@@ -397,6 +398,13 @@
     <Content Include="Dashboard.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.aspx.designer.vb">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.aspx.vb">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="AnalysisSub.Master.designer.vb">
       <DependentUpon>AnalysisSub.Master</DependentUpon>
     </Compile>

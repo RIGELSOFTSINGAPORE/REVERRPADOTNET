@@ -817,13 +817,13 @@ Public Class Analysis_FileUpload
                                     'Comment on 20190801 
                                     '''Call showMsg("Failed to register the data of the import file.", "")
                                     '''
-                                    Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+                                    Call showMsg("Status: Upload Failed     Please check the content of file ", "")
                                     Exit Sub
                                 Else
                                     'Comment on 20190801 
                                     '''''Call showMsg("Data registration of the import file is completed.", "")
                                     '''
-                                    Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+                                    Call showMsg("Status: Upload Success    The file has been uploaded", "")
                                     Exit Sub
                                 End If
 
@@ -905,12 +905,12 @@ Public Class Analysis_FileUpload
                                 If errFlg = 1 Then
                                     'Comment on 20190801 
                                     '''Call showMsg("Failed to register the data of the import file.", "")
-                                    Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+                                    Call showMsg("Status: Upload Failed     Please check the content of file ", "")
                                     Exit Sub
                                 Else
                                     'Commment on 2090801
                                     'Call showMsg("Data registration of the import file is completed.", "")
-                                    Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+                                    Call showMsg("Status: Upload Success    The file has been uploaded", "")
                                     Exit Sub
                                 End If
                         End Select
@@ -2876,7 +2876,7 @@ Public Class Analysis_FileUpload
     '    strArr = textLines.ToArray
     '    'Verify that if the records / data not formated, show the error information to the user
     '    If strArr.Count < 2 Then
-    '        Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+    '        Call showMsg("Status: Upload Failed    The CSV file is not valid format!!!", "")
     '        Exit Sub
     '    End If
     '    'Pass the paramters to Update in Datatabase
@@ -2897,10 +2897,10 @@ Public Class Analysis_FileUpload
     '    Dim blStatus As Boolean = _OtherUpdateControl.AddModifyOtherUpdate(strArr, _OtherUpdateModel)
     '    'If Error Raised then show the errors
     '    If Not blStatus Then
-    '        Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+    '        Call showMsg("Status: Upload Failed     Please check the content of file ", "")
     '        Exit Sub
     '    Else
-    '        Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+    '        Call showMsg("Status: Upload Success    The file has been uploaded", "")
     '    End If
 
     'End Sub
@@ -2980,7 +2980,7 @@ Public Class Analysis_FileUpload
         strArr = textLines.ToArray
         'Verify that if the records / data not formated, show the error information to the user
         If strArr.Count < 2 Then
-            Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+            Call showMsg("Status: Upload Failed    The CSV file is not valid format!!!", "")
             Exit Sub
         End If
         'Comment on 20190730 as per new request
@@ -3002,10 +3002,10 @@ Public Class Analysis_FileUpload
         '''''Dim blStatus As Boolean = _OtherUpdateControl.AddModifyOtherUpdate(strArr, _OtherUpdateModel)
         ''''''If Error Raised then show the errors
         '''''If Not blStatus Then
-        '''''    Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+        '''''    Call showMsg("Status: Upload Failed     Please check the content of file ", "")
         '''''    Exit Sub
         '''''Else
-        '''''    Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+        '''''    Call showMsg("Status: Upload Success    The file has been uploaded", "")
         '''''End If
 
         'Pass the paramters to Update in Datatabase
@@ -3026,10 +3026,10 @@ Public Class Analysis_FileUpload
         Dim blStatus As Boolean = _DebitNoteControl.AddModifyDebitNote(strArr, _DebitNoteModel)
         'If Error Raised then show the errors
         If Not blStatus Then
-            Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+            Call showMsg("Status: Upload Failed  Please check the content of file ", "")
             Exit Sub
         Else
-            Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+            Call showMsg("Status: Upload Success  The file has been uploaded", "")
         End If
 
     End Sub
@@ -3110,7 +3110,7 @@ Public Class Analysis_FileUpload
         strArr = textLines.ToArray
         'Verify that if the records / data not formated, show the error information to the user
         If strArr.Count < 2 Then
-            Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+            Call showMsg("Status: Upload Failed  The CSV file is not valid format!!!", "")
             Exit Sub
         End If
         'Pass the paramters to Update in Datatabase
@@ -3129,10 +3129,10 @@ Public Class Analysis_FileUpload
         Dim blStatus As Boolean = _PoDcControl.AddUploadSummary(strArr, _PoDcModel)
         'If Error Raised then show the errors
         If Not blStatus Then
-            Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+            Call showMsg("Status: Upload Failed   Please check the content of file ", "")
             Exit Sub
         Else
-            Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+            Call showMsg("Status: Upload Success  The file has been uploaded", "")
         End If
 
     End Sub
@@ -3216,7 +3216,7 @@ Public Class Analysis_FileUpload
         strArr = textLines.ToArray
         'Verify that if the records / data not formated, show the error information to the user
         If strArr.Count < 2 Then
-            Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+            Call showMsg("Status: Upload Failed  The CSV file is not valid format!!!", "")
             Exit Sub
         End If
         'Pass the paramters to Update in Datatabase
@@ -3237,10 +3237,10 @@ Public Class Analysis_FileUpload
         Dim blStatus As Boolean = _PrSummaryControl.AddModifyPrSummary(strArr, _PrSummaryModel)
         'If Error Raised then show the errors
         If Not blStatus Then
-            Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+            Call showMsg("Status: Upload Failed   Please check the content of file ", "")
             Exit Sub
         Else
-            Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+            Call showMsg("Status: Upload Success  The file has been uploaded", "")
         End If
 
     End Sub
@@ -3321,7 +3321,7 @@ Public Class Analysis_FileUpload
         strArr = textLines.ToArray
         'Verify that if the records / data not formated, show the error information to the user
         If strArr.Count < 2 Then
-            Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+            Call showMsg("Status: Upload Failed    The CSV file is not valid format!!!", "")
             Exit Sub
         End If
         'Pass the paramters to Update in Datatabase
@@ -3343,10 +3343,10 @@ Public Class Analysis_FileUpload
         Dim blStatus As Boolean = _PrDetailControl.AddModifyPrDetail(strArr, _PrDetailModel)
         'If Error Raised then show the errors
         If Not blStatus Then
-            Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+            Call showMsg("Status: Upload Failed  Please check the content of file ", "")
             Exit Sub
         Else
-            Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+            Call showMsg("Status: Upload Success The file has been uploaded", "")
         End If
 
     End Sub
@@ -3426,7 +3426,7 @@ Public Class Analysis_FileUpload
         strArr = textLines.ToArray
         'Verify that if the records / data not formated, show the error information to the user
         If strArr.Count < 2 Then
-            Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+            Call showMsg("Status: Upload Failed  The CSV file is not valid format!!!", "")
             Exit Sub
         End If
         'Pass the paramters to Update in Datatabase
@@ -3442,10 +3442,10 @@ Public Class Analysis_FileUpload
         Dim blStatus As Boolean = _GRecievedControl.AddModifyGRecieved(strArr, _GRecievedModel)
         'If Error Raised then show the errors
         If Not blStatus Then
-            Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+            Call showMsg("Status: Upload Failed     Please check the content of file ", "")
             Exit Sub
         Else
-            Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+            Call showMsg("Status: Upload Success    The file has been uploaded", "")
         End If
 
     End Sub
@@ -3529,7 +3529,7 @@ Public Class Analysis_FileUpload
         strArr = textLines.ToArray
         'Verify that if the records / data not formated, show the error information to the user
         If strArr.Count < 1 Then
-            Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+            Call showMsg("Status: Upload Failed    The CSV file is not valid format!!!", "")
             Exit Sub
         End If
         'Pass the paramters to Update in Datatabase
@@ -3545,10 +3545,10 @@ Public Class Analysis_FileUpload
         Dim blStatus As Boolean = _GRecievedControl.AddModifyGDRecieved(strArr, _GRecievedModel)
         'If Error Raised then show the errors
         If Not blStatus Then
-            Call showMsg("Status: Upload Failed <br><br>  Please check the content of file / Invoice summary doesnot contain", "")
+            Call showMsg("Status: Upload Failed     Please check the content of file / Invoice summary doesnot contain", "")
             Exit Sub
         Else
-            Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+            Call showMsg("Status: Upload Success    The file has been uploaded", "")
         End If
 
     End Sub
@@ -3632,7 +3632,7 @@ Public Class Analysis_FileUpload
         strArr = textLines.ToArray
         'Verify that if the records / data not formated, show the error information to the user
         If strArr.Count < 2 Then
-            Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+            Call showMsg("Status: Upload Failed    The CSV file is not valid format!!!", "")
             Exit Sub
         End If
         'Pass the paramters to Update in Datatabase
@@ -3650,10 +3650,10 @@ Public Class Analysis_FileUpload
         Dim blStatus As Boolean = _StockOverviewControl.AddModifyStockOverview(strArr, _StockOverviewModel)
         'If Error Raised then show the errors
         If Not blStatus Then
-            Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+            Call showMsg("Status: Upload Failed     Please check the content of file ", "")
             Exit Sub
         Else
-            Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+            Call showMsg("Status: Upload Success    The file has been uploaded", "")
         End If
 
     End Sub
@@ -3734,7 +3734,7 @@ Public Class Analysis_FileUpload
         strArr = textLines.ToArray
         'Verify that if the records / data not formated, show the error information to the user
         If strArr.Count < 2 Then
-            Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+            Call showMsg("Status: Upload Failed    The CSV file is not valid format!!!", "")
             Exit Sub
         End If
         'Pass the paramters to Update in Datatabase
@@ -3756,10 +3756,10 @@ Public Class Analysis_FileUpload
         Dim blStatus As Boolean = _StockOverviewControl.AddModifyStockOverviewCount(strArr, _StockOverviewModel)
         'If Error Raised then show the errors
         If Not blStatus Then
-            Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+            Call showMsg("Status: Upload Failed     Please check the content of file ", "")
             Exit Sub
         Else
-            Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+            Call showMsg("Status: Upload Success    The file has been uploaded", "")
         End If
 
     End Sub
@@ -3840,7 +3840,7 @@ Public Class Analysis_FileUpload
         strArr = textLines.ToArray
         'Verify that if the records / data not formated, show the error information to the user
         If strArr.Count < 2 Then
-            Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+            Call showMsg("Status: Upload Failed    The CSV file is not valid format!!!", "")
             Exit Sub
         End If
         'Pass the paramters to Update in Datatabase
@@ -3857,10 +3857,10 @@ Public Class Analysis_FileUpload
         Dim blStatus As Boolean = _SawDiscountControl.AddModifySawDiscount(strArr, _SawDiscountModel)
         'If Error Raised then show the errors
         If Not blStatus Then
-            Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+            Call showMsg("Status: Upload Failed     Please check the content of file ", "")
             Exit Sub
         Else
-            Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+            Call showMsg("Status: Upload Success    The file has been uploaded", "")
         End If
 
     End Sub
@@ -3944,7 +3944,7 @@ Public Class Analysis_FileUpload
 
         'Verify that if the records / data not formated, show the error information to the user
         If strArr.Count < 2 Then
-            Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+            Call showMsg("Status: Upload Failed    The CSV file is not valid format!!!", "")
             Exit Sub
         End If
         'Pass the paramters to Update in Datatabase
@@ -3960,10 +3960,10 @@ Public Class Analysis_FileUpload
         Dim blStatus As Boolean = _PartsIoControl.AddModifyPartsIo(strArr, _PartsIoModel)
         'If Error Raised then show the errors
         If Not blStatus Then
-            Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+            Call showMsg("Status: Upload Failed     Please check the content of file ", "")
             Exit Sub
         Else
-            Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+            Call showMsg("Status: Upload Success    The file has been uploaded", "")
         End If
 
     End Sub
@@ -4048,7 +4048,7 @@ Public Class Analysis_FileUpload
         strArr = textLines.ToArray
         'Verify that if the records / data not formated, show the error information to the user
         If strArr.Count < 2 Then
-            Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+            Call showMsg("Status: Upload Failed    The CSV file is not valid format!!!", "")
             Exit Sub
         End If
         'Pass the paramters to Update in Datatabase
@@ -4065,10 +4065,10 @@ Public Class Analysis_FileUpload
         Dim blStatus As Boolean = _G2sPaidControl.AddModifyG2sPaid(strArr, _G2sPaidModel)
         'If Error Raised then show the errors
         If Not blStatus Then
-            Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+            Call showMsg("Status: Upload Failed     Please check the content of file ", "")
             Exit Sub
         Else
-            Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+            Call showMsg("Status: Upload Success    The file has been uploaded", "")
         End If
 
     End Sub
@@ -4149,7 +4149,7 @@ Public Class Analysis_FileUpload
         strArr = textLines.ToArray
         'Verify that if the records / data not formated, show the error information to the user
         If strArr.Count < 2 Then
-            Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+            Call showMsg("Status: Upload Failed    The CSV file is not valid format!!!", "")
             Exit Sub
         End If
         'Pass the paramters to Update in Datatabase
@@ -4166,10 +4166,10 @@ Public Class Analysis_FileUpload
         Dim blStatus As Boolean = _ReturnCreditControl.AddModifyReturnCredit(strArr, _ReturnCreditModel)
         'If Error Raised then show the errors
         If Not blStatus Then
-            Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+            Call showMsg("Status: Upload Failed     Please check the content of file ", "")
             Exit Sub
         Else
-            Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+            Call showMsg("Status: Upload Success    The file has been uploaded", "")
         End If
 
     End Sub
@@ -4250,7 +4250,7 @@ Public Class Analysis_FileUpload
         strArr = textLines.ToArray
         'Verify that if the records / data not formated, show the error information to the user
         If strArr.Count < 2 Then
-            Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+            Call showMsg("Status: Upload Failed    The CSV file is not valid format!!!", "")
             Exit Sub
         End If
         'Pass the paramters to Update in Datatabase
@@ -4267,10 +4267,10 @@ Public Class Analysis_FileUpload
         Dim blStatus As Boolean = _SLedgerControl.AddModifySLedger(strArr, _SLedgerModel)
         'If Error Raised then show the errors
         If Not blStatus Then
-            Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+            Call showMsg("Status: Upload Failed     Please check the content of file ", "")
             Exit Sub
         Else
-            Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+            Call showMsg("Status: Upload Success    The file has been uploaded", "")
         End If
 
     End Sub
@@ -4352,7 +4352,7 @@ Public Class Analysis_FileUpload
         strArr = textLines.ToArray
         'Verify that if the records / data not formated, show the error information to the user
         If strArr.Count < 2 Then
-            Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+            Call showMsg("Status: Upload Failed    The CSV file is not valid format!!!", "")
             Exit Sub
         End If
         Dim blStatus As Boolean = False
@@ -4370,10 +4370,10 @@ Public Class Analysis_FileUpload
         blStatus = _ServicepartReturnControl.AddModifyServicePartsReturn(strArr, _ServicePartReturnModel)
         'If Error Raised then show the errors
         If Not blStatus Then
-            Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+            Call showMsg("Status: Upload Failed     Please check the content of file ", "")
             Exit Sub
         Else
-            Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+            Call showMsg("Status: Upload Success    The file has been uploaded", "")
         End If
 
     End Sub
@@ -4453,7 +4453,7 @@ Public Class Analysis_FileUpload
         strArr = textLines.ToArray
         'Verify that if the records / data not formated, show the error information to the user
         If strArr.Count < 2 Then
-            Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+            Call showMsg("Status: Upload Failed    The CSV file is not valid format!!!", "")
             Exit Sub
         End If
         Dim blStatus As Boolean = False
@@ -4471,10 +4471,10 @@ Public Class Analysis_FileUpload
         blStatus = _DebitNoteRegisterControl.AddModifyDebitNoteRegister(strArr, _DebitNoteRegisterModel)
         'If Error Raised then show the errors
         If Not blStatus Then
-            Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+            Call showMsg("Status: Upload Failed     Please check the content of file ", "")
             Exit Sub
         Else
-            Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+            Call showMsg("Status: Upload Success    The file has been uploaded", "")
         End If
 
     End Sub
@@ -4556,7 +4556,7 @@ Public Class Analysis_FileUpload
         strArr = textLines.ToArray
         'Verify that if the records / data not formated, show the error information to the user
         If strArr.Count < 2 Then
-            Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+            Call showMsg("Status: Upload Failed    The CSV file is not valid format!!!", "")
             Exit Sub
         End If
         Dim blStatus As Boolean = False
@@ -4575,10 +4575,10 @@ Public Class Analysis_FileUpload
         'If Error Raised then show the errors
         'blStatus = _HSNCodeControl.UpdateHSNCodePRDetails(_HSNCodeModel)
         If Not blStatus Then
-            Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+            Call showMsg("Status: Upload Failed     Please check the content of file ", "")
             Exit Sub
         Else
-            Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+            Call showMsg("Status: Upload Success    The file has been uploaded", "")
         End If
 
     End Sub 'VJ 2019/10/15 End
@@ -4658,7 +4658,7 @@ Public Class Analysis_FileUpload
         strArr = textLines.ToArray
         'Verify that if the records / data not formated, show the error information to the user
         If strArr.Count < 2 Then
-            Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+            Call showMsg("Status: Upload Failed    The CSV file is not valid format!!!", "")
             Exit Sub
         End If
         Dim blStatus As Boolean = False
@@ -4678,10 +4678,10 @@ Public Class Analysis_FileUpload
         'If Error Raised then show the errors
         'blStatus = _HSNCodeControl.UpdateHSNCodePRDetails(_HSNCodeModel)
         If Not blStatus Then
-            Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+            Call showMsg("Status: Upload Failed     Please check the content of file ", "")
             Exit Sub
         Else
-            Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+            Call showMsg("Status: Upload Success    The file has been uploaded", "")
         End If
 
     End Sub 'VJ 2019/10/17 End
@@ -4762,7 +4762,7 @@ Public Class Analysis_FileUpload
         strArr = textLines.ToArray
         'Verify that if the records / data not formated, show the error information to the user
         If strArr.Count < 2 Then
-            Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+            Call showMsg("Status: Upload Failed    The CSV file is not valid format!!!", "")
             Exit Sub
         End If
         'Pass the paramters to Update in Datatabase
@@ -4779,10 +4779,10 @@ Public Class Analysis_FileUpload
         Dim blStatus As Boolean = _OtherSalesExtendedWarrantyControl.AddModifyOtherSalesExtendedWarranty(strArr, _OtherSalesExtendedWarrantyModel)
         'If Error Raised then show the errors
         If Not blStatus Then
-            Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+            Call showMsg("Status: Upload Failed     Please check the content of file ", "")
             Exit Sub
         Else
-            Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+            Call showMsg("Status: Upload Success    The file has been uploaded", "")
         End If
 
     End Sub
@@ -4862,7 +4862,7 @@ Public Class Analysis_FileUpload
         strArr = textLines.ToArray
         'Verify that if the records / data not formated, show the error information to the user
         If strArr.Count < 2 Then
-            Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+            Call showMsg("Status: Upload Failed    The CSV file is not valid format!!!", "")
             Exit Sub
         End If
         'Pass the paramters to Update in Datatabase
@@ -4879,10 +4879,10 @@ Public Class Analysis_FileUpload
         Dim blStatus As Boolean = _PoStatusControl.AddModifyPoStatus(strArr, _PoStatusModel)
         'If Error Raised then show the errors
         If Not blStatus Then
-            Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+            Call showMsg("Status: Upload Failed     Please check the content of file ", "")
             Exit Sub
         Else
-            Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+            Call showMsg("Status: Upload Success    The file has been uploaded", "")
         End If
 
     End Sub
@@ -4978,7 +4978,7 @@ Public Class Analysis_FileUpload
         strArr = textLines.ToArray
         'Verify that if the records / data not formated, show the error information to the user
         If strArr.Count < 2 Then
-            Call showMsg("Status: Upload Failed <br><br> The CSV file is not valid format!!!", "")
+            Call showMsg("Status: Upload Failed    The CSV file is not valid format!!!", "")
             Exit Sub
         End If
         'Pass the paramters to Update in Datatabase
@@ -4995,10 +4995,10 @@ Public Class Analysis_FileUpload
         Dim blStatus As Boolean = _ActivityReportControl.AddModifyActivityReport(strArr, _ActivityReportModel)
         'If Error Raised then show the errors
         If Not blStatus Then
-            Call showMsg("Status: Upload Failed <br><br>  Please check the content of file ", "")
+            Call showMsg("Status: Upload Failed     Please check the content of file ", "")
             Exit Sub
         Else
-            Call showMsg("Status: Upload Success <br><br> The file has been uploaded", "")
+            Call showMsg("Status: Upload Success    The file has been uploaded", "")
         End If
 
     End Sub
