@@ -32,10 +32,10 @@
   <link href="assets/demo/demo.css" rel="stylesheet" />
     <style type="text/css">
 
-        .container{
+       /* .container{
     -ms-overflow-style: none;
     overflow: auto;
-}
+}*/
        
    </style>
 </asp:Content>
