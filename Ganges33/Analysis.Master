@@ -59,6 +59,12 @@ p:hover {
     margin-top:10px;
     color:red;
 }
+
+ .sidebar .nav li > li:hover {
+        background-color: #9c27b0;
+        outline: none;
+        color:black;
+    }
 .nav-link[data-toggle]:not(.collapsed):before {
     content: " ▴";
     float:right;
@@ -279,15 +285,16 @@ p:hover {
 
 
 
-                <li class="nav-item"  id="admin" runat="server">
+                <li class="nav-item"  >
                     <a class="nav-link collapsed text-truncate" href="#submenu6" id="A1" runat="server" data-toggle="collapse" data-target="#submenu6">
            <i class="material-icons">add_to_queue</i>
-          <p runat="server" id="P1">Admin</p></a>
+          <p runat="server" id="admin">Admin</p></a>
                     <div class="collapse" id="submenu6" aria-expanded="false">
                         <ul class="flex-column pl-2 nav">
-                              <li class="nav-item"><a class="nav-link py-0 " ID="btnadmin" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i>  <p>Setup Service Center</p></a></li>
-                              <li class="nav-item"><a class="nav-link py-0 " href="#"><i  style="margin-top:10px;" class="fas fa-angle-double-right"></i>  <p><asp:Button ID="Button1" runat="server" Style="margin-left: 35px;"  class="nav-link btntransprant" text="Setup UserManagement" /></p></a></li>
-                             
+               
+                            <li class="nav-item"><a class="nav-link py-0" id="btnservicecenter" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Service Center</p></a></li>
+                              <li class="nav-item"><a class="nav-link py-0" id="btnuser" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>User Management</p></a></li>
+                           
                         </ul>
                     </div>
                 </li>
@@ -297,18 +304,19 @@ p:hover {
 
 
 
-
-
-          <li id="dashboard" runat="server"  class="nav-item">
-            <a class="nav-link" href="#">
+          <li class="nav-item " id="dashboard" runat="server">
+            <a class="nav-link" ID="btnDashboard" runat="server" href="#">
               <i class="material-icons">dashboard</i>
-              <p><asp:Button ID="btnDashboard" runat="server"  class="btntransprant" text="Dashboard" /></p>
-            </a>  
+              <p>Dashboard</p>
+                
+            </a>
           </li>
+
+       
           <li class="nav-item " id="fileupload" runat="server">
-            <a class="nav-link" href="#">
+            <a class="nav-link" ID="btnFileUpload" runat="server" href="#">
               <i class="material-icons">file_upload</i>
-              <p><asp:Button ID="btnFileUpload" runat="server" class="btntransprant" Text="File Upload" /></p>
+              <p>File Upload</p>
                 
             </a>
           </li>
@@ -318,21 +326,21 @@ p:hover {
            
     
           <li class="nav-item" id="Analysis_Export" runat="server">
-            <a class="nav-link" href="#">
+            <a class="nav-link" ID="btnExportData" runat="server"  href="#">
               <i class="material-icons">import_export</i>
-             <p><asp:Button ID="btnExportData" runat="server"  class="btntransprant" text="Export Data" /></p>
+             <p>Export Data</p>
             </a>
           </li>
                <li class="nav-item " id="Analysis_Refresh" runat="server">
-            <a class="nav-link"  href="#">
+            <a class="nav-link" ID="btnReport" runat="server" href="#">
               <i class="material-icons">library_books</i>
-              <p><asp:Button ID="btnReport" runat="server" class="btntransprant" Text="Activity Report" /></p>
+              <p>Activity Report</p>
             </a>
           </li>
           <li class="nav-item " id="Analysis_Recovery" runat="server">
-            <a class="nav-link"  href="#">
+            <a class="nav-link" ID="btnRecovery" runat="server" href="#">
               <i class="material-icons">bubble_chart</i>
-              <p><asp:Button ID="btnRecovery" runat="server" class="btntransprant" text="Recovery" /></p>
+              <p>Recovery</p>
             </a>
           </li>
 
@@ -346,11 +354,10 @@ p:hover {
           <p runat="server" class="btntransprant" id="analyis">Analysis Data</p></a>
                     <div class="collapse" id="submenu3" aria-expanded="false">
                         <ul class="flex-column pl-2 nav">
-                            <li class="nav-item"><a class="nav-link py-0" id="summary" runat="server" href="#"><i  style="margin-top:10px;" class="fas fa-angle-double-right"></i> <asp:Button ID="btnUploadSummary" runat="server" class="nav-link btntransprant" Style="margin-left: 35px;" Text=" Upload Summary" /></a></li>
-                            
-                            <li class="nav-item"><a class="nav-link py-0" id="Verfication" runat="server" href="#"><i  style="margin-top:10px;" class="fas fa-angle-double-right"></i> <asp:Button ID="btnUploadVerification" class=" nav-link btntransprant" Style="margin-left: 35px;" runat="server" Text=" Upload verification" /></a></li>
-                            <li class="nav-item"><a class="nav-link py-0" id="compare" runat="server"  href="#"><i  style="margin-top:10px;" class="fas fa-angle-double-right"></i> <asp:Button ID="btnPartsCompare" class="nav-link btntransprant" Style="margin-left: 35px;" runat="server" text="Parts Compare" /></a></li>
-                            <li class="nav-item"><a class="nav-link py-0" id="storemanagement" runat="server" href="#"><i  style="margin-top:10px;" class="fas fa-angle-double-right"></i> <asp:Button ID="btnStoreManagement" class="nav-link btntransprant" Style="margin-left: 35px;" runat="server" text="Store Management" /></a></li>
+                            <li class="nav-item"><a class="nav-link py-0"  ID="btnUploadSummary" runat="server"  href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Upload Summary</p></a></li>                            
+                            <li class="nav-item"><a class="nav-link py-0" ID="btnUploadVerification" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Upload Verification</p> </a></li>
+                            <li class="nav-item"><a class="nav-link py-0" id="btnPartsCompare" runat="server"  href="#"> <i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Parts Compare</p></a></li>
+                            <li class="nav-item"><a class="nav-link py-0" id="storemanagement" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Store Management</p></a></li>
                            
                         </ul>
                     </div>
@@ -363,10 +370,10 @@ p:hover {
           <p runat="server" id="rpa">RPA</p></a>
                     <div class="collapse" id="submenu4" aria-expanded="false">
                         <ul class="flex-column pl-2 nav">
-                              <li class="nav-item"><a class="nav-link py-0 " href="#"><i  style="margin-top:10px;" class="fas fa-angle-double-right"></i><asp:Button ID="btnscheduler" class="nav-link btntransprant" Style="margin-left: 35px;" Text=" Scheduler" runat="server" /></a></li>
-                              <li class="nav-item"><a class="nav-link py-0" id="Log" runat="server" href="#"><i  style="margin-top:10px;" class="fas fa-angle-double-right"></i><asp:Button ID="btnRpaLog" Style="margin-left: 35px;" class="nav-link btntransprant" Text="Rpa Log" runat="server"  /></a></li>
-                              <li class="nav-item"><a class="nav-link py-0" id="taskapp" runat="server" href="#"><i  style="margin-top:10px;" class="fas fa-angle-double-right"></i> <asp:Button ID="btnRpaTaskApp" class="nav-link btntransprant" Style="margin-left: 35px;" Text="Rpa Task App" runat="server" /></a></li>
-                              <li class="nav-item"><a class="nav-link py-0" id="Onoff" runat="server" href="#"><i  style="margin-top:10px;" class="fas fa-angle-double-right"></i><asp:Button ID="btnRpaOnOff" class="nav-link btntransprant" Style="margin-left: 35px;"  Text="Rpa On/off" runat="server"   /></a></li>
+                              <li class="nav-item"><a class="nav-link py-0" ID="btnscheduler" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Scheduler</p></a></li>
+                              <li class="nav-item"><a class="nav-link py-0" ID="btnRpaLog" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Rpa Log</p></a></li>
+                              <li class="nav-item"><a class="nav-link py-0" id="btnRpaTaskApp" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Rpa TaskApp</p></a></li>
+                              <li class="nav-item"><a class="nav-link py-0" id="btnRpaOnOff" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Rpa On/Off</p></a></li>
                            
                         </ul>
                     </div>

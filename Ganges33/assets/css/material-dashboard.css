@@ -15317,7 +15317,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
     .sidebar .nav li > a:focus {
         background-color: #9c27b0;
         outline: none;
-        color:white;
+        color:black;
     }
 
 .sidebar .nav li:first-child>a {
