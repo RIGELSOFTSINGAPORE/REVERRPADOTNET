@@ -57,14 +57,14 @@
     margin-top:10px;
     color:red;
 }
-.nav-link[data-toggle]:not(.collapsed):before {
+/*.nav-link[data-toggle]:not(.collapsed):before {
     content: " ▴";
     float:right;
     font-size:30px;
     margin-top:5px;
     color:red;
 }
-
+*/
 /* Closed submenu icon */
 #sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
   content: " \f0d7";
