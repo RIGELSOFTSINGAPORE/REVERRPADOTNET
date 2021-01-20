@@ -32,4 +32,13 @@ Public Class RPA_Management
         getdata.DataBind()
     End Sub
 
+    Private Sub Create_Click(sender As Object, e As EventArgs) Handles Create.Click
+        data.Visible = False
+        addfile.Visible = True
+    End Sub
+
+    Private Sub Back_Click(sender As Object, e As EventArgs) Handles Back.Click
+        data.Visible = True
+        addfile.Visible = False
+    End Sub
 End Class
