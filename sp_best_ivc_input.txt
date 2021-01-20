@@ -1,0 +1,27 @@
+CREATE PROCEDURE dbo.SP_best_ivc_input_1
+ @p1 varchar(15), @p2 varchar(21), @p3 varchar(31), @p4 varchar(31)
+AS
+SELECT          Wrn_mtr.ordr_no, Wrn_sub.line_no, Wrn_sub.seq, Wrn_sub.model_name, 
+                      RTRIM(Wrn_mtr.cust_lname) + ' ' + RTRIM(Wrn_mtr.cust_fname) AS cust_name, 
+                      Wrn_mtr.shop_code, Wrn_sub.prch_price, Wrn_sub.prch_date, Wrn_sub.cont_flg, 
+                      Wrn_sub.bend_code, Wrn_sub.total_loss_flg, Wrn_sub.op_date, 
+                      Wrn_mtr.srch_phn, Wrn_sub.item_cat_code, Wrn_sub.ser_no
+FROM            Wrn_mtr INNER JOIN
+                      Wrn_sub ON Wrn_mtr.ordr_no = Wrn_sub.ordr_no
+WHERE           (Wrn_mtr.ordr_no LIKE @p1) AND 
+                      (Wrn_sub.model_name LIKE @p2) AND 
+                      (Wrn_mtr.cust_lname LIKE @p3) AND
+                      (Wrn_mtr.cust_fname LIKE @p4)
+GO
+
+
+*************** best wrn data2 *************************************
+CREATE PROCEDURE dbo.SP_best_ivc_input_2
+ @p1 varchar(15), @p2 varchar(21), @p3 varchar(31)
+AS
+SELECT          ordr_no, line_no, 0 AS seq, model_name, cust_name, shop_code, prch_price, 
+                      prch_date, cont_flg, vend_code AS bend_code, total_loss_flg, op_date, 
+                      srch_phn, item_cat_code, ' ' AS ser_no
+FROM            wrn_data
+WHERE           (ordr_no LIKE @p1) AND (model_name LIKE @p2) AND (cust_name LIKE @p3)
+GO
