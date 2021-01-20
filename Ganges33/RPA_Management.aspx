@@ -50,7 +50,7 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h3 class="card-title ">User Management</h3>
+                  <h3 class="card-title ">RPA Management</h3>
                   <p class="card-category"></p>
                 </div>
                 <div class="card-body " >
@@ -129,7 +129,7 @@
                         </div>
                     </div>
                     <div>
-                    <asp:Button ID="btnUpload" runat="server" Text="Import" class="btn btn-primary pull-right" />
+                    <asp:Button ID="btnUpload" runat="server" Text="Create" class="btn btn-primary pull-right" />
                     <div>
 
                     </div>

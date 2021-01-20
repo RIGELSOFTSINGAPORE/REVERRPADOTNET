@@ -41,4 +41,19 @@ Public Class RPA_Management
         data.Visible = True
         addfile.Visible = False
     End Sub
+
+    Private Sub BtnUpload_Click(sender As Object, e As EventArgs) Handles btnUpload.Click
+        Dim Rpamanagementmodel As New RpamanagementModel
+        Dim Rpamanagementcontrol As New RpamanagementControl
+        Rpamanagementmodel.TASK_NAME = TaskName.Text
+        Rpamanagementmodel.FILE_NAME = filename.Text
+        Rpamanagementmodel.PATH = Source.Text
+        Rpamanagementmodel.TEST_STATUS = Testeddate.Text
+        Rpamanagementmodel.RUN_DURATION = Duration.Text
+        Rpamanagementmodel.STATUS = TaskName.Text
+        Rpamanagementmodel.DELFG = TaskName.Text
+        Dim insertCredit As Boolean = Rpamanagementcontrol.Insert_Rpa(Rpamanagementmodel)
+        data.Visible = True
+        addfile.Visible = False
+    End Sub
 End Class
