@@ -1,0 +1,71 @@
+Module Module1
+    Public cnsqlclient As New System.Data.SqlClient.SqlConnection
+
+    Public Function DB_OPEN(ByVal file) As Boolean
+
+        Dim sr As System.io.StreamReader
+        Select Case file
+            Case Is = "best_wrn"
+                sr = New System.IO.StreamReader("best_wrn.ini")
+            Case Is = "best_wrn_data2"
+                sr = New System.IO.StreamReader("best_wrn_data2.ini")
+            Case Is = "best_intl"
+                sr = New System.IO.StreamReader("best_intl.ini")
+            Case Is = "best_wrn_temp"
+                sr = New System.IO.StreamReader("best_wrn_temp.ini")
+        End Select
+
+        Dim line As String
+        Dim source, catalog, uid, pwd As String
+        Dim line_len As Integer
+        Dim eq_pos As Integer
+        Dim line_key As String
+        Do
+            line = sr.ReadLine()
+            line_len = Len(line)
+            If line_len <> 0 Then
+                eq_pos = InStr(1, line, "=", 1)
+                line_key = Mid(line, 1, eq_pos - 1)
+                Select Case line_key
+                    Case Is = "source"
+                        source = Mid(line, eq_pos + 1, line_len - eq_pos)
+                    Case Is = "catalog"
+                        catalog = Mid(line, eq_pos + 1, line_len - eq_pos)
+                    Case Is = "uid"
+                        uid = Mid(line, eq_pos + 1, line_len - eq_pos)
+                    Case Is = "pwd"
+                        pwd = Mid(line, eq_pos + 1, line_len - eq_pos)
+                End Select
+            End If
+        Loop Until line Is Nothing
+        sr.Close()
+        DB_OPEN = False
+        '*****  接続文字列を作成して接続を開始する  *****
+        cnsqlclient.ConnectionString = "integrated security=SSPI;data source=" & source & ";" &
+                                       "persist security info=False;initial catalog=" & catalog
+        If Trim(uid) <> Nothing Then
+            cnsqlclient.ConnectionString = "integrated security=false; uid=" & uid & "; pwd=" & pwd & "; data source=" & source & ";persist security info=False; initial catalog=" & catalog
+        Else
+            cnsqlclient.ConnectionString = "integrated security=SSPI;data source=" & source & ";persist security info=False;initial catalog=" & catalog
+
+        End If
+        '  cnsqlclient.ConnectionString = "Data Source=localhost\sqlexpress;Initial Catalog=best_new_orginal;Integrated Security=True"
+        Try
+            '*****  Connectionが接続されているかチェック  *****
+            If cnsqlclient.State = ConnectionState.Closed Then
+                cnsqlclient.Open()
+            End If
+        Catch
+            MsgBox(Err.Description, 16, "接続エラー")
+            DB_OPEN = False
+            Exit Function
+        End Try
+
+        DB_OPEN = True
+    End Function
+
+    Public Sub DB_CLOSE()
+        '接続を終了する
+        cnsqlclient.Close()
+    End Sub
+End Module
