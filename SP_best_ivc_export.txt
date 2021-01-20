@@ -1,0 +1,440 @@
+CREATE PROCEDURE dbo.SP_best_ivc_export_1
+ @p1 datetime
+AS
+SELECT          Wrn_ivc.kbn_No, insurance_co_decision.Securities_no, Wrn_sub.prch_date, 
+                      Wrn_ivc.ordr_no, Wrn_ivc.FLD015, Wrn_ivc.FLD018, Wrn_ivc.FLD017, 
+                      vdr_mtr.vdr_name, '' AS vdr_name2, Wrn_sub.prch_price, Wrn_ivc.FLD019, 
+                      Wrn_ivc.FLD020, Wrn_ivc.FLD021, Wrn_ivc.FLD005, Wrn_ivc.FLD006, 
+                      Wrn_ivc.FLD007, Wrn_ivc.FLD009, Wrn_ivc.Limit_money, 
+                      (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1)) AS êøãÅäz, 
+                      (ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      + Wrn_ivc.FLD028) - ((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) 
+                      - ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      AS TAX, Wrn_ivc.FLD004, Wrn_ivc.FLD014, Wrn_ivc.FLD012, 
+                      Shop_mtr.[ìXï‹ñº(∂≈)], Wrn_ivc.line_no
+FROM            Wrn_ivc INNER JOIN
+                      Wrn_sub ON Wrn_ivc.ordr_no = Wrn_sub.ordr_no AND 
+                      Wrn_ivc.line_no = Wrn_sub.line_no AND 
+                      Wrn_ivc.seq = Wrn_sub.seq LEFT OUTER JOIN
+                      insurance_co_decision ON 
+                      Wrn_ivc.kbn_No = insurance_co_decision.kbn_No LEFT OUTER JOIN
+                      Shop_mtr ON Wrn_ivc.FLD012 = Shop_mtr.shop_code LEFT OUTER JOIN
+                      vdr_mtr ON Wrn_ivc.FLD017 = vdr_mtr.vdr_code
+WHERE           (Wrn_ivc.Cancel_flg = '0') AND (Wrn_ivc.close_date = CONVERT(DATETIME, 
+                      @p1, 102)) AND (Shop_mtr.âÔé–GRP <> 98) AND 
+                      (Shop_mtr.âÔé–GRP <> 203) AND 
+                      (insurance_co_decision.insurance_code = 'NDI')
+GO
+
+
+CREATE PROCEDURE dbo.SP_best_ivc_export_2
+ @p1 datetime
+AS
+SELECT          Wrn_ivc.kbn_No, insurance_co_decision.Securities_no, Wrn_sub.prch_date, 
+                      Wrn_ivc.ordr_no, Wrn_ivc.FLD015, Wrn_ivc.FLD018, Wrn_ivc.FLD017, 
+                      vdr_mtr.vdr_name, '' AS vdr_name2, Wrn_sub.prch_price, Wrn_ivc.FLD019, 
+                      Wrn_ivc.FLD020, Wrn_ivc.FLD021, Wrn_ivc.FLD005, Wrn_ivc.FLD006, 
+                      Wrn_ivc.FLD007, Wrn_ivc.FLD009, Wrn_ivc.Limit_money, 
+                      (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1)) AS êøãÅäz, 
+                      (ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      + Wrn_ivc.FLD028) - ((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) 
+                      - ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      AS TAX, Wrn_ivc.FLD004, Wrn_ivc.FLD014, Wrn_ivc.FLD012, 
+                      Shop_mtr.[ìXï‹ñº(∂≈)], Wrn_ivc.line_no
+FROM            Wrn_ivc INNER JOIN
+                      Wrn_sub ON Wrn_ivc.ordr_no = Wrn_sub.ordr_no AND 
+                      Wrn_ivc.line_no = Wrn_sub.line_no AND 
+                      Wrn_ivc.seq = Wrn_sub.seq LEFT OUTER JOIN
+                      insurance_co_decision ON 
+                      Wrn_ivc.kbn_No = insurance_co_decision.kbn_No LEFT OUTER JOIN
+                      Shop_mtr ON Wrn_ivc.FLD012 = Shop_mtr.shop_code LEFT OUTER JOIN
+                      vdr_mtr ON Wrn_ivc.FLD017 = vdr_mtr.vdr_code
+WHERE           (Wrn_ivc.Cancel_flg = '0') AND (Wrn_ivc.close_date = CONVERT(DATETIME, 
+                      @p1, 102)) AND (Shop_mtr.âÔé–GRP = 98) AND 
+                      (insurance_co_decision.insurance_code = 'NDI')
+GO
+
+
+CREATE PROCEDURE dbo.SP_best_ivc_export_3
+ @p1 datetime
+AS
+SELECT          Wrn_ivc.kbn_No, insurance_co_decision.Securities_no, Wrn_sub.prch_date, 
+                      Wrn_ivc.ordr_no, Wrn_ivc.FLD015, Wrn_ivc.FLD018, Wrn_ivc.FLD017, 
+                      vdr_mtr.vdr_name, '' AS vdr_name2, Wrn_sub.prch_price, Wrn_ivc.FLD019, 
+                      Wrn_ivc.FLD020, Wrn_ivc.FLD021, Wrn_ivc.FLD005, Wrn_ivc.FLD006, 
+                      Wrn_ivc.FLD007, Wrn_ivc.FLD009, Wrn_ivc.Limit_money, 
+                      (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1)) AS êøãÅäz, 
+                      (ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      + Wrn_ivc.FLD028) - ((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) 
+                      - ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      AS TAX, Wrn_ivc.FLD004, Wrn_ivc.FLD014, Wrn_ivc.FLD012, 
+                      Shop_mtr.[ìXï‹ñº(∂≈)], Wrn_ivc.line_no
+FROM            Wrn_ivc INNER JOIN
+                      Wrn_sub ON Wrn_ivc.ordr_no = Wrn_sub.ordr_no AND 
+                      Wrn_ivc.line_no = Wrn_sub.line_no AND 
+                      Wrn_ivc.seq = Wrn_sub.seq LEFT OUTER JOIN
+                      insurance_co_decision ON 
+                      Wrn_ivc.kbn_No = insurance_co_decision.kbn_No LEFT OUTER JOIN
+                      Shop_mtr ON Wrn_ivc.FLD012 = Shop_mtr.shop_code LEFT OUTER JOIN
+                      vdr_mtr ON Wrn_ivc.FLD017 = vdr_mtr.vdr_code
+WHERE           (Wrn_ivc.Cancel_flg = '0') AND (Wrn_ivc.close_date = CONVERT(DATETIME, 
+                      @p1, 102)) AND (Shop_mtr.âÔé–GRP = 203) AND 
+                      (insurance_co_decision.insurance_code = 'NDI')
+GO
+
+
+
+CREATE PROCEDURE dbo.SP_best_ivc_export_4
+ @p1 datetime
+AS
+SELECT          Wrn_ivc.kbn_No, insurance_co_decision.Securities_no, NULL AS prch_date, 
+                      Wrn_ivc.ordr_no, Wrn_ivc.FLD015, Wrn_ivc.FLD018, Wrn_ivc.FLD017, 
+                      vdr_mtr.vdr_kana AS vdr_name, vdr_mtr2.vdr_kana AS vdr_name2, NULL 
+                      AS prch_price, Wrn_ivc.FLD019, Wrn_ivc.FLD020, Wrn_ivc.FLD021, 
+                      Wrn_ivc.FLD005, Wrn_ivc.FLD006, Wrn_ivc.FLD007, Wrn_ivc.FLD009, 
+                      Wrn_ivc.Limit_money, (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1)) AS êøãÅäz, 
+                      (ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      + Wrn_ivc.FLD028) - ((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) 
+                      - ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      AS TAX, Wrn_ivc.FLD004, Wrn_ivc.FLD014, Wrn_ivc.FLD012, 
+                      Shop_mtr.[ìXï‹ñº(∂≈)], Wrn_ivc.line_no
+FROM            Wrn_ivc LEFT OUTER JOIN
+                      insurance_co_decision ON 
+                      Wrn_ivc.kbn_No = insurance_co_decision.kbn_No LEFT OUTER JOIN
+                      vdr_mtr ON Wrn_ivc.FLD017 = vdr_mtr.vdr_code LEFT OUTER JOIN
+                      Shop_mtr ON Wrn_ivc.FLD012 = Shop_mtr.shop_code LEFT OUTER JOIN
+                      vdr_mtr2 ON Wrn_ivc.FLD017 = vdr_mtr2.vdr_code
+WHERE           (Wrn_ivc.Cancel_flg = '0') AND (Wrn_ivc.close_date = CONVERT(DATETIME, 
+                      @p1, 102)) AND (Shop_mtr.âÔé–GRP <> 98) AND 
+                      (insurance_co_decision.insurance_code = 'NDI') AND 
+                      (Shop_mtr.âÔé–GRP <> 203) AND (Wrn_ivc.seq = 0)
+GO
+
+
+
+CREATE PROCEDURE dbo.SP_best_ivc_export_5
+ @p1 datetime
+AS
+SELECT          Wrn_ivc.kbn_No, insurance_co_decision.Securities_no, NULL AS prch_date, 
+                      Wrn_ivc.ordr_no, Wrn_ivc.FLD015, Wrn_ivc.FLD018, Wrn_ivc.FLD017, 
+                      vdr_mtr.vdr_kana AS vdr_name, vdr_mtr2.vdr_kana AS vdr_name2, NULL 
+                      AS prch_price, Wrn_ivc.FLD019, Wrn_ivc.FLD020, Wrn_ivc.FLD021, 
+                      Wrn_ivc.FLD005, Wrn_ivc.FLD006, Wrn_ivc.FLD007, Wrn_ivc.FLD009, 
+                      Wrn_ivc.Limit_money, (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1)) AS êøãÅäz, 
+                      (ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      + Wrn_ivc.FLD028) - ((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) 
+                      - ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      AS TAX, Wrn_ivc.FLD004, Wrn_ivc.FLD014, Wrn_ivc.FLD012, 
+                      Shop_mtr.[ìXï‹ñº(∂≈)], Wrn_ivc.line_no
+FROM            Wrn_ivc LEFT OUTER JOIN
+                      insurance_co_decision ON 
+                      Wrn_ivc.kbn_No = insurance_co_decision.kbn_No LEFT OUTER JOIN
+                      vdr_mtr ON Wrn_ivc.FLD017 = vdr_mtr.vdr_code LEFT OUTER JOIN
+                      Shop_mtr ON Wrn_ivc.FLD012 = Shop_mtr.shop_code LEFT OUTER JOIN
+                      vdr_mtr2 ON Wrn_ivc.FLD017 = vdr_mtr2.vdr_code
+WHERE           (Wrn_ivc.Cancel_flg = '0') AND (Wrn_ivc.close_date = CONVERT(DATETIME, 
+                      @p1, 102)) AND (Shop_mtr.âÔé–GRP = 98) AND 
+                      (Wrn_ivc.seq = 0) AND 
+                      (insurance_co_decision.insurance_code = 'NDI')
+GO
+
+
+CREATE PROCEDURE dbo.SP_best_ivc_export_6
+ @p1 datetime
+AS
+SELECT          Wrn_ivc.kbn_No, insurance_co_decision.Securities_no, NULL AS prch_date, 
+                      Wrn_ivc.ordr_no, Wrn_ivc.FLD015, Wrn_ivc.FLD018, Wrn_ivc.FLD017, 
+                      vdr_mtr.vdr_kana AS vdr_name, vdr_mtr2.vdr_kana AS vdr_name2, NULL 
+                      AS prch_price, Wrn_ivc.FLD019, Wrn_ivc.FLD020, Wrn_ivc.FLD021, 
+                      Wrn_ivc.FLD005, Wrn_ivc.FLD006, Wrn_ivc.FLD007, Wrn_ivc.FLD009, 
+                      Wrn_ivc.Limit_money, (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1)) AS êøãÅäz, 
+                      (ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      + Wrn_ivc.FLD028) - ((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) 
+                      - ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      AS TAX, Wrn_ivc.FLD004, Wrn_ivc.FLD014, Wrn_ivc.FLD012, 
+                      Shop_mtr.[ìXï‹ñº(∂≈)], Wrn_ivc.line_no
+FROM            Wrn_ivc LEFT OUTER JOIN
+                      insurance_co_decision ON 
+                      Wrn_ivc.kbn_No = insurance_co_decision.kbn_No LEFT OUTER JOIN
+                      vdr_mtr ON Wrn_ivc.FLD017 = vdr_mtr.vdr_code LEFT OUTER JOIN
+                      Shop_mtr ON Wrn_ivc.FLD012 = Shop_mtr.shop_code LEFT OUTER JOIN
+                      vdr_mtr2 ON Wrn_ivc.FLD017 = vdr_mtr2.vdr_code
+WHERE           (Wrn_ivc.Cancel_flg = '0') AND (Wrn_ivc.close_date = CONVERT(DATETIME, 
+                      @p1, 102)) AND (Shop_mtr.âÔé–GRP = 203) AND 
+                      (Wrn_ivc.seq = 0) AND 
+                      (insurance_co_decision.insurance_code = 'NDI')
+GO
+
+
+CREATE PROCEDURE dbo.SP_best_ivc_export_11
+ @p1 datetime
+AS
+SELECT          Wrn_ivc.kbn_No, insurance_co_decision.Securities_no, Wrn_sub.prch_date, 
+                      Wrn_ivc.ordr_no, Wrn_ivc.FLD015, Wrn_ivc.FLD018, Wrn_ivc.FLD017, 
+                      vdr_mtr.vdr_name, '' AS vdr_name2, Wrn_sub.prch_price, Wrn_ivc.FLD019, 
+                      Wrn_ivc.FLD020, Wrn_ivc.FLD021, Wrn_ivc.FLD005, Wrn_ivc.FLD006, 
+                      Wrn_ivc.FLD007, Wrn_ivc.FLD009, Wrn_ivc.Limit_money, 
+                      (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1)) AS êøãÅäz, 
+                      (ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      + Wrn_ivc.FLD028) - ((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) 
+                      - ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      AS TAX, Wrn_ivc.FLD004, Wrn_ivc.FLD014, Wrn_ivc.FLD012, 
+                      Shop_mtr.[ìXï‹ñº(∂≈)], Wrn_ivc.line_no
+FROM            Wrn_ivc INNER JOIN
+                      Wrn_sub ON Wrn_ivc.ordr_no = Wrn_sub.ordr_no AND 
+                      Wrn_ivc.line_no = Wrn_sub.line_no AND 
+                      Wrn_ivc.seq = Wrn_sub.seq LEFT OUTER JOIN
+                      insurance_co_decision ON 
+                      Wrn_ivc.kbn_No = insurance_co_decision.kbn_No LEFT OUTER JOIN
+                      Shop_mtr ON Wrn_ivc.FLD012 = Shop_mtr.shop_code LEFT OUTER JOIN
+                      vdr_mtr ON Wrn_ivc.FLD017 = vdr_mtr.vdr_code
+WHERE           (Wrn_ivc.Cancel_flg = '0') AND (Wrn_ivc.close_date = CONVERT(DATETIME, 
+                       @p1, 102)) AND (Shop_mtr.âÔé–GRP <> 98) AND 
+                      (Shop_mtr.âÔé–GRP <> 203) AND 
+                      (insurance_co_decision.insurance_code <> 'NDI')
+GO
+
+
+CREATE PROCEDURE dbo.SP_best_ivc_export_12
+ @p1 datetime
+AS
+SELECT          Wrn_ivc.kbn_No, insurance_co_decision.Securities_no, Wrn_sub.prch_date, 
+                      Wrn_ivc.ordr_no, Wrn_ivc.FLD015, Wrn_ivc.FLD018, Wrn_ivc.FLD017, 
+                      vdr_mtr.vdr_name, '' AS vdr_name2, Wrn_sub.prch_price, Wrn_ivc.FLD019, 
+                      Wrn_ivc.FLD020, Wrn_ivc.FLD021, Wrn_ivc.FLD005, Wrn_ivc.FLD006, 
+                      Wrn_ivc.FLD007, Wrn_ivc.FLD009, Wrn_ivc.Limit_money, 
+                      (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1)) AS êøãÅäz, 
+                      (ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      + Wrn_ivc.FLD028) - ((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) 
+                      - ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      AS TAX, Wrn_ivc.FLD004, Wrn_ivc.FLD014, Wrn_ivc.FLD012, 
+                      Shop_mtr.[ìXï‹ñº(∂≈)], Wrn_ivc.line_no
+FROM            Wrn_ivc INNER JOIN
+                      Wrn_sub ON Wrn_ivc.ordr_no = Wrn_sub.ordr_no AND 
+                      Wrn_ivc.line_no = Wrn_sub.line_no AND 
+                      Wrn_ivc.seq = Wrn_sub.seq LEFT OUTER JOIN
+                      insurance_co_decision ON 
+                      Wrn_ivc.kbn_No = insurance_co_decision.kbn_No LEFT OUTER JOIN
+                      Shop_mtr ON Wrn_ivc.FLD012 = Shop_mtr.shop_code LEFT OUTER JOIN
+                      vdr_mtr ON Wrn_ivc.FLD017 = vdr_mtr.vdr_code
+WHERE           (Wrn_ivc.Cancel_flg = '0') AND (Wrn_ivc.close_date = CONVERT(DATETIME, 
+                       @p1, 102)) AND (Shop_mtr.âÔé–GRP = 98) AND 
+                      (insurance_co_decision.insurance_code <> 'NDI')
+GO
+
+
+
+CREATE PROCEDURE dbo.SP_best_ivc_export_13
+ @p1 datetime
+AS
+SELECT          Wrn_ivc.kbn_No, insurance_co_decision.Securities_no, Wrn_sub.prch_date, 
+                      Wrn_ivc.ordr_no, Wrn_ivc.FLD015, Wrn_ivc.FLD018, Wrn_ivc.FLD017, 
+                      vdr_mtr.vdr_name, '' AS vdr_name2, Wrn_sub.prch_price, Wrn_ivc.FLD019, 
+                      Wrn_ivc.FLD020, Wrn_ivc.FLD021, Wrn_ivc.FLD005, Wrn_ivc.FLD006, 
+                      Wrn_ivc.FLD007, Wrn_ivc.FLD009, Wrn_ivc.Limit_money, 
+                      (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1)) AS êøãÅäz, 
+                      (ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      + Wrn_ivc.FLD028) - ((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) 
+                      - ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      AS TAX, Wrn_ivc.FLD004, Wrn_ivc.FLD014, Wrn_ivc.FLD012, 
+                      Shop_mtr.[ìXï‹ñº(∂≈)], Wrn_ivc.line_no
+FROM            Wrn_ivc INNER JOIN
+                      Wrn_sub ON Wrn_ivc.ordr_no = Wrn_sub.ordr_no AND 
+                      Wrn_ivc.line_no = Wrn_sub.line_no AND 
+                      Wrn_ivc.seq = Wrn_sub.seq LEFT OUTER JOIN
+                      insurance_co_decision ON 
+                      Wrn_ivc.kbn_No = insurance_co_decision.kbn_No LEFT OUTER JOIN
+                      Shop_mtr ON Wrn_ivc.FLD012 = Shop_mtr.shop_code LEFT OUTER JOIN
+                      vdr_mtr ON Wrn_ivc.FLD017 = vdr_mtr.vdr_code
+WHERE           (Wrn_ivc.Cancel_flg = '0') AND (Wrn_ivc.close_date = CONVERT(DATETIME, 
+                       @p1, 102)) AND (Shop_mtr.âÔé–GRP = 203) AND 
+                      (insurance_co_decision.insurance_code <> 'NDI')
+GO
+
+
+CREATE PROCEDURE dbo.SP_best_ivc_export_14
+ @p1 datetime
+AS
+SELECT          Wrn_ivc.kbn_No, insurance_co_decision.Securities_no, NULL AS prch_date, 
+                      Wrn_ivc.ordr_no, Wrn_ivc.FLD015, Wrn_ivc.FLD018, Wrn_ivc.FLD017, 
+                      vdr_mtr.vdr_kana AS vdr_name, vdr_mtr2.vdr_kana AS vdr_name2, NULL 
+                      AS prch_price, Wrn_ivc.FLD019, Wrn_ivc.FLD020, Wrn_ivc.FLD021, 
+                      Wrn_ivc.FLD005, Wrn_ivc.FLD006, Wrn_ivc.FLD007, Wrn_ivc.FLD009, 
+                      Wrn_ivc.Limit_money, (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1)) AS êøãÅäz, 
+                      (ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      + Wrn_ivc.FLD028) - ((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) 
+                      - ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      AS TAX, Wrn_ivc.FLD004, Wrn_ivc.FLD014, Wrn_ivc.FLD012, 
+                      Shop_mtr.[ìXï‹ñº(∂≈)], Wrn_ivc.line_no
+FROM            Wrn_ivc LEFT OUTER JOIN
+                      insurance_co_decision ON 
+                      Wrn_ivc.kbn_No = insurance_co_decision.kbn_No LEFT OUTER JOIN
+                      vdr_mtr ON Wrn_ivc.FLD017 = vdr_mtr.vdr_code LEFT OUTER JOIN
+                      Shop_mtr ON Wrn_ivc.FLD012 = Shop_mtr.shop_code LEFT OUTER JOIN
+                      vdr_mtr2 ON Wrn_ivc.FLD017 = vdr_mtr2.vdr_code
+WHERE           (Wrn_ivc.Cancel_flg = '0') AND (Wrn_ivc.close_date = CONVERT(DATETIME, 
+                      @p1, 102)) AND (Shop_mtr.âÔé–GRP <> 98) AND 
+                      (Shop_mtr.âÔé–GRP <> 203) AND (Wrn_ivc.seq = 0) AND 
+                      (insurance_co_decision.insurance_code <> 'NDI')
+GO
+
+
+CREATE PROCEDURE dbo.SP_best_ivc_export_15
+ @p1 datetime
+AS
+SELECT          Wrn_ivc.kbn_No, insurance_co_decision.Securities_no, NULL AS prch_date, 
+                      Wrn_ivc.ordr_no, Wrn_ivc.FLD015, Wrn_ivc.FLD018, Wrn_ivc.FLD017, 
+                      vdr_mtr.vdr_kana AS vdr_name, vdr_mtr2.vdr_kana AS vdr_name2, NULL 
+                      AS prch_price, Wrn_ivc.FLD019, Wrn_ivc.FLD020, Wrn_ivc.FLD021, 
+                      Wrn_ivc.FLD005, Wrn_ivc.FLD006, Wrn_ivc.FLD007, Wrn_ivc.FLD009, 
+                      Wrn_ivc.Limit_money, (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1)) AS êøãÅäz, 
+                      (ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      + Wrn_ivc.FLD028) - ((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) 
+                      - ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      AS TAX, Wrn_ivc.FLD004, Wrn_ivc.FLD014, Wrn_ivc.FLD012, 
+                      Shop_mtr.[ìXï‹ñº(∂≈)], Wrn_ivc.line_no
+FROM            Wrn_ivc LEFT OUTER JOIN
+                      insurance_co_decision ON 
+                      Wrn_ivc.kbn_No = insurance_co_decision.kbn_No LEFT OUTER JOIN
+                      vdr_mtr ON Wrn_ivc.FLD017 = vdr_mtr.vdr_code LEFT OUTER JOIN
+                      Shop_mtr ON Wrn_ivc.FLD012 = Shop_mtr.shop_code LEFT OUTER JOIN
+                      vdr_mtr2 ON Wrn_ivc.FLD017 = vdr_mtr2.vdr_code
+WHERE           (Wrn_ivc.Cancel_flg = '0') AND (Wrn_ivc.close_date = CONVERT(DATETIME, 
+                      @p1, 102)) AND (Shop_mtr.âÔé–GRP = 98) AND 
+                      (Wrn_ivc.seq = 0) AND 
+                      (insurance_co_decision.insurance_code <> 'NDI')
+GO
+
+
+CREATE PROCEDURE dbo.SP_best_ivc_export_16
+ @p1 datetime
+AS
+SELECT          Wrn_ivc.kbn_No, insurance_co_decision.Securities_no, NULL AS prch_date, 
+                      Wrn_ivc.ordr_no, Wrn_ivc.FLD015, Wrn_ivc.FLD018, Wrn_ivc.FLD017, 
+                      vdr_mtr.vdr_kana AS vdr_name, vdr_mtr2.vdr_kana AS vdr_name2, NULL 
+                      AS prch_price, Wrn_ivc.FLD019, Wrn_ivc.FLD020, Wrn_ivc.FLD021, 
+                      Wrn_ivc.FLD005, Wrn_ivc.FLD006, Wrn_ivc.FLD007, Wrn_ivc.FLD009, 
+                      Wrn_ivc.Limit_money, (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1)) AS êøãÅäz, 
+                      (ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      + Wrn_ivc.FLD028) - ((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) 
+                      - ROUND(((ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) + Wrn_ivc.FLD028) 
+                      - (ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) 
+                      + ROUND(ROUND(Wrn_ivc.FLD028 / 1.05, 0, 1) * 0.05, 0, 1))) * 0.05, 0, 1) 
+                      AS TAX, Wrn_ivc.FLD004, Wrn_ivc.FLD014, Wrn_ivc.FLD012, 
+                      Shop_mtr.[ìXï‹ñº(∂≈)], Wrn_ivc.line_no
+FROM            Wrn_ivc LEFT OUTER JOIN
+                      insurance_co_decision ON 
+                      Wrn_ivc.kbn_No = insurance_co_decision.kbn_No LEFT OUTER JOIN
+                      vdr_mtr ON Wrn_ivc.FLD017 = vdr_mtr.vdr_code LEFT OUTER JOIN
+                      Shop_mtr ON Wrn_ivc.FLD012 = Shop_mtr.shop_code LEFT OUTER JOIN
+                      vdr_mtr2 ON Wrn_ivc.FLD017 = vdr_mtr2.vdr_code
+WHERE           (Wrn_ivc.Cancel_flg = '0') AND (Wrn_ivc.close_date = CONVERT(DATETIME, 
+                      @p1, 102)) AND (Shop_mtr.âÔé–GRP = 203) AND 
+                      (Wrn_ivc.seq = 0) AND 
+                      (insurance_co_decision.insurance_code <> 'NDI')
+GO
+
+
+CREATE PROCEDURE dbo.SP_best_ivc_export_21
+ @p1 datetime, @p2 datetime
+AS
+SELECT          Wrn_ivc.*, Shop_mtr.[ìXï‹ñº(äøéö)], Shop_mtr.âÔé–GRP
+FROM            Wrn_ivc LEFT OUTER JOIN
+                      Shop_mtr ON Wrn_ivc.FLD010 = Shop_mtr.shop_code
+WHERE           (Wrn_ivc.close_date = CONVERT(DATETIME, @p1, 102)) AND 
+                      (Wrn_ivc.FLD021 <= CONVERT(DATETIME, @p2, 102))
+GO
