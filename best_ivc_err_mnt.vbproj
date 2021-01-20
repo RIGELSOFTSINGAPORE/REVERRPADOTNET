@@ -1,0 +1,833 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>7.10.3077</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E43EBEC2-D72E-4B0C-8CC3-74A47342840C}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>best.ico</ApplicationIcon>
+    <AssemblyKeyContainerName />
+    <AssemblyName>best_ivc_err_mnt</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>best_ivc_err_mnt</RootNamespace>
+    <StartupObject>best_ivc_err_mnt.Form1</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>best_ivc_err_mnt.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>best_ivc_err_mnt.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveReports">
+      <Name>ActiveReports</Name>
+      <HintPath>C:\PROGRA~1\ACTIVE~1\Bin\ActiveReports.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.PdfExport">
+      <Name>ActiveReports.PdfExport</Name>
+      <HintPath>C:\PROGRA~1\ACTIVE~1\Bin\ActiveReports.PdfExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.Viewer">
+      <Name>ActiveReports.Viewer</Name>
+      <HintPath>C:\PROGRA~1\ACTIVE~1\Bin\ActiveReports.Viewer.dll</HintPath>
+    </Reference>
+    <Reference Include="Gcef.Data.DataEngine, Version=2.0.184.0, Culture=neutral, PublicKeyToken=0b5e1563d2869208" />
+    <Reference Include="Gcef.Data.ExpressionInfo, Version=2.0.184.0, Culture=neutral, PublicKeyToken=0b5e1563d2869208" />
+    <Reference Include="GrapeCity.ActiveReports, Version=14.1.19970.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Chart, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.DataProviders, Version=1.6.3.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.DataProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Drawing.Gc, Version=1.7.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Drawing.Gc.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Drawing.Gdi, Version=1.7.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Drawing.Gdi.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Excel.Page">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Excel.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Html.Page">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Html.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Image.Page, Version=1.7.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Image.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Pdf.Page">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Pdf.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Svg.Page">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Svg.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Text.Page">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Text.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Word.Page">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Word.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rdl, Version=1.7.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Rdl.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rendering, Version=1.7.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Rendering.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Design.Win, Version=14.1.19970.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Design.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.DesignerClassic">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.DesignerClassic.exe</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Document, Version=14.1.19970.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Document.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Excel, Version=14.1.19970.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Html, Version=14.1.19970.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Html.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Image, Version=14.1.19970.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Image.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Pdf, Version=14.1.19970.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Rdf, Version=14.1.19970.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Rdf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Word">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Xml">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Imports.exe</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Access">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Imports.Access.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Crystal">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Imports.Crystal.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Excel">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Imports.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Rpx">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Imports.Rpx.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Interop, Version=14.1.19970.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Viewer, Version=14.1.20320.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Viewer.exe</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Viewer.Win, Version=14.1.20320.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Viewer.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Viewer.Wpf, Version=14.1.20320.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Viewer.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.WpfViewer, Version=14.1.20320.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.WpfViewer.exe</HintPath>
+    </Reference>
+    <Reference Include="Grapecity.DataVisualization, Version=0.1.241.0, Culture=neutral, PublicKeyToken=171ec59c7733b360, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\Grapecity.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Common, Version=3.1.0.511, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.Documents.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Common.Windows, Version=3.1.0.511, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.Documents.Common.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.DX.Windows, Version=3.1.0.511, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.Documents.DX.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Imaging, Version=3.1.0.511, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.Documents.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Pdf, Version=3.1.0.511, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.Documents.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Input.Interop.v100, Version=10.0.4005.2012, Culture=neutral, PublicKeyToken=40ae1c5c604f43d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\best_mnt_shop\bin\GrapeCity.Win.Input.Interop.v100.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.DpiAwareness, Version=6.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.VisualStudio.DpiAwareness.6.1.28916\lib\net46\Microsoft.VisualStudio.DpiAwareness.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.0\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveReport1.vb">
+      <DependentUpon>ActiveReport1.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3P.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_DB.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module_SUB.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.0.AssemblyAttributes.vb" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.vb" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.8.AssemblyAttributes.vb" />
+    <Compile Include="SectionReport1.Designer.vb">
+      <DependentUpon>SectionReport1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WaitDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Content Include="best.ico" />
+    <Content Include="bin\ActiveReports.Design2.dll" />
+    <Content Include="bin\ActiveReports.dll" />
+    <Content Include="bin\ActiveReports.HtmlExport.dll" />
+    <Content Include="bin\ActiveReports.Interop.dll" />
+    <Content Include="bin\ActiveReports.PdfExport.dll" />
+    <Content Include="bin\ActiveReports.RtfExport.dll" />
+    <Content Include="bin\ActiveReports.TextExport.dll" />
+    <Content Include="bin\ActiveReports.TiffExport.dll" />
+    <Content Include="bin\ActiveReports.Viewer.dll" />
+    <Content Include="bin\ActiveReports.Web.dll" />
+    <Content Include="bin\ActiveReports.XlsExport.dll" />
+    <Content Include="bin\best_ivc_err_mnt.exe" />
+    <Content Include="bin\best_ivc_err_mnt.pdb" />
+    <Content Include="bin\best_ivc_err_mnt.xml" />
+    <Content Include="bin\BouncyCastle.Crypto.dll" />
+    <Content Include="bin\DocumentFormat.OpenXml.dll" />
+    <Content Include="bin\Gcef.Data.DataEngine.dll" />
+    <Content Include="bin\Gcef.Data.ExpressionInfo.dll" />
+    <Content Include="bin\Gcef.Data.VBFunctionLib.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Chart.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Core.DataProviders.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Core.Drawing.Gc.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Core.Drawing.Gdi.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Core.Export.Excel.Page.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Core.Export.Html.Page.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Core.Export.Image.Page.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Core.Export.Pdf.Page.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Core.Export.Svg.Page.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Core.Export.Text.Page.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Core.Export.Word.Page.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Core.Rdl.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Core.Rendering.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Design.Win.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.DesignerClassic.exe" />
+    <Content Include="bin\GrapeCity.ActiveReports.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Document.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Export.Excel.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Export.Html.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Export.Image.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Export.Pdf.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Export.Rdf.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Export.Word.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Export.Xml.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Imports.Access.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Imports.Crystal.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Imports.Excel.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Imports.exe" />
+    <Content Include="bin\GrapeCity.ActiveReports.Imports.Rpx.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Interop.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Viewer.exe" />
+    <Content Include="bin\GrapeCity.ActiveReports.Viewer.Win.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.Viewer.Wpf.dll" />
+    <Content Include="bin\GrapeCity.ActiveReports.WpfViewer.exe" />
+    <Content Include="bin\Grapecity.DataVisualization.dll" />
+    <Content Include="bin\GrapeCity.Documents.Common.dll" />
+    <Content Include="bin\GrapeCity.Documents.Common.Windows.dll" />
+    <Content Include="bin\GrapeCity.Documents.DX.Windows.dll" />
+    <Content Include="bin\GrapeCity.Documents.Imaging.dll" />
+    <Content Include="bin\GrapeCity.Documents.Pdf.dll" />
+    <Content Include="bin\GrapeCity.Framework.InputMan.v24.dll" />
+    <Content Include="bin\GrapeCity.Win.Editors.v100.dll" />
+    <Content Include="bin\GrapeCity.Win.Editors.v100.xml" />
+    <Content Include="bin\GrapeCity.Win.Input.Design.v20.dll" />
+    <Content Include="bin\GrapeCity.Win.Input.Interop.v100.dll" />
+    <Content Include="bin\GrapeCity.Win.Input.v20.dll" />
+    <Content Include="bin\ja\GrapeCity.ActiveReports.Chart.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.ActiveReports.Design.Win.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.ActiveReports.DesignerClassic.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.ActiveReports.Document.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.ActiveReports.Export.Excel.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.ActiveReports.Export.Html.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.ActiveReports.Export.Image.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.ActiveReports.Export.Word.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.ActiveReports.Export.Xml.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.ActiveReports.Imports.Access.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.ActiveReports.Imports.Crystal.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.ActiveReports.Imports.Excel.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.ActiveReports.Imports.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.ActiveReports.Imports.Rpx.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.ActiveReports.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.ActiveReports.Viewer.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.ActiveReports.Viewer.Win.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.ActiveReports.Viewer.Wpf.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.ActiveReports.WpfViewer.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.Win.Editors.v100.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll" />
+    <Content Include="bin\Microsoft.VisualStudio.DpiAwareness.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\System.Buffers.dll" />
+    <Content Include="bin\System.Buffers.xml" />
+    <Content Include="bin\System.Memory.dll" />
+    <Content Include="bin\System.Memory.xml" />
+    <Content Include="bin\System.Numerics.Vectors.dll" />
+    <Content Include="bin\System.Numerics.Vectors.xml" />
+    <Content Include="bin\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="bin\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="bin\System.ValueTuple.dll" />
+    <Content Include="bin\System.ValueTuple.xml" />
+    <Content Include="obj\Debug\best_ivc_err_mnt.exe" />
+    <Content Include="obj\Debug\best_ivc_err_mnt.exe.licenses" />
+    <Content Include="obj\Debug\best_ivc_err_mnt.pdb" />
+    <Content Include="obj\Debug\best_ivc_err_mnt.vbproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\best_ivc_err_mnt.xml" />
+    <Content Include="obj\Debug\buildinfo.inf" />
+    <Content Include="obj\Debug\TempPE\DataSet1.vb.dll" />
+    <Content Include="packages\Gcef.Data.DataEngine.2.0.184\lib\net40\Gcef.Data.DataEngine.dll" />
+    <Content Include="packages\Gcef.Data.DataEngine.2.0.184\lib\net40\Gcef.Data.DataEngine.xml" />
+    <Content Include="packages\Gcef.Data.DataEngine.2.0.184\lib\netstandard2.0\Gcef.Data.DataEngine.dll" />
+    <Content Include="packages\Gcef.Data.DataEngine.2.0.184\lib\netstandard2.0\Gcef.Data.DataEngine.xml" />
+    <Content Include="packages\Gcef.Data.DataEngine.2.0.184\packageIcon.png" />
+    <Content Include="packages\Gcef.Data.ExpressionInfo.2.0.184\lib\net40\Gcef.Data.ExpressionInfo.dll" />
+    <Content Include="packages\Gcef.Data.ExpressionInfo.2.0.184\lib\net40\Gcef.Data.ExpressionInfo.xml" />
+    <Content Include="packages\Gcef.Data.ExpressionInfo.2.0.184\lib\netstandard2.0\Gcef.Data.ExpressionInfo.dll" />
+    <Content Include="packages\Gcef.Data.ExpressionInfo.2.0.184\lib\netstandard2.0\Gcef.Data.ExpressionInfo.xml" />
+    <Content Include="packages\Gcef.Data.ExpressionInfo.2.0.184\packageIcon.png" />
+    <Content Include="packages\Gcef.Data.VBFunctionLib.2.0.184\lib\net40\Gcef.Data.VBFunctionLib.dll" />
+    <Content Include="packages\Gcef.Data.VBFunctionLib.2.0.184\lib\net40\Gcef.Data.VBFunctionLib.xml" />
+    <Content Include="packages\Gcef.Data.VBFunctionLib.2.0.184\lib\netstandard2.0\Gcef.Data.VBFunctionLib.dll" />
+    <Content Include="packages\Gcef.Data.VBFunctionLib.2.0.184\lib\netstandard2.0\Gcef.Data.VBFunctionLib.xml" />
+    <Content Include="packages\Gcef.Data.VBFunctionLib.2.0.184\packageIcon.png" />
+    <Content Include="packages\GrapeCity.ActiveReports.14.1.19970\icon.png" />
+    <Content Include="packages\GrapeCity.ActiveReports.14.1.19970\lib\net462\GrapeCity.ActiveReports.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.14.1.19970\lib\net462\GrapeCity.ActiveReports.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.14.1.19970\lib\net462\zh-CN\GrapeCity.ActiveReports.resources.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.14.1.19970\lib\netcoreapp3.0\GrapeCity.ActiveReports.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.14.1.19970\lib\netcoreapp3.0\GrapeCity.ActiveReports.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.14.1.19970\lib\netcoreapp3.0\zh-CN\GrapeCity.ActiveReports.resources.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.14.1.19970\license.txt" />
+    <Content Include="packages\GrapeCity.ActiveReports.Chart.14.1.19970\icon.png" />
+    <Content Include="packages\GrapeCity.ActiveReports.Chart.14.1.19970\lib\net462\GrapeCity.ActiveReports.Chart.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Chart.14.1.19970\lib\net462\GrapeCity.ActiveReports.Chart.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Chart.14.1.19970\lib\net462\zh-CN\GrapeCity.ActiveReports.Chart.resources.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Chart.14.1.19970\lib\netcoreapp3.0\GrapeCity.ActiveReports.Chart.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Chart.14.1.19970\lib\netcoreapp3.0\GrapeCity.ActiveReports.Chart.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Chart.14.1.19970\lib\netcoreapp3.0\zh-CN\GrapeCity.ActiveReports.Chart.resources.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Chart.14.1.19970\license.txt" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.DataProviders.1.6.3\icon.png" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.DataProviders.1.6.3\lib\net462\GrapeCity.ActiveReports.Core.DataProviders.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.DataProviders.1.6.3\lib\net462\GrapeCity.ActiveReports.Core.DataProviders.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.DataProviders.1.6.3\lib\netstandard2.0\GrapeCity.ActiveReports.Core.DataProviders.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.DataProviders.1.6.3\lib\netstandard2.0\GrapeCity.ActiveReports.Core.DataProviders.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.DataProviders.1.6.3\license.txt" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Drawing.Gc.1.7.0\icon.png" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Drawing.Gc.1.7.0\lib\net462\GrapeCity.ActiveReports.Core.Drawing.Gc.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Drawing.Gc.1.7.0\lib\net462\GrapeCity.ActiveReports.Core.Drawing.Gc.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Drawing.Gc.1.7.0\lib\netstandard2.0\GrapeCity.ActiveReports.Core.Drawing.Gc.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Drawing.Gc.1.7.0\lib\netstandard2.0\GrapeCity.ActiveReports.Core.Drawing.Gc.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Drawing.Gc.1.7.0\license.txt" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Drawing.Gdi.1.7.0\icon.png" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Drawing.Gdi.1.7.0\lib\net462\GrapeCity.ActiveReports.Core.Drawing.Gdi.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Drawing.Gdi.1.7.0\lib\net462\GrapeCity.ActiveReports.Core.Drawing.Gdi.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Drawing.Gdi.1.7.0\lib\netstandard2.0\GrapeCity.ActiveReports.Core.Drawing.Gdi.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Drawing.Gdi.1.7.0\lib\netstandard2.0\GrapeCity.ActiveReports.Core.Drawing.Gdi.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Drawing.Gdi.1.7.0\license.txt" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Export.Image.Page.1.7.0\icon.png" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Export.Image.Page.1.7.0\lib\net462\GrapeCity.ActiveReports.Core.Export.Image.Page.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Export.Image.Page.1.7.0\lib\net462\GrapeCity.ActiveReports.Core.Export.Image.Page.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Export.Image.Page.1.7.0\lib\netstandard2.0\GrapeCity.ActiveReports.Core.Export.Image.Page.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Export.Image.Page.1.7.0\lib\netstandard2.0\GrapeCity.ActiveReports.Core.Export.Image.Page.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Export.Image.Page.1.7.0\license.txt" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Rdl.1.7.0\icon.png" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Rdl.1.7.0\lib\net462\GrapeCity.ActiveReports.Core.Rdl.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Rdl.1.7.0\lib\net462\GrapeCity.ActiveReports.Core.Rdl.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Rdl.1.7.0\lib\netstandard2.0\GrapeCity.ActiveReports.Core.Rdl.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Rdl.1.7.0\lib\netstandard2.0\GrapeCity.ActiveReports.Core.Rdl.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Rdl.1.7.0\license.txt" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Rendering.1.7.0\icon.png" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Rendering.1.7.0\lib\net462\GrapeCity.ActiveReports.Core.Rendering.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Rendering.1.7.0\lib\net462\GrapeCity.ActiveReports.Core.Rendering.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Rendering.1.7.0\lib\netstandard2.0\GrapeCity.ActiveReports.Core.Rendering.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Rendering.1.7.0\lib\netstandard2.0\GrapeCity.ActiveReports.Core.Rendering.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Core.Rendering.1.7.0\license.txt" />
+    <Content Include="packages\GrapeCity.ActiveReports.Design.Win.14.1.19970\icon.png" />
+    <Content Include="packages\GrapeCity.ActiveReports.Design.Win.14.1.19970\lib\net462\GrapeCity.ActiveReports.Design.Win.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Design.Win.14.1.19970\lib\net462\GrapeCity.ActiveReports.Design.Win.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Design.Win.14.1.19970\lib\net462\zh-CN\GrapeCity.ActiveReports.Design.Win.resources.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Design.Win.14.1.19970\lib\netcoreapp3.0\GrapeCity.ActiveReports.Design.Win.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Design.Win.14.1.19970\lib\netcoreapp3.0\GrapeCity.ActiveReports.Design.Win.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Design.Win.14.1.19970\lib\netcoreapp3.0\zh-CN\GrapeCity.ActiveReports.Design.Win.resources.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Design.Win.14.1.19970\license.txt" />
+    <Content Include="packages\GrapeCity.ActiveReports.Document.14.1.19970\icon.png" />
+    <Content Include="packages\GrapeCity.ActiveReports.Document.14.1.19970\lib\net462\GrapeCity.ActiveReports.Document.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Document.14.1.19970\lib\net462\GrapeCity.ActiveReports.Document.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Document.14.1.19970\lib\net462\zh-CN\GrapeCity.ActiveReports.Document.resources.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Document.14.1.19970\lib\netcoreapp3.0\GrapeCity.ActiveReports.Document.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Document.14.1.19970\lib\netcoreapp3.0\GrapeCity.ActiveReports.Document.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Document.14.1.19970\lib\netcoreapp3.0\zh-CN\GrapeCity.ActiveReports.Document.resources.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Document.14.1.19970\license.txt" />
+    <Content Include="packages\GrapeCity.ActiveReports.Export.Image.14.1.19970\icon.png" />
+    <Content Include="packages\GrapeCity.ActiveReports.Export.Image.14.1.19970\lib\net462\GrapeCity.ActiveReports.Export.Image.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Export.Image.14.1.19970\lib\net462\GrapeCity.ActiveReports.Export.Image.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Export.Image.14.1.19970\lib\net462\zh-CN\GrapeCity.ActiveReports.Export.Image.resources.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Export.Image.14.1.19970\lib\netcoreapp3.0\GrapeCity.ActiveReports.Export.Image.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Export.Image.14.1.19970\lib\netcoreapp3.0\GrapeCity.ActiveReports.Export.Image.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Export.Image.14.1.19970\lib\netcoreapp3.0\zh-CN\GrapeCity.ActiveReports.Export.Image.resources.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Export.Image.14.1.19970\license.txt" />
+    <Content Include="packages\GrapeCity.ActiveReports.Export.Rdf.14.1.19970\icon.png" />
+    <Content Include="packages\GrapeCity.ActiveReports.Export.Rdf.14.1.19970\lib\net462\GrapeCity.ActiveReports.Export.Rdf.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Export.Rdf.14.1.19970\lib\net462\GrapeCity.ActiveReports.Export.Rdf.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Export.Rdf.14.1.19970\lib\netcoreapp3.0\GrapeCity.ActiveReports.Export.Rdf.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Export.Rdf.14.1.19970\lib\netcoreapp3.0\GrapeCity.ActiveReports.Export.Rdf.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Export.Rdf.14.1.19970\license.txt" />
+    <Content Include="packages\GrapeCity.ActiveReports.Interop.14.1.19970\icon.png" />
+    <Content Include="packages\GrapeCity.ActiveReports.Interop.14.1.19970\lib\net462\GrapeCity.ActiveReports.Interop.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Interop.14.1.19970\lib\netcoreapp3.0\GrapeCity.ActiveReports.Interop.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Interop.14.1.19970\license.txt" />
+    <Content Include="packages\GrapeCity.ActiveReports.Serializer.14.1.19970\icon.png" />
+    <Content Include="packages\GrapeCity.ActiveReports.Serializer.14.1.19970\lib\net462\GrapeCity.ActiveReports.Serializer.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Serializer.14.1.19970\lib\netcoreapp3.0\GrapeCity.ActiveReports.Serializer.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Serializer.14.1.19970\license.txt" />
+    <Content Include="packages\GrapeCity.ActiveReports.Viewer.Win.14.1.19970\icon.png" />
+    <Content Include="packages\GrapeCity.ActiveReports.Viewer.Win.14.1.19970\lib\net462\GrapeCity.ActiveReports.Viewer.Win.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Viewer.Win.14.1.19970\lib\net462\GrapeCity.ActiveReports.Viewer.Win.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Viewer.Win.14.1.19970\lib\net462\zh-CN\GrapeCity.ActiveReports.Viewer.Win.resources.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Viewer.Win.14.1.19970\lib\netcoreapp3.0\GrapeCity.ActiveReports.Viewer.Win.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Viewer.Win.14.1.19970\lib\netcoreapp3.0\GrapeCity.ActiveReports.Viewer.Win.xml" />
+    <Content Include="packages\GrapeCity.ActiveReports.Viewer.Win.14.1.19970\lib\netcoreapp3.0\zh-CN\GrapeCity.ActiveReports.Viewer.Win.resources.dll" />
+    <Content Include="packages\GrapeCity.ActiveReports.Viewer.Win.14.1.19970\license.txt" />
+    <Content Include="packages\Grapecity.DataVisualization.0.1.241\lib\net462\Grapecity.DataVisualization.dll" />
+    <Content Include="packages\Grapecity.DataVisualization.0.1.241\lib\net462\Grapecity.DataVisualization.xml" />
+    <Content Include="packages\Grapecity.DataVisualization.0.1.241\lib\netstandard2.0\Grapecity.DataVisualization.dll" />
+    <Content Include="packages\Grapecity.DataVisualization.0.1.241\lib\netstandard2.0\Grapecity.DataVisualization.xml" />
+    <Content Include="packages\GrapeCity.Documents.Common.3.1.0.511\icon.png" />
+    <Content Include="packages\GrapeCity.Documents.Common.3.1.0.511\lib\net461\GrapeCity.Documents.Common.dll" />
+    <Content Include="packages\GrapeCity.Documents.Common.3.1.0.511\lib\net461\GrapeCity.Documents.Common.xml" />
+    <Content Include="packages\GrapeCity.Documents.Common.3.1.0.511\lib\net461\ja\GrapeCity.Documents.Common.resources.dll" />
+    <Content Include="packages\GrapeCity.Documents.Common.3.1.0.511\lib\netstandard2.0\GrapeCity.Documents.Common.dll" />
+    <Content Include="packages\GrapeCity.Documents.Common.3.1.0.511\lib\netstandard2.0\GrapeCity.Documents.Common.xml" />
+    <Content Include="packages\GrapeCity.Documents.Common.3.1.0.511\lib\netstandard2.0\ja\GrapeCity.Documents.Common.resources.dll" />
+    <Content Include="packages\GrapeCity.Documents.Common.3.1.0.511\LICENSE.txt" />
+    <Content Include="packages\GrapeCity.Documents.Common.Windows.3.1.0.511\icon.png" />
+    <Content Include="packages\GrapeCity.Documents.Common.Windows.3.1.0.511\lib\net461\GrapeCity.Documents.Common.Windows.dll" />
+    <Content Include="packages\GrapeCity.Documents.Common.Windows.3.1.0.511\lib\net461\GrapeCity.Documents.Common.Windows.xml" />
+    <Content Include="packages\GrapeCity.Documents.Common.Windows.3.1.0.511\lib\net461\ja\GrapeCity.Documents.Common.Windows.resources.dll" />
+    <Content Include="packages\GrapeCity.Documents.Common.Windows.3.1.0.511\lib\netstandard2.0\GrapeCity.Documents.Common.Windows.dll" />
+    <Content Include="packages\GrapeCity.Documents.Common.Windows.3.1.0.511\lib\netstandard2.0\GrapeCity.Documents.Common.Windows.xml" />
+    <Content Include="packages\GrapeCity.Documents.Common.Windows.3.1.0.511\lib\netstandard2.0\ja\GrapeCity.Documents.Common.Windows.resources.dll" />
+    <Content Include="packages\GrapeCity.Documents.Common.Windows.3.1.0.511\LICENSE.txt" />
+    <Content Include="packages\GrapeCity.Documents.DX.Windows.3.1.0.511\icon.png" />
+    <Content Include="packages\GrapeCity.Documents.DX.Windows.3.1.0.511\lib\net461\GrapeCity.Documents.DX.Windows.dll" />
+    <Content Include="packages\GrapeCity.Documents.DX.Windows.3.1.0.511\lib\net461\GrapeCity.Documents.DX.Windows.xml" />
+    <Content Include="packages\GrapeCity.Documents.DX.Windows.3.1.0.511\lib\netstandard2.0\GrapeCity.Documents.DX.Windows.dll" />
+    <Content Include="packages\GrapeCity.Documents.DX.Windows.3.1.0.511\lib\netstandard2.0\GrapeCity.Documents.DX.Windows.xml" />
+    <Content Include="packages\GrapeCity.Documents.DX.Windows.3.1.0.511\LICENSE.txt" />
+    <Content Include="packages\GrapeCity.Documents.Imaging.3.1.0.511\icon.png" />
+    <Content Include="packages\GrapeCity.Documents.Imaging.3.1.0.511\lib\net461\GrapeCity.Documents.Imaging.dll" />
+    <Content Include="packages\GrapeCity.Documents.Imaging.3.1.0.511\lib\net461\GrapeCity.Documents.Imaging.xml" />
+    <Content Include="packages\GrapeCity.Documents.Imaging.3.1.0.511\lib\net461\ja\GrapeCity.Documents.Imaging.resources.dll" />
+    <Content Include="packages\GrapeCity.Documents.Imaging.3.1.0.511\lib\netstandard2.0\GrapeCity.Documents.Imaging.dll" />
+    <Content Include="packages\GrapeCity.Documents.Imaging.3.1.0.511\lib\netstandard2.0\GrapeCity.Documents.Imaging.xml" />
+    <Content Include="packages\GrapeCity.Documents.Imaging.3.1.0.511\lib\netstandard2.0\ja\GrapeCity.Documents.Imaging.resources.dll" />
+    <Content Include="packages\GrapeCity.Documents.Imaging.3.1.0.511\LICENSE.txt" />
+    <Content Include="packages\Microsoft.VisualStudio.DpiAwareness.6.1.28916\lib\net46\Microsoft.VisualStudio.DpiAwareness.dll" />
+    <Content Include="packages\Newtonsoft.Json.11.0.2\lib\net20\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.11.0.2\lib\net20\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.11.0.2\lib\net35\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.11.0.2\lib\net35\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.11.0.2\lib\net40\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.11.0.2\lib\net40\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.11.0.2\lib\netstandard1.0\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.11.0.2\lib\netstandard1.0\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.11.0.2\lib\netstandard1.3\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.11.0.2\lib\netstandard1.3\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.11.0.2\lib\netstandard2.0\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.11.0.2\lib\portable-net40+sl5+win8+wp8+wpa81\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.11.0.2\lib\portable-net40+sl5+win8+wp8+wpa81\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.11.0.2\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.11.0.2\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.xml" />
+    <Content Include="packages\System.Buffers.4.4.0\lib\netstandard1.1\System.Buffers.dll" />
+    <Content Include="packages\System.Buffers.4.4.0\lib\netstandard1.1\System.Buffers.xml" />
+    <Content Include="packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll" />
+    <Content Include="packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.xml" />
+    <Content Include="packages\System.Buffers.4.4.0\LICENSE.TXT" />
+    <Content Include="packages\System.Buffers.4.4.0\ref\netstandard1.1\System.Buffers.dll" />
+    <Content Include="packages\System.Buffers.4.4.0\ref\netstandard1.1\System.Buffers.xml" />
+    <Content Include="packages\System.Buffers.4.4.0\ref\netstandard2.0\System.Buffers.dll" />
+    <Content Include="packages\System.Buffers.4.4.0\ref\netstandard2.0\System.Buffers.xml" />
+    <Content Include="packages\System.Buffers.4.4.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\System.Buffers.4.4.0\useSharedDesignerContext.txt" />
+    <Content Include="packages\System.Buffers.4.4.0\version.txt" />
+    <Content Include="packages\System.Memory.4.5.0\lib\netstandard1.1\System.Memory.dll" />
+    <Content Include="packages\System.Memory.4.5.0\lib\netstandard1.1\System.Memory.xml" />
+    <Content Include="packages\System.Memory.4.5.0\lib\netstandard2.0\System.Memory.dll" />
+    <Content Include="packages\System.Memory.4.5.0\lib\netstandard2.0\System.Memory.xml" />
+    <Content Include="packages\System.Memory.4.5.0\LICENSE.TXT" />
+    <Content Include="packages\System.Memory.4.5.0\ref\netstandard1.1\System.Memory.dll" />
+    <Content Include="packages\System.Memory.4.5.0\ref\netstandard1.1\System.Memory.xml" />
+    <Content Include="packages\System.Memory.4.5.0\ref\netstandard2.0\System.Memory.dll" />
+    <Content Include="packages\System.Memory.4.5.0\ref\netstandard2.0\System.Memory.xml" />
+    <Content Include="packages\System.Memory.4.5.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\System.Memory.4.5.0\useSharedDesignerContext.txt" />
+    <Content Include="packages\System.Memory.4.5.0\version.txt" />
+    <Content Include="packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.4.0\lib\netstandard1.0\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.4.0\lib\netstandard1.0\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.4.0\lib\netstandard2.0\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.4.0\lib\netstandard2.0\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.4.0\lib\portable-net45+win8+wp8+wpa81\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.4.0\lib\portable-net45+win8+wp8+wpa81\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.4.0\LICENSE.TXT" />
+    <Content Include="packages\System.Numerics.Vectors.4.4.0\ref\net46\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.4.0\ref\net46\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.4.0\ref\netstandard1.0\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.4.0\ref\netstandard1.0\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.4.0\ref\netstandard2.0\System.Numerics.Vectors.dll" />
+    <Content Include="packages\System.Numerics.Vectors.4.4.0\ref\netstandard2.0\System.Numerics.Vectors.xml" />
+    <Content Include="packages\System.Numerics.Vectors.4.4.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\System.Numerics.Vectors.4.4.0\useSharedDesignerContext.txt" />
+    <Content Include="packages\System.Numerics.Vectors.4.4.0\version.txt" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netcoreapp2.0\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netcoreapp2.0\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.0\LICENSE.TXT" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.0\ref\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.0\ref\netstandard1.0\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.0\ref\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.0\ref\netstandard2.0\System.Runtime.CompilerServices.Unsafe.xml" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.0\useSharedDesignerContext.txt" />
+    <Content Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.0\version.txt" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.xml" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.xml" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.xml" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\portable-net40+sl4+win8+wp8\System.ValueTuple.dll" />
+    <Content Include="packages\System.ValueTuple.4.5.0\lib\portable-net40+sl4+win8+wp8\System.ValueTuple.xml" />
+    <Content Include="packages\System.ValueTuple.4.5.0\LICENSE.TXT" />
+    <Content Include="packages\System.ValueTuple.4.5.0\ref\net461\System.ValueTuple.dll" />
+    <Content Include="packages\System.ValueTuple.4.5.0\ref\net47\System.ValueTuple.dll" />
+    <Content Include="packages\System.ValueTuple.4.5.0\ref\portable-net40+sl4+win8+wp8\System.ValueTuple.dll" />
+    <Content Include="packages\System.ValueTuple.4.5.0\THIRD-PARTY-NOTICES.TXT" />
+    <Content Include="packages\System.ValueTuple.4.5.0\useSharedDesignerContext.txt" />
+    <Content Include="packages\System.ValueTuple.4.5.0\version.txt" />
+    <EmbeddedResource Include="ActiveReport1.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>ActiveReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3P.resx">
+      <DependentUpon>Form3P.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="obj\Debug\best_ivc_err_mnt.Form1.resources" />
+    <EmbeddedResource Include="obj\Debug\best_ivc_err_mnt.Form1_OLD.resources" />
+    <EmbeddedResource Include="obj\Debug\best_ivc_err_mnt.Form2.resources" />
+    <EmbeddedResource Include="obj\Debug\best_ivc_err_mnt.Form2_2.resources" />
+    <EmbeddedResource Include="obj\Debug\best_ivc_err_mnt.Form3P.resources" />
+    <EmbeddedResource Include="obj\Debug\best_ivc_err_mnt.SectionReport1.resources" />
+    <EmbeddedResource Include="obj\Debug\best_ivc_err_mnt.WaitDialog.resources" />
+    <EmbeddedResource Include="SectionReport1.resx">
+      <DependentUpon>SectionReport1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitDialog.resx">
+      <DependentUpon>WaitDialog.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{CF845C55-C321-4742-B673-E6212D061ED9}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\zh-CN\" />
+    <Folder Include="My Project\" />
+    <Folder Include="obj\Debug\temp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="bin\best_ivc_err_mnt.exe.config" />
+    <None Include="bin\best_wrn.ini" />
+    <None Include="bin\best_wrn.ini.bak" />
+    <None Include="bin\best_wrn_data2.ini" />
+    <None Include="bin\best_wrn_data2.ini.bak" />
+    <None Include="bin\GrapeCity.ActiveReports.DesignerClassic.exe.config" />
+    <None Include="bin\GrapeCity.ActiveReports.Imports.exe.config" />
+    <None Include="bin\GrapeCity.ActiveReports.Viewer.exe.config" />
+    <None Include="bin\GrapeCity.ActiveReports.WpfViewer.exe.config" />
+    <None Include="bin\p.pdf" />
+    <None Include="bin\Report.pdf" />
+    <None Include="obj\Debug\best_ivc_err_mnt.vbproj.CopyComplete" />
+    <None Include="obj\Debug\best_ivc_err_mnt.vbproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\best_ivc_err_mnt.vbproj.GenerateResource.cache" />
+    <None Include="obj\Debug\best_ivc_err_mnt.vbprojAssemblyReference.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="packages.config" />
+    <None Include="packages\Gcef.Data.DataEngine.2.0.184\Gcef.Data.DataEngine.2.0.184.nupkg" />
+    <None Include="packages\Gcef.Data.ExpressionInfo.2.0.184\Gcef.Data.ExpressionInfo.2.0.184.nupkg" />
+    <None Include="packages\Gcef.Data.VBFunctionLib.2.0.184\Gcef.Data.VBFunctionLib.2.0.184.nupkg" />
+    <None Include="packages\GrapeCity.ActiveReports.14.1.19970\buildTransitive\netstandard2.0\GrapeCity.ActiveReports.targets" />
+    <None Include="packages\GrapeCity.ActiveReports.14.1.19970\GrapeCity.ActiveReports.14.1.19970.nupkg" />
+    <None Include="packages\GrapeCity.ActiveReports.Chart.14.1.19970\GrapeCity.ActiveReports.Chart.14.1.19970.nupkg" />
+    <None Include="packages\GrapeCity.ActiveReports.Core.DataProviders.1.6.3\GrapeCity.ActiveReports.Core.DataProviders.1.6.3.nupkg" />
+    <None Include="packages\GrapeCity.ActiveReports.Core.Drawing.Gc.1.7.0\GrapeCity.ActiveReports.Core.Drawing.Gc.1.7.0.nupkg" />
+    <None Include="packages\GrapeCity.ActiveReports.Core.Drawing.Gdi.1.7.0\GrapeCity.ActiveReports.Core.Drawing.Gdi.1.7.0.nupkg" />
+    <None Include="packages\GrapeCity.ActiveReports.Core.Export.Image.Page.1.7.0\GrapeCity.ActiveReports.Core.Export.Image.Page.1.7.0.nupkg" />
+    <None Include="packages\GrapeCity.ActiveReports.Core.Rdl.1.7.0\GrapeCity.ActiveReports.Core.Rdl.1.7.0.nupkg" />
+    <None Include="packages\GrapeCity.ActiveReports.Core.Rendering.1.7.0\GrapeCity.ActiveReports.Core.Rendering.1.7.0.nupkg" />
+    <None Include="packages\GrapeCity.ActiveReports.Design.Win.14.1.19970\GrapeCity.ActiveReports.Design.Win.14.1.19970.nupkg" />
+    <None Include="packages\GrapeCity.ActiveReports.Document.14.1.19970\GrapeCity.ActiveReports.Document.14.1.19970.nupkg" />
+    <None Include="packages\GrapeCity.ActiveReports.Export.Image.14.1.19970\GrapeCity.ActiveReports.Export.Image.14.1.19970.nupkg" />
+    <None Include="packages\GrapeCity.ActiveReports.Export.Rdf.14.1.19970\GrapeCity.ActiveReports.Export.Rdf.14.1.19970.nupkg" />
+    <None Include="packages\GrapeCity.ActiveReports.Interop.14.1.19970\GrapeCity.ActiveReports.Interop.14.1.19970.nupkg" />
+    <None Include="packages\GrapeCity.ActiveReports.Serializer.14.1.19970\GrapeCity.ActiveReports.Serializer.14.1.19970.nupkg" />
+    <None Include="packages\GrapeCity.ActiveReports.Viewer.Win.14.1.19970\GrapeCity.ActiveReports.Viewer.Win.14.1.19970.nupkg" />
+    <None Include="packages\Grapecity.DataVisualization.0.1.241\Grapecity.DataVisualization.0.1.241.nupkg" />
+    <None Include="packages\GrapeCity.Documents.Common.3.1.0.511\.signature.p7s" />
+    <None Include="packages\GrapeCity.Documents.Common.3.1.0.511\GrapeCity.Documents.Common.3.1.0.511.nupkg" />
+    <None Include="packages\GrapeCity.Documents.Common.Windows.3.1.0.511\.signature.p7s" />
+    <None Include="packages\GrapeCity.Documents.Common.Windows.3.1.0.511\GrapeCity.Documents.Common.Windows.3.1.0.511.nupkg" />
+    <None Include="packages\GrapeCity.Documents.DX.Windows.3.1.0.511\.signature.p7s" />
+    <None Include="packages\GrapeCity.Documents.DX.Windows.3.1.0.511\GrapeCity.Documents.DX.Windows.3.1.0.511.nupkg" />
+    <None Include="packages\GrapeCity.Documents.Imaging.3.1.0.511\.signature.p7s" />
+    <None Include="packages\GrapeCity.Documents.Imaging.3.1.0.511\GrapeCity.Documents.Imaging.3.1.0.511.nupkg" />
+    <None Include="packages\GrapeCity.Documents.Imaging.3.1.0.511\readme.md" />
+    <None Include="packages\Microsoft.VisualStudio.DpiAwareness.6.1.28916\.signature.p7s" />
+    <None Include="packages\Microsoft.VisualStudio.DpiAwareness.6.1.28916\Microsoft.VisualStudio.DpiAwareness.6.1.28916.nupkg" />
+    <None Include="packages\Newtonsoft.Json.11.0.2\.signature.p7s" />
+    <None Include="packages\Newtonsoft.Json.11.0.2\LICENSE.md" />
+    <None Include="packages\Newtonsoft.Json.11.0.2\Newtonsoft.Json.11.0.2.nupkg" />
+    <None Include="packages\System.Buffers.4.4.0\.signature.p7s" />
+    <None Include="packages\System.Buffers.4.4.0\lib\netcoreapp2.0\_._" />
+    <None Include="packages\System.Buffers.4.4.0\ref\netcoreapp2.0\_._" />
+    <None Include="packages\System.Buffers.4.4.0\System.Buffers.4.4.0.nupkg" />
+    <None Include="packages\System.Memory.4.5.0\.signature.p7s" />
+    <None Include="packages\System.Memory.4.5.0\lib\MonoAndroid10\_._" />
+    <None Include="packages\System.Memory.4.5.0\lib\MonoTouch10\_._" />
+    <None Include="packages\System.Memory.4.5.0\lib\netcoreapp2.1\_._" />
+    <None Include="packages\System.Memory.4.5.0\lib\uap10.0.16300\_._" />
+    <None Include="packages\System.Memory.4.5.0\lib\xamarinios10\_._" />
+    <None Include="packages\System.Memory.4.5.0\lib\xamarinmac20\_._" />
+    <None Include="packages\System.Memory.4.5.0\lib\xamarintvos10\_._" />
+    <None Include="packages\System.Memory.4.5.0\lib\xamarinwatchos10\_._" />
+    <None Include="packages\System.Memory.4.5.0\ref\MonoAndroid10\_._" />
+    <None Include="packages\System.Memory.4.5.0\ref\MonoTouch10\_._" />
+    <None Include="packages\System.Memory.4.5.0\ref\netcoreapp2.1\_._" />
+    <None Include="packages\System.Memory.4.5.0\ref\uap10.0.16300\_._" />
+    <None Include="packages\System.Memory.4.5.0\ref\xamarinios10\_._" />
+    <None Include="packages\System.Memory.4.5.0\ref\xamarinmac20\_._" />
+    <None Include="packages\System.Memory.4.5.0\ref\xamarintvos10\_._" />
+    <None Include="packages\System.Memory.4.5.0\ref\xamarinwatchos10\_._" />
+    <None Include="packages\System.Memory.4.5.0\System.Memory.4.5.0.nupkg" />
+    <None Include="packages\System.Numerics.Vectors.4.4.0\.signature.p7s" />
+    <None Include="packages\System.Numerics.Vectors.4.4.0\lib\MonoAndroid10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.4.0\lib\MonoTouch10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.4.0\lib\netcoreapp2.0\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.4.0\lib\xamarinios10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.4.0\lib\xamarinmac20\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.4.0\lib\xamarintvos10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.4.0\lib\xamarinwatchos10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.4.0\ref\MonoAndroid10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.4.0\ref\MonoTouch10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.4.0\ref\netcoreapp2.0\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.4.0\ref\xamarinios10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.4.0\ref\xamarinmac20\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.4.0\ref\xamarintvos10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.4.0\ref\xamarinwatchos10\_._" />
+    <None Include="packages\System.Numerics.Vectors.4.4.0\System.Numerics.Vectors.4.4.0.nupkg" />
+    <None Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.0\.signature.p7s" />
+    <None Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.0\lib\uap10.0.16300\_._" />
+    <None Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.0\ref\uap10.0.16300\_._" />
+    <None Include="packages\System.Runtime.CompilerServices.Unsafe.4.5.0\System.Runtime.CompilerServices.Unsafe.4.5.0.nupkg" />
+    <None Include="packages\System.ValueTuple.4.5.0\.signature.p7s" />
+    <None Include="packages\System.ValueTuple.4.5.0\lib\MonoAndroid10\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\lib\MonoTouch10\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\lib\netcoreapp2.0\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\lib\netstandard2.0\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\lib\uap10.0.16299\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\lib\xamarinios10\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\lib\xamarinmac20\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\lib\xamarintvos10\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\lib\xamarinwatchos10\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\ref\MonoAndroid10\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\ref\MonoTouch10\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\ref\netcoreapp2.0\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\ref\netstandard2.0\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\ref\uap10.0.16299\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\ref\xamarinios10\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\ref\xamarinmac20\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\ref\xamarintvos10\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\ref\xamarinwatchos10\_._" />
+    <None Include="packages\System.ValueTuple.4.5.0\System.ValueTuple.4.5.0.nupkg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

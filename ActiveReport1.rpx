@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ActiveReportsLayout Version="3.3" PrintWidth="10950" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: MS UI Gothic; font-style: normal; font-variant: inherit; font-weight: normal; font-size: 10pt; font-size-adjust: inherit; font-stretch: inherit; color: rgb(0,0,0); background-repeat: inherit; background-attachment: inherit; opacity: inherit; word-spacing: inherit; letter-spacing: inherit; text-decoration: none; vertical-align: inherit; text-transform: inherit; text-align: inherit; text-indent: inherit; unicode-bidi: inherit; line-height: inherit; white-space: inherit; ddo-char-set: 128" />
+    <Style Name="Heading1" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 16pt; font-size-adjust: inherit; font-stretch: inherit" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-style: italic; font-variant: inherit; font-weight: bold; font-size: 14pt; font-size-adjust: inherit; font-stretch: inherit" />
+    <Style Name="Heading3" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 13pt; font-size-adjust: inherit; font-stretch: inherit" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="928.9999" BackColor="16777215">
+      <Control Type="AR.Label" Name="Label" Left="2610" Top="0" Width="5130" Height="450" Caption="請求エラーデータ" Style="font-size: 18pt; font-weight: bold; text-align: center; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox" Left="8820" Top="0" Width="2070" Height="270" Text="TextBox" Style="font-size: 9pt; text-align: right; ddo-char-set: 1" />
+      <Control Type="AR.Line" Name="Line" X1="0" Y1="562.5" X2="10890" Y2="562.5" LineWeight="3" />
+      <Control Type="AR.Label" Name="Label1" Left="0" Top="607.5" Width="1440" Height="270" Caption="保証番号" Style="font-size: 9pt; vertical-align: middle; ddo-char-set: 1" Multiline="0" />
+      <Control Type="AR.Label" Name="Label2" Left="1440" Top="607.5" Width="1440" Height="270" Caption="顧客名" Style="font-size: 9pt; vertical-align: middle; ddo-char-set: 1" Multiline="0" />
+      <Control Type="AR.Label" Name="Label3" Left="2880" Top="607.5" Width="1440" Height="270" Caption="型式" Style="font-size: 9pt; vertical-align: middle; ddo-char-set: 1" Multiline="0" />
+      <Control Type="AR.Label" Name="Label4" Left="4320" Top="607.5" Width="1440" Height="270" Caption="製造番号" Style="font-size: 9pt; vertical-align: middle; ddo-char-set: 1" Multiline="0" />
+      <Control Type="AR.Label" Name="Label5" Left="5760" Top="607.5" Width="900" Height="270" Caption="事故状況" Style="font-size: 9pt; vertical-align: middle; ddo-char-set: 1" Multiline="0" />
+      <Control Type="AR.Label" Name="Label6" Left="6660" Top="607.5" Width="1080" Height="270" Caption="処理日" Style="font-size: 9pt; vertical-align: middle; ddo-char-set: 1" Multiline="0" />
+      <Control Type="AR.Label" Name="Label7" Left="7740" Top="607.5" Width="3150" Height="270" Caption="ｴﾗｰ内容" Style="font-size: 9pt; vertical-align: middle; ddo-char-set: 1" Multiline="0" />
+      <Control Type="AR.Line" Name="Line1" X1="0" Y1="900" X2="10890" Y2="900" LineWeight="3" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="259" BackColor="16777215">
+      <Control Type="AR.Field" Name="TextBox1" DataField="ordr_no" Left="0" Top="0" Width="1440" Height="259.2" Text="ordr_no" Multiline="0" Style="font-size: 9pt; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox2" DataField="FLD015" Left="1440" Top="0" Width="1440" Height="259.2" Text="FLD015" Multiline="0" Style="font-size: 9pt; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox3" DataField="FLD019" Left="2880" Top="0" Width="1440" Height="259.2" Text="FLD019" Multiline="0" Style="font-size: 9pt; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox4" DataField="FLD020" Left="4320" Top="0" Width="1440" Height="259.2" Text="FLD020" Multiline="0" Style="font-size: 9pt; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox5" DataField="CLS_CODE_NAME" Left="5760" Top="0" Width="1108.801" Height="259.2" Text="CLS_CODE_NAME" Multiline="0" Style="font-size: 9pt; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox6" Left="6868.801" Top="0" Width="345.5997" Height="259.2" Text="FLD031" OutputFormat="" Multiline="0" Style="font-size: 9pt; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox7" DataField="Error_msg" Left="7740" Top="0" Width="3150" Height="259.2" Text="Error_msg" Multiline="0" Style="font-size: 9pt; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox8" DataField="FLD031" Visible="0" Left="9810" Top="0" Width="1080" Height="259.2" Text="FLD031" OutputFormat="" Multiline="0" Style="background-color: #C0FFFF; font-size: 9pt; vertical-align: middle; ddo-char-set: 1" />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter" Height="360" BackColor="16777215">
+      <Control Type="AR.Field" Name="TextBox41" Left="4050" Top="67.5" Width="990" Height="270" Text="1" Style="font-family: MS UI Gothic; font-size: 9pt; text-align: right; vertical-align: bottom; ddo-char-set: 1" SummaryType="4" SummaryRunning="2" />
+      <Control Type="AR.Field" Name="TextBox42" Left="5310" Top="67.5" Width="975.0001" Height="270" Text="1" Style="font-family: MS UI Gothic; font-size: 9pt; text-align: left; vertical-align: bottom; ddo-char-set: 1" SummaryType="4" />
+      <Control Type="AR.Label" Name="Label30" Left="5040" Top="67.5" Width="270" Height="270" Caption="/" Style="font-size: 9pt; font-weight: normal; text-align: center; vertical-align: bottom; ddo-char-set: 1" />
+      <Control Type="AR.Line" Name="Line2" X1="0" Y1="0" X2="10890" Y2="0" LineWeight="3" />
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[public void PageHeader_Format()
+{
+	
+}
+
+
+]]></Script>
+  <PageSettings LeftMargin="432" RightMargin="0" TopMargin="144" BottomMargin="144" PaperSize="9" PaperWidth="11906" PaperHeight="16838" PaperName="" Orientation="1" />
+  <Parameters />
+</ActiveReportsLayout>
