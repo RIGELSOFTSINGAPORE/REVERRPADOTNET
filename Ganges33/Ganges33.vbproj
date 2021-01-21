@@ -676,6 +676,7 @@
     <Compile Include="logic\SawDiscountControl.vb" />
     <Compile Include="logic\ScDsrControl.vb" />
     <Compile Include="logic\ServicePartsReturnControl.vb" />
+    <Compile Include="logic\SetupNewServiceCenterControl.vb" />
     <Compile Include="logic\ShipBaseControl.vb" />
     <Compile Include="logic\SLedgerControl.vb" />
     <Compile Include="logic\SonyAcctStmtControl.vb" />
@@ -805,6 +806,7 @@
     <Compile Include="Model\SawDiscountModel.vb" />
     <Compile Include="Model\ScDsrModel.vb" />
     <Compile Include="Model\ServicePartsReturnModel.vb" />
+    <Compile Include="Model\SetupNewServiceCenterModel.vb" />
     <Compile Include="Model\ShipBaseModel.vb" />
     <Compile Include="Model\SLedgerModel.vb" />
     <Compile Include="Model\SonyAcctStmtModel.vb" />
