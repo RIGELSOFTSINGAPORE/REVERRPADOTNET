@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Analysis.Master" CodeBehind="Admin.aspx.vb" Inherits="Ganges33.Admin" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Analysis.Master" CodeBehind="Analysis_User.aspx.vb" Inherits="Ganges33.Analysis_User" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -50,7 +50,7 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h3 class="card-title ">Admin</h3>
+                  <h3 class="card-title ">User Management</h3>
                   <p class="card-category"></p>
                 </div>
                 <div class="card-body " >
