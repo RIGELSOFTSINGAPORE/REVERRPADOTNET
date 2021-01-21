@@ -36,8 +36,18 @@
     -ms-overflow-style: none;
     overflow: auto;
 }
+        
        
    </style>
+    <script>
+        $(function () {
+            $('[class*=duration]').durationPicker({
+                onChanged: function (newVal) {
+                    $('#duration-label').text(newVal);
+                }
+            });
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   
@@ -56,7 +66,7 @@
                 <div class="card-body " >
      <div runat="server" id="addfile">
                     <div class="row">
-                        <div>
+                        <div class="col-sm-2">
                           <label>Task Name</label>  
                         </div>
                         <div>
@@ -64,27 +74,29 @@
                         </div>
                         </div>
                         <div class="row">
-                            <div>
+                            <div class="col-sm-2">
                            <label>
                                 File Name
                            </label>
                            </div> <div>
-                             <asp:TextBox ID="filename" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" />
+                               <asp:FileUpload ID="filename" runat="server" />
+                               
+                             <%--<asp:TextBox ID="filename" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" />--%>
                         </div>
                         </div>
-                        <div class="row">
-                            <div>
+                       <%-- <div class="row">
+                            <div class="col-sm-2">
                                 <label>
                                 Source Path
                            </label>
                             </div>
                             <div>
-                              <asp:TextBox ID="Source" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" />
+                              <asp:TextBox ID="Source" runat="server" value="" Height="33px" Width="100%" class="form-file-upload date serverlbl" />
                            
                             </div>
-                        </div>
+                        </div>--%>
                         <div class="row">
-                          <div>
+                          <div class="col-sm-2">
                               <label>
                                 Tested Date
                            </label>
@@ -95,7 +107,7 @@
                             </div>
                         </div>
                         <div class="row">
-                             <div>
+                             <div class="col-sm-2">
                                  <label>
                                      Status
                                  </label>
@@ -108,19 +120,31 @@
                    
 
                     <div class="row">
-                        <div>
+                        <div class="col-sm-2">
                             <label>
                                 Run Duration
                             </label>
                         </div>
                         <div>
-                            <asp:TextBox ID="Duration" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" />
+                            <asp:TextBox ID="Duration" runat="server" value="" Height="33px" Width="100%" class="form-file-upload duration  serverlbl" />
+                           
+                        </div>
+                    </div>
+
+             <div class="row">
+                        <div class="col-sm-2">
+                            <label>
+                                IP Adress
+                            </label>
+                        </div>
+                        <div>
+                            <asp:TextBox ID="Ipaddress" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" />
                            
                         </div>
                     </div>
                     <div class="row">
-                        <div>
-                            <label>
+                        <div class="col-sm-2">
+                            <label >
                                 Delete flag
                             </label>
                         </div>
@@ -128,16 +152,19 @@
                             <asp:checkbox id="delfld" runat="server"></asp:checkbox>
                         </div>
                     </div>
-                    <div>
-                    <asp:Button ID="btnUpload" runat="server" Text="Create" class="btn btn-primary pull-right" />
-                    <div>
-
+                    <div class="row">
+                        <div class="col-sm-2">
+                             </div>
+                   
+                   
+                            <div>
+ <asp:Button ID="btnUpload" runat="server" Text="Create" class="btn btn-primary " />
                     </div>
 
 
                     </div>
                  <div>
-                        <asp:Button ID="Back" runat="server" Text="Back" class="btn btn-primary " />
+                        <asp:Button ID="Back" runat="server" Text="Back" class="btn btn-primary pull-right" />
                     </div>     
      </div>
                     
@@ -146,7 +173,7 @@
                       <asp:Button ID="Create" runat="server" Text="Create" class="btn btn-primary " />
                   </div>
                     <div>
-                        <asp:GridView ID="getdata" AutoGenerateColumns="false" runat="server">
+                        <asp:GridView ID="getdata" AutoGenerateColumns="false"  DataKeyNames="TASKID" runat="server">
                              <Columns>
         <asp:BoundField DataField="TASK_NAME" HeaderText="Task Name" />
         <asp:BoundField DataField="FILE_NAME" HeaderText="File Name" />
@@ -155,11 +182,12 @@
         <asp:BoundField DataField="STATUS" HeaderText="Status" />
         <asp:BoundField DataField="RUN_DURATION" HeaderText="Run Duration" />
         <asp:BoundField DataField="DELFG" HeaderText="Delflg" />
-                                  <asp:TemplateField>
-            <ItemTemplate>
-                <asp:Button Text="Edit" runat="server" CommandName="Edit" CommandArgument="<%# Container.DataItemIndex %>" />
-            </ItemTemplate>
-        </asp:TemplateField>
+                                 <asp:TemplateField >
+                                       <ItemTemplate>
+                                           <asp:Button id="btnEdit" runat="server" Text="Edit" OnClick="btnEdit_Click" />
+                                       </ItemTemplate>
+                                   </asp:TemplateField>
+                                   
     </Columns>
                         </asp:GridView>
                     </div>
@@ -175,4 +203,13 @@
        </div>
      
     
+        <asp:Button ID="BtnCancel" runat="server" Text="Button" Style="display: none;" />
+        <asp:Button ID="BtnOK" runat="server" Text="Button" Style="display: none;" />
+
+   
+
+    <div id="dialog" title="message" style="display: none;">
+       
+        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+    </div>
 </asp:Content>

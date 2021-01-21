@@ -38,16 +38,7 @@ Partial Public Class RPA_Management
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents filename As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Source control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Source As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents filename As Global.System.Web.UI.WebControls.FileUpload
 
     '''<summary>
     '''Testeddate control.
@@ -75,6 +66,15 @@ Partial Public Class RPA_Management
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Duration As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Ipaddress control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Ipaddress As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''delfld control.
@@ -129,4 +129,31 @@ Partial Public Class RPA_Management
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents getdata As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''BtnCancel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents BtnCancel As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''BtnOK control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents BtnOK As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''lblMsg control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblMsg As Global.System.Web.UI.WebControls.Label
 End Class
