@@ -8,9 +8,9 @@ Namespace Ganges33.model
 
             CRTDT = String.Empty
             CRTCD = String.Empty
-            UPDDT = String.Empty
-            UPDCD = String.Empty
-            UPDPG = String.Empty
+            'UPDDT = String.Empty
+            'UPDCD = String.Empty
+            'UPDPG = String.Empty
 
 
             DELFG = String.Empty
@@ -42,9 +42,9 @@ Namespace Ganges33.model
 
         Public Property CRTDT As String
         Public Property CRTCD As String
-        Public Property UPDDT As String
-        Public Property UPDCD As String
-        Public Property UPDPG As String
+        'Public Property UPDDT As String
+        'Public Property UPDCD As String
+        'Public Property UPDPG As String
 
 
         Public Property DELFG As String

@@ -295,7 +295,7 @@ p:hover {
                             <li class="nav-item"><a class="nav-link py-0" id="btnservicecenter" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Service Center</p></a></li>
                               <li class="nav-item"><a class="nav-link py-0" id="btnuser" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>User Management</p></a></li>
                             <li class="nav-item"><a class="nav-link py-0" id="A2" runat="server" href="./RPA_Management.aspx"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>RPA Management</p></a></li>
-                           
+                     
                         </ul>
                     </div>
                 </li>

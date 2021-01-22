@@ -392,6 +392,7 @@
     <Content Include="Rpa_OnOff.aspx" />
     <Content Include="rpa_scheduler.aspx" />
     <Content Include="Rpa_TaskApp.aspx" />
+    <Content Include="SetupNewServiceCenter.aspx" />
     <Content Include="SonyAnalysis_Export.aspx" />
     <Content Include="SonyAnalysis_FileUpload.aspx" />
     <Content Include="SonyMenu.aspx" />
@@ -1086,6 +1087,13 @@
     </Compile>
     <Compile Include="Rpa_TaskApp.aspx.vb">
       <DependentUpon>Rpa_TaskApp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SetupNewServiceCenter.aspx.designer.vb">
+      <DependentUpon>SetupNewServiceCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SetupNewServiceCenter.aspx.vb">
+      <DependentUpon>SetupNewServiceCenter.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Site1.Master.designer.vb">

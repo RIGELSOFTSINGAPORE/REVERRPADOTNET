@@ -18,8 +18,8 @@ Public Class SetupNewServiceCenterControl
         Dim sqlStr As String = "INSERT "
         sqlStr = sqlStr & " INTO "
         sqlStr = sqlStr & "M_SHIP_BASE ("
-        'sqlStr = sqlStr & "CRTDT, "
-        'sqlStr = sqlStr & "CRTCD, "
+        sqlStr = sqlStr & "CRTDT, "
+        sqlStr = sqlStr & "CRTCD, "
         'sqlStr = sqlStr & "UPDDT, "
         'sqlStr = sqlStr & "UPDCD, "
         'sqlStr = sqlStr & "UPDPG, "
@@ -47,13 +47,13 @@ Public Class SetupNewServiceCenterControl
         sqlStr = sqlStr & "MESS_2, "
         sqlStr = sqlStr & "MESS_3, "
         sqlStr = sqlStr & "RAGI_DEPOSIT, "
-        sqlStr = sqlStr & "PO_NO, "
+        sqlStr = sqlStr & "PO_NO "
 
         sqlStr = sqlStr & " ) "
 
         sqlStr = sqlStr & " values ( "
-        'sqlStr = sqlStr & "@CRTDT, "
-        'sqlStr = sqlStr & "@CRTCD, "
+        sqlStr = sqlStr & "@CRTDT, "
+        sqlStr = sqlStr & "@CRTCD, "
         'sqlStr = sqlStr & "@UPDDT, "
         'sqlStr = sqlStr & "@UPDCD, "
         'sqlStr = sqlStr & "@UPDPG, "
@@ -81,17 +81,17 @@ Public Class SetupNewServiceCenterControl
         sqlStr = sqlStr & "@MESS_2, "
         sqlStr = sqlStr & "@MESS_3, "
         sqlStr = sqlStr & "@RAGI_DEPOSIT, "
-        sqlStr = sqlStr & "@PO_NO, "
+        sqlStr = sqlStr & "@PO_NO "
 
 
         sqlStr = sqlStr & " )"
 
-        'dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@CRTDT", dtNow))
-        'dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@CRTCD", queryParams.CRTCD))
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@CRTDT", dtNow))
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@CRTCD", queryParams.CRTCD))
         'dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@UPDDT", queryParams.UPDDT))
         'dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@UPDCD", queryParams.UPDCD))
         'dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@UPDPG", queryParams.UPDPG))
-        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@DELFG", 0))
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@DELFG", queryParams.DELFG))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@SHIP_NAME", queryParams.SHIP_NAME))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@SHIP_INFO", queryParams.SHIP_INFO))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@SHIP_MANAGER", queryParams.SHIP_MANAGER))
@@ -123,7 +123,7 @@ Public Class SetupNewServiceCenterControl
 
     End Function
 
-    Public Function ShowSetupNewServiceCenterGrid() As DataTable
+    Public Function ShowSetupNewServiceCenterGrid(queryParams As SetupNewServiceCenterModel) As DataTable
 
         Log4NetControl.ComInfoLogWrite(Log4NetControl.UserID)
         Dim DateTimeNow As DateTime = DateTime.Now
@@ -152,8 +152,8 @@ Public Class SetupNewServiceCenterControl
         Dim sqlStr As String = "UPDATE "
         sqlStr = sqlStr & " M_SHIP_BASE "
         sqlStr = sqlStr & "SET "
-        'sqlStr = sqlStr & "CRTDT =@CRTCD, "
-        'sqlStr = sqlStr & "CRTCD =@CRTCD, "
+        sqlStr = sqlStr & "CRTDT =@CRTCD, "
+        sqlStr = sqlStr & "CRTCD =@CRTCD, "
         'sqlStr = sqlStr & "UPDDT =@UPDDT, "
         'sqlStr = sqlStr & "UPDCD =@UPDCD, "
         'sqlStr = sqlStr & "UPDPG =@UPDPG, "
@@ -185,11 +185,11 @@ Public Class SetupNewServiceCenterControl
         sqlStr = sqlStr & "RAGI_DEPOSIT=@RAGI_DEPOSIT, "
         sqlStr = sqlStr & "PO_NO=@PO_NO, "
 
-        sqlStr = sqlStr & " where  DELFG=0  "
+        sqlStr = sqlStr & " where  DELFG=@DELFG  "
 
 
-        ' dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@CRTDT", queryParams.CRTDT))
-        'dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@CRTCD", queryParams.CRTCD))
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@CRTDT", dtNow))
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@CRTCD", queryParams.CRTCD))
         'dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@UPDDT", queryParams.UPDDT))
         'dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@UPDCD", queryParams.UPDCD))
         'dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@UPDPG", queryParams.UPDPG))
@@ -197,7 +197,7 @@ Public Class SetupNewServiceCenterControl
 
 
 
-        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@DELFG", 0))
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@DELFG", queryParams.DELFG))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@SHIP_NAME", queryParams.SHIP_NAME))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@SHIP_INFO", queryParams.SHIP_INFO))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@SHIP_MANAGER", queryParams.SHIP_MANAGER))
