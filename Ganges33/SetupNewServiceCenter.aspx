@@ -392,6 +392,13 @@
                                            <asp:Button id="btnEdit" runat="server" Text="Edit" OnClick="btnEdit_Click" />
                                        </ItemTemplate>
                                    </asp:TemplateField>
+
+                                 <asp:TemplateField >
+                                       <ItemTemplate>
+                                           <asp:Button id="btnView" runat="server" Text="View" OnClick="btnView_Click" />
+                                       </ItemTemplate>
+                                   </asp:TemplateField>
+
                                    
     </Columns>
                         </asp:GridView>
