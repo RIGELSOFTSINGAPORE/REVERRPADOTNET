@@ -4,7 +4,7 @@ Imports System.Configuration
 Namespace Ganges33.model
     Public Class RpamanagementModel
         Public Sub RpamanagementModel()
-            TASKID = 0
+            TASKID = String.Empty
             CRTDT = String.Empty
             CRTCD = String.Empty
             UPDDT = String.Empty

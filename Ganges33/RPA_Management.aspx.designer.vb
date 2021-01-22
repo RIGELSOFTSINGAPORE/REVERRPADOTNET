@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class RPA_Management
 
     '''<summary>
+    '''Header control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Header As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''addfile control.
     '''</summary>
     '''<remarks>
@@ -21,6 +30,15 @@ Partial Public Class RPA_Management
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents addfile As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''id control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents id As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''TaskName control.
@@ -39,6 +57,24 @@ Partial Public Class RPA_Management
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents filename As Global.System.Web.UI.WebControls.FileUpload
+
+    '''<summary>
+    '''Textfilename control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Textfilename As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Source control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Source As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Testeddate control.
@@ -68,15 +104,6 @@ Partial Public Class RPA_Management
     Protected WithEvents Duration As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Ipaddress control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Ipaddress As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
     '''delfld control.
     '''</summary>
     '''<remarks>
@@ -93,6 +120,15 @@ Partial Public Class RPA_Management
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnUpload As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Edit control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Edit As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Back control.
