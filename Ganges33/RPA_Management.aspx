@@ -60,59 +60,73 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h3 class="card-title ">RPA Management</h3>
+                  <h3 class="card-title " >
+                      <asp:label id="Header" Text="" runat="server" >                      </asp:label>
+                  </h3>
                   <p class="card-category"></p>
                 </div>
                 <div class="card-body " >
      <div runat="server" id="addfile">
                     <div class="row">
+                        <asp:Label ID="id" runat="server" Text="" Style="display:none "></asp:Label>
                         <div class="col-sm-2">
+                            <br />
                           <label>Task Name</label>  
                         </div>
                         <div>
+                              <br />
                              <asp:TextBox ID="TaskName" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" />
                         </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-2">
+                                  <br />
                            <label>
+
                                 File Name
                            </label>
                            </div> <div>
-                               <asp:FileUpload ID="filename" runat="server" />
+                                 <br />
+                               <asp:FileUpload ID="filename" Class="serverlbl"  runat="server" />
                                
-                             <%--<asp:TextBox ID="filename" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" />--%>
+                             <asp:TextBox ID="Textfilename" runat="server" value="" Height="33px" Width="100%" ReadOnly="false" class="form-file-upload  serverlbl" />
                         </div>
                         </div>
-                       <%-- <div class="row">
+                        <div class="row">
                             <div class="col-sm-2">
+                                  <br />
                                 <label>
                                 Source Path
                            </label>
                             </div>
                             <div>
+                                  <br />
                               <asp:TextBox ID="Source" runat="server" value="" Height="33px" Width="100%" class="form-file-upload date serverlbl" />
                            
                             </div>
-                        </div>--%>
+                        </div>
                         <div class="row">
                           <div class="col-sm-2">
+                                <br />
                               <label>
                                 Tested Date
                            </label>
                              </div>
                              <div>
+                                   <br />
                               <asp:TextBox ID="Testeddate" runat="server" value="" Height="33px" Width="100%" class="form-file-upload date  serverlbl" />
                            
                             </div>
                         </div>
                         <div class="row">
                              <div class="col-sm-2">
+                                   <br />
                                  <label>
                                      Status
                                  </label>
                              </div>
                             <div>
+                                  <br />
                                  <asp:TextBox ID="Status" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" />
                            
                             </div>
@@ -121,18 +135,21 @@
 
                     <div class="row">
                         <div class="col-sm-2">
+                              <br />
                             <label>
                                 Run Duration
                             </label>
                         </div>
                         <div>
+                              <br />
                             <asp:TextBox ID="Duration" runat="server" value="" Height="33px" Width="100%" class="form-file-upload duration  serverlbl" />
                            
                         </div>
                     </div>
 
-             <div class="row">
+           <%--  <div class="row">
                         <div class="col-sm-2">
+                              <br />
                             <label>
                                 IP Adress
                             </label>
@@ -141,14 +158,16 @@
                             <asp:TextBox ID="Ipaddress" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" />
                            
                         </div>
-                    </div>
+                    </div>--%>
                     <div class="row">
                         <div class="col-sm-2">
+                              <br />
                             <label >
                                 Delete flag
                             </label>
                         </div>
                         <div>
+                              <br />
                             <asp:checkbox id="delfld" runat="server"></asp:checkbox>
                         </div>
                     </div>
@@ -159,6 +178,7 @@
                    
                             <div>
  <asp:Button ID="btnUpload" runat="server" Text="Create" class="btn btn-primary " />
+                                <asp:Button ID="Edit" runat="server" Text="Save" class="btn btn-primary " />
                     </div>
 
 
@@ -173,23 +193,62 @@
                       <asp:Button ID="Create" runat="server" Text="Create" class="btn btn-primary " />
                   </div>
                     <div>
-                        <asp:GridView ID="getdata" AutoGenerateColumns="false"  DataKeyNames="TASKID" runat="server">
-                             <Columns>
-        <asp:BoundField DataField="TASK_NAME" HeaderText="Task Name" />
-        <asp:BoundField DataField="FILE_NAME" HeaderText="File Name" />
-        <asp:BoundField DataField="Path" HeaderText="Source Path" />
-        <asp:BoundField DataField="TEST_STATUS" HeaderText="Test Date " />
-        <asp:BoundField DataField="STATUS" HeaderText="Status" />
-        <asp:BoundField DataField="RUN_DURATION" HeaderText="Run Duration" />
-        <asp:BoundField DataField="DELFG" HeaderText="Delflg" />
-                                 <asp:TemplateField >
-                                       <ItemTemplate>
-                                           <asp:Button id="btnEdit" runat="server" Text="Edit" OnClick="btnEdit_Click" />
-                                       </ItemTemplate>
-                                   </asp:TemplateField>
-                                   
-    </Columns>
-                        </asp:GridView>
+                        <asp:GridView ID="getdata" runat="server" AutoGenerateColumns="false" AllowPaging="true" PageSize="10" OnPageIndexChanging="getdata_PageIndexChanging" OnRowCommand="getdata_RowCommand"
+                Style="align-self: center" HeaderStyle-BackColor="#8e24aa" HeaderStyle-ForeColor="White"  CssClass="col-sm-12" ShowHeaderWhenEmpty="true" EmptyDataText="No records Found">
+                <EmptyDataTemplate>No Record Available</EmptyDataTemplate>
+                <EmptyDataRowStyle HorizontalAlign="Center" />
+                <Columns>
+             
+
+                    <asp:TemplateField HeaderText="TASK_NAME" ItemStyle-Width="150">
+                        <ItemTemplate>
+                            <asp:Label ID="TASK_NAME" runat="server" Text='<%# Eval("TASK_NAME") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="TASK_NAME" runat="server" Text='<%# Eval("TASK_NAME") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="FILE_NAME" ItemStyle-Width="150">
+                        
+                        <ItemTemplate>
+                            <asp:Label ID="FILE_NAME" runat="server" Text='<%# Eval("FILE_NAME") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="Path" ItemStyle-Width="150">
+                       
+                        <ItemTemplate>
+                            <asp:Label ID="Path" runat="server" Text='<%# Eval("Path") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+
+                     <asp:TemplateField HeaderText="TEST_STATUS" ItemStyle-Width="150">
+                        
+                        <ItemTemplate>
+                            <asp:Label ID="TEST_STATUS" runat="server" Text='<%# Eval("TEST_STATUS") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+
+                     <asp:TemplateField HeaderText="STATUS" ItemStyle-Width="150">
+                       
+                        <ItemTemplate>
+                            <asp:Label ID="STATUS" runat="server" Text='<%# Eval("STATUS") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+
+                      <asp:TemplateField HeaderText="EDIT" ItemStyle-Width="150">
+                        <ItemTemplate>
+                            <asp:LinkButton ID="TASKID" runat="server" CommandArgument='<%# Bind("TASKID") %>' CommandName="goto" Text="Edit"></asp:LinkButton>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
                     </div>
                 </div>
                 
