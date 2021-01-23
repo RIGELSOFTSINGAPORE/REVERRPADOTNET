@@ -8,9 +8,9 @@ Namespace Ganges33.model
 
             CRTDT = String.Empty
             CRTCD = String.Empty
-            'UPDDT = String.Empty
-            'UPDCD = String.Empty
-            'UPDPG = String.Empty
+            UPDDT = String.Empty
+            UPDCD = String.Empty
+            UPDPG = String.Empty
 
 
             DELFG = String.Empty
@@ -35,16 +35,16 @@ Namespace Ganges33.model
             MESS_1 = String.Empty
             MESS_2 = String.Empty
             MESS_3 = String.Empty
-            RAGI_DEPOSIT = String.Empty
+            REGI_DEPOSIT = String.Empty
             PO_NO = String.Empty
 
         End Sub
 
         Public Property CRTDT As String
         Public Property CRTCD As String
-        'Public Property UPDDT As String
-        'Public Property UPDCD As String
-        'Public Property UPDPG As String
+        Public Property UPDDT As String
+        Public Property UPDCD As String
+        Public Property UPDPG As String
 
 
         Public Property DELFG As String
@@ -71,7 +71,7 @@ Namespace Ganges33.model
         Public Property MESS_1 As String
         Public Property MESS_2 As String
         Public Property MESS_3 As String
-        Public Property RAGI_DEPOSIT As String
+        Public Property REGI_DEPOSIT As String
         Public Property PO_NO As String
 
     End Class

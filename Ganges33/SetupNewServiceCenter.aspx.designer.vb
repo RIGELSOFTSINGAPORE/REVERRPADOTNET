@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class SetupNewServiceCenter
 
     '''<summary>
+    '''Header control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Header As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''addfile control.
     '''</summary>
     '''<remarks>
@@ -212,13 +221,13 @@ Partial Public Class SetupNewServiceCenter
     Protected WithEvents Mess3 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''RagiDeposit control.
+    '''RegiDeposit control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents RagiDeposit As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents RegiDeposit As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''PO_NO control.
@@ -246,6 +255,15 @@ Partial Public Class SetupNewServiceCenter
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnAddNew As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Edit control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Edit As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Back control.

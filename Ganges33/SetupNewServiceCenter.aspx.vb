@@ -19,6 +19,7 @@ Public Class SetupNewServiceCenter
         Dim userLevel As String = Session("user_level")
         Dim adminFlg As Boolean = Session("admin_Flg")
         addfile.Visible = False
+        Header.Text = "Setup New Servicecenter"
         pageload()
     End Sub
 
@@ -52,6 +53,9 @@ Public Class SetupNewServiceCenter
     Private Sub Create_Click(sender As Object, e As EventArgs) Handles Create.Click
         data.Visible = False
         addfile.Visible = True
+        btnAddNew.Visible = True
+        Edit.Visible = False
+        Header.Text = "Setup New Servicecenter"
         '' Exit Sub
         'Dim SetupNewServiceCenterModel As New SetupNewServiceCenterModel
         'Dim SetupNewServiceCentercontrol As New SetupNewServiceCenterControl
@@ -76,7 +80,7 @@ Public Class SetupNewServiceCenter
         'SetupNewServiceCenterModel.MESS_1 = Mess1.Text
         'SetupNewServiceCenterModel.MESS_2 = Mess2.Text
         'SetupNewServiceCenterModel.MESS_3 = Mess3.Text
-        'SetupNewServiceCenterModel.RAGI_DEPOSIT = RagiDeposit.Text
+        'SetupNewServiceCenterModel.REGI_DEPOSIT = RegiDeposit.Text
         'SetupNewServiceCenterModel.PO_NO = PO_NO.Text
         '' Dim delflg As String
         'If delfld.Checked = True Then
@@ -128,7 +132,7 @@ Public Class SetupNewServiceCenter
         SetupNewServiceCenterModel.MESS_1 = Mess1.Text
         SetupNewServiceCenterModel.MESS_2 = Mess2.Text
         SetupNewServiceCenterModel.MESS_3 = Mess3.Text
-        SetupNewServiceCenterModel.RAGI_DEPOSIT = RagiDeposit.Text
+        SetupNewServiceCenterModel.REGI_DEPOSIT = RegiDeposit.Text
         SetupNewServiceCenterModel.PO_NO = PO_NO.Text
         ' Dim delflg As String
         If delfld.Checked = True Then
@@ -140,18 +144,49 @@ Public Class SetupNewServiceCenter
 
         '  Rpamanagementmodel.   = Session("ship_Name")
         SetupNewServiceCenterModel.CRTCD = Session("user_Name")
+        SetupNewServiceCenterModel.UPDCD = Session("user_Name")
+        SetupNewServiceCenterModel.UPDPG = "Test"
+
         'Rpamanagementmodel.= Session("user_level")
         'Rpamanagementmodel.= Session("admin_Flg")
         Dim insertCredit As Boolean = SetupNewServiceCentercontrol.SetupNewServiceCenterInsert(SetupNewServiceCenterModel)
+        'Dim insertCredit As Boolean = SetupNewServiceCentercontrol.ShowSetupNewServiceCenterGrid(SetupNewServiceCenterModel)
         If (insertCredit = True) Then
             Call showMsg("Success updated", "")
+            ShipName.Text = ""
+            ShipInfo.Text = ""
+            ShipManager.Text = ""
+            ShipTel.Text = ""
+            ShipAdd1.Text = ""
+            ShipAdd2.Text = ""
+            ShipAdd3.Text = ""
+            Zip.Text = ""
+            Email.Text = ""
+            ShipService.Text = ""
+            OpenTime.Text = ""
+            CloseTime.Text = ""
+            OpeningDate.Text = ""
+            ClosingDate.Text = ""
+            ShipCode.Text = ""
+            ShipMark.Text = ""
+            Item1.Text = ""
+            Item2.Text = ""
+            Mess1.Text = ""
+            Mess2.Text = ""
+            Mess3.Text = ""
+            RegiDeposit.Text = ""
+            PO_NO.Text = ""
+            delfld.Checked = False
+
             'Exit Sub
         Else
             Call showMsg("updated failed", "")
+            data.Visible = False
+            addfile.Visible = True
         End If
         data.Visible = True
-        'addfile.Visible = False
-        'pageload()
+        addfile.Visible = False
+        pageload()
     End Sub
 
 
@@ -159,27 +194,156 @@ Public Class SetupNewServiceCenter
     Private Sub Back_Click(sender As Object, e As EventArgs) Handles Back.Click
         data.Visible = True
         addfile.Visible = False
+        Header.Text = "Setup New Servicecenter"
     End Sub
 
     Protected Sub btnEdit_Click(sender As Object, e As EventArgs)
         Dim SetupNewServiceCenterModel As New SetupNewServiceCenterModel
         Dim SetupNewServiceCentercontrol As New SetupNewServiceCenterControl
-        Dim row As GridViewRow = CType((TryCast(sender, Button)).NamingContainer, GridViewRow)
-        Dim id = getdata.DataKeys(row.RowIndex).Values(0).ToString()
-        Dim updateCredit As Boolean = SetupNewServiceCentercontrol.UpdateSetupNewServiceCenterGrid(SetupNewServiceCenterModel)
+        ' Dim row As GridViewRow = CType((TryCast(sender, Button)).NamingContainer, GridViewRow)
+        ' Dim id = getdata.DataKeys(row.RowIndex).Values(0).ToString()
+        ' Dim updateCredit As Boolean = SetupNewServiceCentercontrol.UpdateSetupNewServiceCenterGrid(SetupNewServiceCenterModel)
         ' getdata.EditIndex = e.neweditindex
 
         'Dim id2 = row.Cells(1).Text
+        SetupNewServiceCenterModel.SHIP_NAME = ShipName.Text
+        SetupNewServiceCenterModel.SHIP_INFO = ShipInfo.Text
+        SetupNewServiceCenterModel.SHIP_MANAGER = ShipManager.Text
+        SetupNewServiceCenterModel.SHIP_TEL = ShipTel.Text
+        SetupNewServiceCenterModel.SHIP_ADD1 = ShipAdd1.Text
+        SetupNewServiceCenterModel.SHIP_ADD2 = ShipAdd2.Text
+        SetupNewServiceCenterModel.SHIP_ADD3 = ShipAdd3.Text
+        SetupNewServiceCenterModel.ZIP = Zip.Text
+        SetupNewServiceCenterModel.E_MAIL = Email.Text
+        SetupNewServiceCenterModel.SHIP_SERVICE = ShipService.Text
+        SetupNewServiceCenterModel.OPEN_TIME = OpenTime.Text
+        SetupNewServiceCenterModel.CLOSE_TIME = CloseTime.Text
+        SetupNewServiceCenterModel.OPENING_DATE = OpeningDate.Text
+        SetupNewServiceCenterModel.CLOSING_DATE = ClosingDate.Text
+        SetupNewServiceCenterModel.SHIP_CODE = ShipCode.Text
+        SetupNewServiceCenterModel.SHIP_MARK = ShipMark.Text
+        SetupNewServiceCenterModel.ITEM_1 = Item1.Text
+        SetupNewServiceCenterModel.ITEM_2 = Item2.Text
+        SetupNewServiceCenterModel.MESS_1 = Mess1.Text
+        SetupNewServiceCenterModel.MESS_2 = Mess2.Text
+        SetupNewServiceCenterModel.MESS_3 = Mess3.Text
+        SetupNewServiceCenterModel.REGI_DEPOSIT = RegiDeposit.Text
+        SetupNewServiceCenterModel.PO_NO = PO_NO.Text
+        ' Dim delflg As String
+        If delfld.Checked = True Then
+            SetupNewServiceCenterModel.DELFG = 1
+        Else
+            SetupNewServiceCenterModel.DELFG = 0
+        End If
+
+        SetupNewServiceCenterModel.CRTCD = Session("user_Name")
+
+        Dim updated As Boolean = SetupNewServiceCentercontrol.UpdateSetupNewServiceCenterGrid(SetupNewServiceCenterModel)
+        If (updated = True) Then
+            Call showMsg("Success updated", "")
+
+            ShipName.Text = ""
+            ShipInfo.Text = ""
+            ShipManager.Text = ""
+            ShipTel.Text = ""
+            ShipAdd1.Text = ""
+            ShipAdd2.Text = ""
+            ShipAdd3.Text = ""
+            Zip.Text = ""
+            Email.Text = ""
+            ShipService.Text = ""
+            OpenTime.Text = ""
+            CloseTime.Text = ""
+            OpeningDate.Text = ""
+            ClosingDate.Text = ""
+            ShipCode.Text = ""
+            ShipMark.Text = ""
+            Item1.Text = ""
+            Item2.Text = ""
+            Mess1.Text = ""
+            Mess2.Text = ""
+            Mess3.Text = ""
+            RegiDeposit.Text = ""
+            PO_NO.Text = ""
+            delfld.Checked = False
+
+        Else
+            Call showMsg("updated failed", "")
+            data.Visible = False
+            addfile.Visible = True
+        End If
+
+        data.Visible = True
+        addfile.Visible = False
+        pageload()
     End Sub
 
-    Protected Sub OnRowEditing(sender As Object, e As GridViewEditEventArgs)
-        ' GridView1.EditIndex = e.NewEditIndex
-        'Me.BindGrid()
-        Dim SetupNewServiceCenterModel As New SetupNewServiceCenterModel
-        Dim SetupNewServiceCentercontrol As New SetupNewServiceCenterControl
-        Dim _Datatble As DataTable = SetupNewServiceCentercontrol.ShowSetupNewServiceCenterGrid(SetupNewServiceCenterModel)
-        Dim _dataview As New DataView(_Datatble)
-        getdata.DataSource = _dataview
-        getdata.DataBind()
+    Protected Sub getdata_RowCommand(sender As Object, e As GridViewCommandEventArgs)
+        If e.CommandName = "goto" Then
+            Dim index As Integer = Convert.ToInt32(e.CommandArgument)
+
+
+            Dim SetupNewServiceCenterModel As New SetupNewServiceCenterModel
+            Dim SetupNewServiceCentercontrol As New SetupNewServiceCenterControl
+            SetupNewServiceCenterModel.SHIP_CODE = index
+            ShipCode.Text = index
+            Dim _Datatble As DataTable = SetupNewServiceCentercontrol.ShowSetupNewServiceCenterGrid(SetupNewServiceCenterModel)
+            If Not IsDBNull(_Datatble.Rows(0)("ShipName")) Then
+                ShipName.Text = _Datatble.Rows(0)("ShipName")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("ShipInfo")) Then
+                ShipInfo.Text = _Datatble.Rows(0)("ShipInfo")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("ShipManager")) Then
+                ShipManager.Text = _Datatble.Rows(0)("ShipManager")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("ShipService")) Then
+                ShipService.Text = _Datatble.Rows(0)("ShipService")
+            End If
+            'If Not IsDBNull(_Datatble.Rows(0)("ShipCode")) Then
+            'ShipCode.Text = _Datatble.Rows(0)("ShipCode")
+            ' End If
+
+            If Not IsDBNull(_Datatble.Rows(0)("ShipMark")) Then
+                ShipMark.Text = _Datatble.Rows(0)("ShipMark")
+            End If
+
+            If Not IsDBNull(_Datatble.Rows(0)("DELFG")) Then
+                If _Datatble.Rows(0)("DELFG") = 0 Then
+                    delfld.Checked = False
+                Else
+                    delfld.Checked = True
+                End If
+            End If
+            btnAddNew.Visible = False
+            Edit.Visible = True
+            'filename.Visible = False
+            'Textfilename.Visible = True
+            data.Visible = False
+            addfile.Visible = True
+
+            Header.Text = "Setup New Servicecenter"
+        End If
+
+    End Sub
+
+    Protected Sub getdata_PageIndexChanging(sender As Object, e As GridViewPageEventArgs)
+        getdata.PageIndex = e.NewPageIndex
+        pageload()
+    End Sub
+
+    ' Protected Sub OnRowEditing(sender As Object, e As GridViewEditEventArgs)
+    '' GridView1.EditIndex = e.NewEditIndex
+    ''Me.BindGrid()
+    ' Dim SetupNewServiceCenterModel As New SetupNewServiceCenterModel
+    ' Dim SetupNewServiceCentercontrol As New SetupNewServiceCenterControl
+    'Dim _Datatble As DataTable = SetupNewServiceCentercontrol.ShowSetupNewServiceCenterGrid(SetupNewServiceCenterModel)
+    'Dim _dataview As New DataView(_Datatble)
+    ' getdata.DataSource = _dataview
+    ' getdata.DataBind()
+    'End Sub
+
+    Protected Sub btnView_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

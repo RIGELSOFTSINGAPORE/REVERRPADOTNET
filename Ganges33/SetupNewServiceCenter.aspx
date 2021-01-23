@@ -61,7 +61,10 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h3 class="card-title ">Setup New Servicecenter</h3>
+                 <%-- <h3 class="card-title ">Setup New Servicecenter</h3>--%>
+                    <h3 class="card-title " >
+                      <asp:label id="Header" Text="" runat="server" >                      </asp:label>
+                  </h3>
                   <p class="card-category"></p>
                 </div>
                 <div class="card-body " >
@@ -119,7 +122,7 @@
                             </label>
                         </div>
                         <div>
-                            <asp:TextBox ID="ShipAdd1" runat="server" value="" Height="33px" Width="100%" class="form-file-upload duration  serverlbl" />
+                            <asp:TextBox ID="ShipAdd1" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" />
                            
                         </div>
                     </div>
@@ -323,11 +326,11 @@
          <div class="row">
                         <div class="col-sm-2">
                             <label>
-                                Ragi Deposit
+                                Regi Deposit
                             </label>
                         </div>
                         <div>
-                            <asp:TextBox ID="RagiDeposit" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" />
+                            <asp:TextBox ID="RegiDeposit" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" />
                            
                         </div>
                     </div>
@@ -360,7 +363,8 @@
                    
                    
                             <div>
- <asp:Button ID="btnAddNew" runat="server" Text="Add New" class="btn btn-primary " />
+ <asp:Button ID="btnAddNew" runat="server" Text="Create" class="btn btn-primary " />
+                                 <asp:Button ID="Edit" runat="server" Text="Save" class="btn btn-primary " />
                     </div>
 
 
@@ -378,24 +382,95 @@
                       <asp:Button ID="Create" runat="server" Text="Create" class="btn btn-primary " />
                   </div>
                     <div>
-                        <asp:GridView ID="getdata" AutoGenerateColumns="false"  DataKeyNames="SHIP_CODE" runat="server">
+                        <%--<asp:GridView ID="getdata" AutoGenerateColumns="false"  DataKeyNames="SHIP_CODE" runat="server">--%>
+
+                            <asp:GridView ID="getdata" runat="server" AutoGenerateColumns="false" AllowPaging="true" PageSize="10" OnPageIndexChanging="getdata_PageIndexChanging" OnRowCommand="getdata_RowCommand"
+                Style="align-self: center" HeaderStyle-BackColor="#8e24aa" HeaderStyle-ForeColor="White"  CssClass="col-sm-12" ShowHeaderWhenEmpty="true" EmptyDataText="No records Found">
+                <EmptyDataTemplate>No Record Available</EmptyDataTemplate>
+                <EmptyDataRowStyle HorizontalAlign="Center" />
+
+
                              <Columns>
-        <asp:BoundField DataField="SHIP_NAME" HeaderText="Ship Name" />
+        <%--<asp:BoundField DataField="SHIP_NAME" HeaderText="Ship Name" />
         <asp:BoundField DataField="SHIP_INFO" HeaderText="Ship Info" />
         <asp:BoundField DataField="SHIP_MANAGER" HeaderText="Ship Manager" />
         <asp:BoundField DataField="SHIP_SERVICE" HeaderText="Ship Service " />
         <asp:BoundField DataField="SHIP_CODE" HeaderText="Ship Code" />
         <asp:BoundField DataField="SHIP_MARK" HeaderText="ship Mark" />
-        <asp:BoundField DataField="DELFG" HeaderText="Delflg" />
-                                 <asp:TemplateField >
+        <asp:BoundField DataField="DELFG" HeaderText="Delflg" />--%>
+
+                                 <asp:TemplateField HeaderText="SHIP_NAME" ItemStyle-Width="150">
+                        <ItemTemplate>
+                            <asp:Label ID="SHIP_NAME" runat="server" Text='<%# Eval("SHIP_NAME") %>'></asp:Label>
+                        </ItemTemplate>
+                        <%--<ItemTemplate>
+                            <asp:Label ID="SHIP_NAME" runat="server" Text='<%# Eval("SHIP_NAME") %>'></asp:Label>
+                        </ItemTemplate>--%>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+
+
+                                  <asp:TemplateField HeaderText="SHIP_INFO" ItemStyle-Width="150">
+                        <ItemTemplate>
+                            <asp:Label ID="SHIP_INFO" runat="server" Text='<%# Eval("SHIP_INFO") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+
+                                  <asp:TemplateField HeaderText="SHIP_MANAGER" ItemStyle-Width="150">
+                        <ItemTemplate>
+                            <asp:Label ID="SHIP_MANAGER" runat="server" Text='<%# Eval("SHIP_MANAGER") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+
+                                 <asp:TemplateField HeaderText="SHIP_SERVICE" ItemStyle-Width="150">
+                        <ItemTemplate>
+                            <asp:Label ID="SHIP_SERVICE" runat="server" Text='<%# Eval("SHIP_SERVICE") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+
+
+                                 <asp:TemplateField HeaderText="SHIP_CODE" ItemStyle-Width="150">
+                        <ItemTemplate>
+                            <asp:Label ID="SHIP_CODE" runat="server" Text='<%# Eval("SHIP_CODE") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+
+
+
+                                 <asp:TemplateField HeaderText="SHIP_MARK" ItemStyle-Width="150">
+                        <ItemTemplate>
+                            <asp:Label ID="SHIP_MARK" runat="server" Text='<%# Eval("SHIP_MARK") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+
+                                 <asp:TemplateField HeaderText="DELFG" ItemStyle-Width="150">
+                        <ItemTemplate>
+                            <asp:Label ID="DELFG" runat="server" Text='<%# Eval("DELFG") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+
+                  <asp:TemplateField HeaderText="EDIT" ItemStyle-Width="150">
+                        <ItemTemplate>
+                            <asp:LinkButton ID="SHIP_CODE" runat="server" CommandArgument='<%# Bind("SHIP_CODE") %>' CommandName="goto" Text="Edit"></asp:LinkButton>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+
+                                <%--<asp:TemplateField >
                                        <ItemTemplate>
                                            <asp:Button id="btnEdit" runat="server" Text="Edit" OnClick="btnEdit_Click" />
                                        </ItemTemplate>
-                                   </asp:TemplateField>
+                                   </asp:TemplateField>--%>
 
                                  <asp:TemplateField >
                                        <ItemTemplate>
-                                           <asp:Button id="btnView" runat="server" Text="View" OnClick="btnView_Click" />
+                                           <asp:Button id="btnView" runat="server" Text="View" onclick="btnView_Click" />
                                        </ItemTemplate>
                                    </asp:TemplateField>
 
