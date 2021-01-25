@@ -317,10 +317,15 @@
     End Sub
 
     Private Sub btnservicecenter_ServerClick(sender As Object, e As EventArgs) Handles btnservicecenter.ServerClick
-        Response.Redirect("Analysis_Servicecenter.aspx")
+        Response.Redirect("SetupNewServiceCenter.aspx")
     End Sub
 
     Private Sub btnuser_ServerClick(sender As Object, e As EventArgs) Handles btnuser.ServerClick
         Response.Redirect("Analysis_User.aspx")
     End Sub
+
+    Private Sub storemanagement_ServerClick(sender As Object, e As EventArgs) Handles storemanagement.ServerClick
+        Response.Redirect("analysis_store_management.aspx")
+    End Sub
+
 End Class

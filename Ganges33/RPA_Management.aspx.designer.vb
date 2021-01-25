@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class RPA_Management
 
     '''<summary>
+    '''Header control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Header As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''addfile control.
     '''</summary>
     '''<remarks>
@@ -21,6 +30,15 @@ Partial Public Class RPA_Management
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents addfile As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''id control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents id As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''TaskName control.
@@ -38,7 +56,16 @@ Partial Public Class RPA_Management
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents filename As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents filename As Global.System.Web.UI.WebControls.FileUpload
+
+    '''<summary>
+    '''Textfilename control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Textfilename As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Source control.
@@ -95,6 +122,15 @@ Partial Public Class RPA_Management
     Protected WithEvents btnUpload As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''Edit control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Edit As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''Back control.
     '''</summary>
     '''<remarks>
@@ -113,6 +149,15 @@ Partial Public Class RPA_Management
     Protected WithEvents data As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
+    '''Create control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents Create As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''getdata control.
     '''</summary>
     '''<remarks>
@@ -120,4 +165,31 @@ Partial Public Class RPA_Management
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents getdata As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''BtnCancel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents BtnCancel As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''BtnOK control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents BtnOK As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''lblMsg control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblMsg As Global.System.Web.UI.WebControls.Label
 End Class

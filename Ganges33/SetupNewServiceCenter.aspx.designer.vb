@@ -11,329 +11,320 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Analysis
+Partial Public Class SetupNewServiceCenter
 
     '''<summary>
-    '''head control.
+    '''Header control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents head As Global.System.Web.UI.WebControls.ContentPlaceHolder
+    Protected WithEvents Header As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''form1 control.
+    '''addfile control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+    Protected WithEvents addfile As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''Panel1 control.
+    '''ShipName control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Panel1 As Global.System.Web.UI.WebControls.Panel
+    Protected WithEvents ShipName As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''LblShipName control.
+    '''ShipInfo control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents LblShipName As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents ShipInfo As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''lblUser control.
+    '''ShipManager control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lblUser As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents ShipManager As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''BtnLogof control.
+    '''ShipTel control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents BtnLogof As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents ShipTel As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''BtnHome control.
+    '''ShipAdd1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents BtnHome As Global.System.Web.UI.WebControls.ImageButton
+    Protected WithEvents ShipAdd1 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''A1 control.
+    '''ShipAdd2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents A1 As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents ShipAdd2 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''admin control.
+    '''ShipAdd3 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents admin As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents ShipAdd3 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''btnservicecenter control.
+    '''Zip control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnservicecenter As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents Zip As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''btnuser control.
+    '''Email control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnuser As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents Email As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''A3 control.
+    '''ShipService control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents A3 As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents ShipService As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''dashboard control.
+    '''OpenTime control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents dashboard As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents OpenTime As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''btnDashboard control.
+    '''CloseTime control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnDashboard As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents CloseTime As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''fileupload control.
+    '''OpeningDate control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents fileupload As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents OpeningDate As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''btnFileUpload control.
+    '''ClosingDate control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnFileUpload As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents ClosingDate As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Analysis_Export control.
+    '''ShipCode control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Analysis_Export As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents ShipCode As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''btnExportData control.
+    '''ShipMark control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnExportData As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents ShipMark As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Analysis_Refresh control.
+    '''Item1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Analysis_Refresh As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents Item1 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''btnReport control.
+    '''Item2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnReport As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents Item2 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Analysis_Recovery control.
+    '''Mess1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Analysis_Recovery As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents Mess1 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''btnRecovery control.
+    '''Mess2 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnRecovery As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents Mess2 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''drp1 control.
+    '''Mess3 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents drp1 As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents Mess3 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''analyis control.
+    '''RegiDeposit control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents analyis As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents RegiDeposit As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''btnUploadSummary control.
+    '''PO_NO control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnUploadSummary As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents PO_NO As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''btnUploadVerification control.
+    '''delfld control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnUploadVerification As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents delfld As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
-    '''btnPartsCompare control.
+    '''btnAddNew control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnPartsCompare As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents btnAddNew As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''storemanagement control.
+    '''Edit control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents storemanagement As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents Edit As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''drp2 control.
+    '''Back control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents drp2 As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents Back As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''rpa control.
+    '''data control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents rpa As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents data As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''A2 control.
+    '''Create control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents A2 As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents Create As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''btnscheduler control.
+    '''getdata control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnscheduler As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents getdata As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''btnRpaLog control.
+    '''BtnCancel control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnRpaLog As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents BtnCancel As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''btnRpaTaskApp control.
+    '''BtnOK control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnRpaTaskApp As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents BtnOK As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''btnRpaOnOff control.
+    '''lblMsg control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents btnRpaOnOff As Global.System.Web.UI.HtmlControls.HtmlAnchor
-
-    '''<summary>
-    '''ContentPlaceHolder1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
+    Protected WithEvents lblMsg As Global.System.Web.UI.WebControls.Label
 End Class
