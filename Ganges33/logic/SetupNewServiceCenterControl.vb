@@ -126,7 +126,7 @@ Public Class SetupNewServiceCenterControl
 
     Public Function ShowSetupNewServiceCenterGrid(queryParams As SetupNewServiceCenterModel) As DataTable
 
-        Log4NetControl.ComInfoLogWrite(Log4NetControl.UserID)
+        'Log4NetControl.ComInfoLogWrite(Log4NetControl.UserID)
         Dim DateTimeNow As DateTime = DateTime.Now
         Dim dtNow As DateTime = DateTimeNow.AddMinutes(ConfigurationManager.AppSettings("TimeDiff"))
         Log4NetControl.ComInfoLogWrite(Log4NetControl.UserID)
@@ -134,7 +134,7 @@ Public Class SetupNewServiceCenterControl
         Dim dt As DataTable = New DataTable()
         Dim flag As Boolean = False
         Dim sqlStr As String = "SELECT "
-        sqlStr = sqlStr & " ship_name,ship_info,ship_manager,ship_service,ship_code,ship_mark,DELFG from M_SHIP_BASE "
+        sqlStr = sqlStr & " * from M_SHIP_BASE "
         If queryParams.SHIP_CODE <> 0 Then
             sqlStr = sqlStr & "Where @SHIP_CODE = ship_code "
             dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@SHIP_CODE", queryParams.SHIP_CODE))
@@ -156,6 +156,7 @@ Public Class SetupNewServiceCenterControl
         Dim dt As DataTable = New DataTable()
         Dim flag As Boolean = False
         Dim sqlStr As String = "UPDATE "
+
         sqlStr = sqlStr & " M_SHIP_BASE "
         sqlStr = sqlStr & "SET "
         sqlStr = sqlStr & "CRTDT =@CRTCD, "
@@ -189,14 +190,14 @@ Public Class SetupNewServiceCenterControl
         sqlStr = sqlStr & "MESS_2=@MESS_2, "
         sqlStr = sqlStr & "MESS_3=@MESS_3, "
         sqlStr = sqlStr & "REGI_DEPOSIT=@REGI_DEPOSIT, "
-        sqlStr = sqlStr & "PO_NO=@PO_NO, "
+        sqlStr = sqlStr & "PO_NO=@PO_NO "
 
-        sqlStr = sqlStr & " where  DELFG=@DELFG  "
+        'sqlStr = sqlStr & "DELFG=@DELFG  "
 
 
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@CRTDT", dtNow))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@CRTCD", queryParams.CRTCD))
-        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@UPDDT", queryParams.UPDDT))
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@UPDDT", dtNow))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@UPDCD", queryParams.UPDCD))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@UPDPG", queryParams.UPDPG))
 
@@ -229,7 +230,7 @@ Public Class SetupNewServiceCenterControl
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@PO_NO", queryParams.PO_NO))
 
         If queryParams.SHIP_CODE <> 0 Then
-            sqlStr = sqlStr & " Where SHIP_CODE = @SHIP_CODE "
+            sqlStr = sqlStr & "Where SHIP_CODE = @SHIP_CODE "
             dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@SHIP_CODE", queryParams.SHIP_CODE))
         End If
 

@@ -382,6 +382,7 @@
     <Content Include="pagewall_2\__MACOSX\._wall_person-2.png" />
     <Content Include="pagewall_2\__MACOSX\._wall_repair-2.png" />
     <Content Include="pagewall_2\__MACOSX\._wall_system-2.png" />
+    <Content Include="Popup.aspx" />
     <Content Include="Repair_1.aspx" />
     <Content Include="Repair_1_Detail.aspx" />
     <Content Include="rpa.aspx" />
@@ -991,6 +992,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Popup.aspx.designer.vb">
+      <DependentUpon>Popup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Popup.aspx.vb">
+      <DependentUpon>Popup.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Repair_1.aspx.designer.vb">
       <DependentUpon>Repair_1.aspx</DependentUpon>
     </Compile>
@@ -1391,6 +1399,7 @@
     <Content Include="pagewall\wall_web_create.psd" />
     <Content Include="Site3msg.Master" />
     <Content Include="Site5.Master" />
+    <Content Include="test.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

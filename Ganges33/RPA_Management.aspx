@@ -177,7 +177,7 @@
                    
                    
                             <div>
- <asp:Button ID="btnUpload" runat="server" Text="Create" class="btn btn-primary " />
+                                <asp:Button ID="btnUpload" runat="server" Text="Create" class="btn btn-primary " />
                                 <asp:Button ID="Edit" runat="server" Text="Save" class="btn btn-primary " />
                     </div>
 
@@ -186,7 +186,7 @@
                  <div>
                         <asp:Button ID="Back" runat="server" Text="Back" class="btn btn-primary pull-right" />
                     </div>     
-     </div>
+               </div>
                     
                 <div runat="server" id="data">
                   <div>

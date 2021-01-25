@@ -7,8 +7,9 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
     <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/start/jquery-ui.css" rel="stylesheet">
      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-   
+   <script type="text/javascript" src="test.js"></script>
 
     <link href="assets/jquery-ui_theme.css" rel="stylesheet" />
     <link href="assets/jquery-ui.css" rel="stylesheet" />
@@ -49,6 +50,9 @@
             });
         }
     </script>
+
+   
+                      
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   
@@ -63,7 +67,7 @@
                 <div class="card-header card-header-primary">
                  <%-- <h3 class="card-title ">Setup New Servicecenter</h3>--%>
                     <h3 class="card-title " >
-                      <asp:label id="Header" Text="" runat="server" >                      </asp:label>
+                      <asp:label id="Header" Text="" runat="server" > </asp:label>
                   </h3>
                   <p class="card-category"></p>
                 </div>
@@ -75,6 +79,8 @@
                         </div>
                         <div>
                              <asp:TextBox ID="ShipName" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" />
+                      <%--   <asp:RequiredFieldValidator ID="SName" runat="server" ControlToValidate="ShipName" ErrorMessage="Please enter a shipname"   
+ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                         </div>
                         </div>
 
@@ -384,7 +390,7 @@
                     <div>
                         <%--<asp:GridView ID="getdata" AutoGenerateColumns="false"  DataKeyNames="SHIP_CODE" runat="server">--%>
 
-                            <asp:GridView ID="getdata" runat="server" AutoGenerateColumns="false" AllowPaging="true" PageSize="10" OnPageIndexChanging="getdata_PageIndexChanging" OnRowCommand="getdata_RowCommand"
+                            <asp:GridView ID="getdata" runat="server" AutoGenerateColumns="false" AllowPaging="true" PageSize="10" OnPageIndexChanging="getdata_PageIndexChanging" OnRowCommand="getdata_RowCommand1"
                 Style="align-self: center" HeaderStyle-BackColor="#8e24aa" HeaderStyle-ForeColor="White"  CssClass="col-sm-12" ShowHeaderWhenEmpty="true" EmptyDataText="No records Found">
                 <EmptyDataTemplate>No Record Available</EmptyDataTemplate>
                 <EmptyDataRowStyle HorizontalAlign="Center" />
@@ -432,16 +438,16 @@
                     </asp:TemplateField>
 
 
-                                 <asp:TemplateField HeaderText="SHIP_CODE" ItemStyle-Width="150">
+<%--                                 <asp:TemplateField HeaderText="SHIP_CODE" ItemStyle-Width="150">
                         <ItemTemplate>
                             <asp:Label ID="SHIP_CODE" runat="server" Text='<%# Eval("SHIP_CODE") %>'></asp:Label>
                         </ItemTemplate>
                         <ItemStyle Width="150px"></ItemStyle>
-                    </asp:TemplateField>
+                    </asp:TemplateField>--%>
 
 
 
-                                 <asp:TemplateField HeaderText="SHIP_MARK" ItemStyle-Width="150">
+                                 <asp:TemplateField HeaderText="SHIP_MARK" ItemStyle-Width="150" >
                         <ItemTemplate>
                             <asp:Label ID="SHIP_MARK" runat="server" Text='<%# Eval("SHIP_MARK") %>'></asp:Label>
                         </ItemTemplate>
@@ -468,15 +474,23 @@
                                        </ItemTemplate>
                                    </asp:TemplateField>--%>
 
-                                 <asp:TemplateField >
+                                 <%--<asp:TemplateField >
                                        <ItemTemplate>
                                            <asp:Button id="btnView" runat="server" Text="View" onclick="btnView_Click" />
                                        </ItemTemplate>
                                    </asp:TemplateField>
 
+                                 <asp:TemplateField>--%>
+                 <asp:TemplateField>
+                     <ItemTemplate>
+                    <asp:HyperLink ID="lnkView"  Text="View" NavigateUrl="javascript:;" runat="server" />
+                   </ItemTemplate>
+                </asp:TemplateField>
+                  <%--<asp:TemplateField>--%>
                                    
     </Columns>
                         </asp:GridView>
+
                     </div>
                 </div>
                 
@@ -499,5 +513,14 @@
        
         <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
     </div>
+
+
+
+ 
+
+   
+
+
+
 </asp:Content>
 

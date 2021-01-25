@@ -197,7 +197,7 @@ Public Class SetupNewServiceCenter
         Header.Text = "Setup New Servicecenter"
     End Sub
 
-    Protected Sub btnEdit_Click(sender As Object, e As EventArgs)
+    Protected Sub Edit_Click(sender As Object, e As EventArgs) Handles Edit.Click
         Dim SetupNewServiceCenterModel As New SetupNewServiceCenterModel
         Dim SetupNewServiceCentercontrol As New SetupNewServiceCenterControl
         ' Dim row As GridViewRow = CType((TryCast(sender, Button)).NamingContainer, GridViewRow)
@@ -237,6 +237,8 @@ Public Class SetupNewServiceCenter
         End If
 
         SetupNewServiceCenterModel.CRTCD = Session("user_Name")
+        SetupNewServiceCenterModel.UPDCD = Session("user_Name")
+        SetupNewServiceCenterModel.UPDPG = "Test"
 
         Dim updated As Boolean = SetupNewServiceCentercontrol.UpdateSetupNewServiceCenterGrid(SetupNewServiceCenterModel)
         If (updated = True) Then
@@ -278,9 +280,9 @@ Public Class SetupNewServiceCenter
         pageload()
     End Sub
 
-    Protected Sub getdata_RowCommand(sender As Object, e As GridViewCommandEventArgs)
+    Protected Sub getdata_RowCommand1(sender As Object, e As GridViewCommandEventArgs)
         If e.CommandName = "goto" Then
-            Dim index As Integer = Convert.ToInt32(e.CommandArgument)
+            Dim index As String = Convert.ToString(e.CommandArgument)
 
 
             Dim SetupNewServiceCenterModel As New SetupNewServiceCenterModel
@@ -288,25 +290,84 @@ Public Class SetupNewServiceCenter
             SetupNewServiceCenterModel.SHIP_CODE = index
             ShipCode.Text = index
             Dim _Datatble As DataTable = SetupNewServiceCentercontrol.ShowSetupNewServiceCenterGrid(SetupNewServiceCenterModel)
-            If Not IsDBNull(_Datatble.Rows(0)("ShipName")) Then
-                ShipName.Text = _Datatble.Rows(0)("ShipName")
+            If Not IsDBNull(_Datatble.Rows(0)("Ship_Name")) Then
+                ShipName.Text = _Datatble.Rows(0)("Ship_Name")
             End If
-            If Not IsDBNull(_Datatble.Rows(0)("ShipInfo")) Then
-                ShipInfo.Text = _Datatble.Rows(0)("ShipInfo")
+            If Not IsDBNull(_Datatble.Rows(0)("Ship_Info")) Then
+                ShipInfo.Text = _Datatble.Rows(0)("Ship_Info")
             End If
-            If Not IsDBNull(_Datatble.Rows(0)("ShipManager")) Then
-                ShipManager.Text = _Datatble.Rows(0)("ShipManager")
+            If Not IsDBNull(_Datatble.Rows(0)("Ship_Manager")) Then
+                ShipManager.Text = _Datatble.Rows(0)("Ship_Manager")
             End If
-            If Not IsDBNull(_Datatble.Rows(0)("ShipService")) Then
-                ShipService.Text = _Datatble.Rows(0)("ShipService")
+            If Not IsDBNull(_Datatble.Rows(0)("Ship_Tel")) Then
+                ShipTel.Text = _Datatble.Rows(0)("Ship_Tel")
             End If
+            If Not IsDBNull(_Datatble.Rows(0)("Ship_Add1")) Then
+                ShipAdd1.Text = _Datatble.Rows(0)("Ship_Add1")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("Ship_Add2")) Then
+                ShipAdd2.Text = _Datatble.Rows(0)("Ship_Add2")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("Ship_Add3")) Then
+                ShipAdd3.Text = _Datatble.Rows(0)("Ship_Add3")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("Zip")) Then
+                Zip.Text = _Datatble.Rows(0)("Zip")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("e_mail")) Then
+                Email.Text = _Datatble.Rows(0)("e_mail")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("Ship_Service")) Then
+                ShipService.Text = _Datatble.Rows(0)("Ship_Service")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("open_time")) Then
+                OpenTime.Text = _Datatble.Rows(0)("open_time")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("close_time")) Then
+                CloseTime.Text = _Datatble.Rows(0)("close_time")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("opening_date")) Then
+                OpeningDate.Text = _Datatble.Rows(0)("opening_date")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("closing_date")) Then
+                ClosingDate.Text = _Datatble.Rows(0)("closing_date")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("ship_code")) Then
+                ShipCode.Text = _Datatble.Rows(0)("ship_code")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("Ship_Mark")) Then
+                ShipMark.Text = _Datatble.Rows(0)("Ship_Mark")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("Item_1")) Then
+                Item1.Text = _Datatble.Rows(0)("Item_1")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("Item_2")) Then
+                Item2.Text = _Datatble.Rows(0)("Item_2")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("mess_1")) Then
+                Mess1.Text = _Datatble.Rows(0)("mess_1")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("mess_2")) Then
+                Mess2.Text = _Datatble.Rows(0)("mess_2")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("mess_3")) Then
+                Mess3.Text = _Datatble.Rows(0)("mess_3")
+            End If
+
+            If Not IsDBNull(_Datatble.Rows(0)("Regi_Deposit")) Then
+                RegiDeposit.Text = _Datatble.Rows(0)("Regi_Deposit")
+            End If
+
+            If Not IsDBNull(_Datatble.Rows(0)("PO_no")) Then
+                PO_NO.Text = _Datatble.Rows(0)("PO_no")
+            End If
+
             'If Not IsDBNull(_Datatble.Rows(0)("ShipCode")) Then
             'ShipCode.Text = _Datatble.Rows(0)("ShipCode")
             ' End If
 
-            If Not IsDBNull(_Datatble.Rows(0)("ShipMark")) Then
-                ShipMark.Text = _Datatble.Rows(0)("ShipMark")
-            End If
+
+
 
             If Not IsDBNull(_Datatble.Rows(0)("DELFG")) Then
                 If _Datatble.Rows(0)("DELFG") = 0 Then
@@ -346,4 +407,6 @@ Public Class SetupNewServiceCenter
     Protected Sub btnView_Click(sender As Object, e As EventArgs)
 
     End Sub
+
+
 End Class
