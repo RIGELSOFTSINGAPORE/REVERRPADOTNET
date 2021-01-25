@@ -113,6 +113,15 @@ Partial Public Class Analysis
     Protected WithEvents btnuser As Global.System.Web.UI.HtmlControls.HtmlAnchor
 
     '''<summary>
+    '''A2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents A2 As Global.System.Web.UI.HtmlControls.HtmlAnchor
+
+    '''<summary>
     '''dashboard control.
     '''</summary>
     '''<remarks>

@@ -203,7 +203,48 @@
     <Content Include="assets\js\plugins\nouislider.min.js" />
     <Content Include="assets\js\plugins\perfect-scrollbar.jquery.min.js" />
     <Content Include="assets\js\plugins\sweetalert2.js" />
-    <Content Include="dashboard.html" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\Ganges33.dll" />
+    <Content Include="bin\Ganges33.pdb" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\Microsoft.Win32.Primitives.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.Process.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.DriveInfo.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Security.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.Security.Claims.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Security.Principal.Windows.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.Threading.Thread.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="icon2\placeholder-2.png" />
     <Content Include="icon2\user-3.png" />
     <Content Include="icon\back.png" />
@@ -389,6 +430,7 @@
     <Content Include="Rpa_Logs.aspx" />
     <Content Include="Rpa_LogsDetails.aspx" />
     <Content Include="Rpa_logview.aspx" />
+    <Content Include="RPA_Management.aspx" />
     <Content Include="Rpa_OnOff.aspx" />
     <Content Include="rpa_scheduler.aspx" />
     <Content Include="Rpa_TaskApp.aspx" />
@@ -663,6 +705,8 @@
     <Compile Include="logic\MoneyAggregationControl.vb" />
     <Compile Include="logic\MoneyAggregationControl1.vb" />
     <Compile Include="logic\MoneyReserveControl.vb" />
+    <Compile Include="logic\MUserControl.vb" />
+    <Compile Include="logic\MUserDataControl.vb" />
     <Compile Include="logic\OtherSalesExtendedWarrantyControl.vb" />
     <Compile Include="logic\OtherUpdateControl.vb" />
     <Compile Include="logic\PartsIoControl.vb" />
@@ -675,6 +719,7 @@
     <Compile Include="logic\PrSummaryControl.vb" />
     <Compile Include="logic\ReturnCreditControl.vb" />
     <Compile Include="logic\RpaEmailControl.vb" />
+    <Compile Include="logic\RpamanagementControl.vb" />
     <Compile Include="logic\RpaOnOffControl.vb" />
     <Compile Include="logic\RpaSchedulerControl.vb" />
     <Compile Include="logic\RpaStatusControl.vb" />
@@ -792,6 +837,8 @@
     <Compile Include="Model\MailModel.vb" />
     <Compile Include="Model\MoneyAggregationModel.vb" />
     <Compile Include="Model\MoneyReserveModel.vb" />
+    <Compile Include="Model\MUserDataModel.vb" />
+    <Compile Include="Model\MUserModel.vb" />
     <Compile Include="Model\OtherSalesExtendedWarrantyModel.vb" />
     <Compile Include="Model\OtherUpdateModel.vb" />
     <Compile Include="Model\PartsIoModel.vb" />
@@ -804,6 +851,7 @@
     <Compile Include="Model\ReturnCreditModel.vb" />
     <Compile Include="Model\RpaClientUserModel.vb" />
     <Compile Include="Model\RpaEmailModel.vb" />
+    <Compile Include="Model\RpamanagementModel.vb" />
     <Compile Include="Model\RpaOnOffModel.vb" />
     <Compile Include="Model\RpaSchedulerModel.vb" />
     <Compile Include="Model\RpaStatusModel.vb" />
@@ -1054,6 +1102,13 @@
     </Compile>
     <Compile Include="Rpa_logview.aspx.vb">
       <DependentUpon>Rpa_logview.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RPA_Management.aspx.designer.vb">
+      <DependentUpon>RPA_Management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RPA_Management.aspx.vb">
+      <DependentUpon>RPA_Management.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Rpa_OnOff.aspx.designer.vb">
@@ -1348,6 +1403,15 @@
     <Content Include="assets\scss\material-dashboard\_variables.scss" />
     <Content Include="master.Master" />
     <Content Include="assets\images\jquery-ui-1.9.2.custom.zip" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
