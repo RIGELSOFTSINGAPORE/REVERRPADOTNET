@@ -362,12 +362,9 @@ Public Class SetupNewServiceCenter
                 PO_NO.Text = _Datatble.Rows(0)("PO_no")
             End If
 
-            'If Not IsDBNull(_Datatble.Rows(0)("ShipCode")) Then
-            'ShipCode.Text = _Datatble.Rows(0)("ShipCode")
-            ' End If
-
-
-
+            If Not IsDBNull(_Datatble.Rows(0)("Ship_Code")) Then
+                ShipCode.Text = _Datatble.Rows(0)("Ship_Code")
+            End If
 
             If Not IsDBNull(_Datatble.Rows(0)("DELFG")) Then
                 If _Datatble.Rows(0)("DELFG") = 0 Then
@@ -376,6 +373,8 @@ Public Class SetupNewServiceCenter
                     delfld.Checked = True
                 End If
             End If
+            ShipCode.Visible = False
+            lblshipcode.Visible = False
             btnAddNew.Visible = False
             Edit.Visible = True
             'filename.Visible = False

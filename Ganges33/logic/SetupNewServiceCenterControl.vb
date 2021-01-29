@@ -159,7 +159,7 @@ Public Class SetupNewServiceCenterControl
 
         sqlStr = sqlStr & " M_SHIP_BASE "
         sqlStr = sqlStr & "SET "
-        sqlStr = sqlStr & "CRTDT =@CRTCD, "
+        sqlStr = sqlStr & "CRTDT =@CRTDT, "
         sqlStr = sqlStr & "CRTCD =@CRTCD, "
         sqlStr = sqlStr & "UPDDT =@UPDDT, "
         sqlStr = sqlStr & "UPDCD =@UPDCD, "
@@ -219,7 +219,7 @@ Public Class SetupNewServiceCenterControl
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@CLOSE_TIME", queryParams.CLOSE_TIME))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@OPENING_DATE", queryParams.OPENING_DATE))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@CLOSING_DATE", queryParams.CLOSING_DATE))
-        ' dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@SHIP_CODE", queryParams.SHIP_CODE))
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@SHIP_CODE", queryParams.SHIP_CODE))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@SHIP_MARK", queryParams.SHIP_MARK))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@ITEM_1", queryParams.ITEM_1))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@ITEM_2", queryParams.ITEM_2))

@@ -997,7 +997,7 @@
     </Compile>
     <Compile Include="Popup.aspx.vb">
       <DependentUpon>Popup.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Repair_1.aspx.designer.vb">
       <DependentUpon>Repair_1.aspx</DependentUpon>

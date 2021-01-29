@@ -41,6 +41,15 @@ Partial Public Class SetupNewServiceCenter
     Protected WithEvents ShipName As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''SName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SName As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
     '''ShipInfo control.
     '''</summary>
     '''<remarks>
@@ -48,6 +57,15 @@ Partial Public Class SetupNewServiceCenter
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ShipInfo As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''SInfo control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SInfo As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
     '''ShipManager control.
@@ -59,6 +77,15 @@ Partial Public Class SetupNewServiceCenter
     Protected WithEvents ShipManager As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''SManager control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SManager As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
     '''ShipTel control.
     '''</summary>
     '''<remarks>
@@ -68,6 +95,15 @@ Partial Public Class SetupNewServiceCenter
     Protected WithEvents ShipTel As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''STel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents STel As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
     '''ShipAdd1 control.
     '''</summary>
     '''<remarks>
@@ -75,6 +111,15 @@ Partial Public Class SetupNewServiceCenter
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ShipAdd1 As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''SAdd1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SAdd1 As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
     '''ShipAdd2 control.
@@ -113,6 +158,15 @@ Partial Public Class SetupNewServiceCenter
     Protected WithEvents Email As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''mail control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents mail As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
     '''ShipService control.
     '''</summary>
     '''<remarks>
@@ -122,6 +176,15 @@ Partial Public Class SetupNewServiceCenter
     Protected WithEvents ShipService As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''SService control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SService As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
     '''OpenTime control.
     '''</summary>
     '''<remarks>
@@ -129,6 +192,15 @@ Partial Public Class SetupNewServiceCenter
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents OpenTime As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''OT control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents OT As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
     '''CloseTime control.
@@ -149,6 +221,15 @@ Partial Public Class SetupNewServiceCenter
     Protected WithEvents OpeningDate As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''OD control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents OD As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
     '''ClosingDate control.
     '''</summary>
     '''<remarks>
@@ -156,6 +237,15 @@ Partial Public Class SetupNewServiceCenter
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ClosingDate As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''lblshipcode control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblshipcode As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
     '''ShipCode control.
@@ -167,6 +257,15 @@ Partial Public Class SetupNewServiceCenter
     Protected WithEvents ShipCode As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''SCode control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SCode As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
     '''ShipMark control.
     '''</summary>
     '''<remarks>
@@ -174,6 +273,15 @@ Partial Public Class SetupNewServiceCenter
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ShipMark As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''SMark control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents SMark As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
     '''Item1 control.
@@ -185,6 +293,15 @@ Partial Public Class SetupNewServiceCenter
     Protected WithEvents Item1 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''IT1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents IT1 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
     '''Item2 control.
     '''</summary>
     '''<remarks>
@@ -192,6 +309,15 @@ Partial Public Class SetupNewServiceCenter
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Item2 As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''IT2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents IT2 As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
     '''Mess1 control.
@@ -203,6 +329,15 @@ Partial Public Class SetupNewServiceCenter
     Protected WithEvents Mess1 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''M1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents M1 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
     '''Mess2 control.
     '''</summary>
     '''<remarks>
@@ -212,6 +347,15 @@ Partial Public Class SetupNewServiceCenter
     Protected WithEvents Mess2 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''M2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents M2 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
     '''Mess3 control.
     '''</summary>
     '''<remarks>
@@ -219,6 +363,15 @@ Partial Public Class SetupNewServiceCenter
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Mess3 As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''M3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents M3 As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
     '''RegiDeposit control.
@@ -237,6 +390,15 @@ Partial Public Class SetupNewServiceCenter
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents PO_NO As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''PoNo control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents PoNo As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
     '''delfld control.
