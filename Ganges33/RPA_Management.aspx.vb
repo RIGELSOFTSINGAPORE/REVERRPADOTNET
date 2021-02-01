@@ -83,21 +83,37 @@ Public Class RPA_Management
         Dim path = "C:\Rpa\Tasks\"
         Dim serverpath = path & filename.FileName.ToString
 
-        If (File.Exists(serverpath)) Then
-            Call showMsg("file already exists", "")
+
+        If (filename.FileName = "") Then
+
+            Call showMsg("Please select the file", "")
+            data.Visible = False
+            addfile.Visible = True
             Exit Sub
         Else
-            If (Not System.IO.Directory.Exists(serverpath)) Then
 
-                Call showMsg("Folder is not exists", "")
+            If System.IO.File.Exists(serverpath) Then
+                Call showMsg("file already exists", "")
                 data.Visible = False
                 addfile.Visible = True
                 Exit Sub
             Else
-                filename.SaveAs(serverpath + filename.FileName)
+                If (Not System.IO.Directory.Exists(path)) Then
+
+                    Call showMsg("Folder is not exists", "")
+                    data.Visible = False
+                    addfile.Visible = True
+                    Exit Sub
+                Else
+                    filename.SaveAs(serverpath + filename.FileName)
+                End If
+
             End If
 
         End If
+
+
+
         Dim Rpamanagementmodel As New RpamanagementModel
         Dim Rpamanagementcontrol As New RpamanagementControl
         Rpamanagementmodel.TASK_NAME = TaskName.Text
@@ -112,7 +128,7 @@ Public Class RPA_Management
 
         Dim insertCredit As Boolean = Rpamanagementcontrol.Insert_Rpa(Rpamanagementmodel)
         If (insertCredit = True) Then
-            Call showMsg("Success updated", "")
+            Call showMsg("Success Saved", "")
 
             TaskName.Text = ""
             Textfilename.Text = ""
@@ -122,7 +138,7 @@ Public Class RPA_Management
             delfld.Checked = False
 
         Else
-            Call showMsg("updated failed", "")
+            Call showMsg("Failed to save", "")
             data.Visible = False
             addfile.Visible = True
         End If

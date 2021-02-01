@@ -49,8 +49,39 @@ Public Class Analysis_User
     Protected Sub btnAdd_Click(sender As Object, e As EventArgs)
         GridSetupUser.Visible = False
         AddUser.Visible = True
+        btnCreate.Visible = True
         btnAdd.Visible = False
-
+        lblUsername.Visible = True
+        txtUserId.Visible = True
+        listShipBranch.Visible = False
+        txtBranchCode1.Visible = True
+        Edit.Visible = False
+        txtUserId.Text = ""
+        delflag.Checked = False
+        admindelflg.Checked = False
+        'radionGender.Items.Clear()
+        txtBranchCode2.Text = ""
+        txtSuperior.Text = ""
+        txtZipCode.Text = ""
+        txtMobile.Text = ""
+        txtEmailId.Text = ""
+        txtTelephone1.Text = ""
+        txtAddressLine1.Text = ""
+        txtAddressLine2.Text = ""
+        txtTelephone.Text = ""
+        txtAddressLine3.Text = ""
+        txtdob.Text = ""
+        txtBranchCode3.Text = ""
+        txtBranchCode4.Text = ""
+        txtMiddleName.Text = ""
+        txtName.Text = ""
+        txtBranchCode1.Text = ""
+        txtUserlvl.Text = ""
+        txtSurname.Text = ""
+        txtPassword.Text = ""
+        txtBranchCode5.Text = ""
+        txtUserId.Text = ""
+        txtEnggId.Text = ""
 
     End Sub
 
@@ -162,7 +193,7 @@ Public Class Analysis_User
                 txtUserId.Text = ""
                 delflag.Checked = False
                 admindelflg.Checked = False
-                radionGender.Enabled = False
+                radionGender.Items.Clear()
                 txtBranchCode2.Text = ""
                 txtSuperior.Text = ""
                 txtZipCode.Text = ""
@@ -211,16 +242,149 @@ Public Class Analysis_User
         If e.CommandName = "goto" Then
             Dim index As String = Convert.ToString(e.CommandArgument)
 
-            Dim cstype As Type = Me.GetType()
-            Dim str2 As String = "window.open('Analysis_Servicecenter.aspx?UserId=" & index & "','myWindow','width=800,height=500,left=100,top=100,resizable=yes')"
-            'Client.RegisterStartupScript(This.GetType(), "script", str2, True)
-            ClientScript.RegisterStartupScript(cstype, "script", str2, True)
+            Dim shipBranch As String
+
+            Dim MuserModel As MUserModel = New MUserModel()
+            Dim MUserControl As MUserControl = New MUserControl()
+            MuserModel.UserId = index
+            id.Text = index
+
+
+            Dim _Datatble As DataTable = MUsercontrol.GetUserInfo(MUsermodel)
+            'If Not IsDBNull(_Datatble.Rows(0)("DELFG")) Then
+            '    delflag.Text = _Datatble.Rows(0)("DELFG")
+            'End If
+            If Not IsDBNull(_Datatble.Rows(0)("user_id")) Then
+                txtUserId.Text = _Datatble.Rows(0)("user_id")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("password")) Then
+                txtPassword.Text = _Datatble.Rows(0)("password")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("eng_id")) Then
+                txtEnggId.Text = _Datatble.Rows(0)("eng_id")
+            End If
+
+
+            If Not IsDBNull(_Datatble.Rows(0)("user_level")) Then
+                txtUserlvl.Text = _Datatble.Rows(0)("user_level")
+            End If
+            ' Dim code As Int16 = 0
+
+            If Not IsDBNull(_Datatble.Rows(0)("ship_1")) Then
+                shipBranch = _Datatble.Rows(0)("ship_1")
+                Dim elements() As String = shipBranch.Split(New Char() {","c}, StringSplitOptions.RemoveEmptyEntries)
+                For Each element As String In elements
+                    listShipBranch.Items.Add(New ListItem(element, ""))
+                Next
+
+
+            End If
+
+            If Not IsDBNull(_Datatble.Rows(0)("ship_2")) Then
+                txtBranchCode2.Text = _Datatble.Rows(0)("ship_2")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("ship_3")) Then
+                txtBranchCode3.Text = _Datatble.Rows(0)("ship_3")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("ship_4")) Then
+                txtBranchCode4.Text = _Datatble.Rows(0)("ship_4")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("ship_5")) Then
+                txtBranchCode5.Text = _Datatble.Rows(0)("ship_5")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("surname")) Then
+                txtSurname.Text = _Datatble.Rows(0)("surname")
+            End If
+
+            If Not IsDBNull(_Datatble.Rows(0)("name")) Then
+                txtName.Text = _Datatble.Rows(0)("name")
+            End If
+
+            If Not IsDBNull(_Datatble.Rows(0)("mid_name")) Then
+                txtMiddleName.Text = _Datatble.Rows(0)("mid_name")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("birthday")) Then
+                txtdob.Text = _Datatble.Rows(0)("birthday")
+            End If
+
+
+            If Not IsDBNull(_Datatble.Rows(0)("sex")) Then
+                If _Datatble.Rows(0)("sex") = 0 Then
+                    radionGender.SelectedValue = 0
+                Else
+                    radionGender.SelectedValue = 1
+                End If
+            End If
+
+            If Not IsDBNull(_Datatble.Rows(0)("superior")) Then
+                txtSuperior.Text = _Datatble.Rows(0)("superior")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("add_1")) Then
+                txtAddressLine1.Text = _Datatble.Rows(0)("add_1")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("add_2")) Then
+                txtAddressLine2.Text = _Datatble.Rows(0)("add_2")
+            End If
+
+            If Not IsDBNull(_Datatble.Rows(0)("add_3")) Then
+                txtAddressLine3.Text = _Datatble.Rows(0)("add_3")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("zip")) Then
+                txtZipCode.Text = _Datatble.Rows(0)("zip")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("tel")) Then
+                txtTelephone.Text = _Datatble.Rows(0)("tel")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("mobile")) Then
+                txtMobile.Text = _Datatble.Rows(0)("mobile")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("e_mail")) Then
+                txtEmailId.Text = _Datatble.Rows(0)("e_mail")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("em_tel")) Then
+                txtTelephone1.Text = _Datatble.Rows(0)("em_tel")
+            End If
+
+
+            If Not IsDBNull(_Datatble.Rows(0)("DELFG")) Then
+                If _Datatble.Rows(0)("DELFG") = 0 Then
+                    delflag.Checked = False
+                Else
+                    delflag.Checked = True
+                End If
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("admin_flg")) Then
+                If _Datatble.Rows(0)("admin_flg") = 0 Then
+                    admindelflg.Checked = False
+                Else
+                    admindelflg.Checked = True
+                End If
+            End If
+
+            'btnUpload.Visible = False
+            Edit.Visible = True
+            txtBranchCode1.Visible = False
+            txtUserId.Visible = False
+            lblUsername.Visible = False
+            txtUserId.Visible = False
+            'filename.Visible = False
+            'Textfilename.Visible = True
+            btnAdd.Visible = False
+            listShipBranch.Visible = True
+            GridSetupUser.Visible = False
+            AddUser.Visible = True
+            btnCreate.Visible = False
+            Header.Text = "User Management-Edit"
+            'Dim cstype As Type = Me.GetType()
+            'Dim str2 As String = "window.open('Analysis_Servicecenter.aspx?UserId=" & index & "','myWindow','width=800,height=500,left=100,top=100,resizable=yes')"
+            ''Client.RegisterStartupScript(This.GetType(), "script", str2, True)
+            'ClientScript.RegisterStartupScript(cstype, "script", str2, True)
 
         End If
 
     End Sub
 
-    Protected Sub btnEdit_Click(sender As Object, e As EventArgs)
+    Protected Sub Edit_Click(sender As Object, e As EventArgs) Handles Edit.Click
 
         'Dim index As String = Convert.ToString(e.CommandArgument)
 
@@ -253,6 +417,11 @@ Public Class Analysis_User
 
         End If
 
+
+
+
+
+
         'If radionGender.SelectedItem.Value = "Male" Then
 
         '    genderid = radionGender.SelectedItem.Value
@@ -280,7 +449,32 @@ Public Class Analysis_User
         MuserModel.eng_id = txtEnggId.Text
         MuserModel.admin_flg = adminflag
         MuserModel.user_level = txtUserlvl.Text
-        MuserModel.ship_1 = txtBranchCode1.Text
+
+        'For i As Integer = 0 To listShipBranch.Items.Count - 1
+
+        '    If listShipBranch.Items(i).Selected Then
+        '        getvalue = getvalue + listShipBranch.Items(i).Value & ","
+
+        '    End If
+        'Next
+
+        Dim get_value As String = ""
+
+        For i As Integer = 0 To listShipBranch.Items.Count - 1
+
+            If listShipBranch.Items(i).Selected Then
+                get_value = get_value + listShipBranch.Items(i).Text & ","
+            End If
+        Next
+
+        'Dim shipcode As String = listShipBranch.SelectedValue
+        'Dim elements As String = shipcode.Join(",", shipcode)
+        'For Each element As String In elements
+        '    listShipBranch.Items.Add(New ListItem(element, ""))
+        '    MuserModel.ship_1 = element
+        'Next
+
+        MuserModel.ship_1 = get_value
         MuserModel.ship_2 = txtBranchCode2.Text
         MuserModel.ship_3 = txtBranchCode3.Text
         MuserModel.ship_4 = txtBranchCode4.Text
@@ -319,11 +513,12 @@ Public Class Analysis_User
                 txtUserId.Text = ""
                 delflag.Checked = False
                 admindelflg.Checked = False
-                radionGender.Enabled = False
+                radionGender.Items.Clear()
                 txtBranchCode2.Text = ""
                 txtSuperior.Text = ""
                 txtZipCode.Text = ""
                 txtMobile.Text = ""
+                listShipBranch.Items.Clear()
                 txtEmailId.Text = ""
                 txtTelephone1.Text = ""
                 txtAddressLine1.Text = ""
@@ -357,6 +552,7 @@ Public Class Analysis_User
 
         End If
         GridSetupUser.Visible = True
+
         AddUser.Visible = False
         btnAdd.Visible = True
         Header.Text = "User Management"
@@ -364,136 +560,143 @@ Public Class Analysis_User
         ShowGrid()
     End Sub
 
-    Protected Sub btnEdit_Click1(sender As Object, e As EventArgs)
-        Dim MuserUserid1 As String = Convert.ToString(Request.QueryString("User_id"))
-        Dim MUsermodel As New MUserModel
-        Dim MUsercontrol As New MUserControl
-        MUsermodel.UserId = MuserUserid1
-        'id.Text = MuserUserid1
+    'Protected Sub btnEdit_Click1(sender As Object, e As EventArgs)
+    '    Dim MuserUserid1 As String = Convert.ToString(Request.QueryString("User_id"))
+    '    Dim MUsermodel As New MUserModel
+    '    Dim MUsercontrol As New MUserControl
+    '    MUsermodel.UserId = MuserUserid1
+    '    'id.Text = MuserUserid1
 
 
-        Dim _Datatble As DataTable = MUsercontrol.GetUserInfo(MUsermodel)
-        'If Not IsDBNull(_Datatble.Rows(0)("DELFG")) Then
-        '    delflag.Text = _Datatble.Rows(0)("DELFG")
-        'End If
-        If Not IsDBNull(_Datatble.Rows(0)("user_id")) Then
-            txtUserId.Text = _Datatble.Rows(0)("user_id")
-        End If
-        If Not IsDBNull(_Datatble.Rows(0)("password")) Then
-            txtPassword.Text = _Datatble.Rows(0)("password")
-        End If
-        If Not IsDBNull(_Datatble.Rows(0)("eng_id")) Then
-            txtEnggId.Text = _Datatble.Rows(0)("eng_id")
-        End If
+    '    Dim _Datatble As DataTable = MUsercontrol.GetUserInfo(MUsermodel)
+    '    'If Not IsDBNull(_Datatble.Rows(0)("DELFG")) Then
+    '    '    delflag.Text = _Datatble.Rows(0)("DELFG")
+    '    'End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("user_id")) Then
+    '        txtUserId.Text = _Datatble.Rows(0)("user_id")
+    '    End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("password")) Then
+    '        txtPassword.Text = _Datatble.Rows(0)("password")
+    '    End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("eng_id")) Then
+    '        txtEnggId.Text = _Datatble.Rows(0)("eng_id")
+    '    End If
 
 
-        If Not IsDBNull(_Datatble.Rows(0)("user_level")) Then
-            txtUserlvl.Text = _Datatble.Rows(0)("user_level")
-        End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("user_level")) Then
+    '        txtUserlvl.Text = _Datatble.Rows(0)("user_level")
+    '    End If
 
-        If Not IsDBNull(_Datatble.Rows(0)("ship_1")) Then
-            txtBranchCode1.Text = _Datatble.Rows(0)("ship_1")
-        End If
-        If Not IsDBNull(_Datatble.Rows(0)("ship_2")) Then
-            txtBranchCode2.Text = _Datatble.Rows(0)("ship_2")
-        End If
-        If Not IsDBNull(_Datatble.Rows(0)("ship_3")) Then
-            txtBranchCode3.Text = _Datatble.Rows(0)("ship_3")
-        End If
-        If Not IsDBNull(_Datatble.Rows(0)("ship_4")) Then
-            txtBranchCode4.Text = _Datatble.Rows(0)("ship_4")
-        End If
-        If Not IsDBNull(_Datatble.Rows(0)("ship_5")) Then
-            txtBranchCode5.Text = _Datatble.Rows(0)("ship_5")
-        End If
-        If Not IsDBNull(_Datatble.Rows(0)("surname")) Then
-            txtSurname.Text = _Datatble.Rows(0)("surname")
-        End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("ship_1")) Then
+    '        txtBranchCode1.Text = _Datatble.Rows(0)("ship_1")
+    '    End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("ship_2")) Then
+    '        txtBranchCode2.Text = _Datatble.Rows(0)("ship_2")
+    '    End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("ship_3")) Then
+    '        txtBranchCode3.Text = _Datatble.Rows(0)("ship_3")
+    '    End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("ship_4")) Then
+    '        txtBranchCode4.Text = _Datatble.Rows(0)("ship_4")
+    '    End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("ship_5")) Then
+    '        txtBranchCode5.Text = _Datatble.Rows(0)("ship_5")
+    '    End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("surname")) Then
+    '        txtSurname.Text = _Datatble.Rows(0)("surname")
+    '    End If
 
-        If Not IsDBNull(_Datatble.Rows(0)("name")) Then
-            txtName.Text = _Datatble.Rows(0)("name")
-        End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("name")) Then
+    '        txtName.Text = _Datatble.Rows(0)("name")
+    '    End If
 
-        If Not IsDBNull(_Datatble.Rows(0)("mid_name")) Then
-            txtMiddleName.Text = _Datatble.Rows(0)("mid_name")
-        End If
-        If Not IsDBNull(_Datatble.Rows(0)("birthday")) Then
-            txtdob.Text = _Datatble.Rows(0)("birthday")
-        End If
-
-
-        If Not IsDBNull(_Datatble.Rows(0)("sex")) Then
-            If _Datatble.Rows(0)("sex") = 0 Then
-                radionGender.SelectedValue = "0"
-            Else
-                radionGender.SelectedValue = "1"
-            End If
-        End If
-
-        If Not IsDBNull(_Datatble.Rows(0)("superior")) Then
-            txtSuperior.Text = _Datatble.Rows(0)("superior")
-        End If
-        If Not IsDBNull(_Datatble.Rows(0)("add_1")) Then
-            txtAddressLine1.Text = _Datatble.Rows(0)("add_1")
-        End If
-        If Not IsDBNull(_Datatble.Rows(0)("add_2")) Then
-            txtAddressLine2.Text = _Datatble.Rows(0)("add_2")
-        End If
-
-        If Not IsDBNull(_Datatble.Rows(0)("add_3")) Then
-            txtAddressLine3.Text = _Datatble.Rows(0)("add_3")
-        End If
-        If Not IsDBNull(_Datatble.Rows(0)("zip")) Then
-            txtZipCode.Text = _Datatble.Rows(0)("zip")
-        End If
-        If Not IsDBNull(_Datatble.Rows(0)("tel")) Then
-            txtTelephone.Text = _Datatble.Rows(0)("tel")
-        End If
-        If Not IsDBNull(_Datatble.Rows(0)("mobile")) Then
-            txtMobile.Text = _Datatble.Rows(0)("mobile")
-        End If
-        If Not IsDBNull(_Datatble.Rows(0)("e_mail")) Then
-            txtEmailId.Text = _Datatble.Rows(0)("e_mail")
-        End If
-        If Not IsDBNull(_Datatble.Rows(0)("em_tel")) Then
-            txtTelephone1.Text = _Datatble.Rows(0)("em_tel")
-        End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("mid_name")) Then
+    '        txtMiddleName.Text = _Datatble.Rows(0)("mid_name")
+    '    End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("birthday")) Then
+    '        txtdob.Text = _Datatble.Rows(0)("birthday")
+    '    End If
 
 
-        If Not IsDBNull(_Datatble.Rows(0)("DELFG")) Then
-            If _Datatble.Rows(0)("DELFG") = 0 Then
-                delflag.Checked = False
-            Else
-                delflag.Checked = True
-            End If
-        End If
-        If Not IsDBNull(_Datatble.Rows(0)("admin_flg")) Then
-            If _Datatble.Rows(0)("admin_flg") = 0 Then
-                admindelflg.Checked = False
-            Else
-                admindelflg.Checked = True
-            End If
-        End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("sex")) Then
+    '        If _Datatble.Rows(0)("sex") = 0 Then
+    '            radionGender.SelectedValue = "0"
+    '        Else
+    '            radionGender.SelectedValue = "1"
+    '        End If
+    '    End If
 
-        'btnUpload.Visible = False
-        btnEdit.Visible = True
-        'filename.Visible = False
-        'Textfilename.Visible = True
-        btnAdd.Visible = False
-        GridSetupUser.Visible = False
-        AddUser.Visible = True
+    '    If Not IsDBNull(_Datatble.Rows(0)("superior")) Then
+    '        txtSuperior.Text = _Datatble.Rows(0)("superior")
+    '    End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("add_1")) Then
+    '        txtAddressLine1.Text = _Datatble.Rows(0)("add_1")
+    '    End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("add_2")) Then
+    '        txtAddressLine2.Text = _Datatble.Rows(0)("add_2")
+    '    End If
 
-        Header.Text = "User Management-Edit"
-    End Sub
+    '    If Not IsDBNull(_Datatble.Rows(0)("add_3")) Then
+    '        txtAddressLine3.Text = _Datatble.Rows(0)("add_3")
+    '    End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("zip")) Then
+    '        txtZipCode.Text = _Datatble.Rows(0)("zip")
+    '    End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("tel")) Then
+    '        txtTelephone.Text = _Datatble.Rows(0)("tel")
+    '    End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("mobile")) Then
+    '        txtMobile.Text = _Datatble.Rows(0)("mobile")
+    '    End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("e_mail")) Then
+    '        txtEmailId.Text = _Datatble.Rows(0)("e_mail")
+    '    End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("em_tel")) Then
+    '        txtTelephone1.Text = _Datatble.Rows(0)("em_tel")
+    '    End If
+
+
+    '    If Not IsDBNull(_Datatble.Rows(0)("DELFG")) Then
+    '        If _Datatble.Rows(0)("DELFG") = 0 Then
+    '            delflag.Checked = False
+    '        Else
+    '            delflag.Checked = True
+    '        End If
+    '    End If
+    '    If Not IsDBNull(_Datatble.Rows(0)("admin_flg")) Then
+    '        If _Datatble.Rows(0)("admin_flg") = 0 Then
+    '            admindelflg.Checked = False
+    '        Else
+    '            admindelflg.Checked = True
+    '        End If
+    '    End If
+
+    '    'btnUpload.Visible = False
+    '    btnEdit.Visible = True
+    '    'filename.Visible = False
+    '    'Textfilename.Visible = True
+    '    btnAdd.Visible = False
+    '    GridSetupUser.Visible = False
+    '    AddUser.Visible = True
+
+    '    Header.Text = "User Management-Edit"
+    'End Sub
 
     Protected Sub btnback_Click(sender As Object, e As EventArgs)
         GridSetupUser.Visible = True
         AddUser.Visible = False
         btnAdd.Visible = True
+        listShipBranch.Items.Clear()
         Header.Text = "User Management"
         'Response.Redirect("")
         ShowGrid()
     End Sub
+
+
+
+    'Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+
+    'End Sub
 
     'Protected Sub user_id_Click(sender As Object, e As EventArgs)
     '    Dim index As String = Convert.ToString(e.CommandArgument)

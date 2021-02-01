@@ -98,7 +98,7 @@
                         <div class="col-sm-2"></div>
                         <div>
                              <br />
-                        <asp:Button ID="send" runat="server" CssClass="btn btn-primary" Text="Send" />
+                        <asp:Button ID="send" runat="server" CssClass="btn btn-primary" Text="Submit" />
                             </div>
                     </div>
 
