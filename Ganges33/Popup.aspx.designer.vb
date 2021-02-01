@@ -23,11 +23,416 @@ Partial Public Class Popup
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''CRTDT control.
+    '''lblCRTDT1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents CRTDT As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents lblCRTDT1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblCRTCD1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblCRTCD1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblUPDDT1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblUPDDT1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblUPDCD1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblUPDCD1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblUPDPG1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblUPDPG1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblDELFG1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblDELFG1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblship_name1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblship_name1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblship_info1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblship_info1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblship_manager1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblship_manager1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblship_tel1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblship_tel1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblship_add11 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblship_add11 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblship_add21 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblship_add21 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblship_add31 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblship_add31 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblzip1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblzip1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lble_mail1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lble_mail1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblship_service1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblship_service1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblopen_time1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblopen_time1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblclose_time1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblclose_time1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblopening_date1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblopening_date1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblclosing_date1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblclosing_date1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblship_code1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblship_code1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblship_mark1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblship_mark1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblitem_11 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblitem_11 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblitem_21 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblitem_21 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblmess_11 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblmess_11 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblmess_21 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblmess_21 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblmess_31 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblmess_31 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblregi_deposit1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblregi_deposit1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblPO_no1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblPO_no1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblinspection1_start1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblinspection1_start1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblinspection1_end1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblinspection1_end1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblinspection2_start1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblinspection2_start1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblinspection2_end1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblinspection2_end1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblinspection3_start1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblinspection3_start1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblinspection3_end1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblinspection3_end1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblopen_start1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblopen_start1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblopen_end1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblopen_end1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblclose_start1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblclose_start1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblclose_end1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblclose_end1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblGSTIN1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblGSTIN1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblParent_Ship_Name1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblParent_Ship_Name1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblIsChildShip1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblIsChildShip1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblRpaClientUserId1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblRpaClientUserId1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblRpaClientPwd1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblRpaClientPwd1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblpwdupdateddate1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblpwdupdateddate1 As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblIsShipCodeChanged1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblIsShipCodeChanged1 As Global.System.Web.UI.WebControls.Label
 End Class

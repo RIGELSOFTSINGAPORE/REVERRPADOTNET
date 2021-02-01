@@ -73,7 +73,7 @@ Public Class SetupNewServiceCenterControl
         sqlStr = sqlStr & "@CLOSE_TIME, "
         sqlStr = sqlStr & "@OPENING_DATE, "
         sqlStr = sqlStr & "@CLOSING_DATE, "
-        sqlStr = sqlStr & "@SHIP_CODE, "
+        sqlStr = sqlStr & "@SHIP_CODE,"
         sqlStr = sqlStr & "@SHIP_MARK, "
         sqlStr = sqlStr & "@ITEM_1, "
         sqlStr = sqlStr & "@ITEM_2, "
@@ -136,7 +136,7 @@ Public Class SetupNewServiceCenterControl
         Dim sqlStr As String = "SELECT "
         sqlStr = sqlStr & " * from M_SHIP_BASE "
         If queryParams.SHIP_CODE <> 0 Then
-            sqlStr = sqlStr & "Where @SHIP_CODE = ship_code "
+            sqlStr = sqlStr & "Where @SHIP_CODE = ship_code"
             dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@SHIP_CODE", queryParams.SHIP_CODE))
         End If
 
@@ -159,7 +159,7 @@ Public Class SetupNewServiceCenterControl
 
         sqlStr = sqlStr & " M_SHIP_BASE "
         sqlStr = sqlStr & "SET "
-        sqlStr = sqlStr & "CRTDT =@CRTCD, "
+        sqlStr = sqlStr & "CRTDT =@CRTDT, "
         sqlStr = sqlStr & "CRTCD =@CRTCD, "
         sqlStr = sqlStr & "UPDDT =@UPDDT, "
         sqlStr = sqlStr & "UPDCD =@UPDCD, "
@@ -219,7 +219,7 @@ Public Class SetupNewServiceCenterControl
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@CLOSE_TIME", queryParams.CLOSE_TIME))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@OPENING_DATE", queryParams.OPENING_DATE))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@CLOSING_DATE", queryParams.CLOSING_DATE))
-        ' dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@SHIP_CODE", queryParams.SHIP_CODE))
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@SHIP_CODE", queryParams.SHIP_CODE))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@SHIP_MARK", queryParams.SHIP_MARK))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@ITEM_1", queryParams.ITEM_1))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@ITEM_2", queryParams.ITEM_2))
@@ -230,8 +230,8 @@ Public Class SetupNewServiceCenterControl
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@PO_NO", queryParams.PO_NO))
 
         If queryParams.SHIP_CODE <> 0 Then
-            sqlStr = sqlStr & "Where SHIP_CODE = @SHIP_CODE "
-            dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@SHIP_CODE", queryParams.SHIP_CODE))
+            sqlStr = sqlStr & "Where SHIP_CODE = @SHIP_CODE1 "
+            dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@SHIP_CODE1", queryParams.SHIP_CODE))
         End If
 
         flag = dbConn.ExecSQL(sqlStr)

@@ -125,7 +125,7 @@ Public Class SetupNewServiceCenter
         SetupNewServiceCenterModel.CLOSE_TIME = CloseTime.Text
         SetupNewServiceCenterModel.OPENING_DATE = OpeningDate.Text
         SetupNewServiceCenterModel.CLOSING_DATE = ClosingDate.Text
-        SetupNewServiceCenterModel.SHIP_CODE = ShipCode.Text
+        SetupNewServiceCenterModel.SHIP_CODE = ShipCode1.Text
         SetupNewServiceCenterModel.SHIP_MARK = ShipMark.Text
         SetupNewServiceCenterModel.ITEM_1 = Item1.Text
         SetupNewServiceCenterModel.ITEM_2 = Item2.Text
@@ -152,7 +152,7 @@ Public Class SetupNewServiceCenter
         Dim insertCredit As Boolean = SetupNewServiceCentercontrol.SetupNewServiceCenterInsert(SetupNewServiceCenterModel)
         'Dim insertCredit As Boolean = SetupNewServiceCentercontrol.ShowSetupNewServiceCenterGrid(SetupNewServiceCenterModel)
         If (insertCredit = True) Then
-            Call showMsg("Success updated", "")
+            Call showMsg("Success Created", "")
             ShipName.Text = ""
             ShipInfo.Text = ""
             ShipManager.Text = ""
@@ -167,7 +167,7 @@ Public Class SetupNewServiceCenter
             CloseTime.Text = ""
             OpeningDate.Text = ""
             ClosingDate.Text = ""
-            ShipCode.Text = ""
+            ShipCode1.Text = ""
             ShipMark.Text = ""
             Item1.Text = ""
             Item2.Text = ""
@@ -220,7 +220,7 @@ Public Class SetupNewServiceCenter
         SetupNewServiceCenterModel.CLOSE_TIME = CloseTime.Text
         SetupNewServiceCenterModel.OPENING_DATE = OpeningDate.Text
         SetupNewServiceCenterModel.CLOSING_DATE = ClosingDate.Text
-        SetupNewServiceCenterModel.SHIP_CODE = ShipCode.Text
+        SetupNewServiceCenterModel.SHIP_CODE = ShipCode1.Text
         SetupNewServiceCenterModel.SHIP_MARK = ShipMark.Text
         SetupNewServiceCenterModel.ITEM_1 = Item1.Text
         SetupNewServiceCenterModel.ITEM_2 = Item2.Text
@@ -258,7 +258,7 @@ Public Class SetupNewServiceCenter
             CloseTime.Text = ""
             OpeningDate.Text = ""
             ClosingDate.Text = ""
-            ShipCode.Text = ""
+            ShipCode1.Text = ""
             ShipMark.Text = ""
             Item1.Text = ""
             Item2.Text = ""
@@ -288,7 +288,7 @@ Public Class SetupNewServiceCenter
             Dim SetupNewServiceCenterModel As New SetupNewServiceCenterModel
             Dim SetupNewServiceCentercontrol As New SetupNewServiceCenterControl
             SetupNewServiceCenterModel.SHIP_CODE = index
-            ShipCode.Text = index
+            ShipCode1.Text = index
             Dim _Datatble As DataTable = SetupNewServiceCentercontrol.ShowSetupNewServiceCenterGrid(SetupNewServiceCenterModel)
             If Not IsDBNull(_Datatble.Rows(0)("Ship_Name")) Then
                 ShipName.Text = _Datatble.Rows(0)("Ship_Name")
@@ -333,7 +333,7 @@ Public Class SetupNewServiceCenter
                 ClosingDate.Text = _Datatble.Rows(0)("closing_date")
             End If
             If Not IsDBNull(_Datatble.Rows(0)("ship_code")) Then
-                ShipCode.Text = _Datatble.Rows(0)("ship_code")
+                ShipCode1.Text = _Datatble.Rows(0)("ship_code")
             End If
             If Not IsDBNull(_Datatble.Rows(0)("Ship_Mark")) Then
                 ShipMark.Text = _Datatble.Rows(0)("Ship_Mark")
@@ -362,29 +362,24 @@ Public Class SetupNewServiceCenter
                 PO_NO.Text = _Datatble.Rows(0)("PO_no")
             End If
 
-            'If Not IsDBNull(_Datatble.Rows(0)("ShipCode")) Then
-            'ShipCode.Text = _Datatble.Rows(0)("ShipCode")
-            ' End If
-
-
-
-
             If Not IsDBNull(_Datatble.Rows(0)("DELFG")) Then
-                If _Datatble.Rows(0)("DELFG") = 0 Then
-                    delfld.Checked = False
-                Else
-                    delfld.Checked = True
+                    If _Datatble.Rows(0)("DELFG") = 0 Then
+                        delfld.Checked = False
+                    Else
+                        delfld.Checked = True
+                    End If
                 End If
-            End If
-            btnAddNew.Visible = False
-            Edit.Visible = True
-            'filename.Visible = False
-            'Textfilename.Visible = True
-            data.Visible = False
-            addfile.Visible = True
+            ShipCode1.Visible = False
+            lblshipcode.Visible = False
+                btnAddNew.Visible = False
+                Edit.Visible = True
+                'filename.Visible = False
+                'Textfilename.Visible = True
+                data.Visible = False
+                addfile.Visible = True
 
-            Header.Text = "Setup New Servicecenter"
-        End If
+                Header.Text = "Setup New Servicecenter"
+            End If
 
     End Sub
 

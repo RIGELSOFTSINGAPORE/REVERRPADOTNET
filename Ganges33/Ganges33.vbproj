@@ -1062,13 +1062,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Popup.aspx.designer.vb">
-      <DependentUpon>Popup.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Popup.aspx.vb">
-      <DependentUpon>Popup.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Repair_1.aspx.designer.vb">
       <DependentUpon>Repair_1.aspx</DependentUpon>
     </Compile>

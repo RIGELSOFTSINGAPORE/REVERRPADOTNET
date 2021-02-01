@@ -7,9 +7,9 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
     <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/start/jquery-ui.css" rel="stylesheet">
      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
 
-   <script type="text/javascript" src="test.js"></script>
+   <script type="text/javascript" src="ServiceCenter.js"></script>
 
     <link href="assets/jquery-ui_theme.css" rel="stylesheet" />
     <link href="assets/jquery-ui.css" rel="stylesheet" />
@@ -39,7 +39,7 @@
     overflow: auto;
 }
         
-       
+              
    </style>
     <script>
         $(function () {
@@ -50,6 +50,20 @@
             });
         }
     </script>
+
+    <%--<script>
+         //   $(document).on("click", "[id*=lnkView]", (function () {
+                 $(function () {
+                 $("[id*=lnkView]").click(function () {
+                var gridviewrow = $(this).closest("tr")[0].rowindex;
+                window.open("Popup.aspx ? rowindex=" + gridviewrow, 'Popup', 'height=450,width=500,left=500,top=300,resizable=no,scrollbars=yes,toolbar=yes,menu=no');
+            
+            });
+                 }
+
+    </script>--%>
+
+                    
 
    
                       
@@ -78,9 +92,10 @@
                           <label>Ship Name</label>  
                         </div>
                         <div>
-                             <asp:TextBox ID="ShipName" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" />
-                      <%--   <asp:RequiredFieldValidator ID="SName" runat="server" ControlToValidate="ShipName" ErrorMessage="Please enter a shipname"   
-ForeColor="Red"></asp:RequiredFieldValidator>  --%>
+                             <asp:TextBox ID="ShipName" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" MaxLength="20" />
+                        <asp:RequiredFieldValidator ID="SName" runat="server" ControlToValidate="ShipName" ErrorMessage="Please enter a shipname"   
+ForeColor="Red"></asp:RequiredFieldValidator> 
+                     
                         </div>
                         </div>
 
@@ -91,8 +106,9 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                            </label>
                              </div>
                              <div>
-                              <asp:TextBox ID="ShipInfo" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" />
-                           
+                              <asp:TextBox ID="ShipInfo" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" MaxLength="100" />
+                           <asp:RequiredFieldValidator ID="SInfo" runat="server" ControlToValidate="ShipInfo" ErrorMessage="Please enter a shipinfo"   
+ForeColor="Red"></asp:RequiredFieldValidator> 
                             </div>
                         </div>
                         
@@ -104,8 +120,9 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                            </label>
                              </div>
                              <div>
-                              <asp:TextBox ID="ShipManager" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" />
-                           
+                              <asp:TextBox ID="ShipManager" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" MaxLength="20" />
+                           <asp:RequiredFieldValidator ID="SManager" runat="server" ControlToValidate="ShipManager" ErrorMessage="Please enter a shipManager"   
+ForeColor="Red"></asp:RequiredFieldValidator> 
                             </div>
                         </div>
                         <div class="row">
@@ -115,8 +132,9 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                                  </label>
                              </div>
                             <div>
-                                 <asp:TextBox ID="ShipTel" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" />
-                           
+                                 <asp:TextBox ID="ShipTel" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" MaxLength="20" />
+                           <asp:RequiredFieldValidator ID="STel" runat="server" ControlToValidate="ShipTel" ErrorMessage="Please enter a shipTel"   
+ForeColor="Red"></asp:RequiredFieldValidator> 
                             </div>
                         </div>
                    
@@ -128,8 +146,9 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                             </label>
                         </div>
                         <div>
-                            <asp:TextBox ID="ShipAdd1" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" />
-                           
+                            <asp:TextBox ID="ShipAdd1" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="70" />
+                           <asp:RequiredFieldValidator ID="SAdd1" runat="server" ControlToValidate="ShipAdd1" ErrorMessage="Please enter a shipAdd1"   
+ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
@@ -140,8 +159,8 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                             </label>
                         </div>
                         <div>
-                            <asp:TextBox ID="ShipAdd2" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" />
-                           
+                            <asp:TextBox ID="ShipAdd2" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="70" />
+                          
                         </div>
                     </div>
 
@@ -152,7 +171,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                             </label>
                         </div>
                         <div>
-                            <asp:TextBox ID="ShipAdd3" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" />
+                            <asp:TextBox ID="ShipAdd3" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="70" />
                            
                         </div>
                     </div>
@@ -163,7 +182,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                             </label>
                         </div>
                         <div>
-                            <asp:TextBox ID="Zip" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" />
+                            <asp:TextBox ID="Zip" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="10" />
                            
                         </div>
                     </div>
@@ -175,8 +194,9 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                             </label>
                         </div>
                         <div>
-                            <asp:TextBox ID="Email" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" />
-                           
+                            <asp:TextBox ID="Email" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="30" />
+                            <asp:RequiredFieldValidator ID="mail" runat="server" ControlToValidate="Email" ErrorMessage="Please enter a Email"   
+ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
@@ -188,8 +208,9 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                             </label>
                         </div>
                         <div>
-                            <asp:TextBox ID="ShipService" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" />
-                           
+                            <asp:TextBox ID="ShipService" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="2" />
+                            <asp:RequiredFieldValidator ID="SService" runat="server" ControlToValidate="ShipService" ErrorMessage="Please enter a shipservice"   
+ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
@@ -202,8 +223,9 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                             </label>
                         </div>
                         <div>
-                            <asp:TextBox ID="OpenTime" runat="server" value="" Height="33px" Width="100%" class="form-file-upload duration   serverlbl" />
-                           
+                            <asp:TextBox ID="OpenTime" runat="server" value="" Height="33px" Width="100%" class="form-file-upload duration   serverlbl" MaxLength="5" />
+                            <asp:RequiredFieldValidator ID="OT" runat="server" ControlToValidate="OpenTime" ErrorMessage="Please enter a OpenTime"   
+ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
@@ -214,7 +236,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                             </label>
                         </div>
                         <div>
-                            <asp:TextBox ID="CloseTime" runat="server" value="" Height="33px" Width="100%" class="form-file-upload duration  serverlbl" />
+                            <asp:TextBox ID="CloseTime" runat="server" value="" Height="33px" Width="100%" class="form-file-upload duration  serverlbl" MaxLength="5" />
                            
                         </div>
                     </div>
@@ -227,7 +249,8 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                         </div>
                         <div>
                             <asp:TextBox ID="OpeningDate" runat="server" value="" Height="33px" Width="100%" class="form-file-upload date  serverlbl" />
-                           
+                           <asp:RequiredFieldValidator ID="OD" runat="server" ControlToValidate="OpeningDate" ErrorMessage="Please enter a OpenDate"   
+ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
@@ -246,13 +269,14 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
 
          <div class="row">
                         <div class="col-sm-2">
-                            <label>
+                            <label id="lblshipcode" runat="server">
                                 Ship Code
                             </label>
                         </div>
                         <div>
-                            <asp:TextBox ID="ShipCode" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" />
-                           
+                            <asp:TextBox ID="ShipCode1" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="50" />
+                           <asp:RequiredFieldValidator ID="SCode" runat="server" ControlToValidate="ShipCode1" ErrorMessage="Please enter a ShipCode"   
+ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
@@ -263,8 +287,9 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                             </label>
                         </div>
                         <div>
-                            <asp:TextBox ID="ShipMark" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" />
-                           
+                            <asp:TextBox ID="ShipMark" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="3" />
+                           <asp:RequiredFieldValidator ID="SMark" runat="server" ControlToValidate="ShipMark" ErrorMessage="Please enter a ShipMark"   
+ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
@@ -275,8 +300,9 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                             </label>
                         </div>
                         <div>
-                            <asp:TextBox ID="Item1" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" />
-                           
+                            <asp:TextBox ID="Item1" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="10" />
+                           <asp:RequiredFieldValidator ID="IT1" runat="server" ControlToValidate="Item1" ErrorMessage="Please enter a Item1"   
+ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
@@ -287,8 +313,9 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                             </label>
                         </div>
                         <div>
-                            <asp:TextBox ID="Item2" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" />
-                           
+                            <asp:TextBox ID="Item2" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="50" />
+                           <asp:RequiredFieldValidator ID="IT2" runat="server" ControlToValidate="Item2" ErrorMessage="Please enter a Item2"   
+ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
@@ -299,8 +326,9 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                             </label>
                         </div>
                         <div>
-                            <asp:TextBox ID="Mess1" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" />
-                           
+                            <asp:TextBox ID="Mess1" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="500" />
+                           <asp:RequiredFieldValidator ID="M1" runat="server" ControlToValidate="Mess1" ErrorMessage="Please enter a Mess1"   
+ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
@@ -312,8 +340,9 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                             </label>
                         </div>
                         <div>
-                            <asp:TextBox ID="Mess2" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" />
-                           
+                            <asp:TextBox ID="Mess2" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="500" />
+                           <asp:RequiredFieldValidator ID="M2" runat="server" ControlToValidate="Mess2" ErrorMessage="Please enter a Mess2"   
+ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
@@ -324,8 +353,9 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                             </label>
                         </div>
                         <div>
-                            <asp:TextBox ID="Mess3" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" />
-                           
+                            <asp:TextBox ID="Mess3" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="500" />
+                           <asp:RequiredFieldValidator ID="M3" runat="server" ControlToValidate="Mess3" ErrorMessage="Please enter a Mess3"   
+ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
@@ -336,7 +366,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                             </label>
                         </div>
                         <div>
-                            <asp:TextBox ID="RegiDeposit" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" />
+                            <asp:TextBox ID="RegiDeposit" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="50" />
                            
                         </div>
                     </div>
@@ -348,8 +378,9 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                             </label>
                         </div>
                         <div>
-                            <asp:TextBox ID="PO_NO" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" />
-                           
+                            <asp:TextBox ID="PO_NO" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="2" />
+                           <asp:RequiredFieldValidator ID="PoNo" runat="server" ControlToValidate="PO_NO" ErrorMessage="Please enter a PO_NO"   
+ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
@@ -405,6 +436,18 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
         <asp:BoundField DataField="SHIP_MARK" HeaderText="ship Mark" />
         <asp:BoundField DataField="DELFG" HeaderText="Delflg" />--%>
 
+
+                                   <asp:TemplateField HeaderText="SHIP_CODE" ItemStyle-Width="150" >
+                        <ItemTemplate>
+                            <asp:Label ID="SHIP_CODE1" runat="server" Text='<%# Eval("SHIP_CODE") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+
+
+
+
+
                                  <asp:TemplateField HeaderText="SHIP_NAME" ItemStyle-Width="150">
                         <ItemTemplate>
                             <asp:Label ID="SHIP_NAME" runat="server" Text='<%# Eval("SHIP_NAME") %>'></asp:Label>
@@ -438,12 +481,6 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                     </asp:TemplateField>
 
 
-<%--                                 <asp:TemplateField HeaderText="SHIP_CODE" ItemStyle-Width="150">
-                        <ItemTemplate>
-                            <asp:Label ID="SHIP_CODE" runat="server" Text='<%# Eval("SHIP_CODE") %>'></asp:Label>
-                        </ItemTemplate>
-                        <ItemStyle Width="150px"></ItemStyle>
-                    </asp:TemplateField>--%>
 
 
 
@@ -454,6 +491,17 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                         <ItemStyle Width="150px"></ItemStyle>
                     </asp:TemplateField>
 
+
+                                  <%--<asp:TemplateField HeaderText="SHIP_TEL" ItemStyle-Width="150" visible="false">
+                        <ItemTemplate>
+                            <asp:Label ID="SHIP_TEL" runat="server" Text='<%# Eval("SHIP_TEL") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>--%>
+
+
+
+
                                  <asp:TemplateField HeaderText="DELFG" ItemStyle-Width="150">
                         <ItemTemplate>
                             <asp:Label ID="DELFG" runat="server" Text='<%# Eval("DELFG") %>'></asp:Label>
@@ -461,7 +509,8 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                         <ItemStyle Width="150px"></ItemStyle>
                     </asp:TemplateField>
 
-                  <asp:TemplateField HeaderText="EDIT" ItemStyle-Width="150">
+                  <%--<asp:TemplateField HeaderText="EDIT" ItemStyle-Width="150">--%>
+                      <asp:TemplateField  ItemStyle-Width="150">
                         <ItemTemplate>
                             <asp:LinkButton ID="SHIP_CODE" runat="server" CommandArgument='<%# Bind("SHIP_CODE") %>' CommandName="goto" Text="Edit"></asp:LinkButton>
                         </ItemTemplate>
@@ -483,7 +532,9 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
                                  <asp:TemplateField>--%>
                  <asp:TemplateField>
                      <ItemTemplate>
-                    <asp:HyperLink ID="lnkView"  Text="View" NavigateUrl="javascript:;" runat="server" />
+                   <%-- <asp:HyperLink ID="lnkView"  Text="View" NavigateUrl="#" runat="server"  />--%>
+                         <%--<asp:HyperLink ID="lnkView"  Text="View" NavigateUrl="#" runat="server"  OnClick='<%#Eval("ship_code", "test.js(""){0}"");")%>'/>--%>
+                        <asp:LinkButton ID="lnkView" runat="server" data-CommandArgument='<%# Eval("SHIP_CODE") %>'  Text="View"></asp:LinkButton>
                    </ItemTemplate>
                 </asp:TemplateField>
                   <%--<asp:TemplateField>--%>
@@ -513,13 +564,6 @@ ForeColor="Red"></asp:RequiredFieldValidator>  --%>
        
         <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
     </div>
-
-
-
- 
-
-   
-
 
 
 </asp:Content>
