@@ -68,6 +68,15 @@ Partial Public Class RPA_Management
     Protected WithEvents Textfilename As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''sourcepath control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents sourcepath As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
     '''Source control.
     '''</summary>
     '''<remarks>

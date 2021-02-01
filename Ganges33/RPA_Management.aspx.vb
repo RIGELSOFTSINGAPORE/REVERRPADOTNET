@@ -50,12 +50,20 @@ Public Class RPA_Management
     End Sub
 
     Private Sub Create_Click(sender As Object, e As EventArgs) Handles Create.Click
+        TaskName.Text = ""
+        Textfilename.Text = ""
+        Testeddate.Text = ""
+        Status.Text = ""
+        Duration.Text = ""
+        Source.Text = ""
+        delfld.Checked = False
         btnUpload.Visible = True
         Edit.Visible = False
         Textfilename.Visible = False
         filename.Visible = True
         data.Visible = False
         addfile.Visible = True
+        sourcepath.Visible = False
         Header.Text = "RPA Management-Create"
     End Sub
 
@@ -72,20 +80,23 @@ Public Class RPA_Management
         Else
             delflg = 0
         End If
-        Dim serverpath = "C:\Rpa\Tasks\" & filename.FileName
-        Dim path As String
-        Dim path1 As String
-        path = Server.MapPath("~/RPA files")
-
+        Dim path = "C:\Rpa\Tasks\"
+        Dim serverpath = path & filename.FileName.ToString
 
         If (File.Exists(serverpath)) Then
             Call showMsg("file already exists", "")
             Exit Sub
         Else
-            filename.SaveAs(path + filename.FileName)
-            path1 = path + filename.FileName
+            If (Not System.IO.Directory.Exists(serverpath)) Then
 
-            My.Computer.FileSystem.MoveFile(path1, serverpath)
+                Call showMsg("Folder is not exists", "")
+                data.Visible = False
+                addfile.Visible = True
+                Exit Sub
+            Else
+                filename.SaveAs(serverpath + filename.FileName)
+            End If
+
         End If
         Dim Rpamanagementmodel As New RpamanagementModel
         Dim Rpamanagementcontrol As New RpamanagementControl
@@ -160,6 +171,7 @@ Public Class RPA_Management
             Textfilename.Visible = True
             data.Visible = False
             addfile.Visible = True
+            sourcepath.Visible = True
 
             Header.Text = "RPA Management-Edit"
         End If

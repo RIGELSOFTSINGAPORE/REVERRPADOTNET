@@ -13,12 +13,13 @@ Namespace Ganges33.model
             DELFG = String.Empty
             UserId = String.Empty
             UserId1 = String.Empty
+            User_Id = String.Empty
 
             'UPDDT = String.Empty
             'UPDCD = String.Empty
             'last_login = String.Empty
 
-
+            oldPassword = String.Empty
             Password = String.Empty
             eng_id = String.Empty
             'last_login = String.Empty
@@ -56,10 +57,12 @@ Namespace Ganges33.model
         Public Property UPDCD As String
         Public Property UserId As String
         Public Property UserId1 As String
+        Public Property User_Id As String
 
         'Public Property last_login As String
 
         Public Property DELFG As String
+        Public Property oldPassword As String
         Public Property Password As String
         Public Property UPDPG As String
 
