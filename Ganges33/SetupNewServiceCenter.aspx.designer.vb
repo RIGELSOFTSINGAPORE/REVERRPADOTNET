@@ -248,13 +248,13 @@ Partial Public Class SetupNewServiceCenter
     Protected WithEvents lblshipcode As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''ShipCode control.
+    '''ShipCode1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ShipCode As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents ShipCode1 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''SCode control.

@@ -50,12 +50,448 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+         <div>
+<h1>Service Center Details</h1>
+<table border="1">
+
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">CRTDT:</td>
+<td>
+<asp:Label ID="lblCRTDT1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">CRTCD:</td>
+<td>
+<asp:Label ID="lblCRTCD1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">UPDDT:</td>
+<td>
+<asp:Label ID="lblUPDDT1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">UPDCD:</td>
+<td>
+<asp:Label ID="lblUPDCD1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+
+<tr >
+<td style="font-weight:800; font-size:x-large" class="StrongText">UPDPG:</td>
+<td>
+<asp:Label ID="lblUPDPG1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">DELFG:</td>
+<td>
+<asp:Label ID="lblDELFG1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">ship_name:</td>
+<td>
+<asp:Label ID="lblship_name1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">ship_info:</td>
+<td>
+<asp:Label ID="lblship_info1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">ship_manager:</td>
+<td>
+<asp:Label ID="lblship_manager1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">ship_tel:</td>
+<td>
+<asp:Label ID="lblship_tel1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">ship_add1:</td>
+<td>
+<asp:Label ID="lblship_add11" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">ship_add2:</td>
+<td>
+<asp:Label ID="lblship_add21" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">ship_add3:</td>
+<td>
+<asp:Label ID="lblship_add31" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">zip:</td>
+<td>
+<asp:Label ID="lblzip1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">e_mail:</td>
+<td>
+<asp:Label ID="lble_mail1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">ship_service:</td>
+<td>
+<asp:Label ID="lblship_service1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">open_time:</td>
+<td>
+<asp:Label ID="lblopen_time1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">close_time:</td>
+<td>
+<asp:Label ID="lblclose_time1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">opening_date:</td>
+<td>
+<asp:Label ID="lblopening_date1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">closing_date:</td>
+<td>
+<asp:Label ID="lblclosing_date1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">ship_code:</td>
+<td>
+<asp:Label ID="lblship_code1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">ship_mark:</td>
+<td>
+<asp:Label ID="lblship_mark1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">item_1:</td>
+<td>
+<asp:Label ID="lblitem_11" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">item_2:</td>
+<td>
+<asp:Label ID="lblitem_21" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">mess_1:</td>
+<td>
+<asp:Label ID="lblmess_11" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">mess_2:</td>
+<td>
+<asp:Label ID="lblmess_21" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+    <tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">mess_3:</td>
+<td>
+<asp:Label ID="lblmess_31" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">regi_deposit:</td>
+<td>
+<asp:Label ID="lblregi_deposit1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">PO_no:</td>
+<td>
+<asp:Label ID="lblPO_no1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">inspection1_start:</td>
+<td>
+<asp:Label ID="lblinspection1_start1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">inspection1_end:</td>
+<td>
+<asp:Label ID="lblinspection1_end1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">inspection2_start:</td>
+<td>
+<asp:Label ID="lblinspection2_start1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">inspection2_end:</td>
+<td>
+<asp:Label ID="lblinspection2_end1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">inspection3_start:</td>
+<td>
+<asp:Label ID="lblinspection3_start1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">inspection3_end:</td>
+<td>
+<asp:Label ID="lblinspection3_end1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">open_start:</td>
+<td>
+<asp:Label ID="lblopen_start1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">open_end:</td>
+<td>
+<asp:Label ID="lblopen_end1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">close_start:</td>
+<td>
+<asp:Label ID="lblclose_start1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">close_end:</td>
+<td>
+<asp:Label ID="lblclose_end1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">GSTIN:</td>
+<td>
+<asp:Label ID="lblGSTIN1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">Parent_Ship_Name:</td>
+<td>
+<asp:Label ID="lblParent_Ship_Name1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">IsChildShip:</td>
+<td>
+<asp:Label ID="lblIsChildShip1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">RpaClientUserId:</td>
+<td>
+<asp:Label ID="lblRpaClientUserId1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">RpaClientPwd:</td>
+<td>
+<asp:Label ID="lblRpaClientPwd1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">pwdupdateddate:</td>
+<td>
+<asp:Label ID="lblpwdupdateddate1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+<tr>
+<td style="font-weight:800; font-size:x-large" class="StrongText">IsShipCodeChanged:</td>
+<td>
+<asp:Label ID="lblIsShipCodeChanged1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+</tr>
+
+    </table>
+
+        <%--<div>
        
-                <div class="popupwin">
+                <%--<div class="popupwin">
             <h1>Service Center Details</h1>
-        <br />
-        <br />
+
+            
+            <table border = "1">
+         <tr>
+            <th>CRTDT</th>
+            <th>CRTCD</th>
+             <th>UPDDT</th>
+             <th>UPDCD</th>
+             <th>UPDPG</th>
+             <th>DELFG</th>
+             <th>ship_name</th>
+             <th>ship_info</th>
+             <th>ship_manager</th>
+             <th>ship_tel</th>
+             <th>ship_add1</th>
+             <th>ship_add2</th>
+             <th>ship_add3</th>
+             <th>zip</th>
+             <th>e_mail</th>
+             <th>ship_service</th>
+             <th>open_time</th>
+             <th>close_time</th>
+             <th>opening_date</th>
+             <th>closing_date</th>
+             <th>ship_code</th>
+             <th>ship_mark</th>
+             <th>item_1</th>
+             <th>item_2</th>
+             <th>mess_1</th>
+             <th>mess_2</th>
+             <th>mess_3</th>
+             <th>regi_deposit</th>
+             <th>PO_no</th>
+             <th>inspection1_start</th>
+             <th>inspection1_end</th>
+             <th>inspection2_start</th>
+             <th>inspection2_end</th>
+             <th>inspection3_start</th>
+             <th>inspection3_end</th>
+             <th>open_start</th>
+             <th>open_end</th>
+             <th>close_start</th>
+             <th>close_end</th>
+             <th>GSTIN</th>
+             <th>Parent_Ship_Name</th>
+             <th>IsChildShip</th>
+             <th>RpaClientUserId</th>
+             <th>RpaClientPwd</th>
+             <th>pwdupdateddate</th>
+             <th>IsShipCodeChanged</th>
+            
+
+         </tr>
+         <tr>
+            <td>
+             <label id="lblCRTDT" runat="server" ></label>
+            </td>
+            <td><label id="lblCRTCD" runat="server" ></label></td>
+             <td><label id="lblUPDDT" runat="server" ></label></td>
+             <td><label id="lblUPDCD" runat="server" ></label></td>
+             <td><label id="lblUPDPG" runat="server" ></label></td>
+             <td><label id="lblDELFG" runat="server" ></label></td>
+             <td><label id="lblship_name" runat="server" ></label></td>
+             <td><label id="lblship_info" runat="server" ></label></td>
+             <td><label id="lblship_manager" runat="server" ></label></td>
+             <td><label id="lblship_tel" runat="server" ></label></td>
+             <td><label id="lblship_add1" runat="server" ></label></td>
+             <td><label id="lblship_add2" runat="server" ></label></td>
+             <td><label id="lblship_add3" runat="server" ></label></td>
+             <td><label id="lblzip" runat="server" ></label></td>
+             <td><label id="lble_mail" runat="server" ></label></td>
+             <td><label id="lblship_service" runat="server" ></label></td>
+             <td><label id="lblopen_time" runat="server" ></label></td>
+             <td><label id="lblclose_time" runat="server" ></label></td>
+             <td><label id="lblopening_date" runat="server" ></label></td>
+             <td><label id="lblclosing_date" runat="server" ></label></td>
+             <td><label id="lblship_code" runat="server" ></label></td>
+             <td><label id="lblship_mark" runat="server" ></label></td>
+             <td><label id="lblitem_1" runat="server" ></label></td>
+             <td><label id="lblitem_2" runat="server" ></label></td>
+             <td><label id="lblmess_1" runat="server" ></label></td>
+             <td><label id="lblmess_2" runat="server" ></label></td>
+             <td><label id="lblmess_3" runat="server" ></label></td>
+             <td><label id="lblregi_deposit" runat="server" ></label></td>
+             <td><label id="lblPO_no" runat="server" ></label></td>
+             <td><label id="lblinspection1_start" runat="server" ></label></td>
+             <td><label id="lblinspection1_end" runat="server" ></label></td>
+             <td><label id="lblinspection2_start" runat="server" ></label></td>
+             <td><label id="lblinspection2_end" runat="server" ></label></td>
+             <td><label id="lblinspection3_start" runat="server" ></label></td>
+             <td><label id="lblinspection3_end" runat="server" ></label></td>
+             <td><label id="lblopen_start" runat="server" ></label></td>
+             <td><label id="lblopen_end" runat="server" ></label></td>
+             <td><label id="lblclose_start" runat="server" ></label></td>
+             <td><label id="lblclose_end" runat="server" ></label></td>
+             <td><label id="lblGSTIN" runat="server" ></label></td>
+             <td><label id="lblParent_Ship_Name" runat="server" ></label></td>
+             <td><label id="lblIsChildShip" runat="server" ></label></td>
+             <td><label id="lblRpaClientUserId" runat="server" ></label></td>
+             <td><label id="lblRpaClientPwd" runat="server" ></label></td>
+             <td><label id="lblpwdupdateddate" runat="server" ></label></td>
+             <td><label id="lblIsShipCodeChanged" runat="server" ></label></td>
+
+
+
+         </tr>
+         
+         
+      </table>--%>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <%-- <br />--%>
+        <%--<br />
+
+
+
         <b>CRTDT :</b> <span id="CRTDT" runat="server" ></span>
                     <label id="lblCRTDT" runat="server" ></label>
                     
@@ -199,12 +635,12 @@
              <b>IsShipCodeChanged:</b> <span id="IsShipCodeChanged"></span>
                     <label id="lblIsShipCodeChanged" runat="server" ></label>
             <br />
-             </div>
+        --%>     <%--</div>--%>
            
 
             
      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script type="text/javascript">
+        <%--<script type="text/javascript">
             $(function () {
                 if (window.opener != null && !window.opener.closed) {
                     var rowIndex = window.location.href.split("?")[1].split("=")[1];
@@ -258,7 +694,7 @@
                     $("#IsShipCodeChanged").html(row.find("td").eq(45).html());
                 }
             });
-        </script>
+        </script>--%>
 
 
 
