@@ -75,7 +75,7 @@
                         </div>
                         <div>
                               <br />
-                             <asp:TextBox ID="TaskName" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" />
+                             <asp:TextBox ID="TaskName" runat="server"  Height="33px" Width="100%" class="form-file-upload  serverlbl" />
                         </div>
                         </div>
                         <div class="row">
