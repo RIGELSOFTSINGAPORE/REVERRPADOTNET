@@ -36,6 +36,9 @@
     -ms-overflow-style: none;
     overflow: auto;
 }
+        .Required{
+            font-size: small;
+        }
        
    </style>
 </asp:Content>
@@ -50,26 +53,546 @@
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h3 class="card-title ">User Management</h3>
+                 
+                      <h3 class="card-title " >
+                      <asp:label id="Header" Text="" runat="server" >                      </asp:label>
+                  
+                  </h3>
                   <p class="card-category"></p>
                 </div>
-                <div class="card-body " >
-     
+                 <div  class="card-body   scrollbar">
+                 
+                  <div>
+                  <asp:Button  ID="btnAdd" runat="server" class="btn pull-right btn-primary" OnClick="btnAdd_Click" Text="Add User"/>
+                      </div>
+                <%-- <br />--%>
+                       <div class="row">
+                           <asp:Label ID="id" runat="server" Text="" Style="display:none "></asp:Label>
+                      <div class="col-md-12">
+                    <div class="form-group">
+                    <%--<asp:GridView ID="GridSetupUser" runat="server" ForeColor="#333333" PageSize="10" AutoGenerateColumns="false" OnRowCommand="GridSetupUser_RowCommand" OnPageIndexChanging="GridSetupUser_PageIndexChanging" AllowPaging="True">
+                        <AlternatingRowStyle BackColor="White" />
+                        <HeaderStyle  BackColor="#800080"/>
+                        <Columns>                           
+                            <asp:BoundField DataField="DELFG" HeaderText="DELFG" />
+                            <asp:BoundField DataField="user_id" HeaderText="User Id" />
+                            <asp:BoundField DataField="password" HeaderText="Password" />
+                            <asp:BoundField DataField="admin_flg" HeaderText="Admin flage" />
+                            <asp:BoundField DataField="user_level" HeaderText="User level" />
+                        </Columns>
+                        <EditRowStyle BackColor="#2461BF" />
+                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                        <RowStyle BackColor="#EFF3FB" />
+                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                        <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                        <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                        <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                    </asp:GridView>--%>
+
+                        <asp:GridView ID="GridSetupUser" runat="server"  PageSize="10" AutoGenerateColumns="false" 
+                            OnRowCommand="GridSetupUser_RowCommand" OnPageIndexChanging="GridSetupUser_PageIndexChanging" AllowPaging="True" Style="align-self: center" HeaderStyle-BackColor="#8e24aa" HeaderStyle-ForeColor="White"  CssClass="col-sm-12" ShowHeaderWhenEmpty="true" EmptyDataText="No records Found">
+                        
+                       <EmptyDataTemplate>No Record Available</EmptyDataTemplate>
+                <EmptyDataRowStyle HorizontalAlign="Center" />
+                       <%-- <Columns>                           
+                            <asp:BoundField DataField="DELFG" HeaderText="DELFG" />
+                            <asp:BoundField DataField="user_id" HeaderText="User Id" />
+                            <asp:BoundField DataField="password" HeaderText="Password" />
+                            <asp:BoundField DataField="admin_flg" HeaderText="Admin flage" />
+                            <asp:BoundField DataField="user_level" HeaderText="User level" />
+                        </Columns>--%>
+
+                            <Columns>
+             
+
+                    <asp:TemplateField HeaderText="DELFG" ItemStyle-Width="150">
+                        <ItemTemplate>
+                            <asp:Label ID="DELFG" runat="server" Text='<%# Eval("DELFG") %>'></asp:Label>
+                        </ItemTemplate>
+                        <%--<ItemTemplate>
+                            <asp:Label ID="DELFG" runat="server" Text='<%# Eval("DELFG") %>'></asp:Label>
+                        </ItemTemplate>--%>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="User Id" ItemStyle-Width="150">
+                        
+                        <ItemTemplate>
+                            <asp:Label ID="UserId" runat="server" Text='<%# Eval("user_id") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="Password" ItemStyle-Width="150">
+                       
+                        <ItemTemplate>
+                            <asp:Label ID="Password" runat="server" Text='<%# Eval("password") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+
+                     <asp:TemplateField HeaderText="Admin flage" ItemStyle-Width="150">
+                        
+                        <ItemTemplate>
+                            <asp:Label ID="Adminflage" runat="server" Text='<%# Eval("admin_flg") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+
+                     <asp:TemplateField HeaderText="User level" ItemStyle-Width="150">
+                       
+                        <ItemTemplate>
+                            <asp:Label ID="Userlevel" runat="server" Text='<%# Eval("user_level") %>'></asp:Label>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+
+                      <asp:TemplateField HeaderText="EDIT" ItemStyle-Width="150">
+                        <ItemTemplate>
+                             
+                            <asp:Button ID="btnEdit" runat="server" Width="60" OnClick="btnEdit_Click1"  PostBackUrl='<%# "~/Analysis_User.aspx?User_id=" + Eval("user_id") %>' text="Edit"  />  
+                       
+                            <%--<asp:LinkButton ID="user_id" runat="server" CommandArgument='<%# Bind("user_id") %>' CommandName="goto" Text="Edit"></asp:LinkButton>--%>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+                                <asp:TemplateField HeaderText="View" ItemStyle-Width="150">
+                        <ItemTemplate>
+                            <asp:LinkButton ID="user_id1" runat="server" CommandArgument='<%# Bind("user_id") %>' CommandName="goto" Text="View"></asp:LinkButton>
+                        </ItemTemplate>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
+                </Columns>
+
+                        
+                    </asp:GridView>
+                         
+
+                    </div>
+                          </div>
+                           </div>
 
 
 
+                      <div class="row" runat="server" id="AddUser">
+                        <div class="col-sm-6">
+                      <div class="col-md-12 row" >
+                          <div>
+                          <div class="row">
+                         <div class="form-group col-sm-4">
+                             
+                             <Label runat="server" CssClass="bmd-label-floating">User Name :</Label>
+                             </div>
+                          <div Class="form-group">
+                      <%--<asp:DropDownList ID="DropListLocation" runat="server" CssClass="form-control " style="width: 270px; height:33px;">
+                      </asp:DropDownList>--%>
+                              <asp:TextBox ID="txtUserId" runat="server" CssClass="form-control" style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox><b style="color:red; font-size:large" >*</b>
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" CssClass="Required" ControlToValidate="txtUserId"
+                            ForeColor="Red" ErrorMessage="UserName is Required"></asp:RequiredFieldValidator>    
+                          </div>
 
 
+                          </div>
 
+                          <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Password :</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox><b style="color:red; font-size:large" >*</b>
+                       
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator1" CssClass="Required" runat="server" ControlToValidate="txtPassword"
+                            ForeColor="Red" ErrorMessage="Password is Required"></asp:RequiredFieldValidator> 
 
+                    
+                  </div>
+                   </div>
 
+                          <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Engineer ID :</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtEnggId" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox><b style="color:red; font-size:large" >*</b>
+                       
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator2" CssClass="Required" runat="server" ControlToValidate="txtEnggId"
+                            ForeColor="Red" ErrorMessage="Engineer ID is Required"></asp:RequiredFieldValidator> 
+                       
+
+                    
+                  </div>
+                   </div>
+                          <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">User Leve1 :</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtUserlvl" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox><b style="color:red; font-size:large" >*</b>
+                       
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator3" CssClass="Required" runat="server" ControlToValidate="txtUserlvl"
+                            ForeColor="Red" ErrorMessage="User Leve1 required"></asp:RequiredFieldValidator> 
+                       
+
+                    
+                  </div>
+                   </div>
+                          <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Branch Code1 :</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtBranchCode1" runat="server" CssClass="form-control" style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox><b style="color:red; font-size:large" >*</b>
+                       
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator4" CssClass="Required" runat="server" ControlToValidate="txtBranchCode1"
+                            ForeColor="Red" ErrorMessage="Branch Code is required"></asp:RequiredFieldValidator> 
+                       
+
+                    
+                  </div>
+                   </div>
+                          <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Branch Code2 :</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtBranchCode2" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
+                       
+
+                    
+                  </div>
+                   </div>
+                          <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Branch Code3 :</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtBranchCode3" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
+                       
+
+                    
+                  </div>
+                   </div>
+                          <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Branch Code4 :</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtBranchCode4" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
+                       
+
+                    
+                  </div>
+                   </div>
+                          <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Branch Code5 :</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtBranchCode5" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
+                       
 
                     </div>
                   </div>
+                              <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Surname :</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtSurname" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox><b style="color:red; font-size:large" >*</b>
+                       
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator5" CssClass="Required" runat="server" ControlToValidate="txtSurname"
+                            ForeColor="Red" ErrorMessage="Surname is required"></asp:RequiredFieldValidator> 
+                       
+
+                    
+                  </div>
+                   </div>
+                              <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Name :</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtName" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox><b style="color:red; font-size:large" >*</b>
+                       
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator6" CssClass="Required" runat="server" ControlToValidate="txtName"
+                            ForeColor="Red" ErrorMessage="Name is required"></asp:RequiredFieldValidator> 
+                       
+
+                    
+                  </div>
+                   </div>
+                              <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Middle Name :</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtMiddleName" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
+                       
+
+                    
+                  </div>
+                   </div>
+                              <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">DOB :</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtdob" runat="server" CssClass="form-control date" style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox><b style="color:red; font-size:large" >*</b>
+                       
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator7" CssClass="Required" runat="server" ControlToValidate="txtdob"
+                            ForeColor="Red" ErrorMessage="DOB is required"></asp:RequiredFieldValidator> 
+                       
+
+                    
+                  </div>
+                   </div>
+</div>
+
+<div>
+
+
+
+<%--<div class="col-md-8">--%>
+
+
+                              <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Sex :</Label>
+                               </div>
+                              <div>
+                     <%--<asp:TextBox ID="txtsex" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>--%>
+                       
+                                 <asp:RadioButtonList ID="radionGender" runat="server">
+                                <asp:ListItem Text="Male" Value="1" />
+                                <asp:ListItem Text="Female" Value="0" />
+                            </asp:RadioButtonList><b style="color:red; font-size:large" >*</b>
+                                  
+                       
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator8" CssClass="Required" runat="server" ControlToValidate="radionGender"
+                            ForeColor="Red" ErrorMessage="Gender is required"></asp:RequiredFieldValidator> 
+                    
+                  </div>
+                   </div>
+                              <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Superior :</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtSuperior" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox><b style="color:red; font-size:large" >*</b>
+                                  
+                       
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator9" CssClass="Required" runat="server" ControlToValidate="txtSuperior"
+                            ForeColor="Red" ErrorMessage="Superior is Required"></asp:RequiredFieldValidator> 
+                       
+
+                    
+                  </div>
+                   </div>
+                              <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Address Line 1 :</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtAddressLine1" runat="server" TextMode="MultiLine" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox><b style="color:red; font-size:large" >*</b>
+                                  
+                       
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator11" CssClass="Required" runat="server" ControlToValidate="txtAddressLine1"
+                            ForeColor="Red" ErrorMessage="Address is required"></asp:RequiredFieldValidator> 
+                       
+
+                    
+                  </div>
+                   </div>
+                              <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Address Line 2 :</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtAddressLine2" runat="server" CssClass="form-control" TextMode="MultiLine"  style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
+                       
+
+                    
+                  </div>
+                   </div>
+                              <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Address Line 3 :</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtAddressLine3" runat="server" CssClass="form-control " TextMode="MultiLine"   style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
+                       
+
+                    
+                  </div>
+                   </div>
+
+                              <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Zip Code :</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtZipCode" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
+                       
+
+                    
+                  </div>
+                   </div>
+                              <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Telephone No1:</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtTelephone" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
+                       
+
+                    
+                  </div>
+                   </div>
+                              <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Mobile No:</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtMobile" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox><b style="color:red; font-size:large" >*</b>
+                                  
+                       
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator12" CssClass="Required" runat="server" ControlToValidate="txtMobile"
+                            ForeColor="Red" ErrorMessage="Mobile No required"></asp:RequiredFieldValidator> 
+                       
+
+                    
+                  </div>
+
+                   </div>
+                              <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Email ID :</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtEmailId" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox><b style="color:red; font-size:large" >*</b>
+                      <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" CssClass="Required" ControlToValidate="txtEmailId"
+                            ForeColor="Red" ErrorMessage="Email ID is required"></asp:RequiredFieldValidator>
+                                  <asp:RegularExpressionValidator ID="validateEmail" runat="server" ErrorMessage="Invalid email." ControlToValidate="txtEmailId" ValidationExpression="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$" />
+ 
+                    
+                  </div>
+
+                   </div>
+                              <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Telephone No2 :</Label>
+                               </div>
+                              <div>
+                     <asp:TextBox ID="txtTelephone1" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox><b style="color:red; font-size:large" >*</b>
+                                  
+                       
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator13" CssClass="Required" runat="server" ControlToValidate="txtTelephone1"
+                            ForeColor="Red" ErrorMessage="Telephone No is Required"></asp:RequiredFieldValidator> 
+                       
+
+                    
+                  </div>
+
+                   </div>
+                              <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Delete flag :</Label>
+                               </div>
+                              <div>
+                     <%--<asp:TextBox ID="txtDeleteflag" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
+                     --%>  
+                                  <asp:checkbox id="delflag" runat="server"></asp:checkbox>
+
+                    
+                  </div>
+
+                   </div>
+                               <div class="row">
+                           <div class="form-group col-sm-4 ">
+                          <Label  runat="server"  CssClass="bmd-label-floating">Admin Flag :</Label>
+                               </div>
+                              <div>
+                     <%--<asp:TextBox ID="txtAdminFlag" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>--%>
+                       <asp:checkbox id="admindelflg" runat="server"></asp:checkbox>
+
+                    
+                  </div>
+
+                   </div>
+    <%-- <div>
+                       <asp:Button ID="btnCreate" runat="server" OnClick="btnCreate_Click" class="btn btn-primary pull-right" text="Save"/>
+                      </div> --%>
+     <div>
+ <%--<asp:Button ID="btnUpload" runat="server" Text="Create" class="btn btn-primary " />--%>
+                                <asp:Button ID="btnEdit" runat="server" Text="Save" OnClick="btnEdit_Click" class="btn btn-primary " />
+                    </div>
+
+                          <div>
+ <%--<asp:Button ID="btnUpload" runat="server" Text="Create" class="btn btn-primary " />--%>
+                                <asp:Button ID="btnback" runat="server" CausesValidation="false" Text="Back" OnClick="btnback_Click" class="btn btn-primary " />
+                    </div>
+
+<%--</div>--%></div>
+                   </div>
+                        
+                     </div>
+
+                        </div>
+
+
+                          <%--<div class="col-md-6">
+                              <div class="row">
+                        <div class="form-group col-sm-4">
+                             <Label  runat="server" CssClass="bmd-label-floating" >Target Data</Label>
+                            </div>
+                    <div>
+                             <asp:DropDownList ID="DropDownTargetData" runat="server" class="form-control " style="width: 270px; height:33px">
+                      </asp:DropDownList>
+                    
+                  </div>
+             </div>
+
+                              <div class="row">
+                  <div class="form-group col-sm-4">
+
+                        <Label ID="Label7" runat="server" CssClass="bmd-label-floating">Date:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp From</Label>
+                      </div>
+                                  <div>
+                      <asp:TextBox ID="TextDateFrom" runat="server" class="form-file-upload serverlbl  date" AutoCompleteType="Disabled" style="width: 120px; height:33px;"></asp:TextBox>
+                      <%--<ajaxToolkit:CalendarExtender ID="TextDateFrom_CalendarExtender" runat="server" BehaviorID="TextDateFrom_CalendarExtender" TargetControlID="TextDateFrom" PopupPosition="Left">
+                      </ajaxToolkit:CalendarExtender>--%>
+                                   <%-- &nbsp;&nbsp;
+                      <asp:Label ID="Label8" runat="server" class="bmd-label-floating serverlbl" Text="To"></asp:Label>&nbsp;&nbsp;
+                      <asp:TextBox ID="TextDateTo" runat="server" class="form-file-upload serverlbl date" AutoCompleteType="Disabled" style="width: 120px; height:33px"></asp:TextBox>--%>
+                     <%-- <ajaxToolkit:CalendarExtender ID="TextDateTo_CalendarExtender" runat="server" BehaviorID="TextDateTo_CalendarExtender" TargetControlID="TextDateTo" PopupPosition="right">
+                      </ajaxToolkit:CalendarExtender>--%>
+
+</div>
+                  </div>
+                  </div>--%>
+                      </div>
+
+
+
+
+
+                    <%-- cardidscroolbar div--%>
+                     </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+             <%-- </div>--%>
+           <%-- </div>
         </div>
-       </div>
-    
+       </div>--%>
+    <asp:Button ID="BtnCancel" runat="server" Text="Button" Style="display: none;" />
+        <asp:Button ID="BtnOK" runat="server" Text="Button" Style="display: none;" />
+
+   
+
+    <div id="dialog" title="message" style="display: none;">
+       
+        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+    </div>
 </asp:Content>

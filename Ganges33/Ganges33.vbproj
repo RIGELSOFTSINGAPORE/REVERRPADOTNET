@@ -203,6 +203,48 @@
     <Content Include="assets\js\plugins\nouislider.min.js" />
     <Content Include="assets\js\plugins\perfect-scrollbar.jquery.min.js" />
     <Content Include="assets\js\plugins\sweetalert2.js" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\Ganges33.dll" />
+    <Content Include="bin\Ganges33.pdb" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\Microsoft.Win32.Primitives.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.Process.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.DriveInfo.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Security.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.Security.Claims.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Security.Principal.Windows.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.Threading.Thread.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="icon2\placeholder-2.png" />
     <Content Include="icon2\user-3.png" />
     <Content Include="icon\back.png" />
@@ -382,7 +424,6 @@
     <Content Include="pagewall_2\__MACOSX\._wall_person-2.png" />
     <Content Include="pagewall_2\__MACOSX\._wall_repair-2.png" />
     <Content Include="pagewall_2\__MACOSX\._wall_system-2.png" />
-    <Content Include="Popup.aspx" />
     <Content Include="Repair_1.aspx" />
     <Content Include="Repair_1_Detail.aspx" />
     <Content Include="rpa.aspx" />
@@ -393,7 +434,6 @@
     <Content Include="Rpa_OnOff.aspx" />
     <Content Include="rpa_scheduler.aspx" />
     <Content Include="Rpa_TaskApp.aspx" />
-    <Content Include="SetupNewServiceCenter.aspx" />
     <Content Include="SonyAnalysis_Export.aspx" />
     <Content Include="SonyAnalysis_FileUpload.aspx" />
     <Content Include="SonyMenu.aspx" />
@@ -665,6 +705,8 @@
     <Compile Include="logic\MoneyAggregationControl.vb" />
     <Compile Include="logic\MoneyAggregationControl1.vb" />
     <Compile Include="logic\MoneyReserveControl.vb" />
+    <Compile Include="logic\MUserControl.vb" />
+    <Compile Include="logic\MUserDataControl.vb" />
     <Compile Include="logic\OtherSalesExtendedWarrantyControl.vb" />
     <Compile Include="logic\OtherUpdateControl.vb" />
     <Compile Include="logic\PartsIoControl.vb" />
@@ -687,7 +729,6 @@
     <Compile Include="logic\SawDiscountControl.vb" />
     <Compile Include="logic\ScDsrControl.vb" />
     <Compile Include="logic\ServicePartsReturnControl.vb" />
-    <Compile Include="logic\SetupNewServiceCenterControl.vb" />
     <Compile Include="logic\ShipBaseControl.vb" />
     <Compile Include="logic\SLedgerControl.vb" />
     <Compile Include="logic\SonyAcctStmtControl.vb" />
@@ -796,6 +837,8 @@
     <Compile Include="Model\MailModel.vb" />
     <Compile Include="Model\MoneyAggregationModel.vb" />
     <Compile Include="Model\MoneyReserveModel.vb" />
+    <Compile Include="Model\MUserDataModel.vb" />
+    <Compile Include="Model\MUserModel.vb" />
     <Compile Include="Model\OtherSalesExtendedWarrantyModel.vb" />
     <Compile Include="Model\OtherUpdateModel.vb" />
     <Compile Include="Model\PartsIoModel.vb" />
@@ -818,7 +861,6 @@
     <Compile Include="Model\SawDiscountModel.vb" />
     <Compile Include="Model\ScDsrModel.vb" />
     <Compile Include="Model\ServicePartsReturnModel.vb" />
-    <Compile Include="Model\SetupNewServiceCenterModel.vb" />
     <Compile Include="Model\ShipBaseModel.vb" />
     <Compile Include="Model\SLedgerModel.vb" />
     <Compile Include="Model\SonyAcctStmtModel.vb" />
@@ -997,7 +1039,7 @@
     </Compile>
     <Compile Include="Popup.aspx.vb">
       <DependentUpon>Popup.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Repair_1.aspx.designer.vb">
       <DependentUpon>Repair_1.aspx</DependentUpon>
@@ -1095,13 +1137,6 @@
     </Compile>
     <Compile Include="Rpa_TaskApp.aspx.vb">
       <DependentUpon>Rpa_TaskApp.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="SetupNewServiceCenter.aspx.designer.vb">
-      <DependentUpon>SetupNewServiceCenter.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SetupNewServiceCenter.aspx.vb">
-      <DependentUpon>SetupNewServiceCenter.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Site1.Master.designer.vb">
@@ -1375,6 +1410,15 @@
     <Content Include="assets\scss\material-dashboard\_variables.scss" />
     <Content Include="master.Master" />
     <Content Include="assets\images\jquery-ui-1.9.2.custom.zip" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -1399,7 +1443,6 @@
     <Content Include="pagewall\wall_web_create.psd" />
     <Content Include="Site3msg.Master" />
     <Content Include="Site5.Master" />
-    <Content Include="test.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
