@@ -256,7 +256,7 @@ p:hover {
               </a>
             </div>
             <div class="navbar-wrapper">
-               <a class="navbar-brand"><span class="navbar-icon"><i class="material-icons">person</i></span>
+               <a class="navbar-brand"  href="./Changepassword.aspx"><span class="navbar-icon"><i class="material-icons">person</i></span>
                  <asp:Label ID="lblUser" runat="server"></asp:Label>
               </a>
             </div>
@@ -292,9 +292,8 @@ p:hover {
                     <div class="collapse" id="submenu6" aria-expanded="false">
                         <ul class="flex-column pl-2 nav">
                
-                            <li class="nav-item"><a class="nav-link py-0" id="btnservicecenter" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Service Center</p></a></li>
+                            <li class="nav-item" style="margin-left: -5px;" ><a class="nav-link py-0" id="btnservicecenter" runat="server" href="#"><i  style="margin-top:7px; " class="fas fa-angle-double-right"></i><p>Service Center</p></a></li>
                               <li class="nav-item"><a class="nav-link py-0" id="btnuser" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>User Management</p></a></li>
-                            <li class="nav-item"><a class="nav-link py-0" id="A3" runat="server" href="./RPA_Management.aspx"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>RPA Management</p></a></li>
                            
                         </ul>
                     </div>
@@ -355,7 +354,7 @@ p:hover {
           <p runat="server" class="btntransprant" id="analyis">Analysis Data</p></a>
                     <div class="collapse" id="submenu3" aria-expanded="false">
                         <ul class="flex-column pl-2 nav">
-                            <li class="nav-item"><a class="nav-link py-0"  ID="btnUploadSummary" runat="server"  href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Upload Summary</p></a></li>                            
+                            <li class="nav-item" style="margin-left: -5px;"><a class="nav-link py-0"  ID="btnUploadSummary" runat="server"  href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Upload Summary</p></a></li>                            
                             <li class="nav-item"><a class="nav-link py-0" ID="btnUploadVerification" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Upload Verification</p> </a></li>
                             <li class="nav-item"><a class="nav-link py-0" id="btnPartsCompare" runat="server"  href="#"> <i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Parts Compare</p></a></li>
                             <li class="nav-item"><a class="nav-link py-0" id="storemanagement" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Store Management</p></a></li>
@@ -371,7 +370,7 @@ p:hover {
           <p runat="server" id="rpa">RPA</p></a>
                     <div class="collapse" id="submenu4" aria-expanded="false">
                         <ul class="flex-column pl-2 nav">
-                             <li class="nav-item"><a class="nav-link py-0" id="A2" runat="server" href="./RPA_Management.aspx"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Create RPA Task</p></a></li>
+                             <li class="nav-item" style="margin-left: -5px;"><a class="nav-link py-0" id="A2" runat="server" href="./RPA_Management.aspx"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Create RPA Task</p></a></li>
                            
                               <li class="nav-item"><a class="nav-link py-0" ID="btnscheduler" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Scheduler</p></a></li>
                               <li class="nav-item"><a class="nav-link py-0" ID="btnRpaLog" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Rpa Log</p></a></li>

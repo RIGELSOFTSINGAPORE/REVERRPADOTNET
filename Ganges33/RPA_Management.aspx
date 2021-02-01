@@ -75,7 +75,7 @@
                         </div>
                         <div>
                               <br />
-                             <asp:TextBox ID="TaskName" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" />
+                             <asp:TextBox ID="TaskName" runat="server"  Height="33px" Width="100%" class="form-file-upload  serverlbl" />
                         </div>
                         </div>
                         <div class="row">
@@ -89,10 +89,10 @@
                                  <br />
                                <asp:FileUpload ID="filename" Class="serverlbl"  runat="server" />
                                
-                             <asp:TextBox ID="Textfilename" runat="server" value="" Height="33px" Width="100%" ReadOnly="false" class="form-file-upload  serverlbl" />
+                             <asp:TextBox ID="Textfilename" runat="server" value="" Height="33px" Width="100%" ReadOnly="true" class="form-file-upload  serverlbl" />
                         </div>
                         </div>
-                        <div class="row">
+                        <div class="row" runat="server" id="sourcepath">
                             <div class="col-sm-2">
                                   <br />
                                 <label>
@@ -101,7 +101,7 @@
                             </div>
                             <div>
                                   <br />
-                              <asp:TextBox ID="Source" runat="server" value="" Height="33px" Width="100%" class="form-file-upload date serverlbl" />
+                              <asp:TextBox ID="Source" runat="server" ReadOnly="true" Height="33px" Width="100%" class="form-file-upload serverlbl" />
                            
                             </div>
                         </div>
