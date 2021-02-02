@@ -8,7 +8,7 @@
      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 
    
-
+    
     <link href="assets/jquery-ui_theme.css" rel="stylesheet" />
     <link href="assets/jquery-ui.css" rel="stylesheet" />
     <script type="text/javascript"  src="assets/jquery-ui.min_lips.js"></script>
@@ -26,7 +26,9 @@
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  <!-- CSS Files -->
+  <link href="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/css/bootstrap-multiselect.css" rel="stylesheet" type="text/css" />
+    <script src="http://cdn.rawgit.com/davidstutz/bootstrap-multiselect/master/dist/js/bootstrap-multiselect.js" type="text/javascript"></script>
+    <!-- CSS Files -->
    <link href="assets/css/material-dashboard.css" rel="stylesheet" /> 
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
@@ -41,6 +43,20 @@
         }
        
    </style>
+    <script type="text/javascript">
+        $(function () {
+            $("[id*=View_userid]").click(function () {
+                //alert("hi");
+                var rowIndex = $(this)[0].getAttribute("data-commandargument");
+                ////alert(rowIndex);
+                window.open("Analysis_Servicecenter_popup.aspx?rowindex=" + rowIndex , 'Popup', 'height=500,width=800,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menu=no');
+
+            });
+        });
+        
+           
+   
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   
@@ -108,15 +124,7 @@
                             <Columns>
              
 
-                    <asp:TemplateField HeaderText="DELFG" ItemStyle-Width="150">
-                        <ItemTemplate>
-                            <asp:Label ID="DELFG" runat="server" Text='<%# Eval("DELFG") %>'></asp:Label>
-                        </ItemTemplate>
-                        <%--<ItemTemplate>
-                            <asp:Label ID="DELFG" runat="server" Text='<%# Eval("DELFG") %>'></asp:Label>
-                        </ItemTemplate>--%>
-                        <ItemStyle Width="150px"></ItemStyle>
-                    </asp:TemplateField>
+                    
                     <asp:TemplateField HeaderText="User Id" ItemStyle-Width="150">
                         
                         <ItemTemplate>
@@ -132,7 +140,15 @@
                         </ItemTemplate>
                         <ItemStyle Width="150px"></ItemStyle>
                     </asp:TemplateField>
-
+                                <asp:TemplateField HeaderText="DELFG" ItemStyle-Width="150">
+                        <ItemTemplate>
+                            <asp:Label ID="DELFG" runat="server" Text='<%# Eval("DELFG") %>'></asp:Label>
+                        </ItemTemplate>
+                        <%--<ItemTemplate>
+                            <asp:Label ID="DELFG" runat="server" Text='<%# Eval("DELFG") %>'></asp:Label>
+                        </ItemTemplate>--%>
+                        <ItemStyle Width="150px"></ItemStyle>
+                    </asp:TemplateField>
                      <asp:TemplateField HeaderText="Admin flage" ItemStyle-Width="150">
                         
                         <ItemTemplate>
@@ -152,15 +168,20 @@
                       <asp:TemplateField HeaderText="EDIT" ItemStyle-Width="150">
                         <ItemTemplate>
                              
-                            <asp:Button ID="btnEdit" runat="server" Width="60" OnClick="btnEdit_Click1"  PostBackUrl='<%# "~/Analysis_User.aspx?User_id=" + Eval("user_id") %>' text="Edit"  />  
-                       
+                            <%--<asp:Button ID="btnEdit" runat="server" Width="60" OnClick="btnEdit_Click1"  
+                                PostBackUrl='<%# "~/Analysis_User.aspx?User_id=" + Eval("user_id") %>' text="Edit"  />  --%>
+                      
+                            <asp:LinkButton ID="linkEdit" runat="server" CommandArgument='<%# Bind("user_id") %>' CommandName="goto" Text="Edit"></asp:LinkButton>
+                      
                             <%--<asp:LinkButton ID="user_id" runat="server" CommandArgument='<%# Bind("user_id") %>' CommandName="goto" Text="Edit"></asp:LinkButton>--%>
                         </ItemTemplate>
                         <ItemStyle Width="150px"></ItemStyle>
                     </asp:TemplateField>
                                 <asp:TemplateField HeaderText="View" ItemStyle-Width="150">
                         <ItemTemplate>
-                            <asp:LinkButton ID="user_id1" runat="server" CommandArgument='<%# Bind("user_id") %>' CommandName="goto" Text="View"></asp:LinkButton>
+                           <%-- <asp:LinkButton ID="View_userid" runat="server" CommandArgument='<%# Bind("user_id") %>' Text="View"></asp:LinkButton>--%>
+                           
+                             <asp:LinkButton ID="View_userid" runat="server" data-CommandArgument='<%# Eval("user_id") %>'  Text="View"></asp:LinkButton>
                         </ItemTemplate>
                         <ItemStyle Width="150px"></ItemStyle>
                     </asp:TemplateField>
@@ -183,12 +204,12 @@
                           <div class="row">
                          <div class="form-group col-sm-4">
                              
-                             <Label runat="server" CssClass="bmd-label-floating">User Name :</Label>
+                             <Label runat="server" id="lblUsername" CssClass="bmd-label-floating">User Name :</Label>
                              </div>
                           <div Class="form-group">
                       <%--<asp:DropDownList ID="DropListLocation" runat="server" CssClass="form-control " style="width: 270px; height:33px;">
                       </asp:DropDownList>--%>
-                              <asp:TextBox ID="txtUserId" runat="server" CssClass="form-control" style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox><b style="color:red; font-size:large" >*</b>
+                              <asp:TextBox ID="txtUserId" runat="server" CssClass="form-control" style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
                            <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" CssClass="Required" ControlToValidate="txtUserId"
                             ForeColor="Red" ErrorMessage="UserName is Required"></asp:RequiredFieldValidator>    
                           </div>
@@ -233,7 +254,7 @@
                        
                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" CssClass="Required" runat="server" ControlToValidate="txtUserlvl"
                             ForeColor="Red" ErrorMessage="User Leve1 required"></asp:RequiredFieldValidator> 
-                       
+                                  
 
                     
                   </div>
@@ -244,11 +265,13 @@
                                </div>
                               <div>
                      <asp:TextBox ID="txtBranchCode1" runat="server" CssClass="form-control" style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox><b style="color:red; font-size:large" >*</b>
+                       <asp:ListBox ID="test" runat="server" Width="100px" SelectionMode="Multiple" ></asp:ListBox>
+                           <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator4" CssClass="Required" runat="server" ControlToValidate="txtBranchCode1"
+                            ForeColor="Red" ErrorMessage="Branch Code is required"></asp:RequiredFieldValidator> --%>
                        
-                           <asp:RequiredFieldValidator ID="RequiredFieldValidator4" CssClass="Required" runat="server" ControlToValidate="txtBranchCode1"
-                            ForeColor="Red" ErrorMessage="Branch Code is required"></asp:RequiredFieldValidator> 
-                       
+<asp:ListBox ID="listShipBranch" runat="server"  Height="133px" Width="100px"  class="multiselect-ui form-control" multiple="multiple"  SelectionMode="Multiple">
 
+                      </asp:ListBox>
                     
                   </div>
                    </div>
@@ -521,18 +544,20 @@
                   </div>
 
                    </div>
-    <%-- <div>
-                       <asp:Button ID="btnCreate" runat="server" OnClick="btnCreate_Click" class="btn btn-primary pull-right" text="Save"/>
-                      </div> --%>
+     <div>
+                       
+           <asp:Button ID="btnback" runat="server" CausesValidation="false" Text="Back" OnClick="btnback_Click" class="btn btn-primary " />
+                      </div> 
+    <div>
+ <%--<asp:Button ID="btnUpload" runat="server" Text="Create" class="btn btn-primary " />--%>
+                          <asp:Button ID="btnCreate" runat="server" OnClick="btnCreate_Click" class="btn btn-primary pull-right" text="Save"/>    
+                    </div>
      <div>
  <%--<asp:Button ID="btnUpload" runat="server" Text="Create" class="btn btn-primary " />--%>
-                                <asp:Button ID="btnEdit" runat="server" Text="Save" OnClick="btnEdit_Click" class="btn btn-primary " />
+                                <asp:Button ID="Edit" runat="server" Text="Save" class="btn btn-primary " />
                     </div>
 
-                          <div>
- <%--<asp:Button ID="btnUpload" runat="server" Text="Create" class="btn btn-primary " />--%>
-                                <asp:Button ID="btnback" runat="server" CausesValidation="false" Text="Back" OnClick="btnback_Click" class="btn btn-primary " />
-                    </div>
+                         
 
 <%--</div>--%></div>
                    </div>
@@ -571,8 +596,7 @@
 
 </div>
                   </div>
-                  </div>--%>
-                      </div>
+                  </div>                      </div>
 
 
 

@@ -76,13 +76,15 @@
             ElseIf activepage.Contains("Rpa_OnOff.aspx") Then
                 rpa.Attributes.Add("class", "btn_active")
                 drp2.Attributes.Add("class", "liactive collapsed nav-link collapsed text-truncate")
-
-                'ElseIf activepage.Contains("Analysis_Servicecenter.aspx") Then
-                '    admin.Attributes.Add("class", "btn_active")
-                '    'drp2.Attributes.Add("class", "liactive collapsed nav-link collapsed text-truncate")
-                'ElseIf activepage.Contains("Analysis_User.aspx") Then
-                '    admin.Attributes.Add("class", "btn_active")
-                '    ' drp2.Attributes.Add("class", "liactive collapsed nav-link collapsed text-truncate")
+            ElseIf activepage.Contains("RPA_Management.aspx") Then
+                rpa.Attributes.Add("class", "btn_active")
+                drp2.Attributes.Add("class", "liactive collapsed nav-link collapsed text-truncate")
+            ElseIf activepage.Contains("Analysis_Servicecenter.aspx") Then
+                admin.Attributes.Add("class", "btn_active")
+                drp3.Attributes.Add("class", "liactive collapsed nav-link collapsed text-truncate")
+            ElseIf activepage.Contains("SetupNewServiceCenter.aspx") Then
+                admin.Attributes.Add("class", "btn_active")
+                drp3.Attributes.Add("class", "liactive collapsed nav-link collapsed text-truncate")
             Else
                 fileupload.Attributes.Add("class", "active")
                 btnFileUpload.Attributes.Add("class", "btn_active")
@@ -328,4 +330,7 @@
         Response.Redirect("analysis_store_management.aspx")
     End Sub
 
+    Private Sub CreateRPA_ServerClick(sender As Object, e As EventArgs) Handles CreateRPA.ServerClick
+        Response.Redirect("RPA_Management.aspx")
+    End Sub
 End Class

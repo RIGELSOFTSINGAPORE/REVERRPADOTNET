@@ -246,62 +246,6 @@
     <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
-    <Content Include="CSS\Common\Analysis-Cash-Tracking.css" />
-    <Content Include="CSS\Common\Analysis-Cash-Tracking_qg.css" />
-    <Content Include="CSS\Common\Analysis-Cash-Tracking_qg1.css" />
-    <Content Include="CSS\Common\Analysis-report2.css" />
-    <Content Include="CSS\Common\Analysis_Cash_tracking.css" />
-    <Content Include="CSS\Common\Analysis_Cash_Tracking_2.css" />
-    <Content Include="CSS\Common\Analysis_Cash_tracking_imp.css" />
-    <Content Include="CSS\Common\Analysis_castody.css" />
-    <Content Include="CSS\Common\analysis_castody_search.css" />
-    <Content Include="CSS\Common\Analysis_Custody_qg.css" />
-    <Content Include="CSS\Common\Analysis_Custody_Search.css" />
-    <Content Include="CSS\Common\Analysis_Export_bak.css" />
-    <Content Include="CSS\Common\Analysis_FileUploaded_1.css" />
-    <Content Include="CSS\Common\Analysis_Recovery.css" />
-    <Content Include="CSS\Common\Analysis_Recovery2.css" />
-    <Content Include="CSS\Common\Analysis_Refresh.css" />
-    <Content Include="CSS\Common\Analysis_Report.css" />
-    <Content Include="CSS\Common\Inv-corporator_registeration.css" />
-    <Content Include="CSS\Common\Inv-report.css" />
-    <Content Include="CSS\Common\Inv_Arival.css" />
-    <Content Include="CSS\Common\inv_Return.css" />
-    <Content Include="CSS\Common\Inv_search.css" />
-    <Content Include="CSS\Common\Inv_Use.css" />
-    <Content Include="CSS\Common\Login.css" />
-    <Content Include="CSS\Common\Login_3tire.css" />
-    <Content Include="CSS\Common\Login_normal.css" />
-    <Content Include="CSS\Common\Menu.css" />
-    <Content Include="CSS\Common\Menu2.css" />
-    <Content Include="CSS\Common\money-record-3.css" />
-    <Content Include="CSS\Common\Money-Record-4.css" />
-    <Content Include="CSS\Common\Money-reverse-qg.css" />
-    <Content Include="CSS\Common\Money-sales-shows2.css" />
-    <Content Include="CSS\Common\Money-Sales.css" />
-    <Content Include="CSS\Common\money-salse-show.css" />
-    <Content Include="CSS\Common\Money_Aggregation.css" />
-    <Content Include="CSS\Common\Money_Aggregation_qg.css" />
-    <Content Include="CSS\Common\Money_Menu.css" />
-    <Content Include="CSS\Common\Money_Report.css" />
-    <Content Include="CSS\Common\Money_Reserve.css" />
-    <Content Include="CSS\Common\Money_Rport_qg.css" />
-    <Content Include="CSS\Common\Monney_Record1.css" />
-    <Content Include="CSS\Common\Monney_repair.css" />
-    <Content Include="CSS\Common\Msg_inv_Arrival.css" />
-    <Content Include="CSS\Common\Msg_inv_Return.css" />
-    <Content Include="CSS\Common\Repair2.css" />
-    <Content Include="CSS\Common\Repair_1.css" />
-    <Content Include="CSS\Common\Repair_parts_Registeration_Create.css" />
-    <Content Include="CSS\Common\Repair_Tools.css" />
-    <Content Include="CSS\Common\Site2_Master.css" />
-    <Content Include="CSS\Common\Site3.msg.Master.css" />
-    <Content Include="CSS\Common\Site3_Master.css" />
-    <Content Include="CSS\Common\Site4.Master.css" />
-    <Content Include="CSS\Common\Site5.Master.css" />
-    <Content Include="CSS\Common\Site6.Master.css" />
-    <Content Include="CSS\Common\SonyAnalysis_Report.css" />
-    <Content Include="CSS\Common\SonyAnalysis_Report2.css" />
     <Content Include="icon2\placeholder-2.png" />
     <Content Include="icon2\user-3.png" />
     <Content Include="icon\back.png" />
@@ -436,6 +380,7 @@
     <Content Include="image\repair.png" />
     <Content Include="Login.aspx" />
     <Content Include="Menu.aspx" />
+    <Content Include="MoneyReport.aspx" />
     <Content Include="Money_Aggregation_qg.aspx" />
     <Content Include="Money_Menu.aspx" />
     <Content Include="Money_Record_1.aspx" />
@@ -492,16 +437,6 @@
     <Content Include="Rpa_OnOff.aspx" />
     <Content Include="rpa_scheduler.aspx" />
     <Content Include="Rpa_TaskApp.aspx" />
-    <Content Include="Scripts\bootstrap-multiselect.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\common.js" />
-    <Content Include="Scripts\jquery-1.8.2.min.js" />
-    <Content Include="Scripts\jquery.dialog.js" />
-    <Content Include="Scripts\jquery.dialog2.js" />
-    <Content Include="Scripts\jquery.validationEngine-ja.js" />
-    <Content Include="Scripts\jquery.validationEngine.js" />
-    <Content Include="ServiceCenter.js" />
-    <Content Include="SetupNewServiceCenter.aspx" />
     <Content Include="SonyAnalysis_Export.aspx" />
     <Content Include="SonyAnalysis_FileUpload.aspx" />
     <Content Include="SonyMenu.aspx" />
@@ -701,6 +636,13 @@
       <DependentUpon>Analysis_User.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="Changepassword.aspx.designer.vb">
+      <DependentUpon>Changepassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Changepassword.aspx.vb">
+      <DependentUpon>Changepassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Class_analysis.vb" />
     <Compile Include="Class_common.vb" />
     <Compile Include="Class_inv.vb" />
@@ -757,6 +699,7 @@
     <Compile Include="logic\CashOnSaleControl.vb" />
     <Compile Include="logic\CashOnSaleInvoiceControl.vb" />
     <Compile Include="logic\CashTrackControl.vb" />
+    <Compile Include="logic\Changepasswordcontrol.vb" />
     <Compile Include="logic\CodeMasterControl.vb" />
     <Compile Include="logic\CollectionControl.vb" />
     <Compile Include="logic\CommonConst.vb" />
@@ -776,6 +719,7 @@
     <Compile Include="logic\MoneyAggregationControl.vb" />
     <Compile Include="logic\MoneyAggregationControl1.vb" />
     <Compile Include="logic\MoneyReserveControl.vb" />
+    <Compile Include="logic\MonthlyTargetControll.vb" />
     <Compile Include="logic\MUserControl.vb" />
     <Compile Include="logic\MUserDataControl.vb" />
     <Compile Include="logic\OtherSalesExtendedWarrantyControl.vb" />
@@ -796,6 +740,7 @@
     <Compile Include="logic\RpaStatusControl.vb" />
     <Compile Include="logic\RpaTaskAppControl.vb" />
     <Compile Include="logic\RpaTaskMstControl.vb" />
+    <Compile Include="logic\SalesControl.vb" />
     <Compile Include="logic\SalesReportControl.vb" />
     <Compile Include="logic\SawDiscountControl.vb" />
     <Compile Include="logic\ScDsrControl.vb" />
@@ -804,6 +749,7 @@
     <Compile Include="logic\ShipBaseControl.vb" />
     <Compile Include="logic\SLedgerControl.vb" />
     <Compile Include="logic\SonyAcctStmtControl.vb" />
+    <Compile Include="logic\SonyActivityReportControl.vb" />
     <Compile Include="logic\SonyAscGstTaxReportControl.vb" />
     <Compile Include="logic\SonyAscInvoiceDataControl.vb" />
     <Compile Include="logic\SonyAscTaxReportControl.vb" />
@@ -820,6 +766,7 @@
     <Compile Include="logic\SonyDailyRepairsetSetNPControl.vb" />
     <Compile Include="logic\SonyDailyUndeliveredSetControl.vb" />
     <Compile Include="logic\SonyDailyUnRepairsetNPControll.vb" />
+    <Compile Include="logic\SonyDeliveredSetControl.vb" />
     <Compile Include="logic\SonyInBoundControl.vb" />
     <Compile Include="logic\SonyMonthlyAbandonControl.vb" />
     <Compile Include="logic\SonyMonthlyRepairsetControl.vb" />
@@ -909,6 +856,7 @@
     <Compile Include="Model\MailModel.vb" />
     <Compile Include="Model\MoneyAggregationModel.vb" />
     <Compile Include="Model\MoneyReserveModel.vb" />
+    <Compile Include="Model\Monthlytargetmodel.vb" />
     <Compile Include="Model\MUserDataModel.vb" />
     <Compile Include="Model\MUserModel.vb" />
     <Compile Include="Model\OtherSalesExtendedWarrantyModel.vb" />
@@ -937,6 +885,7 @@
     <Compile Include="Model\ShipBaseModel.vb" />
     <Compile Include="Model\SLedgerModel.vb" />
     <Compile Include="Model\SonyAcctStmtModel.vb" />
+    <Compile Include="Model\SonyActivityReportModel.vb" />
     <Compile Include="Model\SonyAscGstTaxReportModel.vb" />
     <Compile Include="Model\SonyAscInvoiceDataModel.vb" />
     <Compile Include="Model\SonyAscTaxReportModel.vb" />
@@ -953,6 +902,7 @@
     <Compile Include="Model\SonyDailyRepairsetSetNPModel.vb" />
     <Compile Include="Model\SonyDailyUndeliveredSetModel.vb" />
     <Compile Include="Model\SonyDailyUnRepaipairsetNPModel.vb" />
+    <Compile Include="Model\SonyDeliveredSetModel.vb" />
     <Compile Include="Model\SonyInBoundModel.vb" />
     <Compile Include="Model\SonyMonthlyAbandonModel.vb" />
     <Compile Include="Model\SonyMonthlyRepairsetModel.vb" />
@@ -968,6 +918,13 @@
     <Compile Include="Model\StockOverviewModel.vb" />
     <Compile Include="Model\UserInfoModel.vb" />
     <Compile Include="Model\WarrantyCsvModel.vb" />
+    <Compile Include="MoneyReport.aspx.designer.vb">
+      <DependentUpon>MoneyReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoneyReport.aspx.vb">
+      <DependentUpon>MoneyReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Money_Aggregation_qg.aspx.designer.vb">
       <DependentUpon>Money_Aggregation_qg.aspx</DependentUpon>
     </Compile>
@@ -1106,13 +1063,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="Popup.aspx.designer.vb">
-      <DependentUpon>Popup.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Popup.aspx.vb">
-      <DependentUpon>Popup.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Repair_1.aspx.designer.vb">
       <DependentUpon>Repair_1.aspx</DependentUpon>
@@ -1530,6 +1480,7 @@
     <Content Include="Site6.Master" />
     <Content Include="RpaSub.Master" />
     <Content Include="SonyAnalysis.Master" />
+    <Content Include="RPA files" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

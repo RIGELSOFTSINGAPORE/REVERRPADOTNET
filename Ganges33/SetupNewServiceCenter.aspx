@@ -89,10 +89,11 @@
      <div runat="server" id="addfile">
                     <div class="row">
                         <div class="col-sm-2">
+
                           <label>Ship Name</label>  
                         </div>
                         <div>
-                             <asp:TextBox ID="ShipName" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" MaxLength="20" />
+                             <asp:TextBox ID="ShipName" runat="server" value="" Height="33px" class="form-file-upload  serverlbl" MaxLength="20" />
                         <asp:RequiredFieldValidator ID="SName" runat="server" ControlToValidate="ShipName" ErrorMessage="Please enter a shipname"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                      
@@ -101,12 +102,13 @@ ForeColor="Red"></asp:RequiredFieldValidator>
 
                         <div class="row">
                           <div class="col-sm-2">
+                              <br />
                               <label>
                                 Ship Info
                            </label>
                              </div>
-                             <div>
-                              <asp:TextBox ID="ShipInfo" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" MaxLength="100" />
+                             <div> <br />
+                              <asp:TextBox ID="ShipInfo" runat="server" value="" Height="33px" class="form-file-upload  serverlbl" MaxLength="100" />
                            <asp:RequiredFieldValidator ID="SInfo" runat="server" ControlToValidate="ShipInfo" ErrorMessage="Please enter a shipinfo"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                             </div>
@@ -114,25 +116,25 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                         
 
                         <div class="row">
-                          <div class="col-sm-2">
+                          <div class="col-sm-2"> <br />
                               <label>
                                 Ship Manager
                            </label>
                              </div>
-                             <div>
-                              <asp:TextBox ID="ShipManager" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" MaxLength="20" />
+                             <div>  <br />
+                              <asp:TextBox ID="ShipManager" runat="server" value="" Height="33px" class="form-file-upload  serverlbl" MaxLength="20" />
                            <asp:RequiredFieldValidator ID="SManager" runat="server" ControlToValidate="ShipManager" ErrorMessage="Please enter a shipManager"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                             </div>
                         </div>
                         <div class="row">
-                             <div class="col-sm-2">
+                             <div class="col-sm-2">  <br />
                                  <label>
                                      Ship Tel
                                  </label>
                              </div>
-                            <div>
-                                 <asp:TextBox ID="ShipTel" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" MaxLength="20" />
+                            <div>  <br />
+                                 <asp:TextBox ID="ShipTel" runat="server" value="" Height="33px" class="form-file-upload  serverlbl" MaxLength="20" />
                            <asp:RequiredFieldValidator ID="STel" runat="server" ControlToValidate="ShipTel" ErrorMessage="Please enter a shipTel"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                             </div>
@@ -140,61 +142,61 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                    
 
                     <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2">  <br />
                             <label>
                                 Ship Add1
                             </label>
                         </div>
-                        <div>
-                            <asp:TextBox ID="ShipAdd1" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="70" />
+                        <div>  <br />
+                            <asp:TextBox ID="ShipAdd1" runat="server" value="" Height="33px" class="form-file-upload   serverlbl" MaxLength="70" />
                            <asp:RequiredFieldValidator ID="SAdd1" runat="server" ControlToValidate="ShipAdd1" ErrorMessage="Please enter a shipAdd1"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
              <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2">  <br />
                             <label>
                                 Ship Add2
                             </label>
                         </div>
-                        <div>
-                            <asp:TextBox ID="ShipAdd2" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="70" />
+                        <div>  <br />
+                            <asp:TextBox ID="ShipAdd2" runat="server" value="" Height="33px" class="form-file-upload   serverlbl" MaxLength="70" />
                           
                         </div>
                     </div>
 
           <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2">  <br />
                             <label>
                                 Ship Add3
                             </label>
                         </div>
-                        <div>
-                            <asp:TextBox ID="ShipAdd3" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="70" />
+                        <div>  <br />
+                            <asp:TextBox ID="ShipAdd3" runat="server" value="" Height="33px" class="form-file-upload   serverlbl" MaxLength="70" />
                            
                         </div>
                     </div>
           <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2">  <br />
                             <label>
                                 Zip
                             </label>
                         </div>
-                        <div>
-                            <asp:TextBox ID="Zip" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="10" />
+                        <div>  <br />
+                            <asp:TextBox ID="Zip" runat="server" value="" Height="33px" class="form-file-upload   serverlbl" MaxLength="10" />
                            
                         </div>
                     </div>
             
              <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2">  <br />
                             <label>
                                 Email
                             </label>
                         </div>
-                        <div>
-                            <asp:TextBox ID="Email" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="30" />
+                        <div>  <br />
+                            <asp:TextBox ID="Email" runat="server" value="" Height="33px" class="form-file-upload   serverlbl" MaxLength="30" />
                             <asp:RequiredFieldValidator ID="mail" runat="server" ControlToValidate="Email" ErrorMessage="Please enter a Email"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
@@ -202,13 +204,13 @@ ForeColor="Red"></asp:RequiredFieldValidator>
 
 
          <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2">  <br />
                             <label>
                                 Ship Service
                             </label>
                         </div>
-                        <div>
-                            <asp:TextBox ID="ShipService" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="2" />
+                        <div>  <br />
+                            <asp:TextBox ID="ShipService" runat="server" value="" Height="33px" class="form-file-upload   serverlbl" MaxLength="2" />
                             <asp:RequiredFieldValidator ID="SService" runat="server" ControlToValidate="ShipService" ErrorMessage="Please enter a shipservice"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
@@ -217,38 +219,38 @@ ForeColor="Red"></asp:RequiredFieldValidator>
 
 
          <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2">  <br />
                             <label>
                                 Open Time
                             </label>
                         </div>
-                        <div>
-                            <asp:TextBox ID="OpenTime" runat="server" value="" Height="33px" Width="100%" class="form-file-upload duration   serverlbl" MaxLength="5" />
+                        <div>  <br />
+                            <asp:TextBox ID="OpenTime" runat="server" value="" Height="33px" class="form-file-upload duration   serverlbl" MaxLength="5" />
                             <asp:RequiredFieldValidator ID="OT" runat="server" ControlToValidate="OpenTime" ErrorMessage="Please enter a OpenTime"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
          <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2">  <br />
                             <label>
                                 Close Time
                             </label>
                         </div>
-                        <div>
-                            <asp:TextBox ID="CloseTime" runat="server" value="" Height="33px" Width="100%" class="form-file-upload duration  serverlbl" MaxLength="5" />
+                        <div>  <br />
+                            <asp:TextBox ID="CloseTime" runat="server" value="" Height="33px" class="form-file-upload duration  serverlbl" MaxLength="5" />
                            
                         </div>
                     </div>
 
          <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2">  <br />
                             <label>
                                 Opening Date
                             </label>
                         </div>
-                        <div>
-                            <asp:TextBox ID="OpeningDate" runat="server" value="" Height="33px" Width="100%" class="form-file-upload date  serverlbl" />
+                        <div>  <br />
+                            <asp:TextBox ID="OpeningDate" runat="server" value="" Height="33px" class="form-file-upload date  serverlbl" />
                            <asp:RequiredFieldValidator ID="OD" runat="server" ControlToValidate="OpeningDate" ErrorMessage="Please enter a OpenDate"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
@@ -256,141 +258,141 @@ ForeColor="Red"></asp:RequiredFieldValidator>
 
 
          <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2">  <br />
                             <label>
                                 Closing Date
                             </label>
                         </div>
-                        <div>
-                            <asp:TextBox ID="ClosingDate" runat="server" value="" Height="33px" Width="100%" class="form-file-upload date  serverlbl" />
+                        <div>  <br />
+                            <asp:TextBox ID="ClosingDate" runat="server" value="" Height="33px" class="form-file-upload date  serverlbl" />
                            
                         </div>
                     </div>
 
          <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2">  <br />
                             <label id="lblshipcode" runat="server">
                                 Ship Code
                             </label>
                         </div>
-                        <div>
-                            <asp:TextBox ID="ShipCode1" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="50" />
+                        <div>  <br />
+                            <asp:TextBox ID="ShipCode1" runat="server" value="" Height="33px" class="form-file-upload   serverlbl" MaxLength="50" />
                            <asp:RequiredFieldValidator ID="SCode" runat="server" ControlToValidate="ShipCode1" ErrorMessage="Please enter a ShipCode"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
          <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2">  <br />
                             <label>
                                 Ship Mark
                             </label>
                         </div>
-                        <div>
-                            <asp:TextBox ID="ShipMark" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="3" />
+                        <div>  <br />
+                            <asp:TextBox ID="ShipMark" runat="server" value="" Height="33px" class="form-file-upload   serverlbl" MaxLength="3" />
                            <asp:RequiredFieldValidator ID="SMark" runat="server" ControlToValidate="ShipMark" ErrorMessage="Please enter a ShipMark"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
          <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2">  <br />
                             <label>
                                 Item 1
                             </label>
                         </div>
-                        <div>
-                            <asp:TextBox ID="Item1" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="10" />
+                        <div>  <br />
+                            <asp:TextBox ID="Item1" runat="server" value="" Height="33px" class="form-file-upload   serverlbl" MaxLength="10" />
                            <asp:RequiredFieldValidator ID="IT1" runat="server" ControlToValidate="Item1" ErrorMessage="Please enter a Item1"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
          <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2">  <br />
                             <label>
                                 Item 2
                             </label>
                         </div>
-                        <div>
-                            <asp:TextBox ID="Item2" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="50" />
+                        <div>  <br />
+                            <asp:TextBox ID="Item2" runat="server" value="" Height="33px" class="form-file-upload   serverlbl" MaxLength="50" />
                            <asp:RequiredFieldValidator ID="IT2" runat="server" ControlToValidate="Item2" ErrorMessage="Please enter a Item2"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
          <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2">  <br />
                             <label>
                                 Mess 1
                             </label>
                         </div>
-                        <div>
-                            <asp:TextBox ID="Mess1" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="500" />
+                        <div>  <br />
+                            <asp:TextBox ID="Mess1" runat="server" value="" Height="33px" class="form-file-upload   serverlbl" MaxLength="500" />
                            <asp:RequiredFieldValidator ID="M1" runat="server" ControlToValidate="Mess1" ErrorMessage="Please enter a Mess1"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
 
-         <div class="row">
-                        <div class="col-sm-2">
+         <div class="row"> 
+                        <div class="col-sm-2">   <br />
                             <label>
                                 Mess 2
                             </label>
                         </div>
-                        <div>
-                            <asp:TextBox ID="Mess2" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="500" />
+                        <div>    <br />
+                            <asp:TextBox ID="Mess2" runat="server" value="" Height="33px" class="form-file-upload   serverlbl" MaxLength="500" />
                            <asp:RequiredFieldValidator ID="M2" runat="server" ControlToValidate="Mess2" ErrorMessage="Please enter a Mess2"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
          <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2">   <br />
                             <label>
                                 Mess 3
                             </label>
                         </div>
-                        <div>
-                            <asp:TextBox ID="Mess3" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="500" />
+                        <div>   <br />
+                            <asp:TextBox ID="Mess3" runat="server" value="" Height="33px" class="form-file-upload   serverlbl" MaxLength="500" />
                            <asp:RequiredFieldValidator ID="M3" runat="server" ControlToValidate="Mess3" ErrorMessage="Please enter a Mess3"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
          <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2">   <br />
                             <label>
                                 Regi Deposit
                             </label>
                         </div>
-                        <div>
-                            <asp:TextBox ID="RegiDeposit" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="50" />
+                        <div>   <br />
+                            <asp:TextBox ID="RegiDeposit" runat="server" value="" Height="33px" class="form-file-upload   serverlbl" MaxLength="50" />
                            
                         </div>
                     </div>
 
          <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2">   <br />
                             <label>
                                 PO No
                             </label>
                         </div>
-                        <div>
-                            <asp:TextBox ID="PO_NO" runat="server" value="" Height="33px" Width="100%" class="form-file-upload   serverlbl" MaxLength="2" />
+                        <div>   <br />
+                            <asp:TextBox ID="PO_NO" runat="server" value="" Height="33px" class="form-file-upload   serverlbl" MaxLength="2" />
                            <asp:RequiredFieldValidator ID="PoNo" runat="server" ControlToValidate="PO_NO" ErrorMessage="Please enter a PO_NO"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="col-sm-2">
+                        <div class="col-sm-2">   <br />
                             <label >
                                 Delete flag
                             </label>
                         </div>
-                        <div>
+                        <div>   <br />
                             <asp:checkbox id="delfld" runat="server"></asp:checkbox>
                         </div>
                     </div>
@@ -399,14 +401,14 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                              </div>
                    
                    
-                            <div>
+                            <div>   <br />
  <asp:Button ID="btnAddNew" runat="server" Text="Create" class="btn btn-primary " />
                                  <asp:Button ID="Edit" runat="server" Text="Save" class="btn btn-primary " />
                     </div>
 
 
                     </div>
-                 <div>
+                 <div>   <br />
                         <asp:Button ID="Back" runat="server" Text="Back" class="btn btn-primary pull-right" />
                     </div>     
      </div>

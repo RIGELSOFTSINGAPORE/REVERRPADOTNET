@@ -56,6 +56,7 @@ Public Class Changepassword
 
         If confrin <> password1 Then
             Call showMsg("New password and old password is not match", "")
+
             Exit Sub
         End If
         If oldpwd.Text = "" Then
