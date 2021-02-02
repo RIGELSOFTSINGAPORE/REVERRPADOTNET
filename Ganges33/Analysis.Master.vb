@@ -79,7 +79,7 @@
             ElseIf activepage.Contains("RPA_Management.aspx") Then
                 rpa.Attributes.Add("class", "btn_active")
                 drp2.Attributes.Add("class", "liactive collapsed nav-link collapsed text-truncate")
-            ElseIf activepage.Contains("Analysis_Servicecenter.aspx") Then
+            ElseIf activepage.Contains("Analysis_User.aspx") Then
                 admin.Attributes.Add("class", "btn_active")
                 drp3.Attributes.Add("class", "liactive collapsed nav-link collapsed text-truncate")
             ElseIf activepage.Contains("SetupNewServiceCenter.aspx") Then

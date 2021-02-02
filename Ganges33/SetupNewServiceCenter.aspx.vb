@@ -55,6 +55,8 @@ Public Class SetupNewServiceCenter
         addfile.Visible = True
         btnAddNew.Visible = True
         Edit.Visible = False
+        del.Visible = False
+
         Header.Text = "Setup New Servicecenter"
         '' Exit Sub
         'Dim SetupNewServiceCenterModel As New SetupNewServiceCenterModel
@@ -376,9 +378,10 @@ Public Class SetupNewServiceCenter
                 'filename.Visible = False
                 'Textfilename.Visible = True
                 data.Visible = False
-                addfile.Visible = True
+            addfile.Visible = True
+            del.Visible = True
 
-                Header.Text = "Setup New Servicecenter"
+            Header.Text = "Setup New Servicecenter"
             End If
 
     End Sub

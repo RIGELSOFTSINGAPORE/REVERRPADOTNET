@@ -7,7 +7,7 @@
 
            // var rowIndex = $(this).closest("tr").children('td:eq(0)').text();
            // alert(rowIndex);
-           window.open("Popup.aspx?rowindex=" + rowIndex , 'Popup', 'height=500,width=3000,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menu=no');
+           window.open("Popup.aspx?rowindex=" + rowIndex , 'Popup', 'height=500,width=750,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menu=no');
 
        });
     });

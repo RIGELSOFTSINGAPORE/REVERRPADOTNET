@@ -53,9 +53,10 @@ Public Class RPA_Management
         TaskName.Text = ""
         Textfilename.Text = ""
         Testeddate.Text = ""
-        Status.Text = ""
+        Status.SelectedValue = 0
         Duration.Text = ""
         Source.Text = ""
+        del.Visible = False
         delfld.Checked = False
         btnUpload.Visible = True
         Edit.Visible = False
@@ -71,6 +72,12 @@ Public Class RPA_Management
         data.Visible = True
         addfile.Visible = False
         Header.Text = "RPA Management"
+        TaskName.Text = ""
+        Textfilename.Text = ""
+        Testeddate.Text = ""
+        Status.SelectedValue = 0
+        Duration.Text = ""
+        Source.Text = ""
     End Sub
 
     Private Sub BtnUpload_Click(sender As Object, e As EventArgs) Handles btnUpload.Click
@@ -82,7 +89,13 @@ Public Class RPA_Management
         End If
         Dim path = "C:\Rpa\Tasks\"
         Dim serverpath = path & filename.FileName.ToString
-
+        Dim strpath = System.IO.Path.GetExtension(filename.FileName)
+        If (strpath <> "py") Then
+            Call showMsg("Please select valid file", "")
+            data.Visible = False
+            addfile.Visible = True
+            Exit Sub
+        End If
 
         If (filename.FileName = "") Then
 
@@ -121,7 +134,7 @@ Public Class RPA_Management
         Rpamanagementmodel.PATH = path
         Rpamanagementmodel.TEST_STATUS = Testeddate.Text
         Rpamanagementmodel.RUN_DURATION = Duration.Text
-        Rpamanagementmodel.STATUS = TaskName.Text
+        Rpamanagementmodel.STATUS = Status.SelectedItem.Text
         Rpamanagementmodel.DELFG = delflg
 
         Rpamanagementmodel.CRTCD = Session("user_Name")
@@ -133,7 +146,7 @@ Public Class RPA_Management
             TaskName.Text = ""
             Textfilename.Text = ""
             Testeddate.Text = ""
-            Status.Text = ""
+            Status.SelectedItem.Text = "Select"
             Duration.Text = ""
             delfld.Checked = False
 
@@ -169,28 +182,39 @@ Public Class RPA_Management
                 Testeddate.Text = _Datatble.Rows(0)("TEST_STATUS")
             End If
             If Not IsDBNull(_Datatble.Rows(0)("STATUS")) Then
-                Status.Text = _Datatble.Rows(0)("STATUS")
-            End If
-            If Not IsDBNull(_Datatble.Rows(0)("RUN_DURATION")) Then
-                Duration.Text = _Datatble.Rows(0)("RUN_DURATION")
-            End If
-            If Not IsDBNull(_Datatble.Rows(0)("DELFG")) Then
-                If _Datatble.Rows(0)("DELFG") = 0 Then
-                    delfld.Checked = False
+                If _Datatble.Rows(0)("STATUS") = "Active" Then
+                    Status.SelectedValue = 1
+                ElseIf _Datatble.Rows(0)("STATUS") = "Inactive" Then
+                    Status.SelectedValue = 2
+
                 Else
-                    delfld.Checked = True
+
+                    Status.SelectedValue = 0
                 End If
             End If
-            btnUpload.Visible = False
-            Edit.Visible = True
-            filename.Visible = False
-            Textfilename.Visible = True
-            data.Visible = False
-            addfile.Visible = True
+            If Not IsDBNull(_Datatble.Rows(0)("RUN_DURATION")) Then
+                    Duration.Text = _Datatble.Rows(0)("RUN_DURATION")
+                End If
+                If Not IsDBNull(_Datatble.Rows(0)("DELFG")) Then
+                    If _Datatble.Rows(0)("DELFG") = 0 Then
+                        delfld.Checked = False
+                    Else
+                        delfld.Checked = True
+                    End If
+                End If
+                btnUpload.Visible = False
+                Edit.Visible = True
+                filename.Visible = False
+                Textfilename.Visible = True
+                data.Visible = False
+                addfile.Visible = True
             sourcepath.Visible = True
+            del.Visible = True
+
 
             Header.Text = "RPA Management-Edit"
-        End If
+
+            End If
 
     End Sub
 
@@ -228,7 +252,7 @@ Public Class RPA_Management
         'Rpamanagementmodel.PATH = path
         Rpamanagementmodel.TEST_STATUS = Testeddate.Text
         Rpamanagementmodel.RUN_DURATION = Duration.Text
-        Rpamanagementmodel.STATUS = TaskName.Text
+        Rpamanagementmodel.STATUS = Status.SelectedItem.Text
         Rpamanagementmodel.DELFG = delflg
         Rpamanagementmodel.TASKID = id.Text
 
@@ -241,7 +265,7 @@ Public Class RPA_Management
             TaskName.Text = ""
             Textfilename.Text = ""
             Testeddate.Text = ""
-            Status.Text = ""
+            Status.SelectedValue = 0
             Duration.Text = ""
             delfld.Checked = False
 

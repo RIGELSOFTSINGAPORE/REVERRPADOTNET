@@ -113,15 +113,6 @@ Partial Public Class Analysis_Export
     Protected WithEvents TextDateFrom As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''TextDateFrom_CalendarExtender control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents TextDateFrom_CalendarExtender As Global.AjaxControlToolkit.CalendarExtender
-
-    '''<summary>
     '''Label7 control.
     '''</summary>
     '''<remarks>

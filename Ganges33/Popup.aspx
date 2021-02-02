@@ -1,9 +1,30 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Popup.aspx.vb" Inherits="Ganges33.Popup" %>
+<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/start/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+   
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+ <link href="assets/css/material-dashboard-rtl.css" rel="stylesheet" />
+<link href="assets/css/material-dashboard.css" rel="stylesheet" />
+<link href="assets/css/material-dashboard.min.css" rel="stylesheet" />
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link href="assets/demo/demo.css" rel="stylesheet" />
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/start/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+	 <link href="Styles/bootstrap.min.css"  rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <link href="Styles/bootstrap-multiselect.css" rel="stylesheet" type="text/css"/>
+    <script src="Scripts/bootstrap-multiselect.js" type="text/javascript"></script>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<head  class="serverlbl " runat="server">
     <title></title>
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
    <%-- <script>
@@ -28,322 +49,346 @@
 
     </script>--%>
     <style>
-        .popupwin{
-            background-color:black;
-            color:white;
-            width:450px;
-            top:25%;
-            padding:30px;
-            padding-left:20px;
-        }
+      
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style type="text/css">
-        body
-        {
-            font-family: Arial;
-            font-size: 10pt;
-        }
+  
     </style>
 
 </head>
 <body>
     <form id="form1" runat="server">
-         <div>
-<h1>Service Center Details</h1>
-<table border="1">
+
+
+         
+   <div class="wrapper  col-sm-12 sidebar-wrapper position-fixed scrolbar contain" id="style-10">
+   
+    <div class="content" >
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                 <%-- <h3 class="card-title ">Setup New Servicecenter</h3>--%>
+                    <h3 class="card-title " >
+                    Service Center Details 
+                  </h3>
+                 
+                </div>
+                <div class="card-body " >
+
+                    
+<table>
 
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">CRTDT:</td>
+<td  class="serverlbl" style="font-weight:bold">CRTDT:</td>
 <td>
-<asp:Label ID="lblCRTDT1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblCRTDT1" class="serverlbl " runat="server"></asp:Label></td>
 </tr>
-<tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">CRTCD:</td>
+<tr >
+<td class="serverlbl" style="font-weight:bold">CRTCD:</td>
 <td>
-<asp:Label ID="lblCRTCD1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblCRTCD1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">UPDDT:</td>
+<td class="serverlbl" style="font-weight:bold">UPDDT:</td>
 <td>
-<asp:Label ID="lblUPDDT1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblUPDDT1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">UPDCD:</td>
+<td class="serverlbl" style="font-weight:bold">UPDCD:</td>
 <td>
-<asp:Label ID="lblUPDCD1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblUPDCD1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 
 <tr >
-<td style="font-weight:800; font-size:x-large" class="StrongText">UPDPG:</td>
+<td class="serverlbl" style="font-weight:bold">UPDPG:</td>
 <td>
-<asp:Label ID="lblUPDPG1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblUPDPG1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">DELFG:</td>
+<td class="serverlbl" style="font-weight:bold">DELFG:</td>
 <td>
-<asp:Label ID="lblDELFG1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-</tr>
-
-
-<tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">ship_name:</td>
-<td>
-<asp:Label ID="lblship_name1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblDELFG1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">ship_info:</td>
+<td class="serverlbl" style="font-weight:bold">ship_name:</td>
 <td>
-<asp:Label ID="lblship_info1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblship_name1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">ship_manager:</td>
+<td class="serverlbl" style="font-weight:bold">ship_info:</td>
 <td>
-<asp:Label ID="lblship_manager1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblship_info1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">ship_tel:</td>
+<td class="serverlbl" style="font-weight:bold">ship_manager:</td>
 <td>
-<asp:Label ID="lblship_tel1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-</tr>
-
-<tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">ship_add1:</td>
-<td>
-<asp:Label ID="lblship_add11" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-</tr>
-
-<tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">ship_add2:</td>
-<td>
-<asp:Label ID="lblship_add21" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-</tr>
-
-<tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">ship_add3:</td>
-<td>
-<asp:Label ID="lblship_add31" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-</tr>
-
-<tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">zip:</td>
-<td>
-<asp:Label ID="lblzip1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-</tr>
-
-<tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">e_mail:</td>
-<td>
-<asp:Label ID="lble_mail1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-</tr>
-
-<tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">ship_service:</td>
-<td>
-<asp:Label ID="lblship_service1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblship_manager1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">open_time:</td>
+<td class="serverlbl" style="font-weight:bold">ship_tel:</td>
 <td>
-<asp:Label ID="lblopen_time1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblship_tel1"  class="serverlbl " runat="server"></asp:Label></td>
+</tr>
+
+<tr>
+<td class="serverlbl" style="font-weight:bold">ship_add1:</td>
+<td>
+<asp:Label ID="lblship_add11"  class="serverlbl " runat="server"></asp:Label></td>
+</tr>
+
+<tr>
+<td class="serverlbl" style="font-weight:bold">ship_add2:</td>
+<td>
+<asp:Label ID="lblship_add21"  class="serverlbl " runat="server"></asp:Label></td>
+</tr>
+
+<tr>
+<td class="serverlbl" style="font-weight:bold">ship_add3:</td>
+<td>
+<asp:Label ID="lblship_add31"  class="serverlbl " runat="server"></asp:Label></td>
+</tr>
+
+<tr>
+<td class="serverlbl" style="font-weight:bold">zip:</td>
+<td>
+<asp:Label ID="lblzip1"  class="serverlbl " runat="server"></asp:Label></td>
+</tr>
+
+<tr>
+<td class="serverlbl" style="font-weight:bold">e_mail:</td>
+<td>
+<asp:Label ID="lble_mail1"  class="serverlbl " runat="server"></asp:Label></td>
+</tr>
+
+<tr>
+<td class="serverlbl" style="font-weight:bold">ship_service:</td>
+<td>
+<asp:Label ID="lblship_service1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">close_time:</td>
+<td class="serverlbl" style="font-weight:bold">open_time:</td>
 <td>
-<asp:Label ID="lblclose_time1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-</tr>
-
-<tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">opening_date:</td>
-<td>
-<asp:Label ID="lblopening_date1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-</tr>
-
-<tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">closing_date:</td>
-<td>
-<asp:Label ID="lblclosing_date1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-</tr>
-
-<tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">ship_code:</td>
-<td>
-<asp:Label ID="lblship_code1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblopen_time1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">ship_mark:</td>
+<td class="serverlbl" style="font-weight:bold">close_time:</td>
 <td>
-<asp:Label ID="lblship_mark1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblclose_time1"  class="serverlbl " runat="server"></asp:Label></td>
+</tr>
+
+<tr>
+<td class="serverlbl" style="font-weight:bold">opening_date:</td>
+<td>
+<asp:Label ID="lblopening_date1"  class="serverlbl " runat="server"></asp:Label></td>
+</tr>
+
+<tr>
+<td class="serverlbl" style="font-weight:bold">closing_date:</td>
+<td>
+<asp:Label ID="lblclosing_date1"  class="serverlbl " runat="server"></asp:Label></td>
+</tr>
+
+<tr>
+<td class="serverlbl" style="font-weight:bold">ship_code:</td>
+<td>
+<asp:Label ID="lblship_code1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">item_1:</td>
+<td class="serverlbl" style="font-weight:bold">ship_mark:</td>
 <td>
-<asp:Label ID="lblitem_11" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblship_mark1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">item_2:</td>
+<td class="serverlbl" style="font-weight:bold">item_1:</td>
 <td>
-<asp:Label ID="lblitem_21" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblitem_11"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">mess_1:</td>
+<td class="serverlbl" style="font-weight:bold">item_2:</td>
 <td>
-<asp:Label ID="lblmess_11" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblitem_21"  class="serverlbl " runat="server"></asp:Label></td>
+</tr>
+
+
+<tr>
+<td class="serverlbl" style="font-weight:bold">mess_1:</td>
+<td>
+<asp:Label ID="lblmess_11"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">mess_2:</td>
+<td class="serverlbl" style="font-weight:bold">mess_2:</td>
 <td>
-<asp:Label ID="lblmess_21" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblmess_21"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
     <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">mess_3:</td>
+<td class="serverlbl" style="font-weight:bold">mess_3:</td>
 <td>
-<asp:Label ID="lblmess_31" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblmess_31"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">regi_deposit:</td>
+<td class="serverlbl" style="font-weight:bold">regi_deposit:</td>
 <td>
-<asp:Label ID="lblregi_deposit1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblregi_deposit1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">PO_no:</td>
+<td class="serverlbl" style="font-weight:bold">PO_no:</td>
 <td>
-<asp:Label ID="lblPO_no1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblPO_no1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">inspection1_start:</td>
+<td class="serverlbl" style="font-weight:bold">inspection1_start:</td>
 <td>
-<asp:Label ID="lblinspection1_start1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblinspection1_start1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">inspection1_end:</td>
+<td class="serverlbl" style="font-weight:bold">inspection1_end:</td>
 <td>
-<asp:Label ID="lblinspection1_end1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblinspection1_end1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">inspection2_start:</td>
+<td class="serverlbl" style="font-weight:bold">inspection2_start:</td>
 <td>
-<asp:Label ID="lblinspection2_start1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblinspection2_start1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">inspection2_end:</td>
+<td class="serverlbl" style="font-weight:bold">inspection2_end:</td>
 <td>
-<asp:Label ID="lblinspection2_end1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblinspection2_end1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">inspection3_start:</td>
+<td class="serverlbl" style="font-weight:bold">inspection3_start:</td>
 <td>
-<asp:Label ID="lblinspection3_start1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblinspection3_start1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">inspection3_end:</td>
+<td class="serverlbl" style="font-weight:bold">inspection3_end:</td>
 <td>
-<asp:Label ID="lblinspection3_end1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblinspection3_end1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">open_start:</td>
+<td class="serverlbl" style="font-weight:bold">open_start:</td>
 <td>
-<asp:Label ID="lblopen_start1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblopen_start1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">open_end:</td>
+<td class="serverlbl" style="font-weight:bold">open_end:</td>
 <td>
-<asp:Label ID="lblopen_end1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblopen_end1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">close_start:</td>
+<td class="serverlbl" style="font-weight:bold">close_start:</td>
 <td>
-<asp:Label ID="lblclose_start1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblclose_start1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">close_end:</td>
+<td class="serverlbl" style="font-weight:bold">close_end:</td>
 <td>
-<asp:Label ID="lblclose_end1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblclose_end1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">GSTIN:</td>
+<td class="serverlbl" style="font-weight:bold">GSTIN:</td>
 <td>
-<asp:Label ID="lblGSTIN1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblGSTIN1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">Parent_Ship_Name:</td>
+<td class="serverlbl" style="font-weight:bold">Parent_Ship_Name:</td>
 <td>
-<asp:Label ID="lblParent_Ship_Name1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblParent_Ship_Name1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">IsChildShip:</td>
+<td class="serverlbl" style="font-weight:bold">IsChildShip:</td>
 <td>
-<asp:Label ID="lblIsChildShip1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblIsChildShip1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">RpaClientUserId:</td>
+<td class="serverlbl" style="font-weight:bold">RpaClientUserId:</td>
 <td>
-<asp:Label ID="lblRpaClientUserId1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblRpaClientUserId1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">RpaClientPwd:</td>
+<td class="serverlbl" style="font-weight:bold">RpaClientPwd:</td>
 <td>
-<asp:Label ID="lblRpaClientPwd1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblRpaClientPwd1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">pwdupdateddate:</td>
+<td class="serverlbl" style="font-weight:bold">pwdupdateddate:</td>
 <td>
-<asp:Label ID="lblpwdupdateddate1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblpwdupdateddate1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
 <tr>
-<td style="font-weight:800; font-size:x-large" class="StrongText">IsShipCodeChanged:</td>
+<td class="serverlbl" style="font-weight:bold">IsShipCodeChanged:</td>
 <td>
-<asp:Label ID="lblIsShipCodeChanged1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+<asp:Label ID="lblIsShipCodeChanged1"  class="serverlbl " runat="server"></asp:Label></td>
 </tr>
 
     </table>
 
+                    </div>
+                  </div>
+                
+                </div>
+              </div>
+            </div>
+        </div>
+       </div>
+        
+
+
+
+
+
+
+         <div>
+<h1></h1>
         <%--<div>
        
                 <%--<div class="popupwin">

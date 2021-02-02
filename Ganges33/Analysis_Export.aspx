@@ -224,8 +224,8 @@
                              <br />
                            
                  <asp:TextBox ID="TextDateFrom" runat="server" class="form-file-upload  date serverlbl" AutoCompleteType="Disabled" style="width: 40%;"></asp:TextBox>&nbsp;&nbsp;&nbsp;
-                      <ajaxToolkit:CalendarExtender ID="TextDateFrom_CalendarExtender" runat="server" BehaviorID="TextDateFrom_CalendarExtender" TargetControlID="TextDateFrom" PopupPosition="Left">
-                      </ajaxToolkit:CalendarExtender>              
+                      <%--<ajaxToolkit:CalendarExtender ID="TextDateFrom_CalendarExtender" runat="server" BehaviorID="TextDateFrom_CalendarExtender" TargetControlID="TextDateFrom" PopupPosition="Left">
+                      </ajaxToolkit:CalendarExtender>     --%>         
               <label runat="server" ID="Label7" class="bmd-label-floating fontFamily">To</label>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <asp:TextBox ID="TextDateTo" runat="server" class="form-file-upload date serverlbl" AutoCompleteType="Disabled" style="width: 40%;"></asp:TextBox>

@@ -53,6 +53,7 @@
 p:hover {
   color: black;
 }
+
  html, body { overflow: hidden; }
        
 .nav-link[data-toggle].collapsed:before {
@@ -99,6 +100,20 @@ p:hover {
     color:white;
 }
 
+.btn_active {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    padding-left: 0px;
+    color: white;
+    cursor: pointer;
+}
+p.btn_active:hover
+{
+    color:black
+}
 
 .ui-widget-header {
 	border: 2px #5e0376 solid;
@@ -290,7 +305,7 @@ p:hover {
 
                 <li class="nav-item"  >
                     <a class="nav-link collapsed text-truncate" href="#submenu6" id="drp3" runat="server" data-toggle="collapse" data-target="#submenu6">
-           <i class="material-icons">add_to_queue</i>
+           <i class="material-icons">person</i>
           <p runat="server" id="admin">Admin</p></a>
                     <div class="collapse" id="submenu6" aria-expanded="false">
                         <ul class="flex-column pl-2 nav">

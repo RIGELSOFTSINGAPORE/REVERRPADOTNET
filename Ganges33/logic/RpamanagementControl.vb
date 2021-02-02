@@ -71,7 +71,7 @@ Public Class RpamanagementControl
         'dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@UPDDT", dtNow))
         'dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@UPDCD", dtNow))
 
-        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@DELFG", queryParams.DELFG))
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@DELFG", 0))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@TASK_NAME", queryParams.TASK_NAME))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@FILE_NAME", queryParams.FILE_NAME))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@PATH", queryParams.PATH))

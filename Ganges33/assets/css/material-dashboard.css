@@ -17075,9 +17075,9 @@ a.text-info:hover,
 a.text-info:focus {
   color: #00a5bb;
 }
-
-a .material-icons {
-  vertical-align: top;
+p.btn_active:hover
+{
+    color:black
 }
 
 .form-check,
@@ -19841,6 +19841,10 @@ Copyright (c) 2015 Daniel Eden
     padding-left: 0px;
     color: white;
     cursor: pointer;
+}
+.btn_active:hover
+{
+    color:black
 }
 #lblLoc{
     font-weight:600;

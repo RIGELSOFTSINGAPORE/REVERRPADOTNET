@@ -101,7 +101,7 @@
                             </div>
                             <div>
                                   <br />
-                              <asp:TextBox ID="Source" runat="server" ReadOnly="true" Height="33px" Width="100%" class="form-file-upload serverlbl" />
+                              <asp:TextBox ID="Source" runat="server" ReadOnly="true" Height="33px" Width="100%" class="form-control dropdown-toggle serverlbl" />
                            
                             </div>
                         </div>
@@ -114,7 +114,7 @@
                              </div>
                              <div>
                                    <br />
-                              <asp:TextBox ID="Testeddate" runat="server" value="" Height="33px" Width="100%" class="form-file-upload date  serverlbl" />
+                              <asp:TextBox ID="Testeddate" runat="server" value="" AutoCompleteType="Disabled"  Height="33px" Width="100%" class="form-file-upload date  serverlbl" />
                            
                             </div>
                         </div>
@@ -127,8 +127,11 @@
                              </div>
                             <div>
                                   <br />
-                                 <asp:TextBox ID="Status" runat="server" value="" Height="33px" Width="100%" class="form-file-upload  serverlbl" />
-                           
+                            <asp:DropDownList ID="Status" runat="server"   width="188px"  heigh="35px" class="form-control  serverlbl">
+                                <asp:ListItem Text="Select..." Value="0"></asp:ListItem>
+                                <asp:ListItem Text="Active" Value="1"></asp:ListItem>
+                                <asp:ListItem Text="Inactive" Value="2"></asp:ListItem>
+                           </asp:DropDownList>
                             </div>
                         </div>
                    
@@ -159,7 +162,7 @@
                            
                         </div>
                     </div>--%>
-                    <div class="row">
+                    <div class="row" runat="server" id="del">
                         <div class="col-sm-2">
                               <br />
                             <label >
@@ -177,6 +180,7 @@
                    
                    
                             <div>
+                                <br />
                                 <asp:Button ID="btnUpload" runat="server" Text="Create" class="btn btn-primary " />
                                 <asp:Button ID="Edit" runat="server" Text="Save" class="btn btn-primary " />
                     </div>
@@ -193,6 +197,7 @@
                       <asp:Button ID="Create" runat="server" Text="Create" class="btn btn-primary " />
                   </div>
                     <div>
+                         <br />
                         <asp:GridView ID="getdata" runat="server" AutoGenerateColumns="false" AllowPaging="true" PageSize="10" OnPageIndexChanging="getdata_PageIndexChanging" OnRowCommand="getdata_RowCommand"
                 Style="align-self: center" HeaderStyle-BackColor="#8e24aa" HeaderStyle-ForeColor="White"  CssClass="col-sm-12" ShowHeaderWhenEmpty="true" EmptyDataText="No records Found">
                 <EmptyDataTemplate>No Record Available</EmptyDataTemplate>

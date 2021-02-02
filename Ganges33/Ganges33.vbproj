@@ -149,6 +149,7 @@
     <Content Include="Analysis_Refresh.aspx" />
     <Content Include="Analysis_Report.aspx" />
     <Content Include="Analysis_Report2.aspx" />
+    <Content Include="Analysis_Servicecenter_popup.aspx" />
     <Content Include="Analysis_Store_Management.aspx" />
     <Content Include="Analysis_Upload_Details.aspx" />
     <Content Include="Analysis_Upload_Summary.aspx" />
@@ -246,6 +247,7 @@
     <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="Changepassword.aspx" />
     <Content Include="icon2\placeholder-2.png" />
     <Content Include="icon2\user-3.png" />
     <Content Include="icon\back.png" />
@@ -437,8 +439,12 @@
     <Content Include="Rpa_OnOff.aspx" />
     <Content Include="rpa_scheduler.aspx" />
     <Content Include="Rpa_TaskApp.aspx" />
+    <Content Include="ServiceCenter.js" />
+    <Content Include="SetupNewServiceCenter.aspx" />
     <Content Include="SonyAnalysis_Export.aspx" />
     <Content Include="SonyAnalysis_FileUpload.aspx" />
+    <Content Include="SonyAnalysis_Report.aspx" />
+    <Content Include="SonyAnalysis_Report2.aspx" />
     <Content Include="SonyMenu.aspx" />
     <Content Include="Styles\bootstrap-multiselect.css" />
     <Content Include="Styles\bootstrap.min.css" />
@@ -607,6 +613,13 @@
     <Compile Include="Analysis_Report2.aspx.vb">
       <DependentUpon>Analysis_Report2.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Analysis_Servicecenter_popup.aspx.designer.vb">
+      <DependentUpon>Analysis_Servicecenter_popup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Analysis_Servicecenter_popup.aspx.vb">
+      <DependentUpon>Analysis_Servicecenter_popup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Analysis_Store_Management.aspx.designer.vb">
       <DependentUpon>Analysis_Store_Management.aspx</DependentUpon>
@@ -1064,6 +1077,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Popup.aspx.designer.vb">
+      <DependentUpon>Popup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Popup.aspx.vb">
+      <DependentUpon>Popup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Repair_1.aspx.designer.vb">
       <DependentUpon>Repair_1.aspx</DependentUpon>
     </Compile>
@@ -1239,6 +1259,20 @@
     <Compile Include="SonyAnalysis_FileUpload.aspx.vb">
       <DependentUpon>SonyAnalysis_FileUpload.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SonyAnalysis_Report.aspx.designer.vb">
+      <DependentUpon>SonyAnalysis_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SonyAnalysis_Report.aspx.vb">
+      <DependentUpon>SonyAnalysis_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SonyAnalysis_Report2.aspx.designer.vb">
+      <DependentUpon>SonyAnalysis_Report2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SonyAnalysis_Report2.aspx.vb">
+      <DependentUpon>SonyAnalysis_Report2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SonyMenu.aspx.designer.vb">
       <DependentUpon>SonyMenu.aspx</DependentUpon>

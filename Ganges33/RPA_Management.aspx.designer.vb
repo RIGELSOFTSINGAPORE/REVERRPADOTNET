@@ -101,7 +101,7 @@ Partial Public Class RPA_Management
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents Status As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Status As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Duration control.
@@ -111,6 +111,15 @@ Partial Public Class RPA_Management
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Duration As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''del control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents del As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
     '''delfld control.
