@@ -102,6 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\App_Data\" />
+    <Folder Include="Rpa\" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -245,6 +246,62 @@
     <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="CSS\Common\Analysis-Cash-Tracking.css" />
+    <Content Include="CSS\Common\Analysis-Cash-Tracking_qg.css" />
+    <Content Include="CSS\Common\Analysis-Cash-Tracking_qg1.css" />
+    <Content Include="CSS\Common\Analysis-report2.css" />
+    <Content Include="CSS\Common\Analysis_Cash_tracking.css" />
+    <Content Include="CSS\Common\Analysis_Cash_Tracking_2.css" />
+    <Content Include="CSS\Common\Analysis_Cash_tracking_imp.css" />
+    <Content Include="CSS\Common\Analysis_castody.css" />
+    <Content Include="CSS\Common\analysis_castody_search.css" />
+    <Content Include="CSS\Common\Analysis_Custody_qg.css" />
+    <Content Include="CSS\Common\Analysis_Custody_Search.css" />
+    <Content Include="CSS\Common\Analysis_Export_bak.css" />
+    <Content Include="CSS\Common\Analysis_FileUploaded_1.css" />
+    <Content Include="CSS\Common\Analysis_Recovery.css" />
+    <Content Include="CSS\Common\Analysis_Recovery2.css" />
+    <Content Include="CSS\Common\Analysis_Refresh.css" />
+    <Content Include="CSS\Common\Analysis_Report.css" />
+    <Content Include="CSS\Common\Inv-corporator_registeration.css" />
+    <Content Include="CSS\Common\Inv-report.css" />
+    <Content Include="CSS\Common\Inv_Arival.css" />
+    <Content Include="CSS\Common\inv_Return.css" />
+    <Content Include="CSS\Common\Inv_search.css" />
+    <Content Include="CSS\Common\Inv_Use.css" />
+    <Content Include="CSS\Common\Login.css" />
+    <Content Include="CSS\Common\Login_3tire.css" />
+    <Content Include="CSS\Common\Login_normal.css" />
+    <Content Include="CSS\Common\Menu.css" />
+    <Content Include="CSS\Common\Menu2.css" />
+    <Content Include="CSS\Common\money-record-3.css" />
+    <Content Include="CSS\Common\Money-Record-4.css" />
+    <Content Include="CSS\Common\Money-reverse-qg.css" />
+    <Content Include="CSS\Common\Money-sales-shows2.css" />
+    <Content Include="CSS\Common\Money-Sales.css" />
+    <Content Include="CSS\Common\money-salse-show.css" />
+    <Content Include="CSS\Common\Money_Aggregation.css" />
+    <Content Include="CSS\Common\Money_Aggregation_qg.css" />
+    <Content Include="CSS\Common\Money_Menu.css" />
+    <Content Include="CSS\Common\Money_Report.css" />
+    <Content Include="CSS\Common\Money_Reserve.css" />
+    <Content Include="CSS\Common\Money_Rport_qg.css" />
+    <Content Include="CSS\Common\Monney_Record1.css" />
+    <Content Include="CSS\Common\Monney_repair.css" />
+    <Content Include="CSS\Common\Msg_inv_Arrival.css" />
+    <Content Include="CSS\Common\Msg_inv_Return.css" />
+    <Content Include="CSS\Common\Repair2.css" />
+    <Content Include="CSS\Common\Repair_1.css" />
+    <Content Include="CSS\Common\Repair_parts_Registeration_Create.css" />
+    <Content Include="CSS\Common\Repair_Tools.css" />
+    <Content Include="CSS\Common\Site2_Master.css" />
+    <Content Include="CSS\Common\Site3.msg.Master.css" />
+    <Content Include="CSS\Common\Site3_Master.css" />
+    <Content Include="CSS\Common\Site4.Master.css" />
+    <Content Include="CSS\Common\Site5.Master.css" />
+    <Content Include="CSS\Common\Site6.Master.css" />
+    <Content Include="CSS\Common\SonyAnalysis_Report.css" />
+    <Content Include="CSS\Common\SonyAnalysis_Report2.css" />
     <Content Include="icon2\placeholder-2.png" />
     <Content Include="icon2\user-3.png" />
     <Content Include="icon\back.png" />
@@ -424,6 +481,7 @@
     <Content Include="pagewall_2\__MACOSX\._wall_person-2.png" />
     <Content Include="pagewall_2\__MACOSX\._wall_repair-2.png" />
     <Content Include="pagewall_2\__MACOSX\._wall_system-2.png" />
+    <Content Include="Popup.aspx" />
     <Content Include="Repair_1.aspx" />
     <Content Include="Repair_1_Detail.aspx" />
     <Content Include="rpa.aspx" />
@@ -434,9 +492,22 @@
     <Content Include="Rpa_OnOff.aspx" />
     <Content Include="rpa_scheduler.aspx" />
     <Content Include="Rpa_TaskApp.aspx" />
+    <Content Include="Scripts\bootstrap-multiselect.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\common.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery.dialog.js" />
+    <Content Include="Scripts\jquery.dialog2.js" />
+    <Content Include="Scripts\jquery.validationEngine-ja.js" />
+    <Content Include="Scripts\jquery.validationEngine.js" />
+    <Content Include="ServiceCenter.js" />
+    <Content Include="SetupNewServiceCenter.aspx" />
     <Content Include="SonyAnalysis_Export.aspx" />
     <Content Include="SonyAnalysis_FileUpload.aspx" />
     <Content Include="SonyMenu.aspx" />
+    <Content Include="Styles\bootstrap-multiselect.css" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\style.css" />
     <Content Include="test.aspx" />
     <Content Include="Dashboard.aspx" />
   </ItemGroup>
@@ -729,6 +800,7 @@
     <Compile Include="logic\SawDiscountControl.vb" />
     <Compile Include="logic\ScDsrControl.vb" />
     <Compile Include="logic\ServicePartsReturnControl.vb" />
+    <Compile Include="logic\SetupNewServiceCenterControl.vb" />
     <Compile Include="logic\ShipBaseControl.vb" />
     <Compile Include="logic\SLedgerControl.vb" />
     <Compile Include="logic\SonyAcctStmtControl.vb" />
@@ -861,6 +933,7 @@
     <Compile Include="Model\SawDiscountModel.vb" />
     <Compile Include="Model\ScDsrModel.vb" />
     <Compile Include="Model\ServicePartsReturnModel.vb" />
+    <Compile Include="Model\SetupNewServiceCenterModel.vb" />
     <Compile Include="Model\ShipBaseModel.vb" />
     <Compile Include="Model\SLedgerModel.vb" />
     <Compile Include="Model\SonyAcctStmtModel.vb" />
@@ -1138,6 +1211,14 @@
     <Compile Include="Rpa_TaskApp.aspx.vb">
       <DependentUpon>Rpa_TaskApp.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="SetupNewServiceCenter.aspx.designer.vb">
+      <DependentUpon>SetupNewServiceCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SetupNewServiceCenter.aspx.vb">
+      <DependentUpon>SetupNewServiceCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site1.Master.designer.vb">
       <DependentUpon>Site1.Master</DependentUpon>
