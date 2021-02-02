@@ -461,9 +461,19 @@ Public Class Analysis_User
         Dim get_value As String = ""
 
         For i As Integer = 0 To listShipBranch.Items.Count - 1
-
             If listShipBranch.Items(i).Selected Then
-                get_value = get_value + listShipBranch.Items(i).Text & ","
+                If listShipBranch.Items.Count > 0 Then
+
+                    get_value = get_value + listShipBranch.Items(i).Text & ","
+                End If
+            End If
+
+        Next
+        For Each item As ListItem In listShipBranch.Items
+            If item.Selected Then
+                'messagetxt += "'" + item.Text + "',"
+                'messageValue += "'" + CInt(item.Value).ToString() + "',"
+                get_value = get_value.ToString() + ","
             End If
         Next
 
@@ -473,6 +483,9 @@ Public Class Analysis_User
         '    listShipBranch.Items.Add(New ListItem(element, ""))
         '    MuserModel.ship_1 = element
         'Next
+
+
+
 
         MuserModel.ship_1 = get_value
         MuserModel.ship_2 = txtBranchCode2.Text
@@ -500,57 +513,57 @@ Public Class Analysis_User
 
         'MuserModel.UserId = Session("user_id").ToString
 
-        Dim isUpdated As Boolean = MUserControl.UpdateMUser(MuserModel)
+        'Dim isUpdated As Boolean = MUserControl.UpdateMUser(MuserModel)
 
         'Dim MUserDataInserted As Boolean
 
-        If (isUpdated = True) Then
-            Dim MUserDataInserted As Boolean = MUserControl.UpdateDataMUser(MuserModel)
+        ''If (isUpdated = True) Then
+        'Dim MUserDataInserted As Boolean = MUserControl.UpdateDataMUser(MuserModel)
 
-            If (MUserDataInserted = True) Then
-                Call showMsg("Update Successfully", "")
+        '    If (MUserDataInserted = True) Then
+        '        Call showMsg("Update Successfully", "")
 
-                txtUserId.Text = ""
-                delflag.Checked = False
-                admindelflg.Checked = False
-                radionGender.Items.Clear()
-                txtBranchCode2.Text = ""
-                txtSuperior.Text = ""
-                txtZipCode.Text = ""
-                txtMobile.Text = ""
-                listShipBranch.Items.Clear()
-                txtEmailId.Text = ""
-                txtTelephone1.Text = ""
-                txtAddressLine1.Text = ""
-                txtAddressLine2.Text = ""
-                txtTelephone.Text = ""
-                txtAddressLine3.Text = ""
-                txtdob.Text = ""
-                txtBranchCode3.Text = ""
-                txtBranchCode4.Text = ""
-                txtMiddleName.Text = ""
-                txtName.Text = ""
-                txtBranchCode1.Text = ""
-                txtUserlvl.Text = ""
-                txtSurname.Text = ""
-                txtPassword.Text = ""
-                txtBranchCode5.Text = ""
-                txtUserId.Text = ""
-                txtEnggId.Text = ""
-
-
-            Else
-                Call showMsg("Update Failed", "")
-                GridSetupUser.Visible = False
-                btnAdd.Visible = False
-                AddUser.Visible = True
-                Exit Sub
-            End If
+        '        txtUserId.Text = ""
+        '        delflag.Checked = False
+        '        admindelflg.Checked = False
+        '        radionGender.Items.Clear()
+        '        txtBranchCode2.Text = ""
+        '        txtSuperior.Text = ""
+        '        txtZipCode.Text = ""
+        '        txtMobile.Text = ""
+        '        listShipBranch.Items.Clear()
+        '        txtEmailId.Text = ""
+        '        txtTelephone1.Text = ""
+        '        txtAddressLine1.Text = ""
+        '        txtAddressLine2.Text = ""
+        '        txtTelephone.Text = ""
+        '        txtAddressLine3.Text = ""
+        '        txtdob.Text = ""
+        '        txtBranchCode3.Text = ""
+        '        txtBranchCode4.Text = ""
+        '        txtMiddleName.Text = ""
+        '        txtName.Text = ""
+        '        txtBranchCode1.Text = ""
+        '        txtUserlvl.Text = ""
+        '        txtSurname.Text = ""
+        '        txtPassword.Text = ""
+        '        txtBranchCode5.Text = ""
+        '        txtUserId.Text = ""
+        '        txtEnggId.Text = ""
 
 
+        '    Else
+        '        Call showMsg("Update Failed", "")
+        '        GridSetupUser.Visible = False
+        '        btnAdd.Visible = False
+        '        AddUser.Visible = True
+        '        Exit Sub
+        '    End If
 
 
-        End If
+
+
+        'End If
         GridSetupUser.Visible = True
 
         AddUser.Visible = False

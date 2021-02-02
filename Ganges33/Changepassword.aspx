@@ -86,7 +86,7 @@
                         <div class="col-sm-2">
                              <br />
                             <label>
-                                Confrim password
+                                Confirm password
                             </label>
                         </div>
                         <div>

@@ -43,6 +43,9 @@
 
         });
     });
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
 </script>
 
    <style>
@@ -256,12 +259,12 @@ p:hover {
               </a>
             </div>
             <div class="navbar-wrapper">
-               <a class="navbar-brand"  href="./Changepassword.aspx"><span class="navbar-icon"><i class="material-icons">person</i></span>
-                 <asp:Label ID="lblUser" runat="server"></asp:Label>
+               <a class="navbar-brand"   href="./Changepassword.aspx"  ><span class="navbar-icon"><i class="material-icons">person</i></span>
+                 <asp:Label ID="lblUser" data-toggle="tooltip" data-bs-placement="bottom"  title="Change password" runat="server"></asp:Label>
               </a>
             </div>
             <div class="navbar-wrapper" >
-             &nbsp;&nbsp;&nbsp;&nbsp;<span class="navbar-icon"><i class="material-icons">logout</i></span> <asp:button runat="server"  ID="BtnLogof"  text="Logout" class="navbar-brand pull-right btntransprant"></asp:button>
+             &nbsp;&nbsp;&nbsp;&nbsp;<span class="navbar-icon"><i class="material-icons">logout</i></span> <asp:button runat="server" CausesValidation="false"   ID="BtnLogof"  text="Logout" class="navbar-brand pull-right btntransprant"></asp:button>
             </div>
                 
              </div>
@@ -286,14 +289,14 @@ p:hover {
 
 
                 <li class="nav-item"  >
-                    <a class="nav-link collapsed text-truncate" href="#submenu6" id="A1" runat="server" data-toggle="collapse" data-target="#submenu6">
+                    <a class="nav-link collapsed text-truncate" href="#submenu6" id="drp3" runat="server" data-toggle="collapse" data-target="#submenu6">
            <i class="material-icons">add_to_queue</i>
           <p runat="server" id="admin">Admin</p></a>
                     <div class="collapse" id="submenu6" aria-expanded="false">
                         <ul class="flex-column pl-2 nav">
                
-                            <li class="nav-item" style="margin-left: -5px;" ><a class="nav-link py-0" id="btnservicecenter" runat="server" href="#"><i  style="margin-top:7px; " class="fas fa-angle-double-right"></i><p>Service Center</p></a></li>
-                              <li class="nav-item"><a class="nav-link py-0" id="btnuser" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>User Management</p></a></li>
+                            <li class="nav-item" style="margin-left: -5px;" ><a class="nav-link py-0" id="btnservicecenter" CausesValidation="false"  runat="server" href="#"><i  style="margin-top:7px; " class="fas fa-angle-double-right"></i><p>Service Center</p></a></li>
+                              <li class="nav-item"><a class="nav-link py-0" id="btnuser"  CausesValidation="false" runat="server" href="#"><i  style="margin-top:7px;"  class="fas fa-angle-double-right"></i><p>User Management</p></a></li>
                            
                         </ul>
                     </div>
@@ -305,7 +308,7 @@ p:hover {
 
 
           <li class="nav-item " id="dashboard" runat="server">
-            <a class="nav-link" ID="btnDashboard" runat="server" href="#">
+            <a class="nav-link" ID="btnDashboard" runat="server"  CausesValidation="false" href="#">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
                 
@@ -314,7 +317,7 @@ p:hover {
 
        
           <li class="nav-item " id="fileupload" runat="server">
-            <a class="nav-link" ID="btnFileUpload" runat="server" href="#">
+            <a class="nav-link" ID="btnFileUpload"  CausesValidation="false" runat="server" href="#">
               <i class="material-icons">file_upload</i>
               <p>File Upload</p>
                 
@@ -326,18 +329,18 @@ p:hover {
            
     
           <li class="nav-item" id="Analysis_Export" runat="server">
-            <a class="nav-link" ID="btnExportData" runat="server"  href="#">
+            <a class="nav-link" ID="btnExportData"  CausesValidation="false" runat="server"  href="#">
               <i class="material-icons">import_export</i>
              <p>Export Data</p>
             </a>
           </li>
-               <li class="nav-item " id="Analysis_Refresh" runat="server">
+               <li class="nav-item " id="Analysis_Refresh"  CausesValidation="false" runat="server">
             <a class="nav-link" ID="btnReport" runat="server" href="#">
               <i class="material-icons">library_books</i>
               <p>Activity Report</p>
             </a>
           </li>
-          <li class="nav-item " id="Analysis_Recovery" runat="server">
+          <li class="nav-item " id="Analysis_Recovery"  CausesValidation="false" runat="server">
             <a class="nav-link" ID="btnRecovery" runat="server" href="#">
               <i class="material-icons">bubble_chart</i>
               <p>Recovery</p>
@@ -354,10 +357,10 @@ p:hover {
           <p runat="server" class="btntransprant" id="analyis">Analysis Data</p></a>
                     <div class="collapse" id="submenu3" aria-expanded="false">
                         <ul class="flex-column pl-2 nav">
-                            <li class="nav-item" style="margin-left: -5px;"><a class="nav-link py-0"  ID="btnUploadSummary" runat="server"  href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Upload Summary</p></a></li>                            
-                            <li class="nav-item"><a class="nav-link py-0" ID="btnUploadVerification" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Upload Verification</p> </a></li>
-                            <li class="nav-item"><a class="nav-link py-0" id="btnPartsCompare" runat="server"  href="#"> <i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Parts Compare</p></a></li>
-                            <li class="nav-item"><a class="nav-link py-0" id="storemanagement" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Store Management</p></a></li>
+                            <li class="nav-item" style="margin-left: -5px;"><a class="nav-link py-0"  CausesValidation="false"  ID="btnUploadSummary" runat="server"  href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Upload Summary</p></a></li>                            
+                            <li class="nav-item"><a class="nav-link py-0" ID="btnUploadVerification"  CausesValidation="false" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Upload Verification</p> </a></li>
+                            <li class="nav-item"><a class="nav-link py-0" id="btnPartsCompare"  CausesValidation="false" runat="server"  href="#"> <i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Parts Compare</p></a></li>
+                            <li class="nav-item"><a class="nav-link py-0" id="storemanagement"  CausesValidation="false" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Store Management</p></a></li>
                            
                         </ul>
                     </div>
@@ -370,12 +373,12 @@ p:hover {
           <p runat="server" id="rpa">RPA</p></a>
                     <div class="collapse" id="submenu4" aria-expanded="false">
                         <ul class="flex-column pl-2 nav">
-                             <li class="nav-item" style="margin-left: -5px;"><a class="nav-link py-0" id="A2" runat="server" href="./RPA_Management.aspx"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Create RPA Task</p></a></li>
+                             <li class="nav-item" style="margin-left: -5px;"><a class="nav-link py-0" id="CreateRPA" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Create RPA Task</p></a></li>
                            
-                              <li class="nav-item"><a class="nav-link py-0" ID="btnscheduler" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Scheduler</p></a></li>
-                              <li class="nav-item"><a class="nav-link py-0" ID="btnRpaLog" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Rpa Log</p></a></li>
-                              <li class="nav-item"><a class="nav-link py-0" id="btnRpaTaskApp" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Rpa TaskApp</p></a></li>
-                              <li class="nav-item"><a class="nav-link py-0" id="btnRpaOnOff" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Rpa On/Off</p></a></li>
+                              <li class="nav-item"><a class="nav-link py-0" ID="btnscheduler"  CausesValidation="false" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Scheduler</p></a></li>
+                              <li class="nav-item"><a class="nav-link py-0" ID="btnRpaLog"  CausesValidation="false" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Rpa Log</p></a></li>
+                              <li class="nav-item"><a class="nav-link py-0" id="btnRpaTaskApp"  CausesValidation="false" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Rpa TaskApp</p></a></li>
+                              <li class="nav-item"><a class="nav-link py-0" id="btnRpaOnOff"  CausesValidation="false" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Rpa On/Off</p></a></li>
                             
                         </ul>
                     </div>

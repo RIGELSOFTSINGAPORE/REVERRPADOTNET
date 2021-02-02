@@ -77,13 +77,13 @@ Partial Public Class Analysis
     Protected WithEvents BtnHome As Global.System.Web.UI.WebControls.ImageButton
 
     '''<summary>
-    '''A1 control.
+    '''drp3 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents A1 As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents drp3 As Global.System.Web.UI.HtmlControls.HtmlAnchor
 
     '''<summary>
     '''admin control.
@@ -275,13 +275,13 @@ Partial Public Class Analysis
     Protected WithEvents rpa As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''A2 control.
+    '''CreateRPA control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents A2 As Global.System.Web.UI.HtmlControls.HtmlAnchor
+    Protected WithEvents CreateRPA As Global.System.Web.UI.HtmlControls.HtmlAnchor
 
     '''<summary>
     '''btnscheduler control.

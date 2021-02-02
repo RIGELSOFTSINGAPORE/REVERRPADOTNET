@@ -149,6 +149,15 @@ Partial Public Class Analysis_User
     Protected WithEvents txtBranchCode1 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''test control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents test As Global.System.Web.UI.WebControls.ListBox
+
+    '''<summary>
     '''listShipBranch control.
     '''</summary>
     '''<remarks>
@@ -156,15 +165,6 @@ Partial Public Class Analysis_User
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents listShipBranch As Global.System.Web.UI.WebControls.ListBox
-
-    '''<summary>
-    '''RequiredFieldValidator4 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents RequiredFieldValidator4 As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
     '''txtBranchCode2 control.

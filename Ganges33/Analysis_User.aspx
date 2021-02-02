@@ -54,11 +54,7 @@
             });
         });
         
-            $(function () {
-                $('[id*=listShipBranch]').multiselect({
-                    includeSelectAllOption: true
-                });
-        });
+           
    
     </script>
 </asp:Content>
@@ -269,11 +265,13 @@
                                </div>
                               <div>
                      <asp:TextBox ID="txtBranchCode1" runat="server" CssClass="form-control" style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox><b style="color:red; font-size:large" >*</b>
-                       <asp:ListBox ID="listShipBranch" runat="server" Width="100px" SelectionMode="Multiple" multiple="multiple"></asp:ListBox>
-                           <asp:RequiredFieldValidator ID="RequiredFieldValidator4" CssClass="Required" runat="server" ControlToValidate="txtBranchCode1"
-                            ForeColor="Red" ErrorMessage="Branch Code is required"></asp:RequiredFieldValidator> 
+                       <asp:ListBox ID="test" runat="server" Width="100px" SelectionMode="Multiple" ></asp:ListBox>
+                           <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator4" CssClass="Required" runat="server" ControlToValidate="txtBranchCode1"
+                            ForeColor="Red" ErrorMessage="Branch Code is required"></asp:RequiredFieldValidator> --%>
                        
+<asp:ListBox ID="listShipBranch" runat="server"  Height="133px" Width="100px"  class="multiselect-ui form-control" multiple="multiple"  SelectionMode="Multiple">
 
+                      </asp:ListBox>
                     
                   </div>
                    </div>
