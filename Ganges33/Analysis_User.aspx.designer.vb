@@ -149,15 +149,6 @@ Partial Public Class Analysis_User
     Protected WithEvents txtBranchCode1 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''test control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents test As Global.System.Web.UI.WebControls.ListBox
-
-    '''<summary>
     '''listShipBranch control.
     '''</summary>
     '''<remarks>
@@ -419,6 +410,15 @@ Partial Public Class Analysis_User
     Protected WithEvents RequiredFieldValidator13 As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
+    '''del control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents del As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
     '''delflag control.
     '''</summary>
     '''<remarks>
@@ -437,15 +437,6 @@ Partial Public Class Analysis_User
     Protected WithEvents admindelflg As Global.System.Web.UI.WebControls.CheckBox
 
     '''<summary>
-    '''btnback control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnback As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
     '''btnCreate control.
     '''</summary>
     '''<remarks>
@@ -462,6 +453,15 @@ Partial Public Class Analysis_User
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Edit As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btnback control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnback As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''BtnCancel control.

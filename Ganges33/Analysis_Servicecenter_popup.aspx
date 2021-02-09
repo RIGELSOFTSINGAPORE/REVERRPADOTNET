@@ -1,5 +1,24 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Analysis_Servicecenter_popup.aspx.vb" Inherits="Ganges33.Analysis_Servicecenter_popup" %>
-
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/start/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+   
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+ <link href="assets/css/material-dashboard-rtl.css" rel="stylesheet" />
+<link href="assets/css/material-dashboard.css" rel="stylesheet" />
+<link href="assets/css/material-dashboard.min.css" rel="stylesheet" />
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link href="assets/demo/demo.css" rel="stylesheet" />
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/start/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+	 <link href="Styles/bootstrap.min.css"  rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <link href="Styles/bootstrap-multiselect.css" rel="stylesheet" type="text/css"/>
+    <script src="Scripts/bootstrap-multiselect.js" type="text/javascript"></script>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -9,661 +28,368 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-             <h1>User Information</h1>
-           <%-- <table border="1">
+
+                
+   <div class="wrapper  col-sm-12 sidebar-wrapper position-fixed scrolbar contain" id="style-10">
+   
+    <div class="content" >
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                 <%-- <h3 class="card-title ">Setup New Servicecenter</h3>--%>
+                    <h3 class="card-title " >
+                    User Information 
+                  </h3>
+                 
+                </div>
+                <div class="card-body " >
+
+                     <table >
                
                               <tr>
-                                    <th>Created date:</th>
-                                  <th>Created user:</th>
-                                     <th>Updated Date:</th>
-                                    <th>Updated User:</th>
-                                    <th>User Name:</th>
-                                     <th>Password:</th>
-                                    <th>Engineer ID:</th>
-                                     <th>User Leve1:</th>
-                                    <th>Branch Code1:</th>
-                                    <th>Branch Code2:</th>
-                                     <th>Branch Code3:</th>
-                                    <th>Branch Code4:</th>
-                                     <th>Branch Code5:</th>
-                                     <th>Surname:</th>
-                                    <th>Name:</th>
-                                    <th>Middle Name:</th>
-                                     <th>DOB:</th>
-                                    <th>Sex:</th>
-                                     <th>Superior:</th>
-                                    <th>Address Line 1:</th>
-                                     <th>Address Line 2:</th>
-                                    <th>Address Line 3:</th>
-                                    <th>Zip Code:</th>
-                                     <th>Telephone No1:</th>
-                                    <th>Mobile No:</th>
-                                    <th>Email ID:</th>
-                                     <th>Telephone No2:</th>
-                                    <th>Delete flag:</th>
-                                    <th>Admin Flag:</th>
-                                     <th>Em Surname:</th>
-                                     <th>Gua Name:</th>
-                                    <th>Gua Telephone :</th>
-                                     <th>Gua Address Line 1:</th>
-                                    <th>Gua Address Line 2:</th>
-                                     <th>Gua Zip Code:</th>
-                                    <th>Gua Email ID:</th>
-                                    <th>Hire Date:</th>
-                                    <th>Dep Date:</th>
-                                     <th>Class:</th>
-                                    <th>Position:</th>
-                                    <th>Work Location:</th>
-                                    <th>Time:</th>
-                                    <th>Higher Date1:</th>
-                                    <th>Higher Date2:</th>
-                                    <th>Higher Name:</th>
-                                     <th>Uni date1:</th>
-                                     <th>Uni date2:</th>
-                                     <th>Uni name:</th>
-                                    <th>Employee h1:</th>
-                                      <th>Employee h2:</th>
-                                    <th>Employee Name1:</th>
-                                    <th>Employee H3:</th>
-                                    <th>Employee H4:</th>
-                                    <th>Employee Name2:</th>
-                                    <th>QUA Name1:</th>
-                                     <th>QUA Date1:</th>
-                                     <th>QUA Name2:</th>
-                                     <th>QUA Date2:</th>
-                                     <th>QUA Name3:</th>
-                                     <th>QUA Date3:</th>
-                                     <th>Paid H1:</th>
-                                    <th>Paid H2:</th>
-                                     <th>Work Time:</th>
-                                    
+                                    <td  class="serverlbl" style="font-weight:bold">Created Date:</td>
+                                    <td>
+                                        <asp:Label ID="lblCRTDT" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                   <td>
-                                        <asp:Label ID="lblCRTDT" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                    <td  class="serverlbl" style="font-weight:bold">Created User:</td>
                                     <td>
-                                        <asp:Label ID="lblCRTCD" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                   
-                                    <td>
-                                        <asp:Label ID="lblUpddt" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblUPDCD" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                    
-                                    <td>
-                                        <asp:Label ID="lblUseid" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                   
-                                    <td>
-                                        <asp:Label ID="lblPassword" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                     
-                                    <td>
-                                        <asp:Label ID="lblEngId" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                    
-                                    <td>
-                                        <asp:Label ID="lblUserlvl" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblbranchcode1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                    
-                                    <td>
-                                        <asp:Label ID="lblbranchcode2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                   
-                                    <td>
-                                        <asp:Label ID="lblbranchcode3" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblbranchcode4" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                   
-                                    <td>
-                                        <asp:Label ID="lblbranchcode5" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                   
-                                    <td>
-                                        <asp:Label ID="lblSurname" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblName" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                    
-                                    <td>
-                                        <asp:Label ID="lblMiddleName" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                   
-                                    <td>
-                                        <asp:Label ID="lblDOB" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                   
-                                    <td>
-                                        <asp:Label ID="lblSex" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                   
-                                    <td>
-                                        <asp:Label ID="lblSuperior" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblAddressLine1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                   
-                                    <td>
-                                        <asp:Label ID="lblAddressLine2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                    
-                                    <td>
-                                        <asp:Label ID="lblAddressLine3" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblZipCode" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                   
-                                    <td>
-                                        <asp:Label ID="lblTelephoneNo1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblMobileNo" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblEmailID" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                   
-                                    <td>
-                                        <asp:Label ID="lblTelephoneNo2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                    
-                                    <td>
-                                        <asp:Label ID="lblDeleteflag" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblAdminFlag" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                   
-                                    <td>
-                                        <asp:Label ID="lblemSurname" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                   
-                                    <td>
-                                        <asp:Label ID="lblGuaName" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblgua_tel" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                   
-                                    <td>
-                                        <asp:Label ID="lblGuaAddressLine1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblGuaAddressLine2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                   
-                                    <td>
-                                        <asp:Label ID="lblGuaZipCode" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                    
-                                    <td>
-                                        <asp:Label ID="lblGuaEmailID" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                    
-                                    <td>
-                                        <asp:Label ID="lblHireDate" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                    
-                                    <td>
-                                        <asp:Label ID="lblDepDate" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                   
-                                    <td>
-                                        <asp:Label ID="lblClass" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblPosition" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                              
-                                    
-                                    <td>
-                                        <asp:Label ID="lblWorkLocation" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblTime" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                    
-                                    <td>
-                                        <asp:Label ID="lblHigherDate1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                    
-                                    <td>
-                                        <asp:Label ID="lblHigherDate2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblHigherName" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblunidate1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblunidate2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lbluni_name" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                     
-                                    <td>
-                                        <asp:Label ID="lblEmployeeh1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                              
-                                   
-                                    <td>
-                                        <asp:Label ID="lblEmployeeh2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblEmployeeName1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                    
-                                    <td>
-                                        <asp:Label ID="lblEmployeeh3" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblEmployeeH4" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblEmployeeName2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                    
-                                    <td>
-                                        <asp:Label ID="lblQUAName1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblDate" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                    
-                                    <td>
-                                        <asp:Label ID="lblQUAName2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblQUADate2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                     
-                                    <td>
-                                        <asp:Label ID="lblQUAName3" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                    
-                                    <td>
-                                        <asp:Label ID="lblQUADate3" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                    
-                                    <td>
-                                        <asp:Label ID="lblPaidH1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                
-                                    
-                                    <td>
-                                        <asp:Label ID="lblPaidH2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                               
-                                    
-                                    <td>
-                                        <asp:Label ID="lblWorkTime" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                </tr>
-                            </table>--%>
-
-            <table border="1">
-               
-                              <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Created Date:</td>
-                                    <td>
-                                        <asp:Label ID="lblCRTDT" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblCRTCD" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Created User:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Updated Date:</td>
                                     <td>
-                                        <asp:Label ID="lblCRTCD" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Updated Date:</td>
-                                    <td>
-                                        <asp:Label ID="lblUpddt" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblUpddt" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
 
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Updated User:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Updated User:</td>
                                     <td>
-                                        <asp:Label ID="lblUPDCD" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblUPDCD" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
 
 
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">User Name:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">User Name:</td>
                                     <td>
-                                        <asp:Label ID="lblUseid" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblUseid" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Password:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Password:</td>
                                     <td>
-                                        <asp:Label ID="lblPassword" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblPassword" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Engineer ID:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Engineer ID:</td>
                                     <td>
-                                        <asp:Label ID="lblEngId" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblEngId" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
 
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">User Leve1:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">User Leve1:</td>
                                     <td>
-                                        <asp:Label ID="lblUserlvl" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblUserlvl" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Branch Code1:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Branch Code1:</td>
                                     <td>
-                                        <asp:Label ID="lblbranchcode1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblbranchcode1" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Branch Code2:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Branch Code2:</td>
                                     <td>
-                                        <asp:Label ID="lblbranchcode2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblbranchcode2" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Branch Code3:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Branch Code3:</td>
                                     <td>
-                                        <asp:Label ID="lblbranchcode3" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblbranchcode3" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Branch Code4:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Branch Code4:</td>
                                     <td>
-                                        <asp:Label ID="lblbranchcode4" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblbranchcode4" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Branch Code5:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Branch Code5:</td>
                                     <td>
-                                        <asp:Label ID="lblbranchcode5" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblbranchcode5" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Surname:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Surname:</td>
                                     <td>
-                                        <asp:Label ID="lblSurname" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblSurname" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Name:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Name:</td>
                                     <td>
-                                        <asp:Label ID="lblName" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblName" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Middle Name:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Middle Name:</td>
                                     <td>
-                                        <asp:Label ID="lblMiddleName" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblMiddleName" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">DOB:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">DOB:</td>
                                     <td>
-                                        <asp:Label ID="lblDOB" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblDOB" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Sex:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Sex:</td>
                                     <td>
-                                        <asp:Label ID="lblSex" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblSex" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                  <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Superior:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Superior:</td>
                                     <td>
-                                        <asp:Label ID="lblSuperior" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblSuperior" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
 
 
                               <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Address Line 1:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Address Line 1:</td>
                                     <td>
-                                        <asp:Label ID="lblAddressLine1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblAddressLine1" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Address Line 2:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Address Line 2:</td>
                                     <td>
-                                        <asp:Label ID="lblAddressLine2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblAddressLine2" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Address Line 3:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Address Line 3:</td>
                                     <td>
-                                        <asp:Label ID="lblAddressLine3" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                </tr>
-
-                                <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Zip Code:</td>
-                                    <td>
-                                        <asp:Label ID="lblZipCode" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Telephone No1:</td>
-                                    <td>
-                                        <asp:Label ID="lblTelephoneNo1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Mobile No:</td>
-                                    <td>
-                                        <asp:Label ID="lblMobileNo" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Email ID:</td>
-                                    <td>
-                                        <asp:Label ID="lblEmailID" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Telephone No2:</td>
-                                    <td>
-                                        <asp:Label ID="lblTelephoneNo2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Delete flag:</td>
-                                    <td>
-                                        <asp:Label ID="lblDeleteflag" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Admin Flag:</td>
-                                    <td>
-                                        <asp:Label ID="lblAdminFlag" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblAddressLine3" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
 
+                                <tr>
+                                    <td  class="serverlbl" style="font-weight:bold">Zip Code:</td>
+                                    <td>
+                                        <asp:Label ID="lblZipCode" runat="server" class="serverlbl " ></asp:Label></td>
+                                </tr>
+                                <tr>
+                                    <td  class="serverlbl" style="font-weight:bold">Telephone No1:</td>
+                                    <td>
+                                        <asp:Label ID="lblTelephoneNo1" runat="server" class="serverlbl " ></asp:Label></td>
+                                </tr>
+                                <tr>
+                                    <td  class="serverlbl" style="font-weight:bold">Mobile No:</td>
+                                    <td>
+                                        <asp:Label ID="lblMobileNo" runat="server" class="serverlbl " ></asp:Label></td>
+                                </tr>
+                                <tr>
+                                    <td  class="serverlbl" style="font-weight:bold">Email ID:</td>
+                                    <td>
+                                        <asp:Label ID="lblEmailID" runat="server" class="serverlbl " ></asp:Label></td>
+                                </tr>
+                                <tr>
+                                    <td  class="serverlbl" style="font-weight:bold">Telephone No2:</td>
+                                    <td>
+                                        <asp:Label ID="lblTelephoneNo2" runat="server" class="serverlbl " ></asp:Label></td>
+                                </tr>
+                                <tr>
+                                    <td  class="serverlbl" style="font-weight:bold">Delete flag:</td>
+                                    <td>
+                                        <asp:Label ID="lblDeleteflag" runat="server" class="serverlbl " ></asp:Label></td>
+                                </tr>
+                                <tr>
+                                    <td  class="serverlbl" style="font-weight:bold">Admin Flag:</td>
+                                    <td>
+                                        <asp:Label ID="lblAdminFlag" runat="server" class="serverlbl " ></asp:Label></td>
+                                </tr>
+
 
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Em Surname:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Em Surname:</td>
                                     <td>
-                                        <asp:Label ID="lblemSurname" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblemSurname" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Gua Name:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Gua Name:</td>
                                     <td>
-                                        <asp:Label ID="lblGuaName" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblGuaName" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Gua Telephone :</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Gua Telephone :</td>
                                     <td>
-                                        <asp:Label ID="lblgua_tel" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblgua_tel" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Gua Address Line 1:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Gua Address Line 1:</td>
                                     <td>
-                                        <asp:Label ID="lblGuaAddressLine1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblGuaAddressLine1" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                  <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Gua Address Line 2:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Gua Address Line 2:</td>
                                     <td>
-                                        <asp:Label ID="lblGuaAddressLine2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblGuaAddressLine2" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
 
                               <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Gua Zip Code:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Gua Zip Code:</td>
                                     <td>
-                                        <asp:Label ID="lblGuaZipCode" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblGuaZipCode" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Gua Email ID:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Gua Email ID:</td>
                                     <td>
-                                        <asp:Label ID="lblGuaEmailID" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblGuaEmailID" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Hire Date:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Hire Date:</td>
                                     <td>
-                                        <asp:Label ID="lblHireDate" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblHireDate" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
 
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Dep Date:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Dep Date:</td>
                                     <td>
-                                        <asp:Label ID="lblDepDate" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblDepDate" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Class:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Class:</td>
                                     <td>
-                                        <asp:Label ID="lblClass" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblClass" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Position:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Position:</td>
                                     <td>
-                                        <asp:Label ID="lblPosition" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblPosition" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Work Location:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Work Location:</td>
                                     <td>
-                                        <asp:Label ID="lblWorkLocation" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblWorkLocation" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Time:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Time:</td>
                                     <td>
-                                        <asp:Label ID="lblTime" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblTime" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Higher Date1:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Higher Date1:</td>
                                     <td>
-                                        <asp:Label ID="lblHigherDate1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblHigherDate1" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Higher Date2:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Higher Date2:</td>
                                     <td>
-                                        <asp:Label ID="lblHigherDate2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblHigherDate2" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Higher Name:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Higher Name:</td>
                                     <td>
-                                        <asp:Label ID="lblHigherName" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblHigherName" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Uni date1:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Uni date1:</td>
                                     <td>
-                                        <asp:Label ID="lblunidate1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblunidate1" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Uni date2:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Uni date2:</td>
                                     <td>
-                                        <asp:Label ID="lblunidate2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblunidate2" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Uni name:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Uni name:</td>
                                     <td>
-                                        <asp:Label ID="lbluni_name" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lbluni_name" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                  <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Employee h1:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Employee h1:</td>
                                     <td>
-                                        <asp:Label ID="lblEmployeeh1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblEmployeeh1" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
 
 
 
                               <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Employee h2:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Employee h2:</td>
                                     <td>
-                                        <asp:Label ID="lblEmployeeh2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblEmployeeh2" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Employee Name1:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Employee Name1:</td>
                                     <td>
-                                        <asp:Label ID="lblEmployeeName1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblEmployeeName1" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Employee H3:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Employee H3:</td>
                                     <td>
-                                        <asp:Label ID="lblEmployeeh3" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblEmployeeh3" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Employee H4:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Employee H4:</td>
                                     <td>
-                                        <asp:Label ID="lblEmployeeH4" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblEmployeeH4" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Employee Name2:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Employee Name2:</td>
                                     <td>
-                                        <asp:Label ID="lblEmployeeName2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblEmployeeName2" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">QUA Name1:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">QUA Name1:</td>
                                     <td>
-                                        <asp:Label ID="lblQUAName1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblQUAName1" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">QUA Date1:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">QUA Date1:</td>
                                     <td>
-                                        <asp:Label ID="lblDate" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblDate" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">QUA Name2:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">QUA Name2:</td>
                                     <td>
-                                        <asp:Label ID="lblQUAName2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblQUAName2" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                 <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">QUA Date2:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">QUA Date2:</td>
                                     <td>
-                                        <asp:Label ID="lblQUADate2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblQUADate2" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                  <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">QUA Name3:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">QUA Name3:</td>
                                     <td>
-                                        <asp:Label ID="lblQUAName3" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblQUAName3" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                              <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">QUA Date3:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">QUA Date3:</td>
                                     <td>
-                                        <asp:Label ID="lblQUADate3" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblQUADate3" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
 
                              <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Paid H1:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Paid H1:</td>
                                     <td>
-                                        <asp:Label ID="lblPaidH1" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblPaidH1" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                                  <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Paid H2:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Paid H2:</td>
                                     <td>
-                                        <asp:Label ID="lblPaidH2" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblPaidH2" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                              <tr>
-                                    <td style="font-weight:800; font-size:x-large" class="StrongText">Work Time:</td>
+                                    <td  class="serverlbl" style="font-weight:bold">Work Time:</td>
                                     <td>
-                                        <asp:Label ID="lblWorkTime" runat="server" Style="text-align: center" Font-Bold="true" Font-Size="X-Large" CssClass="StrongText"></asp:Label></td>
+                                        <asp:Label ID="lblWorkTime" runat="server" class="serverlbl " ></asp:Label></td>
                                 </tr>
                             </table>
+
+
+            </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+       
+         
+           
 
 
 

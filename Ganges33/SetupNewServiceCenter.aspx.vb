@@ -148,43 +148,28 @@ Public Class SetupNewServiceCenter
         SetupNewServiceCenterModel.CRTCD = Session("user_Name")
         SetupNewServiceCenterModel.UPDCD = Session("user_Name")
         SetupNewServiceCenterModel.UPDPG = "Test"
-
+        Dim dt As DataTable = SetupNewServiceCentercontrol.ShowSetupNewServiceCenterGrid(SetupNewServiceCenterModel)
+        If dt.Rows.Count <> 0 Then
+            Call showMsg("Ship code alreay exists ", "")
+            addfile.Visible = True
+            data.Visible = False
+            Header.Text = "Setup New Servicecenter - create"
+            Exit Sub
+        End If
         'Rpamanagementmodel.= Session("user_level")
         'Rpamanagementmodel.= Session("admin_Flg")
         Dim insertCredit As Boolean = SetupNewServiceCentercontrol.SetupNewServiceCenterInsert(SetupNewServiceCenterModel)
         'Dim insertCredit As Boolean = SetupNewServiceCentercontrol.ShowSetupNewServiceCenterGrid(SetupNewServiceCenterModel)
         If (insertCredit = True) Then
             Call showMsg("Success Created", "")
-            ShipName.Text = ""
-            ShipInfo.Text = ""
-            ShipManager.Text = ""
-            ShipTel.Text = ""
-            ShipAdd1.Text = ""
-            ShipAdd2.Text = ""
-            ShipAdd3.Text = ""
-            Zip.Text = ""
-            Email.Text = ""
-            ShipService.Text = ""
-            OpenTime.Text = ""
-            CloseTime.Text = ""
-            OpeningDate.Text = ""
-            ClosingDate.Text = ""
-            ShipCode1.Text = ""
-            ShipMark.Text = ""
-            Item1.Text = ""
-            Item2.Text = ""
-            Mess1.Text = ""
-            Mess2.Text = ""
-            Mess3.Text = ""
-            RegiDeposit.Text = ""
-            PO_NO.Text = ""
-            delfld.Checked = False
+            clearvalue()
 
             'Exit Sub
         Else
             Call showMsg("updated failed", "")
             data.Visible = False
             addfile.Visible = True
+            Exit Sub
         End If
         data.Visible = True
         addfile.Visible = False
@@ -196,6 +181,7 @@ Public Class SetupNewServiceCenter
     Private Sub Back_Click(sender As Object, e As EventArgs) Handles Back.Click
         data.Visible = True
         addfile.Visible = False
+        clearvalue()
         Header.Text = "Setup New Servicecenter"
     End Sub
 
@@ -245,36 +231,12 @@ Public Class SetupNewServiceCenter
         Dim updated As Boolean = SetupNewServiceCentercontrol.UpdateSetupNewServiceCenterGrid(SetupNewServiceCenterModel)
         If (updated = True) Then
             Call showMsg("Success updated", "")
-
-            ShipName.Text = ""
-            ShipInfo.Text = ""
-            ShipManager.Text = ""
-            ShipTel.Text = ""
-            ShipAdd1.Text = ""
-            ShipAdd2.Text = ""
-            ShipAdd3.Text = ""
-            Zip.Text = ""
-            Email.Text = ""
-            ShipService.Text = ""
-            OpenTime.Text = ""
-            CloseTime.Text = ""
-            OpeningDate.Text = ""
-            ClosingDate.Text = ""
-            ShipCode1.Text = ""
-            ShipMark.Text = ""
-            Item1.Text = ""
-            Item2.Text = ""
-            Mess1.Text = ""
-            Mess2.Text = ""
-            Mess3.Text = ""
-            RegiDeposit.Text = ""
-            PO_NO.Text = ""
-            delfld.Checked = False
-
+            clearvalue()
         Else
             Call showMsg("updated failed", "")
             data.Visible = False
             addfile.Visible = True
+            Exit Sub
         End If
 
         data.Visible = True
@@ -402,9 +364,31 @@ Public Class SetupNewServiceCenter
     ' getdata.DataBind()
     'End Sub
 
-    Protected Sub btnView_Click(sender As Object, e As EventArgs)
-
+    Public Sub clearvalue()
+        ShipName.Text = ""
+        ShipInfo.Text = ""
+        ShipManager.Text = ""
+        ShipTel.Text = ""
+        ShipAdd1.Text = ""
+        ShipAdd2.Text = ""
+        ShipAdd3.Text = ""
+        Zip.Text = ""
+        Email.Text = ""
+        ShipService.Text = ""
+        OpenTime.Text = ""
+        CloseTime.Text = ""
+        OpeningDate.Text = ""
+        ClosingDate.Text = ""
+        ShipCode1.Text = ""
+        ShipMark.Text = ""
+        Item1.Text = ""
+        Item2.Text = ""
+        Mess1.Text = ""
+        Mess2.Text = ""
+        Mess3.Text = ""
+        RegiDeposit.Text = ""
+        PO_NO.Text = ""
+        delfld.Checked = False
     End Sub
-
 
 End Class

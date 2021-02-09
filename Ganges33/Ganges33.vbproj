@@ -248,6 +248,7 @@
     <Content Include="bin\roslyn\vbc.exe" />
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="Changepassword.aspx" />
+    <Content Include="Dashboard_view.aspx" />
     <Content Include="icon2\placeholder-2.png" />
     <Content Include="icon2\user-3.png" />
     <Content Include="icon\back.png" />
@@ -662,6 +663,13 @@
     <Compile Include="Class_money.vb" />
     <Compile Include="Class_repair.vb" />
     <Compile Include="dao\DBUtility.vb" />
+    <Compile Include="Dashboard_view.aspx.designer.vb">
+      <DependentUpon>Dashboard_view.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard_view.aspx.vb">
+      <DependentUpon>Dashboard_view.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="DBCommon.vb" />
     <Compile Include="GrapeCity\ActiveReports.vb" />
     <Compile Include="inv_Arrival.aspx.designer.vb">

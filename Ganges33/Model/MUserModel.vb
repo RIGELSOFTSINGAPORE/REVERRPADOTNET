@@ -5,6 +5,8 @@ Namespace Ganges33.model
 
     Public Class MUserModel
         Public Sub MUserModel()
+            User_id = String.Empty
+            oldPassword = String.Empty
             CRTDT = String.Empty
             CRTCD = String.Empty
             UPDDT = String.Empty
@@ -13,13 +15,12 @@ Namespace Ganges33.model
             DELFG = String.Empty
             UserId = String.Empty
             UserId1 = String.Empty
-            User_Id = String.Empty
 
             'UPDDT = String.Empty
             'UPDCD = String.Empty
             'last_login = String.Empty
 
-            oldPassword = String.Empty
+
             Password = String.Empty
             eng_id = String.Empty
             'last_login = String.Empty
@@ -48,21 +49,37 @@ Namespace Ganges33.model
             Telephone_2 = String.Empty
 
 
+            em_tel = String.Empty
+            em_surname = String.Empty
+            gua_name = String.Empty
+            gua_tel = String.Empty
+            gua_add1 = String.Empty
+            hire_date = String.Empty
+            Class1 = String.Empty
+            position = String.Empty
+            work_location = String.Empty
+            paid_h1 = String.Empty
+
+
+            reg_work_time = String.Empty
+
+
+
 
         End Sub
 
+        Public Property User_id As String
+        Public Property oldPassword As String
         Public Property CRTDT As String
         Public Property CRTCD As String
         Public Property UPDDT As String
         Public Property UPDCD As String
         Public Property UserId As String
         Public Property UserId1 As String
-        Public Property User_Id As String
 
         'Public Property last_login As String
 
         Public Property DELFG As String
-        Public Property oldPassword As String
         Public Property Password As String
         Public Property UPDPG As String
 
@@ -95,7 +112,19 @@ Namespace Ganges33.model
         Public Property Email_ID = String.Empty
         Public Property Telephone_2 = String.Empty
 
+        Public Property em_tel = String.Empty
+        Public Property em_surname = String.Empty
+        Public Property gua_name = String.Empty
+        Public Property gua_tel = String.Empty
+        Public Property gua_add1 = String.Empty
+        Public Property hire_date = String.Empty
+        Public Property Class1 = String.Empty
+        Public Property position = String.Empty
+        Public Property work_location = String.Empty
+        Public Property paid_h1 = String.Empty
 
+
+        Public Property reg_work_time = String.Empty
     End Class
 End Namespace
 

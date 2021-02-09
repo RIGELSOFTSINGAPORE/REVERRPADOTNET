@@ -68,6 +68,24 @@ Partial Public Class Login
     Protected WithEvents BtnLogin As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''BtnCancel control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents BtnCancel As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''BtnOK control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents BtnOK As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
     '''lblMsg control.
     '''</summary>
     '''<remarks>

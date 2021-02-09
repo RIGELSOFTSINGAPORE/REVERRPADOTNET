@@ -87,15 +87,17 @@ Public Class RPA_Management
         Else
             delflg = 0
         End If
-        Dim path = "C:\Rpa\Tasks\"
-        Dim serverpath = path & filename.FileName.ToString
-        Dim strpath = System.IO.Path.GetExtension(filename.FileName)
-        If (strpath <> "py") Then
-            Call showMsg("Please select valid file", "")
+        If TaskName.Text = "" Then
+            Call showMsg("Please enter the task name", "")
             data.Visible = False
             addfile.Visible = True
             Exit Sub
         End If
+
+        Dim path = "C:\Rpa\Tasks\"
+        Dim serverpath = path & filename.FileName.ToString
+        Dim strpath = System.IO.Path.GetExtension(filename.FileName)
+
 
         If (filename.FileName = "") Then
 
@@ -104,7 +106,24 @@ Public Class RPA_Management
             addfile.Visible = True
             Exit Sub
         Else
-
+            If (strpath <> ".py") Then
+                Call showMsg("Please select valid file", "")
+                data.Visible = False
+                addfile.Visible = True
+                Exit Sub
+            End If
+            If Testeddate.Text = "" Then
+                Call showMsg("Please enter the tested date", "")
+                data.Visible = False
+                addfile.Visible = True
+                Exit Sub
+            End If
+            If Status.SelectedValue = 0 Then
+                Call showMsg("Please select status", "")
+                data.Visible = False
+                addfile.Visible = True
+                Exit Sub
+            End If
             If System.IO.File.Exists(serverpath) Then
                 Call showMsg("file already exists", "")
                 data.Visible = False

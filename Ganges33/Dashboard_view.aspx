@@ -1,6 +1,5 @@
-﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Analysis.Master" CodeBehind="Dashboard.aspx.vb" Inherits="Ganges33.WebForm1" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/Analysis.Master" CodeBehind="Dashboard_view.aspx.vb" Inherits="Ganges33.Dashboard_view" %>
 <%@ Register assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" namespace="System.Web.UI.DataVisualization.Charting" tagprefix="asp" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
    
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
@@ -33,7 +32,18 @@
     <style type="text/css">
  
         </style>
-</asp:Content>
+    <script>
+        $(function () {
+            $('[class*=date]').datepicker({
+                changeMonth: true,
+                changeYear: true,
+                format: "DD/MM/YYYY",
+                language: "tr"
+
+            });
+        });
+    </script>
+    </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     
@@ -50,10 +60,6 @@
                   <h3 class="card-title ">DashBoard</h3>
                   <p class="card-category"></p>
                 </div>
-                  <br /><br />
-                  <div style="text-align:left">
-                    <asp:Button ID="BtnLogin" runat="server" text="Search" class="btn btn-primary pull-right"  />
-                      </div>
   <div  class="card-body scrollbar " id="style-10">
                   <div class="form-group">
             <asp:Label ID="lblInfo" Class="bmd-label-floating" runat="server"></asp:Label>
@@ -88,9 +94,69 @@
 
 	</ChartAreas>
                            </asp:Chart>--%>
+                            
+                    <div class="row">
+                  
+                                  <div>
+                                   
+                 <div class="row  " style="margin-left:300px;margin-bottom:30px;margin-top:30px;background-color:#ab47bc;border-radius:7px">
+                        <div class="form-group col-sm-2 ">
+                                 <br />
+                     <label id="" style="color:white">Month</label>
+                            </div>
+                            <div class="col-sm-3">
+                                <br />
+
+				  <asp:DropDownList ID="DropDownMonth" runat="server" CssClass="form-control dropdown-toggle" BackColor="#ab47bc" ForeColor="White"  AutoPostBack="false" style="width: 125%; height:33px" >
+                        		     <asp:ListItem Text="Select..." Value="0"></asp:ListItem>
+                             <asp:ListItem Text="January" Value="01"></asp:ListItem>
+                              <asp:ListItem Text="February" Value="02"></asp:ListItem>
+                              <asp:ListItem Text="March" Value="03"></asp:ListItem>
+                             <asp:ListItem Text="April" Value="04"></asp:ListItem>
+                              <asp:ListItem Text="May" Value="05"></asp:ListItem>
+                               <asp:ListItem Text="June" Value="06"></asp:ListItem>
+                             <asp:ListItem Text="July" Value="07"></asp:ListItem>
+                              <asp:ListItem Text="August" Value="08"></asp:ListItem>
+                              <asp:ListItem Text="September" Value="09"></asp:ListItem>
+                              <asp:ListItem Text="October" Value="10"></asp:ListItem>
+                              <asp:ListItem Text="November" Value="11"></asp:ListItem>
+                              <asp:ListItem Text="December" Value="12"></asp:ListItem>
+                      </asp:DropDownList>
+                         </div> 
+					 
+                        
+                          <div class="col-sm-3">
+                                 <br />  
+					<asp:DropDownList ID="DropDownYear" runat="server" CssClass="form-control dropdown-toggle" AutoPostBack="false" BackColor="#ab47bc" ForeColor="White"   style=" height:33px" >
+                            <asp:ListItem Text="2019" Value="2019"></asp:ListItem>
+                              <asp:ListItem Text="2020" Value="2020" Selected="True"></asp:ListItem>
+                              <asp:ListItem Text="2021" Value="2021"></asp:ListItem>
+                             <asp:ListItem Text="2022" Value="2022"></asp:ListItem>
+                              <asp:ListItem Text="2023" Value="2023"></asp:ListItem>
+                               <asp:ListItem Text="2024" Value="2024"></asp:ListItem>
+                             <asp:ListItem Text="2025" Value="2025"></asp:ListItem>
+                         
+                      </asp:DropDownList>
+
+                        </div>
+					  
+					
+    
+                      
+                 
+                     <div class="col-sm-2">
                           
-                          
-                           <div class="row">
+
+                         <br />
+<asp:Button ID="btnSend" runat="server" class="btn btn-primary "  text="Search"/>
+                         </div>
+</div>
+                        
+                  </div>
+                  </div>
+                      </div>
+                 
+                   <div class="row">
                               
 
                              <div class="col-sm-4">
@@ -338,24 +404,23 @@
 
         </asp:Chart>
                      </div>       
-                  </div>                </div>
-      <br/>
-      <br />
+                  </div>               
 
       <%--testing--%> 
-       <div class="row">
-                              
+       <div class="row ">
+                              <div class="col-sm-4"></div>
 
                              <div class="col-sm-4">
                              <div  class=" text-center" >  
                                    <%--<label class="bmd-label-floating " style="font-weight:bold">
                                        Customer Visit
                                    </label>--%>
+                                 
                                   <asp:Label ID="Sales"  Text="Sales" runat="server" style="font-size: large;font-weight:bold" class="bmd-label-floating "></asp:Label>
                                </div>
-                               <div>
+                               <div style="margin-left:15px">
                
-                            <asp:Chart ID="Chart18" runat="server" Width="620px" Height="276px">
+                            <asp:Chart ID="Chart18" runat="server"  Width="320px" Height="276px">
 
             <series>
 
@@ -377,7 +442,8 @@
                                    </div>
                                </div>
                           
-
+            </div>
+   
                            <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
                            </div>
           <%--  <div class="col-sm-11"> <div class="GridviewDiv" id="divGspn" runat="server" visible="false">

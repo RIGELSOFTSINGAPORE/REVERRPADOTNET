@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class WebForm1
+Partial Public Class Dashboard_view
 
     '''<summary>
     '''ScriptManager1 control.
@@ -23,15 +23,6 @@ Partial Public Class WebForm1
     Protected WithEvents ScriptManager1 As Global.System.Web.UI.ScriptManager
 
     '''<summary>
-    '''BtnLogin control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents BtnLogin As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
     '''lblInfo control.
     '''</summary>
     '''<remarks>
@@ -39,6 +30,33 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblInfo As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''DropDownMonth control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents DropDownMonth As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''DropDownYear control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents DropDownYear As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''btnSend control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnSend As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''CustomerVisit control.

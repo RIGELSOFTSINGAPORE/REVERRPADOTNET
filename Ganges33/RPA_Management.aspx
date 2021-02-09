@@ -127,7 +127,7 @@
                              </div>
                             <div>
                                   <br />
-                            <asp:DropDownList ID="Status" runat="server"   width="188px"  heigh="35px" class="form-control  serverlbl">
+                            <asp:DropDownList ID="Status" runat="server"   width="188px" Height="33px" class="form-control  serverlbl">
                                 <asp:ListItem Text="Select..." Value="0"></asp:ListItem>
                                 <asp:ListItem Text="Active" Value="1"></asp:ListItem>
                                 <asp:ListItem Text="Inactive" Value="2"></asp:ListItem>
@@ -198,7 +198,7 @@
                   </div>
                     <div>
                          <br />
-                        <asp:GridView ID="getdata" runat="server" AutoGenerateColumns="false" AllowPaging="true" PageSize="10" OnPageIndexChanging="getdata_PageIndexChanging" OnRowCommand="getdata_RowCommand"
+                        <asp:GridView ID="getdata" runat="server" AutoGenerateColumns="false" CellPadding="10"   AllowPaging="true" PageSize="10" OnPageIndexChanging="getdata_PageIndexChanging" OnRowCommand="getdata_RowCommand"
                 Style="align-self: center" HeaderStyle-BackColor="#8e24aa" HeaderStyle-ForeColor="White"  CssClass="col-sm-12" ShowHeaderWhenEmpty="true" EmptyDataText="No records Found">
                 <EmptyDataTemplate>No Record Available</EmptyDataTemplate>
                 <EmptyDataRowStyle HorizontalAlign="Center" />

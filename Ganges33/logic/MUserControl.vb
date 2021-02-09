@@ -152,7 +152,19 @@ Public Class MUserControl
         sqlStr1 = sqlStr1 & "e_mail, "
 
 
-        sqlStr1 = sqlStr1 & "em_tel "
+        sqlStr1 = sqlStr1 & "em_tel, "
+        sqlStr1 = sqlStr1 & "em_surname, "
+        sqlStr1 = sqlStr1 & "gua_name, "
+        sqlStr1 = sqlStr1 & "gua_tel, "
+        sqlStr1 = sqlStr1 & "gua_add1, "
+        sqlStr1 = sqlStr1 & "hire_date, "
+        sqlStr1 = sqlStr1 & "class, "
+        sqlStr1 = sqlStr1 & "position, "
+        sqlStr1 = sqlStr1 & "work_location, "
+        sqlStr1 = sqlStr1 & "paid_h1, "
+
+
+        sqlStr1 = sqlStr1 & "reg_work_time "
         sqlStr1 = sqlStr1 & " ) "
 
         sqlStr1 = sqlStr1 & " values ( "
@@ -180,7 +192,20 @@ Public Class MUserControl
         sqlStr1 = sqlStr1 & "@tel, "
         sqlStr1 = sqlStr1 & "@mobile, "
         sqlStr1 = sqlStr1 & "@e_mail, "
-        sqlStr1 = sqlStr1 & "@em_tel "
+        sqlStr1 = sqlStr1 & "@em_tel, "
+
+        sqlStr1 = sqlStr1 & "@em_surname, "
+        sqlStr1 = sqlStr1 & "@gua_name, "
+        sqlStr1 = sqlStr1 & "@gua_tel, "
+        sqlStr1 = sqlStr1 & "@gua_add1, "
+        sqlStr1 = sqlStr1 & "@hire_date, "
+        sqlStr1 = sqlStr1 & "@class, "
+        sqlStr1 = sqlStr1 & "@position, "
+        sqlStr1 = sqlStr1 & "@work_location, "
+        sqlStr1 = sqlStr1 & "@paid_h1, "
+
+
+        sqlStr1 = sqlStr1 & "@reg_work_time "
 
 
         sqlStr1 = sqlStr1 & " )"
@@ -211,6 +236,21 @@ Public Class MUserControl
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@e_mail", queryParams.Email_ID))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@em_tel", queryParams.Telephone_2))
 
+
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@em_surname", queryParams.em_surname))
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@gua_name", queryParams.gua_name))
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@gua_tel", queryParams.gua_tel))
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@gua_add1", queryParams.gua_add1))
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@hire_date", dtNow))
+
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@class", queryParams.Class1))
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@position", queryParams.position))
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@work_location", queryParams.work_location))
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@paid_h1", queryParams.paid_h1))
+
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@reg_work_time", queryParams.reg_work_time))
+
+
         flag = dbConn.ExecSQL(sqlStr1)
 
 
@@ -235,7 +275,7 @@ Public Class MUserControl
         Dim sqlStr As String = "SELECT "
         sqlStr = sqlStr & " MD.DELFG,MD.user_id, MD.password, MD.admin_flg,MD.user_level
         FROM [dbo].[M_USER_data] as MUD
-        INNER JOIN [dbo].M_USER AS MD ON MUD.user_id=MD.user_id and mud.DELFG=md.DELFG order by  MD.UPDDT desc"
+        INNER JOIN [dbo].M_USER AS MD ON MUD.user_id=MD.user_id and mud.DELFG=md.DELFG order by  MD.CRTDT desc"
         Dim _DataTable As DataTable = dbConn.GetDataSet(sqlStr)
         dbConn.CloseConnection()
         Return _DataTable
@@ -271,16 +311,23 @@ Public Class MUserControl
         Log4NetControl.ComInfoLogWrite(Log4NetControl.UserID)
         Dim dbConn As DBUtility = New DBUtility()
         Dim sqlStr As String = "SELECT "
-        sqlStr = sqlStr & " MD.DELFG, MD.user_id, MD.password, MD.eng_id,
+        sqlStr = sqlStr & " MD.CRTDT, MD.CRTCD, MD.UPDDT, MD.UPDCD, MD.DELFG, MD.user_id, MD.password, MD.eng_id,
      MD.admin_flg, MD.user_level, MD.ship_1, MD.ship_2, MD.ship_3, MD.ship_4, MD.ship_5, mud.surname, MUD.name, MUD.mid_name
-    ,MUD.birthday,MUD.sex,MUD.superior,MUD.add_1,MUD.add_2,MUD.add_3,MUD.zip,MUD.tel,MUD.mobile,MUD.e_mail,MUD.em_tel 
+    ,MUD.birthday,MUD.sex,MUD.superior,MUD.add_1,MUD.add_2,MUD.add_3,MUD.zip,MUD.tel,MUD.mobile,MUD.e_mail,MUD.em_tel
+    ,MUD.em_surname,MUD.Gua_name,MUD.gua_tel,MUD.gua_add1,MUD.gua_add2,MUD.gua_zip,MUD.gua_email,
+	MUD.hire_date,MUD.dep_date,MUD.class,MUD.position,MUD.work_location,MUD.comm_time,MUD.high_date1,MUD.high_date2,MUD.high_name
+	,MUD.uni_date1,MUD.uni_date2,MUD.uni_name
+	,MUD.emp_h1,MUD.emp_h2,MUD.emp_name1,MUD.emp_h3,MUD.emp_h4,MUD.emp_name2,MUD.qua_name1,MUD.qua_name2,MUD.qua_name3,
+	MUD.qua_date1,MUD.qua_date2,MUD.qua_date3,MUD.paid_h1,MUD.paid_h2,MUD.reg_work_time
     From [dbo].[M_USER_data] as MUD
-        left outer JOIN [dbo].M_USER AS MD ON MUD.user_id=MD.user_id And mud.DELFG=md.DELFG "
+        inner JOIN [dbo].M_USER AS MD ON MUD.user_id=MD.user_id And mud.DELFG=md.DELFG "
         'queryParams.UserId.Count <>0
         If Convert.ToString(queryParams.UserId.Count <> 0) Then
             sqlStr = sqlStr & "Where MD.user_id = @user_id "
             dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@user_id", queryParams.UserId))
         End If
+        'sqlStr = sqlStr & "Where MD.user_id = @user_id "
+        'dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@user_id", queryParams.UserId))
         Dim _DataTable As DataTable = dbConn.GetDataSet(sqlStr)
         dbConn.CloseConnection()
         Return _DataTable

@@ -94,7 +94,7 @@
                         </div>
                         <div>
                              <asp:TextBox ID="ShipName" runat="server" value="" Height="33px" width="270px" class="form-file-upload  serverlbl" MaxLength="20" />
-                        <asp:RequiredFieldValidator ID="SName" runat="server" ControlToValidate="ShipName" ErrorMessage="Please enter a shipname"   
+                        <asp:RequiredFieldValidator class="serverlbl "  ID="SName" runat="server" ControlToValidate="ShipName" ErrorMessage="Please enter a shipname"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                      
                         </div>
@@ -109,7 +109,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                              </div>
                              <div> <br />
                               <asp:TextBox ID="ShipInfo" runat="server" value="" Height="33px" width="270px" class="form-file-upload  serverlbl" MaxLength="100" />
-                           <asp:RequiredFieldValidator ID="SInfo" runat="server" ControlToValidate="ShipInfo" ErrorMessage="Please enter a shipinfo"   
+                           <asp:RequiredFieldValidator class="serverlbl "  ID="SInfo" runat="server" ControlToValidate="ShipInfo" ErrorMessage="Please enter a shipinfo"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                             </div>
                         </div>
@@ -123,7 +123,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                              </div>
                              <div>  <br />
                               <asp:TextBox ID="ShipManager" runat="server" value="" Height="33px" width="270px" class="form-file-upload  serverlbl" MaxLength="20" />
-                           <asp:RequiredFieldValidator ID="SManager" runat="server" ControlToValidate="ShipManager" ErrorMessage="Please enter a shipManager"   
+                           <asp:RequiredFieldValidator class="serverlbl "  ID="SManager" runat="server" ControlToValidate="ShipManager" ErrorMessage="Please enter a shipManager"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                             </div>
                         </div>
@@ -135,7 +135,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                              </div>
                             <div>  <br />
                                  <asp:TextBox ID="ShipTel" runat="server" value="" Height="33px" width="270px" class="form-file-upload  serverlbl" MaxLength="20" />
-                           <asp:RequiredFieldValidator ID="STel" runat="server" ControlToValidate="ShipTel" ErrorMessage="Please enter a shipTel"   
+                           <asp:RequiredFieldValidator class="serverlbl "  ID="STel" runat="server" ControlToValidate="ShipTel" ErrorMessage="Please enter a shipTel"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                             </div>
                         </div>
@@ -149,7 +149,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>  <br />
                             <asp:TextBox ID="ShipAdd1" runat="server" value="" Height="33px" width="270px" class="form-file-upload   serverlbl" MaxLength="70" />
-                           <asp:RequiredFieldValidator ID="SAdd1" runat="server" ControlToValidate="ShipAdd1" ErrorMessage="Please enter a shipAdd1"   
+                           <asp:RequiredFieldValidator class="serverlbl "  ID="SAdd1" runat="server" ControlToValidate="ShipAdd1" ErrorMessage="Please enter a shipAdd1"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
@@ -197,7 +197,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>  <br />
                             <asp:TextBox ID="Email" runat="server" value="" Height="33px" width="270px" class="form-file-upload   serverlbl" MaxLength="30" />
-                            <asp:RequiredFieldValidator ID="mail" runat="server" ControlToValidate="Email" ErrorMessage="Please enter a Email"   
+                            <asp:RequiredFieldValidator class="serverlbl "  ID="mail" runat="server" ControlToValidate="Email" ErrorMessage="Please enter a Email"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
@@ -211,7 +211,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>  <br />
                             <asp:TextBox ID="ShipService" runat="server" value="" Height="33px" width="270px" class="form-file-upload   serverlbl" MaxLength="2" />
-                            <asp:RequiredFieldValidator ID="SService" runat="server" ControlToValidate="ShipService" ErrorMessage="Please enter a shipservice"   
+                            <asp:RequiredFieldValidator class="serverlbl "  ID="SService" runat="server" ControlToValidate="ShipService" ErrorMessage="Please enter a shipservice"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
@@ -226,7 +226,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>  <br />
                             <asp:TextBox ID="OpenTime" runat="server" value="" Height="33px" width="270px" class="form-file-upload duration   serverlbl" MaxLength="5" />
-                            <asp:RequiredFieldValidator ID="OT" runat="server" ControlToValidate="OpenTime" ErrorMessage="Please enter a OpenTime"   
+                            <asp:RequiredFieldValidator class="serverlbl "  ID="OT" runat="server" ControlToValidate="OpenTime" ErrorMessage="Please enter a OpenTime"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
@@ -251,7 +251,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>  <br />
                             <asp:TextBox ID="OpeningDate" runat="server" value="" Height="33px" width="270px" class="form-file-upload date  serverlbl" />
-                           <asp:RequiredFieldValidator ID="OD" runat="server" ControlToValidate="OpeningDate" ErrorMessage="Please enter a OpenDate"   
+                           <asp:RequiredFieldValidator class="serverlbl "  ID="OD" runat="server" ControlToValidate="OpeningDate" ErrorMessage="Please enter a OpenDate"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
@@ -277,7 +277,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>  <br />
                             <asp:TextBox ID="ShipCode1" runat="server" value="" Height="33px" width="270px" class="form-file-upload   serverlbl" MaxLength="50" />
-                           <asp:RequiredFieldValidator ID="SCode" runat="server" ControlToValidate="ShipCode1" ErrorMessage="Please enter a ShipCode"   
+                           <asp:RequiredFieldValidator class="serverlbl "  ID="SCode" runat="server" ControlToValidate="ShipCode1" ErrorMessage="Please enter a ShipCode"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
@@ -290,7 +290,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div> 
                             <asp:TextBox ID="ShipMark" runat="server" value="" Height="33px" width="270px" class="form-file-upload   serverlbl" MaxLength="3" />
-                           <asp:RequiredFieldValidator ID="SMark" runat="server" ControlToValidate="ShipMark" ErrorMessage="Please enter a ShipMark"   
+                           <asp:RequiredFieldValidator class="serverlbl "  ID="SMark" runat="server" ControlToValidate="ShipMark" ErrorMessage="Please enter a ShipMark"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
@@ -303,7 +303,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>  <br />
                             <asp:TextBox ID="Item1" runat="server" value="" Height="33px" width="270px" class="form-file-upload   serverlbl" MaxLength="10" />
-                           <asp:RequiredFieldValidator ID="IT1" runat="server" ControlToValidate="Item1" ErrorMessage="Please enter a Item1"   
+                           <asp:RequiredFieldValidator class="serverlbl "  ID="IT1" runat="server" ControlToValidate="Item1" ErrorMessage="Please enter a Item1"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
@@ -316,7 +316,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>  <br />
                             <asp:TextBox ID="Item2" runat="server" value="" Height="33px" width="270px" class="form-file-upload   serverlbl" MaxLength="50" />
-                           <asp:RequiredFieldValidator ID="IT2" runat="server" ControlToValidate="Item2" ErrorMessage="Please enter a Item2"   
+                           <asp:RequiredFieldValidator class="serverlbl "  ID="IT2" runat="server" ControlToValidate="Item2" ErrorMessage="Please enter a Item2"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
@@ -329,7 +329,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>  <br />
                             <asp:TextBox ID="Mess1" runat="server" value="" Height="33px" width="270px" class="form-file-upload   serverlbl" MaxLength="500" />
-                           <asp:RequiredFieldValidator ID="M1" runat="server" ControlToValidate="Mess1" ErrorMessage="Please enter a Mess1"   
+                           <asp:RequiredFieldValidator class="serverlbl "  ID="M1" runat="server" ControlToValidate="Mess1" ErrorMessage="Please enter a Mess1"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
@@ -343,7 +343,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>    <br />
                             <asp:TextBox ID="Mess2" runat="server" value="" Height="33px" width="270px" class="form-file-upload   serverlbl" MaxLength="500" />
-                           <asp:RequiredFieldValidator ID="M2" runat="server" ControlToValidate="Mess2" ErrorMessage="Please enter a Mess2"   
+                           <asp:RequiredFieldValidator class="serverlbl "  ID="M2" runat="server" ControlToValidate="Mess2" ErrorMessage="Please enter a Mess2"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
@@ -356,7 +356,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>   <br />
                             <asp:TextBox ID="Mess3" runat="server" value="" Height="33px" width="270px" class="form-file-upload   serverlbl" MaxLength="500" />
-                           <asp:RequiredFieldValidator ID="M3" runat="server" ControlToValidate="Mess3" ErrorMessage="Please enter a Mess3"   
+                           <asp:RequiredFieldValidator class="serverlbl "  ID="M3" runat="server" ControlToValidate="Mess3" ErrorMessage="Please enter a Mess3"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
@@ -381,7 +381,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>   <br />
                             <asp:TextBox ID="PO_NO" runat="server" value="" Height="33px" width="270px" class="form-file-upload   serverlbl" MaxLength="2" />
-                           <asp:RequiredFieldValidator ID="PoNo" runat="server" ControlToValidate="PO_NO" ErrorMessage="Please enter a PO_NO"   
+                           <asp:RequiredFieldValidator class="serverlbl "  ID="PoNo" runat="server" ControlToValidate="PO_NO" ErrorMessage="Please enter a PO_NO"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
                     </div>
@@ -423,7 +423,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                     <div>
                         <%--<asp:GridView ID="getdata" AutoGenerateColumns="false"  DataKeyNames="SHIP_CODE" runat="server">--%>
                         <br />
-                            <asp:GridView ID="getdata" runat="server" AutoGenerateColumns="false" AllowPaging="true" PageSize="10" OnPageIndexChanging="getdata_PageIndexChanging" OnRowCommand="getdata_RowCommand1"
+                            <asp:GridView ID="getdata" runat="server" AutoGenerateColumns="false" CellPadding="10"   AllowPaging="true" PageSize="10" OnPageIndexChanging="getdata_PageIndexChanging" OnRowCommand="getdata_RowCommand1"
                 Style="align-self: center" HeaderStyle-BackColor="#8e24aa" HeaderStyle-ForeColor="White"  CssClass="col-sm-12" ShowHeaderWhenEmpty="true" EmptyDataText="No records Found">
                 <EmptyDataTemplate>No Record Available</EmptyDataTemplate>
                 <EmptyDataRowStyle HorizontalAlign="Center" />

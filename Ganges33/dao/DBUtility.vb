@@ -35,6 +35,7 @@ Namespace Ganges33.dao
             Catch ex As Exception
                 Log4NetControl.ComErrorLogWrite(ex.ToString())
                 Return False
+                Exit Function
             End Try
 
             Return True

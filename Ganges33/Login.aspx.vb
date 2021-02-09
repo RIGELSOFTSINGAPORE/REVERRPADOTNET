@@ -344,7 +344,7 @@ Public Class Login
                 Session("ship_mark") = shipMark
 
                 'End
-                Response.Redirect("Menu2.aspx")
+                Response.Redirect("Analysis_FileUpload.aspx")
             End If
 
         End If
@@ -354,10 +354,18 @@ Public Class Login
     Protected Sub showMsg(ByVal Msg As String)
 
         lblMsg.Text = Msg
-        Dim sScript As String = "$(function () { $( ""#dialog"" ).dialog({width: 400, buttons: {""OK"": function () {$(this).dialog('close');}}});});"
+        Dim sScript As String
+
+        If Msg = "CancelMsg" Then
+            'OKとキャンセルボタン
+            sScript = "$(function () {$(""#dialog"" ).dialog({width: 400,buttons:{""OK"": function () {$(this).dialog('close');$('[id$=""BtnOK""]').click();},""CANCEL"": function () {$(this).dialog('close');$('[id$=""BtnCancel""]').click();}}});});"
+        Else
+            'OKボタンのみ
+            sScript = "$(function () { $( ""#dialog"" ).dialog({width: 400, buttons: {""OK"": function () {$(this).dialog('close');}}});});"
+        End If
+
         'JavaScriptの埋め込み
         ClientScript.RegisterStartupScript(Me.GetType(), "startup", sScript, True)
 
     End Sub
-
 End Class

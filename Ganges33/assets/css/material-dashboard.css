@@ -13891,13 +13891,13 @@ fieldset[disabled] .form-group .form-control {
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(156, 39, 176, 0.46);
 }
 
-.navbar.bg-primary .dropdown-item:hover,
+/*.navbar.bg-primary .dropdown-item:hover,
 .navbar.bg-primary .dropdown-item:focus {
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
   background-color: #9c27b0;
   color: #fff;
 }
-
+*/
 .navbar.bg-primary .navbar-toggler .navbar-toggler-icon {
   background-color: #fff;
 }
@@ -13908,13 +13908,13 @@ fieldset[disabled] .form-group .form-control {
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(0, 188, 212, 0.46);
 }
 
-.navbar.bg-info .dropdown-item:hover,
+/*.navbar.bg-info .dropdown-item:hover,
 .navbar.bg-info .dropdown-item:focus {
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 188, 212, 0.4);
   background-color: #00bcd4;
   color: #fff;
 }
-
+*/
 .navbar.bg-info .navbar-toggler .navbar-toggler-icon {
   background-color: #fff;
 }
@@ -13924,13 +13924,13 @@ fieldset[disabled] .form-group .form-control {
   background-color: #ff9800 !important;
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(255, 152, 0, 0.46);
 }
-
+/*
 .navbar.bg-warning .dropdown-item:hover,
 .navbar.bg-warning .dropdown-item:focus {
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(255, 152, 0, 0.4);
   background-color: #ff9800;
   color: #fff;
-}
+}*/
 
 .navbar.bg-warning .navbar-toggler .navbar-toggler-icon {
   background-color: #fff;
@@ -13941,14 +13941,14 @@ fieldset[disabled] .form-group .form-control {
   background-color: #e91e63 !important;
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(233, 30, 99, 0.46);
 }
-
+/*
 .navbar.bg-rose .dropdown-item:hover,
 .navbar.bg-rose .dropdown-item:focus {
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4);
   background-color: #e91e63;
   color: #fff;
 }
-
+*/
 .navbar.bg-rose .navbar-toggler .navbar-toggler-icon {
   background-color: #fff;
 }
@@ -13959,13 +13959,13 @@ fieldset[disabled] .form-group .form-control {
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(244, 67, 54, 0.46);
 }
 
-.navbar.bg-danger .dropdown-item:hover,
+/*.navbar.bg-danger .dropdown-item:hover,
 .navbar.bg-danger .dropdown-item:focus {
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(244, 67, 54, 0.4);
   background-color: #f44336;
   color: #fff;
 }
-
+*/
 .navbar.bg-danger .navbar-toggler .navbar-toggler-icon {
   background-color: #fff;
 }
@@ -13975,14 +13975,14 @@ fieldset[disabled] .form-group .form-control {
   background-color: #4caf50 !important;
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(76, 175, 80, 0.46);
 }
-
+/*
 .navbar.bg-success .dropdown-item:hover,
 .navbar.bg-success .dropdown-item:focus {
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(76, 175, 80, 0.4);
   background-color: #4caf50;
   color: #fff;
 }
-
+*/
 .navbar.bg-success .navbar-toggler .navbar-toggler-icon {
   background-color: #fff;
 }
@@ -13993,13 +13993,13 @@ fieldset[disabled] .form-group .form-control {
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(33, 33, 33, 0.46);
 }
 
-.navbar.bg-dark .dropdown-item:hover,
+/*.navbar.bg-dark .dropdown-item:hover,
 .navbar.bg-dark .dropdown-item:focus {
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(33, 33, 33, 0.4);
   background-color: #212121;
   color: #fff;
 }
-
+*/
 .navbar.bg-dark .navbar-toggler .navbar-toggler-icon {
   background-color: #fff;
 }

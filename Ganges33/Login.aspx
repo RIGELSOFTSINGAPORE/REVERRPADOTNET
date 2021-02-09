@@ -44,143 +44,6 @@
 }*/
 
 
-
-
-.ui-widget-header {
-	border: 2px #5e0376 solid;
-	background: #9c27b0 url(images/ui-bg_gloss-wave_75_2191c0_500x100.png) 50% 50% repeat-x;
-	color: #eaf5f7;
-	font-weight: bold;
-}
-
-	.ui-widget-header a {
-		color: #eaf5f7;
-	}
-
-	/* Interaction states
-----------------------------------*/
-	.ui-state-default,
-	.ui-widget-content .ui-state-default,
-	.ui-widget-header .ui-state-default {
-		border: 1px solid #77d5f7;
-		background: #0078ae url(images/ui-bg_glass_45_0078ae_1x400.png) 50% 50% repeat-x;
-		font-weight: normal;
-		color: #ffffff;
-	}
-
-		.ui-state-default a,
-		.ui-state-default a:link,
-		.ui-state-default a:visited {
-			color: #ffffff;
-			text-decoration: none;
-		}
-
-	.ui-state-hover,
-	.ui-widget-content .ui-state-hover,
-	.ui-widget-header .ui-state-hover,
-	.ui-state-focus,
-	.ui-widget-content .ui-state-focus,
-	.ui-widget-header .ui-state-focus {
-		border: 1px solid #448dae;
-		background: #9c27b0 url(images/ui-bg_glass_75_79c9ec_1x400.png) 50% 50% repeat-x;
-		font-weight: normal;
-		color: #fff;
-	}
-
-		.ui-state-hover a,
-		.ui-state-hover a:hover,
-		.ui-state-hover a:link,
-		.ui-state-hover a:visited,
-		.ui-state-focus a,
-		.ui-state-focus a:hover,
-		.ui-state-focus a:link,
-		.ui-state-focus a:visited {
-			color: #026890;
-			text-decoration: none;
-		}
-
-	.ui-state-active,
-	.ui-widget-content .ui-state-active,
-	.ui-widget-header .ui-state-active {
-		border: 1px solid #acdd4a;
-		background: #9c27b0 url(images/ui-bg_gloss-wave_50_6eac2c_500x100.png) 50% 50% repeat-x;
-		font-weight: normal;
-		color: #ffffff;
-	}
-
-		.ui-state-active a,
-		.ui-state-active a:link,
-		.ui-state-active a:visited {
-			color: #ffffff;
-			text-decoration: none;
-		}
-
-	/* Interaction Cues
-----------------------------------*/
-	.ui-state-highlight,
-	.ui-widget-content .ui-state-highlight,
-	.ui-widget-header .ui-state-highlight {
-		border: 1px solid #fcd113;
-		background: #9c27b0 url(images/ui-bg_glass_55_f8da4e_1x400.png) 50% 50% repeat-x;
-		color: #915608;
-	}
-
-		.ui-state-highlight a,
-		.ui-widget-content .ui-state-highlight a,
-		.ui-widget-header .ui-state-highlight a {
-			color: #915608;
-		}
-
-	.ui-state-error,
-	.ui-widget-content .ui-state-error,
-	.ui-widget-header .ui-state-error {
-		border: 1px solid #cd0a0a;
-		background: #e14f1c url(images/ui-bg_gloss-wave_45_e14f1c_500x100.png) 50% top repeat-x;
-		color: #ffffff;
-	}
-
-		.ui-state-error a,
-		.ui-widget-content .ui-state-error a,
-		.ui-widget-header .ui-state-error a {
-			color: #ffffff;
-		}
-
-	.ui-state-error-text,
-	.ui-widget-content .ui-state-error-text,
-	.ui-widget-header .ui-state-error-text {
-		color: #ffffff;
-	}
-
-	.ui-priority-primary,
-	.ui-widget-content .ui-priority-primary,
-	.ui-widget-header .ui-priority-primary {
-		font-weight: bold;
-	}
-
-	.ui-priority-secondary,
-	.ui-widget-content .ui-priority-secondary,
-	.ui-widget-header .ui-priority-secondary {
-		opacity: .7;
-		filter: Alpha(Opacity=70);
-		font-weight: normal;
-	}
-
-	.ui-state-disabled,
-	.ui-widget-content .ui-state-disabled,
-	.ui-widget-header .ui-state-disabled {
-		opacity: .35;
-		filter: Alpha(Opacity=35);
-		background-image: none;
-	}
-
-		.ui-state-disabled .ui-icon {
-			filter: Alpha(Opacity=35); /* For IE8 - See #6059 */
-		}
-
-
-
-
-
     </style>
               
 <script type="text/javascript">
@@ -267,17 +130,22 @@
                      <asp:Button ID="BtnLogin" runat="server" text="Log In" class="button" />
       
 				
+                        
+     <asp:Button ID="BtnCancel" runat="server" Text="Button" Style="display: none;" />
+        <asp:Button ID="BtnOK" runat="server" Text="Button" Style="display: none;" />
 
-                
-            </div> 
-            
+   
 
-        </div>
-      
-    <div id="dialog" title="message" style="display:none;"> >
+    <div id="dialog" title="message" style="display: none;">
+       
         <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
     </div>
 
+                
+            </div> 
+       
+        </div>
+   
 
  </asp:Content>
 <%--<asp:Button ID="Button1" runat="server" Text="Button" style="display:none;" />

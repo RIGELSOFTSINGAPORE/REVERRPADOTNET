@@ -39,7 +39,7 @@
             changeMonth: true,
             changeYear: true,
             format: "DD/MM/YYYY",
-            language: "tr"
+            yearRange: "0000:9999"
 
         });
     });

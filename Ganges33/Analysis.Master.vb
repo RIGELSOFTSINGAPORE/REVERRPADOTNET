@@ -27,7 +27,7 @@
             'End If 'VJ 2019/10/29 Add new user level 6 for display only Analysis  Export End
             Dim activepage As String = Request.RawUrl
 
-            If activepage.Contains("Dashboard.aspx") Then
+            If activepage.Contains("Dashboard_view.aspx") Then
                 dashboard.Attributes.Add("class", "active")
                 'btnDashboard.Attributes.Add("class", "btn_active")
             ElseIf activepage.Contains("Analysis_FileUpload.aspx") Then
@@ -278,7 +278,7 @@
     End Sub
 
     Private Sub btnDashboard_ServerClick(sender As Object, e As EventArgs) Handles btnDashboard.ServerClick
-        Response.Redirect("Dashboard.aspx")
+        Response.Redirect("Dashboard_view.aspx")
     End Sub
 
     Private Sub btnUploadSummary_ServerClick(sender As Object, e As EventArgs) Handles btnUploadSummary.ServerClick
