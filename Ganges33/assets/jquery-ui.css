@@ -392,8 +392,8 @@ button.ui-button::-moz-focus-inner {
 .ui-dialog {
 	overflow: hidden;
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 300px;
+	left: 550px;
 	padding: .2em;
 	outline: 0;
 }

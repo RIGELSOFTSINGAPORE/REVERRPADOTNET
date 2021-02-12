@@ -36,15 +36,7 @@
     
     <script>
 
-        $(function () {
-            $('[class*=date]').datepicker({
-                changeMonth: true,
-                changeYear: true,
-                format: "DD/MM/YYYY",
-                language: "tr"
-
-            });
-        });
+    
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -90,7 +82,7 @@
                       <label id="" class="fontFamily bmd-label-floating">Create Start Date</label>
                      </div>
                           <div class=" col-sm-5">
-                       <asp:TextBox ID="TextDateFrom" runat="server" class="form-file-upload date serverlbl" style="width: 100%;"></asp:TextBox>
+                       <asp:TextBox ID="TextDateFrom" runat="server" class="form-file-upload date serverlbl" style="width: 110%;"></asp:TextBox>
                      <%-- <ajaxToolkit:CalendarExtender ID="TextDateFrom_CalendarExtender" runat="server" BehaviorID="TextDateFrom_CalendarExtender" TargetControlID="TextDateFrom" PopupPosition="Left">
                       </ajaxToolkit:CalendarExtender>--%>
                      
@@ -105,7 +97,7 @@
                       <label id="" class="bmd-label-floating fontFamily">Create End Date</label>
           </div>
                           <div class=" col-sm-5">
-               <asp:TextBox ID="TextDateTo" runat="server"  class="form-file-upload serverlbl date" style="width: 100%"></asp:TextBox>
+               <asp:TextBox ID="TextDateTo" runat="server"  class="form-file-upload serverlbl date" style="width: 110%"></asp:TextBox>
                      <%-- <ajaxToolkit:CalendarExtender ID="TextDateTo_CalendarExtender" runat="server" BehaviorID="TextDateTo_CalendarExtender" TargetControlID="TextDateTo" PopupPosition="right">
                       </ajaxToolkit:CalendarExtender>     --%>  
                       

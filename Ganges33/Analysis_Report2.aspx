@@ -48,7 +48,7 @@
                   <h3 class="card-title ">Review Activity Report</h3>
                   <p class="card-category"></p>
                 </div>
-                  <div class="card-body scrollbar" id="style-10">
+                  <div class="card-body scrollbar" >
 
                     <div class="row col-sm-12">
                         <div class="row col-sm-10">
@@ -80,9 +80,54 @@
                 
                     <div class="col-sm-12">
                          <br />
-                          <asp:GridView ID="GridInfo" runat="server" PageSize="31" class="col-sm-12" EmptyDataText="There was no relevant information">
-                       <HeaderStyle BackColor="#8e24aa" ForeColor="white" />
+                          <asp:GridView ID="GridInfo" runat="server" PageSize="31" AutoGenerateColumns="false"  EmptyDataText="There was no relevant information">
+                      
+                                      <Columns>
+                
+                    <asp:TemplateField HeaderText="Day" ItemStyle-Width="150">
+                        <ItemTemplate>
+                            <asp:Label ID="day" runat="server" Text='<%# Eval("day") %>'></asp:Label>
+                        </ItemTemplate>    
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Customer Visit" ItemStyle-Width="150">
+                        <ItemTemplate>
+                            <asp:Label ID="Customer_Visit" runat="server" Text='<%# Eval("Customer_Visit") %>'></asp:Label>
+                        </ItemTemplate>                       
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Call Registerd" ItemStyle-Width="150">
+                        <ItemTemplate>
+                            <asp:Label ID="Call_Registerd" runat="server" Text='<%# Eval("Call_Registerd") %>'></asp:Label>
+                        </ItemTemplate>              
+                    </asp:TemplateField>
+
+                  <asp:TemplateField HeaderText="Repair Completed" ItemStyle-Width="150">
+                        <ItemTemplate>
+                            <asp:Label ID="Repair_Completed" runat="server" Text='<%# Eval("Repair_Completed") %>'></asp:Label>
+                        </ItemTemplate>
+                      </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="	Goods Delivered" ItemStyle-Width="150">
+                        <ItemTemplate>
+                            <asp:Label ID="Goods_Delivered" runat="server" Text='<%# Eval("Goods_Delivered") %>'></asp:Label>
+                        </ItemTemplate>                      
+                    </asp:TemplateField>
+
+                      <asp:TemplateField HeaderText="Pending Calls" ItemStyle-Width="150">
+                        <ItemTemplate>
+                            <asp:Label ID="Pending_Calls" runat="server" Text='<%# Eval("Pending_Calls") %>'></asp:Label>
+                        </ItemTemplate>                     
+                    </asp:TemplateField>
+                <asp:TemplateField HeaderText="	Cancelled Calls" ItemStyle-Width="150">
+                        <ItemTemplate>
+                            <asp:Label ID="Cancelled_Calls" runat="server" Text='<%# Eval("Cancelled_Calls") %>'></asp:Label>
+                        </ItemTemplate>                     
+                    </asp:TemplateField>
+              
+              
+                                          </Columns>
                        <RowStyle Height="25px" Width ="150px" Wrap="False"/>
+                              <HeaderStyle BackColor="#8e24aa" ForeColor="white" />
+                    
                       </asp:GridView>
 
                     </div>

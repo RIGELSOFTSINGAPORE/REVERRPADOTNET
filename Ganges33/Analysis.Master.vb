@@ -60,7 +60,7 @@
                 analyis.Attributes.Add("class", "btn_active")
                 drp1.Attributes.Add("class", "liactive collapsed nav-link collapsed text-truncate")
                 '  btnPartsCompare.Attributes.Add("class", "btn_active")
-            ElseIf activepage.Contains("Analysis_Store_Management.aspx") Then
+            ElseIf activepage.Contains("analysis_store_management.aspx") Then
                 analyis.Attributes.Add("class", "btn_active")
                 drp1.Attributes.Add("class", "liactive collapsed nav-link collapsed text-truncate")
 

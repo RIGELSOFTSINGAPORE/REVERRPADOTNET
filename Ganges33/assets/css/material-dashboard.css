@@ -15329,7 +15329,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 .sidebar .nav li .dropdown-menu a:focus,
 .sidebar .nav li.active>[data-toggle="collapse"] {
   background-color: rgba(200, 200, 200, 0.2);
-  color: #3C4858;
+  color: black;
   box-shadow: none;
 }
 
@@ -19908,7 +19908,7 @@ Copyright (c) 2015 Daniel Eden
 
 #style-10::-webkit-scrollbar {
     width: 15px;
-    height:8px;
+    height:15px;
     background-color: #F5F5F5;
 }
 

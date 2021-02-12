@@ -4,6 +4,7 @@ Imports System.Globalization
 Imports Ganges33.Ganges33.model
 Imports Ganges33.Ganges33.logic
 Imports System.Data.SqlClient
+Imports System.Web.Hosting
 
 Public Class RPA_Management
     Inherits System.Web.UI.Page
@@ -94,10 +95,13 @@ Public Class RPA_Management
             Exit Sub
         End If
 
-        Dim path = "C:\Rpa\Tasks\"
-        Dim serverpath = path & filename.FileName.ToString
+        ' Dim path = "C:\Rpa\Tasks\"
+        ' Dim serverpath = path & filename.FileName.ToString
         Dim strpath = System.IO.Path.GetExtension(filename.FileName)
 
+        Dim strRootDirectory As String = HostingEnvironment.MapPath("~/")
+        Dim path As String = strRootDirectory & "rpa\task"
+        Dim serverpath As String = path & "\" & filename.FileName.ToString
 
         If (filename.FileName = "") Then
 
@@ -137,7 +141,7 @@ Public Class RPA_Management
                     addfile.Visible = True
                     Exit Sub
                 Else
-                    filename.SaveAs(serverpath + filename.FileName)
+                    filename.SaveAs(serverpath)
                 End If
 
             End If
@@ -165,7 +169,7 @@ Public Class RPA_Management
             TaskName.Text = ""
             Textfilename.Text = ""
             Testeddate.Text = ""
-            Status.SelectedItem.Text = "Select"
+            Status.SelectedItem.Value = "0"
             Duration.Text = ""
             delfld.Checked = False
 
@@ -196,6 +200,9 @@ Public Class RPA_Management
             End If
             If Not IsDBNull(_Datatble.Rows(0)("FILE_NAME")) Then
                 Textfilename.Text = _Datatble.Rows(0)("FILE_NAME")
+            End If
+            If Not IsDBNull(_Datatble.Rows(0)("Path")) Then
+                Source.Text = _Datatble.Rows(0)("Path")
             End If
             If Not IsDBNull(_Datatble.Rows(0)("TEST_STATUS")) Then
                 Testeddate.Text = _Datatble.Rows(0)("TEST_STATUS")
@@ -249,25 +256,60 @@ Public Class RPA_Management
         Else
             delflg = 0
         End If
-        'Dim serverpath = "C:\Rpa\Tasks\" & filename.FileName
-        'Dim path As String
-        'Dim path1 As String
-        'path = Server.MapPath("~/RPA files")
+        'Dim strpath = System.IO.Path.GetExtension(filename.FileName)
 
+        'Dim strRootDirectory As String = HostingEnvironment.MapPath("~/")
+        'Dim path As String = strRootDirectory & "rpa\task"
+        'Dim serverpath As String = path & "\" & filename.FileName.ToString
 
-        'If (File.Exists(serverpath)) Then
-        '    Call showMsg("file already exists", "")
+        'If (filename.FileName = "") Then
+
+        '    Call showMsg("Please select the file", "")
+        '    data.Visible = False
+        '    addfile.Visible = True
         '    Exit Sub
         'Else
-        '    filename.SaveAs(path + filename.FileName)
-        '    path1 = path + filename.FileName
+        '    If (strpath <> ".py") Then
+        '        Call showMsg("Please select valid file", "")
+        '        data.Visible = False
+        '        addfile.Visible = True
+        '        Exit Sub
+        '    End If
+        '    If Testeddate.Text = "" Then
+        '        Call showMsg("Please enter the tested date", "")
+        '        data.Visible = False
+        '        addfile.Visible = True
+        '        Exit Sub
+        '    End If
+        '    If Status.SelectedValue = 0 Then
+        '        Call showMsg("Please select status", "")
+        '        data.Visible = False
+        '        addfile.Visible = True
+        '        Exit Sub
+        '    End If
+        '    If System.IO.File.Exists(serverpath) Then
+        '        Call showMsg("file already exists", "")
+        '        data.Visible = False
+        '        addfile.Visible = True
+        '        Exit Sub
+        '    Else
+        '        If (Not System.IO.Directory.Exists(path)) Then
 
-        '    My.Computer.FileSystem.MoveFile(path1, serverpath)
+        '            Call showMsg("Folder is not exists", "")
+        '            data.Visible = False
+        '            addfile.Visible = True
+        '            Exit Sub
+        '        Else
+        '            filename.SaveAs(serverpath)
+        '        End If
+
+        '    End If
+
         'End If
         Dim Rpamanagementmodel As New RpamanagementModel
         Dim Rpamanagementcontrol As New RpamanagementControl
         Rpamanagementmodel.TASK_NAME = TaskName.Text
-        Rpamanagementmodel.FILE_NAME = filename.FileName
+        'Rpamanagementmodel.FILE_NAME = filename.FileName
         'Rpamanagementmodel.PATH = path
         Rpamanagementmodel.TEST_STATUS = Testeddate.Text
         Rpamanagementmodel.RUN_DURATION = Duration.Text
@@ -275,7 +317,7 @@ Public Class RPA_Management
         Rpamanagementmodel.DELFG = delflg
         Rpamanagementmodel.TASKID = id.Text
 
-        Rpamanagementmodel.CRTCD = Session("user_Name")
+        Rpamanagementmodel.UPDCD = Session("user_Name")
 
         Dim updated As Boolean = Rpamanagementcontrol.update_Rpa(Rpamanagementmodel)
         If (updated = True) Then
@@ -284,7 +326,7 @@ Public Class RPA_Management
             TaskName.Text = ""
             Textfilename.Text = ""
             Testeddate.Text = ""
-            Status.SelectedValue = 0
+            Status.SelectedItem.Value = 0
             Duration.Text = ""
             delfld.Checked = False
 

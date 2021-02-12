@@ -36,7 +36,9 @@
     -ms-overflow-style: none;
     overflow: auto;
 }
-       
+    
+
+     
    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -157,8 +159,8 @@
                   </div>
                          <div class="col-sm-8">
                               <br />
-                      <span class=" fontFamily"><asp:RadioButton type="radio"  value="RadioBtnMM" disabled="disabled"  ID="RadioBtnMM" runat="server" />&nbsp;&nbsp;<label>MM/DD/YYYY</label></span>
-                      <span class="fontFamily">&nbsp;&nbsp;</span>&nbsp;&nbsp; &nbsp;<span class=" fontFamily"><asp:RadioButton ID="RadioBtnDD" runat="server" AutoPostBack="True" type="radio" value="RadioBtnDD" disabled="disabled" />&nbsp;&nbsp;<label>DD/MM/YYYY</label></span>
+                      <span class=" fontFamily"><asp:RadioButton type="radio"  value="RadioBtnMM" AutoPostBack="true"  ID="RadioBtnMM" runat="server" />&nbsp;&nbsp;<label>MM/DD/YYYY</label></span>
+                      <span class="fontFamily">&nbsp;&nbsp;</span>&nbsp;&nbsp; &nbsp;<span class=" fontFamily"><asp:RadioButton ID="RadioBtnDD" runat="server" AutoPostBack="True" type="radio" value="RadioBtnDD"  />&nbsp;&nbsp;<label>DD/MM/YYYY</label></span>
                       
                  </div>
                     </div>
@@ -294,8 +296,8 @@
     </div>
         </div>
        </div>
-    
-    <div id="dialog" title="message" style="display:none;"> >
+   
+    <div id="dialog" title="message" style="display:none;"> 
         <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
     </div>
                       <div style="visibility:hidden">

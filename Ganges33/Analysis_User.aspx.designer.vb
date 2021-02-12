@@ -158,6 +158,15 @@ Partial Public Class Analysis_User
     Protected WithEvents listShipBranch As Global.System.Web.UI.WebControls.ListBox
 
     '''<summary>
+    '''RequiredFieldValidator4 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RequiredFieldValidator4 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
     '''txtBranchCode2 control.
     '''</summary>
     '''<remarks>
@@ -338,13 +347,22 @@ Partial Public Class Analysis_User
     Protected WithEvents txtZipCode As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''txtTelephone control.
+    '''txtTelephone1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtTelephone As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtTelephone1 As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''RequiredFieldValidator13 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RequiredFieldValidator13 As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
     '''txtMobile control.
@@ -392,22 +410,13 @@ Partial Public Class Analysis_User
     Protected WithEvents validateEmail As Global.System.Web.UI.WebControls.RegularExpressionValidator
 
     '''<summary>
-    '''txtTelephone1 control.
+    '''txtTelephone control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtTelephone1 As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''RequiredFieldValidator13 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents RequiredFieldValidator13 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+    Protected WithEvents txtTelephone As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''del control.

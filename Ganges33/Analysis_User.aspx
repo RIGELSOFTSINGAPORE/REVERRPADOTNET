@@ -187,9 +187,9 @@
                     
                          
                           <div class="row">
-                         <div class="form-group col-sm-4">
+                         <div class="form-group col-sm-4"  runat="server" id="lblUsername">
                              
-                             <Label runat="server" id="lblUsername" CssClass="bmd-label-floating">User Name :</Label> <b style="color:red; font-size:large" >*</b>
+                             <Label Class="bmd-label-floating">User Name :</Label> <b style="color:red; font-size:large" >*</b>
                              </div>
                           <div Class="form-group">
                       <%--<asp:DropDownList ID="DropListLocation" runat="server" CssClass="form-control " style="width: 270px; height:33px;">
@@ -246,13 +246,13 @@
                    </div>
                           <div class="row">
                            <div class="form-group col-sm-4 ">
-                          <Label  runat="server"  CssClass="bmd-label-floating">Branch Code1 :</Label>
+                          <Label  runat="server"  CssClass="bmd-label-floating">Branch Code1 :</Label><b style="color:red; font-size:large" >*</b>
                                </div>
                               <div>
                      <asp:TextBox ID="txtBranchCode1" runat="server" TextMode ="MultiLine" CssClass="form-control" style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox><%--<b style="color:red; font-size:large" >*</b>--%>
                        <asp:ListBox ID="listShipBranch"  Width="100px"  class="multiselect-ui form-control" runat="server" SelectionMode="Multiple" multiple="multiple"></asp:ListBox>
-                           <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator4" CssClass="Required" runat="server" ControlToValidate="txtBranchCode1"
-                            ForeColor="Red" ErrorMessage="Branch Code is required"></asp:RequiredFieldValidator> --%>
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator4" CssClass="Required" runat="server" ControlToValidate="txtBranchCode1"
+                            ForeColor="Red" ErrorMessage="Branch Code is required"></asp:RequiredFieldValidator> 
                        
 
                     
@@ -456,12 +456,14 @@
                    </div>
                               <div class="row">
                            <div class="form-group col-sm-4 ">
-                          <Label  runat="server"  CssClass="bmd-label-floating">Telephone No1:</Label>
+                          <Label  runat="server"  CssClass="bmd-label-floating">Telephone No1:</Label><b style="color:red; font-size:large" >*</b>
                                </div>
                               <div>
-                     <asp:TextBox ID="txtTelephone" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
-                       
-
+                       <asp:TextBox ID="txtTelephone1" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
+                                  
+                     
+     <asp:RequiredFieldValidator ID="RequiredFieldValidator13" CssClass="Required" runat="server" ControlToValidate="txtTelephone1"
+                            ForeColor="Red" ErrorMessage="Telephone No is Required"></asp:RequiredFieldValidator> 
                     
                   </div>
                    </div>
@@ -497,14 +499,12 @@
                    </div>
                               <div class="row">
                            <div class="form-group col-sm-4 ">
-                          <Label  runat="server"  CssClass="bmd-label-floating">Telephone No2 :</Label><b style="color:red; font-size:large" >*</b>
+                          <Label  runat="server"  CssClass="bmd-label-floating">Telephone No2 :</Label>
                                </div>
                               <div>
-                     <asp:TextBox ID="txtTelephone1" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
-                                  
-                       
-                           <asp:RequiredFieldValidator ID="RequiredFieldValidator13" CssClass="Required" runat="server" ControlToValidate="txtTelephone1"
-                            ForeColor="Red" ErrorMessage="Telephone No is Required"></asp:RequiredFieldValidator> 
+                      
+                       <asp:TextBox ID="txtTelephone" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
+                     
                        
 
                     

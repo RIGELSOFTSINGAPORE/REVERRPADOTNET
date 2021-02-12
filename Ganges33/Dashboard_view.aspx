@@ -64,51 +64,20 @@
                   <div class="form-group">
             <asp:Label ID="lblInfo" Class="bmd-label-floating" runat="server"></asp:Label>
         </div>
-                   <div class="col-sm-12">
-                       <div class="col-sm-12">
-
-           <%-- <div class="row col-sm-12" style="vertical-align:top">
-                <asp:Button ID="btnUser" runat="server" class="btn btn-primary btn-lbl" Text="Update GSPN Credentials" />
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnUploadPrg" runat="server" class="btn btn-primary btn-lbl" Text="New Task (Python Code)  " />
-             &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnMailManagement" runat="server" class="btn btn-primary btn-lbl" Text="     Mail Management       "  />
-            </div>--%>
-                         <%--  <asp:Chart ID="Chart1" runat="server" Width="1000px" Height="491px">
-                               <Series>
-		<asp:Series Name="Testing" YValueType="Int32" YValuesPerPoint="2">
-
-			<%--<Points>
-				<asp:DataPoint AxisLabel="Test 1" YValues="10,0" />
-				<asp:DataPoint AxisLabel="Test 2" YValues="20,0" />
-
-				<asp:DataPoint AxisLabel="Test 3" YValues="30,0" />
-				<asp:DataPoint AxisLabel="Test 4" YValues="40,0" />
-
-			</Points>--%>
-		<%--</asp:Series>
-	</Series>
-	<ChartAreas>
-		<asp:ChartArea Name="ChartArea1">
-		</asp:ChartArea>
-
-	</ChartAreas>
-                           </asp:Chart>--%>
-                            
-                    <div class="row">
+                     <div class="row">
                   
                                   <div>
                                    
-                 <div class="row  " style="margin-left:300px;margin-bottom:30px;margin-top:30px;background-color:#ab47bc;border-radius:7px">
-                        <div class="form-group col-sm-2 ">
-                                 <br />
-                     <label id="" style="color:white">Month</label>
+                 <div class="row col-sm-12" style="margin-left:300px;margin-bottom:30px;margin-top:30px;border-radius:7px">
+                        <div class="form-group ">
+                               
+                             <asp:Label ID="Label1"  Text="Month" runat="server"  class="bmd-label-floating " style="font-size:medium;font-weight:bold"></asp:Label>
                             </div>
-                            <div class="col-sm-3">
-                                <br />
+                            <div class="col-sm-4">
 
-				  <asp:DropDownList ID="DropDownMonth" runat="server" CssClass="form-control dropdown-toggle" BackColor="#ab47bc" ForeColor="White"  AutoPostBack="false" style="width: 125%; height:33px" >
-                        		     <asp:ListItem Text="Select..." Value="0"></asp:ListItem>
+
+				  <asp:DropDownList ID="DropDownMonth" runat="server" CssClass="form-control dropdown-toggle" AutoPostBack="false" style="width: 100%; height:33px" >
+                        	 <asp:ListItem Text="Select..." Value="0"></asp:ListItem>
                              <asp:ListItem Text="January" Value="01"></asp:ListItem>
                               <asp:ListItem Text="February" Value="02"></asp:ListItem>
                               <asp:ListItem Text="March" Value="03"></asp:ListItem>
@@ -126,11 +95,11 @@
 					 
                         
                           <div class="col-sm-3">
-                                 <br />  
-					<asp:DropDownList ID="DropDownYear" runat="server" CssClass="form-control dropdown-toggle" AutoPostBack="false" BackColor="#ab47bc" ForeColor="White"   style=" height:33px" >
+                                
+					<asp:DropDownList ID="DropDownYear" runat="server" CssClass="form-control dropdown-toggle" AutoPostBack="false"  style=" height:33px" >
                             <asp:ListItem Text="2019" Value="2019"></asp:ListItem>
-                              <asp:ListItem Text="2020" Value="2020" Selected="True"></asp:ListItem>
-                              <asp:ListItem Text="2021" Value="2021"></asp:ListItem>
+                              <asp:ListItem Text="2020" Value="2020" ></asp:ListItem>
+                              <asp:ListItem Text="2021" Value="2021"  Selected="True"></asp:ListItem>
                              <asp:ListItem Text="2022" Value="2022"></asp:ListItem>
                               <asp:ListItem Text="2023" Value="2023"></asp:ListItem>
                                <asp:ListItem Text="2024" Value="2024"></asp:ListItem>
@@ -139,22 +108,15 @@
                       </asp:DropDownList>
 
                         </div>
-					  
-					
-    
-                      
-                 
                      <div class="col-sm-2">
-                          
-
-                         <br />
-<asp:Button ID="btnSend" runat="server" class="btn btn-primary "  text="Search"/>
+                         
+<asp:Button ID="btnSend" runat="server" class="btn btn-primary " text="Search"/>
                          </div>
 </div>
                         
                   </div>
                   </div>
-                      </div>
+        
                  
                    <div class="row">
                               
@@ -258,11 +220,10 @@
                                
                            </div>
 
-                           <div class="col-sm-12">
+                        
 
-                           </div>
-                           <br />
-                           <br />
+                         
+                        
                             <div class="row">
                               
                                   
@@ -362,15 +323,16 @@
                                 </div>
                                
                          </div>
-                                <br />
-                           <br />
+                              
+                           <br /><br />
                             
-                                <div class="row">
-                               
-                                 
-                                    </div>
 
-   </div>
+              
+
+ 
+       <div class="row ">
+                              <div class="col-sm-4">
+                                  
                           
               <div class="col-sm-4" style="display:none">
                             <div class=" bg-white">    
@@ -404,11 +366,8 @@
 
         </asp:Chart>
                      </div>       
-                  </div>               
-
-      <%--testing--%> 
-       <div class="row ">
-                              <div class="col-sm-4"></div>
+                  </div> 
+                              </div>
 
                              <div class="col-sm-4">
                              <div  class=" text-center" >  
@@ -446,280 +405,9 @@
    
                            <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
                            </div>
-          <%--  <div class="col-sm-11"> <div class="GridviewDiv" id="divGspn" runat="server" visible="false">
-                <br />
-<asp:GridView runat="server" ID="gvDetails" AllowPaging="true" PageSize="10" AutoGenerateColumns="false" HeaderStyle-BackColor="#8e24aa" HeaderStyle-ForeColor="White"  Width="420px" OnPageIndexChanging="gvDetails_PageIndexChanging">
-<HeaderStyle BackColor="#8e24aa" />
-<Columns>
- <asp:TemplateField HeaderText="Select">  
-<ItemTemplate>  
- <asp:CheckBox ID="chkChangePwd" runat="server" />  
- </ItemTemplate>  
-</asp:TemplateField>  
-<asp:BoundField DataField="ship_code" HeaderText="ship_code" Visible="false" />
- <asp:TemplateField HeaderText="ship_code"  Visible="false">
-                        <ItemTemplate>
-                            <asp:Label ID="lblShipCode" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "ship_code") %>'></asp:Label>   
-                            <asp:Label ID="lblShipName" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "ship_name") %>'></asp:Label>            
-                        </ItemTemplate>
-                    </asp:TemplateField>
-
-<asp:BoundField DataField="ship_name" HeaderText="Branch" />
-<asp:BoundField DataField="RpaClientUserId" HeaderText="GSPN&nbsp;Username"  />
-<asp:BoundField DataField="RpaClientPwd" HeaderText="Password" />
-
-  <asp:TemplateField HeaderText="New GSPN Usernmae"  Visible="true">
-                        <ItemTemplate>  
-                            <asp:TextBox ID="txtClientUsername" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "RpaClientUserId") %>'></asp:TextBox>            
-                        </ItemTemplate>  
-                    </asp:TemplateField>
-                    <asp:TemplateField HeaderText="New Password" Visible="true">
-                        <ItemTemplate>
-                            <asp:TextBox ID="txtPassword" runat="server" Text=""></asp:TextBox>            
-                        </ItemTemplate>
-                    </asp:TemplateField>
-
-</Columns>
-</asp:GridView><br />
-                <asp:Button id="btnUpDateGspnPwd" runat="server" class="btn btn-primary pull-right" Text="Update GSPN password"/>
-            <br />     
-            </div>
-                <br />
-                <div class="GridviewDiv" id="divMailManagement" runat="server" visible="false">
-                
-                       <asp:GridView ID="gvRPAMail" runat="server" Width="100%" 
-                    AutoGenerateColumns="false" ShowFooter="true"
-                    onrowcommand="gvRPAMail_RowCommand" 
-                     HeaderStyle-BackColor="#8e24aa"
-                           HeaderStyle-ForeColor="White" 
-                    onrowdeleting="gvRPAMail_RowDeleting" 
-                    onrowupdating="gvRPAMail_RowUpdating" 
-                    onrowcancelingedit="gvRPAMail_RowCancelingEdit" 
-                    onrowediting="gvRPAMail_RowEditing">
-                <AlternatingRowStyle BackColor="#F0F0F0" VerticalAlign="Top" />
-                <RowStyle VerticalAlign="Top" />
-                <EditRowStyle VerticalAlign="Top" />
-                <FooterStyle VerticalAlign="Top" />
-                <Columns>            
-                    <asp:TemplateField HeaderText="RPA ID" Visible="false">
-                        <ItemTemplate >
-                            <asp:Label ID="lblEmailId" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "EMAILID") %>'></asp:Label>
-                        </ItemTemplate>
-                        <EditItemTemplate>            
-                            <asp:Label ID="lblEditEmailId" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "EMAILID") %>'></asp:Label>            
-                        </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:TextBox ID="txtAddEmailId" runat="server" ></asp:TextBox>
-                        </FooterTemplate>
-                    </asp:TemplateField>
-
-                    <asp:TemplateField HeaderText="Email Type" >
-                        <ItemTemplate>
-                            <asp:Label ID="lblEmailType" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "EMAIL_TYPE") %>'></asp:Label>
-                        </ItemTemplate>
-                        <EditItemTemplate>            
-                            <asp:TextBox ID="txtEditEmailType" runat="server" Enabled="false"  Text='<%#DataBinder.Eval(Container.DataItem, "EMAIL_TYPE") %>'></asp:TextBox>            
-                        </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:TextBox ID="txtAddEmailType" runat="server" ></asp:TextBox>
-                        </FooterTemplate>
-                    </asp:TemplateField>
-
-                                           <asp:TemplateField HeaderText="Smtp"  >
-                        <ItemTemplate>
-                            <asp:Label ID="lblSmtp" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "SMTP") %>'></asp:Label>
-                        </ItemTemplate>
-                        <EditItemTemplate>            
-                            <asp:TextBox ID="txtEditSmtp" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "SMTP") %>'></asp:TextBox>            
-                        </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:TextBox ID="txtAddSmtp" runat="server" ></asp:TextBox>
-                        </FooterTemplate>
-                    </asp:TemplateField>
-
-                        <asp:TemplateField HeaderText="SMTP_PORT"  Visible="false">
-                        <ItemTemplate>
-                            <asp:Label ID="lblSmtpPort" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "SMTP_PORT") %>'></asp:Label>
-                        </ItemTemplate>
-                        <EditItemTemplate>            
-                            <asp:TextBox ID="txtEditSmtpPort" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "SMTP_PORT") %>'></asp:TextBox>            
-                        </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:TextBox ID="txtAddSmtpPort" runat="server" Text="587" ></asp:TextBox>
-                        </FooterTemplate>
-                    </asp:TemplateField>
- 
-
-                        <asp:TemplateField HeaderText="SMTP_SSL_ENABLE"  Visible="false">
-                        <ItemTemplate>
-                            <asp:Label ID="lblSmtpSslEnable" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "SMTP_SSL_ENABLE") %>'></asp:Label>
-                        </ItemTemplate>
-                        <EditItemTemplate>            
-                            <asp:TextBox ID="txtEditSmtpSslEnable" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "SMTP_SSL_ENABLE") %>'></asp:TextBox>            
-                        </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:TextBox ID="txtAddSmtpSslEnable" runat="server" Text="0" ></asp:TextBox>
-                        </FooterTemplate>
-                    </asp:TemplateField>
-
- 
-                         <asp:TemplateField HeaderText="Smtp Username"  >
-                        <ItemTemplate>
-                            <asp:Label ID="lblSmtpCredentialsUserName" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "SMTP_CREDENTIALS_USER_NAME") %>'></asp:Label>
-                        </ItemTemplate>
-                        <EditItemTemplate>            
-                            <asp:TextBox ID="txtEditSmtpCredentialsUserName" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "SMTP_CREDENTIALS_USER_NAME") %>'></asp:TextBox>            
-                        </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:TextBox ID="txtAddSmtpCredentialsUserName" runat="server" ></asp:TextBox>
-                        </FooterTemplate>
-                    </asp:TemplateField>
-
-                            <asp:TemplateField HeaderText="Smtp Password"  >
-                        <ItemTemplate>
-                            <asp:Label ID="lblSmtpCredentialsUserPassword" Visible="false"  runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "SMTP_CREDENTIALS_USER_PASSWORD") %>'></asp:Label>
-                        </ItemTemplate>
-                        <EditItemTemplate>            
-                            <asp:TextBox ID="txtEditSmtpCredentialsUserPassword" visible="false" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "SMTP_CREDENTIALS_USER_PASSWORD") %>'></asp:TextBox>            
-                        </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:TextBox ID="txtAddSmtpCredentialsUserPassword" runat="server" ></asp:TextBox>
-                        </FooterTemplate>
-                    </asp:TemplateField>
-
-                                               <asp:TemplateField HeaderText="Sender"  >
-                        <ItemTemplate>
-                            <asp:Label ID="lblSender" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "SENDER") %>'></asp:Label>
-                        </ItemTemplate>
-                        <EditItemTemplate>            
-                            <asp:TextBox ID="txtEditSender" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "SENDER") %>'></asp:TextBox>            
-                        </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:TextBox ID="txtAddSender" runat="server" ></asp:TextBox>
-                        </FooterTemplate>
-                    </asp:TemplateField>
-
-                       <asp:TemplateField HeaderText="Email To"  >
-                        <ItemTemplate>
-                            <asp:Label ID="lblEmailTo" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "EMAIL_TO") %>'></asp:Label>
-                        </ItemTemplate>
-                        <EditItemTemplate>            
-                            <asp:TextBox ID="txtEditEmailTo" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "EMAIL_TO") %>'></asp:TextBox>            
-                        </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:TextBox ID="txtAddEmailTo" runat="server" ></asp:TextBox>
-                        </FooterTemplate>
-                    </asp:TemplateField>
-
-                                        <asp:TemplateField HeaderText="Email Cc"  >
-                        <ItemTemplate>
-                            <asp:Label ID="lblEmailCc" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "EMAIL_CC") %>'></asp:Label>
-                        </ItemTemplate>
-                        <EditItemTemplate>            
-                            <asp:TextBox ID="txtEditEmailCc" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "EMAIL_CC") %>'></asp:TextBox>            
-                        </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:TextBox ID="txtAddEmailCc" runat="server" ></asp:TextBox>
-                        </FooterTemplate>
-                    </asp:TemplateField>
-
-
-                     <asp:TemplateField HeaderText="Email Bcc"  >
-                        <ItemTemplate>
-                            <asp:Label ID="lblEmailBcc" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "EMAIL_BCC") %>'></asp:Label>
-                        </ItemTemplate>
-                        <EditItemTemplate>            
-                            <asp:TextBox ID="txtEditEmailBcc" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "EMAIL_BCC") %>'></asp:TextBox>            
-                        </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:TextBox ID="txtAddEmailBcc" runat="server" ></asp:TextBox>
-                        </FooterTemplate>
-                    </asp:TemplateField>
-
-                     <asp:TemplateField HeaderText="Select SSC"  >
-                    <ItemTemplate>
-                         <asp:CheckBoxList ID="chkLstSsc" runat="server" DataSource="<%# SelectSSC() %>"
-                              DataTextField="ship_name"  DataValueField="ship_code"  
-                             RepeatDirection="Horizontal" RepeatColumns="4"  Width="432px">  
-                            </asp:CheckBoxList>   
-                    </ItemTemplate>
-                          <EditItemTemplate>
-                              <asp:CheckBoxList ID="chkLstEditSsc" runat="server" DataSource="<%# SelectSSC() %>"  
-                                   DataTextField="ship_name"  DataValueField="ship_code"
-                                  RepeatDirection="Horizontal" RepeatColumns="4" Width="432px">  
-                            </asp:CheckBoxList>  
-                          </EditItemTemplate>
-                         <FooterTemplate>
-                               <asp:CheckBoxList ID="chkLstAddSsc" runat="server" DataSource="<%# SelectSSC() %>"  
-                                   DataTextField="ship_name"  DataValueField="ship_code"
-                                   RepeatDirection="Horizontal" RepeatColumns="4" Width="432px">  
-                            </asp:CheckBoxList>  
-                          </FooterTemplate>
-                </asp:TemplateField>
-
-                        <asp:TemplateField HeaderText="Source"  Visible="false">
-                        <ItemTemplate>
-                            <asp:Label ID="lblSource" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "SOURCE") %>'></asp:Label>
-                        </ItemTemplate>
-                        <EditItemTemplate>            
-                            <asp:TextBox ID="txtEditSource" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "SOURCE") %>'></asp:TextBox>            
-                        </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:TextBox ID="txtAddSource" runat="server" ></asp:TextBox>
-                        </FooterTemplate>
-                    </asp:TemplateField>
-
-                                          <asp:TemplateField HeaderText="status"  Visible="false">
-                        <ItemTemplate>
-                            <asp:Label ID="lblStatus" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "status") %>'></asp:Label>
-                        </ItemTemplate>
-                        <EditItemTemplate>            
-                            <asp:TextBox ID="txtEditStatus" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "status") %>'></asp:TextBox>            
-                        </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:TextBox ID="txtAddStatus" runat="server" ></asp:TextBox>
-                        </FooterTemplate>
-                    </asp:TemplateField>
-
-                             <asp:TemplateField HeaderText="Status">
-                        <ItemTemplate>
-                            <asp:DropDownList ID="drpStatus" runat="server" Enabled="false" >
-                                 <asp:ListItem Enabled="true" Text="Active" Value="0"></asp:ListItem>
-                                <asp:ListItem Text="Inactive" Value="1"></asp:ListItem>
-                            </asp:DropDownList>
-                        </ItemTemplate>
-                        <EditItemTemplate> 
-                            <asp:DropDownList ID="drpEditStatus" runat="server">
-                                 <asp:ListItem Enabled="true" Text="Active" Value="0"></asp:ListItem>
-                                <asp:ListItem Text="Inactive" Value="1"></asp:ListItem>
-                            </asp:DropDownList>
-                        </EditItemTemplate>
-                        <FooterTemplate>
-                            <asp:DropDownList ID="drpAddStatus" runat="server">
-                             <asp:ListItem Enabled="true" Text="Active" Value="0"></asp:ListItem>
-                                <asp:ListItem Text="Inactive" Value="1"></asp:ListItem>
-                                </asp:DropDownList>
-                        </FooterTemplate>
-                    </asp:TemplateField>
- 
-                    <asp:TemplateField HeaderText="Action">
-                        <ItemTemplate>
-                           <asp:ImageButton ID="imgbtnEdit" runat="server" CommandName="Edit" ImageUrl="~/Image/icon-edit.png" Height="32px" Width="32px" OnClientClick="return confirm('Are you sure you want to edit this email type?');"/>
-                           <asp:ImageButton ID="imgbtnDelete" runat="server" CommandName="Delete" ImageUrl="~/Image/Delete.png"  Height="32px" Width="32px"  OnClientClick="return confirm('Are you sure you want to delete this email type from the email managements?');"/>
-                             
-                        </ItemTemplate>
-                        <EditItemTemplate>
-                           <asp:ImageButton ID="imgbtnUpdate" runat="server" CommandName="Update" ImageUrl="~/Image/icon-update.png"  Height="32px" Width="32px"/>
-                           <asp:ImageButton ID="imgbtnCancel" runat="server" CommandName="Cancel" ImageUrl="~/Image/pause.png"  Height="32px" Width="32px"/>
-                        </EditItemTemplate>
-                        <FooterTemplate>
-                           <asp:LinkButton ID="lbtnAdd" runat="server" CommandName="ADD" Text="Add" Width="100px"></asp:LinkButton> 
-                        </FooterTemplate>
-                    </asp:TemplateField>                    
-                </Columns>            
-                <HeaderStyle BackColor="#8e24aa" />
-            </asp:GridView> 
-          --%>          <br />
+      </div>
+         
+                 <br />
                     
                     </div>
 
@@ -728,10 +416,7 @@
 </div>
 
                   </div>
-              
-        </div>
-        </div>
-       </div>
+    
     
 
      <div id="dialog" title="message" style="display:none;"> >

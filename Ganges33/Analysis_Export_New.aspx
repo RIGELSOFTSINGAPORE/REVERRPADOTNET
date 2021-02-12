@@ -235,16 +235,23 @@
                        <asp:Button ID="btnSearch" runat="server" Text="Search" class="btn btn-primary pull-right" />
                   
                       <asp:Button runat="server" ID="btnExport" class="btn btn-primary pull-right" Visible="false" Text="Export" />
-                      <div class="clearfix"></div>
+                    
+                      <div class="row col-sm-12">
                
-                    <div class="col-sm-12">
-                   
+                    <div class="">
+                   <div class="col-m-12">
+                       <div class="col-sm-12">
                  <b><asp:Label ID ="lblPagesize" CssClass="serverlbl" runat="server">Page Size:</asp:Label></b><asp:TextBox ID="txtPageSize" Class="serverlbl" runat="server" MaxLength="4"  Style="Width: 40px"  AutoPostBack="true" OnTextChanged="txtPageSize_TextChanged"></asp:TextBox>
                          <br />
           <asp:Label ID ="lblErrorMessage" style="color: red;" Class="serverlbl" runat="server">Please enter a valid Page Size Range betwwwn 1 to 9999</asp:Label>
-           <br />
+        
+                           </div>
+                    </div> 
+                        <div class="row col-sm-12">
+                            <div class="col-sm-10">
+                               <br /> 
                       <asp:GridView ID="gvExportReport" runat="server" AutoGenerateColumns="false" AllowPaging="true"
-            AllowSorting="true" OnSorting="OnSorting" OnPageIndexChanging="OnPageIndexChanging"
+            AllowSorting="true" OnSorting="OnSorting" OnPageIndexChanging="OnPageIndexChanging"  EmptyDataText="There was no relevant information"
             PageSize="10"  RowStyle-Wrap="false"  ShowHeaderWhenEmpty="true" HeaderStyle-Wrap="false">
             <%--<Columns>
                 <asp:TemplateField ItemStyle-Width="150px" HeaderText="Customer ID" SortExpression="CustomerID">
@@ -263,33 +270,27 @@
             <HeaderStyle BackColor="#b9b7b8" Font-Bold="True" ForeColor="Black" />
             <RowStyle ForeColor="Black" BackColor="White" />
         </asp:GridView>
-                 
-                
-    <%-- <asp:DropDownList ID="" runat="server" CssClass="form-control droplistlocation" style="Width: 100px;" Visible="false">
-                              <asp:ListItem Text="Select Day..." Value="0"></asp:ListItem>
-                            <asp:ListItem Text="01" Value="01"></asp:ListItem>
-                              <asp:ListItem Text="11" Value="11"></asp:ListItem>
-                              <asp:ListItem Text="21" Value="21"></asp:ListItem>
-               </asp:DropDownList>
-                      <asp:DropDownList ID="" runat="server" CssClass="form-control droplistlocation" Visible="false" >
-                              <asp:ListItem Text="Select..." Value="0"></asp:ListItem>
-                            <asp:ListItem Text="DT1" Value="DT1"></asp:ListItem>
-                              <asp:ListItem Text="DT2" Value="DT2"></asp:ListItem>
-                 </asp:DropDownList>
-                          <asp:DropDownList ID="" runat="server" CssClass="form-control droplistlocation" Visible="false" >
-                            <asp:ListItem Text="Summary" Value="GR"></asp:ListItem>
-                              <asp:ListItem Text="Detail" Value="GD"></asp:ListItem>
-                 </asp:DropDownList>--%>
+                 </div>
+                          
+                </div>
+   
 
+                        <div class="col-sm-12">
+                            
                       <br />
                       <br />
    <asp:Label ID="lblTitle" runat="server" class="serverlbl" Width="700px"   ></asp:Label>
          <asp:Label ID ="lbltotal" class="serverlbl" runat="server"> </asp:Label>
 
-             </b>
+
+             </div>
           <br />
      </div>
-       </div>
+     <div>
+         
+     </div>
+                          </div>
+                          </div>
 
             </div>
             </div>

@@ -231,15 +231,19 @@ Public Class Analysis_Export_New
                 gvExportReport.DataSource = dtScDsrView
                 gvExportReport.DataBind()
                 btnExport.Visible = True
+                lblTitle.Visible = True
+                lbltotal.Visible = True
                 lbltotal.Text = "Total No of Records : " & dtScDsrView.Rows.Count
                 lblTitle.Text = drpTaskExport.SelectedItem.Text
             Else
                 gvExportReport.AllowSorting = False
                 gvExportReport.DataBind()
-                gvExportReport.Visible = False
+                'gvExportReport.Visible = False
                 btnExport.Visible = False
                 txtPageSize.Visible = False
                 lblPagesize.Visible = False
+                lblTitle.Visible = False
+                lbltotal.Visible = False
             End If
         End If
 

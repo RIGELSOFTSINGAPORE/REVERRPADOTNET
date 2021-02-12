@@ -509,9 +509,9 @@
                                         <asp:Label ID="lbltargetdate1" runat="server" Text='<%# Eval("Target_Date") %>'></asp:Label>
                                     </ItemTemplate>
                                     <EditItemTemplate>
-                                        <asp:TextBox ID="txttargetdate1" runat="server" Text='<%# Eval("Target_Date") %>' Width="140" ClientIDMode="AutoID"></asp:TextBox>
-                                        <ajaxToolkit:CalendarExtender ID="CalendarExtendertxttargetdate1" runat="server" BehaviorID="txttargetdate1_CalendarExtender" TargetControlID="txttargetdate1" Format="yyyy/MM/dd"></ajaxToolkit:CalendarExtender>
-                                     
+                                        <asp:TextBox ID="txttargetdate1" runat="server" Text='<%# Eval("Target_Date") %>' Width="140" CssClass="date" ClientIDMode="AutoID"></asp:TextBox>
+                                      <%--  <ajaxToolkit:CalendarExtender ID="CalendarExtendertxttargetdate1" runat="server" BehaviorID="txttargetdate1_CalendarExtender"  style="display:none" TargetControlID="txttargetdate1" Format="yyyy/MM/dd"></ajaxToolkit:CalendarExtender>
+                                     --%>
                                     </EditItemTemplate>
                                 </asp:TemplateField>
                                 <asp:CommandField ButtonType="Link" ShowEditButton="true"
@@ -686,6 +686,17 @@
     </div>
 
        <div class="table-responsive col-sm-12"  runat="server" id="Table5">
+
+           <asp:GridView ID="GridView1" HeaderStyle-BackColor="#9AD6ED" HeaderStyle-ForeColor="#636363"
+    runat="server" AutoGenerateColumns="false" OnDataBound = "OnDataBound">
+    <Columns>
+        <asp:BoundField DataField="CustomerName" HeaderText="Name" ItemStyle-Width="150" />
+        <asp:BoundField DataField="CustomerCountry" HeaderText="Country" ItemStyle-Width="150" />
+        <asp:BoundField DataField="EmployeeName" HeaderText="Name" ItemStyle-Width="150" />
+        <asp:BoundField DataField="EmployeeCountry" HeaderText="Country" ItemStyle-Width="150" />
+    </Columns>
+</asp:GridView>
+
                      
                         <table class="table">
                           <thead class=" text-primary">

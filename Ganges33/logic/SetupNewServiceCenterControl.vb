@@ -47,8 +47,8 @@ Public Class SetupNewServiceCenterControl
         sqlStr = sqlStr & "MESS_2, "
         sqlStr = sqlStr & "MESS_3, "
         sqlStr = sqlStr & "REGI_DEPOSIT, "
-        sqlStr = sqlStr & "PO_NO "
-
+        sqlStr = sqlStr & "PO_NO, "
+        sqlStr = sqlStr & "IsShipCodeChanged "
         sqlStr = sqlStr & " ) "
 
         sqlStr = sqlStr & " values ( "
@@ -81,7 +81,8 @@ Public Class SetupNewServiceCenterControl
         sqlStr = sqlStr & "@MESS_2, "
         sqlStr = sqlStr & "@MESS_3, "
         sqlStr = sqlStr & "@REGI_DEPOSIT, "
-        sqlStr = sqlStr & "@PO_NO "
+        sqlStr = sqlStr & "@PO_NO, "
+        sqlStr = sqlStr & "@IsShipCodeChanged "
 
 
         sqlStr = sqlStr & " )"
@@ -116,6 +117,7 @@ Public Class SetupNewServiceCenterControl
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@MESS_3", queryParams.MESS_3))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@REGI_DEPOSIT", queryParams.REGI_DEPOSIT))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@PO_NO", queryParams.PO_NO))
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@IsShipCodeChanged", 0))
 
         flag = dbConn.ExecSQL(sqlStr)
         dbConn.sqlCmd.Parameters.Clear()

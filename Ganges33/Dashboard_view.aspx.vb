@@ -30,9 +30,9 @@ Public Class Dashboard_view
             End If
             DropDownMonth.SelectedValue = mon1
             getdata()
+        Else
+            getdata()
         End If
-
-
     End Sub
     Protected Sub btnSend_Click(sender As Object, e As EventArgs) Handles btnSend.Click
         getdata()
@@ -167,8 +167,8 @@ Public Class Dashboard_view
                 Chart18.Visible = False
             Else
                 CustomerVisit.Visible = False
-                    CallRegisterd.Visible = False
-                    Repaircompleted.Visible = False
+                CallRegisterd.Visible = False
+                Repaircompleted.Visible = False
                     GoodsDelivered.Visible = False
                     PendingCalls.Visible = False
                     CancelledCalls.Visible = False
@@ -181,10 +181,17 @@ Public Class Dashboard_view
                     Chart4.Visible = False
                     Chart5.Visible = False
                     Chart6.Visible = False
-                    Chart7.Visible = False
-                    Chart18.Visible = False
+                Chart7.Visible = False
+                Chart18.Visible = False
 
-                End If
+                Label1.Visible = False
+                DropDownMonth.Visible = False
+                DropDownYear.Visible = False
+                btnSend.Visible = False
+
+
+
+            End If
 
             Chart1.DataSource = ds1
             Chart2.DataSource = ds1
@@ -203,10 +210,10 @@ Public Class Dashboard_view
     End Sub
 
     Private Sub DropDownMonth_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDownMonth.SelectedIndexChanged
-        getdata()
+        'getdata()
     End Sub
 
     Private Sub DropDownYear_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDownYear.SelectedIndexChanged
-        getdata()
+        ' getdata()
     End Sub
 End Class

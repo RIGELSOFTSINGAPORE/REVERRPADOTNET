@@ -56,6 +56,9 @@ Public Class SetupNewServiceCenter
         btnAddNew.Visible = True
         Edit.Visible = False
         del.Visible = False
+        ShipCode1.Visible = True
+        lblshipcode.Visible = True
+
 
         Header.Text = "Setup New Servicecenter"
         '' Exit Sub
@@ -161,7 +164,7 @@ Public Class SetupNewServiceCenter
         Dim insertCredit As Boolean = SetupNewServiceCentercontrol.SetupNewServiceCenterInsert(SetupNewServiceCenterModel)
         'Dim insertCredit As Boolean = SetupNewServiceCentercontrol.ShowSetupNewServiceCenterGrid(SetupNewServiceCenterModel)
         If (insertCredit = True) Then
-            Call showMsg("Success Created", "")
+            Call showMsg(" Service center successfully created", "")
             clearvalue()
 
             'Exit Sub
@@ -230,7 +233,7 @@ Public Class SetupNewServiceCenter
 
         Dim updated As Boolean = SetupNewServiceCentercontrol.UpdateSetupNewServiceCenterGrid(SetupNewServiceCenterModel)
         If (updated = True) Then
-            Call showMsg("Success updated", "")
+            Call showMsg(" Service center successfully Updated", "")
             clearvalue()
         Else
             Call showMsg("updated failed", "")

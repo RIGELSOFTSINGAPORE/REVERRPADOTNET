@@ -263,7 +263,7 @@ Public Class MUserControl
     End Function
 
 
-    Public Function ShowMUserGrid() As DataTable
+    Public Function ShowMUserGrid(queryParams As MUserModel) As DataTable
 
         Log4NetControl.ComInfoLogWrite(Log4NetControl.UserID)
         Dim DateTimeNow As DateTime = DateTime.Now
@@ -272,10 +272,17 @@ Public Class MUserControl
         Dim dbConn As DBUtility = New DBUtility()
         Dim dt As DataTable = New DataTable()
         Dim flag As Boolean = False
-        Dim sqlStr As String = "SELECT "
-        sqlStr = sqlStr & " MD.DELFG,MD.user_id, MD.password, MD.admin_flg,MD.user_level
-        FROM [dbo].[M_USER_data] as MUD
-        INNER JOIN [dbo].M_USER AS MD ON MUD.user_id=MD.user_id and mud.DELFG=md.DELFG order by  MD.CRTDT desc"
+        Dim sqlStr As String = "SELECT " 
+        sqlStr = sqlStr & " MD.DELFG,MD.user_id, MD.password, MD.admin_flg,MD.user_level "
+         sqlStr = sqlStr & " FROM [dbo].[M_USER_data] as MUD"
+        sqlStr = sqlStr & " INNER JOIN [dbo].M_USER AS MD ON MUD.user_id=MD.user_id and mud.DELFG=md.DELFG "
+          If queryParams.UserId <> "" Then
+            sqlStr = sqlStr & "Where @User_id = MUD.user_id"
+            dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@User_id", queryParams.UserId))
+        End If
+
+        sqlStr = sqlStr & " order by  MD.CRTDT desc "
+
         Dim _DataTable As DataTable = dbConn.GetDataSet(sqlStr)
         dbConn.CloseConnection()
         Return _DataTable

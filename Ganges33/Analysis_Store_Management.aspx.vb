@@ -206,12 +206,12 @@ Public Class Analysis_Store_Management
                 gvDisplayPaymentValue.Visible = True
                 gvDisplayPaymentValue.DataSource = dtDisplayPaymentValue
                 gvDisplayPaymentValue.DataBind()
-                
+
 
                 Dim row As GridViewRow = gvDisplayPaymentValue.Rows(e.NewEditIndex)
                 Dim dd1 As DropDownList = row.FindControl("drpdowntargetssc")
-                Dim calander As AjaxControlToolkit.CalendarExtender = row.FindControl("CalendarExtendertxttargetdate1")
-                calander.EndDate = DateTime.Now.Date
+                Dim calander As TextBox = row.FindControl("txttargetdate1")
+                ' calander.EndDate = DateTime.Now.Date
 
                 dd1.DataSource = Session("codeMasterList")
                 dd1.DataTextField = "CodeDispValue"
@@ -5976,7 +5976,7 @@ Public Class Analysis_Store_Management
         TextBox4.Text = ""
         TextBox5.Text = "0.00"
         TextBox6.Text = "0.00"
-       
+
     End Sub
 
     Protected Sub ImageButton3_Click(sender As Object, e As EventArgs)
@@ -6000,7 +6000,7 @@ Public Class Analysis_Store_Management
         If (InsertGSTIN = True) Then
             Call showMsg("Data updated successfully in " & DropDownList2.SelectedItem.Text, "")
         End If
-
+        LoadDB1()
         TextBox7.Text = ""
         TextBox1.Text = "0.00"
         DropDownList2.Text = "Select"
@@ -6068,7 +6068,7 @@ Public Class Analysis_Store_Management
             Table7.Visible = False
         End If
 
-
+        'viewdata()
 
         Dim DtFrom As String = ""
         Dim DtTo As String = ""
@@ -6623,9 +6623,9 @@ Public Class Analysis_Store_Management
                     'Exit Sub
                 Else
                     tblSingle.Visible = True
-                    If _DataTable.Rows(0)("Branch_name") = "SSC1" Then
+                    ' If _DataTable.Rows(0)("Branch_name") = "SSC1" Then
 
-                        lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
+                    lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
 
                         If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
                             lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
@@ -6644,195 +6644,195 @@ Public Class Analysis_Store_Management
                             lblTotalSingle.Text = 0
                         End If
 
-                    ElseIf _DataTable.Rows(0)("Branch_name") = "SSC2" Then
-                        lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
-                        If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
-                            lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
-                        Else
-                            lblSSCSIW.Text = 0
-                        End If
+                    'ElseIf _DataTable.Rows(0)("Branch_name") = "SSC2" Then
+                    '    lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
+                    '    If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
+                    '        lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
+                    '    Else
+                    '        lblSSCSIW.Text = 0
+                    '    End If
 
-                        If _DataTable.Rows(0)("OW_goods_total").ToString().Length > 0 Then
-                            lblSSCSOW.Text = _DataTable.Rows(0)("OW_goods_total")
-                        Else
-                            lblSSCSOW.Text = 0
-                        End If
-                        If _DataTable.Rows(0)("TotalGoods").ToString().Length > 0 Then
-                            lblTotalSingle.Text = _DataTable.Rows(0)("TotalGoods")
-                        Else
-                            lblTotalSingle.Text = 0
-                        End If
+                    '    If _DataTable.Rows(0)("OW_goods_total").ToString().Length > 0 Then
+                    '        lblSSCSOW.Text = _DataTable.Rows(0)("OW_goods_total")
+                    '    Else
+                    '        lblSSCSOW.Text = 0
+                    '    End If
+                    '    If _DataTable.Rows(0)("TotalGoods").ToString().Length > 0 Then
+                    '        lblTotalSingle.Text = _DataTable.Rows(0)("TotalGoods")
+                    '    Else
+                    '        lblTotalSingle.Text = 0
+                    '    End If
 
-                    ElseIf _DataTable.Rows(0)("Branch_name") = "SSC3" Then
-                        lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
-                        If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
-                            lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
-                        Else
-                            lblSSCSIW.Text = 0
-                        End If
+                    'ElseIf _DataTable.Rows(0)("Branch_name") = "SSC3" Then
+                    '    lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
+                    '    If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
+                    '        lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
+                    '    Else
+                    '        lblSSCSIW.Text = 0
+                    '    End If
 
-                        If _DataTable.Rows(0)("OW_goods_total").ToString().Length > 0 Then
-                            lblSSCSOW.Text = _DataTable.Rows(0)("OW_goods_total")
-                        Else
-                            lblSSCSOW.Text = 0
-                        End If
-                        If _DataTable.Rows(0)("TotalGoods").ToString().Length > 0 Then
-                            lblTotalSingle.Text = _DataTable.Rows(0)("TotalGoods")
-                        Else
-                            lblTotalSingle.Text = 0
-                        End If
+                    '    If _DataTable.Rows(0)("OW_goods_total").ToString().Length > 0 Then
+                    '        lblSSCSOW.Text = _DataTable.Rows(0)("OW_goods_total")
+                    '    Else
+                    '        lblSSCSOW.Text = 0
+                    '    End If
+                    '    If _DataTable.Rows(0)("TotalGoods").ToString().Length > 0 Then
+                    '        lblTotalSingle.Text = _DataTable.Rows(0)("TotalGoods")
+                    '    Else
+                    '        lblTotalSingle.Text = 0
+                    '    End If
 
 
-                    ElseIf _DataTable.Rows(0)("Branch_name") = "SSC4" Then
-                        lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
-                        If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
-                            lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
-                        Else
-                            lblSSCSIW.Text = 0
-                        End If
+                    'ElseIf _DataTable.Rows(0)("Branch_name") = "SSC4" Then
+                    '    lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
+                    '    If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
+                    '        lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
+                    '    Else
+                    '        lblSSCSIW.Text = 0
+                    '    End If
 
-                        If _DataTable.Rows(0)("OW_goods_total").ToString().Length > 0 Then
-                            lblSSCSOW.Text = _DataTable.Rows(0)("OW_goods_total")
-                        Else
-                            lblSSCSOW.Text = 0
-                        End If
-                        If _DataTable.Rows(0)("TotalGoods").ToString().Length > 0 Then
-                            lblTotalSingle.Text = _DataTable.Rows(0)("TotalGoods")
-                        Else
-                            lblTotalSingle.Text = 0
-                        End If
+                    '    If _DataTable.Rows(0)("OW_goods_total").ToString().Length > 0 Then
+                    '        lblSSCSOW.Text = _DataTable.Rows(0)("OW_goods_total")
+                    '    Else
+                    '        lblSSCSOW.Text = 0
+                    '    End If
+                    '    If _DataTable.Rows(0)("TotalGoods").ToString().Length > 0 Then
+                    '        lblTotalSingle.Text = _DataTable.Rows(0)("TotalGoods")
+                    '    Else
+                    '        lblTotalSingle.Text = 0
+                    '    End If
 
-                    ElseIf _DataTable.Rows(0)("Branch_name") = "SSC5" Then
-                        lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
-                        If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
-                            lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
-                        Else
-                            lblSSCSIW.Text = 0
-                        End If
+                    'ElseIf _DataTable.Rows(0)("Branch_name") = "SSC5" Then
+                    '    lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
+                    '    If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
+                    '        lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
+                    '    Else
+                    '        lblSSCSIW.Text = 0
+                    '    End If
 
-                        If _DataTable.Rows(0)("OW_goods_total").ToString().Length > 0 Then
-                            lblSSCSOW.Text = _DataTable.Rows(0)("OW_goods_total")
-                        Else
-                            lblSSCSOW.Text = 0
-                        End If
-                        If _DataTable.Rows(0)("TotalGoods").ToString().Length > 0 Then
-                            lblTotalSingle.Text = _DataTable.Rows(0)("TotalGoods")
-                        Else
-                            lblTotalSingle.Text = 0
-                        End If
+                    '    If _DataTable.Rows(0)("OW_goods_total").ToString().Length > 0 Then
+                    '        lblSSCSOW.Text = _DataTable.Rows(0)("OW_goods_total")
+                    '    Else
+                    '        lblSSCSOW.Text = 0
+                    '    End If
+                    '    If _DataTable.Rows(0)("TotalGoods").ToString().Length > 0 Then
+                    '        lblTotalSingle.Text = _DataTable.Rows(0)("TotalGoods")
+                    '    Else
+                    '        lblTotalSingle.Text = 0
+                    '    End If
 
-                    ElseIf _DataTable.Rows(0)("Branch_name") = "SSC6" Then
-                        lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
-                        If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
-                            lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
-                        Else
-                            lblSSCSIW.Text = 0
-                        End If
+                    'ElseIf _DataTable.Rows(0)("Branch_name") = "SSC6" Then
+                    '    lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
+                    '    If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
+                    '        lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
+                    '    Else
+                    '        lblSSCSIW.Text = 0
+                    '    End If
 
-                        If _DataTable.Rows(0)("OW_goods_total").ToString().Length > 0 Then
-                            lblSSCSOW.Text = _DataTable.Rows(0)("OW_goods_total")
-                        Else
-                            lblSSCSOW.Text = 0
-                        End If
-                        If _DataTable.Rows(0)("TotalGoods").ToString().Length > 0 Then
-                            lblTotalSingle.Text = _DataTable.Rows(0)("TotalGoods")
-                        Else
-                            lblTotalSingle.Text = 0
-                        End If
+                    '    If _DataTable.Rows(0)("OW_goods_total").ToString().Length > 0 Then
+                    '        lblSSCSOW.Text = _DataTable.Rows(0)("OW_goods_total")
+                    '    Else
+                    '        lblSSCSOW.Text = 0
+                    '    End If
+                    '    If _DataTable.Rows(0)("TotalGoods").ToString().Length > 0 Then
+                    '        lblTotalSingle.Text = _DataTable.Rows(0)("TotalGoods")
+                    '    Else
+                    '        lblTotalSingle.Text = 0
+                    '    End If
 
-                    ElseIf _DataTable.Rows(0)("Branch_name") = "SSC7" Then
-                        lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
-                        If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
-                            lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
-                        Else
-                            lblSSCSIW.Text = 0
-                        End If
+                    'ElseIf _DataTable.Rows(0)("Branch_name") = "SSC7" Then
+                    '    lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
+                    '    If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
+                    '        lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
+                    '    Else
+                    '        lblSSCSIW.Text = 0
+                    '    End If
 
-                        If _DataTable.Rows(0)("OW_goods_total").ToString().Length > 0 Then
-                            lblSSCSOW.Text = _DataTable.Rows(0)("OW_goods_total")
-                        Else
-                            lblSSCSOW.Text = 0
-                        End If
-                        If _DataTable.Rows(0)("TotalGoods").ToString().Length > 0 Then
-                            lblTotalSingle.Text = _DataTable.Rows(0)("TotalGoods")
-                        Else
-                            lblTotalSingle.Text = 0
-                        End If
+                    '    If _DataTable.Rows(0)("OW_goods_total").ToString().Length > 0 Then
+                    '        lblSSCSOW.Text = _DataTable.Rows(0)("OW_goods_total")
+                    '    Else
+                    '        lblSSCSOW.Text = 0
+                    '    End If
+                    '    If _DataTable.Rows(0)("TotalGoods").ToString().Length > 0 Then
+                    '        lblTotalSingle.Text = _DataTable.Rows(0)("TotalGoods")
+                    '    Else
+                    '        lblTotalSingle.Text = 0
+                    '    End If
 
-                    ElseIf _DataTable.Rows(0)("Branch_name") = "SSC8" Then
-                        lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
-                        If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
-                            lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
-                        Else
-                            lblSSCSIW.Text = 0
-                        End If
+                    'ElseIf _DataTable.Rows(0)("Branch_name") = "SSC8" Then
+                    '    lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
+                    '    If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
+                    '        lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
+                    '    Else
+                    '        lblSSCSIW.Text = 0
+                    '    End If
 
-                        If _DataTable.Rows(0)("OW_goods_total").ToString().Length > 0 Then
-                            lblSSCSOW.Text = _DataTable.Rows(0)("OW_goods_total")
-                        Else
-                            lblSSCSOW.Text = 0
-                        End If
-                        If _DataTable.Rows(0)("TotalGoods").ToString().Length > 0 Then
-                            lblTotalSingle.Text = _DataTable.Rows(0)("TotalGoods")
-                        Else
-                            lblTotalSingle.Text = 0
-                        End If
-                    ElseIf _DataTable.Rows(0)("Branch_name") = "SSC9" Then
-                        lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
-                        If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
-                            lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
-                        Else
-                            lblSSCSIW.Text = 0
-                        End If
+                    '    If _DataTable.Rows(0)("OW_goods_total").ToString().Length > 0 Then
+                    '        lblSSCSOW.Text = _DataTable.Rows(0)("OW_goods_total")
+                    '    Else
+                    '        lblSSCSOW.Text = 0
+                    '    End If
+                    '    If _DataTable.Rows(0)("TotalGoods").ToString().Length > 0 Then
+                    '        lblTotalSingle.Text = _DataTable.Rows(0)("TotalGoods")
+                    '    Else
+                    '        lblTotalSingle.Text = 0
+                    '    End If
+                    'ElseIf _DataTable.Rows(0)("Branch_name") = "SSC9" Then
+                    '    lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
+                    '    If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
+                    '        lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
+                    '    Else
+                    '        lblSSCSIW.Text = 0
+                    '    End If
 
-                        If _DataTable.Rows(0)("OW_goods_total").ToString().Length > 0 Then
-                            lblSSCSOW.Text = _DataTable.Rows(0)("OW_goods_total")
-                        Else
-                            lblSSCSOW.Text = 0
-                        End If
-                        If _DataTable.Rows(0)("TotalGoods").ToString().Length > 0 Then
-                            lblTotalSingle.Text = _DataTable.Rows(0)("TotalGoods")
-                        Else
-                            lblTotalSingle.Text = 0
-                        End If
-                        'SSC10
-                    ElseIf _DataTable.Rows(0)("Branch_name") = "SSC10" Then
-                        lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
-                        If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
-                            lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
-                        Else
-                            lblSSCSIW.Text = 0
-                        End If
+                    '    If _DataTable.Rows(0)("OW_goods_total").ToString().Length > 0 Then
+                    '        lblSSCSOW.Text = _DataTable.Rows(0)("OW_goods_total")
+                    '    Else
+                    '        lblSSCSOW.Text = 0
+                    '    End If
+                    '    If _DataTable.Rows(0)("TotalGoods").ToString().Length > 0 Then
+                    '        lblTotalSingle.Text = _DataTable.Rows(0)("TotalGoods")
+                    '    Else
+                    '        lblTotalSingle.Text = 0
+                    '    End If
+                    '    'SSC10
+                    'ElseIf _DataTable.Rows(0)("Branch_name") = "SSC10" Then
+                    '    lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
+                    '    If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
+                    '        lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
+                    '    Else
+                    '        lblSSCSIW.Text = 0
+                    '    End If
 
-                        If _DataTable.Rows(0)("OW_goods_total").ToString().Length > 0 Then
-                            lblSSCSOW.Text = _DataTable.Rows(0)("OW_goods_total")
-                        Else
-                            lblSSCSOW.Text = 0
-                        End If
-                        If _DataTable.Rows(0)("TotalGoods").ToString().Length > 0 Then
-                            lblTotalSingle.Text = _DataTable.Rows(0)("TotalGoods")
-                        Else
-                            lblTotalSingle.Text = 0
-                        End If
-                    ElseIf _DataTable.Rows(0)("Branch_name") = "SSC11" Then
-                        lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
-                        If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
-                            lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
-                        Else
-                            lblSSCSIW.Text = 0
-                        End If
+                    '    If _DataTable.Rows(0)("OW_goods_total").ToString().Length > 0 Then
+                    '        lblSSCSOW.Text = _DataTable.Rows(0)("OW_goods_total")
+                    '    Else
+                    '        lblSSCSOW.Text = 0
+                    '    End If
+                    '    If _DataTable.Rows(0)("TotalGoods").ToString().Length > 0 Then
+                    '        lblTotalSingle.Text = _DataTable.Rows(0)("TotalGoods")
+                    '    Else
+                    '        lblTotalSingle.Text = 0
+                    '    End If
+                    'ElseIf _DataTable.Rows(0)("Branch_name") = "SSC11" Then
+                    '    lblBranchname.Text = _DataTable.Rows(0)("Branch_name")
+                    '    If _DataTable.Rows(0)("IW_goods_total").ToString().Length > 0 Then
+                    '        lblSSCSIW.Text = _DataTable.Rows(0)("IW_goods_total")
+                    '    Else
+                    '        lblSSCSIW.Text = 0
+                    '    End If
 
-                        If _DataTable.Rows(0)("OW_goods_total").ToString().Length > 0 Then
-                            lblSSCSOW.Text = _DataTable.Rows(0)("OW_goods_total")
-                        Else
-                            lblSSCSOW.Text = 0
-                        End If
-                        If _DataTable.Rows(0)("TotalGoods").ToString().Length > 0 Then
-                            lblTotalSingle.Text = _DataTable.Rows(0)("TotalGoods")
-                        Else
-                            lblTotalSingle.Text = 0
-                        End If
-                    End If
+                    '    If _DataTable.Rows(0)("OW_goods_total").ToString().Length > 0 Then
+                    '        lblSSCSOW.Text = _DataTable.Rows(0)("OW_goods_total")
+                    '    Else
+                    '        lblSSCSOW.Text = 0
+                    '    End If
+                    '    If _DataTable.Rows(0)("TotalGoods").ToString().Length > 0 Then
+                    '        lblTotalSingle.Text = _DataTable.Rows(0)("TotalGoods")
+                    '    Else
+                    '        lblTotalSingle.Text = 0
+                    '    End If
+                    'End If
                     Table3.Visible = True
                     Table5.Visible = False
                     'tblSingle.Visible = False
@@ -7488,4 +7488,87 @@ Public Class Analysis_Store_Management
 
 
     End Sub
+    Protected Sub OnDataBound(sender As Object, e As EventArgs)
+        viewdata()
+    End Sub
+    Public Sub viewdata()
+        Dim Sc_Drs_Model As ScDsrModel = New ScDsrModel()
+        Dim Sc_Drs_Control As ScDsrControl = New ScDsrControl()
+
+        Dim DtFrom As String = ""
+        Dim DtTo As String = ""
+        DtFrom = Trim(TextFromDate.Text)
+        DtTo = Trim(TextToDate.Text)
+
+
+        ' Task = 1 'Assign From or To or both filter
+        If Len(Trim(DtFrom)) > 7 And Len(Trim(DtTo)) > 7 Then
+            Dim date1, date2 As Date
+            date1 = Date.Parse(TextFromDate.Text)
+            date2 = Date.Parse(TextToDate.Text)
+            If (DateTime.Compare(date1, date2) > 0) Then ' which means ("date1 > date2") 
+                Call showMsg("Please verify from date and to date", "")
+                Exit Sub
+            End If
+        End If
+
+
+
+        If Len(DtFrom) > 5 And DtTo = "" Then
+            DtTo = DtFrom
+        End If
+        If DtFrom = "" And Len(DtTo) > 5 Then
+            DtFrom = DtTo
+        End If
+
+
+        Dim dtTbl1, dtTbl2 As DateTime
+        If (Trim(DtFrom) <> "") Then
+            If DateTime.TryParse(DtFrom, dtTbl1) Then
+                dtTbl1 = DateTime.Parse(Trim(DtFrom)).ToShortDateString
+            Else
+                Call showMsg("There is an error in the date specification", "")
+                Exit Sub
+            End If
+        End If
+        If (Trim(DtTo) <> "") Then
+            If DateTime.TryParse(DtTo, dtTbl2) Then
+                dtTbl2 = DateTime.Parse(Trim(DtTo)).ToShortDateString
+            Else
+                Call showMsg("There is an error in the date specification", "")
+                Exit Sub
+            End If
+        End If
+        'End If
+
+
+
+        Sc_Drs_Model.BranchName = DropdownList3.SelectedItem.Text
+            Sc_Drs_Model.DateFrom = TextFromDate.Text
+            Sc_Drs_Model.DateTo = TextToDate.Text
+
+            Dim AllBranches As String
+        For i As Integer = 1 To DropdownList3.Items.Count - 1
+            AllBranches = AllBranches + "'" + DropdownList3.Items(i).Text + "',"
+        Next
+        AllBranches = Left(AllBranches, Len(AllBranches) - 1)
+        Sc_Drs_Model.BranchName = AllBranches
+        Dim _DataTable As DataTable = Sc_Drs_Control.StoreManagement_drsCounts(Sc_Drs_Model)
+        Dim dtScDsrRevWoTaxView As DataTable = Sc_Drs_Control.StoreManagement_RevWoTax(Sc_Drs_Model)
+
+        Dim row As New GridViewRow(0, 0, DataControlRowType.Header, DataControlRowState.Normal)
+        Dim cell As New TableHeaderCell()
+        cell.Text = "Customers"
+        cell.ColumnSpan = 2
+        row.Controls.Add(cell)
+
+        cell = New TableHeaderCell()
+        cell.ColumnSpan = 2
+        cell.Text = "Employees"
+        row.Controls.Add(cell)
+
+
+        GridView1.HeaderRow.Parent.Controls.AddAt(0, row)
+    End Sub
+
 End Class

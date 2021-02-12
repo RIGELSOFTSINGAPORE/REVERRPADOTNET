@@ -170,16 +170,16 @@
                             <asp:Label ID="lblSTART_DATETIME" runat="server"  Text='<%#DataBinder.Eval(Container.DataItem, "START_DATETIME") %>'></asp:Label>
                         </ItemTemplate>
                         <EditItemTemplate>            
-                            <asp:TextBox ID="txtEditSTART_DATETIME"  runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "START_DATETIME") %>'></asp:TextBox>  
-                            <ajaxToolkit:CalendarExtender ID="CalendarExtender1" Format="yyyy/MM/dd" runat="server" BehaviorID="txtEditSTART_DATETIME" TargetControlID="txtEditSTART_DATETIME" PopupPosition="Left">
-                      </ajaxToolkit:CalendarExtender>
-                    </ajax:CalendarExtender>
+                            <asp:TextBox ID="txtEditSTART_DATETIME" CssClass="date"  runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "START_DATETIME") %>'></asp:TextBox>  
+                           <%-- <ajaxToolkit:CalendarExtender ID="CalendarExtender1" Format="yyyy/MM/dd" runat="server" BehaviorID="txtEditSTART_DATETIME" TargetControlID="txtEditSTART_DATETIME" PopupPosition="Left">
+                      </ajaxToolkit:CalendarExtender>--%>
+                <%--    </ajax:CalendarExtender>--%>
                         </EditItemTemplate>
                         <FooterTemplate>
-                            <asp:TextBox ID="txtAddSTART_DATETIME"   runat="server" ></asp:TextBox>
-                            <ajaxToolkit:CalendarExtender ID="CalendarExtender2" Format="yyyy/MM/dd" runat="server" BehaviorID="txtAddSTART_DATETIME" TargetControlID="txtAddSTART_DATETIME" PopupPosition="Left">
-                      </ajaxToolkit:CalendarExtender>
-                    </ajax:CalendarExtender>
+                            <asp:TextBox ID="txtAddSTART_DATETIME"   CssClass="date"  runat="server" ></asp:TextBox>
+                           <%-- <ajaxToolkit:CalendarExtender ID="CalendarExtender2" Format="yyyy/MM/dd" runat="server" BehaviorID="txtAddSTART_DATETIME" TargetControlID="txtAddSTART_DATETIME" PopupPosition="Left">
+                      </ajaxToolkit:CalendarExtender>--%>
+                    <%--</ajax:CalendarExtender>--%>
                         </FooterTemplate>
                     </asp:TemplateField>
 
@@ -190,16 +190,16 @@
                             <asp:Label ID="lblEND_DATETIME" runat="server"  Text='<%#DataBinder.Eval(Container.DataItem, "END_DATETIME") %>'></asp:Label>
                         </ItemTemplate>
                         <EditItemTemplate>            
-                            <asp:TextBox ID="txtEditEND_DATETIME"  runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "END_DATETIME") %>'></asp:TextBox>  
-                            <ajaxToolkit:CalendarExtender ID="CalendarExtender3" Format="yyyy/MM/dd" runat="server" BehaviorID="txtEditEND_DATETIME" TargetControlID="txtEditEND_DATETIME" PopupPosition="Left">
+                            <asp:TextBox ID="txtEditEND_DATETIME" class="date" runat="server" Text='<%#DataBinder.Eval(Container.DataItem, "END_DATETIME") %>'></asp:TextBox>  
+                       <%--     <ajaxToolkit:CalendarExtender ID="CalendarExtender3" Format="yyyy/MM/dd" runat="server" BehaviorID="txtEditEND_DATETIME" TargetControlID="txtEditEND_DATETIME" PopupPosition="Left">
                       </ajaxToolkit:CalendarExtender>
-                    </ajax:CalendarExtender>
+                    </ajax:CalendarExtender>--%>
                         </EditItemTemplate>
                         <FooterTemplate>
-                            <asp:TextBox ID="txtAddEND_DATETIME"   runat="server" ></asp:TextBox>
-                            <ajaxToolkit:CalendarExtender ID="CalendarExtender4" Format="yyyy/MM/dd" runat="server" BehaviorID="txtAddEND_DATETIME" TargetControlID="txtAddEND_DATETIME" PopupPosition="Left">
+                            <asp:TextBox ID="txtAddEND_DATETIME"  CssClass="date"  runat="server" ></asp:TextBox>
+                           <%-- <ajaxToolkit:CalendarExtender ID="CalendarExtender4" Format="yyyy/MM/dd" runat="server" BehaviorID="txtAddEND_DATETIME" TargetControlID="txtAddEND_DATETIME" PopupPosition="Left">
                       </ajaxToolkit:CalendarExtender>
-                    </ajax:CalendarExtender>
+                    </ajax:CalendarExtender>--%>
                         </FooterTemplate>
                     </asp:TemplateField>
 

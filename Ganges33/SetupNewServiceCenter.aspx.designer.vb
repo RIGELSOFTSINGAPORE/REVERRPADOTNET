@@ -104,6 +104,15 @@ Partial Public Class SetupNewServiceCenter
     Protected WithEvents STel As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
+    '''RegularExpressionValidator1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RegularExpressionValidator1 As Global.System.Web.UI.WebControls.RegularExpressionValidator
+
+    '''<summary>
     '''ShipAdd1 control.
     '''</summary>
     '''<remarks>
@@ -165,6 +174,15 @@ Partial Public Class SetupNewServiceCenter
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents mail As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
+    '''validateEmail control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents validateEmail As Global.System.Web.UI.WebControls.RegularExpressionValidator
 
     '''<summary>
     '''ShipService control.
@@ -264,6 +282,15 @@ Partial Public Class SetupNewServiceCenter
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents SCode As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
+    '''RegularExpressionValidator2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RegularExpressionValidator2 As Global.System.Web.UI.WebControls.RegularExpressionValidator
 
     '''<summary>
     '''ShipMark control.

@@ -134,7 +134,7 @@
                               <asp:ListItem Text="GD" Value="GD"></asp:ListItem>
                  </asp:DropDownList>
                               <br />
-                               <asp:DropDownList ID="DropDownDTSub" runat="server" CssClass="form-control dropdown-toggle"  style="width:120%; height:33px;" Visible="false" >
+                               <asp:DropDownList ID="DropDownDTSub" runat="server" CssClass="form-control dropdown-toggle"  style="width:85px; height:33px;" Visible="false" >
                               <asp:ListItem Text="Select..." Value="0"></asp:ListItem>
                             <asp:ListItem Text="DT1" Value="DT1"></asp:ListItem>
                               <asp:ListItem Text="DT2" Value="DT2"></asp:ListItem>

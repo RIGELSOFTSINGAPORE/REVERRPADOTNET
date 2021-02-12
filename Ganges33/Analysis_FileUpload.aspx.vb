@@ -5080,15 +5080,14 @@ Public Class Analysis_FileUpload
         End If
 
     End Sub
-
     Private Sub RadioBtnMM_CheckedChanged(sender As Object, e As EventArgs) Handles RadioBtnMM.CheckedChanged
 
         If RadioBtnMM.Checked = True Then
             RadioBtnDD.Checked = False
             FileUploadAnalysis.Enabled = True
         End If
-
     End Sub
+
 
     '''''Private Sub DropListUploadFile_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropListUploadFile.SelectedIndexChanged
     '''''    Dim selectIndex As Integer = DropListUploadFile.SelectedIndex
@@ -5209,6 +5208,7 @@ Public Class Analysis_FileUpload
         Me.DropListLocation.DataValueField = "CodeValue"
         Me.DropListLocation.DataBind()
     End Sub
+
 
 
 

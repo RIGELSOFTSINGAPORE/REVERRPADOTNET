@@ -107,88 +107,98 @@
                     </div>
                 </div>
             </div>
-                       <div id="tblPartsCompare" runat="server" visible="false">
+                       <div id="tblPartsCompare" class="col-sm-12" runat="server" visible="false">
                        <div class="col-sm-12 row">
                           
-			<div >Result</div>
-			<div><asp:Label ID="lblResultMont" runat="server"></asp:Label></div>
-			<div>Last Updated User:</div>
-			<div><asp:Label ID="lblLastUpdatedUser" runat="server"></asp:Label></div>
-				<div>Last update date</div>
-			<div><asp:Label ID="lblUpdatedDate" runat="server"></asp:Label></div>
+			<div class="serverlbl font-weight-bold col-sm-1">Result :</div>
+
+			<div class=" "><asp:Label ID="lblResultMont"  class="serverlbl " runat="server"></asp:Label></div>
+
+			<div class="serverlbl font-weight-bold col-sm-2">Last Updated User:</div>
+
+			<div class=" "><asp:Label ID="lblLastUpdatedUser"  class="serverlbl " runat="server"></asp:Label></div>
+
+				<div class="serverlbl font-weight-bold col-sm-2">Last update date :</div>
+
+			<div ><asp:Label ID="lblUpdatedDate" class="serverlbl " runat="server"></asp:Label></div>
 				                          
           </div>
-                       <div class="row">
+                           <div class="col-sm-12">
+                       <div class="row ">
+                          
                          
-			<div>Total count record</div>
+			<div class="col-sm-2"> <br />
+                           <br /> <label class="serverlbl font-weight-bold" >Total count record</label></div>
 			
-			<div><asp:Label ID="lblTotalRecords" runat="server"></asp:Label></div>
+			<div> <br />
+                           <br /><asp:Label ID="lblTotalRecords" class="serverlbl" runat="server"></asp:Label></div>
 			
                        </div>
                        <div class="row">
                            
-			<div>Total count parts</div>
+			<div class="col-sm-2"><label class="serverlbl font-weight-bold" > Total count parts</label></div>
 			
-			<div  ><asp:Label ID="lblTotalCountParts" runat="server"></asp:Label></div>
+			<div  ><asp:Label ID="lblTotalCountParts" class="serverlbl"  runat="server"></asp:Label></div>
 				
                        </div>
 
                         <div class="row">
                             	
-			<div>Stockoverview number(GSPN)</div>
+			<div class="col-sm-2"><label class="serverlbl font-weight-bold">Stockoverview number(GSPN)</label> </div>
 			
-			<div><asp:Label ID="lblStockOverView" runat="server"></asp:Label></div>
+			<div><asp:Label ID="lblStockOverView" class="serverlbl" runat="server"></asp:Label></div>
 					
 		 	
                             </div>
 
-                        <div class="row">
+                        <div class="row ">
 
                             
-			<div>Match parts record</div>
+			<div class="col-sm-2"> <label class="serverlbl font-weight-bold" style="font-weight:bold">Match parts record</label> </div>
 			
-			<div><asp:Label ID="lblMatchPartsRecord" runat="server"></asp:Label></div>
+			<div><asp:Label ID="lblMatchPartsRecord" class="serverlbl"   runat="server"></asp:Label></div>
 					
                             </div>
                        <div class="row">
                          
-			<div>Unmatch parts record</div>
+			<div class="col-sm-2"><label class="serverlbl font-weight-bold" >Unmatch parts record</label> </div>
 			
-			<div><asp:Label ID="lblUnmatchPartsRecord" runat="server"></asp:Label></div>
+			<div><asp:Label ID="lblUnmatchPartsRecord" class="serverlbl"  runat="server"></asp:Label></div>
 						
                        </div>
                        <div class="row">
                              
-			<div> Different record +</div>
+			<div class="col-sm-2"><label class="serverlbl font-weight-bold" >Different record +</label> </div>
 			
-			<div><asp:Label ID="lblPositiveRecord" runat="server"></asp:Label></div>
+			<div><asp:Label ID="lblPositiveRecord" class="serverlbl" runat="server"></asp:Label></div>
 					
                        </div>
                        <div class="row">
                           
-			<div>Different number + </div>
+			<div class="col-sm-2"><label class="serverlbl font-weight-bold"> Different number +</label>  </div>
 			
 			
-			<div><asp:Label ID="lblPositiveRecordSum" runat="server"></asp:Label></div>
+			<div><asp:Label ID="lblPositiveRecordSum"  CssClass="serverlbl" runat="server"></asp:Label></div>
 			
                        </div>
                        <div class="row">
                           
-			<div>Different record- </div>
+			<div class="col-sm-2"><label class=" font-weight-bold serverlbl" >Different record- </label>  </div>
 			
-			<div ><asp:Label ID="lblNegativeRecord" runat="server"></asp:Label></div>
+			<div ><asp:Label ID="lblNegativeRecord" CssClass="serverlbl" runat="server"></asp:Label></div>
 				
                        </div>
                        <div class="row">
                            	
-			<div>Different number - </div>
+			<div class="col-sm-2"><label class="serverlbl font-weight-bold"> Different number -</label>  </div>
 			
 			
-			<div><asp:Label ID="lblNegativeRecordSum" runat="server"></asp:Label></div>
+			<div><asp:Label ID="lblNegativeRecordSum" CssClass="serverlbl" runat="server"></asp:Label></div>
 				
                        </div>
 
                        </div>
+                           </div>
           </div>
           <br />
           <br />

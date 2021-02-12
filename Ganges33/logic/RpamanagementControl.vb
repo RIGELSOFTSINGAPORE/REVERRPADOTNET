@@ -127,7 +127,7 @@ Public Class RpamanagementControl
 
 
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@UPDDT", dtNow))
-        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@UPDCD", queryParams.CRTCD))
+        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@UPDCD", queryParams.UPDCD))
 
         If queryParams.TASKID <> 0 Then
             sqlStr = sqlStr & " Where TASKID = @TASKID "

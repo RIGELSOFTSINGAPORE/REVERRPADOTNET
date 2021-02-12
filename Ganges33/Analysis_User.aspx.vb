@@ -71,8 +71,9 @@ Public Class Analysis_User
     End Sub
 
     Private Sub ShowGrid()
+        Dim MUserModel As New MUserModel
         Dim _MUserControl As MUserControl = New MUserControl()
-        Dim dt As DataTable = _MUserControl.ShowMUserGrid()
+        Dim dt As DataTable = _MUserControl.ShowMUserGrid(MUserModel)
         Dim dv As DataView = New DataView(dt)
 
         ' dv.Sort = "ServiceOrder_No " & Me.SortDirection
@@ -225,15 +226,27 @@ Public Class Analysis_User
             MuserModel.reg_work_time = "8"
             'MuserModel.UserId = Session("user_id").ToString
 
+            Dim dt As DataTable = MUserControl.ShowMUserGrid(MuserModel)
+
+            If dt.Rows.Count <> 0 Then
+                Call showMsg("User name already exists", "")
+                GridSetupUser.Visible = False
+                btnAdd.Visible = False
+                AddUser.Visible = True
+                Exit Sub
+            End If
+
+
             Dim isInserted As Boolean = MUserControl.MUserInsert(MuserModel)
 
             'Dim MUserDataInserted As Boolean
 
             If (isInserted = True) Then
+
                 Dim MUserDataInserted As Boolean = MUserControl.MUserDataInsert(MuserModel)
 
                 If (MUserDataInserted = True) Then
-                    Call showMsg("Create Successfully", "")
+                    Call showMsg("User created  Successfully", "")
 
                     txtUserId.Text = ""
                     delflag.Checked = False
@@ -262,17 +275,22 @@ Public Class Analysis_User
                     txtUserId.Text = ""
                     txtEnggId.Text = ""
 
+                    ShowGrid()
 
                 Else
-                    Call showMsg("Create Failed", "")
+                    Call showMsg("User Created Failed", "")
                     GridSetupUser.Visible = False
                     btnAdd.Visible = False
                     AddUser.Visible = True
                     Exit Sub
                 End If
 
-
-
+            Else
+                Call showMsg("User Created Failed", "")
+                GridSetupUser.Visible = False
+                btnAdd.Visible = False
+                AddUser.Visible = True
+                Exit Sub
 
             End If
             GridSetupUser.Visible = True

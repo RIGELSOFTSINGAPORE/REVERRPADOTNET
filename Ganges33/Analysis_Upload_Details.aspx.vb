@@ -300,4 +300,9 @@ Public Class Analysis_Upload_Details
         HttpContext.Current.ApplicationInstance.CompleteRequest()
     End Sub
 
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Me.Dispose()
+
+
+    End Sub
 End Class

@@ -224,53 +224,76 @@ Public Class Analysis_Parts_Compare
 
             For Each row As DataRow In dtStockOverview.Rows
                 'TOTAL_RECORD_COUNT
+
                 intTotalRecordCount = intTotalRecordCount + 1
 
                 'TOTAL_STOCK_QTY
-                intTotalStockQty = row("TOTAL_STOCK_QTY")
-                intSumTotalStockQty = intTotalStockQty + intSumTotalStockQty
-
-                'WAREHOUSE_STOCK_QTY
-                intWarehouseStockQty = row("WAREHOUSE_STOCK_QTY")
-                intSumWarehouseStockQty = intWarehouseStockQty + intSumWarehouseStockQty
-
-                'ENGINEER_STOCK_QTY
-                intEngineerStockQty = row("ENGINEER_STOCK_QTY")
-                intSumEngineerStockQty = intEngineerStockQty + intSumEngineerStockQty
-
-                'DIFFERENCE
-                intDifference = row("DIFFERENCE")
-                If intDifference = 0 Then ' Other than Zero is unmatched
-                    IntMatched = IntMatched + 1
+                If row("TOTAL_STOCK_QTY") Is Nothing Then
                 Else
-                    intUnMatched = intUnMatched + 1
-                    If (intDifference < 0) Then
-                        intNegative = intNegative + 1
-                        intSumNegative = intSumNegative + intDifference '''
-                    ElseIf (intDifference > 0) Then
-                        intPositive = intPositive + 1
-                        intSumPositive = intSumPositive + intDifference
+                    intTotalStockQty = row("TOTAL_STOCK_QTY")
+                    intSumTotalStockQty = intTotalStockQty + intSumTotalStockQty
+                End If
+                'WAREHOUSE_STOCK_QTY
+
+                If row("WAREHOUSE_STOCK_QTY") Is Nothing Then
+                Else
+                    intWarehouseStockQty = row("WAREHOUSE_STOCK_QTY")
+                    intSumWarehouseStockQty = intWarehouseStockQty + intSumWarehouseStockQty
+                End If
+                'ENGINEER_STOCK_QTY
+                If row("ENGINEER_STOCK_QTY") Is Nothing Then
+                Else
+                    intEngineerStockQty = row("ENGINEER_STOCK_QTY")
+                    intSumEngineerStockQty = intEngineerStockQty + intSumEngineerStockQty
+                End If
+                'DIFFERENCE
+                If row("DIFFERENCE") IsNot Nothing Then
+                Else
+                    intDifference = row("DIFFERENCE")
+                    If intDifference = 0 Then ' Other than Zero is unmatched
+                        IntMatched = IntMatched + 1
+                    Else
+                        intUnMatched = intUnMatched + 1
+                        If (intDifference < 0) Then
+                            intNegative = intNegative + 1
+                            intSumNegative = intSumNegative + intDifference '''
+                        ElseIf (intDifference > 0) Then
+                            intPositive = intPositive + 1
+                            intSumPositive = intSumPositive + intDifference
+                        End If
                     End If
+
                 End If
 
 
                 'R_TOTAL_STOCK_QTY
-                intRtotalStockQty = row("R_TOTAL_STOCK_QTY")
-                intSumRtotalStockQty = intRtotalStockQty + intSumRtotalStockQty
-
+                If row("R_TOTAL_STOCK_QTY") IsNot Nothing Then
+                Else
+                    intRtotalStockQty = row("R_TOTAL_STOCK_QTY")
+                    intSumRtotalStockQty = intRtotalStockQty + intSumRtotalStockQty
+                End If
                 'SHELF_STOCK_QTY
-                intShelfStockQty = row("SHELF_STOCK_QTY")
-                intSumShelfStockQty = intShelfStockQty + intSumShelfStockQty
-
+                If row("SHELF_STOCK_QTY") IsNot Nothing Then
+                Else
+                    intShelfStockQty = row("SHELF_STOCK_QTY")
+                    intSumShelfStockQty = intShelfStockQty + intSumShelfStockQty
+                End If
                 'EG_OTHER_STOCK_QTY
-                intEgOtherStockQty = row("EG_OTHER_STOCK_QTY")
-                intSumEgOtherStockQty = intEgOtherStockQty + intSumEgOtherStockQty
-
+                If row("EG_OTHER_STOCK_QTY") IsNot Nothing Then
+                Else
+                    intEgOtherStockQty = row("EG_OTHER_STOCK_QTY")
+                    intSumEgOtherStockQty = intEgOtherStockQty + intSumEgOtherStockQty
+                End If
                 ' LATEST_MODIFY_DATE
-                strLatestModifyDate = row("LATEST_MODIFY_DATE")
-
+                If row("LATEST_MODIFY_DATE") Is Nothing Then
+                Else
+                    strLatestModifyDate = row("LATEST_MODIFY_DATE")
+                End If
                 ' UPDCD 
-                strUpdcd = row("UPDCD")
+                If row("UPDCD") IsNot Nothing Then
+                Else
+                    strUpdcd = row("UPDCD")
+                End If
 
             Next row
             'Display All the records 
