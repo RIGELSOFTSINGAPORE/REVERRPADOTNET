@@ -88,6 +88,7 @@ Public Class Analysis_User
         btnAdd.Visible = False
         lblUsername.Visible = True
         txtUserId.Visible = True
+        txtUserId.ReadOnly = False
         listShipBranch.Visible = False
         txtBranchCode1.Visible = True
         Edit.Visible = False
@@ -112,7 +113,7 @@ Public Class Analysis_User
         txtMiddleName.Text = ""
         txtName.Text = ""
         txtBranchCode1.Text = ""
-        txtUserlvl.Text = ""
+        txtUserlvl.SelectedItem.Value = -1
         txtSurname.Text = ""
         txtPassword.Text = ""
         txtBranchCode5.Text = ""
@@ -190,7 +191,7 @@ Public Class Analysis_User
             MuserModel.Password = txtPassword.Text
             MuserModel.eng_id = txtEnggId.Text
             MuserModel.admin_flg = adminflag
-            MuserModel.user_level = txtUserlvl.Text
+            MuserModel.user_level = txtUserlvl.SelectedItem.Text
             MuserModel.ship_1 = txtBranchCode1.Text
             MuserModel.ship_2 = txtBranchCode2.Text
             MuserModel.ship_3 = txtBranchCode3.Text
@@ -268,7 +269,7 @@ Public Class Analysis_User
                     txtMiddleName.Text = ""
                     txtName.Text = ""
                     txtBranchCode1.Text = ""
-                    txtUserlvl.Text = ""
+                    txtUserlvl.SelectedItem.Value = -1
                     txtSurname.Text = ""
                     txtPassword.Text = ""
                     txtBranchCode5.Text = ""
@@ -371,7 +372,7 @@ Public Class Analysis_User
 
 
                 If Not IsDBNull(_Datatble.Rows(0)("user_level")) Then
-                    txtUserlvl.Text = _Datatble.Rows(0)("user_level")
+                    txtUserlvl.SelectedValue = _Datatble.Rows(0)("user_level")
                 End If
 
 
@@ -529,9 +530,9 @@ Public Class Analysis_User
                 'btnUpload.Visible = False
                 Edit.Visible = True
                 txtBranchCode1.Visible = False
-                txtUserId.Visible = False
-                lblUsername.Visible = False
-                txtUserId.Visible = False
+                'txtUserId.Visible = False
+                'lblUsername.Visible = False
+                txtUserId.ReadOnly = True
                 'filename.Visible = False
                 'Textfilename.Visible = True
                 btnAdd.Visible = False
@@ -621,7 +622,7 @@ Public Class Analysis_User
             MuserModel.Password = txtPassword.Text
             MuserModel.eng_id = txtEnggId.Text
             MuserModel.admin_flg = adminflag
-            MuserModel.user_level = txtUserlvl.Text
+            MuserModel.user_level = txtUserlvl.SelectedItem.Text
 
             'For i As Integer = 0 To listShipBranch.Items.Count - 1
 
@@ -726,7 +727,7 @@ Public Class Analysis_User
                     txtMiddleName.Text = ""
                     txtName.Text = ""
                     txtBranchCode1.Text = ""
-                    txtUserlvl.Text = ""
+                    txtUserlvl.SelectedItem.Value = -1
                     txtSurname.Text = ""
                     txtPassword.Text = ""
                     txtBranchCode5.Text = ""

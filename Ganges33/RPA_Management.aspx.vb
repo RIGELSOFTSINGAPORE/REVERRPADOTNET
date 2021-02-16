@@ -5,6 +5,8 @@ Imports Ganges33.Ganges33.model
 Imports Ganges33.Ganges33.logic
 Imports System.Data.SqlClient
 Imports System.Web.Hosting
+Imports Microsoft.WindowsAPICodePack.Dialogs
+
 
 Public Class RPA_Management
     Inherits System.Web.UI.Page
@@ -340,4 +342,24 @@ Public Class RPA_Management
         addfile.Visible = False
         pageload()
     End Sub
+
+    Private Sub filename_Load(sender As Object, e As EventArgs) Handles filename.Load
+
+        ' CommonOpenFileDialog dialog = New CommonOpenFileDialog()
+        '        Dialog.InitialDirectory = "C:\\Users";
+        'dialog.IsFolderPicker = True;
+        'If (dialog.ShowDialog() == CommonFileDialogResult.Ok) Then
+        '            {
+        '    MessageBox.Show("You selected: " + dialog.FileName);
+        '}
+        Dim Dialog As New CommonOpenFileDialog
+        Dialog.InitialDirectory = "C:\"
+        Dialog.Title = "Open a Text File"
+        Dialog.EnsureReadOnly = "Text Files|*.txt"
+        Dialog.ShowDialog()
+    End Sub
+
+
+
+
 End Class

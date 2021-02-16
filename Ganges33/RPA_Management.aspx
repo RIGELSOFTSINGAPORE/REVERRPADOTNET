@@ -40,12 +40,12 @@
        
    </style>
     <script>
-        $(function () {
-            $('[class*=duration]').durationPicker({
-                onChanged: function (newVal) {
-                    $('#duration-label').text(newVal);
-                }
-            });
+        var timeControl = document.querySelector('input[type="time"]');
+        timeControl.value='00:00'
+
+        function myFunction() {
+            var x = document.getElementById("Duration").value;
+            document.getElementById("demo").innerHTML = x;
         }
     </script>
 </asp:Content>
@@ -87,7 +87,7 @@
                            </label>
                            </div> <div>
                                  <br />
-                               <asp:FileUpload ID="filename" Class="serverlbl"  runat="server" />
+                               <asp:FileUpload ID="filename" Class="serverlbl"  runat="server" AllowMultiple="True" />
                                
                              <asp:TextBox ID="Textfilename" runat="server" value="" Height="33px" Width="100%" ReadOnly="true" class="form-control  serverlbl" />
                         </div>
@@ -145,7 +145,8 @@
                         </div>
                         <div>
                               <br />
-                            <asp:TextBox ID="Duration" runat="server" type="time"  Height="33px" width="190px" class="form-file-upload duration  serverlbl" />
+                          
+                            <asp:TextBox ID="Duration" runat="server"  TextMode="Time" step="1" Height="33px" width="190px" class="form-file-upload duration  serverlbl" />
                            
                         </div>
                     </div>

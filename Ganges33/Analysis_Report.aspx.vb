@@ -77,7 +77,8 @@ Public Class Analysis_Report
                 '**ActiveMonthのラベル設定
                 DropDownActiveMonth.Visible = False
                 lblMonNow.Visible = True
-                lblMonNow.Text = dtNow.ToShortDateString.Substring(5, 2)
+                'lblMonNow.Text = dtNow.ToShortDateString.Substring(5, 2)
+                lblMonNow.Text = DateTime.Now.ToString("MMMM")
             End If
 
             '***日付リストの設定***
@@ -389,7 +390,13 @@ Public Class Analysis_Report
 
         report.note = Trim(TextNote.Text)
         'report.month = setMon2 '/* Added Mon Year VJ 20100106*/
-        report.ActMonth = setMon2 '/* Added Mon Year VJ 20100106*/
+        Dim MonthNumber = Month(DateValue("1 " & setMon2 & " 2020")).ToString
+
+        If MonthNumber.Length = "1" Then
+            MonthNumber = "0" & MonthNumber
+        End If
+        report.ActMonth = MonthNumber '/* Added Mon Year VJ 20100106*/
+
         report.ActYear = ddlActiveYear.SelectedValue '/* Added Mon Year VJ 20100106*/
 
         '***登録***

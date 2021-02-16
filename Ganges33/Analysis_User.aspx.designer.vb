@@ -128,7 +128,7 @@ Partial Public Class Analysis_User
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents txtUserlvl As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtUserlvl As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''RequiredFieldValidator3 control.

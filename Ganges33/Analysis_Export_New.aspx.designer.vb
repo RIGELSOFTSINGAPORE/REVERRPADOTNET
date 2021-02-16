@@ -185,6 +185,15 @@ Partial Public Class Analysis_Export_New
     Protected WithEvents lblErrorMessage As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''nodata control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents nodata As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
     '''gvExportReport control.
     '''</summary>
     '''<remarks>

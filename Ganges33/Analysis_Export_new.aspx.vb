@@ -89,7 +89,7 @@ Public Class Analysis_Export_New
             '''''    .Items.Add("November")
             '''''    .Items.Add("December")
             '''''End With
-
+            nodata.Visible = False
             '***exportFileリストの設定***
             DropDownExportFile.Items.Clear()
             With DropDownExportFile
@@ -2597,10 +2597,11 @@ Public Class Analysis_Export_New
                             End If
 
                         Next i
-
+                        nodata.Visible = False
                     End If
 
                 Else
+                    nodata.Visible = True
                     Call showMsg("There is no corresponding Activity_report information.", "")
                     Exit Sub
                 End If

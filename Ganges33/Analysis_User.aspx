@@ -195,7 +195,7 @@
                       <%--<asp:DropDownList ID="DropListLocation" runat="server" CssClass="form-control " style="width: 270px; height:33px;">
                       </asp:DropDownList>--%>
                               <asp:TextBox ID="txtUserId" runat="server" CssClass="form-control" style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
-                           <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" CssClass="Required" ControlToValidate="txtUserId"
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" class="serverlbl "  ControlToValidate="txtUserId"
                             ForeColor="Red" ErrorMessage="UserName is Required"></asp:RequiredFieldValidator>    
                           </div>
 
@@ -209,7 +209,7 @@
                               <div>
                      <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
                        
-                           <asp:RequiredFieldValidator ID="RequiredFieldValidator1" CssClass="Required" runat="server" ControlToValidate="txtPassword"
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator1" class="serverlbl "  runat="server" ControlToValidate="txtPassword"
                             ForeColor="Red" ErrorMessage="Password is Required"></asp:RequiredFieldValidator> 
 
                     
@@ -223,7 +223,7 @@
                               <div>
                      <asp:TextBox ID="txtEnggId" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
                        
-                           <asp:RequiredFieldValidator ID="RequiredFieldValidator2" CssClass="Required" runat="server" ControlToValidate="txtEnggId"
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator2" class="serverlbl "  runat="server" ControlToValidate="txtEnggId"
                             ForeColor="Red" ErrorMessage="Engineer ID is Required"></asp:RequiredFieldValidator> 
                        
 
@@ -232,13 +232,25 @@
                    </div>
                           <div class="row">
                            <div class="form-group col-sm-4 ">
-                          <Label  runat="server"  CssClass="bmd-label-floating">User Leve1 :</Label><b style="color:red; font-size:large" >*</b>
+                          <Label  runat="server"  CssClass="bmd-label-floating">User Level :</Label><b style="color:red; font-size:large" >*</b>
                                </div>
                               <div>
-                     <asp:TextBox ID="txtUserlvl" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
-                       
-                           <asp:RequiredFieldValidator ID="RequiredFieldValidator3" CssClass="Required" runat="server" ControlToValidate="txtUserlvl"
-                            ForeColor="Red" ErrorMessage="User Leve1 required"></asp:RequiredFieldValidator> 
+                     <asp:DropDownList ID="txtUserlvl" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off">
+                       <asp:ListItem Text="Select..." Value="-1"></asp:ListItem>
+                         <asp:ListItem Text="0" Value="0"></asp:ListItem> 
+                         <asp:ListItem Text="1" Value="1"></asp:ListItem>
+                          <asp:ListItem Text="2" Value="2"></asp:ListItem>
+                          <asp:ListItem Text="3" Value="3"></asp:ListItem>
+                          <asp:ListItem Text="4" Value="4"></asp:ListItem>
+                          <asp:ListItem Text="5" Value="5"></asp:ListItem>
+                          <asp:ListItem Text="6" Value="6"></asp:ListItem>
+                          <asp:ListItem Text="7" Value="7"></asp:ListItem>
+                          <asp:ListItem Text="8" Value="8"></asp:ListItem>
+                          <asp:ListItem Text="9" Value="9"></asp:ListItem>
+                          
+                         </asp:DropDownList>
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator3" class="serverlbl "  runat="server" ControlToValidate="txtUserlvl"
+                            ForeColor="Red" ErrorMessage="Select the user level" InitialValue="-1"></asp:RequiredFieldValidator> 
                                   
 
                     
@@ -251,7 +263,7 @@
                               <div>
                      <asp:TextBox ID="txtBranchCode1" runat="server" TextMode ="MultiLine" CssClass="form-control" style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox><%--<b style="color:red; font-size:large" >*</b>--%>
                        <asp:ListBox ID="listShipBranch"  Width="100px"  class="multiselect-ui form-control" runat="server" SelectionMode="Multiple" multiple="multiple"></asp:ListBox>
-                           <asp:RequiredFieldValidator ID="RequiredFieldValidator4" CssClass="Required" runat="server" ControlToValidate="txtBranchCode1"
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator4" class="serverlbl "  runat="server" ControlToValidate="txtBranchCode1"
                             ForeColor="Red" ErrorMessage="Branch Code is required"></asp:RequiredFieldValidator> 
                        
 
@@ -310,7 +322,7 @@
                               <div>
                      <asp:TextBox ID="txtSurname" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
                        
-                           <asp:RequiredFieldValidator ID="RequiredFieldValidator5" CssClass="Required" runat="server" ControlToValidate="txtSurname"
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator5" class="serverlbl "  runat="server" ControlToValidate="txtSurname"
                             ForeColor="Red" ErrorMessage="Surname is required"></asp:RequiredFieldValidator> 
                        
 
@@ -324,7 +336,7 @@
                               <div>
                      <asp:TextBox ID="txtName" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
                        
-                           <asp:RequiredFieldValidator ID="RequiredFieldValidator6" CssClass="Required" runat="server" ControlToValidate="txtName"
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator6" class="serverlbl "  runat="server" ControlToValidate="txtName"
                             ForeColor="Red" ErrorMessage="Name is required"></asp:RequiredFieldValidator> 
                        
 
@@ -349,7 +361,7 @@
                               <div>
                      <asp:TextBox ID="txtdob" runat="server" CssClass="form-control date" style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
                        
-                           <asp:RequiredFieldValidator ID="RequiredFieldValidator7" CssClass="Required" runat="server" ControlToValidate="txtdob"
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator7" class="serverlbl "  runat="server" ControlToValidate="txtdob"
                             ForeColor="Red" ErrorMessage="DOB is required"></asp:RequiredFieldValidator> 
                        
 
@@ -379,7 +391,7 @@
                             </asp:RadioButtonList>
                                   
                        
-                           <asp:RequiredFieldValidator ID="RequiredFieldValidator8" CssClass="Required" runat="server" ControlToValidate="radionGender"
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator8" class="serverlbl "  runat="server" ControlToValidate="radionGender"
                             ForeColor="Red" ErrorMessage="Gender is required"></asp:RequiredFieldValidator> 
                     
                   </div>
@@ -392,7 +404,7 @@
                      <asp:TextBox ID="txtSuperior" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
                                   
                        
-                           <asp:RequiredFieldValidator ID="RequiredFieldValidator9" CssClass="Required" runat="server" ControlToValidate="txtSuperior"
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator9" class="serverlbl "  runat="server" ControlToValidate="txtSuperior"
                             ForeColor="Red" ErrorMessage="Superior is Required"></asp:RequiredFieldValidator> 
                        
 
@@ -407,7 +419,7 @@
                               <div>
                      <asp:TextBox ID="txtAddressLine1" runat="server" TextMode="MultiLine" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
                        
-                           <asp:RequiredFieldValidator ID="RequiredFieldValidator11" CssClass="Required" runat="server" ControlToValidate="txtAddressLine1"
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator11" class="serverlbl "  runat="server" ControlToValidate="txtAddressLine1"
                             ForeColor="Red" ErrorMessage="Address is required"></asp:RequiredFieldValidator> 
                        
 
@@ -462,7 +474,7 @@
                        <asp:TextBox ID="txtTelephone1" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
                                   
                      
-     <asp:RequiredFieldValidator ID="RequiredFieldValidator13" CssClass="Required" runat="server" ControlToValidate="txtTelephone1"
+     <asp:RequiredFieldValidator ID="RequiredFieldValidator13" class="serverlbl "  runat="server" ControlToValidate="txtTelephone1"
                             ForeColor="Red" ErrorMessage="Telephone No is Required"></asp:RequiredFieldValidator> 
                     
                   </div>
@@ -475,7 +487,7 @@
                      <asp:TextBox ID="txtMobile" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
                                   
                        
-                           <asp:RequiredFieldValidator ID="RequiredFieldValidator12" CssClass="Required" runat="server" ControlToValidate="txtMobile"
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator12" class="serverlbl "  runat="server" ControlToValidate="txtMobile"
                             ForeColor="Red" ErrorMessage="Mobile No required"></asp:RequiredFieldValidator> 
                        
 
@@ -489,9 +501,9 @@
                                </div>
                               <div>
                      <asp:TextBox ID="txtEmailId" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off"></asp:TextBox>
-                      <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" CssClass="Required" ControlToValidate="txtEmailId"
+                      <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" class="serverlbl "  ControlToValidate="txtEmailId"
                             ForeColor="Red" ErrorMessage="Email ID is required"></asp:RequiredFieldValidator>
-                                  <asp:RegularExpressionValidator ID="validateEmail" runat="server" ErrorMessage="Invalid email." ForeColor="Red" ControlToValidate="txtEmailId" ValidationExpression="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$" />
+                                  <asp:RegularExpressionValidator ID="validateEmail" runat="server"  Style=" margin-left: -112px;" CssClass="serverlbl " ErrorMessage="Invalid email." ForeColor="Red" ControlToValidate="txtEmailId" ValidationExpression="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$" />
  
                     
                   </div>

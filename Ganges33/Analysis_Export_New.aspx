@@ -250,8 +250,9 @@
                         <div class="row col-sm-12">
                             <div class="col-sm-10">
                                <br /> 
+                                <label runat="server" id="nodata">No data found</label>
                       <asp:GridView ID="gvExportReport" runat="server" AutoGenerateColumns="false" AllowPaging="true"
-            AllowSorting="true" OnSorting="OnSorting" OnPageIndexChanging="OnPageIndexChanging"  EmptyDataText="There was no relevant information"
+            AllowSorting="true" OnSorting="OnSorting" OnPageIndexChanging="OnPageIndexChanging" 
             PageSize="10"  RowStyle-Wrap="false"  ShowHeaderWhenEmpty="true" HeaderStyle-Wrap="false">
             <%--<Columns>
                 <asp:TemplateField ItemStyle-Width="150px" HeaderText="Customer ID" SortExpression="CustomerID">

@@ -59,7 +59,7 @@ Public Class Analysis_Upload_Details
                 lblLocationValue.Text = "<b>Target Store: </b>" & hdnStoreID.Value
                 lblDateFrom.Text = "<b>From Date(YYYY-MM-DD) :</b>" & CType(Session("ExportTaskInputDtl"), Export_File_Parameter_Details).DateFrom
                 lblDateTo.Text = "<b>To Date(YYYY-MM-DD):</b>" & CType(Session("ExportTaskInputDtl"), Export_File_Parameter_Details).DateTo
-                lblActive.Text = "<b>Active :</b>" & IIf(CType(Session("ExportTaskInputDtl"), Export_File_Parameter_Details).IsActive = "0", "Yes", "False")
+                lblActive.Text = "<b>Active :</b>" & IIf(CType(Session("ExportTaskInputDtl"), Export_File_Parameter_Details).IsActive = "0", "Yes", "No")
 
                 '***セッションなしログインユーザの対応***
 

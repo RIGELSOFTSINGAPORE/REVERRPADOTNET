@@ -36,8 +36,7 @@
     
     <script>
 
-    
-    </script>
+</script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
@@ -225,7 +224,7 @@
                       
     </div>
         
-    <div id="dialog" title="message" style="display:none;"> >
+    <div id="dialog" title="Analysis upload summary" style="display:none;"> >
         <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
     </div>
    

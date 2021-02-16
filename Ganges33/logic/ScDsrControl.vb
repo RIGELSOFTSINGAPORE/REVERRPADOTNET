@@ -114,11 +114,11 @@ Public Class ScDsrControl
             _dtGetIsShipCodeChanged = dbConn1.GetDataSet(sqlStr)
             dbConn1.sqlCmd.Parameters.Clear()
             dbConn1.CloseConnection()
-
+            Dim isShipcodechanged = _dtGetIsShipCodeChanged.Rows(0)("IsShipCodeChanged").ToString
             sqlStr = ""
 
 
-            If _dtGetIsShipCodeChanged.Rows(0)("IsShipCodeChanged") = "0" Or Nothing Then
+            If isShipcodechanged = "0" Or isShipcodechanged = "" Then
                 Dim dbConn2 As DBUtility = New DBUtility()
                 sqlStr = "select  Format( dateadd(day,-1, cast(datefrom as date)),'yyyy/MM/dd') as datefrom from M_ship_base_code_change_trn where ship_name_new= @ship_name_new "
                 If Not String.IsNullOrEmpty(branchname) Then

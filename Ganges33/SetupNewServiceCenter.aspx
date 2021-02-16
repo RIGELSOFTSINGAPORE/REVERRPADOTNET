@@ -42,26 +42,13 @@
               
    </style>
     <script>
-        $(function () {
-            $('[class*=duration]').durationPicker({
-                onChanged: function (newVal) {
-                    $('#duration-label').text(newVal);
-                }
-            });
+        function my_module_field_widget_time_range_form_alter(&$element, FormStateInterface $form_state, $context) {
+            $element['value']['#attributes']['step'] = 60;
+            $element['end_value']['#attributes']['step'] = 60;
         }
     </script>
 
-    <%--<script>
-         //   $(document).on("click", "[id*=lnkView]", (function () {
-                 $(function () {
-                 $("[id*=lnkView]").click(function () {
-                var gridviewrow = $(this).closest("tr")[0].rowindex;
-                window.open("Popup.aspx ? rowindex=" + gridviewrow, 'Popup', 'height=450,width=500,left=500,top=300,resizable=no,scrollbars=yes,toolbar=yes,menu=no');
-            
-            });
-                 }
-
-    </script>--%>
+ 
 
                     
 
@@ -235,7 +222,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>  <br />
                            
-                            <asp:TextBox ID="OpenTime"  type="time"  runat="server" value="" Height="33px" width="270px" class="form-file-upload duration   serverlbl" MaxLength="5" />
+                            <asp:TextBox ID="OpenTime"  type="time"   runat="server" value="" Height="33px" width="270px" class="form-file-upload duration   serverlbl" MaxLength="4" TextMode="Time" />
                             <asp:RequiredFieldValidator class="serverlbl "  ID="OT" runat="server" ControlToValidate="OpenTime" ErrorMessage="Please enter a OpenTime"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
@@ -248,7 +235,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                             </label>
                         </div>
                         <div>  <br />
-                            <asp:TextBox ID="CloseTime" runat="server" value="" Height="33px" width="270px" class="form-file-upload duration  serverlbl" MaxLength="5" />
+                            <asp:TextBox ID="CloseTime" runat="server" type="time" step="1" Height="33px" width="270px" class="form-file-upload duration  serverlbl" MaxLength="5" />
                            
                         </div>
                     </div>
@@ -260,7 +247,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                             </label> <b style="color:red; font-size:large" >*</b>
                         </div>
                         <div>  <br />
-                            <asp:TextBox ID="OpeningDate" runat="server" value="" Height="33px" width="270px" class="form-file-upload date  serverlbl" />
+                            <asp:TextBox ID="OpeningDate" runat="server" value="" Height="33px"  AutoCompleteType="Disabled" width="270px" class="form-file-upload date  serverlbl" />
                            <asp:RequiredFieldValidator class="serverlbl "  ID="OD" runat="server" ControlToValidate="OpeningDate" ErrorMessage="Please enter a OpenDate"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
@@ -581,7 +568,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
 
    
 
-    <div id="dialog" title="message" style="display: none;">
+    <div id="dialog" title="Setup new service center" style="display: none;">
        
         <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
     </div>

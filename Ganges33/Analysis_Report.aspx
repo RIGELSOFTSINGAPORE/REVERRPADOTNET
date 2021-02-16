@@ -59,8 +59,8 @@
                             <div class="col-sm-3">
                              <label class=" bmd-label-floating">Active Month</label>
                                 </div>
-                            <div>
-                         <asp:Label ID="lblMonNow" runat="server" CssClass=" bmd-label-floating"></asp:Label>
+                            <div class="col-sm-3">
+                         <asp:Label ID="lblMonNow" runat="server" CssClass="serverlbl bmd-label-floating"></asp:Label>
                                 </div>
                             <div class="col-sm-3">
                       <asp:DropDownList ID="DropDownActiveMonth"  runat="server" CssClass="Form-control " style=" height:33px;"  AutoPostBack="True">

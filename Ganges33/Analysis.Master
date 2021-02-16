@@ -38,7 +38,7 @@
         $('[class*=date]').datepicker({
             changeMonth: true,
             changeYear: true,
-            format: "DD/MM/YYYY",
+            format: "yyyy/mm/dd",
             yearRange: "0000:9999"
 
         });
