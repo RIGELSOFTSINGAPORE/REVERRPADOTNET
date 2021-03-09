@@ -15,6 +15,7 @@ Public Class Form3
     Dim strSQL, Err_F As String
     Dim inz_F As String = "0"
 
+
     Dim Dataadp1 As New SqlClient.SqlDataAdapter
     Dim Dataadp2 As New SqlClient.SqlDataAdapter
     Dim Dataadp3 As New SqlClient.SqlDataAdapter

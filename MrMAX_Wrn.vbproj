@@ -111,6 +111,36 @@
     <Compile Include="AssemblyInfo.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Backup\AssemblyInfo.vb" />
+    <Compile Include="Backup\DataGridEx.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Backup\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup\Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup\Form2_S.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup\Form2_S2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup\Form3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup\Form4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup\Form5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup\KANA_input.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup\Module2.vb" />
+    <Compile Include="Backup\Module_DB.vb" />
     <Compile Include="DataGridEx.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -144,8 +174,57 @@
     <Compile Include="Module_DB.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.0.AssemblyAttributes.vb" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.vb" />
+    <Compile Include="obj\Release\.NETFramework,Version=v4.6.1.AssemblyAttributes.vb" />
+    <Content Include="Backup\book.ico" />
+    <Content Include="Backup\MrMAX_Wrn.sln" />
+    <Content Include="Backup\MrMAX_Wrn.vbproj.user" />
+    <Content Include="bin\GrapeCity.Framework.InputMan.v24.dll" />
+    <Content Include="bin\GrapeCity.Win.Editors.v100.dll" />
+    <Content Include="bin\GrapeCity.Win.Editors.v100.xml" />
+    <Content Include="bin\GrapeCity.Win.Input.Interop.v100.dll" />
+    <Content Include="bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.Win.Editors.v100.resources.dll" />
+    <Content Include="bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll" />
+    <Content Include="bin\MrMAX_Wrn.exe" />
+    <Content Include="bin\MrMAX_Wrn.pdb" />
+    <Content Include="bin\MrMAX_Wrn.xml" />
     <Content Include="book.ico" />
     <Content Include="MrMax.ico" />
+    <Content Include="obj\Debug\MrMAX_Wrn.exe" />
+    <Content Include="obj\Debug\mrmax_wrn.exe.licenses" />
+    <Content Include="obj\Debug\MrMAX_Wrn.pdb" />
+    <Content Include="obj\Debug\MrMAX_Wrn.vbproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\MrMAX_Wrn.xml" />
+    <EmbeddedResource Include="Backup\DataGridEx.resx">
+      <DependentUpon>DataGridEx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup\Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup\Form2_S.resx">
+      <DependentUpon>Form2_S.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup\Form2_S2.resx">
+      <DependentUpon>Form2_S2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup\Form3.resx">
+      <DependentUpon>Form3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup\Form4.resx">
+      <DependentUpon>Form4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup\Form5.resx">
+      <DependentUpon>Form5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup\KANA_input.resx">
+      <DependentUpon>KANA_input.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup\licenses.licx" />
     <EmbeddedResource Include="DataGridEx.resx">
       <DependentUpon>DataGridEx.vb</DependentUpon>
     </EmbeddedResource>
@@ -174,15 +253,36 @@
       <DependentUpon>KANA_input.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="obj\Debug\MrMAX_Wrn.DataGridEx.resources" />
+    <EmbeddedResource Include="obj\Debug\MrMAX_Wrn.Form1.resources" />
+    <EmbeddedResource Include="obj\Debug\MrMAX_Wrn.Form2.resources" />
+    <EmbeddedResource Include="obj\Debug\MrMAX_Wrn.Form2_S.resources" />
+    <EmbeddedResource Include="obj\Debug\MrMAX_Wrn.Form2_S2.resources" />
+    <EmbeddedResource Include="obj\Debug\MrMAX_Wrn.Form3.resources" />
+    <EmbeddedResource Include="obj\Debug\MrMAX_Wrn.Form4.resources" />
+    <EmbeddedResource Include="obj\Debug\MrMAX_Wrn.Form5.resources" />
+    <EmbeddedResource Include="obj\Debug\MrMAX_Wrn.KANA_input.resources" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{CF845C55-C321-4742-B673-E6212D061ED9}" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Backup\MrMAX_Wrn.vbproj" />
+    <None Include="bin\MrMAX.ini" />
+    <None Include="bin\MrMAX.ini.bak" />
+    <None Include="bin\MrMAX_Wrn.exe.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\MrMAX_Wrn.vbproj.CopyComplete" />
+    <None Include="obj\Debug\MrMAX_Wrn.vbproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\MrMAX_Wrn.vbproj.GenerateResource.cache" />
+    <None Include="obj\Debug\MrMAX_Wrn.vbprojAssemblyReference.cache" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include=".vs\MrMAX_Wrn\v16\" />
     <Folder Include="My Project\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>

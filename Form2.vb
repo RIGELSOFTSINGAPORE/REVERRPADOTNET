@@ -18,6 +18,7 @@ Public Class Form2
     Dim i, en, line_no, line_no2, date_i As Integer
     Dim WK_Date As Date
 
+
     Private label(9999, 1) As label
 
 #Region " Windows フォーム デザイナで生成されたコード "

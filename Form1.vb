@@ -182,6 +182,7 @@ Public Class Form1
         Call DB_INIT()
         strcurdir = System.IO.Directory.GetCurrentDirectory                                         '実行フォルダー
 
+
         '社員
         strSQL = "SELECT * FROM EMPL WHERE delt_flg = 0"
         SqlCmd1 = New SqlClient.SqlCommand(strSQL, cnsqlclient)

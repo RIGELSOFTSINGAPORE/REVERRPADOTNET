@@ -15,6 +15,7 @@ Public Class Form5
 
     Dim strSQL As String
 
+
     Public Declare Function GetSystemMenu Lib "user32.dll" Alias "GetSystemMenu" (ByVal hwnd As IntPtr, ByVal bRevert As Long) As IntPtr
     Public Declare Function RemoveMenu Lib "user32.dll" Alias "RemoveMenu" (ByVal hMenu As IntPtr, ByVal nPosition As Long, ByVal wFlags As Long) As Long
     Public Const SC_CLOSE As Long = &HF060

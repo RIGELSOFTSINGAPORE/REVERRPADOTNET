@@ -11,6 +11,7 @@ Public Class Form2_S
     Dim DsList1 As New DataSet
     Dim DtView1 As DataView
 
+
     Dim strSQL As String
 
 #Region " Windows フォーム デザイナで生成されたコード "
