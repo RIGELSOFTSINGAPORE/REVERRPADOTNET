@@ -36,12 +36,41 @@
     -ms-overflow-style: none;
     overflow: auto;
 }
-    
+   
+    #list {
+        display: block;
+        float: left;
+        width: 80px;
+        overflow: auto;
+    }
+
+
 
      
    </style>
+      
+    <script>
+            var up = document.getElementById('GFG_UP');
+            var down = document.getElementById('GFG_DOWN');
+            var parent = document.getElementById('parent');
+            
+            up.innerHTML = "Click on the button to remove"
+            + " the inline style.";
+            
+        function GFG_Fun() {
+                $('#parent').attr('style', ''); 
+            down.innerHTML = "Inline style has been removed."; 
+        } 
+    
+    </script>
+             
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div style="margin-top:700px;">
+    <div id="dialog" title="File upload" style="display:none;"> 
+        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+    </div>
+        </div>
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     
 
@@ -159,8 +188,8 @@
                   </div>
                          <div class="col-sm-8">
                               <br />
-                      <span class=" fontFamily"><asp:RadioButton type="radio"  value="RadioBtnMM" AutoPostBack="true"  ID="RadioBtnMM" runat="server" />&nbsp;&nbsp;<label>MM/DD/YYYY</label></span>
-                      <span class="fontFamily">&nbsp;&nbsp;</span>&nbsp;&nbsp; &nbsp;<span class=" fontFamily"><asp:RadioButton ID="RadioBtnDD" runat="server" AutoPostBack="True" type="radio" value="RadioBtnDD"  />&nbsp;&nbsp;<label>DD/MM/YYYY</label></span>
+                      <asp:RadioButton type="radio"  value="RadioBtnMM" AutoPostBack="true"  ID="RadioBtnMM" runat="server" />&nbsp;&nbsp;<asp:label runat="server" CssClass="serverlbl"  Style="Font-Size:13px; font-weight:500" Text="MM/DD/YYYY"></asp:label>
+                     &nbsp;&nbsp; &nbsp;<asp:RadioButton ID="RadioBtnDD" runat="server" AutoPostBack="True" type="radio" value="RadioBtnDD"  />&nbsp;&nbsp;<asp:label runat="server" CssClass="serverlbl" Style="Font-Size:13px; font-weight:500" Text="DD/MM/YYYY"></asp:label>
                       
                  </div>
                     </div>
@@ -263,7 +292,7 @@
                       <br />
                         <asp:Button ID="btnUpload" runat="server" Text="Import" class="btn btn-primary pull-right" />
                   </div>
-                                         <div class="row col-sm-12">
+                                                                                  <div class="row col-sm-12">
                       <div class="col-sm-6">
                         
                             <div >
@@ -297,10 +326,7 @@
         </div>
        </div>
    
-    <div id="dialog" title="message" style="display:none;"> 
-        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
-    </div>
-                      <div style="visibility:hidden">
+           <div style="visibility:hidden">
                             <label class="bmd-label-floating">Current Location</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <label class="bmd-label-floating">:</label>
                             <asp:Label ID="lblLoc" class="bmd-label-floating serverlbl" runat="server"></asp:Label>

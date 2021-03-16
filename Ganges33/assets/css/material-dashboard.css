@@ -9466,7 +9466,7 @@ a.text-dark:focus {
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: box-shadow, transform;
   height: 36px;
-  width: 120px;
+  width: 170px;
 }
 
 .btn:focus,
@@ -19949,8 +19949,8 @@ Copyright (c) 2015 Daniel Eden
         color: #eaf5f7;
     }
 
-    /* Interaction states
-----------------------------------*/
+     Interaction states
+----------------------------------
     .ui-state-default,
     .ui-widget-content .ui-state-default,
     .ui-widget-header .ui-state-default {
@@ -20007,8 +20007,8 @@ Copyright (c) 2015 Daniel Eden
             text-decoration: none;
         }
 
-    /* Interaction Cues
-----------------------------------*/
+     Interaction Cues
+----------------------------------
     .ui-state-highlight,
     .ui-widget-content .ui-state-highlight,
     .ui-widget-header .ui-state-highlight {
@@ -20066,7 +20066,7 @@ Copyright (c) 2015 Daniel Eden
     }
 
         .ui-state-disabled .ui-icon {
-            filter: Alpha(Opacity=35); /* For IE8 - See #6059 */
+            filter: Alpha(Opacity=35);  For IE8 - See #6059 
         }
 
 
@@ -20083,3 +20083,35 @@ Copyright (c) 2015 Daniel Eden
     padding-bottom:10%;
     padding-left:275px
 }
+
+/*timepicker*/
+
+.my-timepicker-div {
+    position: absolute;
+    z-index: 5;
+    text-align: center;
+    border: solid 1px;
+    border-radius: 5px;
+    border-color: #cccccc;
+    background-color: white;
+}
+
+    .my-timepicker-div div {
+        /* reset the negative margin caused by class="row" */
+        margin: 0rem;
+    }
+
+    .my-timepicker-div option:disabled {
+        color: #bbb;
+        font-style: italic;
+    }
+
+    .my-timepicker-div span {
+        padding-right: 0.1rem;
+        padding-left: 0.1rem;
+    }
+
+    .my-timepicker-div .ampm-button {
+        width: 3rem;
+        height: 3rem;
+    }

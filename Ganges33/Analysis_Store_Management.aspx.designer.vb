@@ -1787,15 +1787,6 @@ Partial Public Class Analysis_Store_Management
     Protected WithEvents BtnOK As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''lblMsg control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblMsg As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
     '''Getdta control.
     '''</summary>
     '''<remarks>
@@ -1821,4 +1812,13 @@ Partial Public Class Analysis_Store_Management
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblName As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblMsg control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblMsg As Global.System.Web.UI.WebControls.Label
 End Class

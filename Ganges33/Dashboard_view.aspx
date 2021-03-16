@@ -61,21 +61,34 @@
                   <p class="card-category"></p>
                 </div>
   <div  class="card-body scrollbar " id="style-10">
-                  <div class="form-group">
-            <asp:Label ID="lblInfo" Class="bmd-label-floating" runat="server"></asp:Label>
-        </div>
-                     <div class="row">
-                  
-                                  <div>
+      
+                     
+          <div>
+              <div>
+                  <div class="row " style="margin-left: 20px;">
+                         <div>
+                             <label class="bmd-label-floating " runat="server" id="servicecenter"  style="font-size:medium;font-weight:bold">
+                                 Service center
+                             </label>
+                         </div>
+                  <div class="col-sm-2">
+                      <asp:DropDownList ID="DropdownList1" runat="server" height="33px" Width="100px" Class=" form-control" >
+                            </asp:DropDownList> 
+                  </div>
+                                 
                                    
-                 <div class="row col-sm-12" style="margin-left:300px;margin-bottom:30px;margin-top:30px;border-radius:7px">
-                        <div class="form-group ">
+                
+                        <div >
                                
-                             <asp:Label ID="Label1"  Text="Month" runat="server"  class="bmd-label-floating " style="font-size:medium;font-weight:bold"></asp:Label>
-                            </div>
-                            <div class="col-sm-4">
+                                    
+                             <%--<asp:Label ID="Label1"  Text="Month" runat="server"  class="bmd-label-floating " style="font-size:medium;font-weight:bold"></asp:Label>--%>
+                            <label class="bmd-label-floating " runat="server" id="Label1"  style="font-size:medium;font-weight:bold">
+                                 Month
+                             </label>
+                        </div>
+                            <div class="col-sm-2">
 
-
+                                
 				  <asp:DropDownList ID="DropDownMonth" runat="server" CssClass="form-control dropdown-toggle" AutoPostBack="false" style="width: 100%; height:33px" >
                         	 <asp:ListItem Text="Select..." Value="0"></asp:ListItem>
                              <asp:ListItem Text="January" Value="01"></asp:ListItem>
@@ -94,7 +107,7 @@
                          </div> 
 					 
                         
-                          <div class="col-sm-3">
+                          <div >
                                 
 					<asp:DropDownList ID="DropDownYear" runat="server" CssClass="form-control dropdown-toggle" AutoPostBack="false"  style=" height:33px" >
                             <asp:ListItem Text="2019" Value="2019"></asp:ListItem>
@@ -113,19 +126,15 @@
 <asp:Button ID="btnSend" runat="server" class="btn btn-primary " text="Search"/>
                          </div>
 </div>
-                        
-                  </div>
-                  </div>
-        
-                 
+              </div>
                    <div class="row">
                               
-
+                       
+                     
                              <div class="col-sm-4">
                              <div  class=" text-center" >  
-                                   <%--<label class="bmd-label-floating " style="font-weight:bold">
-                                       Customer Visit
-                                   </label>--%>
+                                 <br />
+                                     <br />
                                   <asp:Label ID="CustomerVisit"  Text="Customer Visit" runat="server" style="font-size: large;font-weight:bold" class="bmd-label-floating "></asp:Label>
                                </div>
                                <div>
@@ -154,9 +163,8 @@
                             
                             <div class="col-sm-4">
                             <div class="text-center">    
-                                <%--<label class="bmd-label-floating" style=" font-weight:bold">
-                                    Call Registerd
-                                </label>--%>
+                                <br />
+                                     <br />
                                 <asp:Label ID="CallRegisterd"  Text="Call Registerd" runat="server" style="font-size: large;font-weight:bold" class="bmd-label-floating "></asp:Label>
                                 </div>
                            <div>
@@ -190,9 +198,8 @@
                                    </div>    
                        <div class="col-sm-4">
                                        <div class="text-center" >
-                                           <%--<label class="bmd-label-floating" style="font-weight:bold">
-                                               Repair completed
-                                           </label>--%>
+                                       <br />
+                                     <br />
                                             <asp:Label ID="Repaircompleted"  Text=" Repair completed" runat="server" style="font-size: large;font-weight:bold" class="bmd-label-floating "></asp:Label>
                                        </div>
                                 <div>
@@ -369,17 +376,17 @@
                   </div> 
                               </div>
 
-                             <div class="col-sm-4">
-                             <div  class=" text-center" >  
+                             <div class="col-sm-2">
+                             <div  style="margin-left:115px">  
                                    <%--<label class="bmd-label-floating " style="font-weight:bold">
                                        Customer Visit
                                    </label>--%>
                                  
                                   <asp:Label ID="Sales"  Text="Sales" runat="server" style="font-size: large;font-weight:bold" class="bmd-label-floating "></asp:Label>
                                </div>
-                               <div style="margin-left:15px">
+                               <div  style="margin-left:-110px" >
                
-                            <asp:Chart ID="Chart18" runat="server"  Width="320px" Height="276px">
+                            <asp:Chart ID="Chart18" runat="server"  Width="530px" Height="276px">
 
             <series>
 
@@ -402,20 +409,28 @@
                                </div>
                           
             </div>
-   
+      
                            <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
                            </div>
+                  
+                  <div class="form-group">
+            <asp:Label ID="lblInfo" Class="bmd-label-floating" runat="server"></asp:Label>
+        </div>
+      
+    
+      
       </div>
          
-                 <br />
+                </div>
                     
                     </div>
 
             </div>
         </div>
-</div>
+        </div>
+       </div>
+    
 
-                  </div>
     
     
 

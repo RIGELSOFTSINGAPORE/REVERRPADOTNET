@@ -106,11 +106,11 @@
                 </div>
                     </div>
                 </div>
-            </div>
+            
                        <div id="tblPartsCompare" class="col-sm-12" runat="server" visible="false">
                        <div class="col-sm-12 row">
                           
-			<div class="serverlbl font-weight-bold col-sm-1">Result :</div>
+			<div class="serverlbl font-weight-bold col-sm-2">Result :</div>
 
 			<div class=" "><asp:Label ID="lblResultMont"  class="serverlbl " runat="server"></asp:Label></div>
 
@@ -127,7 +127,7 @@
                        <div class="row ">
                           
                          
-			<div class="col-sm-2"> <br />
+			<div class="col-sm-4"> <br />
                            <br /> <label class="serverlbl font-weight-bold" >Total count record</label></div>
 			
 			<div> <br />
@@ -136,7 +136,7 @@
                        </div>
                        <div class="row">
                            
-			<div class="col-sm-2"><label class="serverlbl font-weight-bold" > Total count parts</label></div>
+			<div class="col-sm-4"><label class="serverlbl font-weight-bold" > Total count parts</label></div>
 			
 			<div  ><asp:Label ID="lblTotalCountParts" class="serverlbl"  runat="server"></asp:Label></div>
 				
@@ -144,7 +144,7 @@
 
                         <div class="row">
                             	
-			<div class="col-sm-2"><label class="serverlbl font-weight-bold">Stockoverview number(GSPN)</label> </div>
+			<div class="col-sm-4"><label class="serverlbl font-weight-bold">Stockoverview number(GSPN)</label> </div>
 			
 			<div><asp:Label ID="lblStockOverView" class="serverlbl" runat="server"></asp:Label></div>
 					
@@ -154,28 +154,28 @@
                         <div class="row ">
 
                             
-			<div class="col-sm-2"> <label class="serverlbl font-weight-bold" style="font-weight:bold">Match parts record</label> </div>
+			<div class="col-sm-4"> <label class="serverlbl font-weight-bold" style="font-weight:bold">Match parts record</label> </div>
 			
 			<div><asp:Label ID="lblMatchPartsRecord" class="serverlbl"   runat="server"></asp:Label></div>
 					
                             </div>
                        <div class="row">
                          
-			<div class="col-sm-2"><label class="serverlbl font-weight-bold" >Unmatch parts record</label> </div>
+			<div class="col-sm-4"><label class="serverlbl font-weight-bold" >Unmatch parts record</label> </div>
 			
 			<div><asp:Label ID="lblUnmatchPartsRecord" class="serverlbl"  runat="server"></asp:Label></div>
 						
                        </div>
                        <div class="row">
                              
-			<div class="col-sm-2"><label class="serverlbl font-weight-bold" >Different record +</label> </div>
+			<div class="col-sm-4"><label class="serverlbl font-weight-bold" >Different record +</label> </div>
 			
 			<div><asp:Label ID="lblPositiveRecord" class="serverlbl" runat="server"></asp:Label></div>
 					
                        </div>
                        <div class="row">
                           
-			<div class="col-sm-2"><label class="serverlbl font-weight-bold"> Different number +</label>  </div>
+			<div class="col-sm-4"><label class="serverlbl font-weight-bold"> Different number +</label>  </div>
 			
 			
 			<div><asp:Label ID="lblPositiveRecordSum"  CssClass="serverlbl" runat="server"></asp:Label></div>
@@ -183,14 +183,14 @@
                        </div>
                        <div class="row">
                           
-			<div class="col-sm-2"><label class=" font-weight-bold serverlbl" >Different record- </label>  </div>
+			<div class="col-sm-4"><label class=" font-weight-bold serverlbl" >Different record- </label>  </div>
 			
 			<div ><asp:Label ID="lblNegativeRecord" CssClass="serverlbl" runat="server"></asp:Label></div>
 				
                        </div>
                        <div class="row">
                            	
-			<div class="col-sm-2"><label class="serverlbl font-weight-bold"> Different number -</label>  </div>
+			<div class="col-sm-4"><label class="serverlbl font-weight-bold"> Different number -</label>  </div>
 			
 			
 			<div><asp:Label ID="lblNegativeRecordSum" CssClass="serverlbl" runat="server"></asp:Label></div>
@@ -205,17 +205,15 @@
           </div>
                         
      </div>
-          </div>    
+          </div>   
+        </div>
                     
         <asp:Button ID="BtnCancel" runat="server" Text="Button" style="display:none;"/>
         <asp:Button ID="BtnOK" runat="server" Text="Button" style="display:none;" />
 
-     
 
-    <div id="dialog" title="message" style="display:none;"> >
-        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
-    </div>
     
+        
      
        <div style="visibility:hidden">
                         <div class="form-group row">
@@ -240,5 +238,10 @@
  </div>
         </div>
        </div>
-      
+       <div style="margin-top:500px;">        
+
+    <div id="dialog" title="Parts compare" style="display:none;"> >
+        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+    </div>
+    </div>
 </asp:Content>

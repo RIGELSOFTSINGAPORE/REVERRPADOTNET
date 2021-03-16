@@ -32,6 +32,19 @@
    <link href="assets/css/material-dashboard.css" rel="stylesheet" /> 
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+
+	<link href="assets/css/timepicker.css" rel="stylesheet" />
+
+    <script src="assets/timepicker.js"></script>
+     <script type="text/javascript">
+         $(document).ready(function () {
+             $(".simpleExample").timepicker();
+
+
+         });
+    </script>
     <style type="text/css">
 
         .container{
@@ -77,7 +90,7 @@
                     <div class="row">
                         <div class="col-sm-2">
 
-                          <label>Ship Name </label>  <b style="color:red; font-size:large" >*</b>
+                          <label>Branch Name </label>  <b style="color:red; font-size:large" >*</b>
                         </div>
                         <div>
                              <asp:TextBox ID="ShipName" runat="server" value="" Height="33px" width="270px" class="form-file-upload  serverlbl" MaxLength="20" />
@@ -91,7 +104,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                           <div class="col-sm-2">
                               <br />
                               <label>
-                                Ship Info
+                                Branch Info
                            </label> <b style="color:red; font-size:large" >*</b>
                              </div>
                              <div> <br />
@@ -105,7 +118,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                         <div class="row">
                           <div class="col-sm-2"> <br />
                               <label>
-                                Ship Manager
+                                Branch Manager
                            </label> <b style="color:red; font-size:large" >*</b>
                              </div>
                              <div>  <br />
@@ -117,7 +130,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                         <div class="row">
                              <div class="col-sm-2">  <br />
                                  <label>
-                                     Ship Tel
+                                     Branch Tel
                                  </label> <b style="color:red; font-size:large" >*</b>
                              </div>
                             <div>  <br />
@@ -135,7 +148,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                     <div class="row">
                         <div class="col-sm-2">  <br />
                             <label>
-                                Ship Add1
+                                Branch Add1
                             </label> <b style="color:red; font-size:large" >*</b>
                         </div>
                         <div>  <br />
@@ -148,7 +161,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
              <div class="row">
                         <div class="col-sm-2">  <br />
                             <label>
-                                Ship Add2
+                                Branch Add2
                             </label>
                         </div>
                         <div>  <br />
@@ -160,7 +173,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
           <div class="row">
                         <div class="col-sm-2">  <br />
                             <label>
-                                Ship Add3
+                                Branch Add3
                             </label>
                         </div>
                         <div>  <br />
@@ -202,7 +215,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
          <div class="row">
                         <div class="col-sm-2">  <br />
                             <label>
-                                Ship Service
+                                Branch Service
                             </label> <b style="color:red; font-size:large" >*</b>
                         </div>
                         <div>  <br />
@@ -222,7 +235,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                         <div>  <br />
                            
-                            <asp:TextBox ID="OpenTime"  type="time"   runat="server" value="" Height="33px" width="270px" class="form-file-upload duration   serverlbl" MaxLength="4" TextMode="Time" />
+                            <asp:TextBox ID="OpenTime" CssClass=""  ToolTip="HH:mm:ss"  runat="server" value="00:00" Height="33px" width="270px" class="form-file-upload simpleExample   serverlbl" MaxLength="4" />
                             <asp:RequiredFieldValidator class="serverlbl "  ID="OT" runat="server" ControlToValidate="OpenTime" ErrorMessage="Please enter a OpenTime"   
 ForeColor="Red"></asp:RequiredFieldValidator> 
                         </div>
@@ -235,7 +248,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                             </label>
                         </div>
                         <div>  <br />
-                            <asp:TextBox ID="CloseTime" runat="server" type="time" step="1" Height="33px" width="270px" class="form-file-upload duration  serverlbl" MaxLength="5" />
+                            <asp:TextBox ID="CloseTime" runat="server"  value="00:00" step="1" ToolTip="HH:mm:ss" Height="33px" width="270px" class="form-file-upload simpleExample  serverlbl" MaxLength="5" />
                            
                         </div>
                     </div>
@@ -269,7 +282,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
          <div class="row" id="lblshipcode" runat="server">
                         <div class="col-sm-2"  >  <br />
                             <label>
-                                Ship Code
+                                Branch Code
                             </label> <b style="color:red; font-size:large" >*</b>
                         </div>
                         <div>  <br />
@@ -290,7 +303,7 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                         <div class="col-sm-2"> 
                             <br />
                             <label>
-                                Ship Mark
+                                Branch Mark
                             </label> <b style="color:red; font-size:large" >*</b>
                         </div>
                         <div> 
@@ -410,13 +423,14 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                             <div>   <br />
  <asp:Button ID="btnAddNew" runat="server" Text="Create" class="btn btn-primary " />
                                  <asp:Button ID="Edit" runat="server" Text="Save" class="btn btn-primary " />
+                                 <asp:Button ID="Back" runat="server"  CausesValidation="false" Text="Back" class="btn btn-primary pull-right" />
+                 
                     </div>
 
 
                     </div>
                  <div>   <br />
-                        <asp:Button ID="Back" runat="server"  CausesValidation="false" Text="Back" class="btn btn-primary pull-right" />
-                    </div>     
+                          </div>     
      </div>
 
 
@@ -426,11 +440,29 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                   <div>
                       <asp:Button ID="Create" runat="server" Text="Create" class="btn btn-primary " />
                   </div>
+                     <div class="row col-sm-12">
+                            <div >
+                                
+                                <br />
+                       <label> Branch NAME:</label>
+                                </div>
+                            <div >
+
+                                <br />
+                               
+                                  <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control"  AutoPostBack="true"></asp:TextBox>
+                              
+                                </div>
+                            </div>
                     <div>
-                        <%--<asp:GridView ID="getdata" AutoGenerateColumns="false"  DataKeyNames="SHIP_CODE" runat="server">--%>
+                         <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
                         <br />
                             <asp:GridView ID="getdata" runat="server" AutoGenerateColumns="false" CellPadding="10"   AllowPaging="true" PageSize="10" OnPageIndexChanging="getdata_PageIndexChanging" OnRowCommand="getdata_RowCommand1"
-                Style="align-self: center" HeaderStyle-BackColor="#8e24aa" HeaderStyle-ForeColor="White"  CssClass="col-sm-12" ShowHeaderWhenEmpty="true" EmptyDataText="No records Found">
+                Style="align-self: center" HeaderStyle-BackColor="#8e24aa" OnSorting="getdata_Sorting" AllowSorting="true" HeaderStyle-ForeColor="White"  CssClass="col-sm-12" ShowHeaderWhenEmpty="true" EmptyDataText="No records Found">
                 <EmptyDataTemplate>No Record Available</EmptyDataTemplate>
                 <EmptyDataRowStyle HorizontalAlign="Center" />
 
@@ -445,58 +477,58 @@ ForeColor="Red"></asp:RequiredFieldValidator>
         <asp:BoundField DataField="DELFG" HeaderText="Delflg" />--%>
 
 
-                                   <asp:TemplateField HeaderText="SHIP_CODE" ItemStyle-Width="150" >
+                                   <asp:TemplateField HeaderText="Branch CODE" HeaderStyle-CssClass="sort" SortExpression="SHIP_CODE"  >
                         <ItemTemplate>
                             <asp:Label ID="SHIP_CODE1" runat="server" Text='<%# Eval("SHIP_CODE") %>'></asp:Label>
                         </ItemTemplate>
-                        <ItemStyle Width="150px"></ItemStyle>
+                        <ItemStyle ></ItemStyle>
                     </asp:TemplateField>
 
 
 
 
 
-                                 <asp:TemplateField HeaderText="SHIP_NAME" ItemStyle-Width="150">
+                                 <asp:TemplateField HeaderText="Branch NAME" HeaderStyle-CssClass="sort" SortExpression="SHIP_NAME" >
                         <ItemTemplate>
                             <asp:Label ID="SHIP_NAME" runat="server" Text='<%# Eval("SHIP_NAME") %>'></asp:Label>
                         </ItemTemplate>
                         <%--<ItemTemplate>
                             <asp:Label ID="SHIP_NAME" runat="server" Text='<%# Eval("SHIP_NAME") %>'></asp:Label>
                         </ItemTemplate>--%>
-                        <ItemStyle Width="150px"></ItemStyle>
+                        <ItemStyle ></ItemStyle>
                     </asp:TemplateField>
 
 
-                                  <asp:TemplateField HeaderText="SHIP_INFO" ItemStyle-Width="150">
+                                  <asp:TemplateField HeaderText="Branch INFO" HeaderStyle-CssClass="sort" SortExpression="SHIP_INFO" >
                         <ItemTemplate>
                             <asp:Label ID="SHIP_INFO" runat="server" Text='<%# Eval("SHIP_INFO") %>'></asp:Label>
                         </ItemTemplate>
-                        <ItemStyle Width="150px"></ItemStyle>
+                        <ItemStyle ></ItemStyle>
                     </asp:TemplateField>
 
-                                  <asp:TemplateField HeaderText="SHIP_MANAGER" ItemStyle-Width="150">
+                                  <asp:TemplateField HeaderText="Branch MANAGER" HeaderStyle-CssClass="sort" SortExpression="SHIP_MANAGER" >
                         <ItemTemplate>
                             <asp:Label ID="SHIP_MANAGER" runat="server" Text='<%# Eval("SHIP_MANAGER") %>'></asp:Label>
                         </ItemTemplate>
-                        <ItemStyle Width="150px"></ItemStyle>
+                        <ItemStyle ></ItemStyle>
                     </asp:TemplateField>
 
-                                 <asp:TemplateField HeaderText="SHIP_SERVICE" ItemStyle-Width="150">
+                                 <asp:TemplateField HeaderText="Branch SERVICE" HeaderStyle-CssClass="sort" SortExpression="SHIP_SERVICE">
                         <ItemTemplate>
                             <asp:Label ID="SHIP_SERVICE" runat="server" Text='<%# Eval("SHIP_SERVICE") %>'></asp:Label>
                         </ItemTemplate>
-                        <ItemStyle Width="150px"></ItemStyle>
+                        <ItemStyle ></ItemStyle>
                     </asp:TemplateField>
 
 
 
 
 
-                                 <asp:TemplateField HeaderText="SHIP_MARK" ItemStyle-Width="150" >
+                                 <asp:TemplateField HeaderText="Branch MARK" HeaderStyle-CssClass="sort" SortExpression="SHIP_MARK" >
                         <ItemTemplate>
                             <asp:Label ID="SHIP_MARK" runat="server" Text='<%# Eval("SHIP_MARK") %>'></asp:Label>
                         </ItemTemplate>
-                        <ItemStyle Width="150px"></ItemStyle>
+                        <ItemStyle ></ItemStyle>
                     </asp:TemplateField>
 
 
@@ -504,25 +536,25 @@ ForeColor="Red"></asp:RequiredFieldValidator>
                         <ItemTemplate>
                             <asp:Label ID="SHIP_TEL" runat="server" Text='<%# Eval("SHIP_TEL") %>'></asp:Label>
                         </ItemTemplate>
-                        <ItemStyle Width="150px"></ItemStyle>
+                        <ItemStyle ></ItemStyle>
                     </asp:TemplateField>--%>
 
 
 
 
-                                 <asp:TemplateField HeaderText="DELFG" ItemStyle-Width="150">
+                                 <asp:TemplateField HeaderText="DELFG" HeaderStyle-CssClass="sort" SortExpression="DELFG" >
                         <ItemTemplate>
                             <asp:Label ID="DELFG" runat="server" Text='<%# Eval("DELFG") %>'></asp:Label>
                         </ItemTemplate>
-                        <ItemStyle Width="150px"></ItemStyle>
+                        <ItemStyle></ItemStyle>
                     </asp:TemplateField>
 
                   <%--<asp:TemplateField HeaderText="EDIT" ItemStyle-Width="150">--%>
-                      <asp:TemplateField  ItemStyle-Width="150">
+                      <asp:TemplateField >
                         <ItemTemplate>
                             <asp:LinkButton ID="SHIP_CODE" runat="server" CommandArgument='<%# Bind("SHIP_CODE") %>' CommandName="goto" Text="Edit"></asp:LinkButton>
                         </ItemTemplate>
-                        <ItemStyle Width="150px"></ItemStyle>
+                        <ItemStyle ></ItemStyle>
                     </asp:TemplateField>
 
                                 <%--<asp:TemplateField >
@@ -568,10 +600,14 @@ ForeColor="Red"></asp:RequiredFieldValidator>
 
    
 
-    <div id="dialog" title="Setup new service center" style="display: none;">
+   
+      <div style="margin-top:500px;">        
+   
+     <div id="dialog" title="Setup new service center" style="display: none;">
        
         <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
     </div>
+ </div>
 
 
 </asp:Content>

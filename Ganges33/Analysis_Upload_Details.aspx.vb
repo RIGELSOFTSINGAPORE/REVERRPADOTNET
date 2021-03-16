@@ -4,6 +4,7 @@ Imports System.Text
 Imports Ganges33.Ganges33.model
 Imports Ganges33.Ganges33.logic
 Imports System
+Imports System.ke
 
 Public Class Analysis_Upload_Details
     Inherits System.Web.UI.Page
@@ -301,8 +302,11 @@ Public Class Analysis_Upload_Details
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
-        Me.Dispose()
+
+
+        Response.Redirect("~/Analysis_Upload_Summary.aspx")
 
 
     End Sub
+
 End Class

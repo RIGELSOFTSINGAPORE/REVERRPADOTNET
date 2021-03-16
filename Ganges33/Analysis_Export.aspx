@@ -3,8 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
    
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/start/jquery-ui.css" rel="stylesheet">
-     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
 
    
 
@@ -34,6 +33,7 @@
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+  
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     
 
@@ -242,8 +242,13 @@
 					               <div class="col-sm-12">
                       <asp:Button runat="server" ID="btnExport" class="btn btn-primary pull-right" Text="Export" />
                         </div>
-                      <div class="clearfix"></div>
+                      
                </div>
+                  
+          <div> 
+               
+   
+        </div> 
                     </div>
         
                  </div>
@@ -251,11 +256,7 @@
               </div>
             </div>
             </div>
-          
-    <div id="dialog" title="message" style="display:none;"> >
-        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
-    </div>
-        
+
     <div style="visibility:hidden">
          <div class="form-group row">
                             <div class="col-sm-2">
@@ -280,6 +281,9 @@
                           </div>
                         </div>
     </div>
- 
-
+     <div style="margin-top:500px;">
+     <div id="dialog" title="Export file" style="display:none;">
+        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+    </div>
+        </div>
 </asp:Content>

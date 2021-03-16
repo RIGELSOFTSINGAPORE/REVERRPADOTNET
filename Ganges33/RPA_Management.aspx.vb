@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports System.Text
+Imports System.Data
 Imports System.Globalization
 Imports Ganges33.Ganges33.model
 Imports Ganges33.Ganges33.logic
@@ -24,7 +25,12 @@ Public Class RPA_Management
         Dim adminFlg As Boolean = Session("admin_Flg")
         addfile.Visible = False
         Header.Text = "RPA Management"
-        pageload()
+        If IsPostBack = False Then
+            pageload()
+
+        End If
+
+
     End Sub
     Protected Sub showMsg(ByVal Msg As String, ByVal msgChk As String)
 
@@ -43,14 +49,34 @@ Public Class RPA_Management
         ClientScript.RegisterStartupScript(Me.GetType(), "startup", sScript, True)
 
     End Sub
-    Public Sub pageload()
+
+    Public Sub pageload(Optional ByVal sortExpression As String = Nothing)
         Dim Rpamanagementmodel As New RpamanagementModel
         Dim Rpamanagementcontrol As New RpamanagementControl
+        Rpamanagementmodel.TASK_NAME = txtSearch.Text
         Dim _Datatble As DataTable = Rpamanagementcontrol.Get_info(Rpamanagementmodel)
-        Dim _dataview As New DataView(_Datatble)
-        getdata.DataSource = _dataview
+
+
+        If (Not (sortExpression) Is Nothing) Then
+            Dim dv As DataView = _Datatble.AsDataView
+            Me.SortDirection = IIf(Me.SortDirection = "ASC", "DESC", "ASC")
+            dv.Sort = sortExpression & " " & Me.SortDirection
+
+            getdata.DataSource = dv
+        Else
+            getdata.DataSource = _Datatble
+        End If
         getdata.DataBind()
     End Sub
+    Private Property SortDirection As String
+        Get
+            Return IIf(ViewState("SortDirection") IsNot Nothing, Convert.ToString(ViewState("SortDirection")), "ASC")
+        End Get
+        Set(value As String)
+            ViewState("SortDirection") = value
+        End Set
+    End Property
+
 
     Private Sub Create_Click(sender As Object, e As EventArgs) Handles Create.Click
         TaskName.Text = ""
@@ -81,6 +107,7 @@ Public Class RPA_Management
         Status.SelectedValue = 0
         Duration.Text = ""
         Source.Text = ""
+
     End Sub
 
     Private Sub BtnUpload_Click(sender As Object, e As EventArgs) Handles btnUpload.Click
@@ -143,7 +170,40 @@ Public Class RPA_Management
                     addfile.Visible = True
                     Exit Sub
                 Else
-                    filename.SaveAs(serverpath)
+
+                    Dim Rpamanagementmodel As New RpamanagementModel
+                    Dim Rpamanagementcontrol As New RpamanagementControl
+                    Rpamanagementmodel.TASK_NAME = TaskName.Text
+                    Rpamanagementmodel.FILE_NAME = filename.FileName
+                    Rpamanagementmodel.PATH = path
+                    Rpamanagementmodel.TEST_STATUS = Testeddate.Text
+                    Rpamanagementmodel.RUN_DURATION = Duration.Text
+                    Rpamanagementmodel.STATUS = Status.SelectedItem.Text
+                    Rpamanagementmodel.DELFG = delflg
+
+                    Rpamanagementmodel.CRTCD = Session("user_Name")
+
+                    Dim insertCredit As Boolean = Rpamanagementcontrol.Insert_Rpa(Rpamanagementmodel)
+                    If (insertCredit = True) Then
+                        Call showMsg("Success Saved", "")
+                        filename.SaveAs(serverpath)
+                        TaskName.Text = ""
+                        Textfilename.Text = ""
+                        Testeddate.Text = ""
+                        Status.SelectedItem.Value = "0"
+                        Duration.Text = ""
+                        delfld.Checked = False
+
+                    Else
+                        Call showMsg("Failed to save", "")
+                        data.Visible = False
+                        addfile.Visible = True
+                    End If
+
+                    data.Visible = True
+                    addfile.Visible = False
+                    pageload()
+
                 End If
 
             End If
@@ -152,38 +212,6 @@ Public Class RPA_Management
 
 
 
-        Dim Rpamanagementmodel As New RpamanagementModel
-        Dim Rpamanagementcontrol As New RpamanagementControl
-        Rpamanagementmodel.TASK_NAME = TaskName.Text
-        Rpamanagementmodel.FILE_NAME = filename.FileName
-        Rpamanagementmodel.PATH = path
-        Rpamanagementmodel.TEST_STATUS = Testeddate.Text
-        Rpamanagementmodel.RUN_DURATION = Duration.Text
-        Rpamanagementmodel.STATUS = Status.SelectedItem.Text
-        Rpamanagementmodel.DELFG = delflg
-
-        Rpamanagementmodel.CRTCD = Session("user_Name")
-
-        Dim insertCredit As Boolean = Rpamanagementcontrol.Insert_Rpa(Rpamanagementmodel)
-        If (insertCredit = True) Then
-            Call showMsg("Success Saved", "")
-
-            TaskName.Text = ""
-            Textfilename.Text = ""
-            Testeddate.Text = ""
-            Status.SelectedItem.Value = "0"
-            Duration.Text = ""
-            delfld.Checked = False
-
-        Else
-            Call showMsg("Failed to save", "")
-            data.Visible = False
-            addfile.Visible = True
-        End If
-
-        data.Visible = True
-        addfile.Visible = False
-        pageload()
     End Sub
 
 
@@ -211,18 +239,20 @@ Public Class RPA_Management
             End If
             If Not IsDBNull(_Datatble.Rows(0)("STATUS")) Then
                 If _Datatble.Rows(0)("STATUS") = "Active" Then
-                    Status.SelectedValue = 1
+                    Status.SelectedItem.Value = 1
                 ElseIf _Datatble.Rows(0)("STATUS") = "Inactive" Then
-                    Status.SelectedValue = 2
+                    Status.SelectedItem.Value = 2
 
                 Else
 
-                    Status.SelectedValue = 0
+                    Status.SelectedItem.Value = 0
                 End If
             End If
             If Not IsDBNull(_Datatble.Rows(0)("RUN_DURATION")) Then
-                    Duration.Text = _Datatble.Rows(0)("RUN_DURATION")
-                End If
+                Duration.Text = _Datatble.Rows(0)("RUN_DURATION")
+
+
+            End If
                 If Not IsDBNull(_Datatble.Rows(0)("DELFG")) Then
                     If _Datatble.Rows(0)("DELFG") = 0 Then
                         delfld.Checked = False
@@ -308,6 +338,7 @@ Public Class RPA_Management
         '    End If
 
         'End If
+
         Dim Rpamanagementmodel As New RpamanagementModel
         Dim Rpamanagementcontrol As New RpamanagementControl
         Rpamanagementmodel.TASK_NAME = TaskName.Text
@@ -315,7 +346,7 @@ Public Class RPA_Management
         'Rpamanagementmodel.PATH = path
         Rpamanagementmodel.TEST_STATUS = Testeddate.Text
         Rpamanagementmodel.RUN_DURATION = Duration.Text
-        Rpamanagementmodel.STATUS = Status.SelectedItem.Text
+        Rpamanagementmodel.STATUS = Status.SelectedItem.Value
         Rpamanagementmodel.DELFG = delflg
         Rpamanagementmodel.TASKID = id.Text
 
@@ -331,6 +362,7 @@ Public Class RPA_Management
             Status.SelectedItem.Value = 0
             Duration.Text = ""
             delfld.Checked = False
+
 
         Else
             Call showMsg("updated failed", "")
@@ -355,11 +387,62 @@ Public Class RPA_Management
         Dim Dialog As New CommonOpenFileDialog
         Dialog.InitialDirectory = "C:\"
         Dialog.Title = "Open a Text File"
-        Dialog.EnsureReadOnly = "Text Files|*.txt"
-        Dialog.ShowDialog()
+        'Dialog.EnsureReadOnly = "Text Files|*.txt"
+        'Dialog.ShowDialog()
     End Sub
 
+    Protected Sub getdata_Sorting(sender As Object, e As GridViewSortEventArgs)
+        Me.pageload(e.SortExpression)
+
+    End Sub
+
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        Me.pageload()
+    End Sub
+
+    Private Sub filename_DataBinding(sender As Object, e As EventArgs) Handles filename.DataBinding
+
+        'Display a Dialog Box that allows to select a single file.
+        'The path for the file picked will be stored in fullpath variable
+        'With Application.FileDialog(msoFileDialogFilePicker)
+        '    'Makes sure the user can select only one file
+        '    .AllowMultiSelect = False
+        '    'Filter to just the following types of files to narrow down selection options
+        '    .Filters.Add "Excel Files", "*.xlsx; *.xlsm; *.xls; *.xlsb", 1
+        ''Show the dialog box
+        '    .Show
+
+        '    'Store in fullpath variable
+        '    fullpath = .SelectedItems.Item(1)
+        'End With
+
+        ''It's a good idea to still check if the file type selected is accurate.
+        ''Quit the procedure if the user didn't select the type of file we need.
+        'If InStr(fullpath, ".xls") = 0 Then
+        '    Exit Sub
+        'End If
+
+        ''Open the file selected by the user
+        'Workbooks.Open fullpath
 
 
+    End Sub
 
+    Private Sub filename_PreRender(sender As Object, e As EventArgs) Handles filename.PreRender
+
+        Dim Dialog As New CommonOpenFileDialog
+        Dialog.InitialDirectory = "C:\"
+        Dialog.DefaultExtension = "txt"
+        'Dialog.EnsureReadOnly = "Text Files|*.txt"
+        ' Dialog.ShowDialog()
+
+    End Sub
+
+    Private Sub filename_Disposed(sender As Object, e As EventArgs) Handles filename.Disposed
+        Dim Dialog As New CommonOpenFileDialog
+        Dialog.InitialDirectory = "C:\"
+        Dialog.DefaultExtension = "txt"
+        'Dialog.EnsureReadOnly = "Text Files|*.txt"
+
+    End Sub
 End Class

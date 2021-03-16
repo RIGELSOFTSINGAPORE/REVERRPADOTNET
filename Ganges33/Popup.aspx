@@ -79,7 +79,8 @@
                 </div>
                 <div class="card-body " >
 
-                    
+                     <asp:Button ID="btnback" runat="server" CausesValidation="false" Text="Close" OnClientClick="javascript:window.close()"  class="btn pull-right btn-primary " />
+           
 <table>
 
 

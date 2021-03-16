@@ -141,7 +141,10 @@ Public Class SetupNewServiceCenterControl
             sqlStr = sqlStr & "Where @SHIP_CODE = ship_code"
             dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@SHIP_CODE", queryParams.SHIP_CODE))
         End If
-
+        If Not String.IsNullOrEmpty(queryParams.SHIP_NAME_1) Then
+            sqlStr = sqlStr & "Where  SHIP_NAME LIKE @SHIP_NAME + '%'"
+            dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@SHIP_NAME", queryParams.SHIP_NAME_1))
+        End If
         Dim _DataTable As DataTable = dbConn.GetDataSet(sqlStr)
         dbConn.CloseConnection()
         Return _DataTable
@@ -161,15 +164,15 @@ Public Class SetupNewServiceCenterControl
 
         sqlStr = sqlStr & " M_SHIP_BASE "
         sqlStr = sqlStr & "SET "
-        sqlStr = sqlStr & "CRTDT =@CRTDT, "
-        sqlStr = sqlStr & "CRTCD =@CRTCD, "
+        'sqlStr = sqlStr & "CRTDT =@CRTDT, "
+        'sqlStr = sqlStr & "CRTCD =@CRTCD, "
         sqlStr = sqlStr & "UPDDT =@UPDDT, "
         sqlStr = sqlStr & "UPDCD =@UPDCD, "
         sqlStr = sqlStr & "UPDPG =@UPDPG, "
 
 
 
-        sqlStr = sqlStr & "DELFG=@DELFG, "
+
         sqlStr = sqlStr & "SHIP_NAME=@SHIP_NAME, "
         sqlStr = sqlStr & "SHIP_INFO=@SHIP_INFO, "
         sqlStr = sqlStr & "SHIP_MANAGER=@SHIP_MANAGER, "
@@ -197,8 +200,8 @@ Public Class SetupNewServiceCenterControl
         sqlStr = sqlStr & "DELFG=@DELFG  "
 
 
-        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@CRTDT", dtNow))
-        dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@CRTCD", queryParams.CRTCD))
+        'dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@CRTDT", dtNow))
+        'dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@CRTCD", queryParams.CRTCD))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@UPDDT", dtNow))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@UPDCD", queryParams.UPDCD))
         dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@UPDPG", queryParams.UPDPG))

@@ -59,7 +59,7 @@
     $(document).ready(function () {
         $('#ingredients').multiselect();
     });
-</script>
+    </script>
 
   <!DOCTYPE html>
 
@@ -131,22 +131,21 @@
       
 				
                         
-     <asp:Button ID="BtnCancel" runat="server" Text="Button" Style="display: none;" />
-        <asp:Button ID="BtnOK" runat="server" Text="Button" Style="display: none;" />
-
-   
-
-    <div id="dialog" title="message" style="display: none;">
-       
-        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
-    </div>
+     
 
                 
             </div> 
        
         </div>
-   
+    <asp:Button ID="BtnCancel" runat="server" Text="Button" Style="display: none;" />
+        <asp:Button ID="BtnOK" runat="server" Text="Button" Style="display: none;" />
 
+   
+   
+      <div id="dialog" title="message" style="display: none;">
+       
+        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+    </div>
  </asp:Content>
 <%--<asp:Button ID="Button1" runat="server" Text="Button" style="display:none;" />
       

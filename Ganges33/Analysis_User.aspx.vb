@@ -70,19 +70,26 @@ Public Class Analysis_User
         ShowGrid()
     End Sub
 
-    Private Sub ShowGrid()
+    Private Sub ShowGrid(Optional ByVal sortExpression As String = Nothing)
         Dim MUserModel As New MUserModel
         Dim _MUserControl As MUserControl = New MUserControl()
+        MUserModel.User_id = txtSearch.Text
         Dim dt As DataTable = _MUserControl.ShowMUserGrid(MUserModel)
-        Dim dv As DataView = New DataView(dt)
 
-        ' dv.Sort = "ServiceOrder_No " & Me.SortDirection
-        GridSetupUser.DataSource = dv
+        If (Not (sortExpression) Is Nothing) Then
+            Dim dv As DataView = dt.AsDataView
+            Me.SortDirection = IIf(Me.SortDirection = "ASC", "DESC", "ASC")
+            dv.Sort = sortExpression & " " & Me.SortDirection
+            GridSetupUser.DataSource = dv
+        Else
+            GridSetupUser.DataSource = dt
+        End If
+
         GridSetupUser.DataBind()
     End Sub
 
     Protected Sub btnAdd_Click(sender As Object, e As EventArgs)
-        GridSetupUser.Visible = False
+        search.Visible = False
         AddUser.Visible = True
         btnCreate.Visible = True
         btnAdd.Visible = False
@@ -113,7 +120,7 @@ Public Class Analysis_User
         txtMiddleName.Text = ""
         txtName.Text = ""
         txtBranchCode1.Text = ""
-        txtUserlvl.SelectedItem.Value = -1
+        txtUserlvl.SelectedValue = "-1"
         txtSurname.Text = ""
         txtPassword.Text = ""
         txtBranchCode5.Text = ""
@@ -191,7 +198,7 @@ Public Class Analysis_User
             MuserModel.Password = txtPassword.Text
             MuserModel.eng_id = txtEnggId.Text
             MuserModel.admin_flg = adminflag
-            MuserModel.user_level = txtUserlvl.SelectedItem.Text
+            MuserModel.user_level = txtUserlvl.SelectedValue
             MuserModel.ship_1 = txtBranchCode1.Text
             MuserModel.ship_2 = txtBranchCode2.Text
             MuserModel.ship_3 = txtBranchCode3.Text
@@ -231,7 +238,7 @@ Public Class Analysis_User
 
             If dt.Rows.Count <> 0 Then
                 Call showMsg("User name already exists", "")
-                GridSetupUser.Visible = False
+                search.Visible = False
                 btnAdd.Visible = False
                 AddUser.Visible = True
                 Exit Sub
@@ -269,7 +276,7 @@ Public Class Analysis_User
                     txtMiddleName.Text = ""
                     txtName.Text = ""
                     txtBranchCode1.Text = ""
-                    txtUserlvl.SelectedItem.Value = -1
+                    txtUserlvl.SelectedValue = -1
                     txtSurname.Text = ""
                     txtPassword.Text = ""
                     txtBranchCode5.Text = ""
@@ -280,7 +287,7 @@ Public Class Analysis_User
 
                 Else
                     Call showMsg("User Created Failed", "")
-                    GridSetupUser.Visible = False
+                    search.Visible = False
                     btnAdd.Visible = False
                     AddUser.Visible = True
                     Exit Sub
@@ -288,13 +295,13 @@ Public Class Analysis_User
 
             Else
                 Call showMsg("User Created Failed", "")
-                GridSetupUser.Visible = False
+                search.Visible = False
                 btnAdd.Visible = False
                 AddUser.Visible = True
                 Exit Sub
 
             End If
-            GridSetupUser.Visible = True
+            search.Visible = True
             AddUser.Visible = False
             btnAdd.Visible = True
             Header.Text = "User Management"
@@ -537,7 +544,7 @@ Public Class Analysis_User
                 'Textfilename.Visible = True
                 btnAdd.Visible = False
                 listShipBranch.Visible = True
-                GridSetupUser.Visible = False
+                search.Visible = False
                 AddUser.Visible = True
                 btnCreate.Visible = False
                 del.Visible = True
@@ -622,7 +629,7 @@ Public Class Analysis_User
             MuserModel.Password = txtPassword.Text
             MuserModel.eng_id = txtEnggId.Text
             MuserModel.admin_flg = adminflag
-            MuserModel.user_level = txtUserlvl.SelectedItem.Text
+            MuserModel.user_level = txtUserlvl.SelectedValue
 
             'For i As Integer = 0 To listShipBranch.Items.Count - 1
 
@@ -727,7 +734,7 @@ Public Class Analysis_User
                     txtMiddleName.Text = ""
                     txtName.Text = ""
                     txtBranchCode1.Text = ""
-                    txtUserlvl.SelectedItem.Value = -1
+                    txtUserlvl.SelectedValue = -1
                     txtSurname.Text = ""
                     txtPassword.Text = ""
                     txtBranchCode5.Text = ""
@@ -737,7 +744,7 @@ Public Class Analysis_User
 
                 Else
                     Call showMsg("Update Failed", "")
-                    GridSetupUser.Visible = False
+                    search.Visible = False
                     btnAdd.Visible = False
                     AddUser.Visible = True
 
@@ -747,7 +754,7 @@ Public Class Analysis_User
 
 
             End If
-            GridSetupUser.Visible = True
+            search.Visible = True
 
             AddUser.Visible = False
             btnAdd.Visible = True
@@ -885,7 +892,7 @@ Public Class Analysis_User
     'End Sub
 
     Protected Sub btnback_Click(sender As Object, e As EventArgs)
-        GridSetupUser.Visible = True
+        search.Visible = True
         AddUser.Visible = False
         btnAdd.Visible = True
         radionGender.Visible = True
@@ -899,6 +906,22 @@ Public Class Analysis_User
 
     End Sub
 
+    Protected Sub GridSetupUser_Sorting(sender As Object, e As GridViewSortEventArgs)
+        Me.ShowGrid(e.SortExpression)
+    End Sub
+
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        Me.ShowGrid()
+    End Sub
+
+    Private Property SortDirection As String
+        Get
+            Return IIf(ViewState("SortDirection") IsNot Nothing, Convert.ToString(ViewState("SortDirection")), "ASC")
+        End Get
+        Set(value As String)
+            ViewState("SortDirection") = value
+        End Set
+    End Property
 
 
     'Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click

@@ -138,10 +138,10 @@
         <asp:Button ID="BtnOK" runat="server" Text="Button" style="display:none;" />
 　　　　<asp:Button ID="Btn2OK" runat="server" Text="Button" style="display:none;" />   
                             
-                             <div id="dialog" title="message" style="display:none;"> >
-        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
-    </div>
+                            
                         </div>
+               
+        </div>
                       </div>
                       
                     </div>
@@ -152,9 +152,7 @@
                     </div>
                 </div>
               </div>
-            </div>
           
-      <%--</div>--%>
 
   <div style="visibility:hidden">
        <div class="form-group row">
@@ -178,9 +176,12 @@
                         </div>
                       
   </div>
-  </body>
-    </html>
- 
+                <div style="margin-top:500px;">
+       <div id="dialog" title="Recovery" style="display:none;"> >
+        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+    </div>
+    </div>
+
   <!--   Core JS Files   -->
   
    <%-- </body>--%>

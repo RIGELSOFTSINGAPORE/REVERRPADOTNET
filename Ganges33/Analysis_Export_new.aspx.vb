@@ -89,7 +89,7 @@ Public Class Analysis_Export_New
             '''''    .Items.Add("November")
             '''''    .Items.Add("December")
             '''''End With
-            nodata.Visible = False
+
             '***exportFileリストの設定***
             DropDownExportFile.Items.Clear()
             With DropDownExportFile
@@ -166,21 +166,7 @@ Public Class Analysis_Export_New
         'https://www.aspsnippets.com/Articles/Ascending-Descending-Sorting-using-Columns-Header-in-ASPNet-GridView.aspx
         'https://www.codeproject.com/Articles/1195569/Angular-Data-Grid-with-Sorting-Filtering-Export-to
         'https://forums.asp.net/t/1412788.aspx?How+to+Export+GridView+To+Word+Excel+PDF+CSV+in+ASP+Net
-        'Me.BindGrid(e.SortExpression)
-        'Dim dt As DataTable = TryCast(gvExportReport.DataSource, DataTable)
-        ' DataTable dt = gvExportReport.DataSource as DataTable
-
-        'If Not dt Is Nothing Then
-        '    If dt.Rows.Count > 0 Then
-        '        Dim dv As DataView = TryCast(gvExportReport.DataSource, DataTable)(dt)
-        '    End If
-        'End If
-
-
-        'DataView dv = New DataView(dt);
-        '                dv.Sort = e.SortExpression + "" + ConvertSortDirectionToSql(e.SortDirection);
-        '                GridView1.DataSource = dv;
-        '                GridView1.DataBind();
+        
 
     End Sub
 
@@ -235,15 +221,17 @@ Public Class Analysis_Export_New
                 lbltotal.Visible = True
                 lbltotal.Text = "Total No of Records : " & dtScDsrView.Rows.Count
                 lblTitle.Text = drpTaskExport.SelectedItem.Text
+                nodata.Visible = False
             Else
                 gvExportReport.AllowSorting = False
                 gvExportReport.DataBind()
-                'gvExportReport.Visible = False
+                gvExportReport.Visible = False
                 btnExport.Visible = False
                 txtPageSize.Visible = False
                 lblPagesize.Visible = False
                 lblTitle.Visible = False
                 lbltotal.Visible = False
+                nodata.Visible = True
             End If
         End If
 
@@ -2597,11 +2585,10 @@ Public Class Analysis_Export_New
                             End If
 
                         Next i
-                        nodata.Visible = False
+
                     End If
 
                 Else
-                    nodata.Visible = True
                     Call showMsg("There is no corresponding Activity_report information.", "")
                     Exit Sub
                 End If

@@ -49,17 +49,20 @@
                 //alert("hi");
                 var rowIndex = $(this)[0].getAttribute("data-commandargument");
                 ////alert(rowIndex);
-                window.open("Analysis_Servicecenter_popup.aspx?rowindex=" + rowIndex , 'Popup', 'height=500,width=800,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menu=no');
-
+                window.open("Analysis_Servicecenter_popup.aspx?rowindex=" + rowIndex, 'Popup', 'height=500,width=800,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menu=no');
             });
         });
-        
-            $(function () {
-                $('[id*=listShipBranch]').multiselect({
-                    includeSelectAllOption: true
-                });
-        });
-   
+
+        $(function () {
+            $('[id*=listShipBranch]').multiselect({
+
+                includeSelectAllOption: true,
+                maxHeight: 300,
+
+
+            });
+        }); 
+            
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -85,15 +88,29 @@
                   <div>
                   <asp:Button  ID="btnAdd" runat="server" class="btn  btn-primary" OnClick="btnAdd_Click" Text="Add User"/>
                       </div>
-                <%-- <br />--%>
-                       <div class="row">
+              
+                       <div class="row" runat="server" id="search">
                            <asp:Label ID="id" runat="server" Text="" Style="display:none "></asp:Label>
+                          <div class="col-sm-12">
+                           <div class="row col-sm-12">
+                            <div >
+                                <br />
+                       <label> User Id:</label>
+                                </div>
+                            <div >
+                                                                <br />
+<asp:TextBox ID="txtSearch" runat="server" CssClass="form-control"  AutoPostBack="true"></asp:TextBox>
+                                </div>
+   
+                                </div>
+                            </div>
                       <div class="col-md-12">
                     <div class="form-group">
                    
                         <br />
+                        <br />
                         <asp:GridView ID="GridSetupUser" runat="server" CellPadding="10"  PageSize="10" AutoGenerateColumns="false" 
-                            OnRowCommand="GridSetupUser_RowCommand" OnPageIndexChanging="GridSetupUser_PageIndexChanging" AllowPaging="True" Style="align-self: center" HeaderStyle-BackColor="#8e24aa" HeaderStyle-ForeColor="White"  CssClass="col-sm-12" ShowHeaderWhenEmpty="true" EmptyDataText="No records Found">
+                            OnRowCommand="GridSetupUser_RowCommand" AllowSorting="true" OnSorting="GridSetupUser_Sorting" OnPageIndexChanging="GridSetupUser_PageIndexChanging" AllowPaging="True" Style="align-self: center" HeaderStyle-BackColor="#8e24aa" HeaderStyle-ForeColor="White"  CssClass="col-sm-12" ShowHeaderWhenEmpty="true" EmptyDataText="No records Found">
                         
                        <EmptyDataTemplate>No Record Available</EmptyDataTemplate>
                 <EmptyDataRowStyle HorizontalAlign="Center" />
@@ -109,7 +126,7 @@
              
 
                     
-                    <asp:TemplateField HeaderText="User Id" ItemStyle-Width="150">
+                    <asp:TemplateField HeaderText="User Id" SortExpression="user_id" HeaderStyle-CssClass="sort" ItemStyle-Width="150">
                         
                         <ItemTemplate>
                             <asp:Label ID="UserId" runat="server" Text='<%# Eval("user_id") %>'></asp:Label>
@@ -124,7 +141,7 @@
                         </ItemTemplate>
                         <ItemStyle Width="150px"></ItemStyle>
                     </asp:TemplateField>
-                                <asp:TemplateField HeaderText="DELFG" ItemStyle-Width="150">
+                                <asp:TemplateField HeaderText="DELFG" HeaderStyle-CssClass="sort"  SortExpression="DELFG" ItemStyle-Width="150">
                         <ItemTemplate>
                             <asp:Label ID="DELFG" runat="server" Text='<%# Eval("DELFG") %>'></asp:Label>
                         </ItemTemplate>
@@ -133,7 +150,7 @@
                         </ItemTemplate>--%>
                         <ItemStyle Width="150px"></ItemStyle>
                     </asp:TemplateField>
-                     <asp:TemplateField HeaderText="Admin flage" ItemStyle-Width="150">
+                     <asp:TemplateField HeaderText="Admin flag" HeaderStyle-CssClass="sort"  SortExpression="admin_flg" ItemStyle-Width="150">
                         
                         <ItemTemplate>
                             <asp:Label ID="Adminflage" runat="server" Text='<%# Eval("admin_flg") %>'></asp:Label>
@@ -141,7 +158,7 @@
                         <ItemStyle Width="150px"></ItemStyle>
                     </asp:TemplateField>
 
-                     <asp:TemplateField HeaderText="User level" ItemStyle-Width="150">
+                     <asp:TemplateField HeaderText="User level" SortExpression="user_level" HeaderStyle-CssClass="sort"  ItemStyle-Width="150">
                        
                         <ItemTemplate>
                             <asp:Label ID="Userlevel" runat="server" Text='<%# Eval("user_level") %>'></asp:Label>
@@ -236,7 +253,7 @@
                                </div>
                               <div>
                      <asp:DropDownList ID="txtUserlvl" runat="server" CssClass="form-control " style="width: 270px; height:33px;" autocomplete="off">
-                       <asp:ListItem Text="Select..." Value="-1"></asp:ListItem>
+                       <asp:ListItem  Text="Select..." Value="-1"></asp:ListItem>
                          <asp:ListItem Text="0" Value="0"></asp:ListItem> 
                          <asp:ListItem Text="1" Value="1"></asp:ListItem>
                           <asp:ListItem Text="2" Value="2"></asp:ListItem>
@@ -557,39 +574,38 @@
 
                           <asp:Button ID="btnCreate" runat="server" OnClick="btnCreate_Click" class="btn btn-primary " text="Save"/>    
     <asp:Button ID="Edit" runat="server" Text="Save" class="btn btn-primary " />   
-                </div>
-                </div>
-                         
-    </div>
+                  <asp:Button ID="btnback" runat="server" CausesValidation="false" Text="Back" OnClick="btnback_Click" class="btn pull-right btn-primary " />
+           
+               
+     
     
-        <div>
-                       
-           <asp:Button ID="btnback" runat="server" CausesValidation="false" Text="Back" OnClick="btnback_Click" class="btn pull-right btn-primary " />
-                      </div> 
-                         
-    </div>
-</div>
-                   </div>
-                        
+                          </div>
                      </div>
-
-                        </div>
-
-</div>
                   </div>
-                  </div>                      </div>
+                </div>
+              </div>
+            </div>
+        </div>
+       </div>
+    </div>
+            </div>
+        </div>
+       </div>
 
 
     
-
-
-    <asp:Button ID="BtnCancel" runat="server" Text="Button" Style="display: none;" />
+        <asp:Button ID="BtnCancel" runat="server" Text="Button" Style="display: none;" />
         <asp:Button ID="BtnOK" runat="server" Text="Button" Style="display: none;" />
 
    
 
-    <div id="dialog" title="message" style="display: none;">
+   
+      <div style="margin-top:500px;">        
+   
+     <div id="dialog" title="User Management" style="display: none;">
        
         <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
     </div>
+ </div>
+ 
 </asp:Content>

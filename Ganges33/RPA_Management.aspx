@@ -6,7 +6,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
     <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/start/jquery-ui.css" rel="stylesheet">
      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-
+    	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
    
 
     <link href="assets/jquery-ui_theme.css" rel="stylesheet" />
@@ -22,6 +22,8 @@
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" name="msapplication-tap-highlight" content="IE=edge,chrome=1" />
   
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+
   <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
@@ -30,28 +32,40 @@
    <link href="assets/css/material-dashboard.css" rel="stylesheet" /> 
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
-    <style type="text/css">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 
-        .container{
-    -ms-overflow-style: none;
-    overflow: auto;
-}
-        
-       
-   </style>
-    <script>
-        var timeControl = document.querySelector('input[type="time"]');
-        timeControl.value='00:00'
+	<link href="assets/css/timepicker.css" rel="stylesheet" />
 
-        function myFunction() {
-            var x = document.getElementById("Duration").value;
-            document.getElementById("demo").innerHTML = x;
-        }
+    <script src="assets/timepicker.js"></script>
+     <script type="text/javascript">
+         $(document).ready(function () {
+             $(".simpleExample").timepicker();
+
+
+         });
     </script>
-</asp:Content>
+    <style>
+        .tme{
+            border-color: blanchedalmond;
+        border: 1px solid #d2d2d2;
+    width: 188px;
+    border-radius: 4px;
+    margin-left:0px
+        }
+
+        
+.my-timepicker-div .ampm-button{
+  width: 4rem;
+  height: 3rem;
+}
+
+    </style>
+
+   </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   
-   
+ 
    <div class="wrapper  col-sm-12 sidebar-wrapper position-fixed scrolbar contain" id="style-10">
    
     <div class="content" >
@@ -59,14 +73,17 @@
           <div class="row">
             <div class="col-md-12">
               <div class="card">
-                <div class="card-header card-header-primary">
+                <div class="card-header  card-header-primary">
                   <h3 class="card-title " >
                       <asp:label id="Header" Text="" runat="server" >                      </asp:label>
                   </h3>
                   <p class="card-category"></p>
                 </div>
                 <div class="card-body " >
-     <div runat="server" id="addfile">
+              
+                   
+   
+                          <div runat="server" id="addfile">
                     <div class="row">
                         <asp:Label ID="id" runat="server" Text="" Style="display:none "></asp:Label>
                         <div class="col-sm-2">
@@ -87,7 +104,7 @@
                            </label>
                            </div> <div>
                                  <br />
-                               <asp:FileUpload ID="filename" Class="serverlbl"  runat="server" AllowMultiple="True" />
+                               <asp:FileUpload ID="filename" Class="serverlbl" accept=".py"  runat="server" AllowMultiple="True" />
                                
                              <asp:TextBox ID="Textfilename" runat="server" value="" Height="33px" Width="100%" ReadOnly="true" class="form-control  serverlbl" />
                         </div>
@@ -114,7 +131,7 @@
                              </div>
                              <div>
                                    <br />
-                              <asp:TextBox ID="Testeddate" runat="server" value="" AutoCompleteType="Disabled"  Height="33px" Width="100%" class="form-file-upload date  serverlbl" />
+                              <asp:TextBox ID="Testeddate" runat="server" value="" AutoCompleteType="Disabled"  Height="33px" Width="100%" class="form-file-upload date serverlbl" />
                            
                             </div>
                         </div>
@@ -143,11 +160,15 @@
                                 Run Duration
                             </label>
                         </div>
-                        <div>
+                        <div >
+                            
                               <br />
+                            <asp:TextBox runat="server" class="simpleExample form-control" value="00:00" ID="Duration"></asp:TextBox>
                           
-                            <asp:TextBox ID="Duration" runat="server"  TextMode="Time" step="1" Height="33px" width="190px" class="form-file-upload duration  serverlbl" />
+                              <br />
                            
+                        
+
                         </div>
                     </div>
 
@@ -184,13 +205,12 @@
                                 <br />
                                 <asp:Button ID="btnUpload" runat="server" Text="Create" class="btn btn-primary " />
                                 <asp:Button ID="Edit" runat="server" Text="Save" class="btn btn-primary " />
+                                 <asp:Button ID="Back" runat="server" Text="Back" class="btn btn-primary pull-right" />
                     </div>
 
 
                     </div>
-                 <div>
-                        <asp:Button ID="Back" runat="server" Text="Back" class="btn btn-primary pull-right" />
-                    </div>     
+                    
                </div>
                     
                 <div runat="server" id="data">
@@ -198,58 +218,79 @@
                       <asp:Button ID="Create" runat="server" Text="Create" class="btn btn-primary " />
                   </div>
                     <div>
+                        <div class="row col-sm-12">
+
+                            <div  >
+                                <br />
+                       <label> Task name:</label>
+                                </div>
+                            
+                             
+                            <div>
+                                  <br />
+<asp:TextBox ID="txtSearch" runat="server" CssClass="form-control"  AutoPostBack="true"></asp:TextBox>
+                                </div>
+
+                            </div>                      
                          <br />
-                        <asp:GridView ID="getdata" runat="server" AutoGenerateColumns="false" CellPadding="10"   AllowPaging="true" PageSize="10" OnPageIndexChanging="getdata_PageIndexChanging" OnRowCommand="getdata_RowCommand"
-                Style="align-self: center" HeaderStyle-BackColor="#8e24aa" HeaderStyle-ForeColor="White"  CssClass="col-sm-12" ShowHeaderWhenEmpty="true" EmptyDataText="No records Found">
+                         <br />
+                   <br />
+                        <br />
+                        <asp:GridView ID="getdata" runat="server"  AutoGenerateColumns="false" CellPadding="10" AllowSorting="true"   AllowPaging="true" PageSize="10" OnPageIndexChanging="getdata_PageIndexChanging" OnRowCommand="getdata_RowCommand"
+                Style="align-self: center" HeaderStyle-BackColor="#8e24aa" HeaderStyle-ForeColor="White" OnSorting="getdata_Sorting"  CssClass="col-sm-12" ShowHeaderWhenEmpty="true" EmptyDataText="No records Found">
                 <EmptyDataTemplate>No Record Available</EmptyDataTemplate>
                 <EmptyDataRowStyle HorizontalAlign="Center" />
                 <Columns>
              
 
-                    <asp:TemplateField HeaderText="TASK_NAME" ItemStyle-Width="150">
+                    <asp:TemplateField HeaderText="TASK NAME" HeaderStyle-CssClass="sort" SortExpression="TASK_NAME" >
                         <ItemTemplate>
                             <asp:Label ID="TASK_NAME" runat="server" Text='<%# Eval("TASK_NAME") %>'></asp:Label>
                         </ItemTemplate>
                         <ItemTemplate>
-                            <asp:Label ID="TASK_NAME" runat="server" Text='<%# Eval("TASK_NAME") %>'></asp:Label>
+                            <asp:Label ID="TASK_NAME" runat="server" Width="250px" Text='<%# Eval("TASK_NAME") %>'></asp:Label>
                         </ItemTemplate>
                         <ItemStyle Width="150px"></ItemStyle>
                     </asp:TemplateField>
-                    <asp:TemplateField HeaderText="FILE_NAME" ItemStyle-Width="150">
+                    <asp:TemplateField HeaderText="FILE NAME" HeaderStyle-CssClass="sort" SortExpression="FILE_NAME" >
                         
                         <ItemTemplate>
-                            <asp:Label ID="FILE_NAME" runat="server" Text='<%# Eval("FILE_NAME") %>'></asp:Label>
+                            <asp:Label ID="FILE_NAME" runat="server" Width="200px" Text='<%# Eval("FILE_NAME") %>'></asp:Label>
                         </ItemTemplate>
                         <ItemStyle Width="150px"></ItemStyle>
                     </asp:TemplateField>
 
-                    <asp:TemplateField HeaderText="Path" ItemStyle-Width="150">
+                    <asp:TemplateField HeaderText="Path" >
                        
                         <ItemTemplate>
-                            <asp:Label ID="Path" runat="server" Text='<%# Eval("Path") %>'></asp:Label>
+                            <asp:Label ID="Path" runat="server"  Width="200px" Text='<%# Eval("Path") %>'></asp:Label>
                         </ItemTemplate>
                         <ItemStyle Width="150px"></ItemStyle>
                     </asp:TemplateField>
 
-                     <asp:TemplateField HeaderText="TEST_STATUS" ItemStyle-Width="150">
+                     <asp:TemplateField HeaderText="TEST STATUS" HeaderStyle-CssClass="sort" SortExpression="TEST_STATUS" >
                         
                         <ItemTemplate>
-                            <asp:Label ID="TEST_STATUS" runat="server" Text='<%# Eval("TEST_STATUS") %>'></asp:Label>
+                            <asp:Label ID="TEST_STATUS" runat="server"  Width="150px"  Text='<%# Eval("TEST_STATUS") %>'></asp:Label>
                         </ItemTemplate>
                         <ItemStyle Width="150px"></ItemStyle>
                     </asp:TemplateField>
 
-                     <asp:TemplateField HeaderText="STATUS" ItemStyle-Width="150">
+                     <asp:TemplateField HeaderText="STATUS" HeaderStyle-CssClass="sort" SortExpression="STATUS">
                        
                         <ItemTemplate>
-                            <asp:Label ID="STATUS" runat="server" Text='<%# Eval("STATUS") %>'></asp:Label>
+                            <asp:Label ID="STATUS" runat="server"  Width="50px"  Text='<%# Eval("STATUS") %>'></asp:Label>
                         </ItemTemplate>
                         <ItemStyle Width="150px"></ItemStyle>
                     </asp:TemplateField>
-
-                      <asp:TemplateField HeaderText="EDIT" ItemStyle-Width="150">
+                 <%--    <asp:TemplateField>
+            <ItemTemplate>
+                <asp:Button Text="Edit" runat="server" CommandName="Select" CommandArgument="<%# Container.DataItemIndex %>" />
+            </ItemTemplate>
+        </asp:TemplateField>--%>
+                      <asp:TemplateField HeaderText="" SortExpression="TASKID">
                         <ItemTemplate>
-                            <asp:LinkButton ID="TASKID" runat="server" CommandArgument='<%# Bind("TASKID") %>' CommandName="goto" Text="Edit"></asp:LinkButton>
+                            <asp:LinkButton ID="TASKID" runat="server" CommandArgument='<%# Eval("TASKID") %>' commandSource='<%# Eval("TASKID") %>' CommandName="goto" Text='Edit'></asp:LinkButton>
                         </ItemTemplate>
                         <ItemStyle Width="150px"></ItemStyle>
                     </asp:TemplateField>
@@ -271,10 +312,11 @@
         <asp:Button ID="BtnCancel" runat="server" Text="Button" Style="display: none;" />
         <asp:Button ID="BtnOK" runat="server" Text="Button" Style="display: none;" />
 
-   
-
-    <div id="dialog" title="message" style="display: none;">
+   <div style="margin-top:500px;">        
+   <div id="dialog" title="RPA Management" style="display: none;">
        
         <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
     </div>
+ </div>   
+
 </asp:Content>

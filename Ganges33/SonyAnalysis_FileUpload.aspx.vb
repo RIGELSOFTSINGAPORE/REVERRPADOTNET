@@ -82,7 +82,7 @@ Public Class SonyAnalysis_FileUpload
 
     End Sub
 
-    Protected Sub btnUpload_Click(sender As Object, e As ImageClickEventArgs) Handles btnUpload.Click
+    Protected Sub btnUpload_Click(sender As Object, e As EventArgs) Handles btnUpload.Click
         '''''***セッション情報取得***
         ''''Dim ShipName As String = Session("ship_Name")
         ''''Dim shipCode As String = Session("ship_code")

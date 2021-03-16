@@ -14,6 +14,7 @@ Namespace Ganges33.model
 
 
             DELFG = String.Empty
+            SHIP_NAME_1 = String.Empty
             SHIP_NAME = String.Empty
             SHIP_INFO = String.Empty
             SHIP_MANAGER = String.Empty
@@ -48,6 +49,7 @@ Namespace Ganges33.model
 
 
         Public Property DELFG As String
+        Public Property SHIP_NAME_1 As String
         Public Property SHIP_NAME As String
         Public Property SHIP_INFO As String
         Public Property SHIP_MANAGER As String

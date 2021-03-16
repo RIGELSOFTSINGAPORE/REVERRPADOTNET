@@ -280,7 +280,10 @@ Public Class MUserControl
             sqlStr = sqlStr & "Where @User_id = MUD.user_id"
             dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@User_id", queryParams.UserId))
         End If
-
+        If Not String.IsNullOrEmpty(queryParams.User_id) Then
+            sqlStr = sqlStr & "Where  MD.User_id LIKE @User_id + '%'"
+            dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@User_id", queryParams.User_id))
+        End If
         sqlStr = sqlStr & " order by  MD.CRTDT desc "
 
         Dim _DataTable As DataTable = dbConn.GetDataSet(sqlStr)

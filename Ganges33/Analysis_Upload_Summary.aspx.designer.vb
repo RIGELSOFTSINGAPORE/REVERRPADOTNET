@@ -32,6 +32,15 @@ Partial Public Class Analysis_Upload_Summary
     Protected WithEvents lstLocation As Global.System.Web.UI.WebControls.ListBox
 
     '''<summary>
+    '''drpStatus control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents drpStatus As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
     '''TextDateFrom control.
     '''</summary>
     '''<remarks>
@@ -48,15 +57,6 @@ Partial Public Class Analysis_Upload_Summary
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents TextDateTo As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''drpStatus control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents drpStatus As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''chkIndividual control.

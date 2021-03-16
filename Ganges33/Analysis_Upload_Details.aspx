@@ -48,7 +48,9 @@
 
             <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     
-         
+           <asp:UpdatePanel ID="UpdatePanel1"
+                             runat="server">
+                <ContentTemplate>
    <div class="wrapper  col-sm-12 sidebar-wrapper position-fixed scrolbar contain" id="style-10">
    
     <div class="content" >
@@ -86,7 +88,7 @@
                       <br />
                     <div>
                         <asp:Button ID="btnExport" Text="Export" runat="server" class="btn btn-primary " Style="margin-left: 1100px;" Visible="false"/>
-                   <asp:Button ID="btnClose"  Text="Close" runat="server" class="btn btn-primary "   />
+                   <asp:Button ID="btnClose"  Text="Close" runat="server" OnClientClick="javascript:window.close()" class="btn btn-primary "   />
                  
                     </div>
 
@@ -157,6 +159,9 @@
   <asp:Label ID="lblName" runat="server" CssClass="auto-style186"></asp:Label>
                       <asp:Label ID="lblLoc" runat="server" CssClass="auto-style186"></asp:Label>
        </div>
+                    </ContentTemplate>
+               </asp:UpdatePanel>
+
         </form>
     </body>
     </html>

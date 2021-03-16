@@ -13,11 +13,32 @@ Public Class RpamanagementControl
         Dim RpamanagementModel As RpamanagementModel = New RpamanagementModel()
         Log4NetControl.ComInfoLogWrite(Log4NetControl.UserID)
         Dim dbConn As DBUtility = New DBUtility()
+        Dim sqlStr As String = "SELECT  * from RPA_TASK_MST "
+        If queryParams.TASKID <> 0 Then
+            sqlStr = sqlStr & "Where @TASKID = TASKID "
+            dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@TASKID", queryParams.TASKID))
+        End If
+        If Not String.IsNullOrEmpty(queryParams.TASK_NAME) Then
+            sqlStr = sqlStr & "Where  TASK_NAME LIKE @TASK_NAME + '%'"
+            dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@TASK_NAME", queryParams.TASK_NAME))
+        End If
+        sqlStr = sqlStr & " order by TASKID ASC  "
+        Dim _DataTable As DataTable = dbConn.GetDataSet(sqlStr)
+        dbConn.CloseConnection()
+        Return _DataTable
+    End Function
+    Public Function Editinfo(queryParams As RpamanagementModel) As DataTable
+        Dim DateTimeNow As DateTime = DateTime.Now
+        Dim dtNow As DateTime = DateTimeNow.AddMinutes(ConfigurationManager.AppSettings("TimeDiff"))
+        Dim RpamanagementModel As RpamanagementModel = New RpamanagementModel()
+        Log4NetControl.ComInfoLogWrite(Log4NetControl.UserID)
+        Dim dbConn As DBUtility = New DBUtility()
         Dim sqlStr As String = "SELECT * from RPA_TASK_MST "
         If queryParams.TASKID <> 0 Then
             sqlStr = sqlStr & "Where @TASKID = TASKID "
             dbConn.sqlCmd.Parameters.Add(CommonControl.GetNullableParameter("@TASKID", queryParams.TASKID))
         End If
+        sqlStr = sqlStr & " order by TASKID ASC  "
         Dim _DataTable As DataTable = dbConn.GetDataSet(sqlStr)
         dbConn.CloseConnection()
         Return _DataTable

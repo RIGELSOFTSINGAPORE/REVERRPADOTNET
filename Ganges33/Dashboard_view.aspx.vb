@@ -2,10 +2,15 @@
 Imports System.Text
 Imports System.Data.SqlClient
 Imports Ganges33.Ganges33.logic
+Imports Ganges33.Ganges33.model
+
 Public Class Dashboard_view
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Dim userName As String = Session("user_Name")
+        Dim userLevel As String = Session("user_level")
+        Dim adminFlg As Boolean = Session("admin_Flg")
         'CustomerVisit.Visible = False
         'CallRegisterd.Visible = False
         'Repaircompleted.Visible = False
@@ -21,16 +26,26 @@ Public Class Dashboard_view
         'Chart6.Visible = False
         'Chart7.Visible = False
         'Chart18.Visible = False
+        Dim userid As String = Session("user_id")
+        If userid = "" Then
+            Response.Redirect("Login.aspx")
+        End If
+
         If IsPostBack = False Then
+            Dim servicecode As String = Session("ship_code")
+
+            DropdownList1.SelectedValue = servicecode
             DropDownYear.SelectedValue = Today.Year
             Dim month = Today.Month.ToString
             Dim mon1 As String
             If month.Length = 1 Then
                 mon1 = "0" & month
             End If
+            InitDropDownList1()
             DropDownMonth.SelectedValue = mon1
             getdata()
         Else
+
             getdata()
         End If
     End Sub
@@ -46,6 +61,7 @@ Public Class Dashboard_view
             Dim userLevel As String = Session("user_level")
             Dim adminFlg As Boolean = Session("admin_Flg")
 
+
             'トランザクション開始＆コネクションオープン
             Dim trn As SqlTransaction = con.BeginTransaction(IsolationLevel.ReadCommitted)
             'Dim mon As String
@@ -57,14 +73,45 @@ Public Class Dashboard_view
             'End If
 
             'mon = Year & "/" & mon1.ToString
-
+            ' Dim list = DropdownList1.
             Dim Year = DropDownYear.SelectedValue
             Dim Mon = DropDownMonth.SelectedValue
+            Dim center As String
+            Dim center1 As String
 
             Dim Month = Year & "/" & Mon
+            If userLevel = "0" Or " 1" Or "2" Or "3" Or "4" Then
+                If DropdownList1.SelectedValue = "All" Then
+                    For i As Integer = 0 To DropdownList1.Items.Count - 1
 
-            Dim strSQL = "If EXISTS (SELECT * FROM Activity_report WHERE month = '" & Month & "')  BEGIN"
-            strSQL = strSQL & " select day   ,(Customer_Visit),(Call_Registerd),(repair_completed),(goods_delivered),(Pending_Calls),(Cancelled_Calls) from Activity_report where month = '" & Month & "' order by day  END"
+
+                        'center1 = center1 + DropdownList1.Items(i).Value & ","
+                        center1 += "'" + DropdownList1.Items(i).Value + "',"
+
+
+                        center = Left(center1, Len(center1) - 1)
+
+                    Next
+
+                Else
+                    center = DropdownList1.SelectedItem.Value
+                End If
+            Else
+                For i As Integer = 0 To DropdownList1.Items.Count - 1
+
+
+                    'center1 = center1 + DropdownList1.Items(i).Value & ","
+                    center1 += "'" + DropdownList1.Items(i).Value + "',"
+
+
+                    center = Left(center1, Len(center1) - 1)
+
+                Next
+            End If
+
+
+            Dim strSQL = "If EXISTS (SELECT * FROM Activity_report WHERE month = '" & Month & "' and location in (" & center & "))  BEGIN"
+            strSQL = strSQL & " select day   ,(Customer_Visit),(Call_Registerd),(repair_completed),(goods_delivered),(Pending_Calls),(Cancelled_Calls) from Activity_report where month = '" & Month & "' and  location in (" & center & ") order by day  END"
             strSQL = strSQL & " ELSE BEGIN Select  TempTableName.Day, TempTableName1.Customer_Visit,TempTableName2.Call_Registerd,TempTableName3.repair_completed,TempTableName4.goods_delivered,"
             strSQL = strSQL & " TempTableName5.Pending_Calls, TempTableName6.Cancelled_Calls From "
             strSQL = strSQL & " (VALUES(1),(2),(3),(4),(5),(6),(7),(9),(10),(11),(12),(13),(14),(15),(16),(17),(18),(19),(20),(21),(22),(23),(24),(25),(26),(27),(28),(29),(30) ) AS TempTableName (Day),"
@@ -89,9 +136,9 @@ Public Class Dashboard_view
             'Dim ds2 As New DataSet
             'Adapter1.Fill(ds2)
 
-            Dim strSQLsales = "If EXISTS (SELECT * FROM Wty_Excel WHERE  year(Delivery_Date) ='" & Year & "' and month(Delivery_Date) = '" & Mon & "')"
+            Dim strSQLsales = "If EXISTS (SELECT * FROM Wty_Excel WHERE  year(Delivery_Date) ='" & Year & "' and month(Delivery_Date) = '" & Mon & "' and  Branch_code in (" & center & "))"
             strSQLsales = strSQLsales & " BEGIN select Day(delivery_Date)Delivery_Date,count(*)sales from Wty_Excel "
-            strSQLsales = strSQLsales & " where year(Delivery_Date) = '" & Year & "' and month(Delivery_Date) = '" & Mon & "' group by Delivery_Date END ELSE BEGIN SELECT "
+            strSQLsales = strSQLsales & " where year(Delivery_Date) = '" & Year & "' and month(Delivery_Date) = '" & Mon & "' and  Branch_code in (" & center & ") group by Delivery_Date END ELSE BEGIN SELECT "
             strSQLsales = strSQLsales & " TempTableName.Day as Delivery_Date ,TempTableName1.sales from (VALUES(1),(2),(3),(4),(5),(6),(7),(9),(10),(11),(12),(13),(14),(15),(16),(17),(18),(19),(20),(21),(22),(23),(24), "
             strSQLsales = strSQLsales & " (25),(26),(27),(28),(29),(30) ) AS TempTableName (Day),(VALUES (0)) TempTableName1 (sales) END"
             Dim sqlSelect1 As New SqlCommand(strSQLsales, con, trn)
@@ -137,7 +184,8 @@ Public Class Dashboard_view
                 PendingCalls.Visible = True
                 CancelledCalls.Visible = True
                 Sales.Visible = True
-
+                DropdownList1.Visible = True
+                servicecenter.Visible = True
                 Chart1.Visible = True
                 Chart2.Visible = True
                 Chart3.Visible = True
@@ -153,7 +201,8 @@ Public Class Dashboard_view
                 GoodsDelivered.Visible = True
                 PendingCalls.Visible = True
                 CancelledCalls.Visible = True
-
+                DropdownList1.Visible = False
+                servicecenter.Visible = False
 
                 Chart1.Visible = True
                 Chart2.Visible = True
@@ -169,18 +218,19 @@ Public Class Dashboard_view
                 CustomerVisit.Visible = False
                 CallRegisterd.Visible = False
                 Repaircompleted.Visible = False
-                    GoodsDelivered.Visible = False
-                    PendingCalls.Visible = False
-                    CancelledCalls.Visible = False
-                    Sales.Visible = False
+                GoodsDelivered.Visible = False
+                PendingCalls.Visible = False
+                CancelledCalls.Visible = False
+                Sales.Visible = False
 
-
-                    Chart1.Visible = False
-                    Chart2.Visible = False
-                    Chart3.Visible = False
-                    Chart4.Visible = False
-                    Chart5.Visible = False
-                    Chart6.Visible = False
+                DropdownList1.Visible = False
+                servicecenter.Visible = False
+                Chart1.Visible = False
+                Chart2.Visible = False
+                Chart3.Visible = False
+                Chart4.Visible = False
+                Chart5.Visible = False
+                Chart6.Visible = False
                 Chart7.Visible = False
                 Chart18.Visible = False
 
@@ -209,11 +259,85 @@ Public Class Dashboard_view
         End Try
     End Sub
 
-    Private Sub DropDownMonth_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDownMonth.SelectedIndexChanged
-        'getdata()
+    Private Sub InitDropDownList1()
+        Log4NetControl.ComInfoLogWrite(Session("UserName"))
+        Dim userName As String = Session("user_id") 'Session("user_Name")
+        'Clear the branch location
+        DropdownList1.Items.Clear()
+        'For store the branch codes in array
+        Dim shipCodeAll() As String
+        'Verify entered user and password correct or not with the database
+        Dim _UserInfoModel As UserInfoModel = New UserInfoModel()
+        Dim _UserInfoControl As UserInfoControl = New UserInfoControl()
+        _UserInfoModel.UserId = userName
+        '_UserInfoModel.Password = TextPass.Text.ToString().Trim()
+        Dim UserInfoList As List(Of UserInfoModel) = _UserInfoControl.SelectUserInfo(_UserInfoModel)
+        'User Doesn't exist
+        If UserInfoList Is Nothing OrElse UserInfoList.Count = 0 Then
+            Call showMsg("The username / password incorrect. Please try again", "")
+            Exit Sub
+        End If
+        'Loading All Branch Codes and stored in a array for the session
+        Dim _ShipBaseControl As ShipBaseControl = New ShipBaseControl()
+        Dim dt As DataTable = _ShipBaseControl.SelectBranchCode()
+        ReDim shipCodeAll(dt.Rows.Count - 1)
+        Dim i As Integer = 0
+        For Each dr As DataRow In dt.Rows
+            If dr("ship_code") IsNot DBNull.Value Then
+                shipCodeAll(i) = dr("ship_code")
+            End If
+            i = i + 1
+        Next
+        Log4NetControl.ComInfoLogWrite(Session("UserName"))
+        Dim codeMasterControl As CodeMasterControl = New CodeMasterControl()
+        'QryFlag 
+        'QryFlag 1 - # Specific Filter
+        'QryFlag 2 - # All records
+        Dim QryFlag As Integer = 1 'Specific Records
+        If (UserInfoList(0).UserLevel = CommonConst.UserLevel0) Or
+                        (UserInfoList(0).UserLevel = CommonConst.UserLevel1) Or
+                        (UserInfoList(0).UserLevel = CommonConst.UserLevel2) Or
+                (UserInfoList(0).AdminFlg = True) Then
+            QryFlag = 2
+        End If
+        Dim codeMasterList As List(Of CodeMasterModel) = codeMasterControl.SelectBranchSSCCreditInfo(QryFlag, "'" & UserInfoList(0).Ship1.Replace(",", "','") & "'")
+
+        ' Dim codeMasterControl As CodeMasterControl = New CodeMasterControl()
+        'Loading branch name and code in the dropdown list
+        '  Dim codeMasterList As List(Of CodeMasterModel) = codeMasterControl.SelectBranchMaster()
+        'Dim codeMaster1 As CodeMasterModel = New CodeMasterModel()
+        'codeMaster1.CodeValue = "Select Branch"
+        'codeMaster1.CodeDispValue = "Select Branch"
+        'codeMasterList.Insert(0, codeMaster1)
+
+        Dim codeMaster2 As CodeMasterModel = New CodeMasterModel()
+        codeMaster2.CodeValue = "All"
+        codeMaster2.CodeDispValue = "All"
+        codeMasterList.Insert(0, codeMaster2)
+
+
+
+        Me.DropdownList1.DataSource = codeMasterList
+        Me.DropdownList1.DataTextField = "CodeDispValue"
+        Me.DropdownList1.DataValueField = "CodeValue"
+        Me.DropdownList1.DataBind()
+    End Sub
+    Protected Sub showMsg(ByVal Msg As String, ByVal msgChk As String)
+
+        lblMsg.Text = Msg
+        Dim sScript As String
+
+        If msgChk = "CancelMsg" Then
+            'OKとキャンセルボタン
+            sScript = "$(function () {$(""#dialog"" ).dialog({width: 400,buttons:{""OK"": function () {$(this).dialog('close');$('[id$=""BtnOK""]').click();},""CANCEL"": function () {$(this).dialog('close');$('[id$=""BtnCancel""]').click();}}});});"
+        Else
+            'OKボタンのみ
+            sScript = "$(function () { $( ""#dialog"" ).dialog({width: 400, buttons: {""OK"": function () {$(this).dialog('close');}}});});"
+        End If
+
+        'JavaScriptの埋め込み
+        ClientScript.RegisterStartupScript(Me.GetType(), "startup", sScript, True)
+
     End Sub
 
-    Private Sub DropDownYear_SelectedIndexChanged(sender As Object, e As EventArgs) Handles DropDownYear.SelectedIndexChanged
-        ' getdata()
-    End Sub
 End Class

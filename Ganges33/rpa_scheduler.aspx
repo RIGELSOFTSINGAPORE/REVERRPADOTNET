@@ -286,19 +286,19 @@
             </div>
     </div>
            </div>
-    <div id="dialog" title="message" style="display:none;"> >
-        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
-    </div>
 
+      
                   
                </div>
                </div>
-               </div>
-              
                       
                  
 					
                 
-    
+         <div style="margin-top:500px;">        
+      <div id="dialog" title="RPA Sheduler" style="display:none;"> >
+        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+    </div>
+    </div>
 </asp:Content>
 

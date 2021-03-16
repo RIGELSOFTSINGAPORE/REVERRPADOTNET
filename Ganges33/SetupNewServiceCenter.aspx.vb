@@ -20,7 +20,10 @@ Public Class SetupNewServiceCenter
         Dim adminFlg As Boolean = Session("admin_Flg")
         addfile.Visible = False
         Header.Text = "Setup New Servicecenter"
-        pageload()
+        If IsPostBack = False Then
+            pageload()
+        End If
+
     End Sub
 
     Protected Sub showMsg(ByVal Msg As String, ByVal msgChk As String)
@@ -41,12 +44,20 @@ Public Class SetupNewServiceCenter
 
     End Sub
 
-    Public Sub pageload()
+    Public Sub pageload(Optional ByVal sortExpression As String = Nothing)
         Dim SetupNewServiceCenterModel As New SetupNewServiceCenterModel
         Dim SetupNewServiceCentercontrol As New SetupNewServiceCenterControl
+        SetupNewServiceCenterModel.SHIP_NAME_1 = txtSearch.Text
         Dim _Datatble As DataTable = SetupNewServiceCentercontrol.ShowSetupNewServiceCenterGrid(SetupNewServiceCenterModel)
         Dim _dataview As New DataView(_Datatble)
-        getdata.DataSource = _dataview
+        If (Not (sortExpression) Is Nothing) Then
+            Dim dv As DataView = _Datatble.AsDataView
+            Me.SortDirection = IIf(Me.SortDirection = "ASC", "DESC", "ASC")
+            dv.Sort = sortExpression & " " & Me.SortDirection
+            getdata.DataSource = dv
+        Else
+            getdata.DataSource = _Datatble
+        End If
         getdata.DataBind()
     End Sub
 
@@ -126,8 +137,18 @@ Public Class SetupNewServiceCenter
         SetupNewServiceCenterModel.ZIP = Zip.Text
         SetupNewServiceCenterModel.E_MAIL = Email.Text
         SetupNewServiceCenterModel.SHIP_SERVICE = ShipService.Text
-        SetupNewServiceCenterModel.OPEN_TIME = OpenTime.Text
-        SetupNewServiceCenterModel.CLOSE_TIME = CloseTime.Text
+        Dim starttime = OpenTime.Text
+        Dim optime = starttime.Substring(0, 5)
+        SetupNewServiceCenterModel.OPEN_TIME = optime
+        If CloseTime.Text = "" Then
+
+            SetupNewServiceCenterModel.CLOSE_TIME = CloseTime.Text
+        Else
+            Dim endtime = CloseTime.Text
+            Dim cltime = endtime.Substring(0, 5)
+            SetupNewServiceCenterModel.CLOSE_TIME = cltime
+        End If
+
         SetupNewServiceCenterModel.OPENING_DATE = OpeningDate.Text
         SetupNewServiceCenterModel.CLOSING_DATE = ClosingDate.Text
         SetupNewServiceCenterModel.SHIP_CODE = ShipCode1.Text
@@ -207,8 +228,18 @@ Public Class SetupNewServiceCenter
         SetupNewServiceCenterModel.ZIP = Zip.Text
         SetupNewServiceCenterModel.E_MAIL = Email.Text
         SetupNewServiceCenterModel.SHIP_SERVICE = ShipService.Text
-        SetupNewServiceCenterModel.OPEN_TIME = OpenTime.Text
-        SetupNewServiceCenterModel.CLOSE_TIME = CloseTime.Text
+        Dim starttime = OpenTime.Text
+        Dim optime = starttime.Substring(0, 5)
+        SetupNewServiceCenterModel.OPEN_TIME = optime
+        If CloseTime.Text = "" Then
+
+            SetupNewServiceCenterModel.CLOSE_TIME = CloseTime.Text
+        Else
+            Dim endtime = CloseTime.Text
+            Dim cltime = endtime.Substring(0, 5)
+            SetupNewServiceCenterModel.CLOSE_TIME = cltime
+        End If
+
         SetupNewServiceCenterModel.OPENING_DATE = OpeningDate.Text
         SetupNewServiceCenterModel.CLOSING_DATE = ClosingDate.Text
         SetupNewServiceCenterModel.SHIP_CODE = ShipCode1.Text
@@ -295,6 +326,13 @@ Public Class SetupNewServiceCenter
             End If
             If Not IsDBNull(_Datatble.Rows(0)("opening_date")) Then
                 OpeningDate.Text = _Datatble.Rows(0)("opening_date")
+                'Dim starttime = OpenTime.Text
+                'Dim optime = starttime.Substring(0, 5)
+                'SetupNewServiceCenterModel.OPEN_TIME = optime
+                'Dim endtime = OpenTime.Text
+                'Dim cltime = endtime.Substring(0, 5)
+                'SetupNewServiceCenterModel.CLOSE_TIME = cltime
+
             End If
             If Not IsDBNull(_Datatble.Rows(0)("closing_date")) Then
                 ClosingDate.Text = _Datatble.Rows(0)("closing_date")
@@ -394,4 +432,20 @@ Public Class SetupNewServiceCenter
         delfld.Checked = False
     End Sub
 
+    Protected Sub getdata_Sorting(sender As Object, e As GridViewSortEventArgs)
+        Me.pageload(e.SortExpression)
+    End Sub
+
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+        Me.pageload()
+    End Sub
+
+    Private Property SortDirection As String
+        Get
+            Return IIf(ViewState("SortDirection") IsNot Nothing, Convert.ToString(ViewState("SortDirection")), "ASC")
+        End Get
+        Set(value As String)
+            ViewState("SortDirection") = value
+        End Set
+    End Property
 End Class

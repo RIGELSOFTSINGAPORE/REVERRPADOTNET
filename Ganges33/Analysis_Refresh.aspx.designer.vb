@@ -140,15 +140,6 @@ Partial Public Class Analysis_Refresh
     Protected WithEvents Btn2OK As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''lblMsg control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lblMsg As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
     '''lblLoc control.
     '''</summary>
     '''<remarks>
@@ -165,4 +156,13 @@ Partial Public Class Analysis_Refresh
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblName As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblMsg control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblMsg As Global.System.Web.UI.WebControls.Label
 End Class

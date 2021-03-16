@@ -59,12 +59,14 @@
                             <div class="col-sm-3">
                              <label class=" bmd-label-floating">Active Month</label>
                                 </div>
+                         <%--   <div class="col-sm-3">
+                                </div>--%>
                             <div class="col-sm-3">
-                         <asp:Label ID="lblMonNow" runat="server" CssClass="serverlbl bmd-label-floating"></asp:Label>
-                                </div>
-                            <div class="col-sm-3">
+                                <asp:Label ID="lblMonNow" runat="server" CssClass="serverlbl bmd-label-floating"></asp:Label>
+                         
                       <asp:DropDownList ID="DropDownActiveMonth"  runat="server" CssClass="Form-control " style=" height:33px;"  AutoPostBack="True">
                       </asp:DropDownList>
+
                                 </div>
                       <div class="col-sm-1">
                    
@@ -237,10 +239,8 @@
           </div>
         </div>
        </div>
-    <div id="dialog" title="message" style="display:none;"> >
-        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
-    </div>
-
+   
+  
 
     <div style="visibility:hidden">
         
@@ -267,4 +267,9 @@
                           </div>
                         </div>
     </div>
+       <div style="margin-top:500px;">
+      <div id="dialog" title="Activity report" style="display:none;"> >
+        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+    </div>
+        </div>
 </asp:Content>

@@ -357,8 +357,11 @@
      </div>
     <asp:Button ID="btnUploadPrg" runat="server" style="display:none;" class="btn btn-primary btn-lbl"  Text="New Task (Python Code)  " />
             
-     <div id="dialog" title="message" style="display:none;"> >
+  
+          <div style="margin-top:500px;">        
+       <div id="dialog" title="RPA Task" style="display:none;"> >
         <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+    </div>
     </div>
 
 </asp:Content>

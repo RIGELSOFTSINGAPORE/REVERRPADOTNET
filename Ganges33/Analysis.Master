@@ -56,6 +56,11 @@ visibility: visible;
 p:hover {
   color: black;
 }
+   .container{
+    -ms-overflow-style: none;
+    overflow: auto;
+
+}
 
  html, body { overflow: hidden; }
        
@@ -121,6 +126,16 @@ p.btn_active:hover
 	outline: 0;
 }
 
+        .asc:after {
+    content: ' \25BC';
+}
+       .dec:after {
+    content: ' \25B2';
+}
+       .sort:after {
+    content: ' \21C5';
+    margin-left:10px;
+}
     </style>
 
 </head>
@@ -263,7 +278,7 @@ p.btn_active:hover
           <p runat="server" id="rpa">RPA</p></a>
                     <div class="collapse" id="submenu4" aria-expanded="false">
                         <ul class="flex-column pl-2 nav">
-                             <li class="nav-item" style="margin-left: -5px;"><a class="nav-link py-0" id="CreateRPA" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Create RPA Task</p></a></li>
+                             <li class="nav-item" style="margin-left: -5px;"><a class="nav-link py-0"  CausesValidation="false" id="CreateRPA" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Create RPA Task</p></a></li>
                            
                               <li class="nav-item"><a class="nav-link py-0" ID="btnscheduler"  CausesValidation="false" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Scheduler</p></a></li>
                               <li class="nav-item"><a class="nav-link py-0" ID="btnRpaLog"  CausesValidation="false" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Rpa Log</p></a></li>

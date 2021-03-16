@@ -247,10 +247,16 @@
         
                            </div>
                     </div> 
+                        <div class="col-sm-12">
+                            <div >
+                                  <label runat="server" id="nodata">No data found</label>
+                            </div>
+                        </div>
                         <div class="row col-sm-12">
+                          
                             <div class="col-sm-10">
                                <br /> 
-                                <label runat="server" id="nodata">No data found</label>
+                                
                       <asp:GridView ID="gvExportReport" runat="server" AutoGenerateColumns="false" AllowPaging="true"
             AllowSorting="true" OnSorting="OnSorting" OnPageIndexChanging="OnPageIndexChanging" 
             PageSize="10"  RowStyle-Wrap="false"  ShowHeaderWhenEmpty="true" HeaderStyle-Wrap="false">
@@ -304,10 +310,12 @@
 
       
     <div>
-    <div id="dialog" title="message" style="display:none;">
-        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
-         
-    </div>
+    
+
+     
+    
+
+ 
         </div>
              
                     </div>
@@ -335,5 +343,11 @@
                         </div>
                       
     </div>
-   
+         
+   <div style="margin-top:500px;">
+      <div id="dialog" title="Analysis upload verification" style="display:none;">
+        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+         
+    </div>
+    </div>
 </asp:Content>

@@ -1104,10 +1104,6 @@
 
    
 
-    <div id="dialog" title="message" style="display: none;">
-       
-        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
-    </div>
 
      <table id="Getdta" runat="server" autopostback="true" >
                 <tr>
@@ -1140,4 +1136,12 @@
                       
                </div>
    
+
+     <div style="margin-top:500px;">        
+         
+    <div id="dialog" title="Stored Management" style="display: none;">
+       
+        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+    </div>
+    </div>
 </asp:Content>

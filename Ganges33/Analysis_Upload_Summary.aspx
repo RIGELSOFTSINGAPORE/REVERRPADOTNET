@@ -3,11 +3,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
    
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/start/jquery-ui.css" rel="stylesheet">
-     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
-
-   
 
     <link href="assets/jquery-ui_theme.css" rel="stylesheet" />
     <link href="assets/jquery-ui.css" rel="stylesheet" />
@@ -31,12 +26,31 @@
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="assets/demo/demo.css" rel="stylesheet" />
     <style type="text/css">
- 
+ .dropdown-toggle::after {
+    display:none;
+}
+ .bt{
+     border:none;
+     border-color:none
+ }
         </style>
     
-    <script>
 
-</script>
+    <script>
+        $(function () {
+            $('[id*=lstLocation]').multiselect({
+
+                includeSelectAllOption: true,
+                maxHeight: 300,   
+                width: 200,
+                
+                
+                
+             
+            });
+        }); 
+      
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
@@ -56,75 +70,69 @@
                   <p class="card-category"></p>
                 </div>
                 <div class="card-body scrollbar" >
-             
-
-                    <br />
-                    
-                   
-                    <div class="row col-sm-12">
-                      <div class="col-sm-4 row">
-                        
-                         <div class="form-group col-sm-6">
-                      <label id="" class="fontFamily bmd-label-floating">Target Store</label>
-                             </div>
-                          <div class=" col-sm-6">
-<asp:ListBox ID="lstLocation" runat="server"  Height="133px" Width="100px"  class="multiselect-ui form-control" multiple="multiple"  SelectionMode="Multiple">
-
-                      </asp:ListBox>
-                    
-                  </div>
-                    
-                      </div>
-					
-                      <div class=" col-sm-4 row">
-                        <div class="form-group col-sm-7">
-                      <label id="" class="fontFamily bmd-label-floating">Create Start Date</label>
-                     </div>
-                          <div class=" col-sm-5">
-                       <asp:TextBox ID="TextDateFrom" runat="server" class="form-file-upload date serverlbl" style="width: 110%;"></asp:TextBox>
-                     <%-- <ajaxToolkit:CalendarExtender ID="TextDateFrom_CalendarExtender" runat="server" BehaviorID="TextDateFrom_CalendarExtender" TargetControlID="TextDateFrom" PopupPosition="Left">
-                      </ajaxToolkit:CalendarExtender>--%>
-                     
-                  </div>
-                
+             <div class="row">
+                    <div class="col-sm-2">
+                        <br />
+                           <label id="" class="fontFamily bmd-label-floating">Target Store</label>
+                      
+                    </div>
                  
-                      </div>
-
-
-                      <div class="row col-sm-4" >
-                        <div class="form-group col-sm-7">
-                      <label id="" class="bmd-label-floating fontFamily">Create End Date</label>
-          </div>
-                          <div class=" col-sm-5">
-               <asp:TextBox ID="TextDateTo" runat="server"  class="form-file-upload serverlbl date" style="width: 110%"></asp:TextBox>
-                     <%-- <ajaxToolkit:CalendarExtender ID="TextDateTo_CalendarExtender" runat="server" BehaviorID="TextDateTo_CalendarExtender" TargetControlID="TextDateTo" PopupPosition="right">
-                      </ajaxToolkit:CalendarExtender>     --%>  
-                      
-                      
-                  </div>
- 
-                      </div>
-
-
-                      <div class="row col-sm-4">
-                        <div class="form-group col-sm-4">
-                            <br />
+                    <div>
+                        <asp:ListBox ID="lstLocation" runat="server"  Height="133px" Width="100px" display="none" class="form-control" SelectionMode="Multiple">
+                             </asp:ListBox>
+                    </div>
+                   </div>
+                  
+                        <div class="row">
+                    <div class="col-sm-2">
+                    
                             <label id="" class="fontFamily bmd-label-floating">Active</label>
-                           </div>
-                          <div class="col-sm-4">
-                              <div class="col-sm-12">
-                               <br />
-                        <asp:DropDownList ID="drpStatus" runat="server" Height="32px" class="form-control " style="width: 120px;"  >
+                      
+                    </div>
+                 
+                    <div>
+                       <asp:DropDownList ID="drpStatus" runat="server" Height="32px" class="form-control " style="padding-left:45px" Width="172px"  >
                               <asp:ListItem Text="All" Value="0,1" Enabled="false" ></asp:ListItem>
                              <asp:ListItem Text="Active" Value="0" selected="True"></asp:ListItem>
                               <asp:ListItem Text="In Active" Value="1"></asp:ListItem>
                        </asp:DropDownList>
-                              </div>
-                              </div>
-                          </div>
-
                     </div>
+                   </div>
+                    <br />
+			 <div class="row">
+                    <div class="col-sm-2">
+                       
+                            <label id="" class="fontFamily bmd-label-floating">Create Start Date</label>
+                      
+                    </div>
+                 
+                    <div>
+                       <asp:TextBox ID="TextDateFrom" runat="server" class="form-file-upload date serverlbl" Width="172px" style="padding-left:40px"  ></asp:TextBox>
+                     <%-- <ajaxToolkit:CalendarExtender ID="TextDateFrom_CalendarExtender" runat="server" BehaviorID="TextDateFrom_CalendarExtender" TargetControlID="TextDateFrom" PopupPosition="Left">
+                      </ajaxToolkit:CalendarExtender>--%>
+                     
+                    </div>
+                   </div>
+              <br />
+                   <div class="row">
+                    <div class="col-sm-2">
+                      
+                           <label id="" class="bmd-label-floating fontFamily">Create End Date</label>
+                    </div>
+                 
+                    <div>
+                      <asp:TextBox ID="TextDateTo" runat="server"  class="form-file-upload serverlbl date" Width="172px" style="padding-left:40px"></asp:TextBox>
+                     <%-- <ajaxToolkit:CalendarExtender ID="TextDateTo_CalendarExtender" runat="server" BehaviorID="TextDateTo_CalendarExtender" TargetControlID="TextDateTo" PopupPosition="right">
+                      </ajaxToolkit:CalendarExtender>     --%>  
+                   
+                    </div>
+                   </div>
+               
 
+
+                     
+
+                    
                    <asp:CheckBox  ID="chkIndividual" runat="server" Text="Current User" Visible="false"/>
                        
                      <asp:Button ID="btnExport" runat="server" text="Export"  class="btn btn-primary pull-right" Visible="false"/>&nbsp
@@ -199,7 +207,9 @@
               </div>
               </div>
               </div>
-              </div>
+    
+                       </div>
+         
     <div style="visibility:hidden">
         
                         <div class="form-group row">
@@ -224,11 +234,14 @@
                       
     </div>
         
-    <div id="dialog" title="Analysis upload summary" style="display:none;"> >
+    
+   <div style="margin-top:500px;">
+      <div id="dialog" title="Analysis upload summary" style="display:none;"> >
         <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
     </div>
-   
-  <!--   Core JS Files   -->
+    </div>
+    
+
  
 
 

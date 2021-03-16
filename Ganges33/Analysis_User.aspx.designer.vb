@@ -32,6 +32,15 @@ Partial Public Class Analysis_User
     Protected WithEvents btnAdd As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''search control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents search As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
     '''id control.
     '''</summary>
     '''<remarks>
@@ -39,6 +48,15 @@ Partial Public Class Analysis_User
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents id As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''txtSearch control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtSearch As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''GridSetupUser control.
