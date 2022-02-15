@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Email";
+}
+
+<h2 style="margin:0 auto;padding-left:32px">Email</h2>
+<div class="container" style="width:95%; margin:0 auto;border: 1px solid;padding-top:15px;padding-bottom:15px;border-radius: 15px;">
+    <div>
+        <div class="col-md-2">
+            @Html.Label("From")
+        </div>
+        <div class="col-md-4">
+            @Html.TextBox("SenderFrom", null, new { @class = "form-control", id = "SenderFrom" })
+        </div>
+
+    </div>
+    <div>
+        <div class="col-md-2">
+            @Html.Label("To")
+        </div>
+        <div class="col-md-4">
+            @Html.TextArea("EmailTo", null, new { @class = "form-control", id = "EmailTo" })
+        </div>
+
+
+    </div>
+    <div>
+        <div class="col-md-2">
+            @Html.Label("CC")
+        </div>
+        <div class="col-md-4">
+            @Html.TextBox("CC", null, new { @class = "form-control", id = "CC", @readonly = "readonly", @Value = "gnanavallal1900@gmail.com" })
+        </div>
+
+    </div>
+    <div>
+        <div class="col-md-2">
+            @Html.Label("Subject")
+        </div>
+        <div class="col-md-4">
+            @Html.TextBox("Subject", null, new { @class = "form-control", id = "Subject" })
+        </div>
+
+
+    </div>
+    <input type="hidden" id="Body" />
+    <div id="texteditor"></div>
+    <div class="row" style="padding-top: 12px;">
+        <div class="col-md-5">
+
+        </div>
+        <div class="col-md-3">
+            <input type="button" value="Send" class="btn btn-secondary" id="btnsendemail" name="Command" />
+        </div>
+        @*<input type="submit" value="submit" id="btnsubmitemailfrom" name="Command" hidden="hidden" /><br />*@
+        <br />
+    </div>
+</div>
+<script src="../assets/vendor_components/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+<script src="~/WYSIWY/editor.js"></script>
+<script>
+        $("#texteditor").Editor();
+</script>

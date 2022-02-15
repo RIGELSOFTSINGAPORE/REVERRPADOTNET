@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="~/Scripts/jquery-2.2.4.min.js"></script>
+    <script src="~/Scripts/Datatable/datatables.min.js"></script>
+    <script src="~/Scripts/Datatable/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/Datatable/datatables.bootstrap.min.js"></script>
+    <script src="~/Scripts/Datatable/sum.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+
+    <script src="~/assets/vendor_components/jquery-ui/jquery-ui.js"></script>
+
+    <!-- popper -->
+
+    <script src="~/assets/vendor_components/popper/dist/popper.min.js"></script>
+
+    <!-- Bootstrap 4.0-->
+
+    <script src="~/assets/vendor_components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!-- Slimscroll -->
+
+    <script src="~/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- FastClick -->
+
+    <script src="~/assets/vendor_components/fastclick/lib/fastclick.js"></script>
+
+    <!-- Sparkline -->
+
+    <script src="~/assets/vendor_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+
+
+
+    <script src="~/assets/vendor_components/jquery.peity/jquery.peity.js"></script>
+
+    <!-- Qixa Admin App -->
+
+    <script src="~/main/js/template.js"></script>
+
+    <title>horizontal menubar</title>
+
+</head>
+<body>
+   
+   
+        @*<title>horizontal menubar</title>*@
+        <script src="https://use.fontawesome.com/6e2e2c871f.js"></script>
+
+
+        <link href="~/assets/vendor_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+        <!-- Bootstrap extend-->
+
+        <link href="~/main/css/bootstrap-extend.css" rel="stylesheet" />
+
+        <!-- theme style -->
+
+        <link href="~/main/css/master_style.css" rel="stylesheet" />
+        
+       
+        <!-- Qixa Admin skins -->
+
+        <link href="~/main/css/skins/_all-skins.css" rel="stylesheet" />
+
+        <!-- morris CSS -->
+
+        <link href="~/assets/vendor_components/morris.js/morris.css" rel="stylesheet" />
+        <link href="~/Content/Datatable/datatables.min.css" rel="stylesheet" />
+        <link href="~/Content/Datatable/datatables.bootstrap.min.css" rel="stylesheet" />
+        <style>
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+
+            body {
+                font-family:Calibri;
+                font-size: 13px;
+                font-style: normal;
+                color: #ffffff;
+                text-transform: capitalize;
+                background: #003333;
+            }
+
+            #main {
+                width: 100%;
+                /*overflow: hidden;*/
+            }
+
+            #header {
+                /*width: 100%;
+                height: 62px;*/
+                border-bottom: 5px solid #ffffff;
+                border-radius: 15px;
+            }
+
+            .logo {
+                padding-top: 0px;
+            }
+
+            < !-- --> #menuCtr {
+                height: 40px;
+                width: 100%;
+                border-bottom: 1px solid #FFCC33;
+                border-top: 1px solid #FFCC33;
+                border-radius: 10px;
+            }
+
+            .menubox {
+                height: 40px;
+                margin: 0 auto;
+                width: 980px;
+            }
+
+            .menu {
+                list-style: none;
+                margin: 2px 0;
+                padding-left: 300px;
+            }
+
+                .menu li {
+                    float: left;
+                    position: relative;
+                }
+
+                    .menu li a {
+                        padding: 10px 28px 10px 28px;
+                        display: block;
+                        background: #ffffff;
+                        text-decoration: none;
+                        color: #003333;
+                        font-weight: bold;
+                        font-size: 15px;
+                        border-left: 1px solid #330066;
+                        /*border-radius:10px;*/
+                    }
+
+                        .menu li a:hover,
+                        .menu li.first a {
+                            background: #FF9933;
+                        }
+
+                .menu ul {
+                    top: 36px;
+                    position: absolute;
+                }
+
+                    .menu ul li {
+                        float: none;
+                        display: none;
+                    }
+
+                        .menu ul li a {
+                            border: none;
+                            margin: 1px 0px;
+                        }
+
+                .menu li:hover > a {
+                    background: #808080;
+                }
+
+                .menu li:hover > ul li a:hover {
+                    background: #808080;
+                }
+
+                .menu li:hover > ul li,
+                .menu li:hover > ul li a {
+                    display: block;
+                    background: #003333;
+                }
+
+            #slideCtr {
+                height: 600px;
+                width: 1320px;
+                margin-top: 10px;
+                border-radius: 15px;
+                border: 2px solid #ffffff;
+                margin: 0 auto;
+                border-bottom: none;
+                /*border-top: none;*/
+            }
+        </style>
+   
+        <div id="main">
+            <div id="header" >
+                <left style="padding-left:initial">
+                    <img src="~/Images/Logo.png" style="height:150px;width:100%;padding-left:3px;padding-right:3px;padding-top:2px"/>
+                </left>
+            </div>
+            <div id="menuCtr" >
+                <div class="menubox">
+                    <ul class="menu">
+                        <li> <a href="~/home/about">Download</a></li>
+                        <li>
+                            <a href="~/home/Upload">Upload</a>
+                           
+                        </li>
+                        <li> <a href="~/Login/index">Logout</a></li>
+                        <li> </li>
+                        <li></li>
+                        <li> </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="slideCtr">
+
+                @RenderBody()
+            </div>
+        </div>
+   
+    @RenderSection("ScriptSection", false)
+</body>
+</html>
