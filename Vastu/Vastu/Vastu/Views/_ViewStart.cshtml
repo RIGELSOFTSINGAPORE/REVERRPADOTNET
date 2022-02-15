@@ -1,0 +1,28 @@
+﻿@*@{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }*@
+
+
+
+@{
+    string CurrentName = Convert.ToString(HttpContext.Current.Request.RequestContext.RouteData.Values["Controller"]);
+    dynamic Layout;
+    switch (CurrentName)
+    {
+        //admin page for controller
+        case "FeedbackApproval":
+        case "TransactionHistory":
+        case "AboutContent":
+        case "HomeVastuContent":
+        case "VastuTipsContent":
+        case "HomeContent":
+        case "Contact":
+        case "User":
+            Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+            break;
+        default:
+            Layout = "~/Views/Shared/_Layout.cshtml";
+            break;
+
+    }
+}  

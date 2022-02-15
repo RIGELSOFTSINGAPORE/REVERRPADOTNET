@@ -1,0 +1,356 @@
+﻿@using PagedList.Mvc
+@model PagedList.PagedList<Vasthu_Models.TransReport>
+@{
+    ViewBag.Title = @Vastu.Resources.Resource.TransactionHistory;
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style type="text/css">
+
+    .table {
+        width: 95%;
+        font-family: Trattatello;
+        font-size: 15px;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+        margin-left: 20px;
+        border-radius: 60px;
+        border-color: #1bbd36;
+        /* border: solid 3px #D0E8AC;*/
+    }
+
+        .table th {
+            border: solid 3px #1bbd36;
+            background: #1bbd36;
+            color: #fff;
+            line-height: 15px;
+            padding: 2px;
+        }
+
+        .table td {
+            border: solid 1px #1bbd36;
+            background: #D0E8AC;
+            padding: 2px;
+            color: #000;
+            text-align: left;
+        }
+
+    .table-pager > td {
+        padding-top: 20px;
+    }
+
+        .table-pager > td > a {
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 3px 7px;
+        }
+
+            .table-pager > td > a:hover {
+                background-color: #f0f0f0;
+            }
+
+    .zoom {
+        /*        padding: 10px;*/
+        /*background-color: green;*/
+        transition: transform .2s;
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+        border: 1px solid #1bbd36;
+    }
+
+        .zoom:hover {
+            -ms-transform: scale(5.5); /* IE 9 */
+            -webkit-transform: scale(5.5); /* Safari 3-8 */
+            transform: scale(3.5);
+        }
+
+    .zoom1 {
+        /*        padding: 10px;*/
+        /*background-color: green;*/
+        transition: transform .2s;
+        width: 50px;
+        height: 50px;
+        margin: 1 auto;
+        border: 0px solid #1bbd36;
+    }
+
+        .zoom1:hover {
+            -ms-transform: scale(3.5); /* IE 9 */
+            -webkit-transform: scale(3.5); /* Safari 3-8 */
+            transform: scale(3.5);
+        }
+
+    .hidecol {
+        display: none;
+    }
+
+    .button {
+        display: inline-block;
+        background-color: #02b32e;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: #eeeeee;
+        text-align: center;
+        font-size: 14px;
+        padding: 5px;
+        width: 130px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin-left: 50px;
+    }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+            .button span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+        .button:hover {
+            background-color: #038523;
+        }
+
+            .button:hover span {
+                padding-right: 25px;
+            }
+
+    button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+
+    .pdfbutton {
+        display: inline-block;
+        background-color: #ff0000;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: #eeeeee;
+        text-align: center;
+        font-size: 14px;
+        padding: 5px;
+        width: 130px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+        .pdfbutton span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+            .pdfbutton span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+
+        .pdfbutton:hover {
+            background-color: crimson;
+        }
+
+            .pdfbutton:hover span {
+                padding-right: 25px;
+            }
+
+    pdfbutton:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+
+    .pdfexcel {
+        width: 0px;
+        padding-left: 50px;
+    }
+
+    .Highlighted a {
+        background-color: Green !important;
+        background-image: none !important;
+        color: White !important;
+        font-weight: bold !important;
+        font-size: 12pt;
+    }
+</style>
+
+<h2>@Vastu.Resources.Resource.TransactionHistory</h2>
+<!-- Modal DeleteMenuModal -->
+<div class="modal fade" id="DeleteVastuModal" tabindex="-1" role="dialog" aria-labelledby="DeleteVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="DeleteVastuModalLabel">@Vastu.Resources.Resource.DeleteImageMaster</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body DeleteVastucontent">
+                @Vastu.Resources.Resource.Areyousuredelete
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">@Vastu.Resources.Resource.No</button>
+                <button type="button" class="btn btn-primary btndeletevastu btn-success">@Vastu.Resources.Resource.yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Hidden("DeleteImageId")
+<p>
+    @* @Html.ActionLink(Vastu.Resources.Resource.CreateNew, "Create", null, htmlAttributes: new { @class = "CreateNew" })*@
+    @* <a href="@Url.Action("Create","ImageMaster")" class="btn btn-info btn-lg"> <span class="glyphicon glyphicon-new-window" title="Create"></span>@Vastu.Resources.Resource.CreateNew</a>*@
+</p>
+@{
+    var fromDate = (DateTime)ViewBag.fromDate;
+    var toDate = (DateTime)ViewBag.toDate;
+    var error = ViewBag.error;
+
+}
+
+@{
+    var lan = TempData["lan"];
+    if (lan != null)
+    {
+        if (lan.ToString() == "ja")
+        {
+            lan = 2;
+        }
+        else
+        {
+            lan = 1;
+        }
+    }
+    else
+    {
+        lan = 1;
+    }
+}
+@using (Html.BeginForm("index", "TransactionHistory", FormMethod.Get))
+{
+    <div style="margin-left:250px" class="demo">
+        @Vastu.Resources.Resource.Date: <input type="text" name="fromDate" id="fromDate" value="@ViewBag.fromDate.ToString("yyyy-MM-dd")" />
+        ~ <input type="text" name="toDate" id="toDate" value="@ViewBag.toDate.ToString("yyyy-MM-dd")" />
+        @*From Date: @Html.TextBox("fromDate", string.Format("{0:dd MMM yyy}", fromDate), new { @class = "datefield", type = "date", value = fromDate })*@
+        @*To Date: @Html.TextBox("toDate", string.Format("{0:dd MMM yyy}", toDate), new { @class = "datefield", type = "date", value = toDate })*@
+        <input type="submit" value="Search" />
+
+    </div>
+
+}
+@{
+    if (error == "Select Valid Date")
+    {
+        <p style="color:red;text-align:left">Select Valid Date</p>
+    }
+
+}
+<table class="table" style="background-color:#ffffff;">
+    <tr style="background-color:#4CAF50; color:#ffffff;">
+        <th>
+            @Html.DisplayName(Vastu.Resources.Resource.ResearcherName)
+        </th>
+        <th>
+            @Html.DisplayName(Vastu.Resources.Resource.Email)
+        </th>
+        <th style="padding-left: 0px;">
+            @Html.DisplayName(Vastu.Resources.Resource.ReportGenerationDate)
+        </th>
+
+        <th>
+            @Html.DisplayName(Vastu.Resources.Resource.ExcelDownload)
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr style="background-color:#EEE;">
+
+            <td>
+                @Html.DisplayFor(model => item.REPORT_TAKEN_BY)
+            </td>
+
+            <td style="padding-left: 42px;">
+                @Html.DisplayFor(modelItem => item.EMAIL_ID)
+            </td>
+            <td style="padding-left: 42px;">
+                @Html.DisplayFor(modelItem => item.VASTU_DATE)
+            </td>
+            <td>
+
+                <a href="@Url.Action("DownLoadReport_His","vastureport",new { id = item.VASTU_REPORT_ID,exp=1}) " class="btn btn-success btn-sm" style="margin-left: 119px;">
+
+                    <span class="fas fa-file-excel" style="font-size:15px" title="Excel Download"></span> 
+
+                </a>
+                @*<a href="@Url.Action("DownLoadReport_His","vastureport",new { id = item.VASTU_REPORT_ID,exp=2,lan=lan})" class="btn btn-danger btn-sm">
+                        <span class="fas fa-file-pdf" style="font-size:15px" title="PDF Download"></span> @Vastu.Resources.Resource.PDFDownload
+
+                    </a>*@
+            </td>
+
+        </tr>
+    }
+    @if (Model.Count == 0)
+    {
+        <tr>
+            <td colspan="4" align="center">@Vastu.Resources.Resource.NoRecordFound</td>
+        </tr>
+    }
+</table>
+<br />
+<br />
+<br />
+<br />
+@if (Model.PageSize < Model.TotalItemCount)
+{
+    <div>
+        @Vastu.Resources.Resource.Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) @Vastu.Resources.Resource.of  @Model.PageCount
+        @Html.PagedListPager(Model, page => Url.Action("Index",
+             new { page, fromDate = fromDate, toDate = toDate }))
+    </div>
+}
+
+@section scripts
+{
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <script>
+
+        $(document).ready(function () {
+
+            var currentYear = (new Date).getFullYear();
+            var currentMonth = (new Date).getMonth();
+            var currentDay = (new Date).getDate();
+
+            $("#fromDate").datepicker({
+                minDate: new Date((currentYear - 1), 12, 1),
+                dateFormat: 'yy-mm-dd',
+                maxDate: new Date(currentYear, currentMonth, currentDay)
+            });
+            $("#toDate").datepicker({
+                minDate: new Date((currentYear - 1), 12, 1),
+                dateFormat: 'yy-mm-dd',
+                maxDate: new Date(currentYear, currentMonth, currentDay)
+            });
+
+        })
+
+    </script>
+}

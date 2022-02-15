@@ -1,0 +1,88 @@
+﻿@using PagedList.Mvc
+@model PagedList.PagedList<Vasthu_Models.VS_VASTU_MST_TRAN_DETAILS>
+@{
+    ViewBag.Title = Vastu.Resources.Resource.VastuMasterTransactionLogDetails;
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+    <h2>@Vastu.Resources.Resource.VastuMasterTransactionLogDetails</h2>
+
+
+    <table class="table" style="background-color:#ffffff;">
+        <tr style="background-color:#4CAF50; color:#ffffff;">
+            <th style="width: 13%;">
+                @Html.DisplayName(Vastu.Resources.Resource.VastuType)
+            </th>
+            <th>
+                @Html.DisplayName(Vastu.Resources.Resource.Area)
+            </th>
+            <th>
+                @Html.DisplayName(Vastu.Resources.Resource.Direction)
+            </th>
+            <th style="width: 12%;">
+                @Html.DisplayName(Vastu.Resources.Resource.ColumnName)
+            </th>
+            <th>
+                @Html.DisplayName(Vastu.Resources.Resource.OldValue)
+            </th>
+            <th>
+                @Html.DisplayName(Vastu.Resources.Resource.NewValue)
+            </th>
+            <th style="width: 11%;">
+                @Html.DisplayName(Vastu.Resources.Resource.CreatedUser)
+            </th>
+            <th style="width: 11%;">
+                @Html.DisplayName(Vastu.Resources.Resource.CreatedDate)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr style="background-color:#EEE;">
+                <td>
+                    @Html.DisplayFor(modelItem => item.VASTU_TYPE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AREA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DIRECTION)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.COLUMN_NAME)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OLD_VALUE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NEW_VALUE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.C_USER)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.C_DATE)
+                </td>
+                <td>
+
+                    @Html.ActionLink(Vastu.Resources.Resource.Details, "Details", new { id = item.VASTU_MST_TRAN_ID }, new { @class = "edit1",@style= "margin-left: -23px;"})
+                </td>
+            </tr>
+        }
+        @if (Model.Count == 0)
+        {
+            <tr>
+                <td colspan="9" align="center">@Vastu.Resources.Resource.NoRecordFound</td>
+            </tr>
+        }
+    </table>
+<br />
+@if (Model.PageSize < Model.TotalItemCount)
+{
+    <div>
+        @Vastu.Resources.Resource.Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) @Vastu.Resources.Resource.of  @Model.PageCount
+        @Html.PagedListPager(Model, page => Url.Action("Index",
+             new { page }))
+    </div>
+}

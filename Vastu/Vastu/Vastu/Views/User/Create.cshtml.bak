@@ -1,0 +1,122 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@model Vasthu_Models.USER_MST
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+<style>
+
+    input,
+    select,
+    textarea {
+        max-width: 280px;
+    }
+
+    .dropdwn {
+        width: 100%;
+        height: 31px;
+        border-radius: 5px;
+    }
+
+    .labelvasthu {
+        display: inline-block;
+        margin-bottom: .5rem;
+        width: 200px;
+        margin-left: 30px;
+        font-weight: bold;
+    }
+
+    .vasthuseachbtn {
+        width: 100px;
+        color: white;
+        display: inline-block;
+        font-weight: 400;
+        background-color: #1bbd36;
+        text-align: center;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-left: 230px;
+        border-radius: .25rem;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+</style>
+<div class="container" style="margin-left:245px;" data-aos="fade-up">
+    @using (Html.BeginForm("Create", "User", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <br />
+            <br />
+
+            <div class="">
+                @Html.Label("User Name", htmlAttributes: new { @class = "labelvasthu" })
+                @Html.EditorFor(model => model.LOGIN_NAME, new { htmlAttributes = new { @class = "", @autocomplete = "off" } })
+                @Html.ValidationMessageFor(model => model.LOGIN_NAME, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="">
+                @Html.Label("New Password", htmlAttributes: new { @class = "labelvasthu" })
+                @Html.PasswordFor(model => model.NewPassword, new { htmlAttributes = new { @class = "" } })
+                @Html.ValidationMessageFor(model => model.NewPassword, "", new { @class = "text-danger" })
+
+            </div>
+
+            <div class="">
+
+                @Html.Label("Confirm Password", htmlAttributes: new { @class = "labelvasthu" })
+                @Html.PasswordFor(model => model.ConfrimPassword, new { htmlAttributes = new { @maxlength = "25", @autocomplete = "off" } })
+
+                @Html.ValidationMessageFor(model => model.ConfrimPassword, "", new { @class = "text-danger" })
+
+            </div>
+
+
+
+            <div class="">
+                @Html.Label("Email Id", htmlAttributes: new { @class = "labelvasthu" })
+
+                @Html.EditorFor(model => model.EMAIL_ID, new { htmlAttributes = new { @class = "", @autocomplete = "off" } })
+                @Html.ValidationMessageFor(model => model.EMAIL_ID, "", new { @class = "text-danger" })
+
+            </div>
+
+
+            <div class="">
+                @Html.Label("DEL Flag", htmlAttributes: new { @class = "labelvasthu" })
+
+                @Html.EditorFor(model => model.DELETE_FLAG)
+                @Html.ValidationMessageFor(model => model.DELETE_FLAG, "", new { @class = "text-danger" })
+
+
+            </div>
+
+
+
+
+            <div class="">
+                <div class="">
+                    <input type="submit" value="Create" class="btn btn-default" style="background-color:#1bbd36; color:white;width: 84px;" />
+                </div>
+            </div>
+        </div>
+
+    }
+
+    <div style="padding: 0px; margin-left: 100px;">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</div>

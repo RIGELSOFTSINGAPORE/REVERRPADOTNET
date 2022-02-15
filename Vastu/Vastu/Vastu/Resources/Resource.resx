@@ -1,0 +1,1962 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ABOUT" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Aboutlist1" xml:space="preserve">
+    <value>Vastu shastra (vāstu śāstra - literally "science of architecture") is a traditional Indian system of architecture originating in India. Texts from the Indian subcontinent describe principles of design, layout, measurements, ground preparation, space arrangement, and spatial geometry. Vastu Shastras incorporate traditional Hindu and (in some cases) Buddhist beliefs.</value>
+  </data>
+  <data name="Aboutlist2" xml:space="preserve">
+    <value>The designs aim to integrate architecture with nature, the relative functions of various parts of the structure, and ancient beliefs utilising geometric patterns (yantra), symmetry, and directional alignments. Vastu Shastra are the textual part of Vastu Vidya - the broader knowledge about architecture and design theories from ancient India. Vastu Vidya knowledge is a collection of ideas and concepts, with or without the support of layout diagrams, that are not rigid. Rather, these ideas and concepts are models for the organisation of space and form within a building or collection of buildings, based on their functions in relation to each other, their usage and the overall fabric of the Vastu.[9] Ancient Vastu Shastra principles include those for the design of Mandir (Hindu temples), and the principles for the design and layout of houses, towns, cities, gardens, roads, water works, shops and other public areas.</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Active/Inactive</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Address1" xml:space="preserve">
+    <value>Address1</value>
+  </data>
+  <data name="Address2" xml:space="preserve">
+    <value>Address2</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="AffectsofSouthEastFacingProperty" xml:space="preserve">
+    <value>Affects of South-East Facing Property</value>
+  </data>
+  <data name="AffectsofSouthEastFacingPropertydef" xml:space="preserve">
+    <value>Houses that face South-east direction are consider average because being the place of ‘agni’ it has to be the position of kitchen, still most Vastu consultants do not consider it worst.</value>
+  </data>
+  <data name="Afghanistan" xml:space="preserve">
+    <value> Afghanistan</value>
+  </data>
+  <data name="Albania" xml:space="preserve">
+    <value>Albania</value>
+  </data>
+  <data name="Algeria" xml:space="preserve">
+    <value> Algeria</value>
+  </data>
+  <data name="AllowOnlySpecialCharacters" xml:space="preserve">
+    <value>Allow Only Special Characters</value>
+  </data>
+  <data name="Altar" xml:space="preserve">
+    <value>Altar</value>
+  </data>
+  <data name="Altardef" xml:space="preserve">
+    <value>The ideal direction to place the altar is North-Eastern direction.</value>
+  </data>
+  <data name="AmericanSamoa" xml:space="preserve">
+    <value>American Samoa</value>
+  </data>
+  <data name="Andorra" xml:space="preserve">
+    <value> Andorra</value>
+  </data>
+  <data name="Angola" xml:space="preserve">
+    <value>Angola</value>
+  </data>
+  <data name="Anguilla" xml:space="preserve">
+    <value>Anguilla</value>
+  </data>
+  <data name="Antartica" xml:space="preserve">
+    <value> Antartica</value>
+  </data>
+  <data name="AntiguaandBarbuda" xml:space="preserve">
+    <value> Antigua and Barbuda</value>
+  </data>
+  <data name="Approve" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="Approved" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="ApproveReject" xml:space="preserve">
+    <value>Approve/Reject</value>
+  </data>
+  <data name="Area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="AreaandDirectionisalreadyexist" xml:space="preserve">
+    <value>Area and Direction is already exist</value>
+  </data>
+  <data name="AreaCreated" xml:space="preserve">
+    <value>Area Created</value>
+  </data>
+  <data name="AreaCreatedSuccessfully" xml:space="preserve">
+    <value>Area Created Successfully</value>
+  </data>
+  <data name="AreaDetailsAlreadyExists" xml:space="preserve">
+    <value>Area Details Already Exists</value>
+  </data>
+  <data name="Areaid" xml:space="preserve">
+    <value>Area ID</value>
+  </data>
+  <data name="AreaMaster" xml:space="preserve">
+    <value>Area Master</value>
+  </data>
+  <data name="AreaMasterCreate" xml:space="preserve">
+    <value>Area Master - Create</value>
+  </data>
+  <data name="AreaMasterEdit" xml:space="preserve">
+    <value>Area Master - Edit</value>
+  </data>
+  <data name="AreaMasterLog" xml:space="preserve">
+    <value>Area Master Log</value>
+  </data>
+  <data name="AreaMasterTransaction" xml:space="preserve">
+    <value>Area Master Transaction</value>
+  </data>
+  <data name="AreaUpdatedSuccessfully" xml:space="preserve">
+    <value>Area Updated Successfully</value>
+  </data>
+  <data name="Areyousuredelete" xml:space="preserve">
+    <value>Are you sure you want to delete?</value>
+  </data>
+  <data name="Argentina" xml:space="preserve">
+    <value> Argentina</value>
+  </data>
+  <data name="Armenia" xml:space="preserve">
+    <value>Armenia</value>
+  </data>
+  <data name="Aruba" xml:space="preserve">
+    <value>Aruba</value>
+  </data>
+  <data name="Australia" xml:space="preserve">
+    <value>Australia</value>
+  </data>
+  <data name="Austria" xml:space="preserve">
+    <value> Austria</value>
+  </data>
+  <data name="Azerbaijan" xml:space="preserve">
+    <value> Azerbaijan</value>
+  </data>
+  <data name="Backtohome" xml:space="preserve">
+    <value>Back to home</value>
+  </data>
+  <data name="BacktoList" xml:space="preserve">
+    <value>Back to List</value>
+  </data>
+  <data name="Bahamas" xml:space="preserve">
+    <value> Bahamas</value>
+  </data>
+  <data name="Bahrain" xml:space="preserve">
+    <value>Bahrain</value>
+  </data>
+  <data name="Balcony" xml:space="preserve">
+    <value>Balcony</value>
+  </data>
+  <data name="Balconydef" xml:space="preserve">
+    <value>Plan a balcony in North or East. A balcony in South is not recommended.</value>
+  </data>
+  <data name="Bangladesh" xml:space="preserve">
+    <value>Bangladesh</value>
+  </data>
+  <data name="Barbados" xml:space="preserve">
+    <value>Barbados</value>
+  </data>
+  <data name="BathRoom" xml:space="preserve">
+    <value>Bath Room</value>
+  </data>
+  <data name="BathRoomdef" xml:space="preserve">
+    <value>Plan a balcony in North or East. A balcony in South is not recommended.</value>
+  </data>
+  <data name="Beams" xml:space="preserve">
+    <value>Beams</value>
+  </data>
+  <data name="Beamsdef" xml:space="preserve">
+    <value>Design to have an even number of beams in a room. But do not sleep under the beams as it is likely to cause health complications.</value>
+  </data>
+  <data name="Bedroom" xml:space="preserve">
+    <value>Bedroom</value>
+  </data>
+  <data name="Bedroomdef" xml:space="preserve">
+    <value>Plan the Master bedroom in South or South-Western corner of the house. A room in North-Western corner should be given to the newly-weds in the family. In either case avoid sleeping with feet facing South because it drains away the body energy.</value>
+  </data>
+  <data name="Belarus" xml:space="preserve">
+    <value>Belarus</value>
+  </data>
+  <data name="Belgium" xml:space="preserve">
+    <value>Belgium</value>
+  </data>
+  <data name="Belize" xml:space="preserve">
+    <value>Belize</value>
+  </data>
+  <data name="Benin" xml:space="preserve">
+    <value>Benin</value>
+  </data>
+  <data name="Bermuda" xml:space="preserve">
+    <value>Bermuda</value>
+  </data>
+  <data name="Bhutan" xml:space="preserve">
+    <value>Bhutan</value>
+  </data>
+  <data name="Bolivia" xml:space="preserve">
+    <value>Bolivia</value>
+  </data>
+  <data name="BosniaandHerzegowina" xml:space="preserve">
+    <value>Bosnia and Herzegowina</value>
+  </data>
+  <data name="Botswana" xml:space="preserve">
+    <value>Botswana</value>
+  </data>
+  <data name="BouvetIsland" xml:space="preserve">
+    <value>Bouvet Island</value>
+  </data>
+  <data name="Brazil" xml:space="preserve">
+    <value>Brazil</value>
+  </data>
+  <data name="BritishIndianOceanTerritory" xml:space="preserve">
+    <value>British Indian Ocean Territory</value>
+  </data>
+  <data name="BruneiDarussalam" xml:space="preserve">
+    <value>Brunei Darussalam</value>
+  </data>
+  <data name="Bulgaria" xml:space="preserve">
+    <value>Bulgaria</value>
+  </data>
+  <data name="BurkinaFaso" xml:space="preserve">
+    <value>Burkina Faso</value>
+  </data>
+  <data name="Burundi" xml:space="preserve">
+    <value>Burundi</value>
+  </data>
+  <data name="Call" xml:space="preserve">
+    <value>Call</value>
+  </data>
+  <data name="Cambodia" xml:space="preserve">
+    <value>Cambodia</value>
+  </data>
+  <data name="Cameroon" xml:space="preserve">
+    <value>Cameroon</value>
+  </data>
+  <data name="Canada" xml:space="preserve">
+    <value>Canada</value>
+  </data>
+  <data name="CapeVerde" xml:space="preserve">
+    <value>Cape Verde</value>
+  </data>
+  <data name="CashandValuables" xml:space="preserve">
+    <value>Cash and Valuables</value>
+  </data>
+  <data name="CashandValuablesdef" xml:space="preserve">
+    <value>Place them in a cupboard on the Northern side, preferably in a room which is in Northern side</value>
+  </data>
+  <data name="CaymanIslands" xml:space="preserve">
+    <value>Cayman Islands</value>
+  </data>
+  <data name="CentralAfricanRepublic" xml:space="preserve">
+    <value>Central African Republic</value>
+  </data>
+  <data name="Chad" xml:space="preserve">
+    <value>Chad</value>
+  </data>
+  <data name="Chile" xml:space="preserve">
+    <value>Chile</value>
+  </data>
+  <data name="China" xml:space="preserve">
+    <value>China</value>
+  </data>
+  <data name="ChristmasIsland" xml:space="preserve">
+    <value>Christmas Island</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="CocosIslands" xml:space="preserve">
+    <value>Cocos Islands</value>
+  </data>
+  <data name="Colombia" xml:space="preserve">
+    <value>Colombia</value>
+  </data>
+  <data name="ColumnName" xml:space="preserve">
+    <value>Column Name</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="Comoros" xml:space="preserve">
+    <value>Comoros</value>
+  </data>
+  <data name="ConfirmNewPassword" xml:space="preserve">
+    <value>Confirm New Password</value>
+  </data>
+  <data name="ConfrimPassword" xml:space="preserve">
+    <value>Confrim Password</value>
+  </data>
+  <data name="Congo" xml:space="preserve">
+    <value>Congo</value>
+  </data>
+  <data name="Congo1" xml:space="preserve">
+    <value>Congo</value>
+  </data>
+  <data name="CONTACT" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="ContactNo" xml:space="preserve">
+    <value>Contact No</value>
+  </data>
+  <data name="ContentCreatedSuccessfully" xml:space="preserve">
+    <value>Content Created Successfully</value>
+  </data>
+  <data name="ContentDeletedSuccessfully" xml:space="preserve">
+    <value>Content Deleted Successfully</value>
+  </data>
+  <data name="ContentDetailsAlreadyExists" xml:space="preserve">
+    <value>Content Details Already Exists</value>
+  </data>
+  <data name="ContentID" xml:space="preserve">
+    <value>Content ID</value>
+  </data>
+  <data name="ContentManagement" xml:space="preserve">
+    <value>Content Management</value>
+  </data>
+  <data name="ContentUpdatedSuccessfully" xml:space="preserve">
+    <value>Content Updated Successfully</value>
+  </data>
+  <data name="CookIslands" xml:space="preserve">
+    <value>Cook Islands</value>
+  </data>
+  <data name="CostaRica" xml:space="preserve">
+    <value>Costa Rica</value>
+  </data>
+  <data name="CotaDIvoire" xml:space="preserve">
+    <value>Cota D'Ivoire</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="CreatedDate" xml:space="preserve">
+    <value>Created Date</value>
+  </data>
+  <data name="CreatedUser" xml:space="preserve">
+    <value>Created User</value>
+  </data>
+  <data name="CreateNew" xml:space="preserve">
+    <value>Create New</value>
+  </data>
+  <data name="Croatia" xml:space="preserve">
+    <value>Croatia</value>
+  </data>
+  <data name="Cuba" xml:space="preserve">
+    <value>Cuba</value>
+  </data>
+  <data name="Cyprus" xml:space="preserve">
+    <value> Cyprus</value>
+  </data>
+  <data name="CzechRepublic" xml:space="preserve">
+    <value>Czech Republic</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteAreaMaster" xml:space="preserve">
+    <value>Delete Selected Area?</value>
+  </data>
+  <data name="DeleteContent" xml:space="preserve">
+    <value>Delete Selected  Content?</value>
+  </data>
+  <data name="DeleteDirectionMaster" xml:space="preserve">
+    <value>Delete Selected  Direction?</value>
+  </data>
+  <data name="DeleteFeedback" xml:space="preserve">
+    <value>Delete Selected Feedback?</value>
+  </data>
+  <data name="DeleteImageMaster" xml:space="preserve">
+    <value>Delete Selected  Image?</value>
+  </data>
+  <data name="DeleteScoreMaster" xml:space="preserve">
+    <value>Delete Selected Score?</value>
+  </data>
+  <data name="DeleteUserMaster" xml:space="preserve">
+    <value>Delete Selected  User?</value>
+  </data>
+  <data name="DeleteVastuMaster" xml:space="preserve">
+    <value>Delete Selected  Vastu?</value>
+  </data>
+  <data name="DeleteVastuType" xml:space="preserve">
+    <value>Delete Selected  Vastu Type?</value>
+  </data>
+  <data name="DELFlag" xml:space="preserve">
+    <value>DEL Flag</value>
+  </data>
+  <data name="DemocraticPeoplesRepublicofKorea" xml:space="preserve">
+    <value>Democratic People's Republic of Korea</value>
+  </data>
+  <data name="Denmark" xml:space="preserve">
+    <value>Denmark</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="DiningRoom" xml:space="preserve">
+    <value>Dining Room</value>
+  </data>
+  <data name="DiningRoomdef" xml:space="preserve">
+    <value>West is the direction of Saturn, representative of the masses and therefore also of their feeding mouths and hunger. Vastu shastra directs that the eating room should be located in the Western side of the house.</value>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>Direction</value>
+  </data>
+  <data name="DirectionCreatedSuccessfully" xml:space="preserve">
+    <value>Direction Created Successfully</value>
+  </data>
+  <data name="DirectionDetailsAlreadyExists" xml:space="preserve">
+    <value>Direction Details Already Exists</value>
+  </data>
+  <data name="DirectionMaster" xml:space="preserve">
+    <value>Direction Master</value>
+  </data>
+  <data name="DirectionMasterCreate" xml:space="preserve">
+    <value>Direction Master - Create</value>
+  </data>
+  <data name="DirectionMasterEdit" xml:space="preserve">
+    <value>Direction Master - Edit</value>
+  </data>
+  <data name="DirectionUpdatedSuccessfully" xml:space="preserve">
+    <value>Direction Updated Successfully</value>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>Active/InActive</value>
+  </data>
+  <data name="Djibouti" xml:space="preserve">
+    <value>Djibouti</value>
+  </data>
+  <data name="Dominica" xml:space="preserve">
+    <value>Dominica</value>
+  </data>
+  <data name="DominicanRepublic" xml:space="preserve">
+    <value>Dominican Republic</value>
+  </data>
+  <data name="Doors" xml:space="preserve">
+    <value>Doors</value>
+  </data>
+  <data name="Doorsdef" xml:space="preserve">
+    <value>Plan the house to have even number of doors</value>
+  </data>
+  <data name="DoyouwanttoDeletefeedback" xml:space="preserve">
+    <value>Do you want to Delete feedback?</value>
+  </data>
+  <data name="EastTimor" xml:space="preserve">
+    <value>East Timor</value>
+  </data>
+  <data name="Ecuador" xml:space="preserve">
+    <value>Ecuador</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EditDelete" xml:space="preserve">
+    <value>Is Delete 1</value>
+  </data>
+  <data name="Egypt" xml:space="preserve">
+    <value>Egypt</value>
+  </data>
+  <data name="ElSalvador" xml:space="preserve">
+    <value>El Salvador</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="emailaddress" xml:space="preserve">
+    <value>email@address.com</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="EnterAddress" xml:space="preserve">
+    <value>Enter Address</value>
+  </data>
+  <data name="EnterArea" xml:space="preserve">
+    <value>Enter Area</value>
+  </data>
+  <data name="EnterCity" xml:space="preserve">
+    <value>Enter City</value>
+  </data>
+  <data name="Entercomments" xml:space="preserve">
+    <value>Enter comments</value>
+  </data>
+  <data name="EnterConfirmNewPassword" xml:space="preserve">
+    <value>Enter Confirm New Password</value>
+  </data>
+  <data name="EnterConfirmPassword" xml:space="preserve">
+    <value>Enter Confirm Password</value>
+  </data>
+  <data name="EnterContentName" xml:space="preserve">
+    <value>Enter Content Name</value>
+  </data>
+  <data name="Entercountry" xml:space="preserve">
+    <value>Enter country</value>
+  </data>
+  <data name="EnterDescription" xml:space="preserve">
+    <value>Enter Description</value>
+  </data>
+  <data name="EnterEmail" xml:space="preserve">
+    <value>Enter Email</value>
+  </data>
+  <data name="EnterFirstame" xml:space="preserve">
+    <value>Enter First name</value>
+  </data>
+  <data name="EnterFirstName" xml:space="preserve">
+    <value>Enter First Name</value>
+  </data>
+  <data name="EnterImageDetails" xml:space="preserve">
+    <value>Enter Image Details</value>
+  </data>
+  <data name="EnterLastName" xml:space="preserve">
+    <value>Enter Last Name</value>
+  </data>
+  <data name="EnterName" xml:space="preserve">
+    <value>Enter Name</value>
+  </data>
+  <data name="EnterPassword" xml:space="preserve">
+    <value>Enter Password</value>
+  </data>
+  <data name="EnterScoreDetails" xml:space="preserve">
+    <value>Enter Score Details</value>
+  </data>
+  <data name="EnterSpecialCharacters" xml:space="preserve">
+    <value>Enter Special Characters</value>
+  </data>
+  <data name="Enterstate" xml:space="preserve">
+    <value>Enter state</value>
+  </data>
+  <data name="EnterUserName" xml:space="preserve">
+    <value>Enter User Name</value>
+  </data>
+  <data name="EnterValidEmail" xml:space="preserve">
+    <value>Enter Valid Email</value>
+  </data>
+  <data name="EnterVastuType" xml:space="preserve">
+    <value>Enter Vastu Type</value>
+  </data>
+  <data name="Entrancesaysmanythingsaboutowner" xml:space="preserve">
+    <value>Entrance says many things about owner!</value>
+  </data>
+  <data name="Entrancesaysmanythingsaboutownerdef" xml:space="preserve">
+    <value>Entrance of a house predicts many a things about the occupants in the house in terms of nature and especially health. Having kitchen right in the entrance is a major flaw in the house and in such cases focus on food is very intense.</value>
+  </data>
+  <data name="EquatorialGuinea" xml:space="preserve">
+    <value>Equatorial Guinea</value>
+  </data>
+  <data name="Eritrea" xml:space="preserve">
+    <value>Eritrea</value>
+  </data>
+  <data name="errormsg" xml:space="preserve">
+    <value>error msg</value>
+  </data>
+  <data name="Estonia" xml:space="preserve">
+    <value>Estonia</value>
+  </data>
+  <data name="Ethiopia" xml:space="preserve">
+    <value>Ethiopia</value>
+  </data>
+  <data name="ExcelDownload" xml:space="preserve">
+    <value>Excel Download</value>
+  </data>
+  <data name="ExcelPDFDownload" xml:space="preserve">
+    <value>Excel/PDFDownload</value>
+  </data>
+  <data name="ExtraScore" xml:space="preserve">
+    <value>Extra Score</value>
+  </data>
+  <data name="failure" xml:space="preserve">
+    <value>failure</value>
+  </data>
+  <data name="FalklandIslands" xml:space="preserve">
+    <value>Falkland Islands</value>
+  </data>
+  <data name="False" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="FaroeIslands" xml:space="preserve">
+    <value>Faroe Islands</value>
+  </data>
+  <data name="FEEDBACK" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="FeedbackAddedSuccesfully" xml:space="preserve">
+    <value>Feed back Added Successfully</value>
+  </data>
+  <data name="FeedbackApproval" xml:space="preserve">
+    <value>Feedback Approval</value>
+  </data>
+  <data name="Feedbackapprovalfailed" xml:space="preserve">
+    <value>Feedback approval failed</value>
+  </data>
+  <data name="Feedbackapprovedsuccessfully" xml:space="preserve">
+    <value>Feedback approved successfully</value>
+  </data>
+  <data name="feedbackdeletedsucessfully" xml:space="preserve">
+    <value>feedback deleted sucessfully</value>
+  </data>
+  <data name="Feedbackdeletionfailed" xml:space="preserve">
+    <value>Feedback deletion failed</value>
+  </data>
+  <data name="Feedbackrejectedsuccessfully" xml:space="preserve">
+    <value>Feedback rejected successfully</value>
+  </data>
+  <data name="Feedbackrejectionfailed" xml:space="preserve">
+    <value>Feedback rejection failed</value>
+  </data>
+  <data name="FEEDBACKTESTIMONIALS" xml:space="preserve">
+    <value>FEEDBACK/TESTIMONIALS</value>
+  </data>
+  <data name="Fiji" xml:space="preserve">
+    <value>Fiji</value>
+  </data>
+  <data name="Finland" xml:space="preserve">
+    <value>Finland</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="FontSize" xml:space="preserve">
+    <value>Font Size</value>
+  </data>
+  <data name="Forgotten" xml:space="preserve">
+    <value>Forgot Password</value>
+  </data>
+  <data name="Forgottenpassword" xml:space="preserve">
+    <value>Forgot password?</value>
+  </data>
+  <data name="Formatting" xml:space="preserve">
+    <value>Formatting</value>
+  </data>
+  <data name="France" xml:space="preserve">
+    <value>France</value>
+  </data>
+  <data name="FranceMetropolitan" xml:space="preserve">
+    <value>France Metropolitan</value>
+  </data>
+  <data name="FrenchGuiana" xml:space="preserve">
+    <value>French Guiana</value>
+  </data>
+  <data name="FrenchPolynesia" xml:space="preserve">
+    <value>French Polynesia</value>
+  </data>
+  <data name="FrenchSouthernTerritories" xml:space="preserve">
+    <value>French Southern Territories</value>
+  </data>
+  <data name="Gabon" xml:space="preserve">
+    <value>Gabon</value>
+  </data>
+  <data name="Gambia" xml:space="preserve">
+    <value>Gambia</value>
+  </data>
+  <data name="GenerateExcelReport" xml:space="preserve">
+    <value>Generate Excel Report</value>
+  </data>
+  <data name="GeneratePDFReport" xml:space="preserve">
+    <value>Generate PDF Report</value>
+  </data>
+  <data name="Georgia" xml:space="preserve">
+    <value>Georgia</value>
+  </data>
+  <data name="Germany" xml:space="preserve">
+    <value>Germany</value>
+  </data>
+  <data name="Ghana" xml:space="preserve">
+    <value>Ghana</value>
+  </data>
+  <data name="Gibraltar" xml:space="preserve">
+    <value>Gibraltar</value>
+  </data>
+  <data name="Greece" xml:space="preserve">
+    <value>Greece</value>
+  </data>
+  <data name="Greenland" xml:space="preserve">
+    <value>Greenland</value>
+  </data>
+  <data name="Grenada" xml:space="preserve">
+    <value>Grenada</value>
+  </data>
+  <data name="Guadeloupe" xml:space="preserve">
+    <value>Guadeloupe</value>
+  </data>
+  <data name="Guam" xml:space="preserve">
+    <value>Guam</value>
+  </data>
+  <data name="Guatemala" xml:space="preserve">
+    <value>Guatemala</value>
+  </data>
+  <data name="Guinea" xml:space="preserve">
+    <value>Guinea</value>
+  </data>
+  <data name="GuineaBissau" xml:space="preserve">
+    <value>Guinea-Bissau</value>
+  </data>
+  <data name="Guyana" xml:space="preserve">
+    <value>Guyana</value>
+  </data>
+  <data name="Haiti" xml:space="preserve">
+    <value>Haiti</value>
+  </data>
+  <data name="HeardandMcDonaldIslands" xml:space="preserve">
+    <value>Heard and McDonald Islands</value>
+  </data>
+  <data name="HolySee" xml:space="preserve">
+    <value>Holy See</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="homedes" xml:space="preserve">
+    <value>Vastu is an ancient science which is highly practiced for better living. Every corner of the house reflects their energies on you and your family. Though in modern building and apartments proper Vastu is not possible, but there are correctional remedies to suit the house. You can live a blissful life by living in a Vastu designed home, problems are bound to take place, but these following remedies can help you to escape the worst scenarios.</value>
+  </data>
+  <data name="HomeImportance" xml:space="preserve">
+    <value>Home Importance</value>
+  </data>
+  <data name="Homelist1" xml:space="preserve">
+    <value>Vaastu -Shastra is a Vast and ancient science of living. The word Vaastu is derived from the root Vas which means to reside. It is not an equivalent of the word architecture. Vaastu is architecture and much more. While architecture is the science, art or profession of designing and constructing buildings etc.,</value>
+  </data>
+  <data name="Homelist11" xml:space="preserve">
+    <value>the definition of Vaastu extend into the realm of occultism. Vaastu Shastra, the edifice science of Bhawan Sthapatya Kala, being the applied aspects of ATHARVAVEDA, is an ancient science and one of the eminent features of our heritage. Vaastu means dwelling of Humans and Gods in the original Sanskrit literature.</value>
+  </data>
+  <data name="Homelist2" xml:space="preserve">
+    <value>Vaastu Shastra which is considered a conduit between man and nature is based on the infinite powers of the five elements - fire, water, earth, and air and space. The residential and commercial spaces constructed nowadays rely on the basics of the five Elements in all aspects of planning, construction and doing</value>
+  </data>
+  <data name="Homelist22" xml:space="preserve">
+    <value>the interiors. The five Elements or the Paanchbhootas which are embedded in almost all materials in the world are used by Vaastu Shastra to diminish the problems of occupants that might arise in a dwelling either home or office by... construction and doing the interiors. The five Elements or the Paanchbhootas which are embedded in almost all materials in the world are used by Vaastu Shastra to diminish the problems of occupants that might arise in a dwelling either home or office by... changes in exterior and interior structural configurations. Vaastu Shastra as a science also stresses on the orientation of a building or structure. It emphasizes that the orientation of a building and its design is not only significant with the purpose of energy conservation but also for the purpose of offering a life which brings good health, wealth and prosperity for its occupants. It is believed that the orientation or direction of a building, according to Vaastu is planned on the basis of the rotational setting of the planets and those buildings that are not planned keeping in mind the orientation and not constructed with suitable building materials as proposed by Vaastu see their decline to ruins much faster than those built otherwise. Orientation in Vaastu Shastra refers to the eight directions set as the guiding force , which rules the life and destiny of the occupants who reside in the particular direction of the house. The basic directions according to Vaastu are East, West, North and South. And Northeast, Southeast, Southwest and Northwest are considered to be the conjunction points where the two basic directions meet and such directions are of much significance as they hold the power to execute the powers of both the directions. So Vaastu Shastra is mainly based on the accumulating of strengths diversified by the forces, in co-existence to the Paanchbhootas or the five Elements. Vaastu as a subject is an amalgamation of art, science, astrology and astronomy. Vaastu which literally refers to the dwelling or shelter, is planned and implemented taking into consideration the effect of the forces in the environment and the 'Paanchbhootas' so as to maintain a state of balance, thus maneuvering our luck, health, wealth, karma (deeds) and the essentials of life. Vaastu Shastra is adapted in the construction of structures in modern days on the basis of creating a harmony between the Elements in the environment - Air, Water, Space, Fire and Earth. The diversified field of Vaastu Shastra extends from choosing a plot of land to the planning and execution of design, to the construction of the building or structure and finally to the moving of the occupants or Grihapravesh to the new house. Learn less</value>
+  </data>
+  <data name="Homelist3" xml:space="preserve">
+    <value>Open courtyards in the center of home do a lot of good. These courtyards in the residential properties are advisable. · Pooja and entrance room should always be in the North-East zone. This brings wealth and prosperity to homes. · Bedrooms should always be constructed in the Southern side. · </value>
+  </data>
+  <data name="Homelist33" xml:space="preserve">
+    <value>As per a Vastu rule, cooking should be done in the East side and hence your kitchens should face east. · Numbers of the windows and doors should always be in an even number. · If your bedroom is in the South-west corner it should always be used by the heads of your home like your parents. If you are a breadwinner of the home, your bedroom should be in the North-west side. · Doors of your pooja rooms should have double shutters with 4 frames. · Deity placed in the pooja room should face West east and North. · Keep in mind that all doors of your home should open inside that the energy remains inside your rooms. · Toilet doors should never face the dinning hall or the Kitchen. · Never make kitchens or doors just in front or next to the toilet</value>
+  </data>
+  <data name="HomeMainPage" xml:space="preserve">
+    <value>Home Main Page</value>
+  </data>
+  <data name="HOMEVASTU" xml:space="preserve">
+    <value>Home Vastu</value>
+  </data>
+  <data name="HomeVastuTips" xml:space="preserve">
+    <value>Home Vastu Tips</value>
+  </data>
+  <data name="Honduras" xml:space="preserve">
+    <value>Honduras</value>
+  </data>
+  <data name="HongKong" xml:space="preserve">
+    <value>Hong Kong</value>
+  </data>
+  <data name="Hungary" xml:space="preserve">
+    <value>Hungary</value>
+  </data>
+  <data name="Iceland" xml:space="preserve">
+    <value>Iceland</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="ImageCreatedSuccessfully" xml:space="preserve">
+    <value>Image Created Successfully</value>
+  </data>
+  <data name="ImageDetails" xml:space="preserve">
+    <value>Image Details</value>
+  </data>
+  <data name="ImageDetailsAlreadyExists" xml:space="preserve">
+    <value>Image Details Already Exists</value>
+  </data>
+  <data name="ImageFile" xml:space="preserve">
+    <value>Image File</value>
+  </data>
+  <data name="ImageMaster" xml:space="preserve">
+    <value>Image Master</value>
+  </data>
+  <data name="ImageMasterCreate" xml:space="preserve">
+    <value>Image Master - Create</value>
+  </data>
+  <data name="ImageMasterEdit" xml:space="preserve">
+    <value>Image Master - Edit</value>
+  </data>
+  <data name="ImageSymbol" xml:space="preserve">
+    <value>Image Symbol</value>
+  </data>
+  <data name="ImageUpdatedSuccessfully" xml:space="preserve">
+    <value>Image Updated Successfully</value>
+  </data>
+  <data name="ImageUrl" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="ImportanceofVastu" xml:space="preserve">
+    <value>Importance of Vastu</value>
+  </data>
+  <data name="India" xml:space="preserve">
+    <value>India</value>
+  </data>
+  <data name="Indonesia" xml:space="preserve">
+    <value>Indonesia</value>
+  </data>
+  <data name="Iran" xml:space="preserve">
+    <value>Iran</value>
+  </data>
+  <data name="Iraq" xml:space="preserve">
+    <value>Iraq</value>
+  </data>
+  <data name="Ireland" xml:space="preserve">
+    <value>Ireland</value>
+  </data>
+  <data name="IrregularShapeofplotcanbemaleficforindustry" xml:space="preserve">
+    <value>Irregular Shape of plot can be malefic for industry</value>
+  </data>
+  <data name="IrregularShapeofplotcanbemaleficforindustrydef" xml:space="preserve">
+    <value>Whether it is industry or residential property shape of plot is essential to be ascertain but industries running through huge investments need to be cautious more on shape terms.</value>
+  </data>
+  <data name="IsActive" xml:space="preserve">
+    <value>Is Active</value>
+  </data>
+  <data name="IsDelete" xml:space="preserve">
+    <value>Is Delete</value>
+  </data>
+  <data name="Israel" xml:space="preserve">
+    <value>Israel</value>
+  </data>
+  <data name="Italy" xml:space="preserve">
+    <value>Italy</value>
+  </data>
+  <data name="Jamaica" xml:space="preserve">
+    <value>Jamaica</value>
+  </data>
+  <data name="Japan" xml:space="preserve">
+    <value>Japan</value>
+  </data>
+  <data name="Japanese" xml:space="preserve">
+    <value>Japanese</value>
+  </data>
+  <data name="Jorda" xml:space="preserve">
+    <value>Jordan</value>
+  </data>
+  <data name="Kazakhstan" xml:space="preserve">
+    <value>Kazakhstan</value>
+  </data>
+  <data name="Keepthefrontgateclean" xml:space="preserve">
+    <value>Keep the front gate clean</value>
+  </data>
+  <data name="Keepthefrontgatecleandef" xml:space="preserve">
+    <value>People say, one can get money only by the means of earning but Vastu say you can reap riches by de-cluttering your house front gate.</value>
+  </data>
+  <data name="Kenya" xml:space="preserve">
+    <value>Kenya</value>
+  </data>
+  <data name="Kiribati" xml:space="preserve">
+    <value>Kiribati</value>
+  </data>
+  <data name="Kitchen" xml:space="preserve">
+    <value>Kitchen</value>
+  </data>
+  <data name="Kitchendef" xml:space="preserve">
+    <value>Agni, the vedic god of fire, resides in South-East. Vastu therefore recommends that the kitchen should be loacated in the South-Eastern corner.</value>
+  </data>
+  <data name="Korea" xml:space="preserve">
+    <value>Korea</value>
+  </data>
+  <data name="Kuwait" xml:space="preserve">
+    <value>Kuwait</value>
+  </data>
+  <data name="Kyrgyzstan" xml:space="preserve">
+    <value>Kyrgyzstan</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Lao" xml:space="preserve">
+    <value>Lao</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="Latvia" xml:space="preserve">
+    <value>Latvia</value>
+  </data>
+  <data name="Learnless" xml:space="preserve">
+    <value>Learn less</value>
+  </data>
+  <data name="Learnmore" xml:space="preserve">
+    <value>Learn more</value>
+  </data>
+  <data name="Lebanon" xml:space="preserve">
+    <value>Lebanon</value>
+  </data>
+  <data name="Lesotho" xml:space="preserve">
+    <value>Lesotho</value>
+  </data>
+  <data name="Liberia" xml:space="preserve">
+    <value>Liberia</value>
+  </data>
+  <data name="LibyanArabJamahiriya" xml:space="preserve">
+    <value>Libyan Arab Jamahiriya</value>
+  </data>
+  <data name="Liechtenstein" xml:space="preserve">
+    <value>Liechtenstein</value>
+  </data>
+  <data name="Lithuania" xml:space="preserve">
+    <value>Lithuania</value>
+  </data>
+  <data name="LivingRoom" xml:space="preserve">
+    <value>Living Room</value>
+  </data>
+  <data name="LivingRoomdef" xml:space="preserve">
+    <value>In a home, the living room is where most of the activity is centred. It creates a favourable (or unfavourable) first impression when guests enter for social gatherings.</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="LOGIN" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="LOGINBTN" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Loginname" xml:space="preserve">
+    <value>Login Name</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="LongDescription" xml:space="preserve">
+    <value>Long Description</value>
+  </data>
+  <data name="Lucksuccessgoeshandinhand" xml:space="preserve">
+    <value>Luck success goes hand in hand</value>
+  </data>
+  <data name="Lucksuccessgoeshandinhanddef" xml:space="preserve">
+    <value>Not every time it is possible that people who are sharp brained do fair all time in life. This is not necessary as most of the times you have the luck of your stars while intelligence is hardly a part in success.</value>
+  </data>
+  <data name="Luxembourg" xml:space="preserve">
+    <value>Luxembourg</value>
+  </data>
+  <data name="Macau" xml:space="preserve">
+    <value>Macau</value>
+  </data>
+  <data name="Macedonia" xml:space="preserve">
+    <value>Macedonia</value>
+  </data>
+  <data name="Madagascar" xml:space="preserve">
+    <value>Madagascar</value>
+  </data>
+  <data name="MainEntrance" xml:space="preserve">
+    <value>Main Entrance</value>
+  </data>
+  <data name="MainEntrancedef" xml:space="preserve">
+    <value>The Main entrance should not face either intersections of roads, or an approaching dead end road. Nor should it be obstructed by tall structures like trees or lamp posts. If it has steps leading to the house, then build an even number of steps.</value>
+  </data>
+  <data name="MakeyourEntranceBigforInflowofWealth" xml:space="preserve">
+    <value>Make your Entrance Big for Inflow of Wealth</value>
+  </data>
+  <data name="MakeyourEntranceBigforInflowofWealthdef" xml:space="preserve">
+    <value>Entrance of a house is the pathway of inflow of health and wealth and it is said in Vedas that entrance of house is symbolic of Rahu and exit door is of Ketu.</value>
+  </data>
+  <data name="Malawi" xml:space="preserve">
+    <value>Malawi</value>
+  </data>
+  <data name="Malaysia" xml:space="preserve">
+    <value>Malaysia</value>
+  </data>
+  <data name="Maldives" xml:space="preserve">
+    <value>Maldives</value>
+  </data>
+  <data name="Mali" xml:space="preserve">
+    <value>Mali</value>
+  </data>
+  <data name="Malta" xml:space="preserve">
+    <value>Malta</value>
+  </data>
+  <data name="Mandatoryfields" xml:space="preserve">
+    <value>Mandatory fields</value>
+  </data>
+  <data name="MarshallIslands" xml:space="preserve">
+    <value>Marshall Islands</value>
+  </data>
+  <data name="Martinique" xml:space="preserve">
+    <value>Martinique</value>
+  </data>
+  <data name="Mauritania" xml:space="preserve">
+    <value>Mauritania</value>
+  </data>
+  <data name="Mauritius" xml:space="preserve">
+    <value>Mauritius</value>
+  </data>
+  <data name="Maximumallowedfilesizeis2MB" xml:space="preserve">
+    <value>Maximum allowed file size is 2MB, Pixel:200 X 200</value>
+  </data>
+  <data name="Maximumallowedfilesizeis3MB" xml:space="preserve">
+    <value>Maximum allowed file size is 3 MB</value>
+  </data>
+  <data name="MaximumLength100" xml:space="preserve">
+    <value>Maximum Length 100</value>
+  </data>
+  <data name="MaximumLength200" xml:space="preserve">
+    <value>Maximum Length 200</value>
+  </data>
+  <data name="MaximumLength2000" xml:space="preserve">
+    <value>Maximum Length 2000</value>
+  </data>
+  <data name="MaximumLength400" xml:space="preserve">
+    <value>Maximum Length 400</value>
+  </data>
+  <data name="MaximumLength6000" xml:space="preserve">
+    <value>Maximum Length 6000</value>
+  </data>
+  <data name="MaximumLength8000" xml:space="preserve">
+    <value>Maximum Length 8000</value>
+  </data>
+  <data name="Mayotte" xml:space="preserve">
+    <value>Mayotte</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="Mexico" xml:space="preserve">
+    <value> Mexico</value>
+  </data>
+  <data name="Micronesia" xml:space="preserve">
+    <value>Micronesia</value>
+  </data>
+  <data name="MiddleName" xml:space="preserve">
+    <value>Middle Name</value>
+  </data>
+  <data name="Moldova" xml:space="preserve">
+    <value>Moldova</value>
+  </data>
+  <data name="Monaco" xml:space="preserve">
+    <value>Monaco</value>
+  </data>
+  <data name="Mongolia" xml:space="preserve">
+    <value>Mongolia</value>
+  </data>
+  <data name="Montserrat" xml:space="preserve">
+    <value>Montserrat</value>
+  </data>
+  <data name="Morocco" xml:space="preserve">
+    <value>Morocco</value>
+  </data>
+  <data name="Mozambique" xml:space="preserve">
+    <value>Mozambique</value>
+  </data>
+  <data name="Myanmar" xml:space="preserve">
+    <value>Myanmar</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Namibia" xml:space="preserve">
+    <value>Namibia</value>
+  </data>
+  <data name="Nauru" xml:space="preserve">
+    <value>Nauru</value>
+  </data>
+  <data name="Nepal" xml:space="preserve">
+    <value>Nepal</value>
+  </data>
+  <data name="Netherlands" xml:space="preserve">
+    <value>Netherlands</value>
+  </data>
+  <data name="NetherlandsAntilles" xml:space="preserve">
+    <value>Netherlands Antilles</value>
+  </data>
+  <data name="NewCaledonia" xml:space="preserve">
+    <value>New Caledonia</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="NewValue" xml:space="preserve">
+    <value>New Value</value>
+  </data>
+  <data name="NewZealand" xml:space="preserve">
+    <value>New Zealand</value>
+  </data>
+  <data name="Nicaragua" xml:space="preserve">
+    <value>Nicaragua</value>
+  </data>
+  <data name="Niger" xml:space="preserve">
+    <value>Niger</value>
+  </data>
+  <data name="Nigeria" xml:space="preserve">
+    <value>Nigeria</value>
+  </data>
+  <data name="Niue" xml:space="preserve">
+    <value>Niue</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NoRecordFound" xml:space="preserve">
+    <value>No Record Found</value>
+  </data>
+  <data name="NoResultandDescriptionFound" xml:space="preserve">
+    <value>No Result and Description Found</value>
+  </data>
+  <data name="NorfolkIsland" xml:space="preserve">
+    <value>Norfolk Island</value>
+  </data>
+  <data name="NorthernMarianaIslands" xml:space="preserve">
+    <value>Northern Mariana Islands</value>
+  </data>
+  <data name="Norway" xml:space="preserve">
+    <value>Norway</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="OldValue" xml:space="preserve">
+    <value>Old Value</value>
+  </data>
+  <data name="Oman" xml:space="preserve">
+    <value>Oman</value>
+  </data>
+  <data name="Onlyfilesareallowed" xml:space="preserve">
+    <value>Only files are allowed</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Page</value>
+  </data>
+  <data name="Pakistan" xml:space="preserve">
+    <value>Pakistan</value>
+  </data>
+  <data name="Palau" xml:space="preserve">
+    <value>Palau</value>
+  </data>
+  <data name="Panama" xml:space="preserve">
+    <value>Panama</value>
+  </data>
+  <data name="PapuaNewGuinea" xml:space="preserve">
+    <value>Papua New Guinea</value>
+  </data>
+  <data name="Paraguay" xml:space="preserve">
+    <value>Paraguay</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Passworddoesnotmatch" xml:space="preserve">
+    <value>Password does not match</value>
+  </data>
+  <data name="PasswordMismatch" xml:space="preserve">
+    <value>Password Mismatch.</value>
+  </data>
+  <data name="PDFDownload" xml:space="preserve">
+    <value>PDF Download</value>
+  </data>
+  <data name="Peru" xml:space="preserve">
+    <value>Peru</value>
+  </data>
+  <data name="Philippines" xml:space="preserve">
+    <value>Philippines</value>
+  </data>
+  <data name="Pillars" xml:space="preserve">
+    <value>Pillars</value>
+  </data>
+  <data name="Pillarsdef" xml:space="preserve">
+    <value>Even numbers of pillars promote harmony in the house.</value>
+  </data>
+  <data name="Pitcairn" xml:space="preserve">
+    <value>Pitcairn</value>
+  </data>
+  <data name="PleaseenterAllField" xml:space="preserve">
+    <value>Please enter All Field</value>
+  </data>
+  <data name="PleaseenteryourName" xml:space="preserve">
+    <value>Please enter your Name</value>
+  </data>
+  <data name="Poland" xml:space="preserve">
+    <value> Poland</value>
+  </data>
+  <data name="PoojaRoom" xml:space="preserve">
+    <value>Pooja Room</value>
+  </data>
+  <data name="PoojaRoomdef" xml:space="preserve">
+    <value>Pooja RoomThe pooja room is an important part of most houses.which is used for meditation and prayer, is filled with positive energies.</value>
+  </data>
+  <data name="Portugal" xml:space="preserve">
+    <value>Portugal</value>
+  </data>
+  <data name="ProsperyourBusinesswithVastutips" xml:space="preserve">
+    <value>Prosper your Business with Vastu tips</value>
+  </data>
+  <data name="ProsperyourBusinesswithVastutipsdef" xml:space="preserve">
+    <value>Design to have an even number of beams in a room. But do not sleep under the beams as it is likely to cause health complications.</value>
+  </data>
+  <data name="PuertoRico" xml:space="preserve">
+    <value>Puerto Rico</value>
+  </data>
+  <data name="Qatar" xml:space="preserve">
+    <value>Qatar</value>
+  </data>
+  <data name="RangeBetween0to99" xml:space="preserve">
+    <value>Range Between 0 to  99</value>
+  </data>
+  <data name="Readmore" xml:space="preserve">
+    <value>Learn More</value>
+  </data>
+  <data name="Reject" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="Rejected" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="Rememberme" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="ReportGenerationDate" xml:space="preserve">
+    <value>Report Generation Date</value>
+  </data>
+  <data name="Reportselect" xml:space="preserve">
+    <value>--Select--</value>
+  </data>
+  <data name="ResearcherComments" xml:space="preserve">
+    <value>Researcher's Comments</value>
+  </data>
+  <data name="ResearcherName" xml:space="preserve">
+    <value>Researcher's Name</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="Reunion" xml:space="preserve">
+    <value>Reunion</value>
+  </data>
+  <data name="Romania" xml:space="preserve">
+    <value>Romania</value>
+  </data>
+  <data name="Rooms" xml:space="preserve">
+    <value>Rooms</value>
+  </data>
+  <data name="Roomsdef" xml:space="preserve">
+    <value>TA Vastu house has odd number of rooms. Count all rooms which have a door.</value>
+  </data>
+  <data name="Russia" xml:space="preserve">
+    <value>Russia</value>
+  </data>
+  <data name="Rwanda" xml:space="preserve">
+    <value>Rwanda</value>
+  </data>
+  <data name="SaintKittsandNevis" xml:space="preserve">
+    <value>Saint Kitts and Nevis</value>
+  </data>
+  <data name="SaintLUCIA" xml:space="preserve">
+    <value>Saint LUCIA</value>
+  </data>
+  <data name="SaintVincent" xml:space="preserve">
+    <value>Saint Vincent</value>
+  </data>
+  <data name="Samoa" xml:space="preserve">
+    <value>Samoa</value>
+  </data>
+  <data name="SanMarino" xml:space="preserve">
+    <value>San Marino</value>
+  </data>
+  <data name="SaoTomeandPrincipe" xml:space="preserve">
+    <value>Sao Tome and Principe</value>
+  </data>
+  <data name="SaudiArabia" xml:space="preserve">
+    <value>Saudi Arabia</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SaveFailed" xml:space="preserve">
+    <value>Save Failed</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Score</value>
+  </data>
+  <data name="ScoreCreatedSuccessfully" xml:space="preserve">
+    <value>Score Created Successfully</value>
+  </data>
+  <data name="ScoreDetails" xml:space="preserve">
+    <value>Score Details</value>
+  </data>
+  <data name="ScoreDetailsAlreadyExists" xml:space="preserve">
+    <value>Vastu Type Area Direction is Already Exists</value>
+  </data>
+  <data name="ScoreImage" xml:space="preserve">
+    <value>Score Image</value>
+  </data>
+  <data name="ScoreMaster" xml:space="preserve">
+    <value>Score Master</value>
+  </data>
+  <data name="ScoreMasterCreate" xml:space="preserve">
+    <value>Score Master - Create</value>
+  </data>
+  <data name="ScoreMasterEdit" xml:space="preserve">
+    <value>Score Master - Edit</value>
+  </data>
+  <data name="ScoreUpdatedSuccessfully" xml:space="preserve">
+    <value>Score Updated Successfully</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="SearchFor" xml:space="preserve">
+    <value>Search For</value>
+  </data>
+  <data name="SEARCHVASTU" xml:space="preserve">
+    <value>Search Vastu</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="selectArea" xml:space="preserve">
+    <value>Select Area</value>
+  </data>
+  <data name="SelectDirection" xml:space="preserve">
+    <value>Select Direction</value>
+  </data>
+  <data name="SelectImageFile" xml:space="preserve">
+    <value>Select Image File</value>
+  </data>
+  <data name="SelectScore" xml:space="preserve">
+    <value>Select Score</value>
+  </data>
+  <data name="SelectStatus" xml:space="preserve">
+    <value>Select Status</value>
+  </data>
+  <data name="SelectUser" xml:space="preserve">
+    <value>Select User</value>
+  </data>
+  <data name="SelectUserType" xml:space="preserve">
+    <value>Select User Type</value>
+  </data>
+  <data name="SelectVastuType" xml:space="preserve">
+    <value>Select Vastu Type</value>
+  </data>
+  <data name="SendMessage" xml:space="preserve">
+    <value>Send Message</value>
+  </data>
+  <data name="Senegal" xml:space="preserve">
+    <value>Senegal</value>
+  </data>
+  <data name="Serbia" xml:space="preserve">
+    <value>Serbia</value>
+  </data>
+  <data name="Setting" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+  <data name="Seychelles" xml:space="preserve">
+    <value>Seychelles</value>
+  </data>
+  <data name="Shastra" xml:space="preserve">
+    <value>Shastra</value>
+  </data>
+  <data name="ShortDescription" xml:space="preserve">
+    <value>Short Description</value>
+  </data>
+  <data name="Sierra" xml:space="preserve">
+    <value>Sierra</value>
+  </data>
+  <data name="Singapore" xml:space="preserve">
+    <value>Singapore</value>
+  </data>
+  <data name="Slovakia" xml:space="preserve">
+    <value>Slovakia</value>
+  </data>
+  <data name="Slovenia" xml:space="preserve">
+    <value>Slovenia</value>
+  </data>
+  <data name="SolomonIslands" xml:space="preserve">
+    <value>Solomon Islands</value>
+  </data>
+  <data name="Somalia" xml:space="preserve">
+    <value>Somalia</value>
+  </data>
+  <data name="SouthAfrica" xml:space="preserve">
+    <value>South Africa</value>
+  </data>
+  <data name="SouthGeorgia" xml:space="preserve">
+    <value>South Georgia</value>
+  </data>
+  <data name="spain" xml:space="preserve">
+    <value>Span</value>
+  </data>
+  <data name="SriLanka" xml:space="preserve">
+    <value>SriLanka</value>
+  </data>
+  <data name="Staircase" xml:space="preserve">
+    <value>Staircase</value>
+  </data>
+  <data name="Staircasedef" xml:space="preserve">
+    <value>A staircase is considered to be 'heavy'. Its preferred direction is South or West. Do not have a staircase in North-Eastern part of the house.</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="StatusCreatedSuccessfully" xml:space="preserve">
+    <value>Status Created Successfully</value>
+  </data>
+  <data name="StatusDetailsAlreadyExists" xml:space="preserve">
+    <value>Status Details Already Exists</value>
+  </data>
+  <data name="StatusUpdatedSuccessfully" xml:space="preserve">
+    <value>Status Updated Successfully</value>
+  </data>
+  <data name="StHelena" xml:space="preserve">
+    <value>St. Helena</value>
+  </data>
+  <data name="StoreRoom" xml:space="preserve">
+    <value>Store Room</value>
+  </data>
+  <data name="StoreRoomdef" xml:space="preserve">
+    <value>According to Vastu Shastra, the right location for the storeroom is in the south-west or north-west corner to maintain peace and tranquillity.</value>
+  </data>
+  <data name="StPierreandMiguelon" xml:space="preserve">
+    <value>St. Pierre and Miguelon</value>
+  </data>
+  <data name="submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="SuccessfullySaved" xml:space="preserve">
+    <value>Successfully Saved</value>
+  </data>
+  <data name="Sudan" xml:space="preserve">
+    <value>Sudan</value>
+  </data>
+  <data name="Suriname" xml:space="preserve">
+    <value>Suriname</value>
+  </data>
+  <data name="Svalbard" xml:space="preserve">
+    <value>Svalbard</value>
+  </data>
+  <data name="Swaziland" xml:space="preserve">
+    <value>Swaziland</value>
+  </data>
+  <data name="Sweden" xml:space="preserve">
+    <value>Sweden</value>
+  </data>
+  <data name="Switzerland" xml:space="preserve">
+    <value>Switzerland</value>
+  </data>
+  <data name="Syria" xml:space="preserve">
+    <value>Syria</value>
+  </data>
+  <data name="Taiwan" xml:space="preserve">
+    <value>Taiwan</value>
+  </data>
+  <data name="Tajikistan" xml:space="preserve">
+    <value>Tajikistan</value>
+  </data>
+  <data name="Tanzania" xml:space="preserve">
+    <value>Tanzania</value>
+  </data>
+  <data name="Thailand" xml:space="preserve">
+    <value>Thailand</value>
+  </data>
+  <data name="Togo" xml:space="preserve">
+    <value>Togo</value>
+  </data>
+  <data name="Toilets" xml:space="preserve">
+    <value>Toilets</value>
+  </data>
+  <data name="Toiletsdef" xml:space="preserve">
+    <value>Avoid the construction of a toilet in the North-eastern part of the house. It would spell disaster. Plan to have it between South and South-Western side of the house.</value>
+  </data>
+  <data name="Tokelau" xml:space="preserve">
+    <value>Tokelau</value>
+  </data>
+  <data name="Tonga" xml:space="preserve">
+    <value>Tonga</value>
+  </data>
+  <data name="TransactionHistory" xml:space="preserve">
+    <value>Transaction History</value>
+  </data>
+  <data name="Treasury" xml:space="preserve">
+    <value>Treasury Room</value>
+  </data>
+  <data name="Treasurydef" xml:space="preserve">
+    <value>The best place for the treasury box is South West.  This direction symbolizes stability and will ensure the safety of the wealth.</value>
+  </data>
+  <data name="Trees" xml:space="preserve">
+    <value>Trees</value>
+  </data>
+  <data name="Treesdef" xml:space="preserve">
+    <value>West, South Tall trees are fine in S and W, but should be avoided in N and E.</value>
+  </data>
+  <data name="Trinidadand" xml:space="preserve">
+    <value>Trinidad and Tobago</value>
+  </data>
+  <data name="True" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="Tunisia" xml:space="preserve">
+    <value>Tunisia</value>
+  </data>
+  <data name="Turkey" xml:space="preserve">
+    <value>Turkey</value>
+  </data>
+  <data name="Turkmenistan" xml:space="preserve">
+    <value>Turkmenistan</value>
+  </data>
+  <data name="TurksandCaicos" xml:space="preserve">
+    <value>Turks and Caicos</value>
+  </data>
+  <data name="Tuvalu" xml:space="preserve">
+    <value>Tuvalu</value>
+  </data>
+  <data name="Uganda" xml:space="preserve">
+    <value>Uganda</value>
+  </data>
+  <data name="Ukraine" xml:space="preserve">
+    <value>Ukraine</value>
+  </data>
+  <data name="UnabletoCreateArea" xml:space="preserve">
+    <value>Unable to Create Area</value>
+  </data>
+  <data name="UnabletoCreateContent" xml:space="preserve">
+    <value>Unable to Create Content</value>
+  </data>
+  <data name="UnabletoCreateDirection" xml:space="preserve">
+    <value>Unable to Create Direction</value>
+  </data>
+  <data name="UnabletoCreateImage" xml:space="preserve">
+    <value>Unable to Create Image</value>
+  </data>
+  <data name="UnabletoCreateScore" xml:space="preserve">
+    <value>Unable to Create Score</value>
+  </data>
+  <data name="UnabletoCreateStatus" xml:space="preserve">
+    <value>Unable to Create Status</value>
+  </data>
+  <data name="UnabletoCreateUser" xml:space="preserve">
+    <value>Unable to Create User</value>
+  </data>
+  <data name="UnabletoCreateVastu" xml:space="preserve">
+    <value>Unable to Create Vastu</value>
+  </data>
+  <data name="UnabletoCreateVastuType" xml:space="preserve">
+    <value>Unable to Create Vastu Type</value>
+  </data>
+  <data name="Unabletodelete" xml:space="preserve">
+    <value>Unable to delete</value>
+  </data>
+  <data name="Unabletosave" xml:space="preserve">
+    <value>Unable to save</value>
+  </data>
+  <data name="UnabletoUpdateArea" xml:space="preserve">
+    <value>Unable to Update Area</value>
+  </data>
+  <data name="UnabletoUpdateContent" xml:space="preserve">
+    <value>Unable to Update Content</value>
+  </data>
+  <data name="UnabletoUpdateDirection" xml:space="preserve">
+    <value>Unable to Update Direction</value>
+  </data>
+  <data name="unabletoupdatedvastu" xml:space="preserve">
+    <value>Unable to updated vastu</value>
+  </data>
+  <data name="UnabletoUpdateImage" xml:space="preserve">
+    <value>Unable to Update Image</value>
+  </data>
+  <data name="UnabletoUpdateScore" xml:space="preserve">
+    <value>Unable to Update Score</value>
+  </data>
+  <data name="UnabletoUpdateStatus" xml:space="preserve">
+    <value>Unable to Update Status</value>
+  </data>
+  <data name="UnabletoUpdateUser" xml:space="preserve">
+    <value>Unable to Update User</value>
+  </data>
+  <data name="UnabletoUpdateVastuType" xml:space="preserve">
+    <value>Unable to Update Vastu Type</value>
+  </data>
+  <data name="UnitedArabEmirates" xml:space="preserve">
+    <value>United Arab Emirates</value>
+  </data>
+  <data name="UnitedKingdom" xml:space="preserve">
+    <value>United Kingdom</value>
+  </data>
+  <data name="UnitedStates" xml:space="preserve">
+    <value>United States</value>
+  </data>
+  <data name="UnitedStatesMinorOutlyingIslands" xml:space="preserve">
+    <value>United States Minor Outlying Islands</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="UpdatedDate" xml:space="preserve">
+    <value>Updated Date</value>
+  </data>
+  <data name="Updateduser" xml:space="preserve">
+    <value>Updated User</value>
+  </data>
+  <data name="Uruguay" xml:space="preserve">
+    <value>Uruguay</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="UserCreatedSuccessfully" xml:space="preserve">
+    <value>User Created Successfully</value>
+  </data>
+  <data name="UserManagement" xml:space="preserve">
+    <value>User Management</value>
+  </data>
+  <data name="UserMaster" xml:space="preserve">
+    <value>User Master</value>
+  </data>
+  <data name="UserMastercreate" xml:space="preserve">
+    <value>User Master - create</value>
+  </data>
+  <data name="UserMasterEdit" xml:space="preserve">
+    <value>User Master - Edit</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="UserNameAlreadyExists" xml:space="preserve">
+    <value>User Name Already Exists</value>
+  </data>
+  <data name="Usernameandorpasswordisincorrect" xml:space="preserve">
+    <value>User name or password is incorrect</value>
+  </data>
+  <data name="Usernameandpasswordismandatory" xml:space="preserve">
+    <value>User name and password are mandatory</value>
+  </data>
+  <data name="UserType" xml:space="preserve">
+    <value>User Type</value>
+  </data>
+  <data name="UserUpdatedSuccessfully" xml:space="preserve">
+    <value>User Updated Successfully</value>
+  </data>
+  <data name="Uzbekistan" xml:space="preserve">
+    <value>Uzbekistan</value>
+  </data>
+  <data name="Vanuatu" xml:space="preserve">
+    <value>Vanuatu</value>
+  </data>
+  <data name="Vastu" xml:space="preserve">
+    <value>Vastu</value>
+  </data>
+  <data name="VastuAdviceforCareer" xml:space="preserve">
+    <value>Vastu Advice for Career</value>
+  </data>
+  <data name="VastuAdviceforCareerdef" xml:space="preserve">
+    <value>Excelled career is important for every person and to achieve high sky one should be cognizant of every sphere of life that can yield good results.</value>
+  </data>
+  <data name="VastuAdviceforHealth" xml:space="preserve">
+    <value>Vastu Advice for Health</value>
+  </data>
+  <data name="VastuAdviceforHealthdef" xml:space="preserve">
+    <value>Vastu of a living place is all about procuring good health and all-round prosperity. Precisely a house constructed on basis of Vastu rules attains 3P’s of life Prosperity,Progress.</value>
+  </data>
+  <data name="VastuAdviceforProsperity" xml:space="preserve">
+    <value>Vastu Advice for Prosperity</value>
+  </data>
+  <data name="VastuAdviceforProsperitydef" xml:space="preserve">
+    <value>The concept of Vastu yields impeccable results in the form of peace, prosperity and peace because this inquisitive science is based on five elements and eight cosmic directions responsible for life.</value>
+  </data>
+  <data name="VastuAreaDeletedSuccessfully" xml:space="preserve">
+    <value>Vastu Area Deleted Successfully</value>
+  </data>
+  <data name="VastuAreaDeletionFailed" xml:space="preserve">
+    <value>Vastu Area Deletion Failed</value>
+  </data>
+  <data name="VastuCreatedSuccessfully" xml:space="preserve">
+    <value>Vastu Created Successfully</value>
+  </data>
+  <data name="VastuDetailsAlreadyExists" xml:space="preserve">
+    <value>Vastu Details Already Exists</value>
+  </data>
+  <data name="VastuDirectionDeletedSuccessfully" xml:space="preserve">
+    <value>Vastu Direction Deleted Successfully</value>
+  </data>
+  <data name="VastuDirectionDeletionFailed" xml:space="preserve">
+    <value>Vastu Direction Deletion Failed</value>
+  </data>
+  <data name="VastuforGoodBehaviour" xml:space="preserve">
+    <value>Vastu for Good Behaviour</value>
+  </data>
+  <data name="VastuforGoodBehaviourdef" xml:space="preserve">
+    <value>People may feel amaze by listening that a specific direction could be responsible for their erring behaviour! But this is true our behaviour changes with the directions we face during the day to day life.</value>
+  </data>
+  <data name="VastuforHappyMarriedLife" xml:space="preserve">
+    <value>Vastu for Happy Married Life</value>
+  </data>
+  <data name="VastuforHappyMarriedLifedef" xml:space="preserve">
+    <value>Houses which don’t conform to Vastu norms are sometimes find them in situations like theft</value>
+  </data>
+  <data name="Vastuforsuccess" xml:space="preserve">
+    <value>Vastu for success</value>
+  </data>
+  <data name="Vastuforsuccessdef" xml:space="preserve">
+    <value>Success is what everybody wants in every sphere of life and following Vastu rules is the way to succeed in life.</value>
+  </data>
+  <data name="VastuforWealth" xml:space="preserve">
+    <value>Vastu for Wealth</value>
+  </data>
+  <data name="VastuforWealthdef" xml:space="preserve">
+    <value>Vastu and wealth is synonymous as one (Vastu) works well for the other (Wealth) and we can also say where things are according to Vastu wealth inflow will be unending.</value>
+  </data>
+  <data name="VastuFurniture" xml:space="preserve">
+    <value>Vastu Furniture</value>
+  </data>
+  <data name="VastuFurnituredef" xml:space="preserve">
+    <value>Every living and non-living thing on this cosmos gives out energy effecting the lives in different ways. Science of architecture which is precisely called Vastu-Shastra gives away norms of placement for everything relative to this earth.</value>
+  </data>
+  <data name="VastuImageDeletedSuccessfully" xml:space="preserve">
+    <value>Vastu Image Deleted Successfully</value>
+  </data>
+  <data name="VastuImageDeletionFailed" xml:space="preserve">
+    <value>Vastu Image Deletion Failed</value>
+  </data>
+  <data name="VastuMaster" xml:space="preserve">
+    <value>Vastu Master</value>
+  </data>
+  <data name="VastuMasterCreate" xml:space="preserve">
+    <value>Vastu Master - Create</value>
+  </data>
+  <data name="VastuMasterDeletedSuccessfully" xml:space="preserve">
+    <value>Vastu Master Deleted Successfully</value>
+  </data>
+  <data name="VastuMasterDeletionFailed" xml:space="preserve">
+    <value>Vastu Master Deletion Failed</value>
+  </data>
+  <data name="VastuMasterEdit" xml:space="preserve">
+    <value>Vastu Master - Edit</value>
+  </data>
+  <data name="VastuMasterLog" xml:space="preserve">
+    <value>Vastu Master Log</value>
+  </data>
+  <data name="VastuMasterTransactionDetails" xml:space="preserve">
+    <value>Vastu Master Transaction Details</value>
+  </data>
+  <data name="VastuMasterTransactionLogDetails" xml:space="preserve">
+    <value>Vastu Master - Transaction Log Details</value>
+  </data>
+  <data name="VASTUREPORT" xml:space="preserve">
+    <value>Vastu Report</value>
+  </data>
+  <data name="VastuReportGenerator" xml:space="preserve">
+    <value>Vastu Report Generator</value>
+  </data>
+  <data name="VastuScoreDeletedSuccessfully" xml:space="preserve">
+    <value>Vastu Score Deleted Successfully</value>
+  </data>
+  <data name="VastuScoreDeletionFailed" xml:space="preserve">
+    <value>Vastu Score Deletion Failed</value>
+  </data>
+  <data name="VastuShastra" xml:space="preserve">
+    <value>VastuShastra</value>
+  </data>
+  <data name="VASTUTIPS" xml:space="preserve">
+    <value>Vastu Tips</value>
+  </data>
+  <data name="VastuTipsforHome" xml:space="preserve">
+    <value>Vastu Tips for Home</value>
+  </data>
+  <data name="VastuType" xml:space="preserve">
+    <value>Vastu Type</value>
+  </data>
+  <data name="VastuTypeCreate" xml:space="preserve">
+    <value>Vastu Type - Create</value>
+  </data>
+  <data name="VastuTypeCreatedSuccessfully" xml:space="preserve">
+    <value>Vastu Type Created Successfully</value>
+  </data>
+  <data name="VastuTypeMaster" xml:space="preserve">
+    <value>Vastu Type Master</value>
+  </data>
+  <data name="VastuTypeMasterEdit" xml:space="preserve">
+    <value>Vastu Type Master - Edit</value>
+  </data>
+  <data name="VastuTypeUpdatedSuccessfully" xml:space="preserve">
+    <value>Vastu Type Updated Successfully</value>
+  </data>
+  <data name="VastuUserDeletedSuccessfully" xml:space="preserve">
+    <value>Vastu User Deleted Successfully</value>
+  </data>
+  <data name="VastuUserDeletionFailed" xml:space="preserve">
+    <value>Vastu User Deletion Failed</value>
+  </data>
+  <data name="Venezuela" xml:space="preserve">
+    <value>Venezuela</value>
+  </data>
+  <data name="Vietnam" xml:space="preserve">
+    <value>Vietnam</value>
+  </data>
+  <data name="VirginislandsBritish" xml:space="preserve">
+    <value>Virgin Islands (British)</value>
+  </data>
+  <data name="VirginIslandsUS" xml:space="preserve">
+    <value>Virgin Islands (U.S)</value>
+  </data>
+  <data name="WallisandFutanaIslands" xml:space="preserve">
+    <value>Wallis and Futana Islands</value>
+  </data>
+  <data name="WebApplicationAllRightsReserved" xml:space="preserve">
+    <value>©2020 Vastu Shastra Web Application. All Rights Reserved</value>
+  </data>
+  <data name="WesternSahara" xml:space="preserve">
+    <value>Western Sahara</value>
+  </data>
+  <data name="Windows" xml:space="preserve">
+    <value>Windows</value>
+  </data>
+  <data name="Windowsdef" xml:space="preserve">
+    <value>Vastu warns that a house should not have a total number of 3, 6 or 11 windows.</value>
+  </data>
+  <data name="Yemen" xml:space="preserve">
+    <value>Yemen</value>
+  </data>
+  <data name="yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="YourEmail" xml:space="preserve">
+    <value>Your Email</value>
+  </data>
+  <data name="yourName" xml:space="preserve">
+    <value>Your Name</value>
+  </data>
+  <data name="Zambia" xml:space="preserve">
+    <value>Zambia</value>
+  </data>
+  <data name="Zimbabwe" xml:space="preserve">
+    <value>Zimbabwe</value>
+  </data>
+</root>

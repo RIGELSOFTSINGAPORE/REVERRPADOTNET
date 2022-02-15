@@ -1,0 +1,129 @@
+﻿@model Vasthu_Models.VS_SCORE_MST
+
+@{
+    ViewBag.Title = Vastu.Resources.Resource.ScoreMasterCreate;
+    var imgddl = (List<Vasthu_Models.VS_IMAGE_MST>)ViewData["ImageDDL"];
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+    <h2>@Vastu.Resources.Resource.ScoreMasterCreate</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group row">
+            @Html.Label(Vastu.Resources.Resource.ScoreDetails, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-3">
+                @Html.EditorFor(model => model.SCORE_TEXT, new { htmlAttributes = new { @class = "form-control", @style = "border-radius: 6px;", rows = "4", @maxlength = "200", @autocomplete = "off" } })
+                @Html.ValidationMessageFor(model => model.SCORE_TEXT, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            @Html.Label(Vastu.Resources.Resource.Score, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-3">
+                @Html.EditorFor(model => model.SCORE, new { htmlAttributes = new { @class = "form-control", @style = "border-radius: 6px;", @maxlength = "6", @autocomplete = "off" } })
+                @Html.ValidationMessageFor(model => model.SCORE, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group row">
+            @Html.Label(Vastu.Resources.Resource.ScoreImage, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-3">
+                @*@Html.EditorFor(model => model.IMAGE_ID, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.IMAGE_ID, "", new { @class = "text-danger" })*@
+                @Html.DropDownListFor(model => model.IMAGE_ID, (List<SelectListItem>)ViewBag.ImageID, htmlAttributes: new { @class = "form-control", @style = "border-radius: 6px;", @onchange = "DisplayImage(this.value ,id)" })
+                @if (Model == null)
+                {
+                    @Html.ValidationMessageFor(model => model.IMAGE_ID, "", new { @class = "text-danger" })
+                <img id="imgScore" src="@Url.Content("~/ScoreImage/Imagenotfound.jpg")" style="width:150px;height:150px;">
+                }
+                else
+                {
+                    @Html.ValidationMessageFor(model => model.IMAGE_ID, "", new { @class = "text-danger" })
+                    <img id="imgScore" src="@Url.Content("~/ScoreImage/" + Model.IMAGE_URL + "")" style="width:150px;height:150px;">
+                }
+
+            </div>
+        </div>
+
+
+
+        <div class="form-group row">
+            @Html.Label(Vastu.Resources.Resource.Disable, htmlAttributes: new { @class = "control-label col-md-3" })
+            <div class="col-md-6" style="margin-left: -94px;">
+                
+                    @Html.EditorFor(model => model.DELETE_FLAG)
+                    @Html.ValidationMessageFor(model => model.DELETE_FLAG, "", new { @class = "text-danger" })
+                
+            </div>
+        </div>
+
+
+
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.IMAGE_DETAILS, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.IMAGE_DETAILS, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.IMAGE_DETAILS, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.IMAGE_URL, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.IMAGE_URL, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.IMAGE_URL, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="@Vastu.Resources.Resource.Create" class="btn btn-default btnCreate" style="background-color:#1bbd36; color:white;width: 84px;"/>
+            </div>
+        </div>
+    </div>
+}
+
+<div style="margin-left:16px;">
+    @Html.ActionLink(Vastu.Resources.Resource.BacktoList, "Index", null, htmlAttributes: new { @class = "edit", @style = "margin-left:-14px;" })
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+
+<script type="text/javascript">
+
+
+
+        function DisplayImage(val, id)
+{
+
+         
+
+
+           
+            document.getElementById("imgScore").src = window.location.href.substring(0, window.location.href.replace("/Create", "").lastIndexOf('/'))+ "/ScoreImage/Imagenotfound.jpg"
+            var imgdtls = @Html.Raw(Json.Encode(imgddl));
+            for (var i = 0; i < imgdtls.length; i++) {
+                var imgdtl = imgdtls[i];
+              //  alert('ImageID: ' + imgdtl.IMAGE_ID + ' ImageURL:' + imgdtl.IMAGE_URL);
+                if (val == imgdtl.IMAGE_ID) {
+                    //alert(window.location.href);
+                    //alert(window.location.href.substring(0, window.location.href.lastIndexOf('/')));
+                    //alert(window.location.href.split('/')[3])
+                    imgd = imgdtl.IMAGE_URL
+                   //document.getElementById("imgScore").src = "https://" + window.location.href.split('/')[2] + "/ScoreImage/" + imgd;
+                    document.getElementById("imgScore").src = window.location.href.substring(0, window.location.href.replace("/Create", "").lastIndexOf('/')) + "/ScoreImage/" + imgd;
+                    return false;
+                }
+            }
+}
+</script>
+
+}

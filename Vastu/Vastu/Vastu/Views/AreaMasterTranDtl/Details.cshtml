@@ -1,0 +1,58 @@
+﻿@model Vasthu_Models.VS_AREA_MST_TRAN_DETAILS
+
+@{
+    ViewBag.Title = Vastu.Resources.Resource.AreaMasterTransaction;
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+    <h2>@Vastu.Resources.Resource.AreaMasterTransaction</h2>
+
+<div>
+    <h4>Area Master Transaction List</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName(Vastu.Resources.Resource.ColumnName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COLUMN_NAME)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(Vastu.Resources.Resource.OldValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OLD_DESCRIPTION_VALUE)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(Vastu.Resources.Resource.NewValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NEW_DESCRIPTION_VALUE)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(Vastu.Resources.Resource.CreatedUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C_USER)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(Vastu.Resources.Resource.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C_DATE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(@Vastu.Resources.Resource.BacktoList, "Index")
+</p>

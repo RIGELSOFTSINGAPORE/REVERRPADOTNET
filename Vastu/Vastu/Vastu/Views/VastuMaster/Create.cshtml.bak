@@ -1,0 +1,121 @@
+﻿@model Vasthu_Models.VS_VASTU_MST
+
+@{
+    ViewBag.Title = Vastu.Resources.Resource.VastuMasterCreate;
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>@Vastu.Resources.Resource.VastuMasterCreate</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <hr />
+        <div class="row">
+            <div class="col-sm">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group row">
+                    @Html.Label(Vastu.Resources.Resource.VastuType, htmlAttributes: new { @class = "control-label col-md-3", @style = "padding: 0px;display: block;" })
+                    <div class="col-md-6">
+                        @*@Html.EditorFor(model => model.VASTU_TYPE_ID, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.VASTU_TYPE_ID, "", new { @class = "text-danger" })*@
+                        @Html.DropDownListFor(model => model.VASTU_TYPE_ID, (List<SelectListItem>)ViewBag.vastuTypeID, htmlAttributes: new { @class = "form-control", @style = "border-radius: 6px;" })
+                        @Html.ValidationMessageFor(model => model.VASTU_TYPE_ID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.Label(Vastu.Resources.Resource.Area, htmlAttributes: new { @class = "control-label col-md-2", @style = "padding: 0px;" })
+                    <div class="col-md-6">
+                        @*@Html.EditorFor(model => model.AREA_ID, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.AREA_ID, "", new { @class = "text-danger" })*@
+                        @Html.DropDownListFor(model => model.AREA_ID, (List<SelectListItem>)ViewBag.areaID, htmlAttributes: new { @class = "form-control", @style = "border-radius: 6px;margin-left: 50px;" })
+                        @Html.ValidationMessageFor(model => model.AREA_ID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.Label(Vastu.Resources.Resource.Direction, htmlAttributes: new { @class = "control-label col-md-2", @style = "padding: 0px;" })
+                    <div class="col-md-6">
+                        @*@Html.EditorFor(model => model.DIRECTION_ID, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.DIRECTION_ID, "", new { @class = "text-danger" })*@
+                        @Html.DropDownListFor(model => model.DIRECTION_ID, (List<SelectListItem>)ViewBag.directionID, htmlAttributes: new { @class = "form-control", @style = "border-radius: 6px;margin-left: 50px;" })
+                        @Html.ValidationMessageFor(model => model.DIRECTION_ID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+
+                <div class="form-group row">
+                    @Html.Label(Vastu.Resources.Resource.Score, htmlAttributes: new { @class = "control-label col-md-2", @style = "padding: 0px;" })
+                    <div class="col-md-6">
+                        @*@Html.EditorFor(model => model.SCORE_ID, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.SCORE_ID, "", new { @class = "text-danger" })*@
+                        @Html.DropDownListFor(model => model.SCORE_ID, (List<SelectListItem>)ViewBag.scoreID, htmlAttributes: new { @class = "form-control", @style = "border-radius: 6px;margin-left: 50px;" })
+                        @Html.ValidationMessageFor(model => model.SCORE_ID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.Label(Vastu.Resources.Resource.ExtraScore, htmlAttributes: new { @class = "control-label col-md-2",@style = "padding: 0px;" })
+                    <div class="col-md-6">
+                        @Html.EditorFor(model => model.EXTRA_SCORE, new { htmlAttributes = new { @class = "form-control", @maxlength = "6", @autocomplete = "off", @style = "border-radius: 6px;margin-left: 50px;" } })
+                        @Html.ValidationMessageFor(model => model.EXTRA_SCORE, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    @Html.Label(Vastu.Resources.Resource.ShortDescription, htmlAttributes: new { @class = "control-label col-md-3",@style = "padding: 0px;" })
+                    <div class="col-md-6" style="margin-left: 2px;">
+                        @Html.EditorFor(model => model.SHORT_DESCRIPTION, new { htmlAttributes = new { @class = "form-control", @style = "border-radius: 6px;", rows = "8", @maxlength = "2000", @autocomplete = "off" } })
+                        @Html.ValidationMessageFor(model => model.SHORT_DESCRIPTION, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group row">
+                    @Html.Label(Vastu.Resources.Resource.LongDescription, htmlAttributes: new { @class = "control-label col-md-3", @style = "padding: 0px;" })
+                    <div class="col-md-6" style="margin-left: 45px;">
+                        @Html.EditorFor(model => model.LONG_DESCRIPTION, new { htmlAttributes = new { @class = "form-control", @style = "border-radius: 6px;", rows = "10", @maxlength = "6000", @autocomplete = "off" } })
+                        @Html.ValidationMessageFor(model => model.LONG_DESCRIPTION, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+
+                <div class="form-group row">
+                    @Html.Label(Vastu.Resources.Resource.Disable, htmlAttributes: new { @class = "control-label col-md-4" })
+                    <div class="col-md-6">
+
+                        @Html.EditorFor(model => model.DELETE_FLAG)
+                        @Html.ValidationMessageFor(model => model.DELETE_FLAG, "", new { @class = "text-danger" })
+
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="@Vastu.Resources.Resource.Create" class="btn btn-default btnCreate" style="background-color:#1bbd36; color:white;width: 84px;" />
+                    </div>
+                </div>
+
+
+
+                <div style="margin-left:16px;">
+                    @Html.ActionLink(Vastu.Resources.Resource.BacktoList, "Index", null, htmlAttributes: new { @class = "edit", @style = "margin-left:-14px;" })
+                </div>
+            </div>
+        </div>
+
+    </div>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+
+}

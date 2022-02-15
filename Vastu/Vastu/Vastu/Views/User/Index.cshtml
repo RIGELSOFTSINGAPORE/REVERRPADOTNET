@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@model IEnumerable<Vasthu_Models.USER_MST>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<section id="searchvastu" class="searchvastu">
+
+    <div class="col-lg-6" data-aos="fade-right">
+        <h2>@Vastu.Resources.Resource.UserManagement</h2>
+    </div>
+
+    <div>
+        <h4> @Html.ActionLink(Vastu.Resources.Resource.CreateNew, "Create")</h4>
+    </div>
+
+
+    @*<div class="">
+        <input type="submit" value="Create" class="btn btn-default" style="background-color:#1bbd36; color:white;width: 84px;">
+    </div>*@
+
+
+
+    @*<p style="">
+            @Html.ActionLink(Vastu.Resources.Resource.CreateNew, "Create")
+        </p>*@
+
+</section>
+<br />
+
+<div class="container" data-aos="fade-up">
+    <table class="table" style="background-color:#ffffff;">
+        <tr style="background-color:#4CAF50; color:#ffffff;">
+            <th>
+                @Html.DisplayName(Vastu.Resources.Resource.Username)
+            </th>
+            <th>
+                @Html.DisplayName(Vastu.Resources.Resource.Email)
+            </th>
+            <th>
+                @Html.DisplayName(Vastu.Resources.Resource.Password)
+            </th>
+
+            <th>
+                @Html.DisplayName(Vastu.Resources.Resource.DELFlag)
+            </th>
+
+
+
+            <th></th>
+        </tr>
+        <tbody style="width:100%">
+            @foreach (var item in Model)
+            {
+                <tr style="background-color:#EEE;">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LOGIN_NAME)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EMAIL_ID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LOGIN_PASSWORD)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DELETE_FLAG)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Update", "Update", new { id = item.USER_ID })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+@*<div class="container-fluid">
+    <h1 class="mt-4">User Management</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Charts</li>
+    </ol>
+</div>*@  

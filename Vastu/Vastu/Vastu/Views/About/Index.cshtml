@@ -1,0 +1,59 @@
+﻿
+@{
+                /**/
+
+                ViewBag.Title =Vastu.Resources.Resource.ABOUT;
+}
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model List<Vasthu_Models.MasterAboutContent>
+<section id="about" class="about">
+    <div class="col-lg-6" data-aos="fade-right">
+        <h2>@Vastu.Resources.Resource.ABOUT</h2>
+    </div>
+</section>
+<main id="main">
+    <!-- ======= About ======= -->
+    <section id="about" class="about" style="margin-top: -6px;">
+        <div class="img-fluid">
+            <img src="~/assets/img/vastu_banner.jpg" class="img-fluid" alt="Responsive image">
+        </div>
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>@Vastu.Resources.Resource.ABOUT</h2>
+
+                @if (Model != null && Model.Count > 0)
+                {
+                    if (Model[0].ContentID == 21 && Model[0].ContentName!= "")
+                    {
+                        <p>
+                            @Html.Raw(Model[0].ContentName)
+                        </p>
+                    }
+                    else
+                    {
+                        <p>
+                            @Vastu.Resources.Resource.Aboutlist1
+                        </p><br>
+                            <p> @Vastu.Resources.Resource.Aboutlist2  </p><br>
+                    }
+                }
+                else
+                {
+            <p>
+                @Vastu.Resources.Resource.Aboutlist1
+            </p><br>
+                <p>
+                    @Vastu.Resources.Resource.Aboutlist2
+                </p><br>
+                }
+
+
+
+
+
+            </div>
+        </div>
+    </section><!-- End  about Section -->
+</main><!-- End #main -->

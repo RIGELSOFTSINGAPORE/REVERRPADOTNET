@@ -1,0 +1,153 @@
+﻿@using PagedList.Mvc
+@model PagedList.PagedList<Vasthu_Models.VS_IMAGE_MST>
+@{
+    ViewBag.Title = @Vastu.Resources.Resource.ImageMaster;
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+<h2>@Vastu.Resources.Resource.ImageMaster</h2>
+<!-- Modal DeleteMenuModal -->
+<div class="modal fade" id="DeleteVastuModal" tabindex="-1" role="dialog" aria-labelledby="DeleteVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="DeleteVastuModalLabel">@Vastu.Resources.Resource.DeleteImageMaster</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body DeleteVastucontent">
+                @Vastu.Resources.Resource.Areyousuredelete
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">@Vastu.Resources.Resource.No</button>
+                <button type="button" class="btn btn-primary btndeletevastu btn-success">@Vastu.Resources.Resource.yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Hidden("DeleteImageId")
+<p>
+    @* @Html.ActionLink(Vastu.Resources.Resource.CreateNew, "Create", null, htmlAttributes: new { @class = "CreateNew" })*@
+    <a href="@Url.Action("Create","ImageMaster")" class="btn btn-info btn-lg"> <span class="glyphicon glyphicon-new-window" title="Create"></span>@Vastu.Resources.Resource.CreateNew</a>
+</p>
+<table class="table" style="background-color:#ffffff;">
+    <tr style="background-color:#4CAF50; color:#ffffff;">
+        <th>
+            @Html.DisplayName(Vastu.Resources.Resource.ImageDetails)
+        </th>
+        <th>
+            @Html.DisplayName(Vastu.Resources.Resource.ImageFile)
+        </th>
+        <th style="padding-left: 0px;">
+            @Html.DisplayName(Vastu.Resources.Resource.Disable)
+        </th>
+
+        <th>
+            @Html.DisplayName(Vastu.Resources.Resource.Edit)
+        </th>
+        <th>
+            @Html.DisplayName(Vastu.Resources.Resource.Delete)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr style="background-color:#EEE;">
+            @*<td>
+                @Html.Display(Vastu.Resources.Resource.ImageDetails)
+            </td>*@
+            <th>
+
+                @if (item.IMAGE_URL != "" && item.IMAGE_URL != null)
+                {
+                    if (File.Exists(Server.MapPath("~/ScoreImage/" + item.IMAGE_URL)))
+                    {
+                        <img src="@Url.Content("~/ScoreImage/" + item.IMAGE_URL + "")" style="width:50px;height:50px;">
+                    }
+                    else
+                    {
+                        <img src="@Url.Content("~/ScoreImage/Imagenotfound.jpg")" style="width:50px;height:50px;">
+                    }
+
+                }
+                else
+                {
+                    <img src="@Url.Content("~/ScoreImage/Thumbnailnotgenerated.jpg")" style="width:50px;height:50px;">
+                }
+                @*@Html.DisplayFor(model => item.IMAGE_URL)*@
+            </th>
+            <td style="padding-left: 42px;">
+                @Html.DisplayFor(modelItem => item.DELETE_FLAG)
+            </td>
+            <td>
+                @*  @Html.ActionLink(Vastu.Resources.Resource.Edit, "Edit", new { id = item.IMAGE_ID }, new { @class = "edit1" })*@
+                <a href="@Url.Action("Edit","ImageMaster",new { id = item.IMAGE_ID})"> <span class="glyphicon glyphicon-pencil" title="Edit"></span></a></td>
+            <td>
+                <a href="#" onclick="DeleteVastuConfirmation(@item.IMAGE_ID);" id="btnDelete" data-toggle="modal" data-target="#deleteModal" title="Delete"><span class="glyphicon glyphicon-trash"></span></a>
+            </td>
+        </tr>
+    }
+    @if (Model.Count == 0)
+    {
+        <tr>
+            <td colspan="4" align="center">@Vastu.Resources.Resource.NoRecordFound</td>
+        </tr>
+    }
+</table>
+<br />
+<br />
+<br />
+<br />
+@if (Model.PageSize < Model.TotalItemCount)
+{
+    <div>
+        @Vastu.Resources.Resource.Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) @Vastu.Resources.Resource.of  @Model.PageCount
+        @Html.PagedListPager(Model, page => Url.Action("Index",
+             new { page }))
+    </div>
+}
+
+@section scripts
+{
+
+    <script>
+
+        function DeleteVastuConfirmation(VastuID) {
+
+            $('#DeleteImageId').val(VastuID);
+            $('#DeleteVastuModal').modal('show');
+        }
+
+        $('.btndeletevastu').on('click', function () {
+
+            DeleteVastu($('#DeleteImageId').val());
+
+        });
+        function DeleteVastu(VastuID) {
+            debugger;
+            $('#DeleteVastuModal').modal('hide');
+            $.ajax({
+                url: '@Url.Action("DeleteImageMaster", "VastuMaster")',
+                type: 'POST',
+                data: { 'VastuID': VastuID },
+                success: function (result) {
+                    if (result.errorcode == 1) {
+
+                        alert('@Vastu.Resources.Resource.VastuImageDeletedSuccessfully');
+                        window.location.href = "@Url.Action("Index", "ImageMaster")";
+                    }
+                    else {
+                        alert('@Vastu.Resources.Resource.VastuImageDeletionFailed.');
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+}

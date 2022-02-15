@@ -1,0 +1,60 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using Vasthu_Models;
+using Vastu_Business;
+
+namespace Vastu.Controllers
+{
+    [SessionExpire]
+    [Authorize]
+    [VASTUCustomAuthorize(Roles = "1")]
+    public class TransactionHistoryController : Controller
+    {
+        // GET: TransactionHistory
+        private TransactionReportBusinessLayer _TransactionReportBusinessLayer;
+        public TransactionHistoryController()
+        {
+            _TransactionReportBusinessLayer = new TransactionReportBusinessLayer();
+        }
+      
+        public ActionResult Index(string Frmdate, string Todate)
+        {
+            LogInfo.ActionName = this.ControllerContext.RouteData.Values["action"].ToString();
+            LogInfo.ControllerName = this.ControllerContext.RouteData.Values["controller"].ToString();
+            LogInfo.MenuClick = LogInfo.ActionName + "_" + LogInfo.ControllerName;
+            List<TransReport> _usermst = new List<TransReport>();
+
+            var GetUser = new List<TransReport>();
+
+            try
+            {
+
+                var frmDate = Request.Form["Frmdate"];
+                var toDate = Request.Form["Todate"];
+                //var address = Request.Form["address"];
+                if (Frmdate != null && Todate != null)
+                {
+                    _usermst = _TransactionReportBusinessLayer.SearchTransDate(Frmdate, Todate);
+                }
+                else
+                {
+                    _usermst = _TransactionReportBusinessLayer.SearchTrans();
+
+                }
+            }
+
+
+            catch (Exception ex)
+            {
+                LogInfo.LogMsg = string.Format("UserVastu / Index : {0} Message: {1} ", "", ex.Message);
+                Log.Error(LogInfo.LogMsg, ex);
+                TempData["ErrMsg"] = "error msg";
+                return View("Error", new HandleErrorInfo(ex, LogInfo.ControllerName, LogInfo.ActionName));
+            }
+            return View(_usermst);
+        }
+    }
+}

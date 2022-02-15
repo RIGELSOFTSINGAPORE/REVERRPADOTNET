@@ -1,0 +1,1970 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ABOUT" xml:space="preserve">
+    <value>導入</value>
+  </data>
+  <data name="Aboutlist1" xml:space="preserve">
+    <value>ヴァーストゥ」とは、サンスクリット語で狭義には「建築物」や「住居」を意味し、広義には「生命力」や「環境」などをも包含した概念を指す。気の流れと調和しようとする点で中国の風水思想と近いが、立地や建物の間取りの方位など実践面で大きな違いがある。
+「シャーストラ」は「（～を扱う）思想・学問」を意味する。</value>
+  </data>
+  <data name="Aboutlist2" xml:space="preserve">
+    <value>ヴァーストゥ・シャーストラの思想によると、自然は地（ブーミ भूमि）、水（ジャラ जल）、火（アグニ अग्नि）、風（＝空気：ヴァーユ वायु）、空 （：アーカーシャ आकाश）という五つの要素（五大）で構成され、自然状態ではそれらのバランスが取れているとされる。他方、人工的なものはそのバランスが崩され副作用を起こすため、ヴァーストゥ・シャーストラでバランスを取る必要があると考えられている。
+この五つの要素は直接、大地、水、炎、空気、空と関係するだけでなく、以下のエネルギーにも相当する。
+自然界や人工物同様、人間の身体や気分、そして出来事も、これらの組み合わせでできているとされ、五つのエネルギーとして表現される。例えば、体温は火のエネルギー、物流は風のエネルギーとして表される。また、憂鬱は火のエネルギーの増大として、冷静さは地のエネルギーの安定性として、落ち着きのなさは風のエネルギーの性質として表現される。
+五大要素の調和・バランスによって、正の調和は良いエネルギーを、不調和は悪いエネルギーをもたらすとされる。 ヴァーストゥ・シャーストラでは、直接人間に影響を及ぼす土地や家の五大のバランスを扱う。</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>アクティブ・非アクティブ</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>住所</value>
+  </data>
+  <data name="Address1" xml:space="preserve">
+    <value>住所 (1)</value>
+  </data>
+  <data name="Address2" xml:space="preserve">
+    <value>住所 (2)</value>
+  </data>
+  <data name="Admin" xml:space="preserve">
+    <value>管理者</value>
+  </data>
+  <data name="AffectsofSouthEastFacingProperty" xml:space="preserve">
+    <value>東南向き物件の影響</value>
+  </data>
+  <data name="AffectsofSouthEastFacingPropertydef" xml:space="preserve">
+    <value>Houses that face South-east direction are consider average because being the place of ‘agni’ it has to be the position of kitchen, still most Vastu consultants do not consider it worst.</value>
+  </data>
+  <data name="Afghanistan" xml:space="preserve">
+    <value>アフガニスタン</value>
+  </data>
+  <data name="Albania" xml:space="preserve">
+    <value>アルバニア </value>
+  </data>
+  <data name="Algeria" xml:space="preserve">
+    <value>アルジェリア</value>
+  </data>
+  <data name="AllowOnlySpecialCharacters" xml:space="preserve">
+    <value>特殊文字のみが許可されています。</value>
+  </data>
+  <data name="Altar" xml:space="preserve">
+    <value>プージャ（祈願の儀式）室</value>
+  </data>
+  <data name="Altardef" xml:space="preserve">
+    <value>プージャ室は北東・東・北が〇、南東は✕、御神体は東か北を向くようにして祭壇は西か南の壁を背に設置すると〇、地下は✕、ドアは北が〇、窓は東が〇</value>
+  </data>
+  <data name="AmericanSamoa" xml:space="preserve">
+    <value>アメリカ領サモア</value>
+  </data>
+  <data name="Andorra" xml:space="preserve">
+    <value>アンドラ </value>
+  </data>
+  <data name="Angola" xml:space="preserve">
+    <value>アンゴラ </value>
+  </data>
+  <data name="Anguilla" xml:space="preserve">
+    <value>アンギラ</value>
+  </data>
+  <data name="Antartica" xml:space="preserve">
+    <value>なんきょくたいりく</value>
+  </data>
+  <data name="AntiguaandBarbuda" xml:space="preserve">
+    <value>アンティグア・バーブーダ</value>
+  </data>
+  <data name="Approve" xml:space="preserve">
+    <value>承認</value>
+  </data>
+  <data name="Approved" xml:space="preserve">
+    <value>承認済み</value>
+  </data>
+  <data name="ApproveReject" xml:space="preserve">
+    <value>承認・不承認</value>
+  </data>
+  <data name="Area" xml:space="preserve">
+    <value>エリア</value>
+  </data>
+  <data name="AreaandDirectionisalreadyexist" xml:space="preserve">
+    <value>エリアと方向はすでに存在しています</value>
+  </data>
+  <data name="AreaCreated" xml:space="preserve">
+    <value>エリアが作成されました。</value>
+  </data>
+  <data name="AreaCreatedSuccessfully" xml:space="preserve">
+    <value>エリアが正常に作成されました。</value>
+  </data>
+  <data name="AreaDetailsAlreadyExists" xml:space="preserve">
+    <value>エリアの詳細は既に存在しています。</value>
+  </data>
+  <data name="Areaid" xml:space="preserve">
+    <value>エリア ID</value>
+  </data>
+  <data name="AreaMaster" xml:space="preserve">
+    <value>エリアマスター</value>
+  </data>
+  <data name="AreaMasterCreate" xml:space="preserve">
+    <value>エリアマスター作成</value>
+  </data>
+  <data name="AreaMasterEdit" xml:space="preserve">
+    <value>エリアマスター編集</value>
+  </data>
+  <data name="AreaMasterLog" xml:space="preserve">
+    <value>エリアマスターログ</value>
+  </data>
+  <data name="AreaMasterTransaction" xml:space="preserve">
+    <value>エリアマスタートランザクションログ詳細</value>
+  </data>
+  <data name="AreaUpdatedSuccessfully" xml:space="preserve">
+    <value>エリアが正常に更新されました。</value>
+  </data>
+  <data name="Areyousuredelete" xml:space="preserve">
+    <value>削除してもよろしいですか？</value>
+  </data>
+  <data name="Argentina" xml:space="preserve">
+    <value>アルゼンチン</value>
+  </data>
+  <data name="Armenia" xml:space="preserve">
+    <value>アルメニア</value>
+  </data>
+  <data name="Aruba" xml:space="preserve">
+    <value>アルバ</value>
+  </data>
+  <data name="Australia" xml:space="preserve">
+    <value>オーストラリア</value>
+  </data>
+  <data name="Austria" xml:space="preserve">
+    <value>オーストリア</value>
+  </data>
+  <data name="Azerbaijan" xml:space="preserve">
+    <value>アゼルバイジャン</value>
+  </data>
+  <data name="Backtohome" xml:space="preserve">
+    <value>ホームに戻る</value>
+  </data>
+  <data name="BacktoList" xml:space="preserve">
+    <value>リストに戻る</value>
+  </data>
+  <data name="Bahamas" xml:space="preserve">
+    <value>バハマ</value>
+  </data>
+  <data name="Bahrain" xml:space="preserve">
+    <value>バーレーン  </value>
+  </data>
+  <data name="Balcony" xml:space="preserve">
+    <value>バルコニー</value>
+  </data>
+  <data name="Balconydef" xml:space="preserve">
+    <value>ソファなど重い家具はバルコニーの南西に置くと良い</value>
+  </data>
+  <data name="Bangladesh" xml:space="preserve">
+    <value>バングラデシュ</value>
+  </data>
+  <data name="Barbados" xml:space="preserve">
+    <value>バルバドス</value>
+  </data>
+  <data name="BathRoom" xml:space="preserve">
+    <value>バスルーム</value>
+  </data>
+  <data name="BathRoomdef" xml:space="preserve">
+    <value>トイレと同じ</value>
+  </data>
+  <data name="Beams" xml:space="preserve">
+    <value>ビーム</value>
+  </data>
+  <data name="Beamsdef" xml:space="preserve">
+    <value>部屋に偶数のビームがあると〇</value>
+  </data>
+  <data name="Bedroom" xml:space="preserve">
+    <value>主寝室</value>
+  </data>
+  <data name="Bedroomdef" xml:space="preserve">
+    <value>南西が理想的、次は南、ベッドは頭が東か南に向くと〇、２階以上の場合は上の階の北西の角が〇、南東は✕、寝室用バスルームは東か南東が〇、タンスやクローゼットは北西か南西が〇、書机は東か北か北東に向けると〇、北西の角には常に家具など重いものを置くようにして空けて置かないことが〇、北東側はオープンスペースが〇、寝室にテレビは置かないと〇、置く場合はベッドの前は✕、鏡も同様、ドアは東か西か北が〇</value>
+  </data>
+  <data name="Belarus" xml:space="preserve">
+    <value>ベラルーシ</value>
+  </data>
+  <data name="Belgium" xml:space="preserve">
+    <value>ベルギー   </value>
+  </data>
+  <data name="Belize" xml:space="preserve">
+    <value>ベリーズ</value>
+  </data>
+  <data name="Benin" xml:space="preserve">
+    <value>ベナン   </value>
+  </data>
+  <data name="Bermuda" xml:space="preserve">
+    <value>バミューダ</value>
+  </data>
+  <data name="Bhutan" xml:space="preserve">
+    <value>ブータン</value>
+  </data>
+  <data name="Bolivia" xml:space="preserve">
+    <value>ボリビア</value>
+  </data>
+  <data name="BosniaandHerzegowina" xml:space="preserve">
+    <value>ボスニア・ヘルツェゴビナ</value>
+  </data>
+  <data name="Botswana" xml:space="preserve">
+    <value>ボツワナ</value>
+  </data>
+  <data name="BouvetIsland" xml:space="preserve">
+    <value>ブーベ島</value>
+  </data>
+  <data name="Brazil" xml:space="preserve">
+    <value>ブラジル</value>
+  </data>
+  <data name="BritishIndianOceanTerritory" xml:space="preserve">
+    <value>イギリス領インド洋地域</value>
+  </data>
+  <data name="BruneiDarussalam" xml:space="preserve">
+    <value>ブルネイ</value>
+  </data>
+  <data name="Bulgaria" xml:space="preserve">
+    <value>ブルガリア</value>
+  </data>
+  <data name="BurkinaFaso" xml:space="preserve">
+    <value>ブルキナファソ</value>
+  </data>
+  <data name="Burundi" xml:space="preserve">
+    <value>ブルンジ</value>
+  </data>
+  <data name="Call" xml:space="preserve">
+    <value>コール</value>
+  </data>
+  <data name="Cambodia" xml:space="preserve">
+    <value>カンボジア</value>
+  </data>
+  <data name="Cameroon" xml:space="preserve">
+    <value>カメルーン</value>
+  </data>
+  <data name="Canada" xml:space="preserve">
+    <value>カナダ  </value>
+  </data>
+  <data name="CapeVerde" xml:space="preserve">
+    <value>カーボベルデ </value>
+  </data>
+  <data name="CashandValuables" xml:space="preserve">
+    <value>現金及び貴重品</value>
+  </data>
+  <data name="CashandValuablesdef" xml:space="preserve">
+    <value>Place them in a cupboard on the Northern side, preferably in a room which is in Northern side</value>
+  </data>
+  <data name="CaymanIslands" xml:space="preserve">
+    <value>ケーマン諸島</value>
+  </data>
+  <data name="CentralAfricanRepublic" xml:space="preserve">
+    <value> 中央アフリカ共和国</value>
+  </data>
+  <data name="Chad" xml:space="preserve">
+    <value>チャド </value>
+  </data>
+  <data name="Chile" xml:space="preserve">
+    <value>チリ</value>
+  </data>
+  <data name="China" xml:space="preserve">
+    <value>中国</value>
+  </data>
+  <data name="ChristmasIsland" xml:space="preserve">
+    <value>クリスマス島</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>市</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="CocosIslands" xml:space="preserve">
+    <value>ココス諸島</value>
+  </data>
+  <data name="Colombia" xml:space="preserve">
+    <value>コロンビア   </value>
+  </data>
+  <data name="ColumnName" xml:space="preserve">
+    <value>列名</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>コメント</value>
+  </data>
+  <data name="Comoros" xml:space="preserve">
+    <value>コモロ  </value>
+  </data>
+  <data name="ConfirmNewPassword" xml:space="preserve">
+    <value>新しいパスワード（確認用）を入力してください。</value>
+  </data>
+  <data name="ConfrimPassword" xml:space="preserve">
+    <value>新しいパスワード（確認）</value>
+  </data>
+  <data name="Congo" xml:space="preserve">
+    <value>コンゴ</value>
+  </data>
+  <data name="Congo1" xml:space="preserve">
+    <value>クック諸島</value>
+  </data>
+  <data name="CONTACT" xml:space="preserve">
+    <value>お問い合わせ</value>
+  </data>
+  <data name="ContactNo" xml:space="preserve">
+    <value>電話番号</value>
+  </data>
+  <data name="ContentCreatedSuccessfully" xml:space="preserve">
+    <value>内容が正常に作成されました。</value>
+  </data>
+  <data name="ContentDeletedSuccessfully" xml:space="preserve">
+    <value>内容が正常に削除されました。</value>
+  </data>
+  <data name="ContentDetailsAlreadyExists" xml:space="preserve">
+    <value>内容の詳細は既に存在しています。</value>
+  </data>
+  <data name="ContentID" xml:space="preserve">
+    <value>内容ID</value>
+  </data>
+  <data name="ContentManagement" xml:space="preserve">
+    <value>コンテンツ管理</value>
+  </data>
+  <data name="ContentUpdatedSuccessfully" xml:space="preserve">
+    <value>内容が正常に更新されました。</value>
+  </data>
+  <data name="CookIslands" xml:space="preserve">
+    <value>コスタリカ  </value>
+  </data>
+  <data name="CostaRica" xml:space="preserve">
+    <value>コートジボワール</value>
+  </data>
+  <data name="CotaDIvoire" xml:space="preserve">
+    <value>クロアチア</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>国</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>作成する</value>
+  </data>
+  <data name="CreatedDate" xml:space="preserve">
+    <value>作成日</value>
+  </data>
+  <data name="CreatedUser" xml:space="preserve">
+    <value>作成者</value>
+  </data>
+  <data name="CreateNew" xml:space="preserve">
+    <value>新しく作る</value>
+  </data>
+  <data name="Croatia" xml:space="preserve">
+    <value>キューバ</value>
+  </data>
+  <data name="Cuba" xml:space="preserve">
+    <value>キプロス  </value>
+  </data>
+  <data name="Cyprus" xml:space="preserve">
+    <value>チェコ</value>
+  </data>
+  <data name="CzechRepublic" xml:space="preserve">
+    <value>デンマーク</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>日付</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>削除する</value>
+  </data>
+  <data name="DeleteAreaMaster" xml:space="preserve">
+    <value>選択したエリアを削除してもよろしいですか？</value>
+  </data>
+  <data name="DeleteContent" xml:space="preserve">
+    <value>内容を削除する</value>
+  </data>
+  <data name="DeleteDirectionMaster" xml:space="preserve">
+    <value>ヴァストゥ方角を削除してもよろしいですか？</value>
+  </data>
+  <data name="DeleteFeedback" xml:space="preserve">
+    <value>選択したフィードバックを削除してもよろしいですか？</value>
+  </data>
+  <data name="DeleteImageMaster" xml:space="preserve">
+    <value>選択した画像を削除してもよろしいですか？</value>
+  </data>
+  <data name="DeleteScoreMaster" xml:space="preserve">
+    <value>選択した点数を削除してもよろしいですか？</value>
+  </data>
+  <data name="DeleteUserMaster" xml:space="preserve">
+    <value>選択したユーザーを削除してもよろしいですか？</value>
+  </data>
+  <data name="DeleteVastuMaster" xml:space="preserve">
+    <value>選択したヴァストゥマスターを削除してもよろしいですか？</value>
+  </data>
+  <data name="DeleteVastuType" xml:space="preserve">
+    <value>ヴァストゥタイプを削除してもよろしいですか？</value>
+  </data>
+  <data name="DELFlag" xml:space="preserve">
+    <value>DELフラグ</value>
+  </data>
+  <data name="Delflg" xml:space="preserve">
+    <value>DELフラグ</value>
+  </data>
+  <data name="DemocraticPeoplesRepublicofKorea" xml:space="preserve">
+    <value>韓国</value>
+  </data>
+  <data name="Denmark" xml:space="preserve">
+    <value>ジブチ</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>記述</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>詳細</value>
+  </data>
+  <data name="DiningRoom" xml:space="preserve">
+    <value>食堂</value>
+  </data>
+  <data name="DiningRoomdef" xml:space="preserve">
+    <value>テーブルを置く位置はどこでも〇、台所と食堂は同じ階の近い場所〇、家長は食事中に東を向く〇、食堂のドアと正面玄関のドアは向かい合わないことが〇、食堂のドアは東、北、西が〇、テーブルは円形ではなく四角か長方形が〇、部屋の真ん中に置く〇、冷蔵庫は南東〇、南の壁を背にする〇、洗面器は無いことが〇、置かなくてはいけない場合、北か東なら〇、排水管は北東〇</value>
+  </data>
+  <data name="Direction" xml:space="preserve">
+    <value>方角</value>
+  </data>
+  <data name="DirectionCreatedSuccessfully" xml:space="preserve">
+    <value>方角を作成しました。</value>
+  </data>
+  <data name="DirectionDetailsAlreadyExists" xml:space="preserve">
+    <value>方角の詳細は既に存在しています。</value>
+  </data>
+  <data name="DirectionMaster" xml:space="preserve">
+    <value>方角マスター</value>
+  </data>
+  <data name="DirectionMasterCreate" xml:space="preserve">
+    <value>方角マスター  - 作成する</value>
+  </data>
+  <data name="DirectionMasterEdit" xml:space="preserve">
+    <value>方角マスター編集</value>
+  </data>
+  <data name="DirectionUpdatedSuccessfully" xml:space="preserve">
+    <value>方角が正常に更新されました。</value>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>アクティブ・非アクティブ</value>
+  </data>
+  <data name="Djibouti" xml:space="preserve">
+    <value>ドミニカ</value>
+  </data>
+  <data name="Dominica" xml:space="preserve">
+    <value>ドミニカ共和国</value>
+  </data>
+  <data name="DominicanRepublic" xml:space="preserve">
+    <value>東ティモール   </value>
+  </data>
+  <data name="Doors" xml:space="preserve">
+    <value>ドア</value>
+  </data>
+  <data name="Doorsdef" xml:space="preserve">
+    <value>ドアの数が偶数になるように家を計画する</value>
+  </data>
+  <data name="DoyouwanttoDeletefeedback" xml:space="preserve">
+    <value>フィードバックを削除しますか</value>
+  </data>
+  <data name="EastTimor" xml:space="preserve">
+    <value>エクアドル   </value>
+  </data>
+  <data name="Ecuador" xml:space="preserve">
+    <value>エジプト   </value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>編集</value>
+  </data>
+  <data name="Egypt" xml:space="preserve">
+    <value>エルサルバドル</value>
+  </data>
+  <data name="ElSalvador" xml:space="preserve">
+    <value>赤道ギニア</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Eメール</value>
+  </data>
+  <data name="emailaddress" xml:space="preserve">
+    <value>Eメール@アドレス.コム</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>英語</value>
+  </data>
+  <data name="EnterAddress" xml:space="preserve">
+    <value>住所を入力してください。</value>
+  </data>
+  <data name="EnterArea" xml:space="preserve">
+    <value>エリアを入力してください。</value>
+  </data>
+  <data name="EnterCity" xml:space="preserve">
+    <value>市を入力してください。</value>
+  </data>
+  <data name="Entercomments" xml:space="preserve">
+    <value>コメントを入力してください</value>
+  </data>
+  <data name="EnterConfirmNewPassword" xml:space="preserve">
+    <value>新しいパスワードを入力してください。</value>
+  </data>
+  <data name="EnterConfirmPassword" xml:space="preserve">
+    <value>パスワード（確認用）を入力してください。</value>
+  </data>
+  <data name="EnterContentName" xml:space="preserve">
+    <value>内容名を入力してください。</value>
+  </data>
+  <data name="Entercountry" xml:space="preserve">
+    <value>国を入力</value>
+  </data>
+  <data name="EnterDescription" xml:space="preserve">
+    <value>説明を入力してください。</value>
+  </data>
+  <data name="EnterEmail" xml:space="preserve">
+    <value>メールアドレスを入力してください。</value>
+  </data>
+  <data name="EnterFirstame" xml:space="preserve">
+    <value>苗字を入力してください。</value>
+  </data>
+  <data name="EnterFirstName" xml:space="preserve">
+    <value>お名前を入力してください。</value>
+  </data>
+  <data name="EnterImageDetails" xml:space="preserve">
+    <value>画像の詳細を入力してください。</value>
+  </data>
+  <data name="EnterLastName" xml:space="preserve">
+    <value>名前を入力してください。</value>
+  </data>
+  <data name="EnterName" xml:space="preserve">
+    <value>ご氏名 を入力 </value>
+  </data>
+  <data name="EnterPassword" xml:space="preserve">
+    <value>パスワードを入力してください。</value>
+  </data>
+  <data name="EnterScoreDetails" xml:space="preserve">
+    <value>点数の詳細を入力してください。</value>
+  </data>
+  <data name="EnterSpecialCharacters" xml:space="preserve">
+    <value>特殊文字を入力してください。</value>
+  </data>
+  <data name="Enterstate" xml:space="preserve">
+    <value>州を入力してください。</value>
+  </data>
+  <data name="EnterUserName" xml:space="preserve">
+    <value>ユーザー名を入力してください。</value>
+  </data>
+  <data name="EnterValidEmail" xml:space="preserve">
+    <value>有効な電子メールを入力してください。</value>
+  </data>
+  <data name="EnterVastuType" xml:space="preserve">
+    <value>ヴァストゥタイプを入力してください。</value>
+  </data>
+  <data name="Entrancesaysmanythingsaboutowner" xml:space="preserve">
+    <value>入り口はオーナーについて多くのことを言っています！</value>
+  </data>
+  <data name="Entrancesaysmanythingsaboutownerdef" xml:space="preserve">
+    <value>Entrance of a house predicts many a things about the occupants in the house in terms of nature and especially health. Having kitchen right in the entrance is a major flaw in the house and in such cases focus on food is very intense.</value>
+  </data>
+  <data name="EquatorialGuinea" xml:space="preserve">
+    <value>エリトリア</value>
+  </data>
+  <data name="Eritrea" xml:space="preserve">
+    <value>エストニア</value>
+  </data>
+  <data name="errormsg" xml:space="preserve">
+    <value>エラーメッセージ</value>
+  </data>
+  <data name="Estonia" xml:space="preserve">
+    <value>エチオピア    </value>
+  </data>
+  <data name="Ethiopia" xml:space="preserve">
+    <value>フォークランド諸島</value>
+  </data>
+  <data name="ExcelDownload" xml:space="preserve">
+    <value>Excelダウンロード</value>
+  </data>
+  <data name="ExcelPDFDownload" xml:space="preserve">
+    <value>Excel・PDFダウンロード</value>
+  </data>
+  <data name="ExtraScore" xml:space="preserve">
+    <value>追加点</value>
+  </data>
+  <data name="failure" xml:space="preserve">
+    <value>失敗した</value>
+  </data>
+  <data name="FalklandIslands" xml:space="preserve">
+    <value>フェロー諸島</value>
+  </data>
+  <data name="False" xml:space="preserve">
+    <value>誤り</value>
+  </data>
+  <data name="FaroeIslands" xml:space="preserve">
+    <value>フィジー</value>
+  </data>
+  <data name="FEEDBACK" xml:space="preserve">
+    <value>フィードバック</value>
+  </data>
+  <data name="FeedbackAddedSuccesfully" xml:space="preserve">
+    <value>フィードバックが正常に追加されました。</value>
+  </data>
+  <data name="FeedbackApproval" xml:space="preserve">
+    <value>フィードバック承認</value>
+  </data>
+  <data name="Feedbackapprovalfailed" xml:space="preserve">
+    <value>フィードバックの承認に失敗しました。</value>
+  </data>
+  <data name="Feedbackapprovedsuccessfully" xml:space="preserve">
+    <value>フィードバックが承認されました。</value>
+  </data>
+  <data name="feedbackdeletedsucessfully" xml:space="preserve">
+    <value>フィードバックが正常に削除されました。</value>
+  </data>
+  <data name="Feedbackdeletionfailed" xml:space="preserve">
+    <value>フィードバックの削除に失敗しました。</value>
+  </data>
+  <data name="Feedbackrejectedsuccessfully" xml:space="preserve">
+    <value>フィードバックが拒否されました。</value>
+  </data>
+  <data name="Feedbackrejectionfailed" xml:space="preserve">
+    <value>フィードバックの拒否に失敗しました。</value>
+  </data>
+  <data name="FEEDBACKTESTIMONIALS" xml:space="preserve">
+    <value>フィードバック・証言</value>
+  </data>
+  <data name="Fiji" xml:space="preserve">
+    <value>フィンランド</value>
+  </data>
+  <data name="Finland" xml:space="preserve">
+    <value>フランス</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>苗字</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>フォント</value>
+  </data>
+  <data name="FontSize" xml:space="preserve">
+    <value>フォントサイズ</value>
+  </data>
+  <data name="Forgotten" xml:space="preserve">
+    <value>パスワードをお忘れですか</value>
+  </data>
+  <data name="Forgottenpassword" xml:space="preserve">
+    <value>パスワードをお忘れですか</value>
+  </data>
+  <data name="Formatting" xml:space="preserve">
+    <value>フォーマット</value>
+  </data>
+  <data name="France" xml:space="preserve">
+    <value>フランスメトロポリタン</value>
+  </data>
+  <data name="FranceMetropolitan" xml:space="preserve">
+    <value>フランス領ギアナ</value>
+  </data>
+  <data name="FrenchGuiana" xml:space="preserve">
+    <value>フランス領ポリネシア</value>
+  </data>
+  <data name="FrenchPolynesia" xml:space="preserve">
+    <value>フランス領極南諸島</value>
+  </data>
+  <data name="FrenchSouthernTerritories" xml:space="preserve">
+    <value>ガボン</value>
+  </data>
+  <data name="Gabon" xml:space="preserve">
+    <value>ガンビア</value>
+  </data>
+  <data name="Gambia" xml:space="preserve">
+    <value>グルジア </value>
+  </data>
+  <data name="GenerateExcelReport" xml:space="preserve">
+    <value>Excelレポート生成</value>
+  </data>
+  <data name="GeneratePDFReport" xml:space="preserve">
+    <value>PDFレポート生成</value>
+  </data>
+  <data name="Georgia" xml:space="preserve">
+    <value>ドイツ  </value>
+  </data>
+  <data name="Germany" xml:space="preserve">
+    <value>ガーナ</value>
+  </data>
+  <data name="Ghana" xml:space="preserve">
+    <value>ジブラルタル</value>
+  </data>
+  <data name="Gibraltar" xml:space="preserve">
+    <value>ギリシャ</value>
+  </data>
+  <data name="Greece" xml:space="preserve">
+    <value>グリーンランド</value>
+  </data>
+  <data name="Greenland" xml:space="preserve">
+    <value>グレナダ</value>
+  </data>
+  <data name="Grenada" xml:space="preserve">
+    <value>グアドループ</value>
+  </data>
+  <data name="Guadeloupe" xml:space="preserve">
+    <value>グアム</value>
+  </data>
+  <data name="Guam" xml:space="preserve">
+    <value>グアテマラ   </value>
+  </data>
+  <data name="Guatemala" xml:space="preserve">
+    <value>ギニア  </value>
+  </data>
+  <data name="Guinea" xml:space="preserve">
+    <value>ギニアビサウ</value>
+  </data>
+  <data name="GuineaBissau" xml:space="preserve">
+    <value>ガイアナ</value>
+  </data>
+  <data name="Guyana" xml:space="preserve">
+    <value>ハイチ </value>
+  </data>
+  <data name="Haiti" xml:space="preserve">
+    <value>ハード島とマクドナルド諸島</value>
+  </data>
+  <data name="HeardandMcDonaldIslands" xml:space="preserve">
+    <value>聖座</value>
+  </data>
+  <data name="HolySee" xml:space="preserve">
+    <value>ホンジュラス</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>ホーム</value>
+  </data>
+  <data name="homedes" xml:space="preserve">
+    <value>ヴァーストゥ・シャーストラは、古代インドで成立した建築の科学として知られます。住居の立地や間取りに自然の法則に基づいた調整を加えることによって、家庭にポジティブなエネルギーをもたらすことがヴァーストゥ・シャーストラの主な目的です。それは、自然と人間の間に温かい関係を築き、健康、富、繁栄をもたらすと信じられます。</value>
+  </data>
+  <data name="HomeImportance" xml:space="preserve">
+    <value>家のヴァストゥの重要性</value>
+  </data>
+  <data name="Homelist1" xml:space="preserve">
+    <value>ヴァーストゥ・シャーストラ（サンスクリット語: वास्तुशास्त्र、サンスクリット語ラテン翻字: Vastu Shasta、Vaastu Shastra）は、古代インドで成立した思想・学問。
+古代インド発祥のものとしては、ヨーガが主に心身の調整・統一を図る修行法、アーユルヴェーダが医学・健康法として知られているが、ヴァーストゥ・シャーストラは、現代の建築環境工学、都市工学などに相当する分野である。</value>
+  </data>
+  <data name="Homelist11" xml:space="preserve">
+    <value>欧米諸国や日本においては、単に「ヴァーストゥ（ツ）」「ヴァストゥ（ツ）」「ワースツ」、あるいは日本では「インド風水」と称される場合も多い。</value>
+  </data>
+  <data name="Homelist2" xml:space="preserve">
+    <value>インド本国においては近代以降、ヒンドゥー寺院建築などに細々と伝えられるのみで衰退していたが、近年の欧米諸国での注目が逆輸入される形で再び隆盛してきている。2008年には、世界有数の大富豪といわれるリライアンス・グループのムケシュ・アンバニ会長が、ヴァーストゥ・シャーストラに基づいた、総工費約2000億円ともいわれる自宅を建設していることでも話題になった。</value>
+  </data>
+  <data name="Homelist22" xml:space="preserve">
+    <value>Michael Mastroは、ビートルズのグルだった超越瞑想の創始者マハリシ・マヘーシュ・ヨーギーに出会い、彼に紹介されたヴァーストゥ・シャーストラの師に学び、彼の依頼でヴァーストゥ・シャーストラを使った建物をアメリカとインドに建て、マイクロソフトの建物にも利用し、以降マハリシ・マヘーシュ・ヨーギーの世界中のスピリチュアルセンター、ボーイング、インテル、オラクル等の建築にも使ったと語っている。</value>
+  </data>
+  <data name="Homelist3" xml:space="preserve">
+    <value>ヒンドゥー教徒の伝統的住居に浄／不浄観に従った三階層の領域があるとされる。最も神聖で清浄な領域とされるのは、家庭内の祭祀（プージャ）が執り行われる祭壇のある場所である。そこにはシヴァやヴィシュヌといったヒンドゥーの神々や聖人の図像が祀られる。日本に例えれば仏壇と神棚が混ざったような場所であるが、日本と異なるのは、現代でもほとんどすべての家に（大小の差はあるが）このような祭祀の場が備わっている点である。</value>
+  </data>
+  <data name="Homelist33" xml:space="preserve">
+    <value>台所は身体に入る食品の浄／不浄を、玄関は家に入る人間の浄／不浄をコントロールする場であるからだろう。居室やヴェランダといった生活スペースは中間的な領域である。不浄の領域と見なされるのは、浴室やトイレ・ゴミ置き場といった人体からの排出物（体液や排泄物）、家からの排出物（排水・ゴミ）に関する領域である。部位では床も不浄とされる。
+　清浄な領域と不浄な領域はなるべく離すべきとされ、その配置は後述する方位やマンダラのヒエラルキーと関連づけられる。また不浄な領域や部位の掃除は、家人ではなくそれを専門とする「儀礼的に穢れた」人々（掃除人など）が行うものとする考え方は、今も根強い。</value>
+  </data>
+  <data name="HomeMainPage" xml:space="preserve">
+    <value>ホームページ</value>
+  </data>
+  <data name="HOMEVASTU" xml:space="preserve">
+    <value>ホームヴァストゥ</value>
+  </data>
+  <data name="HomeVastuTips" xml:space="preserve">
+    <value>家のヴァストゥのヒント</value>
+  </data>
+  <data name="Honduras" xml:space="preserve">
+    <value>香港</value>
+  </data>
+  <data name="HongKong" xml:space="preserve">
+    <value>ハンガリー</value>
+  </data>
+  <data name="Hungary" xml:space="preserve">
+    <value>アイスランド</value>
+  </data>
+  <data name="Iceland" xml:space="preserve">
+    <value>インド</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>画像</value>
+  </data>
+  <data name="ImageCreatedSuccessfully" xml:space="preserve">
+    <value>画像が正常に作成されました。</value>
+  </data>
+  <data name="ImageDetails" xml:space="preserve">
+    <value>画像の詳細</value>
+  </data>
+  <data name="ImageDetailsAlreadyExists" xml:space="preserve">
+    <value>画像の詳細は既に存在しています。</value>
+  </data>
+  <data name="ImageFile" xml:space="preserve">
+    <value>画像ファイル</value>
+  </data>
+  <data name="ImageMaster" xml:space="preserve">
+    <value>画像マスター</value>
+  </data>
+  <data name="ImageMasterCreate" xml:space="preserve">
+    <value>画像マスター作成</value>
+  </data>
+  <data name="ImageMasterEdit" xml:space="preserve">
+    <value>画像マスター編集</value>
+  </data>
+  <data name="ImageSymbol" xml:space="preserve">
+    <value>画像記号</value>
+  </data>
+  <data name="ImageUpdatedSuccessfully" xml:space="preserve">
+    <value>画像が正常に更新されました。</value>
+  </data>
+  <data name="ImageUrl" xml:space="preserve">
+    <value>画像</value>
+  </data>
+  <data name="ImportanceofVastu" xml:space="preserve">
+    <value>ヴァストゥの重要性</value>
+  </data>
+  <data name="India" xml:space="preserve">
+    <value>インドネシア</value>
+  </data>
+  <data name="Indonesia" xml:space="preserve">
+    <value>イラン</value>
+  </data>
+  <data name="Iran" xml:space="preserve">
+    <value>イラク</value>
+  </data>
+  <data name="Iraq" xml:space="preserve">
+    <value>アイルランド</value>
+  </data>
+  <data name="Ireland" xml:space="preserve">
+    <value>イスラエル </value>
+  </data>
+  <data name="IrregularShapeofplotcanbemaleficforindustry" xml:space="preserve">
+    <value>プロットの不規則な形状は、業界にとって悪影響を及ぼす可能性があります！</value>
+  </data>
+  <data name="IrregularShapeofplotcanbemaleficforindustrydef" xml:space="preserve">
+    <value>Whether it is industry or residential property shape of plot is essential to be ascertain but industries running through huge investments need to be cautious more on shape terms.</value>
+  </data>
+  <data name="IsActive" xml:space="preserve">
+    <value>アクティブです</value>
+  </data>
+  <data name="IsDelete" xml:space="preserve">
+    <value>削除する</value>
+  </data>
+  <data name="Israel" xml:space="preserve">
+    <value>イタリア </value>
+  </data>
+  <data name="Italy" xml:space="preserve">
+    <value>ジャマイカ</value>
+  </data>
+  <data name="Jamaica" xml:space="preserve">
+    <value>ヨルダン</value>
+  </data>
+  <data name="Japan" xml:space="preserve">
+    <value>日本</value>
+  </data>
+  <data name="Japanese" xml:space="preserve">
+    <value>日本語</value>
+  </data>
+  <data name="Jorda" xml:space="preserve">
+    <value>カザフスタン</value>
+  </data>
+  <data name="Kazakhstan" xml:space="preserve">
+    <value>ケニア</value>
+  </data>
+  <data name="Keepthefrontgateclean" xml:space="preserve">
+    <value>正門を清潔に保つ</value>
+  </data>
+  <data name="Keepthefrontgatecleandef" xml:space="preserve">
+    <value>People say, one can get money only by the means of earning but Vastu say you can reap riches by de-cluttering your house front gate.</value>
+  </data>
+  <data name="Kenya" xml:space="preserve">
+    <value>キリバス</value>
+  </data>
+  <data name="Kiribati" xml:space="preserve">
+    <value>朝鮮民主主義人民共和国</value>
+  </data>
+  <data name="Kitchen" xml:space="preserve">
+    <value>台所</value>
+  </data>
+  <data name="Kitchendef" xml:space="preserve">
+    <value>家の南東が〇、北東や南西は✕、料理人が東を向くことが〇、ドアは北、東、北東が〇、ドアは時計回りの方向に開くと〇、換気扇や窓は東側が〇、ガス台は南東は〇濾過水装置や飲料水は北東が〇、電子レンジなどの電化製品は南東の角が〇、冷蔵庫は北西か南西の角が〇、食卓がある場合、中央は避けて北西が〇</value>
+  </data>
+  <data name="Korea" xml:space="preserve">
+    <value>クウェート</value>
+  </data>
+  <data name="Kuwait" xml:space="preserve">
+    <value>キルギス</value>
+  </data>
+  <data name="Kyrgyzstan" xml:space="preserve">
+    <value>ラオス</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>言語</value>
+  </data>
+  <data name="Lao" xml:space="preserve">
+    <value>ラトビア </value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>名前</value>
+  </data>
+  <data name="Latvia" xml:space="preserve">
+    <value>レバノン </value>
+  </data>
+  <data name="Learnless" xml:space="preserve">
+    <value>もっと学ぶ</value>
+  </data>
+  <data name="Learnmore" xml:space="preserve">
+    <value>もっと詳しく知る</value>
+  </data>
+  <data name="Lebanon" xml:space="preserve">
+    <value>レソト</value>
+  </data>
+  <data name="Lesotho" xml:space="preserve">
+    <value>リベリア  </value>
+  </data>
+  <data name="Liberia" xml:space="preserve">
+    <value>リビアアラブジャマヒリヤ</value>
+  </data>
+  <data name="LibyanArabJamahiriya" xml:space="preserve">
+    <value>リヒテンシュタイン </value>
+  </data>
+  <data name="Liechtenstein" xml:space="preserve">
+    <value>リトアニア</value>
+  </data>
+  <data name="Lithuania" xml:space="preserve">
+    <value>ルクセンブルク</value>
+  </data>
+  <data name="LivingRoom" xml:space="preserve">
+    <value>リビングルーム</value>
+  </data>
+  <data name="LivingRoomdef" xml:space="preserve">
+    <value>住居のヴァストゥとは、健康と総合的な繁栄を確保することです。正確には、ヴァストゥのルールに基づいて建設された家は、3Pの人生の繁栄、進歩を遂げます。</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>ロード</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>ロケーション</value>
+  </data>
+  <data name="LOGIN" xml:space="preserve">
+    <value>ログイン</value>
+  </data>
+  <data name="LOGINBTN" xml:space="preserve">
+    <value>ログイン</value>
+  </data>
+  <data name="Loginname" xml:space="preserve">
+    <value>ログイン名</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>ログアウト</value>
+  </data>
+  <data name="LongDescription" xml:space="preserve">
+    <value>長い説明</value>
+  </data>
+  <data name="Lucksuccessgoeshandinhand" xml:space="preserve">
+    <value>運と成功は手をつないで行く</value>
+  </data>
+  <data name="Lucksuccessgoeshandinhanddef" xml:space="preserve">
+    <value>Not every time it is possible that people who are sharp brained do fair all time in life. This is not necessary as most of the times you have the luck of your stars while intelligence is hardly a part in success.</value>
+  </data>
+  <data name="Luxembourg" xml:space="preserve">
+    <value>マカオ</value>
+  </data>
+  <data name="Macau" xml:space="preserve">
+    <value>マケドニア</value>
+  </data>
+  <data name="Macedonia" xml:space="preserve">
+    <value>マダガスカル</value>
+  </data>
+  <data name="Madagascar" xml:space="preserve">
+    <value>マラウイ</value>
+  </data>
+  <data name="MainEntrance" xml:space="preserve">
+    <value>玄関</value>
+  </data>
+  <data name="MainEntrancedef" xml:space="preserve">
+    <value>一番大切なポイント、表玄関が家の正面にあること、家の正面〇、９つのセクションに分け別紙参照
+入口の門と表玄関のドアは同じ側にあると〇
+表玄関のドアは、家で一番大きなドアにする〇</value>
+  </data>
+  <data name="MakeyourEntranceBigforInflowofWealth" xml:space="preserve">
+    <value>富を最大化するには、玄関を大きくする。</value>
+  </data>
+  <data name="MakeyourEntranceBigforInflowofWealthdef" xml:space="preserve">
+    <value>Entrance of a house is the pathway of inflow of health and wealth and it is said in Vedas that entrance of house is symbolic of Rahu and exit door is of Ketu.</value>
+  </data>
+  <data name="Malawi" xml:space="preserve">
+    <value>マレーシア </value>
+  </data>
+  <data name="Malaysia" xml:space="preserve">
+    <value>モルディブ   </value>
+  </data>
+  <data name="Maldives" xml:space="preserve">
+    <value>マリ</value>
+  </data>
+  <data name="Mali" xml:space="preserve">
+    <value>マルタ</value>
+  </data>
+  <data name="Malta" xml:space="preserve">
+    <value>マーシャル諸島</value>
+  </data>
+  <data name="Mandatoryfields" xml:space="preserve">
+    <value>印は入力必須項目です。</value>
+  </data>
+  <data name="MarshallIslands" xml:space="preserve">
+    <value>マルティニーク</value>
+  </data>
+  <data name="Martinique" xml:space="preserve">
+    <value>モーリタニア</value>
+  </data>
+  <data name="Mauritania" xml:space="preserve">
+    <value>モーリシャス</value>
+  </data>
+  <data name="Mauritius" xml:space="preserve">
+    <value>マヨット</value>
+  </data>
+  <data name="Maximumallowedfilesizeis2MB" xml:space="preserve">
+    <value>最大許容ファイルサイズは2 MBです。、ピクセル：200 X 200</value>
+  </data>
+  <data name="Maximumallowedfilesizeis3MB" xml:space="preserve">
+    <value>最大許容ファイルサイズは3 MBです。</value>
+  </data>
+  <data name="MaximumLength100" xml:space="preserve">
+    <value>最大長は100です。</value>
+  </data>
+  <data name="MaximumLength200" xml:space="preserve">
+    <value>最大長は200です。</value>
+  </data>
+  <data name="MaximumLength2000" xml:space="preserve">
+    <value>最大長は2000です。</value>
+  </data>
+  <data name="MaximumLength400" xml:space="preserve">
+    <value>最大長は400です。</value>
+  </data>
+  <data name="MaximumLength6000" xml:space="preserve">
+    <value>最大長は6000です。</value>
+  </data>
+  <data name="MaximumLength8000" xml:space="preserve">
+    <value>最大長は8000です。</value>
+  </data>
+  <data name="Mayotte" xml:space="preserve">
+    <value>メキシコ  </value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>メッセージ</value>
+  </data>
+  <data name="Mexico" xml:space="preserve">
+    <value>ミクロネシア </value>
+  </data>
+  <data name="Micronesia" xml:space="preserve">
+    <value>モルドバ   </value>
+  </data>
+  <data name="MiddleName" xml:space="preserve">
+    <value>ミドルネーム</value>
+  </data>
+  <data name="Moldova" xml:space="preserve">
+    <value>モナコ  </value>
+  </data>
+  <data name="Monaco" xml:space="preserve">
+    <value>モンゴル国</value>
+  </data>
+  <data name="Mongolia" xml:space="preserve">
+    <value>モントセラト</value>
+  </data>
+  <data name="Montserrat" xml:space="preserve">
+    <value>モロッコ</value>
+  </data>
+  <data name="Morocco" xml:space="preserve">
+    <value>モザンビーク </value>
+  </data>
+  <data name="Mozambique" xml:space="preserve">
+    <value>ミャンマー </value>
+  </data>
+  <data name="Myanmar" xml:space="preserve">
+    <value>ナミビア</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>お名前</value>
+  </data>
+  <data name="Namibia" xml:space="preserve">
+    <value>ナウル  </value>
+  </data>
+  <data name="Nauru" xml:space="preserve">
+    <value>ネパール</value>
+  </data>
+  <data name="Nepal" xml:space="preserve">
+    <value>オランダ</value>
+  </data>
+  <data name="Netherlands" xml:space="preserve">
+    <value>オランダ領アンティル</value>
+  </data>
+  <data name="NetherlandsAntilles" xml:space="preserve">
+    <value>ニューカレドニア</value>
+  </data>
+  <data name="NewCaledonia" xml:space="preserve">
+    <value>ニュージーランド </value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>新しいパスワード</value>
+  </data>
+  <data name="NewValue" xml:space="preserve">
+    <value>新しい値</value>
+  </data>
+  <data name="NewZealand" xml:space="preserve">
+    <value>ニカラグア</value>
+  </data>
+  <data name="Nicaragua" xml:space="preserve">
+    <value>ニジェール</value>
+  </data>
+  <data name="Niger" xml:space="preserve">
+    <value>ナイジェリア</value>
+  </data>
+  <data name="Nigeria" xml:space="preserve">
+    <value>ニウエ</value>
+  </data>
+  <data name="Niue" xml:space="preserve">
+    <value>ノーフォーク島</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>いいえ</value>
+  </data>
+  <data name="NoRecordFound" xml:space="preserve">
+    <value>レコードが見つかりません。</value>
+  </data>
+  <data name="NoResultandDescriptionFound" xml:space="preserve">
+    <value>結果と説明が見つかりません。</value>
+  </data>
+  <data name="NorfolkIsland" xml:space="preserve">
+    <value>北マリアナ諸島</value>
+  </data>
+  <data name="NorthernMarianaIslands" xml:space="preserve">
+    <value>ノルウェー</value>
+  </data>
+  <data name="Norway" xml:space="preserve">
+    <value>オマーン</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>/</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>ok</value>
+  </data>
+  <data name="OldValue" xml:space="preserve">
+    <value>古い値</value>
+  </data>
+  <data name="Oman" xml:space="preserve">
+    <value>パキスタン </value>
+  </data>
+  <data name="Onlyfilesareallowed" xml:space="preserve">
+    <value>のファイルのみが許可されています。</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>ページ</value>
+  </data>
+  <data name="Pakistan" xml:space="preserve">
+    <value>パラオ</value>
+  </data>
+  <data name="Palau" xml:space="preserve">
+    <value>パナマ</value>
+  </data>
+  <data name="Panama" xml:space="preserve">
+    <value>パプアニューギニア</value>
+  </data>
+  <data name="PapuaNewGuinea" xml:space="preserve">
+    <value>パラグアイ  </value>
+  </data>
+  <data name="Paraguay" xml:space="preserve">
+    <value>ペルー</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>パスワード</value>
+  </data>
+  <data name="Passworddoesnotmatch" xml:space="preserve">
+    <value>パスワードが一致しません。</value>
+  </data>
+  <data name="PasswordMismatch" xml:space="preserve">
+    <value>パスワードが不一致でした。</value>
+  </data>
+  <data name="PDFDownload" xml:space="preserve">
+    <value>PDFダウンロード</value>
+  </data>
+  <data name="Peru" xml:space="preserve">
+    <value>フィリピン </value>
+  </data>
+  <data name="Philippines" xml:space="preserve">
+    <value>ピトケアン</value>
+  </data>
+  <data name="Pillars" xml:space="preserve">
+    <value>柱</value>
+  </data>
+  <data name="Pillarsdef" xml:space="preserve">
+    <value>柱の偶数も家の調和を促進します。</value>
+  </data>
+  <data name="Pitcairn" xml:space="preserve">
+    <value>ポーランド</value>
+  </data>
+  <data name="PleaseenterAllField" xml:space="preserve">
+    <value>全てのフィールドは必須です。</value>
+  </data>
+  <data name="PleaseenteryourName" xml:space="preserve">
+    <value>お名前を入力してください。</value>
+  </data>
+  <data name="Poland" xml:space="preserve">
+    <value>ポルトガル </value>
+  </data>
+  <data name="PoojaRoom" xml:space="preserve">
+    <value>仏間・神棚</value>
+  </data>
+  <data name="PoojaRoomdef" xml:space="preserve">
+    <value>プージャルームプージャルームはほとんどの家の重要な部分です。瞑想と祈りのために使用され、ポジティブなエネルギーで満たされています。</value>
+  </data>
+  <data name="Portugal" xml:space="preserve">
+    <value>ポルトガル</value>
+  </data>
+  <data name="ProsperyourBusinesswithVastutips" xml:space="preserve">
+    <value>ヴァストゥヒントで企業を繁栄させる</value>
+  </data>
+  <data name="ProsperyourBusinesswithVastutipsdef" xml:space="preserve">
+    <value>Design to have an even number of beams in a room. But do not sleep under the beams as it is likely to cause health complications.</value>
+  </data>
+  <data name="PuertoRico" xml:space="preserve">
+    <value>プエルトリコ</value>
+  </data>
+  <data name="Qatar" xml:space="preserve">
+    <value>カタール  </value>
+  </data>
+  <data name="RangeBetween0to99" xml:space="preserve">
+    <value>0〜99までの範囲</value>
+  </data>
+  <data name="Readmore" xml:space="preserve">
+    <value>続きを読む</value>
+  </data>
+  <data name="Reject" xml:space="preserve">
+    <value>不承認</value>
+  </data>
+  <data name="Rejected" xml:space="preserve">
+    <value>拒否された</value>
+  </data>
+  <data name="Rememberme" xml:space="preserve">
+    <value>ログイン名・パスワードの記憶</value>
+  </data>
+  <data name="ReportGenerationDate" xml:space="preserve">
+    <value>レポート作成日</value>
+  </data>
+  <data name="Reportselect" xml:space="preserve">
+    <value>ーー選択ーー</value>
+  </data>
+  <data name="ResearcherComments" xml:space="preserve">
+    <value>研究者コメント</value>
+  </data>
+  <data name="ResearcherName" xml:space="preserve">
+    <value>研究者名</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>結果</value>
+  </data>
+  <data name="Reunion" xml:space="preserve">
+    <value>レユニオン</value>
+  </data>
+  <data name="Romania" xml:space="preserve">
+    <value>ルーマニア</value>
+  </data>
+  <data name="Rooms" xml:space="preserve">
+    <value>客間</value>
+  </data>
+  <data name="Roomsdef" xml:space="preserve">
+    <value>家の北西が〇、南東は短期滞在客に〇、南西は客間にしない〇、北東を客間にしない〇、客間のベッドは頭が南に向く〇</value>
+  </data>
+  <data name="Russia" xml:space="preserve">
+    <value>ロシア  </value>
+  </data>
+  <data name="Rwanda" xml:space="preserve">
+    <value>ルワンダ </value>
+  </data>
+  <data name="SaintKittsandNevis" xml:space="preserve">
+    <value>セントクリストファー・ネイビス</value>
+  </data>
+  <data name="SaintLUCIA" xml:space="preserve">
+    <value>セントルシア </value>
+  </data>
+  <data name="SaintVincent" xml:space="preserve">
+    <value>セントビンセント</value>
+  </data>
+  <data name="Samoa" xml:space="preserve">
+    <value>サモア </value>
+  </data>
+  <data name="SanMarino" xml:space="preserve">
+    <value>サンマリノ </value>
+  </data>
+  <data name="SaoTomeandPrincipe" xml:space="preserve">
+    <value>サントメ・プリンシペ</value>
+  </data>
+  <data name="SaudiArabia" xml:space="preserve">
+    <value>サウジアラビア </value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>保存する</value>
+  </data>
+  <data name="SaveFailed" xml:space="preserve">
+    <value>保存に失敗しました。</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>点数</value>
+  </data>
+  <data name="ScoreCreatedSuccessfully" xml:space="preserve">
+    <value>点数が正常に作成されました。</value>
+  </data>
+  <data name="ScoreDetails" xml:space="preserve">
+    <value>点数詳細</value>
+  </data>
+  <data name="ScoreDetailsAlreadyExists" xml:space="preserve">
+    <value>ヴァストゥタイプのエリア方向は既に存在します</value>
+  </data>
+  <data name="ScoreImage" xml:space="preserve">
+    <value>点数画像</value>
+  </data>
+  <data name="ScoreMaster" xml:space="preserve">
+    <value>点数マスター</value>
+  </data>
+  <data name="ScoreMasterCreate" xml:space="preserve">
+    <value>点数マスター作成</value>
+  </data>
+  <data name="ScoreMasterEdit" xml:space="preserve">
+    <value>点数マスター編集</value>
+  </data>
+  <data name="ScoreUpdatedSuccessfully" xml:space="preserve">
+    <value>点数が正常に更新されました。</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>検索</value>
+  </data>
+  <data name="SearchFor" xml:space="preserve">
+    <value>検索する</value>
+  </data>
+  <data name="SEARCHVASTU" xml:space="preserve">
+    <value>ヴァストゥ検索</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>選択</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>すべて選択する</value>
+  </data>
+  <data name="selectArea" xml:space="preserve">
+    <value>エリアを選択してください。</value>
+  </data>
+  <data name="SelectDirection" xml:space="preserve">
+    <value>方角を選択してください。</value>
+  </data>
+  <data name="SelectImageFile" xml:space="preserve">
+    <value>画像ファイルを選択してください。</value>
+  </data>
+  <data name="SelectScore" xml:space="preserve">
+    <value>点数を選択してください。</value>
+  </data>
+  <data name="SelectStatus" xml:space="preserve">
+    <value>ステータスを選択してください。</value>
+  </data>
+  <data name="SelectUser" xml:space="preserve">
+    <value>ユーザー選択</value>
+  </data>
+  <data name="SelectUserType" xml:space="preserve">
+    <value>ユーザータイプを選択してください。</value>
+  </data>
+  <data name="SelectVastuType" xml:space="preserve">
+    <value>ヴァストゥタイプを選択してください。</value>
+  </data>
+  <data name="SendMessage" xml:space="preserve">
+    <value>メッセージを送信</value>
+  </data>
+  <data name="Senegal" xml:space="preserve">
+    <value>セネガル</value>
+  </data>
+  <data name="Serbia" xml:space="preserve">
+    <value>セルビア</value>
+  </data>
+  <data name="Setting" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="Seychelles" xml:space="preserve">
+    <value>セーシェル </value>
+  </data>
+  <data name="Shastra" xml:space="preserve">
+    <value>シャストラ</value>
+  </data>
+  <data name="ShortDescription" xml:space="preserve">
+    <value>簡単な説明</value>
+  </data>
+  <data name="Sierra" xml:space="preserve">
+    <value>シエラ</value>
+  </data>
+  <data name="Singapore" xml:space="preserve">
+    <value>シンガポール</value>
+  </data>
+  <data name="Slovakia" xml:space="preserve">
+    <value>スロバキア  </value>
+  </data>
+  <data name="Slovenia" xml:space="preserve">
+    <value>スロベニア</value>
+  </data>
+  <data name="SolomonIslands" xml:space="preserve">
+    <value>ソロモン諸島</value>
+  </data>
+  <data name="Somalia" xml:space="preserve">
+    <value>ソマリア </value>
+  </data>
+  <data name="SouthAfrica" xml:space="preserve">
+    <value>南アフリカ</value>
+  </data>
+  <data name="SouthGeorgia" xml:space="preserve">
+    <value>サウスジョージア</value>
+  </data>
+  <data name="spain" xml:space="preserve">
+    <value>スペイン   </value>
+  </data>
+  <data name="SriLanka" xml:space="preserve">
+    <value>スリランカ</value>
+  </data>
+  <data name="Staircase" xml:space="preserve">
+    <value>階段</value>
+  </data>
+  <data name="Staircasedef" xml:space="preserve">
+    <value>南東から北西の対角線上か南西から北東の対角線上は✕、東西南北〇、東西南北をつなぐ中央線上は✕、玄関とその向かい側を結ぶ線上も✕、階段は奇数が〇、階段が直線系であればどの方角でも〇、らせん形は時計回りが〇、家の中央は✕</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>州</value>
+  </data>
+  <data name="status" xml:space="preserve">
+    <value>状態</value>
+  </data>
+  <data name="StatusCreatedSuccessfully" xml:space="preserve">
+    <value>ステータスが正常に作成されました。</value>
+  </data>
+  <data name="StatusDetailsAlreadyExists" xml:space="preserve">
+    <value>ステータスの詳細は既に存在しています。</value>
+  </data>
+  <data name="StatusUpdatedSuccessfully" xml:space="preserve">
+    <value>ステータスが正常に更新されました。</value>
+  </data>
+  <data name="StHelena" xml:space="preserve">
+    <value>セントヘレナ</value>
+  </data>
+  <data name="StoreRoom" xml:space="preserve">
+    <value>保管室</value>
+  </data>
+  <data name="StoreRoomdef" xml:space="preserve">
+    <value>によると、物置の適切な場所は南西または北西の角にあり、平和と静けさを維持しています</value>
+  </data>
+  <data name="StPierreandMiguelon" xml:space="preserve">
+    <value>サンピエールとミゲロン</value>
+  </data>
+  <data name="submit" xml:space="preserve">
+    <value>送信</value>
+  </data>
+  <data name="SuccessfullySaved" xml:space="preserve">
+    <value>正常に保存されました。</value>
+  </data>
+  <data name="Sudan" xml:space="preserve">
+    <value>スーダン    </value>
+  </data>
+  <data name="Suriname" xml:space="preserve">
+    <value>スリナム</value>
+  </data>
+  <data name="Svalbard" xml:space="preserve">
+    <value>スバールバル諸島</value>
+  </data>
+  <data name="Swaziland" xml:space="preserve">
+    <value>スワジランド </value>
+  </data>
+  <data name="Sweden" xml:space="preserve">
+    <value>スウェーデン </value>
+  </data>
+  <data name="Switzerland" xml:space="preserve">
+    <value>スイス</value>
+  </data>
+  <data name="Syria" xml:space="preserve">
+    <value>シリア</value>
+  </data>
+  <data name="Taiwan" xml:space="preserve">
+    <value>台湾</value>
+  </data>
+  <data name="Tajikistan" xml:space="preserve">
+    <value>タジキスタン</value>
+  </data>
+  <data name="Tanzania" xml:space="preserve">
+    <value>タンザニア</value>
+  </data>
+  <data name="Thailand" xml:space="preserve">
+    <value>タイ王国</value>
+  </data>
+  <data name="Togo" xml:space="preserve">
+    <value>トーゴ  </value>
+  </data>
+  <data name="Toilets" xml:space="preserve">
+    <value>トイレ</value>
+  </data>
+  <data name="Toiletsdef" xml:space="preserve">
+    <value>北東・南東・北西・南西は✕、南北線上の北向きの便器は〇、東西線上に便器は✕、南北・東西を結ぶ中央線上に便器を置くと✕、角から角をつないだ対角線上にあると〇</value>
+  </data>
+  <data name="Tokelau" xml:space="preserve">
+    <value>トケラウ</value>
+  </data>
+  <data name="Tonga" xml:space="preserve">
+    <value>トンガ</value>
+  </data>
+  <data name="TransactionHistory" xml:space="preserve">
+    <value>トランザクション履歴</value>
+  </data>
+  <data name="Treasury" xml:space="preserve">
+    <value>金庫室</value>
+  </data>
+  <data name="Treasurydef" xml:space="preserve">
+    <value>家の南西が〇。 この方角は安定性を象徴し、富の安全を確保する。</value>
+  </data>
+  <data name="Trees" xml:space="preserve">
+    <value>木</value>
+  </data>
+  <data name="Treesdef" xml:space="preserve">
+    <value>背の高い木は西と南が〇、北と東が✕</value>
+  </data>
+  <data name="Trinidadand" xml:space="preserve">
+    <value>トリニダード・トバゴ </value>
+  </data>
+  <data name="True" xml:space="preserve">
+    <value>本当</value>
+  </data>
+  <data name="Tunisia" xml:space="preserve">
+    <value>チュニジア</value>
+  </data>
+  <data name="Turkey" xml:space="preserve">
+    <value>トルコ</value>
+  </data>
+  <data name="Turkmenistan" xml:space="preserve">
+    <value>トルクメニスタン</value>
+  </data>
+  <data name="TurksandCaicos" xml:space="preserve">
+    <value>タークスカイコス</value>
+  </data>
+  <data name="Tuvalu" xml:space="preserve">
+    <value>ツバル</value>
+  </data>
+  <data name="Uganda" xml:space="preserve">
+    <value>ウガンダ</value>
+  </data>
+  <data name="Ukraine" xml:space="preserve">
+    <value>ウクライナ</value>
+  </data>
+  <data name="UnabletoCreateArea" xml:space="preserve">
+    <value>エリアを作成できません</value>
+  </data>
+  <data name="UnabletoCreateContent" xml:space="preserve">
+    <value>内容を作成できません。</value>
+  </data>
+  <data name="UnabletoCreateDirection" xml:space="preserve">
+    <value>方角を作成できません。</value>
+  </data>
+  <data name="UnabletoCreateImage" xml:space="preserve">
+    <value>画像を作成できません。</value>
+  </data>
+  <data name="UnabletoCreateScore" xml:space="preserve">
+    <value>点数を作成できません。</value>
+  </data>
+  <data name="UnabletoCreateStatus" xml:space="preserve">
+    <value>ステータスを作成できません。</value>
+  </data>
+  <data name="UnabletoCreateUser" xml:space="preserve">
+    <value>ユーザーを作成できません。</value>
+  </data>
+  <data name="UnabletoCreateVastu" xml:space="preserve">
+    <value>ヴァストゥを作成できません。</value>
+  </data>
+  <data name="UnabletoCreateVastuType" xml:space="preserve">
+    <value>ヴァストゥタイプを作成できません。</value>
+  </data>
+  <data name="Unabletodelete" xml:space="preserve">
+    <value>削除できません。</value>
+  </data>
+  <data name="Unabletosave" xml:space="preserve">
+    <value>保存できません。</value>
+  </data>
+  <data name="UnabletoUpdateArea" xml:space="preserve">
+    <value>エリアを更新できません。</value>
+  </data>
+  <data name="UnabletoUpdateContent" xml:space="preserve">
+    <value>内容を更新できません。</value>
+  </data>
+  <data name="UnabletoUpdateDirection" xml:space="preserve">
+    <value>方角を更新できません。</value>
+  </data>
+  <data name="UnabletoUpdateImage" xml:space="preserve">
+    <value>画像を更新できません。</value>
+  </data>
+  <data name="UnabletoUpdateScore" xml:space="preserve">
+    <value>点数を更新できません。</value>
+  </data>
+  <data name="UnabletoUpdateStatus" xml:space="preserve">
+    <value>ステータスを更新できません。</value>
+  </data>
+  <data name="UnabletoUpdateUser" xml:space="preserve">
+    <value>ユーザーを更新できません。</value>
+  </data>
+  <data name="UnabletoUpdateVastuType" xml:space="preserve">
+    <value>ヴァストゥタイプを更新できません。</value>
+  </data>
+  <data name="UnitedArabEmirates" xml:space="preserve">
+    <value>アラブ首長国連邦   </value>
+  </data>
+  <data name="UnitedKingdom" xml:space="preserve">
+    <value>イギリス</value>
+  </data>
+  <data name="UnitedStates" xml:space="preserve">
+    <value>アメリカ</value>
+  </data>
+  <data name="UnitedStatesMinorOutlyingIslands" xml:space="preserve">
+    <value>アメリカ合衆国小離島</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="UpdatedDate" xml:space="preserve">
+    <value>更新日</value>
+  </data>
+  <data name="Updateduser" xml:space="preserve">
+    <value>更新者</value>
+  </data>
+  <data name="Uruguay" xml:space="preserve">
+    <value>ウルグアイ  </value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>ユーザー</value>
+  </data>
+  <data name="UserCreatedSuccessfully" xml:space="preserve">
+    <value>ユーザーが正常に作成されました。</value>
+  </data>
+  <data name="UserManagement" xml:space="preserve">
+    <value>ユーザー管理</value>
+  </data>
+  <data name="UserMaster" xml:space="preserve">
+    <value>ユーザーマスター</value>
+  </data>
+  <data name="UserMastercreate" xml:space="preserve">
+    <value>ユーザーマスター 作成する</value>
+  </data>
+  <data name="UserMasterEdit" xml:space="preserve">
+    <value>ユーザーマスター編集</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>ユーザー名</value>
+  </data>
+  <data name="UserNameAlreadyExists" xml:space="preserve">
+    <value>ユーザー名は既に存在しています。</value>
+  </data>
+  <data name="Usernameandorpasswordisincorrect" xml:space="preserve">
+    <value>ユーザー名またはパスワードが間違っています。</value>
+  </data>
+  <data name="Usernameandpasswordismandatory" xml:space="preserve">
+    <value>ユーザー名とパスワードは必須です。</value>
+  </data>
+  <data name="UserType" xml:space="preserve">
+    <value>ユーザータイプ</value>
+  </data>
+  <data name="UserUpdatedSuccessfully" xml:space="preserve">
+    <value>ユーザーが正常に更新されました。</value>
+  </data>
+  <data name="Uzbekistan" xml:space="preserve">
+    <value>ウズベキスタン</value>
+  </data>
+  <data name="Vanuatu" xml:space="preserve">
+    <value>バヌアツ</value>
+  </data>
+  <data name="Vastu" xml:space="preserve">
+    <value>ヴァストゥ</value>
+  </data>
+  <data name="VastuAdviceforCareer" xml:space="preserve">
+    <value>キャリアのヴァストゥアドバイス</value>
+  </data>
+  <data name="VastuAdviceforCareerdef" xml:space="preserve">
+    <value>Excelled career is important for every person and to achieve high sky one should be cognizant of every sphere of life that can yield good results.</value>
+  </data>
+  <data name="VastuAdviceforCareerdif" xml:space="preserve">
+    <value>優れたキャリアはすべての人にとって重要であり、高い空を達成するためには、良好な結果をもたらすことができるすべての生活圏を認識する必要があります。</value>
+  </data>
+  <data name="VastuAdviceforHealth" xml:space="preserve">
+    <value>健康のためのヴァストゥアドバイス</value>
+  </data>
+  <data name="VastuAdviceforHealthdef" xml:space="preserve">
+    <value>Vastu of a living place is all about procuring good health and all-round prosperity. Precisely a house constructed on basis of Vastu rules attains 3P’s of life Prosperity,Progress.</value>
+  </data>
+  <data name="VastuAdviceforProsperity" xml:space="preserve">
+    <value>繁栄のためのヴァストゥアドバイス</value>
+  </data>
+  <data name="VastuAdviceforProsperitydef" xml:space="preserve">
+    <value>The concept of Vastu yields impeccable results in the form of peace, prosperity and peace because this inquisitive science is based on five elements and eight cosmic directions responsible for life.</value>
+  </data>
+  <data name="VastuAreaDeletedSuccessfully" xml:space="preserve">
+    <value>ヴァストゥエリアが正常に削除されました。</value>
+  </data>
+  <data name="VastuAreaDeletionFailed" xml:space="preserve">
+    <value>ヴァストゥエリアの削除に失敗しました。</value>
+  </data>
+  <data name="VastuCreatedSuccessfully" xml:space="preserve">
+    <value>ヴァストゥが正常に作成されました。</value>
+  </data>
+  <data name="VastuDetailsAlreadyExists" xml:space="preserve">
+    <value>ヴァストゥの詳細は既に存在しています。</value>
+  </data>
+  <data name="VastuDirectionDeletedSuccessfully" xml:space="preserve">
+    <value>ヴァストゥ方角が正常に削除されました。</value>
+  </data>
+  <data name="VastuDirectionDeletionFailed" xml:space="preserve">
+    <value>ヴァストゥ方角の削除に失敗しました。</value>
+  </data>
+  <data name="VastuforGoodBehaviour" xml:space="preserve">
+    <value>良い振る舞いのヴァストゥヒント</value>
+  </data>
+  <data name="VastuforGoodBehaviourdef" xml:space="preserve">
+    <value>People may feel amaze by listening that a specific direction could be responsible for their erring behaviour! But this is true our behaviour changes with the directions we face during the day to day life.</value>
+  </data>
+  <data name="VastuforHappyMarriedLife" xml:space="preserve">
+    <value>結婚生活のヴァストゥヒント</value>
+  </data>
+  <data name="VastuforHappyMarriedLifedef" xml:space="preserve">
+    <value>Houses which don’t conform to Vastu norms are sometimes find them in situations like theft</value>
+  </data>
+  <data name="Vastuforsuccess" xml:space="preserve">
+    <value>成功のヴァストゥヒント</value>
+  </data>
+  <data name="Vastuforsuccessdef" xml:space="preserve">
+    <value>Success is what everybody wants in every sphere of life and following Vastu rules is the way to succeed in life.</value>
+  </data>
+  <data name="VastuforWealth" xml:space="preserve">
+    <value>富裕のヴァストゥヒント</value>
+  </data>
+  <data name="VastuforWealthdef" xml:space="preserve">
+    <value>Vastu and wealth is synonymous as one (Vastu) works well for the other (Wealth) and we can also say where things are according to Vastu wealth inflow will be unending.</value>
+  </data>
+  <data name="VastuFurniture" xml:space="preserve">
+    <value>ヴァストゥ家具</value>
+  </data>
+  <data name="VastuFurnituredef" xml:space="preserve">
+    <value>Every living and non-living thing on this cosmos gives out energy effecting the lives in different ways. Science of architecture which is precisely called Vastu-Shastra gives away norms of placement for everything relative to this earth.</value>
+  </data>
+  <data name="VastuImageDeletedSuccessfully" xml:space="preserve">
+    <value>ヴァストゥ方角画像 されました。</value>
+  </data>
+  <data name="VastuImageDeletionFailed" xml:space="preserve">
+    <value>ヴァストゥ画像の削除に失敗しました。</value>
+  </data>
+  <data name="VastuMaster" xml:space="preserve">
+    <value>ヴァストゥマスター</value>
+  </data>
+  <data name="VastuMasterCreate" xml:space="preserve">
+    <value>ヴァストゥマスター作成</value>
+  </data>
+  <data name="VastuMasterDeletedSuccessfully" xml:space="preserve">
+    <value>ヴァストゥマスターが正常に削除されました。</value>
+  </data>
+  <data name="VastuMasterDeletionFailed" xml:space="preserve">
+    <value>ヴァストゥマスターの削除に失敗しました。</value>
+  </data>
+  <data name="VastuMasterEdit" xml:space="preserve">
+    <value>ヴァストゥマスター編集</value>
+  </data>
+  <data name="VastuMasterLog" xml:space="preserve">
+    <value>ヴァストゥマスターログ</value>
+  </data>
+  <data name="VastuMasterTransactionDetails" xml:space="preserve">
+    <value>ヴァストゥマスター トランザクションログ詳細</value>
+  </data>
+  <data name="VastuMasterTransactionLogDetails" xml:space="preserve">
+    <value>ヴァストゥマスター トランザクションログ詳細</value>
+  </data>
+  <data name="VASTUREPORT" xml:space="preserve">
+    <value>ヴァストゥレポート</value>
+  </data>
+  <data name="VastuReportGenerator" xml:space="preserve">
+    <value>ヴァストゥレポートジェネレーター</value>
+  </data>
+  <data name="VastuScoreDeletedSuccessfully" xml:space="preserve">
+    <value>ヴァストゥ点数が正常に削除されました。</value>
+  </data>
+  <data name="VastuScoreDeletionFailed" xml:space="preserve">
+    <value>ヴァストゥ点数の削除に失敗しました。</value>
+  </data>
+  <data name="VastuShastra" xml:space="preserve">
+    <value>ヴァストゥ・シャストラ</value>
+  </data>
+  <data name="VASTUTIPS" xml:space="preserve">
+    <value>ヴァストゥのヒント</value>
+  </data>
+  <data name="VastuTipsforHome" xml:space="preserve">
+    <value>家のヴァストゥのヒント</value>
+  </data>
+  <data name="VastuType" xml:space="preserve">
+    <value>ヴァストゥタイプ</value>
+  </data>
+  <data name="VastuTypeCreate" xml:space="preserve">
+    <value>ヴァストゥタイプ - 作成する</value>
+  </data>
+  <data name="VastuTypeCreatedSuccessfully" xml:space="preserve">
+    <value>ヴァストゥが正常に更新されました。</value>
+  </data>
+  <data name="VastuTypeMaster" xml:space="preserve">
+    <value>ヴァストゥタイプマスター</value>
+  </data>
+  <data name="VastuTypeMasterEdit" xml:space="preserve">
+    <value>ヴァストゥタイプマスター編集</value>
+  </data>
+  <data name="VastuTypeUpdatedSuccessfully" xml:space="preserve">
+    <value>ヴァストゥタイプが正常に更新されました。</value>
+  </data>
+  <data name="VastuUserDeletedSuccessfully" xml:space="preserve">
+    <value>ヴァストゥユーザーが正常に削除されました。</value>
+  </data>
+  <data name="VastuUserDeletionFailed" xml:space="preserve">
+    <value>ヴァストゥユーザーの削除に失敗しました。</value>
+  </data>
+  <data name="Venezuela" xml:space="preserve">
+    <value>ベネズエラ </value>
+  </data>
+  <data name="Vietnam" xml:space="preserve">
+    <value>ベトナム </value>
+  </data>
+  <data name="VirginislandsBritish" xml:space="preserve">
+    <value>バージン諸島（イギリス）</value>
+  </data>
+  <data name="VirginIslandsUS" xml:space="preserve">
+    <value>バージン諸島（米国）</value>
+  </data>
+  <data name="WallisandFutanaIslands" xml:space="preserve">
+    <value>ウォリスフタナ諸島</value>
+  </data>
+  <data name="WebApplicationAllRightsReserved" xml:space="preserve">
+    <value>©2020 ヴァストゥ・シャストラ ウェブアプリケーション。 全著作権所有</value>
+  </data>
+  <data name="WesternSahara" xml:space="preserve">
+    <value>西サハラ</value>
+  </data>
+  <data name="Windows" xml:space="preserve">
+    <value>窓</value>
+  </data>
+  <data name="Windowsdef" xml:space="preserve">
+    <value>家で3、6、または11の窓があると✕</value>
+  </data>
+  <data name="Yemen" xml:space="preserve">
+    <value>イエメン</value>
+  </data>
+  <data name="yes" xml:space="preserve">
+    <value>はい</value>
+  </data>
+  <data name="YourEmail" xml:space="preserve">
+    <value>メール</value>
+  </data>
+  <data name="yourName" xml:space="preserve">
+    <value>お名前</value>
+  </data>
+  <data name="Zambia" xml:space="preserve">
+    <value>ザンビア</value>
+  </data>
+  <data name="Zimbabwe" xml:space="preserve">
+    <value>ジンバブエ </value>
+  </data>
+</root>

@@ -1,0 +1,84 @@
+﻿@model Vasthu_Models.VS_VASTU_MST_TRAN_DETAILS
+
+@{
+    ViewBag.Title = Vastu.Resources.Resource.VastuMasterTransactionDetails;
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+    <h2>@Vastu.Resources.Resource.VastuMasterTransactionDetails</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal" style="margin-left: -79px;">
+        
+        <dt>
+            @Html.DisplayName(Vastu.Resources.Resource.VastuType)
+        </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.VASTU_TYPE)
+            </dd>
+        
+            <dt >
+                @Html.DisplayName(Vastu.Resources.Resource.Area)
+            </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AREA)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(Vastu.Resources.Resource.Direction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIRECTION)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(Vastu.Resources.Resource.ColumnName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.COLUMN_NAME)
+        </dd>
+
+        <dt >
+            @Html.DisplayName(Vastu.Resources.Resource.OldValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OLD_VALUE)
+        </dd>
+
+        <dt >
+            @Html.DisplayName(Vastu.Resources.Resource.NewValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NEW_VALUE)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(Vastu.Resources.Resource.CreatedUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C_USER)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(Vastu.Resources.Resource.CreatedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.C_DATE)
+        </dd>
+
+    </dl>
+</div><br/>
+<div>
+ 
+    @Html.ActionLink(Vastu.Resources.Resource.BacktoList, "Index", null, htmlAttributes: new { @class = "edit",@style="margin-left: -4px;" })
+</div>

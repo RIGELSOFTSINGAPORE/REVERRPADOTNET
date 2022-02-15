@@ -1,0 +1,125 @@
+﻿@using PagedList.Mvc
+@model PagedList.PagedList<Vasthu_Models.VS_DIRECTION_MST>
+
+@{
+    ViewBag.Title = @Vastu.Resources.Resource.DirectionMaster;
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+
+}
+
+<h2>@Vastu.Resources.Resource.DirectionMaster</h2>
+<!-- Modal DeleteMenuModal -->
+<div class="modal fade" id="DeleteVastuModal" tabindex="-1" role="dialog" aria-labelledby="DeleteVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="DeleteVastuModalLabel">Delete Direction Master</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body DeleteVastucontent">
+                Are you sure you want to delete?
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary btndeletevastu btn-success">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Hidden("DeleteDirectionId")
+<p>
+    @*  @Html.ActionLink(Vastu.Resources.Resource.CreateNew, "Create", null, htmlAttributes: new { @class = "CreateNew" })*@
+    @*<a href="@Url.Action("Create","DirectionMaster")" class="btn btn-info btn-lg"> <span class="glyphicon glyphicon-new-window" title=@Vastu.Resources.Resource.CreateNew></span>@Vastu.Resources.Resource.CreateNew</a>*@
+    <table class="table" style="background-color:#ffffff;">
+        <tr style="background-color:#4CAF50; color:#ffffff;">
+            <th>
+                @Html.DisplayName(Vastu.Resources.Resource.Direction)
+            </th>
+
+            @*<th>
+                @Html.DisplayName(Vastu.Resources.Resource.Disable)
+            </th>
+
+            <th>@Html.DisplayName(Vastu.Resources.Resource.EditDelete)</th>*@
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr style="background-color:#EEE;">
+                <td>
+                    @Html.DisplayFor(modelItem => item.DIRECTION)
+                </td>
+
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.DELETE_FLAG)
+                </td>*@
+
+                @*<td>
+                       @Html.ActionLink(Vastu.Resources.Resource.Edit, "Edit", new { id = item.DIRECTION_ID }, new { @class = "edit1" })
+                    <a href="@Url.Action("Edit","DirectionMaster",new { id = item.DIRECTION_ID})"> <span class="glyphicon glyphicon-pencil" title=@Vastu.Resources.Resource.Edit></span></a>
+                    <a href="#" onclick="DeleteVastuConfirmation(@item.DIRECTION_ID);" id="btnDelete" data-toggle="modal" data-target="#deleteModal" title=@Vastu.Resources.Resource.Delete><span class="glyphicon glyphicon-trash"></span></a>
+                </td>*@
+            </tr>
+        }
+        @if (Model.Count == 0)
+        {
+            <tr>
+                <td colspan="2" align="center">No Records Found</td>
+            </tr>
+        }
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    @if (Model.PageSize < Model.TotalItemCount)
+    {
+        <div>
+            @Vastu.Resources.Resource.Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) @Vastu.Resources.Resource.of  @Model.PageCount
+            @Html.PagedListPager(Model, page => Url.Action("Index",
+                 new { page }))
+        </div>
+    }
+    @section scripts
+{
+
+        <script>
+
+        function DeleteVastuConfirmation(VastuID) {
+
+            $('#DeleteDirectionId').val(VastuID);
+            $('#DeleteVastuModal').modal('show');
+        }
+
+        $('.btndeletevastu').on('click', function () {
+
+            DeleteVastu($('#DeleteDirectionId').val());
+
+        });
+        function DeleteVastu(VastuID) {
+            debugger;
+            $('#DeleteVastuModal').modal('hide');
+            $.ajax({
+                url: '@Url.Action("DeleteDirectionMaster", "VastuMaster")',
+                type: 'POST',
+                data: { 'VastuID': VastuID },
+                success: function (result) {
+                    if (result.errorcode == 1) {
+
+                        alert('Vastu Direction Deleted Successfully');
+                        window.location.href = "@Url.Action("Index", "DirectionMaster")";
+                    }
+                    else {
+                        alert('Vastu Direction Deletion Failed.');
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+        </script>
+    }

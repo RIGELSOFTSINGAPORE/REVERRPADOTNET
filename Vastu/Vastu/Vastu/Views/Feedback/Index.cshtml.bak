@@ -1,0 +1,533 @@
+﻿
+@{
+    ViewBag.title = Vastu.Resources.Resource.FEEDBACK;
+    <title>Feedback</title>
+}
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/assets/css/testi.css" rel="stylesheet">
+<section id="homevastu" class="homevastu">
+    <div class="col-lg-6" data-aos="fade-right">
+        <h2>Home Vastu</h2>
+    </div>
+</section>
+<div class="modal fade" id="CreateFeedbackModal" tabindex="-1" role="dialog" aria-labelledby="CreateVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #1bbd36">
+                <h5 class="modal-title" id="CreateVideoModalLabel">@Vastu.Resources.Resource.FEEDBACK</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body createVideocontent">
+                <div>
+                    @* <div class="col-md-6 form-group">*@
+
+                    <label for="name">@Vastu.Resources.Resource.FirstName</label> <label for="star" style="color: red;">*</label><input type="text" name="vastutype" class="form-control" id="name" data-rule="minlen:4" placeholder="@Vastu.Resources.Resource.EnterFirstame" />
+                    <p id="error" style="color:red;"></p>
+
+                    @*</div>*@
+                </div>
+                <div>
+                    @* <div class="col-md-6 form-group">*@
+
+                    <label for="name">@Vastu.Resources.Resource.LastName</label> <input type="text" name="vastutype" class="form-control" id="lname" data-rule="minlen:4" placeholder="@Vastu.Resources.Resource.EnterLastName" />
+                    <p id="error" style="color:red;"></p>
+
+                    @*</div>*@
+                </div>
+                <div>
+                    @*<div class="col-md-6 form-group">*@
+                    <label for="address">@Vastu.Resources.Resource.Address</label><input type="text" class="form-control" name="areat" id="address" data-rule="minlen:4" placeholder="@Vastu.Resources.Resource.EnterAddress" />
+
+                    @*</div>*@
+                </div>
+                <div>
+                    @*<div class="col-md-6 form-group">*@
+                    <label for="City">@Vastu.Resources.Resource.City</label><input type="text" name="direction" class="form-control" id="city" data-rule="minlen:4" placeholder="@Vastu.Resources.Resource.EnterCity" />
+
+                    @*</div>*@
+                </div>
+
+                <div>
+                    @*<div class="col-md-6 form-group">*@
+                    <label for="State">@Vastu.Resources.Resource.State</label><input type="text" name="direction" class="form-control" id="state" data-rule="minlen:4" placeholder="@Vastu.Resources.Resource.Enterstate" />
+
+                    @*</div>*@
+                </div>
+                <div>
+                    @* <div class="col-md-6 form-group">*@
+                    <label for="Country">@Vastu.Resources.Resource.Country</label>@*<input type="text" name="direction" class="form-control" id="country" data-rule="minlen:4" placeholder="Enter Country" />*@
+                    <select id="country" name="country" class="form-control">
+                        <option value="Afghanistan">@Vastu.Resources.Resource.Afghanistan</option>
+                        <option value="Albania">@Vastu.Resources.Resource.Albania</option>
+                        <option value="Algeria">@Vastu.Resources.Resource.Algeria</option>
+                        <option value="American Samoa">@Vastu.Resources.Resource.AmericanSamoa</option>
+                        <option value="Andorra">@Vastu.Resources.Resource.Andorra</option>
+                        <option value="Angola">@Vastu.Resources.Resource.Angola</option>
+                        <option value="Anguilla">@Vastu.Resources.Resource.Anguilla</option>
+                        <option value="Antartica">@Vastu.Resources.Resource.Antartica</option>
+                        <option value="Antigua and Barbuda">@Vastu.Resources.Resource.AntiguaandBarbuda</option>
+                        <option value="Argentina">@Vastu.Resources.Resource.Argentina</option>
+                        <option value="Armenia">@Vastu.Resources.Resource.Armenia</option>
+                        <option value="Aruba">@Vastu.Resources.Resource.Aruba</option>
+                        <option value="Australia">@Vastu.Resources.Resource.Australia</option>
+                        <option value="Austria">@Vastu.Resources.Resource.Austria</option>
+                        <option value="Azerbaijan">@Vastu.Resources.Resource.Azerbaijan</option>
+                        <option value="Bahamas">@Vastu.Resources.Resource.Bahamas</option>
+                        <option value="Bahrain">@Vastu.Resources.Resource.Bahrain</option>
+                        <option value="Bangladesh">@Vastu.Resources.Resource.Bangladesh</option>
+                        <option value="Barbados">@Vastu.Resources.Resource.Barbados</option>
+                        <option value="Belarus">@Vastu.Resources.Resource.Belarus</option>
+                        <option value="Belgium">@Vastu.Resources.Resource.Belgium</option>
+                        <option value="Belize">@Vastu.Resources.Resource.Belize</option>
+                        <option value="Benin">@Vastu.Resources.Resource.Benin</option>
+                        <option value="Bermuda">@Vastu.Resources.Resource.Bermuda</option>
+                        <option value="Bhutan">@Vastu.Resources.Resource.Bhutan</option>
+                        <option value="Bolivia">@Vastu.Resources.Resource.Bolivia</option>
+                        <option value="Bosnia and Herzegowina">@Vastu.Resources.Resource.BosniaandHerzegowina</option>
+                        <option value="Botswana">@Vastu.Resources.Resource.Botswana</option>
+                        <option value="Bouvet Island">@Vastu.Resources.Resource.BouvetIsland</option>
+                        <option value="Brazil">@Vastu.Resources.Resource.Brazil</option>
+                        <option value="British Indian Ocean Territory">@Vastu.Resources.Resource.BritishIndianOceanTerritory</option>
+                        <option value="Brunei Darussalam">@Vastu.Resources.Resource.BruneiDarussalam</option>
+                        <option value="Bulgaria">@Vastu.Resources.Resource.Bulgaria</option>
+                        <option value="Burkina Faso">@Vastu.Resources.Resource.BurkinaFaso</option>
+                        <option value="Burundi">@Vastu.Resources.Resource.Burundi</option>
+                        <option value="Cambodia">@Vastu.Resources.Resource.Cambodia</option>
+                        <option value="Cameroon">@Vastu.Resources.Resource.Cameroon</option>
+                        <option value="Canada">@Vastu.Resources.Resource.Canada</option>
+                        <option value="Cape Verde">@Vastu.Resources.Resource.CapeVerde</option>
+                        <option value="Cayman Islands">@Vastu.Resources.Resource.CaymanIslands</option>
+                        <option value="Central African Republic">@Vastu.Resources.Resource.CentralAfricanRepublic</option>
+                        <option value="Chad">@Vastu.Resources.Resource.Chad</option>
+                        <option value="Chile">@Vastu.Resources.Resource.Chile</option>
+                        <option value="China">@Vastu.Resources.Resource.China</option>
+                        <option value="Christmas Island">@Vastu.Resources.Resource.ChristmasIsland</option>
+                        <option value="Cocos Islands">@Vastu.Resources.Resource.CocosIslands</option>
+                        <option value="Colombia">@Vastu.Resources.Resource.Colombia</option>
+                        <option value="Comoros">@Vastu.Resources.Resource.Comoros</option>
+                        <option value="Congo">@Vastu.Resources.Resource.Congo</option>
+                        <option value="Cook Islands">@Vastu.Resources.Resource.CookIslands</option>
+                        <option value="Costa Rica">@Vastu.Resources.Resource.CostaRica</option>
+                        <option value="Cota D'Ivoire">@Vastu.Resources.Resource.CotaDIvoire</option>
+                        <option value="Croatia">@Vastu.Resources.Resource.Croatia</option>
+                        <option value="Cuba">@Vastu.Resources.Resource.Cuba</option>
+                        <option value="Cyprus">@Vastu.Resources.Resource.Cyprus</option>
+                        <option value="Czech Republic">@Vastu.Resources.Resource.CzechRepublic</option>
+                        <option value="Denmark">@Vastu.Resources.Resource.Denmark</option>
+                        <option value="Djibouti">@Vastu.Resources.Resource.Djibouti</option>
+                        <option value="Dominica">@Vastu.Resources.Resource.Dominica</option>
+                        <option value="Dominican Republic">@Vastu.Resources.Resource.DominicanRepublic</option>
+                        <option value="East Timor">@Vastu.Resources.Resource.EastTimor</option>
+                        <option value="Ecuador">@Vastu.Resources.Resource.Ecuador</option>
+                        <option value="Egypt">@Vastu.Resources.Resource.Egypt</option>
+                        <option value="El Salvador">@Vastu.Resources.Resource.ElSalvador</option>
+                        <option value="Equatorial Guinea">@Vastu.Resources.Resource.EquatorialGuinea</option>
+                        <option value="Eritrea">@Vastu.Resources.Resource.Eritrea</option>
+                        <option value="Estonia">@Vastu.Resources.Resource.Estonia</option>
+                        <option value="Ethiopia">@Vastu.Resources.Resource.Ethiopia</option>
+                        <option value="Falkland Islands">@Vastu.Resources.Resource.FalklandIslands</option>
+                        <option value="Faroe Islands">@Vastu.Resources.Resource.FaroeIslands</option>
+                        <option value="Fiji">@Vastu.Resources.Resource.Fiji</option>
+                        <option value="Finland">@Vastu.Resources.Resource.Finland</option>
+                        <option value="France">@Vastu.Resources.Resource.France</option>
+                        <option value="France Metropolitan">@Vastu.Resources.Resource.FranceMetropolitan</option>
+                        <option value="French Guiana">@Vastu.Resources.Resource.FrenchGuiana</option>
+                        <option value="French Polynesia">@Vastu.Resources.Resource.FrenchPolynesia</option>
+                        <option value="French Southern Territories">@Vastu.Resources.Resource.FrenchSouthernTerritories</option>
+                        <option value="Gabon">@Vastu.Resources.Resource.Gabon</option>
+                        <option value="Gambia">@Vastu.Resources.Resource.Gambia</option>
+                        <option value="Georgia">@Vastu.Resources.Resource.Georgia</option>
+                        <option value="Germany">@Vastu.Resources.Resource.Germany</option>
+                        <option value="Ghana">@Vastu.Resources.Resource.Ghana</option>
+                        <option value="Gibraltar">@Vastu.Resources.Resource.Gibraltar</option>
+                        <option value="Greece">@Vastu.Resources.Resource.Greece</option>
+                        <option value="Greenland">@Vastu.Resources.Resource.Greenland</option>
+                        <option value="Grenada">@Vastu.Resources.Resource.Grenada</option>
+                        <option value="Guadeloupe">@Vastu.Resources.Resource.Guadeloupe</option>
+                        <option value="Guam">@Vastu.Resources.Resource.Guam</option>
+                        <option value="Guatemala">@Vastu.Resources.Resource.Guatemala</option>
+                        <option value="Guinea">@Vastu.Resources.Resource.Guinea</option>
+                        <option value="Guinea-Bissau">@Vastu.Resources.Resource.Guinea</option>
+                        <option value="Guyana">@Vastu.Resources.Resource.Guyana</option>
+                        <option value="Haiti">@Vastu.Resources.Resource.Haiti</option>
+                        <option value="Heard and McDonald Islands">@Vastu.Resources.Resource.HeardandMcDonaldIslands</option>
+                        <option value="Holy See">@Vastu.Resources.Resource.HolySee</option>
+                        <option value="Honduras">@Vastu.Resources.Resource.Honduras</option>
+                        <option value="Hong Kong">@Vastu.Resources.Resource.HongKong</option>
+                        <option value="Hungary">@Vastu.Resources.Resource.Hungary</option>
+                        <option value="Iceland">@Vastu.Resources.Resource.Iceland</option>
+                        <option value="India">@Vastu.Resources.Resource.India</option>
+                        <option value="Indonesia">@Vastu.Resources.Resource.Indonesia</option>
+                        <option value="Iran">@Vastu.Resources.Resource.Iran</option>
+                        <option value="Iraq">@Vastu.Resources.Resource.Iraq</option>
+                        <option value="Ireland">@Vastu.Resources.Resource.Ireland</option>
+                        <option value="Israel">@Vastu.Resources.Resource.Israel</option>
+                        <option value="Italy">@Vastu.Resources.Resource.Italy</option>
+                        <option value="Jamaica">@Vastu.Resources.Resource.Jamaica</option>
+                        <option value="@Vastu.Resources.Resource.Japan">@Vastu.Resources.Resource.Japan</option>
+                        <option value="Jordan">@Vastu.Resources.Resource.Jorda</option>
+                        <option value="Kazakhstan">@Vastu.Resources.Resource.Kazakhstan</option>
+                        <option value="Kenya">@Vastu.Resources.Resource.Kenya</option>
+                        <option value="Kiribati">@Vastu.Resources.Resource.Kiribati</option>
+                        <option value="Korea">@Vastu.Resources.Resource.Korea</option>
+                        <option value="Kuwait">@Vastu.Resources.Resource.Kuwait</option>
+                        <option value="Kyrgyzstan">@Vastu.Resources.Resource.Kyrgyzstan</option>
+                        <option value="Lao">@Vastu.Resources.Resource.Lao</option>
+                        <option value="Latvia">@Vastu.Resources.Resource.Latvia</option>
+                        <option value="Lebanon">@Vastu.Resources.Resource.Lebanon</option>
+                        <option value="Lesotho">@Vastu.Resources.Resource.Lesotho</option>
+                        <option value="Liberia">@Vastu.Resources.Resource.Liberia</option>
+                        <option value="Libyan Arab Jamahiriya">@Vastu.Resources.Resource.LibyanArabJamahiriya</option>
+                        <option value="Liechtenstein">@Vastu.Resources.Resource.Liechtenstein</option>
+                        <option value="Lithuania">@Vastu.Resources.Resource.Lithuania</option>
+                        <option value="Luxembourg">@Vastu.Resources.Resource.Luxembourg</option>
+                        <option value="Macau">@Vastu.Resources.Resource.Macau</option>
+                        <option value="Macedonia">@Vastu.Resources.Resource.Macedonia</option>
+                        <option value="Madagascar">@Vastu.Resources.Resource.Madagascar</option>
+                        <option value="Malawi">@Vastu.Resources.Resource.Malawi</option>
+                        <option value="Malaysia">@Vastu.Resources.Resource.Malaysia</option>
+                        <option value="Maldives">@Vastu.Resources.Resource.Maldives</option>
+                        <option value="Mali">@Vastu.Resources.Resource.Mali</option>
+                        <option value="Malta">@Vastu.Resources.Resource.Malta</option>
+                        <option value="Marshall Islands">@Vastu.Resources.Resource.MarshallIslands</option>
+                        <option value="Martinique">@Vastu.Resources.Resource.Martinique</option>
+                        <option value="Mauritania">@Vastu.Resources.Resource.Mauritania</option>
+                        <option value="Mauritius">@Vastu.Resources.Resource.Mauritius</option>
+                        <option value="Mayotte">@Vastu.Resources.Resource.Mayotte</option>
+                        <option value="Mexico">@Vastu.Resources.Resource.Mexico</option>
+                        <option value="Micronesia">@Vastu.Resources.Resource.Micronesia</option>
+                        <option value="Moldova">@Vastu.Resources.Resource.Moldova</option>
+                        <option value="Monaco">@Vastu.Resources.Resource.Monaco</option>
+                        <option value="Mongolia">@Vastu.Resources.Resource.Mongolia</option>
+                        <option value="Montserrat">@Vastu.Resources.Resource.Montserrat</option>
+                        <option value="Morocco">@Vastu.Resources.Resource.Morocco</option>
+                        <option value="Mozambique">@Vastu.Resources.Resource.Mozambique</option>
+                        <option value="Myanmar">@Vastu.Resources.Resource.Myanmar</option>
+                        <option value="Namibia">@Vastu.Resources.Resource.Namibia</option>
+                        <option value="Nauru">@Vastu.Resources.Resource.Nauru</option>
+                        <option value="Nepal">@Vastu.Resources.Resource.Nepal</option>
+                        <option value="Netherlands">@Vastu.Resources.Resource.Netherlands</option>
+                        <option value="Netherlands Antilles">@Vastu.Resources.Resource.NetherlandsAntilles</option>
+                        <option value="New Caledonia">@Vastu.Resources.Resource.NewCaledonia</option>
+                        <option value="New Zealand">@Vastu.Resources.Resource.NewZealand</option>
+                        <option value="Nicaragua">@Vastu.Resources.Resource.Nicaragua</option>
+                        <option value="Niger">@Vastu.Resources.Resource.Niger</option>
+                        <option value="Nigeria">@Vastu.Resources.Resource.Nigeria</option>
+                        <option value="Niue">@Vastu.Resources.Resource.Niue</option>
+                        <option value="Norfolk Island">@Vastu.Resources.Resource.NorfolkIsland</option>
+                        <option value="Northern Mariana Islands">@Vastu.Resources.Resource.NorthernMarianaIslands</option>
+                        <option value="Norway">@Vastu.Resources.Resource.Norway</option>
+                        <option value="Oman">@Vastu.Resources.Resource.Oman</option>
+                        <option value="Pakistan">@Vastu.Resources.Resource.Pakistan</option>
+                        <option value="Palau">@Vastu.Resources.Resource.Palau</option>
+                        <option value="Panama">@Vastu.Resources.Resource.Panama</option>
+                        <option value="Papua New Guinea">@Vastu.Resources.Resource.PapuaNewGuinea</option>
+                        <option value="Paraguay">@Vastu.Resources.Resource.Paraguay</option>
+                        <option value="Peru">@Vastu.Resources.Resource.Peru</option>
+                        <option value="Philippines">@Vastu.Resources.Resource.Philippines</option>
+                        <option value="Pitcairn">@Vastu.Resources.Resource.Pitcairn</option>
+                        <option value="Poland">@Vastu.Resources.Resource.Poland</option>
+                        <option value="Portugal">@Vastu.Resources.Resource.Portugal</option>
+                        <option value="Puerto Rico">@Vastu.Resources.Resource.PuertoRico</option>
+                        <option value="Qatar">@Vastu.Resources.Resource.Qatar</option>
+                        <option value="Reunion">@Vastu.Resources.Resource.Reunion</option>
+                        <option value="Romania">@Vastu.Resources.Resource.Romania</option>
+                        <option value="Russia">@Vastu.Resources.Resource.Russia</option>
+                        <option value="Rwanda">@Vastu.Resources.Resource.Rwanda</option>
+                        <option value="Saint Kitts and Nevis">@Vastu.Resources.Resource.SaintKittsandNevis</option>
+                        <option value="Saint LUCIA">@Vastu.Resources.Resource.SaintLUCIA</option>
+                        <option value="Saint Vincent">@Vastu.Resources.Resource.SaintVincent</option>
+                        <option value="Samoa">@Vastu.Resources.Resource.Samoa</option>
+                        <option value="San Marino">@Vastu.Resources.Resource.SanMarino</option>
+                        <option value="Sao Tome and Principe">@Vastu.Resources.Resource.SaoTomeandPrincipe</option>
+                        <option value="Saudi Arabia">@Vastu.Resources.Resource.SaudiArabia</option>
+                        <option value="Senegal">@Vastu.Resources.Resource.Senegal</option>
+                        <option value="Seychelles">@Vastu.Resources.Resource.Seychelles</option>
+                        <option value="Sierra">@Vastu.Resources.Resource.Sierra</option>
+                        <option value="Singapore">@Vastu.Resources.Resource.Singapore</option>
+                        <option value="Slovakia">@Vastu.Resources.Resource.Slovakia</option>
+                        <option value="Slovenia">@Vastu.Resources.Resource.Slovenia</option>
+                        <option value="Solomon Islands">@Vastu.Resources.Resource.SolomonIslands</option>
+                        <option value="Somalia">@Vastu.Resources.Resource.Somalia</option>
+                        <option value="South Africa">@Vastu.Resources.Resource.SouthAfrica</option>
+                        <option value="South Georgia">@Vastu.Resources.Resource.SouthGeorgia</option>
+                        <option value="Spain">@Vastu.Resources.Resource.spain</option>
+                        <option value="SriLanka">@Vastu.Resources.Resource.SriLanka</option>
+                        <option value="St. Helena">@Vastu.Resources.Resource.StHelena</option>
+                        <option value="St. Pierre and Miguelon">@Vastu.Resources.Resource.StPierreandMiguelon</option>
+                        <option value="Sudan">@Vastu.Resources.Resource.Sudan</option>
+                        <option value="Suriname">@Vastu.Resources.Resource.Suriname</option>
+                        <option value="Svalbard">@Vastu.Resources.Resource.Svalbard</option>
+                        <option value="Swaziland">@Vastu.Resources.Resource.Swaziland</option>
+                        <option value="Sweden">@Vastu.Resources.Resource.Sweden</option>
+                        <option value="Switzerland">@Vastu.Resources.Resource.Switzerland</option>
+                        <option value="Syria">@Vastu.Resources.Resource.Syria</option>
+                        <option value="Taiwan">@Vastu.Resources.Resource.Taiwan</option>
+                        <option value="Tajikistan">@Vastu.Resources.Resource.Tajikistan</option>
+                        <option value="Tanzania">@Vastu.Resources.Resource.Tanzania</option>
+                        <option value="Thailand">@Vastu.Resources.Resource.Thailand</option>
+                        <option value="Togo">@Vastu.Resources.Resource.Togo</option>
+                        <option value="Tokelau">@Vastu.Resources.Resource.Tokelau</option>
+                        <option value="Tonga">@Vastu.Resources.Resource.Tonga</option>
+                        <option value="Trinidad and Tobago">@Vastu.Resources.Resource.Trinidadand</option>
+                        <option value="Tunisia">@Vastu.Resources.Resource.Tunisia</option>
+                        <option value="Turkey">@Vastu.Resources.Resource.Turkey</option>
+                        <option value="Turkmenistan">@Vastu.Resources.Resource.Turkmenistan</option>
+                        <option value="Turks and Caicos">@Vastu.Resources.Resource.TurksandCaicos</option>
+                        <option value="Tuvalu">@Vastu.Resources.Resource.Tuvalu</option>
+                        <option value="Uganda">@Vastu.Resources.Resource.Uganda</option>
+                        <option value="Ukraine">@Vastu.Resources.Resource.Ukraine</option>
+                        <option value="United Arab Emirates">@Vastu.Resources.Resource.UnitedArabEmirates</option>
+                        <option value="United Kingdom">@Vastu.Resources.Resource.UnitedKingdom</option>
+                        <option value="United States">@Vastu.Resources.Resource.UnitedStates</option>
+                        <option value="United States Minor Outlying Islands">@Vastu.Resources.Resource.UnitedStatesMinorOutlyingIslands</option>
+                        <option value="Uruguay">@Vastu.Resources.Resource.Uruguay</option>
+                        <option value="Uzbekistan">@Vastu.Resources.Resource.Uzbekistan</option>
+                        <option value="Vanuatu">@Vastu.Resources.Resource.Vanuatu</option>
+                        <option value="Venezuela">@Vastu.Resources.Resource.Venezuela</option>
+                        <option value="Vietnam">@Vastu.Resources.Resource.Vietnam</option>
+                        <option value="Virgin Islands (British)">@Vastu.Resources.Resource.VirginislandsBritish</option>
+                        <option value="Virgin Islands (U.S)">@Vastu.Resources.Resource.VirginIslandsUS</option>
+                        <option value="Wallis and Futana Islands">@Vastu.Resources.Resource.WallisandFutanaIslands</option>
+                        <option value="Western Sahara">@Vastu.Resources.Resource.WesternSahara</option>
+                        <option value="Yemen">@Vastu.Resources.Resource.Yemen</option>
+                        <option value="Serbia">@Vastu.Resources.Resource.Serbia</option>
+                        <option value="Zambia">@Vastu.Resources.Resource.Zambia</option>
+                        <option value="Zimbabwe">@Vastu.Resources.Resource.Zimbabwe</option>
+                    </select>
+
+                    @*</div>*@
+                </div>
+                <div>
+                    @* <div class="col-md-6 form-group">*@
+                    <label for="Feedback/Comments">@Vastu.Resources.Resource.FEEDBACK/@Vastu.Resources.Resource.Comments</label><label for="star" style="color: red;padding-top:25px">*</label><textarea name="direction" class="form-control" id="comment" data-rule="minlen:4" placeholder="@Vastu.Resources.Resource.Entercomments"></textarea>
+                    <p id="com" style="color:red;"></p>
+                    @*</div>*@
+                </div>
+                <div>
+                    @* <div class="col-md-6 form-group">*@
+                    <label for="image">@Vastu.Resources.Resource.Image (@Vastu.Resources.Resource.Maximumallowedfilesizeis2MB)</label><input type="file" name="direction" class="form-control" id="file" data-rule="minlen:4" placeholder="Please enter at least 4 chars" />
+                    <p id="file1" style="color:red;"></p>
+                    @*</div>*@
+                </div>
+                @*<div class="text-center">
+                        <button type="submit">Submit Feedback</button>
+                    </div>*@
+            </div>
+
+            @*</div>*@
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" data-dismiss="modal">@Vastu.Resources.Resource.Close</button>
+                <button type="button" class="btn btn-success btnscreateavemenu" onclick="savefeedback()">@Vastu.Resources.Resource.Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main id="main">
+    <!-- ======= Home vastu ======= -->
+
+    <section id="homevastu feedback" class="homevastu">
+
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+
+                <h2>@Vastu.Resources.Resource.FEEDBACKTESTIMONIALS</h2>
+
+                @*<div class="text-right">
+                        <input type="image" src="~/assets/img/th (3).jpg" alt="Submit" width="128" height="68" onclick="myfunction()">
+                    </div>*@
+
+
+
+                <div class="container">
+
+                    @{ int j = 0;}
+
+                    @foreach (var interior in ViewBag.feedback)
+                    {
+                        <div class="testimonial-card">
+                            <div class="text"> @interior.COMMENTS_1<i class="fas fa-quote-right quote"></i></div>
+                            <h1 class="textname">- @interior.NAME</h1>
+
+
+                            <div class="footer">
+                                <div class="image">
+
+                                    @* <img src="~/assets/img/download.jpg" style="width:100px">*@
+
+
+                                    @if (interior.IMAGE_URL_1 == "empty.png")
+                                    {
+                                    <img src="~/Photo/empty_img.png " style="width:100px">
+                                    }
+                                    
+                                    else
+                                    {
+                                    <img src="~/Photo/@interior.IMAGE_URL_1 " style="width:100px">
+                                    }
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                        j = j + 1;
+                    }
+                    @*<div class="testimonial-card">
+                            <div class="text">
+                                Seeking vastu consultation would specifically be of help when you are planning to rent or buy a premise. It is especially recommended in case you are facing difficulties in life or there is disharmony at home or at work.<i class="fas fa-quote-right quote"></i>
+                            </div>
+
+
+
+                            <div class="footer">
+                                <div class="image">
+
+                                </div>
+                                <h3 class='person'>Nithya</h3>
+
+
+                            </div>
+                        </div>*@
+                    @*<div class="testimonial-card">
+                            <div class="text">
+                                This is because, it is believed that different planets govern different directions and have specific influences on residents.
+                                By understanding the effects of directions, one can cordially balance diverse forces.<i class="fas fa-quote-right quote"></i>
+                            </div>
+
+
+
+                            <div class="footer">
+                                <div class="image">
+
+                                </div>
+                                <h3 class='person'>Kitya</h3>
+
+
+                            </div>
+                        </div>*@
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+        <div id="feedback" class="col-sm-12">
+            @*<a href="#" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+                    <img <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI5LjI5OXB4IiBoZWlnaHQ9IjUwLjYyNXB4IiB2aWV3Qm94PSIwIDAgOS4yOTkgNTAuNjI1IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA5LjI5OSA1MC42MjUiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0zLjUxNiw0Ni44N3YxLjYzNWg1LjY2N3YwLjk3NEgzLjUxNnYxLjE0N2gtMC40NGwtMC4zNTItMS4xNDdIMi4zNjdDMC43ODksNDkuNDc4LDAsNDguNzg4LDAsNDcuNDA5YzAtMC4zNCwwLjA2OC0wLjczOCwwLjIwNS0xLjE5NWwwLjc3OSwwLjI1MmMtMC4xMjEsMC4zNzUtMC4xODIsMC42OTUtMC4xODIsMC45NjFjMCwwLjM2NywwLjEyMiwwLjY0LDAuMzY2LDAuODE0YzAuMjQ0LDAuMTc2LDAuNjM2LDAuMjY0LDEuMTc1LDAuMjY0SDIuNzZWNDYuODdIMy41MTZ6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTkuMjk5LDQyLjk4NWMwLDAuOTQ5LTAuMjg5LDEuNjk3LTAuODY2LDIuMjQ2Yy0wLjU3OCwwLjU0OS0xLjM4MiwwLjgyNC0yLjQwOCwwLjgyNGMtMS4wMzYsMC0xLjg1Ny0wLjI1Ni0yLjQ2Ny0wLjc2NmMtMC42MS0wLjUxMS0wLjkxNC0xLjE5My0wLjkxNC0yLjA1NGMwLTAuODA1LDAuMjY1LTEuNDQsMC43OTQtMS45MDljMC41MjktMC40NywxLjIyOC0wLjcwMywyLjA5NS0wLjcwM2gwLjYxNXY0LjQyNGMwLjc1NC0wLjAyMSwxLjMyNi0wLjIxMSwxLjcxNy0wLjU3MlM4LjQ1LDQzLjYwNiw4LjQ1LDQyLjk1YzAtMC42OTEtMC4xNDUtMS4zNzUtMC40MzQtMi4wNTFoMC44NjZjMC4xNDgsMC4zNDQsMC4yNTUsMC42NjgsMC4zMTksMC45NzVDOS4yNjcsNDIuMTgxLDkuMjk5LDQyLjU1MSw5LjI5OSw0Mi45ODV6IE0zLjQ1Nyw0My4yNDljMCwwLjUxNywwLjE2OCwwLjkyNiwwLjUwNCwxLjIzMnMwLjgwMSwwLjQ4OCwxLjM5NiwwLjU0M3YtMy4zNTdjLTAuNjEzLDAtMS4wODMsMC4xMzgtMS40MSwwLjQxQzMuNjIxLDQyLjM1LDMuNDU3LDQyLjc0MSwzLjQ1Nyw0My4yNDl6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTkuMjk5LDM2LjI1MmMwLDAuOTQ5LTAuMjg5LDEuNjk3LTAuODY2LDIuMjQ2Yy0wLjU3OCwwLjU0OS0xLjM4MiwwLjgyNC0yLjQwOCwwLjgyNGMtMS4wMzYsMC0xLjg1Ny0wLjI1Ni0yLjQ2Ny0wLjc2NmMtMC42MS0wLjUxLTAuOTE0LTEuMTkzLTAuOTE0LTIuMDUzYzAtMC44MDUsMC4yNjUtMS40NDEsMC43OTQtMS45MXMxLjIyOC0wLjcwMywyLjA5NS0wLjcwM2gwLjYxNXY0LjQyNGMwLjc1NC0wLjAyLDEuMzI2LTAuMjExLDEuNzE3LTAuNTcyczAuNTg2LTAuODY5LDAuNTg2LTEuNTI1YzAtMC42OTEtMC4xNDUtMS4zNzUtMC40MzQtMi4wNTFoMC44NjZjMC4xNDgsMC4zNDQsMC4yNTUsMC42NjgsMC4zMTksMC45NzZTOS4yOTksMzUuODE5LDkuMjk5LDM2LjI1MnogTTMuNDU3LDM2LjUxNmMwLDAuNTE2LDAuMTY4LDAuOTI2LDAuNTA0LDEuMjMyYzAuMzM2LDAuMzA4LDAuODAxLDAuNDg4LDEuMzk2LDAuNTQzdi0zLjM1N2MtMC42MTMsMC0xLjA4MywwLjEzNy0xLjQxLDAuNDFDMy42MjEsMzUuNjE4LDMuNDU3LDM2LjAwOCwzLjQ1NywzNi41MTZ6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTguMzE5LDI3Ljg2MnYwLjA1M2MwLjY1MiwwLjQ0OSwwLjk3OSwxLjEyMSwwLjk3OSwyLjAxN2MwLDAuODQtMC4yODYsMS40OTMtMC44NiwxLjk2UzcuMDQ3LDMyLjU5LDUuOTg5LDMyLjU5Yy0xLjA1OCwwLTEuODgxLTAuMjMzLTIuNDY3LTAuNzAyYy0wLjU4Ni0wLjQ3LTAuODc5LTEuMTIxLTAuODc5LTEuOTU3YzAtMC44NzEsMC4zMTYtMS41MzksMC45NDktMi4wMDVWMjcuODVsLTAuNDYzLDAuMDQxbC0wLjQ1MSwwLjAyM0gwLjA2NHYtMC45NzRoOS4xMTd2MC43OTFMOC4zMTksMjcuODYyeiBNOC40ODMsMjkuODA3YzAtMC42NjQtMC4xOC0xLjE0Ni0wLjU0MS0xLjQ0NHMtMC45NDQtMC40NDgtMS43NS0wLjQ0OEg1Ljk4N2MtMC45MDksMC0xLjU1OSwwLjE1MS0xLjk0NywwLjQ1NWMtMC4zODgsMC4zMDMtMC41ODMsMC43ODUtMC41ODMsMS40NDljMCwwLjU3LDAuMjIyLDEuMDA4LDAuNjY1LDEuMzExUzUuMTksMzEuNTgzLDYsMzEuNTgzYzAuODE5LDAsMS40MzgtMC4xNDksMS44NTYtMC40NTFDOC4yNzQsMzAuODMxLDguNDgzLDMwLjM4OSw4LjQ4MywyOS44MDd6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTIuNjU0LDIxLjg5MWMwLTAuODQ0LDAuMjg4LTEuNDk5LDAuODY0LTEuOTY2YzAuNTc2LTAuNDY3LDEuMzkyLTAuNywyLjQ0Ni0wLjdjMS4wNTUsMCwxLjg3NCwwLjIzNSwyLjQ1OCwwLjcwNmMwLjU4NCwwLjQ3MSwwLjg3NiwxLjEyNCwwLjg3NiwxLjk2YzAsMC40MTgtMC4wNzYsMC44LTAuMjMsMS4xNDZjLTAuMTU0LDAuMzQ2LTAuMzkzLDAuNjM2LTAuNzEzLDAuODd2MC4wN2wwLjgyNiwwLjIwNXYwLjY5N0gwLjA2NHYtMC45NzNoMi4yMTVjMC40OTYsMCwwLjk0MSwwLjAxNiwxLjMzNiwwLjA0N3YtMC4wNDdDMi45NzUsMjMuNDU0LDIuNjU0LDIyLjc4MiwyLjY1NCwyMS44OTF6IE0zLjQ2OSwyMi4wMzJjMCwwLjY2NCwwLjE5LDEuMTQzLDAuNTcxLDEuNDM2czEuMDIyLDAuNDM5LDEuOTI1LDAuNDM5YzAuOTAzLDAsMS41NDgtMC4xNSwxLjkzNy0wLjQ1MWMwLjM5LTAuMzAxLDAuNTg0LTAuNzgzLDAuNTg0LTEuNDQ3YzAtMC41OTgtMC4yMTktMS4wNDMtMC42NTMtMS4zMzZzLTEuMDYyLTAuNDM5LTEuODc4LTAuNDM5Yy0wLjgzNiwwLTEuNDU5LDAuMTQ2LTEuODY5LDAuNDM5UzMuNDY5LDIxLjQxOCwzLjQ2OSwyMi4wMzJ6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTkuMTgzLDEzLjU3N0w4LjI2OSwxMy43N3YwLjA0N2MwLjQwMSwwLjMyLDAuNjc0LDAuNjQsMC44MTYsMC45NThzMC4yMTQsMC43MTYsMC4yMTQsMS4xOTJjMCwwLjYzNy0wLjE2NCwxLjEzNi0wLjQ5MSwxLjQ5N2MtMC4zMjgsMC4zNjEtMC43OTUsMC41NDItMS40LDAuNTQyYy0xLjI5NywwLTEuOTc3LTEuMDM3LTIuMDM5LTMuMTExbC0wLjAzNS0xLjA5SDQuOTM0Yy0wLjUwNCwwLTAuODc2LDAuMTA4LTEuMTE2LDAuMzI1Yy0wLjI0LDAuMjE3LTAuMzYsMC41NjMtMC4zNiwxLjA0YzAsMC41MzUsMC4xNjQsMS4xNDEsMC40OTIsMS44MTZsLTAuNzQ0LDAuMjk5Yy0wLjE3Mi0wLjMxNi0wLjMwNy0wLjY2My0wLjQwNC0xLjA0Yy0wLjA5Ny0wLjM3Ny0wLjE0Ni0wLjc1NS0wLjE0Ni0xLjEzNGMwLTAuNzY2LDAuMTctMS4zMzMsMC41MS0xLjcwMmMwLjM0LTAuMzY5LDAuODg1LTAuNTU0LDEuNjM1LTAuNTU0aDQuMzg0djAuNzIySDkuMTgzeiBNOC40OTYsMTUuNzc0YzAtMC42MDUtMC4xNjYtMS4wODEtMC40OTgtMS40MjdjLTAuMzMyLTAuMzQ2LTAuNzk3LTAuNTE5LTEuMzk2LTAuNTE5aC0wLjU4bDAuMDQxLDAuOTczYzAuMDI3LDAuNzczLDAuMTQ3LDEuMzMxLDAuMzYsMS42NzNjMC4yMTQsMC4zNDIsMC41NDQsMC41MTMsMC45OTMsMC41MTNjMC4zNTIsMCwwLjYxOS0wLjEwNiwwLjgwMy0wLjMxOVM4LjQ5NiwxNi4xNTcsOC40OTYsMTUuNzc0eiIvPjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik05LjI5OSw4LjI4NWMwLDAuOTMtMC4yODYsMS42NDktMC44NTgsMi4xNTljLTAuNTcxLDAuNTEtMS4zODEsMC43NjUtMi40MjgsMC43NjVjLTEuMDc1LDAtMS45MDUtMC4yNTktMi40OTEtMC43NzZTMi42NDMsOS4xNzgsMi42NDMsOC4yMjFjMC0wLjMwOSwwLjAzMy0wLjYxNywwLjEtMC45MjZDMi44MSw2Ljk4NiwyLjg4OCw2Ljc0NCwyLjk3Nyw2LjU2OGwwLjgyNiwwLjI5OUMzLjcxNyw3LjA4MiwzLjY0Niw3LjMxNiwzLjU4OSw3LjU3QzMuNTMyLDcuODI0LDMuNTA0LDguMDQ5LDMuNTA0LDguMjQ0YzAsMS4zMDUsMC44MzIsMS45NTcsMi40OTYsMS45NTdjMC43ODksMCwxLjM5Ni0wLjE1OSwxLjgxNS0wLjQ3OGMwLjQyMi0wLjMxOSwwLjYzNC0wLjc5LDAuNjM0LTEuNDE1YzAtMC41MzUtMC4xMTUtMS4wODQtMC4zNDctMS42NDZoMC44NjFDOS4xODgsNy4wOTIsOS4yOTksNy42MzMsOS4yOTksOC4yODV6Ii8+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTUuODk2LDQuMTc4QzUuNjU2LDQuMDEsNS4zNDQsMy43NTQsNC45NTcsMy40MUwyLjc2LDEuMzM2VjAuMTgybDIuNzM2LDIuNjAyTDkuMTgzLDB2MS4xNzhMNi4xNDYsMy40NDVsMC42MzMsMC43MzJoMi40MDJ2MC45NjFIMC4wNjR2LTAuOTZoNC44MzRjMC4yMTUsMCwwLjU0NiwwLjAxNiwwLjk5NiwwLjA0N1Y0LjE3OEg1Ljg5NnoiLz48L2c+PC9zdmc+"
+                              alt="Feedback" title="Feedback Button" height="70px" onclick="modelopen()" />
+                </a>*@
+            <a href="#" type="button" class="btn btn-info feedbackbtn" data-toggle="modal" data-target="#myModal" onclick="modelopen()">
+                @Vastu.Resources.Resource.FEEDBACK
+            </a>
+        </div>
+    </section><!-- End Home Vastu Section -->
+</main><!-- End #main -->
+<script>
+     function modelopen() {
+        $('#CreateFeedbackModal').modal('hide');
+        $('#name').val('');
+        $('#lname').val('');
+                    $('#address').val('') ;
+                    $('#comment').val('');
+                    $('#city').val('');
+                    $('#state').val('');
+                    $('#country').val('@Vastu.Resources.Resource.Japan');
+        document.getElementById('file').value = "";
+        document.getElementById("error").innerHTML = "";
+        document.getElementById("com").innerHTML = "";
+        document.getElementById("file1").innerHTML = "";
+        $('#CreateFeedbackModal').modal('show');
+    }
+    function savefeedback() {
+        var fileInput = document.getElementById('file');
+        var filePath = fileInput.value;
+
+        var allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+
+        if ($('#name').val() == "") {
+            document.getElementById("error").innerHTML = "@Vastu.Resources.Resource.EnterName";
+        }
+        else if ($('#comment').val() == "") {
+            document.getElementById("com").innerHTML = "@Vastu.Resources.Resource.Entercomments";
+        }
+        else if (filePath.length> 0  && !allowedExtensions.exec(filePath)) {
+            document.getElementById("file1").innerHTML = "Invalid File Type";
+        }
+
+        else {
+            var name = $('#name').val();
+            var lname = $('#lname').val();
+            var address = $('#address').val();
+            var comment = $('#comment').val();
+            var city = $('#city').val();
+            var state = $('#state').val();
+            var country = $('#country').val();
+            var file = $("#file").get(0).files;
+            var fileData = new FormData();
+
+            for (var i = 0; i < file.length; i++) {
+                fileData.append("file", file[i]);
+            }
+            fileData.append('name', name);
+            fileData.append('lname', lname);
+            fileData.append('address', address);
+            fileData.append('comment', comment);
+            fileData.append('city', city);
+            fileData.append('state', state);
+            fileData.append('country', country);
+
+
+
+            $.ajax({
+                url: '@Url.Action("SaveFeedback", "Feedback")',
+                type: 'POST',
+                contentType: false,
+                processData: false,
+                //data: { 'name': name, 'address': address, 'comment': comment, 'city': city, 'state': state, 'country': country ,'file':file},
+                data: fileData,
+                success: function (result) {
+                    $('#CreateFeedbackModal').modal('hide');
+                    $('#name').val('');
+                    $('#lname').val('');
+                    $('#address').val('') ;
+                    $('#comment').val('');
+                    $('#city').val('');
+                    $('#state').val('');
+                    $('#country').val('@Vastu.Resources.Resource.Japan');
+                    document.getElementById('file').value = "";
+
+                    alert('@Vastu.Resources.Resource.FeedbackAddedSuccesfully');
+                    //if (result.errorcode == 0) {
+                    //alert('Feedback Added Successfully');
+
+                    //}
+                    //else {
+                    //    alert('Video Updation Failed.');
+                    //}
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+
+            });
+        }
+    }
+</script>
+<style>
+    .text-block {
+        position: absolute;
+        bottom: 110px;
+        /*        right: 10px;*/
+        left: 20px;
+        color: black;
+        font-size: 12px;
+    }
+</style>

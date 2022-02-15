@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Vasthu_Models
+{
+    public class ShowFinalReport
+    {
+        public int SerialNo { get; set; }
+        public string Area { get; set; }
+
+        public string Direction { get; set; }
+        public string North { get; set; }
+
+        public string Northeast { get; set; }
+        public string East { get; set; }
+
+        public string Southeast { get; set; }
+        public string South { get; set; }
+
+        public string Southwest { get; set; }
+        public string West { get; set; }
+
+        public string Northwest { get; set; }
+        public string Center { get; set; }
+
+        public string Judgement { get; set; }
+
+        public string ImageURL{ get; set; }
+        public decimal PointsEarned { get; set; }
+        
+        public string MasterComments { get; set; }
+        public string ResearcherComments { get; set; }
+        
+
+    }
+}

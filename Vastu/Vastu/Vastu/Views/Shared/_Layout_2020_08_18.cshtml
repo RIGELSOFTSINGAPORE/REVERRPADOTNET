@@ -1,0 +1,348 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    @*<title>Home - Vastu Shastra</title>*@
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="~/assets/img/faviconn.png" rel="icon">
+    <link href="~/assets/img/apple-touch-iconn.png" rel="apple-touch-iconn">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="~/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+
+    <link href="~/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+    <link href="~/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+
+    <link href="~/assets/vendor/venobox/venobox.css" rel="stylesheet">
+
+    <link href="~/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <link href="~/assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <link href="~/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+
+
+    <!-- Template Main CSS File -->
+    <link href="~/assets/css/style.css" rel="stylesheet">
+    <link href="~/assets/css/login.css" rel="stylesheet">
+    <link href="~/assets/css/stylewave.css" rel="stylesheet">
+    <style>
+        .vastu-icon {
+            width: 65px;
+            height: 30px;
+            /* padding: 4px 14px; */
+            text-align: center;
+            float: left;
+            background: rgb(255,255,255);
+            /* background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(217,217,217,1) 100%); */
+            box-shadow: 2px 3px 8px 0px #ccc;
+            border-radius: 10px;
+            margin-top: -15px;
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+            <div style=" margin-right: -25px;   margin-left: -110px;">
+                <h1 class="logo mr-auto">
+                    <a href="@Url.Action("Index","Home")"><span>@Vastu.Resources.Resource.Vastu</span>@Vastu.Resources.Resource.Shastra</a>
+                </h1>
+                </div>
+                <nav class="nav-menu d-none d-lg-block" style=" margin-right: -95px;  margin-left: 15px;">
+                    <ul>
+
+                        @{
+
+                            if (ViewBag.Home == "Home")
+                            {
+
+                                <li class="active"><a href="@Url.Action("Index", "Home")">@Vastu.Resources.Resource.Home</a></li>
+                                <li><a href="@Url.Action("Index", "SearchVastu")">@Vastu.Resources.Resource.SEARCHVASTU</a></li>
+                                <li><a href="@Url.Action("Index", "VastuReport")">@Vastu.Resources.Resource.VASTUREPORT</a></li>
+                                <li><a href="@Url.Action("Index", "VastuTips")">@Vastu.Resources.Resource.VASTUTIPS</a></li>
+                                <li><a href="@Url.Action("Index", "HomeVastu")">@Vastu.Resources.Resource.HOMEVASTU</a></li>
+                                <li><a href="@Url.Action("Index", "About")">@Vastu.Resources.Resource.ABOUT </a></li>
+                                <li><a href="@Url.Action("Index", "Feedback")">@Vastu.Resources.Resource.FEEDBACK</a></li>
+                                <li><a href="@Url.Action("Index", "Contact")">@Vastu.Resources.Resource.CONTACT</a></li>
+                                <li><a href="@Url.Action("Index", "Language")">@Vastu.Resources.Resource.Language</a></li>
+                                <li><a href="@Url.Action("Index", "Login")">@Vastu.Resources.Resource.LOGIN</a></li>
+
+                            }
+
+                            if (ViewBag.SearchVastu == "SearchVastu")
+                            {
+
+                                <li><a href="@Url.Action("Index", "Home")">@Vastu.Resources.Resource.Home</a></li>
+                                <li class="active"><a href="@Url.Action("Index", "SearchVastu")">@Vastu.Resources.Resource.SEARCHVASTU</a></li>
+                                <li><a href="@Url.Action("Index", "VastuReport")">@Vastu.Resources.Resource.VASTUREPORT</a></li>
+                                <li><a href="@Url.Action("Index", "VastuTips")">@Vastu.Resources.Resource.VASTUTIPS</a></li>
+                                <li><a href="@Url.Action("Index", "HomeVastu")">@Vastu.Resources.Resource.HOMEVASTU</a></li>
+
+                                <li><a href="@Url.Action("Index", "About")">@Vastu.Resources.Resource.ABOUT</a></li>
+                                <li><a href="@Url.Action("Index", "Feedback")">@Vastu.Resources.Resource.FEEDBACK</a></li>
+                                <li><a href="@Url.Action("Index", "Contact")">@Vastu.Resources.Resource.CONTACT</a></li>
+                                <li><a href="@Url.Action("Index", "Language")">@Vastu.Resources.Resource.Language</a></li>
+                                <li><a href="@Url.Action("Index", "Login")">@Vastu.Resources.Resource.LOGIN</a></li>
+
+
+                            }
+
+                            if (ViewBag.VastuReport == "VastuReport")
+                            {
+
+                                <li><a href="@Url.Action("Index", "Home")">@Vastu.Resources.Resource.Home</a></li>
+                                <li><a href="@Url.Action("Index", "SearchVastu")">@Vastu.Resources.Resource.SEARCHVASTU</a></li>
+                                <li class="active"><a href="@Url.Action("Index", "VastuReport")">@Vastu.Resources.Resource.VASTUREPORT</a></li>
+                                <li><a href="@Url.Action("Index", "VastuTips")">@Vastu.Resources.Resource.VASTUTIPS</a></li>
+                                <li><a href="@Url.Action("Index", "HomeVastu")">@Vastu.Resources.Resource.HOMEVASTU</a></li>
+
+                                <li><a href="@Url.Action("Index", "About")">@Vastu.Resources.Resource.ABOUT</a></li>
+                                <li><a href="@Url.Action("Index", "Feedback")">@Vastu.Resources.Resource.FEEDBACK</a></li>
+                                <li><a href="@Url.Action("Index", "Contact")">@Vastu.Resources.Resource.CONTACT</a></li>
+                                <li><a href="@Url.Action("Index", "Language")">@Vastu.Resources.Resource.Language</a></li>
+                                <li><a href="@Url.Action("Index", "Login")">@Vastu.Resources.Resource.LOGIN</a></li>
+
+
+                            }
+
+
+
+                            if (ViewBag.VastuTips == "VastuTips")
+                            {
+                                <li><a href="@Url.Action("Index", "Home")">@Vastu.Resources.Resource.Home</a></li>
+                                <li><a href="@Url.Action("Index", "SearchVastu")">@Vastu.Resources.Resource.SEARCHVASTU</a></li>
+                                <li><a href="@Url.Action("Index", "VastuReport")">@Vastu.Resources.Resource.VASTUREPORT</a></li>
+                                <li class="active"><a href="@Url.Action("Index", "VastuTips")">@Vastu.Resources.Resource.VASTUTIPS</a></li>
+                                <li><a href="@Url.Action("Index", "HomeVastu")">@Vastu.Resources.Resource.HOMEVASTU</a></li>
+
+                                <li><a href="@Url.Action("Index", "About")">@Vastu.Resources.Resource.ABOUT</a></li>
+                                <li><a href="@Url.Action("Index", "Feedback")">@Vastu.Resources.Resource.FEEDBACK</a></li>
+                                <li><a href="@Url.Action("Index", "Contact")">@Vastu.Resources.Resource.CONTACT</a></li>
+                                <li><a href="@Url.Action("Index", "Language")">@Vastu.Resources.Resource.Language</a></li>
+                                <li><a href="@Url.Action("Index", "Login")">@Vastu.Resources.Resource.LOGIN</a></li>
+                            }
+
+                            if (ViewBag.HomeVastu == "HomeVastu")
+                            {
+                                <li><a href="@Url.Action("Index", "Home")">@Vastu.Resources.Resource.Home</a></li>
+                                <li><a href="@Url.Action("Index", "SearchVastu")">@Vastu.Resources.Resource.SEARCHVASTU</a></li>
+                                <li><a href="@Url.Action("Index", "VastuReport")">@Vastu.Resources.Resource.VASTUREPORT</a></li>
+                                <li><a href="@Url.Action("Index", "VastuTips")">@Vastu.Resources.Resource.VASTUTIPS</a></li>
+                                <li class="active"><a href="@Url.Action("Index", "HomeVastu")">@Vastu.Resources.Resource.HOMEVASTU</a></li>
+
+                                <li><a href="@Url.Action("Index", "About")">@Vastu.Resources.Resource.ABOUT</a></li>
+                                <li><a href="@Url.Action("Index", "Feedback")">@Vastu.Resources.Resource.FEEDBACK</a></li>
+                                <li><a href="@Url.Action("Index", "Contact")">@Vastu.Resources.Resource.CONTACT</a></li>
+                                <li><a href="@Url.Action("Index", "Language")">@Vastu.Resources.Resource.Language</a></li>
+                                <li><a href="@Url.Action("Index", "Login")">@Vastu.Resources.Resource.LOGIN</a></li>
+                            }
+
+                            if (ViewBag.About == "About")
+                            {
+                                <li><a href="@Url.Action("Index", "Home")">@Vastu.Resources.Resource.Home</a></li>
+                                <li><a href="@Url.Action("Index", "SearchVastu")">@Vastu.Resources.Resource.SEARCHVASTU</a></li>
+                                <li><a href="@Url.Action("Index", "VastuReport")">@Vastu.Resources.Resource.VASTUREPORT</a></li>
+                                <li><a href="@Url.Action("Index", "VastuTips")">@Vastu.Resources.Resource.VASTUTIPS</a></li>
+                                <li><a href="@Url.Action("Index", "HomeVastu")">@Vastu.Resources.Resource.HOMEVASTU</a></li>
+
+                                <li class="active"><a href="@Url.Action("Index", "About")">@Vastu.Resources.Resource.ABOUT</a></li>
+                                <li><a href="@Url.Action("Index", "Feedback")">@Vastu.Resources.Resource.FEEDBACK</a></li>
+                                <li><a href="@Url.Action("Index", "Contact")">@Vastu.Resources.Resource.CONTACT</a></li>
+                                <li><a href="@Url.Action("Index", "Language")">@Vastu.Resources.Resource.Language</a></li>
+                                <li><a href="@Url.Action("Index", "Login")">@Vastu.Resources.Resource.LOGIN</a></li>
+                            }
+
+                            if (ViewBag.Feedback2 == "Feedback")
+                            {
+                                <li><a href="@Url.Action("Index", "Home")">@Vastu.Resources.Resource.Home</a></li>
+                                <li><a href="@Url.Action("Index", "SearchVastu")">@Vastu.Resources.Resource.SEARCHVASTU</a></li>
+                                <li><a href="@Url.Action("Index", "VastuReport")">@Vastu.Resources.Resource.VASTUREPORT</a></li>
+                                <li><a href="@Url.Action("Index", "VastuTips")">@Vastu.Resources.Resource.VASTUTIPS</a></li>
+                                <li><a href="@Url.Action("Index", "HomeVastu")">@Vastu.Resources.Resource.HOMEVASTU</a></li>
+
+                                <li><a href="@Url.Action("Index", "About")">@Vastu.Resources.Resource.ABOUT</a></li>
+                                <li class="active"><a href="@Url.Action("Index", "Feedback")">@Vastu.Resources.Resource.FEEDBACK</a></li>
+                                <li><a href="@Url.Action("Index", "Contact")">@Vastu.Resources.Resource.CONTACT</a></li>
+                                <li><a href="@Url.Action("Index", "Language")">@Vastu.Resources.Resource.Language</a></li>
+                                <li><a href="@Url.Action("Index", "Login")">@Vastu.Resources.Resource.LOGIN</a></li>
+                            }
+                            if (ViewBag.Contact == "Contact")
+                            {
+                                <li><a href="@Url.Action("Index", "Home")">@Vastu.Resources.Resource.Home</a></li>
+                                <li><a href="@Url.Action("Index", "SearchVastu")">@Vastu.Resources.Resource.SEARCHVASTU</a></li>
+                                <li><a href="@Url.Action("Index", "VastuReport")">@Vastu.Resources.Resource.VASTUREPORT</a></li>
+                                <li><a href="@Url.Action("Index", "VastuTips")">@Vastu.Resources.Resource.VASTUTIPS</a></li>
+                                <li><a href="@Url.Action("Index", "HomeVastu")">@Vastu.Resources.Resource.HOMEVASTU</a></li>
+
+                                <li><a href="@Url.Action("Index", "About")">@Vastu.Resources.Resource.ABOUT</a></li>
+                                <li><a href="@Url.Action("Index", "Feedback")">@Vastu.Resources.Resource.FEEDBACK</a></li>
+                                <li class="active"><a href="@Url.Action("Index", "Contact")">@Vastu.Resources.Resource.CONTACT</a></li>
+                                <li><a href="@Url.Action("Index", "Language")">@Vastu.Resources.Resource.Language</a></li>
+                                <li><a href="@Url.Action("Index", "Login")">@Vastu.Resources.Resource.LOGIN</a></li>
+                            }
+                            if (ViewBag.Language == "Language")
+                            {
+                                <li><a href="@Url.Action("Index", "Home")">@Vastu.Resources.Resource.Home</a></li>
+                                <li><a href="@Url.Action("Index", "SearchVastu")">@Vastu.Resources.Resource.SEARCHVASTU</a></li>
+                                <li><a href="@Url.Action("Index", "VastuReport")">@Vastu.Resources.Resource.VASTUREPORT</a></li>
+                                <li><a href="@Url.Action("Index", "VastuTips")">@Vastu.Resources.Resource.VASTUTIPS</a></li>
+                                <li><a href="@Url.Action("Index", "HomeVastu")">@Vastu.Resources.Resource.HOMEVASTU</a></li>
+
+                                <li><a href="@Url.Action("Index", "About")">@Vastu.Resources.Resource.ABOUT</a></li>
+                                <li><a href="@Url.Action("Index", "Feedback")">@Vastu.Resources.Resource.FEEDBACK</a></li>
+                                <li><a href="@Url.Action("Index", "Contact")">@Vastu.Resources.Resource.CONTACT</a></li>
+                                <li class="active"><a href="@Url.Action("Index", "Language")">@Vastu.Resources.Resource.Language</a>
+                        </li>
+                                <li><a href="@Url.Action("Index", "Login")">@Vastu.Resources.Resource.LOGIN</a></li>
+                            }
+                            if (ViewBag.Login == "Login")
+                            {
+                                <li><a href="@Url.Action("Index", "Home")">@Vastu.Resources.Resource.Home</a></li>
+                                <li><a href="@Url.Action("Index", "SearchVastu")">@Vastu.Resources.Resource.SEARCHVASTU</a></li>
+                                <li><a href="@Url.Action("Index", "VastuReport")">@Vastu.Resources.Resource.VASTUREPORT</a></li>
+                                <li><a href="@Url.Action("Index", "VastuTips")">@Vastu.Resources.Resource.VASTUTIPS</a></li>
+
+                                <li><a href="@Url.Action("Index", "HomeVastu")">@Vastu.Resources.Resource.HOMEVASTU</a></li>
+
+                                <li><a href="@Url.Action("Index", "About")">@Vastu.Resources.Resource.ABOUT</a></li>
+                                <li><a href="@Url.Action("Index", "Feedback")">@Vastu.Resources.Resource.FEEDBACK</a></li>
+                                <li><a href="@Url.Action("Index", "Contact")">@Vastu.Resources.Resource.CONTACT</a></li>
+                                <li><a href="@Url.Action("Index", "Language")">@Vastu.Resources.Resource.Language</a></li>
+                                <li class="active"><a href="@Url.Action("Index", "Login")">@Vastu.Resources.Resource.LOGIN</a></li>
+                            }
+
+                        }
+
+
+
+                        @*<li class="active"><a href="@Url.Action("Index", "Home")">Home</a></li>
+                    <li><a href="@Url.Action("Index", "SearchVastu")">Search Vastu</a></li>
+                    <li><a href="@Url.Action("Index", "VastuReport")">Vastu Report</a></li>
+                    <li><a href="@Url.Action("Index", "VastuTips")">Vastu Tips</a></li>
+                    <li><a href="@Url.Action("Index", "HomeVastu")">Home Vastu</a></li>
+
+                    <li><a href="@Url.Action("Index", "About")">About</a></li>
+                    <li><a href="@Url.Action("Index", "Feedback")">Feedback</a></li>
+                    <li><a href="@Url.Action("Index", "Contact")">Contact</a></li>
+                    <li><a href="@Url.Action("Index", "Login")">Login</a></li>*@
+                    </ul>
+                </nav>
+            </div>
+</header><!-- End Header -->
+    @*<div class="container body-content">
+            @RenderBody()
+        </div>*@
+<div>
+    <br />
+    @if (TempData["ErrMsg"] != null)
+    {
+        <div class="alert alert-dismissible alert-warning">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            @TempData["ErrMsg"].ToString()
+        </div>
+    }
+    @if (TempData["SuccMsg"] != null)
+    {
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            @TempData["SuccMsg"].ToString()
+        </div>
+    }
+    @RenderBody()
+    
+</div>
+    <br>
+    <br>
+    <br>
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container d-md-flex py-4">
+
+            <div class="mr-md-auto text-center text-md-left" style="margin: auto; margin-top: -15px;">
+                <div class="copyright">
+                    @Vastu.Resources.Resource.WebApplicationAllRightsReserved
+                </div>
+
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="~/assets/vendor/jquery/jquery.min.js"></script>
+    <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="~/assets/vendor/php-email-form/validate.js"></script>
+    <script src="~/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+    <script src="~/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/assets/vendor/venobox/venobox.min.js"></script>
+    <script src="~/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+    <script src="~/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="~/assets/vendor/aos/aos.js"></script>
+    <!-- Template Main JS File -->
+    <script src="~/assets/js/main.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+
+@*<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - My ASP.NET Application</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+    </html>*@

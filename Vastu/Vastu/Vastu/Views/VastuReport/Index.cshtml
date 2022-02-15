@@ -1,0 +1,649 @@
+﻿@{
+    ViewBag.Title = Vastu.Resources.Resource.VASTUREPORT;
+}
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /*.my-custom-scrollbar {
+    position: relative;
+    height: 400px;
+    overflow: auto;
+    }*/
+
+    .table-wrapper-scroll-y {
+        display: block;
+    }
+
+    .table {
+        width: 270%;
+    }
+    /*#tblreport td {
+    text-align: center;
+    }
+    */
+    .buttonexcelreport {
+        background: #1bbd36;
+        border: 0;
+        padding: 10px 24px;
+        color: #fff;
+        transition: 0.4s;
+        border-radius: 4px;
+        margin-right: 25px;
+        float: left;
+    }
+
+        .buttonexcelreport:hover {
+            background: #2ae149;
+        }
+
+    .buttonpdfreport {
+        background: #1bbd36;
+        border: 0;
+        padding: 10px 24px;
+        color: #fff;
+        transition: 0.4s;
+        border-radius: 4px;
+        float: left;
+    }
+
+        .buttonpdfreport:hover {
+            background: #2ae149;
+        }
+
+    .emailid {
+        margin-left: 83px;
+    }
+
+    ::-webkit-input-placeholder {
+        color: #828282;
+    }
+</style>
+
+
+
+
+
+@*@using (Html.BeginForm("ExportReportToExcel", "VastuReport", FormMethod.Post, new { id = "myform" }))
+    {
+    <input type="submit" id="frmExportReportToExcel" hidden="hidden" />
+    }*@
+
+@*@using (Html.BeginForm("ExportReportToPDF", "VastuReport", FormMethod.Post))
+    {
+    <input type="submit" id="frmExportReportToPDF" hidden="hidden" />
+    }*@
+
+<section id="vastureportgenerator" class="vastureportgenerator">
+    @*<div class="col-lg-6" data-aos="fade-right">
+        <h2>@Vastu.Resources.Resource.VastuReportGenerator</h2>
+        </div>
+        </section>*@
+
+    <main id="main">
+        <!-- ======= Vastu report Generator ======= -->
+        <section id="vastureport" class="vastureport">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-title">
+                    <br>
+                    <br>
+                    <h2>@Vastu.Resources.Resource.VastuReportGenerator</h2>
+                    
+                    <div class="table-wrapper-scroll-y col-sm-12 my-custom-scrollbar overflow-auto" style="margin-left:-17px; ">
+                        <table id="tblreport" class="table table-bordered col-sm-12 table-hover">
+                            <thead style="background-color:green;text-align: center;">
+                                <tr>
+                                    <th style="color:yellow;">@Vastu.Resources.Resource.Area</th>
+                                    <th style="color:yellow ">@Vastu.Resources.Resource.Direction</th>
+                                    <th style="color:yellow;">@Vastu.Resources.Resource.ResearcherComments</th>
+                                </tr>
+
+                            </thead>
+
+                            @{ int i = 0, areaid; string areaname;}
+                            @foreach (var interior in ViewBag.Interior)
+                            {
+                                areaid = interior.AreaID;
+                                areaname = interior.Area;
+                                
+                                <tr>
+                                    @Html.Hidden("AreaId_" + i, areaid)
+                                    @Html.Hidden("Interior_" + i, areaname)
+                                    <td>@interior.Area </td>
+                                    <td> @Html.DropDownList("Direction_" + i, new SelectList(((IEnumerable<Vasthu_Models.DirectionReport>)ViewBag.Direction).Where(x => x.AreaID == areaid), "DirectionID", "Direction"), @Vastu.Resources.Resource.Reportselect)</td>
+                                    <td>@Html.TextArea("Researcher" + i, null, new { @class = "VastuResarcher col-sm-12", placeholder = Vastu.Resources.Resource.Entercomments, @maxlength = "4000",  @rows = "3", @style = "resize:none;border-radius: 6px;" })</td>
+
+                                </tr>
+
+                                @*if (HttpContext.Current.Request.Cookies["Language"] != null)
+                                    {
+
+                                    if (HttpContext.Current.Request.Cookies["Language"].Value == "en")
+                                    {
+                                    <tr>
+                                    @Html.Hidden("AreaId_" + i, areaid)
+                                    @Html.Hidden("Interior_" + i, areaname)
+                                    <td style="text-align :left;">@interior.Area </td>
+                                    <td> @Html.DropDownList("Direction_" + i, new SelectList(ViewBag.Direction, "DirectionID", "Direction"), @Vastu.Resources.Resource.Reportselect)</td>
+                                    <td>@Html.TextArea("Researcher" + i, null, new { @class = "VastuResarcher", placeholder = Vastu.Resources.Resource.Entercomments, @maxlength = "4000", @cols = "62", @rows = "3", @style = "resize:none;border-radius: 6px;" })</td>
+
+                                    </tr>
+                                    }
+                                    else
+                                    {
+                                    <tr>
+                                    @Html.Hidden("AreaId_" + i, areaid)
+                                    @Html.Hidden("Interior_" + i, areaname)
+                                    <td style="text-align :left;">@interior.Area_JN </td>
+                                    <td> @Html.DropDownList("Direction_" + i, new SelectList(ViewBag.Direction, "DirectionID", "Direction_JN"), @Vastu.Resources.Resource.Reportselect)</td>
+                                    <td>@Html.TextArea("Researcher" + i, null, new { @class = "VastuResarcher", placeholder = Vastu.Resources.Resource.Entercomments, @maxlength = "4000", @cols = "62", @rows = "3", @style = "resize:none;border-radius: 6px;" })</td>
+
+                                    </tr>
+                                    }
+                                    }
+                                    else
+                                    {
+                                    <tr>
+                                    @Html.Hidden("AreaId_" + i, areaid)
+                                    @Html.Hidden("Interior_" + i, areaname)
+                                    <td style="text-align :left;">@interior.Area </td>
+                                    <td> @Html.DropDownList("Direction_" + i, new SelectList(ViewBag.Direction, "DirectionID", "Direction_JN"), @Vastu.Resources.Resource.Reportselect)</td>
+                                    <td>@Html.TextArea("Researcher" + i, null, new { @class = "VastuResarcher", placeholder = Vastu.Resources.Resource.Entercomments, @maxlength = "4000", @cols = "62", @rows = "3", @style = "resize:none;border-radius: 6px;" })</td>
+
+                                    </tr>
+                                    }*@
+
+
+                                i = i + 1;
+                            }
+
+
+
+
+                        </table>
+                        <div class="col-md-5">
+                            <p id="pselect" style="color:red;font-weight:600; "></p>
+                        </div>
+
+                        <div class="col-md-5" style="font-weight: 600;">
+                            @*@Html.Label("Vasthu Type")
+                                @Html.DropDownList("VasthuType", new SelectList(ViewBag.VasthuType, "VasthuTypeId", "VasthuType"))*@
+
+                            @Html.Label(Vastu.Resources.Resource.ResearcherName)<span style="color:red;font-weight:600">*</span>
+                            @Html.TextBox("ResearcherName", null, new { placeholder = Vastu.Resources.Resource.PleaseenteryourName, @maxlength = "200", @autocomplete = "off" })
+                            <p id="prname" style="color: red; font-weight: 600"></p>
+                        </div>
+                        <div class="col-md-5" style="font-weight: 600;">
+                            @Html.Label(Vastu.Resources.Resource.Email)<span style="color:red;font-weight:600">*</span>
+
+                            <div class="inner-form">
+
+                                @Html.TextBox("EmailId", null, new { placeholder = Vastu.Resources.Resource.EnterEmail, @maxlength = "200", @autocomplete = "off" })
+
+                            </div>
+
+                            @*<div class="inner-form">
+                                <div class="label">Email Address</div>
+                                <input type="text" placeholder="Email Address">
+                                </div>*@
+
+
+
+                            <p id="pemail" style=" color: red;font-weight: 600"></p>
+                            <span style="color:red;font-weight:600;text-align:center">* </span>
+                            <span style="color:black;font-weight:600;text-align:center">@Vastu.Resources.Resource.Mandatoryfields </span>
+                        </div>
+                        <div id="divLoader" style="display:none;">
+                            <img src="~/assets/img/ajax-loader2.gif" alt="Loader" />
+                        </div>
+
+
+
+                        <div class="text-center col-md-5">
+                            <button type="button" class="buttonexcelreport">@Vastu.Resources.Resource.GenerateExcelReport</button>
+                            @*<button type="button" class="buttonpdfreport">@Vastu.Resources.Resource.GeneratePDFReport</button>*@
+                        </div>
+                    </div>
+
+
+                </div>
+                <br>
+                <br>
+
+
+            </div>
+        </section><!-- End vastu report Section -->
+
+    </main><!-- End #main -->
+
+
+
+
+
+
+    @section scripts
+{
+        <script>
+$(document).ready(function () {
+
+$('.buttonexcelreport').on('click', function () {
+//debugger;
+GenerateExcelReport()
+});
+
+$('.buttonpdfreport').on('click', function () {
+
+GeneratePDFReport()
+});
+
+});
+
+
+
+
+
+
+function GenerateExcelReport() {
+//debugger;
+var vastuarrayVal = [];
+var vastuarrayText = [];
+$("#divLoader").show();
+
+
+var errres = false;
+var erremail = false;
+$('#prname').hide();
+$('#pemail').hide();
+//debugger;
+if ($('#ResearcherName').val() == "") {
+document.getElementById("prname").innerHTML = "@Vastu.Resources.Resource.ResearcherName";
+$('#prname').show();
+// $('#pemail').hide();
+$("#divLoader").hide();
+//return;
+errres = true;
+}
+else {
+$('#prname').hide();
+}
+
+if (errres == false) {
+if ($('#ResearcherName').val().length >= 200) {
+document.getElementById("prname").innerHTML = "@Vastu.Resources.Resource.MaximumLength200";
+$('#prname').show();
+//$('#pemail').hide();
+$("#divLoader").hide();
+errres = true;
+}
+else {
+$('#prname').hide();
+}
+}
+
+
+
+if (errres == false) {
+var rsname = document.getElementById("ResearcherName").value;
+
+var lblError1 = document.getElementById("prname");
+lblError1.innerHTML = "";
+var expr1 = /^\d*[.]?\d*$/;
+if (expr1.test(rsname)) {
+
+lblError1.innerHTML = "Numeric not allowed";
+$('#prname').show();
+$("#divLoader").hide();
+errres = true;
+}
+else {
+
+$('#prname').hide();
+}
+}
+
+
+
+
+
+
+
+if ($('#EmailId').val() == "") {
+document.getElementById("pemail").innerHTML = "@Vastu.Resources.Resource.EnterValidEmail";
+$('#pemail').show();
+//$('#prname').hide();
+$("#divLoader").hide();
+erremail = true;
+}
+else {
+$('#pemail').hide();
+}
+
+if (erremail == false) {
+var email = document.getElementById("EmailId").value;
+var lblError = document.getElementById("pemail");
+lblError.innerHTML = "";
+var expr = /^([\w-\.]+)@@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+if (!expr.test(email)) {
+
+lblError.innerHTML = "@Vastu.Resources.Resource.EnterValidEmail";
+$('#pemail').show();
+$("#divLoader").hide();
+erremail = true;
+}
+else {
+
+$('#pemail').hide();
+}
+}
+
+
+if (erremail == false) {
+if ($('#EmailId').val().length >= 200) {
+document.getElementById("pemail").innerHTML = "@Vastu.Resources.Resource.EnterValidEmail";
+$('#pemail').show();
+$("#divLoader").hide();
+erremail = true;
+}
+else {
+$('#pemail').hide();
+}
+}
+
+
+
+
+
+
+
+
+
+var errorresult=false
+$('#tblreport tbody tr').each(function () {
+//debugger;
+//if (errorresult != true) {
+var selectedrow = $(this);
+
+var areaid = selectedrow.children($("[hidden]")).val()
+var area = selectedrow.children().eq(1).val()
+
+var comments = selectedrow.find('textarea').eq(0).val();
+
+if (comments.indexOf("'") != -1) {
+comments = comments.replace(/'/g, "''");
+
+}
+
+var directionid = selectedrow.find('td:eq(1)').find("select").val()
+var direction = selectedrow.find('td:eq(1)').find("select option:selected").text()
+
+// VJ 2020-08-26
+if (direction != 'ーー選択ーー') {
+var parametelist = { 'AreaId': areaid, 'DirectionId': directionid };
+var parametelistText = { 'Area': area, 'AreaId': areaid, 'Direction': direction, 'DirectionId': directionid ,'RESEARCHER_COMMENTS': comments };
+vastuarrayVal.push(parametelist)
+vastuarrayText.push(parametelistText)
+
+}
+
+
+// }
+});
+
+//alert(vastuarrayVal.length)
+
+if (vastuarrayVal.length === 0) {
+
+document.getElementById("pselect").innerHTML = "@Vastu.Resources.Resource.SelectDirection";
+$('#pselect').show();
+$("#divLoader").hide();
+// return;
+}
+else {
+$('#pselect').hide();
+}
+
+if (errres == true || erremail == true || vastuarrayVal.length === 0) {
+return false;
+}
+
+//var vasthutype = $('#VasthuType :selected').val()
+//debugger;
+var ResearcherName = $("#ResearcherName").val();
+
+var emailid = $('#EmailId').val()
+
+$.ajax({
+url: '@Url.Action("DownLoadReport", "VastuReport")',
+type: 'POST',
+data: { GetInputs: vastuarrayVal, GetInputsText: vastuarrayText, VasthuType: 2, EmailId: emailid, ResearcherName: ResearcherName },
+beforeSend: function () {
+startLoader();
+},
+success: function (data) {
+if (data) {
+
+// $('#frmExportReportToExcel').click();
+window.location.href = "@Url.Action("DownLoadExcel", "VastuReport")";
+
+}
+},
+complete: function () {
+stopLoader();
+$("#divLoader").hide();
+},
+error: function (error) {
+console.log(error);
+stopLoader();
+$("#divLoader").hide();
+}
+});
+}
+
+
+function GeneratePDFReport() {
+var vastuarrayVal = [];
+var vastuarrayText = [];
+$("#divLoader").show();
+
+var errres = false;
+var erremail = false;
+$('#prname').hide();
+$('#pemail').hide();
+
+//debugger;
+if ($('#ResearcherName').val() == "") {
+document.getElementById("prname").innerHTML = "@Vastu.Resources.Resource.ResearcherName";
+$('#prname').show();
+// $('#pemail').hide();
+$("#divLoader").hide();
+errres = true;
+}
+else {
+$('#prname').hide();
+}
+
+if (errres == false) {
+if ($('#ResearcherName').val().length >= 200) {
+document.getElementById("prname").innerHTML = "@Vastu.Resources.Resource.MaximumLength200";
+$('#prname').show();
+//$('#pemail').hide();
+$("#divLoader").hide();
+errres = true;
+}
+else {
+$('#prname').hide();
+}
+}
+
+
+
+if (errres == false) {
+var rsname = document.getElementById("ResearcherName").value;
+
+var lblError1 = document.getElementById("prname");
+lblError1.innerHTML = "";
+var expr1 = /^\d*[.]?\d*$/;
+if (expr1.test(rsname)) {
+
+lblError1.innerHTML = "Numeric not allowed";
+$('#prname').show();
+$("#divLoader").hide();
+errres = true;
+}
+else {
+
+$('#prname').hide();
+}
+}
+
+
+
+
+
+
+
+
+if ($('#EmailId').val() == "") {
+document.getElementById("pemail").innerHTML = "@Vastu.Resources.Resource.EnterValidEmail";
+$('#pemail').show();
+// $('#prname').hide();
+$("#divLoader").hide();
+erremail = true;
+}
+else {
+$('#pemail').hide();
+}
+
+if (erremail == false) {
+var email = document.getElementById("EmailId").value;
+var lblError = document.getElementById("pemail");
+lblError.innerHTML = "";
+var expr = /^([\w-\.]+)@@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+if (!expr.test(email)) {
+
+lblError.innerHTML = "@Vastu.Resources.Resource.EnterValidEmail";
+$('#pemail').show();
+$("#divLoader").hide();
+erremail = true;
+}
+else {
+
+$('#pemail').hide();
+}
+}
+
+
+
+
+
+if (erremail == false) {
+if ($('#EmailId').val().length >= 200) {
+document.getElementById("pemail").innerHTML = "@Vastu.Resources.Resource.MaximumLength200";
+$('#pemail').show();
+$("#divLoader").hide();
+reerremail = true;
+}
+else {
+$('#pemail').hide();
+}
+}
+
+
+
+
+
+
+
+//var errorresult = false
+$('#tblreport tbody tr').each(function () {
+//if (errorresult != true) {
+var selectedrow = $(this);
+
+var areaid = selectedrow.children($("[hidden]")).val()
+var area = selectedrow.children().eq(1).val()
+//var comments = selectedrow.find('input:text:eq(0)').val()
+var comments = selectedrow.find('textarea').eq(0).val();
+
+if (comments.indexOf("'") != -1) {
+comments = comments.replace(/'/g, "''");
+
+}
+
+
+var directionid = selectedrow.find('td:eq(1)').find("select").val()
+var direction = selectedrow.find('td:eq(1)').find("select option:selected").text()
+// VJ 2020-08-26
+if (direction != 'Select') {
+var parametelist = { 'AreaId': areaid, 'DirectionId': directionid };
+//var parametelistText = { 'Area': area, 'Direction': direction, 'RESEARCHER_COMMENTS': comments };
+var parametelistText = { 'Area': area, 'AreaId': areaid, 'Direction': direction, 'DirectionId': directionid, 'RESEARCHER_COMMENTS': comments };
+vastuarrayVal.push(parametelist)
+vastuarrayText.push(parametelistText)
+
+}
+
+// }
+});
+
+
+if (vastuarrayVal.length === 0) {
+
+document.getElementById("pselect").innerHTML = "@Vastu.Resources.Resource.SelectDirection";
+$('#pselect').show();
+$("#divLoader").hide();
+// return;
+}
+else {
+$('#pselect').hide();
+}
+if (errres == true || erremail == true || vastuarrayVal.length === 0) {
+return false;
+}
+
+//var vasthutype = $('#VasthuType :selected').val()
+
+var ResearcherName = $("#ResearcherName").val();
+
+var emailid = $('#EmailId').val()
+$.ajax({
+url: '@Url.Action("DownLoadReport", "VastuReport")',
+type: 'POST',
+data: { GetInputs: vastuarrayVal, GetInputsText: vastuarrayText, VasthuType: 2, EmailId: emailid, ResearcherName: ResearcherName },
+beforeSend: function () {
+startLoader();
+},
+success: function (data) {
+if (data) {
+//$('#frmExportReportToPDF').click();
+window.location.href = "@Url.Action("DownLoadPPT", "VastuReport")";
+
+}
+},
+complete: function () {
+
+stopLoader();
+$("#divLoader").hide();
+},
+error: function (error) {
+console.log(error);
+stopLoader();
+$("#divLoader").hide();
+}
+});
+}
+
+
+function startLoader() {
+$('.buttonexcelreport').attr('disabled', true);
+$('.buttonpdfreport').attr('disabled', true);
+
+}
+function stopLoader() {
+$('.buttonexcelreport').attr('disabled', false);
+$('.buttonpdfreport').attr('disabled', false);
+}
+
+        </script>
+    }

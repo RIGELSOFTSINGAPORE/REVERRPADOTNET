@@ -1,0 +1,88 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+
+namespace Vasthu_Models
+{
+    public class VS_VASTU_MST
+    {
+        [Key]
+        [Display(Name = "Vastu ID")]
+        public int VASTU_ID { get; set; }
+
+        [Required(ErrorMessage = "Select Area")]
+        [Display(Name = "Area")]
+        public int AREA_ID { get; set; }
+
+        [Required(ErrorMessage = "Select Direction")]
+        [Display(Name = "Direction")]
+        public int DIRECTION_ID { get; set; }
+
+        [Required(ErrorMessage = "Select Vastu Type")]
+        [Display(Name = "Vastu Type")]
+        public int VASTU_TYPE_ID { get; set; }
+
+
+        [Required(ErrorMessage = "Select Score")]
+        [Display(Name = "Score")]
+        public int SCORE_ID { get; set; }
+
+       
+        [RegularExpression(@"^([0-9]{1,2}){1}(\.[0-9]{1,2})?$", ErrorMessage = "Range Between 0 to  99")]
+        [Display(Name = "Extra Score")]
+        public Nullable<decimal> EXTRA_SCORE { get; set; }
+
+        [MaxLength(2000, ErrorMessage = "Maximum Length 2000")]
+        [Display(Name = "Short Description")]
+        public string SHORT_DESCRIPTION { get; set; }
+
+        [MaxLength(6000, ErrorMessage = "Maximum Length 6000")]
+        [Display(Name = "Long Description")]
+        public string LONG_DESCRIPTION { get; set; }
+
+        [Required(ErrorMessage = "Select Status")]
+        [Display(Name = "Status")]
+        public int STATUS_ID { get; set; }
+
+        [Display(Name = "Is Delete")]
+        public bool DELETE_FLAG { get; set; }
+
+        public int CREATED_USER { get; set; }
+
+        public System.DateTime CREATED_DATE { get; set; }
+
+        public int UPDATED_USER { get; set; }
+
+        public Nullable<System.DateTime> UPDATED_DATE { get; set; }
+
+        [Display(Name = "Vastu Type")]
+        public string VASTU_TYPE { get; set; }
+
+        [Display(Name = "Area")]
+        public string AREA { get; set; }
+
+        [Display(Name = "Direction")]
+        public string DIRECTION { get; set; }
+
+        [Display(Name = "Score")]
+        public decimal SCORE { get; set; }
+
+
+        [Display(Name = "Created User")]
+        public string CREATED_USER_NAME { get; set; }
+
+        [Display(Name = "Created Date")]
+        public string C_USER_DATE { get; set; }
+
+        [Display(Name = "Updated Date")]
+        public string U_USER_DATE { get; set; }
+
+        [Display(Name = "Updated User")]
+        public string UPDATED_USER_NAME { get; set; }
+    }
+
+         
+}

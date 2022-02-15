@@ -1,0 +1,202 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Vasthu_Models.Login
+@{
+    ViewBag.Title = Vastu.Resources.Resource.LOGIN;
+
+}
+<style>
+    .container i {
+        margin-left: -30px;
+        cursor: pointer;
+    }
+</style>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+<div id="login">
+
+    <img src="assets/img/login_bg.jpg" class="image-responsive" style="background-size:cover;  width:100%" />
+    <div id="login-button">
+        <img src="assets/img/login-icon.png" />
+    </div>
+    @if ((TempData["Message"]) == null)
+    {
+        <div id="login-container">
+            <h1> @Vastu.Resources.Resource.LOGIN</h1>
+
+            @using (Html.BeginForm("SignIn", "Login", FormMethod.Post))
+            {
+
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+                <div>
+                    @Html.TextBoxFor(model => model.LOGIN_NAME, new { @class = "form-control", @placeholder = @Vastu.Resources.Resource.Username })
+                    @Html.ValidationMessageFor(model => model.LOGIN_NAME, null, new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group">
+                        @Html.TextBoxFor(model => model.LOGIN_PASSWORD, new { @class = "form-control frmField ", @name = "input3", @id = "input3", @type = "password", @placeholder = @Vastu.Resources.Resource.Password })
+                        <div class="input-group-append">
+                            <span toggle="#input3" class="input-group-text fa fa-eye-slash toggle-password" style="margin-top:20px;"> </span>
+
+                        </div>
+                        @Html.ValidationMessageFor(model => model.LOGIN_PASSWORD, null, new { @class = "text-danger" })
+
+                    </div>
+                </div>
+                <div>
+                    <input type="submit" value="@Vastu.Resources.Resource.LOGIN" style="background: #1bbd36" />
+
+                </div>
+
+                <div id="remember-container">
+
+                    <div style="margin-left:-20px">
+                        @Html.CheckBoxFor(model => model.RememberMe, new { @class = "checkbox", @checked = "checked" })
+                        <span id="remember" style="margin-left:-20px">@Vastu.Resources.Resource.Rememberme</span>
+                        @Html.ValidationMessageFor(model => model.RememberMe, null, new { @class = "text-danger" })
+                    </div>
+                    <div>
+                        @Html.Label("ErrorMsg", Convert.ToString(TempData["Message"]) == null ? "" : Convert.ToString(TempData["Message"]), new { @class = "text-danger textred", @style = "margin-top:-20px; margin-left:-20px;width: 375px;" })
+                    </div>
+
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div id="login-container" style="display:block">
+            <h1> @Vastu.Resources.Resource.LOGIN</h1>
+
+            @using (Html.BeginForm("SignIn", "Login", FormMethod.Post))
+            {
+
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+                <div>
+                    @Html.TextBoxFor(model => model.LOGIN_NAME, new { @class = "form-control", @placeholder = @Vastu.Resources.Resource.Username })
+                    @Html.ValidationMessageFor(model => model.LOGIN_NAME, null, new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group">
+                        @Html.TextBoxFor(model => model.LOGIN_PASSWORD, new { @class = "form-control frmField ", @name = "input3", @id = "input3", @type = "password", @placeholder = @Vastu.Resources.Resource.Password })
+                        <div class="input-group-append">
+                            <span toggle="#input3" class="input-group-text fa fa-eye-slash toggle-password" style="margin-top:20px"> </span>
+
+                        </div>
+                        @Html.ValidationMessageFor(model => model.LOGIN_PASSWORD, null, new { @class = "text-danger" })
+
+                    </div>
+                </div>
+                <div>
+                    <input type="submit" value="@Vastu.Resources.Resource.LOGIN" style="background: #1bbd36" />
+
+                </div>
+
+                <div id="remember-container">
+
+                    <div style="margin-left:-20px">
+                        @Html.CheckBoxFor(model => model.RememberMe, new { @class = "checkbox", @checked = "checked" })
+                        <span id="remember" style="margin-left:-20px">@Vastu.Resources.Resource.Rememberme</span>
+                        @Html.ValidationMessageFor(model => model.RememberMe, null, new { @class = "text-danger" })
+                    </div>
+                    <div>
+
+              
+
+
+                        @Html.Label("ErrorMsg", Convert.ToString(TempData["Message"]) == null ? "" : Convert.ToString(TempData["Message"]), new { @class = "text-danger textred", @style = "margin-top:-20px; margin-left:-20px;width: 375px;" })
+                    </div>
+
+                </div>
+            }
+        </div>
+    }
+
+    <!-- Forgotten Password Container -->
+    @if ((TempData["Msg"]) != null)
+    {
+        <div id="forgotten-container" style="display:block">
+            <h1>@Vastu.Resources.Resource.Forgotten</h1>
+
+
+
+            @using (Html.BeginForm("ForgotPassword", "Login", FormMethod.Post))
+            {
+                @Html.TextBoxFor(model => model.LOGIN_NAME, new { @class = "form-control", @placeholder = @Vastu.Resources.Resource.Username })
+                @Html.ValidationMessageFor(model => model.LOGIN_NAME, null, new { @class = "text-danger" })
+                @Html.TextBoxFor(model => model.EMAIL_ID, new { @class = "form-control", @placeholder = @Vastu.Resources.Resource.Email })
+                @Html.ValidationMessageFor(model => model.LOGIN_NAME, null, new { @class = "text-danger" })
+                @Html.TextBoxFor(model => model.NewPassword, new { @class = "form-control", @placeholder = @Vastu.Resources.Resource.NewPassword })
+                @Html.ValidationMessageFor(model => model.LOGIN_NAME, null, new { @class = "text-danger" })
+                @Html.TextBoxFor(model => model.ConfrimPassword, new { @class = "form-control", @placeholder = @Vastu.Resources.Resource.ConfrimPassword })
+                @Html.ValidationMessageFor(model => model.ConfrimPassword, null, new { @class = "text-danger" })
+
+                <div>
+                    <input type="submit" value="@Vastu.Resources.Resource.submit" style="background: #1bbd36" />
+                </div>
+                @Html.Label("ErrorMsg", Convert.ToString(TempData["Msg"]) == null ? "" : Convert.ToString(TempData["Msg"]), new { @class = "text-danger textred", @style = "margin-top:-20px; margin-left:-20px;width: 375px;" })
+
+
+            }
+        </div>
+    }
+    else
+    {
+        <div id="forgotten-container">
+            <h1>@Vastu.Resources.Resource.Forgotten</h1>
+
+
+
+            @using (Html.BeginForm("ForgotPassword", "Login", FormMethod.Post))
+            {
+                @Html.TextBoxFor(model => model.LOGIN_NAME, new { @class = "form-control", @placeholder = @Vastu.Resources.Resource.Username })
+                @Html.ValidationMessageFor(model => model.LOGIN_NAME, null, new { @class = "text-danger" })
+                @Html.TextBoxFor(model => model.EMAIL_ID, new { @class = "form-control", @placeholder = @Vastu.Resources.Resource.Email })
+                @Html.ValidationMessageFor(model => model.LOGIN_NAME, null, new { @class = "text-danger" })
+                @Html.TextBoxFor(model => model.NewPassword, new { @class = "form-control", @placeholder = @Vastu.Resources.Resource.NewPassword })
+                @Html.ValidationMessageFor(model => model.LOGIN_NAME, null, new { @class = "text-danger" })
+                @Html.TextBoxFor(model => model.ConfrimPassword, new { @class = "form-control", @placeholder = @Vastu.Resources.Resource.ConfrimPassword })
+                @Html.ValidationMessageFor(model => model.ConfrimPassword, null, new { @class = "text-danger" })
+                @Html.Label("ErrorMsg", Convert.ToString(TempData["Msg"]) == null ? "" : Convert.ToString(TempData["Msg"]), new { @class = "text-danger textred" })
+
+                <div style="margin-top: -10px;">
+                    <input type="submit" value="@Vastu.Resources.Resource.submit" style="background: #1bbd36" />
+                </div>
+                @Html.Label("ErrorMsg", Convert.ToString(TempData["Msg"]) == null ? "" : Convert.ToString(TempData["Msg"]), new { @class = "text-danger textred", @style = "margin-top:-20px; margin-left:-20px;width: 375px;" })
+
+            }
+        </div>
+    }
+
+
+</div>
+@section scripts{
+    <script>
+
+        jQuery(document).ready(function ($) {
+
+            $(".toggle-password").click(function () {
+                $(this).toggleClass("fa-eye fa-eye-slash");
+                var input = $($(this).attr("toggle"));
+                if (input.attr("type") == "password") {
+                    input.attr("type", "text");
+                } else {
+                    input.attr("type", "password");
+                }
+            });
+
+
+            $(".select2").select2();
+
+
+        });
+
+    </script>
+}

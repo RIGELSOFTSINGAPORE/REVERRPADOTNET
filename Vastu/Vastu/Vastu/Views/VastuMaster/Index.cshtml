@@ -1,0 +1,192 @@
+﻿
+@using PagedList.Mvc
+@model PagedList.PagedList<Vasthu_Models.VS_VASTU_MST>
+@{
+    ViewBag.Title = @Vastu.Resources.Resource.VastuMaster;
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>@Vastu.Resources.Resource.VastuMaster</h2>
+<!-- Modal DeleteMenuModal -->
+<div class="modal fade" id="DeleteVastuModal" tabindex="-1" role="dialog" aria-labelledby="DeleteVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="DeleteVastuModalLabel">@Vastu.Resources.Resource.DeleteVastuMaster</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body DeleteVastucontent">
+                @Vastu.Resources.Resource.Areyousuredelete
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">@Vastu.Resources.Resource.No</button>
+                <button type="button" class="btn btn-primary btndeletevastu btn-success">@Vastu.Resources.Resource.yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Hidden("DeleteVastuId")
+<p style="font-size: initial;">
+    @*  @Html.ActionLink(Vastu.Resources.Resource.CreateNew, "Create", null, htmlAttributes: new { @class = "CreateNew" })*@
+    <a href="#" onclick="CreateVastu();" id="btnCreate" title="Create" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-new-window" title="Create"></span>@Vastu.Resources.Resource.CreateNew</a>
+</p>
+@using (Html.BeginForm("index", "VastuMaster", FormMethod.Post))
+{
+    @*<div class="form-group">
+            @Html.Label("Vastu Type", new { @class = "labelvasthu" })
+            @Html.DropDownListFor(model => model.TypeVasthuDetail.VASTU_TYPE_ID, new SelectList(Model.lstViewModelTypeVasthu, "VASTU_TYPE_ID", "VASTU_TYPE"), "Select User", new { @class = " dropdwn" })
+        </div>*@
+<div style="padding-left:290px">
+    @Html.Label(@Vastu.Resources.Resource.Area, new { @class = "labelvasthu", @style = "font-size: large;" })
+    @*  @Html.DropDownListFor( @Vastu.Resources.Resource.selectArea, new { @class = " dropdwn" })*@
+    @Html.DropDownList("Areadp", new SelectList(ViewBag.SelectedAreaID, "AREA_id", "AREA"), htmlAttributes: new { @style = "border-radius: 6px;height: 27px;" })
+
+
+    @*@Html.DropDownListFor(model => model.DirctionVasthuDetail.DIRECTION_ID, new SelectList(Model.lstViewModelDirctionVasthu, "DIRECTION_ID", "DIRECTION"), @Vastu.Resources.Resource.SelectDirection, new { @class = " dropdwn" })
+        @Html.ValidationMessageFor(model => model.DirctionVasthuDetail.DIRECTION_ID, "", new { @class = "text-danger" })*@
+
+
+
+
+    @*<input type="submit" value="@Vastu.Resources.Resource.submit" class="vasthuseachbtn" />*@
+    <button class="btn btn-primary" style="font-size: 13px;" type="submit" id="btnSubmit">@Vastu.Resources.Resource.Search</button>
+
+</div><br/>
+}
+<table class="table" style="background-color:#ffffff;">
+    <tr style="background-color:#4CAF50; color:#ffffff;">
+        <th>
+            @Html.DisplayName(Vastu.Resources.Resource.VastuType)
+        </th>
+        <th>
+            @Html.DisplayName(Vastu.Resources.Resource.Area)
+        </th>
+        <th>
+            @Html.DisplayName(Vastu.Resources.Resource.Direction)
+        </th>
+
+        <th>
+            @Html.DisplayName(Vastu.Resources.Resource.Score)
+        </th>
+        <th>
+            @Html.DisplayName(Vastu.Resources.Resource.ExtraScore)
+        </th>
+
+        @*<th style="padding-left: 0px;">
+            @Html.DisplayName(Vastu.Resources.Resource.Disable)
+        </th>*@
+
+        <th>
+            @Html.DisplayName(Vastu.Resources.Resource.Edit)
+        </th>
+        <th>
+            @Html.DisplayName(Vastu.Resources.Resource.Delete)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr style="background-color:#EEE;">
+            <td>
+                @Html.DisplayFor(modelItem => item.VASTU_TYPE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AREA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DIRECTION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SCORE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EXTRA_SCORE)
+            </td>
+            @*<td style="padding-left: 42px;">
+                @Html.DisplayFor(modelItem => item.DELETE_FLAG)
+            </td>*@
+            <td>
+                @*  @Html.ActionLink(@Vastu.Resources.Resource.Edit, "Edit", new { vastuid = item.VASTU_ID }, new { @class = "edit1" })*@
+                <a href="@Url.Action("Edit","VastuMaster",new { vastuid = item.VASTU_ID})"> <span class="glyphicon glyphicon-pencil" title="Edit"></span></a>
+                </td>
+            <td>
+                <a href="#" onclick="DeleteVastuConfirmation(@item.VASTU_ID);" id="btnDelete" data-toggle="modal" data-target="#deleteModal" title="Delete"><span class="glyphicon glyphicon-trash"></span></a>
+            </td>
+        </tr>
+    }
+    @if (Model.Count == 0)
+    {
+        <tr>
+            <td colspan="8" align="center">@Vastu.Resources.Resource.NoRecordFound</td>
+        </tr>
+    }
+</table>
+
+
+<br />
+@if (Model.PageSize < Model.TotalItemCount)
+{
+    <div>
+        @Vastu.Resources.Resource.Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) @Vastu.Resources.Resource.of  @Model.PageCount
+        @Html.PagedListPager(Model, page => Url.Action("Index",
+             new { page }))
+    </div>
+}
+@section scripts
+{
+
+    <script>
+function CreateVastu() {
+           window.location.href = "@Url.Action("Create", "VastuMaster",new {area = @ViewBag.AreaID })";
+        }
+
+        function DeleteVastuConfirmation(VastuID) {
+
+            $('#DeleteVastuId').val(VastuID);
+            $('#DeleteVastuModal').modal('show');
+        }
+
+        $('.btndeletevastu').on('click', function () {
+
+            DeleteVastu($('#DeleteVastuId').val());
+
+        });
+        function DeleteVastu(VastuID) {
+            //debugger;
+            $('#DeleteVastuModal').modal('hide');
+            $.ajax({
+                url: '@Url.Action("DeleteVastuMaster", "VastuMaster")',
+                type: 'POST',
+                data: { 'VastuID': VastuID },
+                success: function (result) {
+                    if (result.errorcode == 1) {
+
+                        alert('@Vastu.Resources.Resource.VastuMasterDeletedSuccessfully');
+                        window.location.href = "@Url.Action("Index", "VastuMaster",new {area = @ViewBag.AreaID })";
+                    }
+                    else {
+                        alert('@Vastu.Resources.Resource.VastuMasterDeletionFailed.');
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            var SelectedAreaID = parseInt(@ViewBag.AreaID);
+            $("#Areadp  option[value=" + '@ViewBag.AreaID' + "]").prop("selected", true);
+    })
+    </script>
+}
+
+
+    
+

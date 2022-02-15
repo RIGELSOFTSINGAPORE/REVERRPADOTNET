@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@model Vasthu_Models.USER_MST
+@{
+    ViewBag.Title = "Update";
+
+}
+<style>
+
+    input,
+    select,
+    textarea {
+        max-width: 280px;
+    }
+
+    .dropdwn {
+        width: 100%;
+        height: 31px;
+        border-radius: 5px;
+    }
+
+    .labelvasthu {
+        display: inline-block;
+        margin-bottom: .5rem;
+        width: 200px;
+        margin-left: 30px;
+        font-weight: bold;
+    }
+
+    .vasthuseachbtn {
+        width: 100px;
+        color: white;
+        display: inline-block;
+        font-weight: 400;
+        background-color: #1bbd36;
+        text-align: center;
+        vertical-align: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        border: 1px solid transparent;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-left: 230px;
+        border-radius: .25rem;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+</style>
+<link rel="stylesheet" type="text/css" href="~/Content/Site.css">
+<h2 style="margin-left: 283px;">Update</h2>
+<div class="container" style="margin-left:245px;" data-aos="fade-up">
+    @using (Html.BeginForm("Update", "User", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.USER_ID)
+
+
+            <div class="">
+                @Html.Label(Vastu.Resources.Resource.Username, htmlAttributes: new { @class = "labelvasthu" })
+                @Html.EditorFor(model => model.LOGIN_NAME, new { htmlAttributes = new { @autocomplete = "off" } })
+                @Html.ValidationMessageFor(model => model.LOGIN_NAME, "", new { })
+
+            </div>
+
+            <div class="">
+                @Html.Label(Vastu.Resources.Resource.Email, htmlAttributes: new { @class = "labelvasthu" })
+                @Html.EditorFor(model => model.EMAIL_ID, new { htmlAttributes = new { @autocomplete = "off" } })
+                @Html.ValidationMessageFor(model => model.EMAIL_ID, "", new { })
+
+            </div>
+
+            <div class="">
+                @Html.Label(Vastu.Resources.Resource.NewPassword, htmlAttributes: new { @class = "labelvasthu" })
+                @Html.PasswordFor(model => model.NewPassword, new { htmlAttributes = new { @class = "form-control textbox", @autocomplete = "off" } })
+                @Html.ValidationMessageFor(model => model.NewPassword, "", new { @class = "text-danger" })
+
+            </div>
+            <div class="">
+                @Html.Label(Vastu.Resources.Resource.ConfrimPassword, htmlAttributes: new { @class = "labelvasthu" })
+                @Html.PasswordFor(model => model.ConfrimPassword, new { htmlAttributes = new { @maxlength = "25", @autocomplete = "off" } })
+                @Html.ValidationMessageFor(model => model.ConfrimPassword, "", new { @class = "text-danger" })
+            </div>
+            <div class="">
+                @Html.Label(Vastu.Resources.Resource.DELFlag, htmlAttributes: new { @class = "labelvasthu" })
+                @Html.EditorFor(model => model.DELETE_FLAG, new { @style = "float:left" })
+                @Html.ValidationMessageFor(model => model.DELETE_FLAG, "", new { })
+
+            </div>
+
+            <div class="">
+                <div class="">
+                    <input type="submit" value="Update" class="vasthuseachbtn" />
+                </div>
+            </div>
+        </div>
+    }
+
+    <div style="padding-left: 25px;">
+        @Html.ActionLink("BackToList", "Index")
+    </div>
+
+
+</div>

@@ -1,0 +1,571 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>@ViewBag.Title</title>
+    <script src="https://kit.fontawesome.com/136c195b2d.js" crossorigin="anonymous"></script>
+
+
+    <link href="~/assets2/vendor_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Bootstrap extend-->
+
+    <link href="~/main2/css/bootstrap-extend.css" rel="stylesheet" />
+
+    <!-- theme style -->
+
+    <link href="~/main2/css/master_style.css" rel="stylesheet" />
+
+    <!-- Qixa Admin skins -->
+
+    <link href="~/main2/css/skins/_all-skins.css" rel="stylesheet" />
+
+    <!-- morris CSS -->
+
+    <link href="~/assets2/vendor_components/morris.js/morris.css" rel="stylesheet" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="~/WYSIWY/editor.css" rel="stylesheet" />
+
+    <link href="~/Content2/Datatable/datatables.min.css" rel="stylesheet" />
+    <link href="~/Content2/Datatable/datatables.bootstrap.min.css" rel="stylesheet" />
+
+
+    <style>
+        /*body {
+            width: 610px;
+        }*/
+
+        .frmSearch {
+            border: 1px solid #a8d4b1;
+            background-color: #c6f7d0;
+            margin: 2px 0px;
+            padding: 40px;
+            border-radius: 4px;
+        }
+
+        /*.ulsearch1 {
+            float: left;
+            list-style: none;
+            margin-top: -3px;
+            padding: 0;
+            width: 190px;
+            position: absolute;
+        }*/
+
+        .ulsearch1 {
+            float: left;
+            list-style: none;
+            margin-top: 2px;
+            padding: 0;
+            margin-left: -885px;
+            width: 1260px;
+            position: absolute;
+            text-align: left;
+        }
+            /*.ulsearch1 {
+            border-style: solid;
+            visibility: hidden;
+        }*/
+            .ulsearch1 li {
+                padding: 10px;
+                background: #f0f0f0;
+                border-bottom: #bbb9b9 1px solid;
+            }
+
+                .ulsearch1 li:hover {
+                    background: #ece3d2;
+                    cursor: pointer;
+                }
+
+        /*#search-box {
+            padding: 10px;
+            border: #a8d4b1 1px solid;
+            border-radius: 4px;
+        }*/
+
+        .SearchLeft {
+            margin-left: 30px;
+        }
+
+        .displayflex {
+        }
+
+        .size {
+            margin-left: 84px;
+        }
+
+        .navbar-inverse {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        li {
+            color: red;
+            /*border-right: 0.8px solid #4f3207;*/
+            list-style: none
+        }
+
+        #nav ul {
+            display: none;
+        }
+
+        #nav li:hover > ul {
+            display: block;
+            float: left;
+        }
+
+        .mgt {
+            margin-left: 0px;
+            color: white;
+            border-radius: 0px;
+            padding: 0px;
+            background-color: white;
+            width: 85px;
+            list-style: disc;
+        }
+
+        .nav ul {
+            display: none;
+            position: fixed;
+            z-index: 2;
+            list-style: disc;
+        }
+
+
+        .navbar li ul :hover {
+            background-color: white;
+            color: #1bbd36;
+            text-decoration: none;
+            list-style: disc;
+        }
+
+        .navbar li ul a {
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            list-style: disc;
+            margin-left: 10px;
+        }
+
+        .arrow {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+        }
+
+        .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+    </style>
+
+
+</head>
+<body class="hold-transition skin-black dark-sidebar sidebar-mini">
+
+    <div class="wrapper">
+
+        <header class="main-header">
+            
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <div>
+                    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <i class="ti-align-left"></i>
+                    </a>
+                    <a id="toggle_res_search" data-toggle="collapse" data-target="#search_form" class="res-only-view" href="javascript:void(0);"><i class="fa fa-search"></i></a>
+                    @*<form id="search_form" role="search" class="top-nav-search pull-left collapse">
+                        <div class="input-group ">
+                            <input type="text" name="example-input1-group2" class="form-control" placeholder="Search" id="search-box">
+                            <div id="suggesstion-box" style="display: block;position: relative;left: 825px;padding-top: 56px;/* margin-top: 92px; */"><ul class="ulsearch1"></ul></div>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn  btn-default" data-target="#search_form" data-toggle="collapse" aria-label="Close" aria-expanded="true"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+
+                    </form>*@
+
+                </div>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                <div class="navbar-custom-menu">
+                    <ul id="nav" class="nav navbar-nav displayflex">
+                        <li class="dropdown messages-menu">
+                            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    <i class="fa fa-language" style="font-size: inherit; margin-top: 13px;">-->
+                            @*<h6>language</h6>*@
+                            <!--</i>
+
+    </a>-->
+                        <li style="padding-top: 15px; padding-right: 20px; font-weight: 600; color: #000; font-size: 16px; cursor: pointer;" >
+                            <a href="@Url.Action("Index","Home")">
+                                <i class="fa fa-home" style="font-size:22px"></i> @Vastu.Resources.Resource.Backtohome
+                                </a>
+                        </li>
+                            <ul class="dropdown-menu scale-up">
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <ul class="menu inner-content-div">
+                                        <li>
+                                            <!-- start message -->
+
+                                            <div class="mail-contnet" style="height:29px;margin-left:8px;">
+
+
+                                                <span><input type="button" value="en" onclick="dosomething(this.value)"></span>
+                                            </div>
+
+                                        </li>
+                                        <!-- end message -->
+                                        <li>
+
+                                            <div class="mail-contnet">
+
+                                                <span><input type="button" value="ja" onclick="dosomething(this.value)"></span>
+                                            </div>
+
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+
+
+
+                        <li style="        padding-top: 15px; padding-right: 20px; font-size: 18px; font-weight: 600;">
+                            <a href="#" style="font-size: large">
+                                @Vastu.Resources.Resource.Language
+                                <i class="arrow down" style="margin-bottom:2px; margin-left:5px;"></i>
+                            </a>
+
+                            <ul class="mgt" style="padding-top: 5px; margin-top:5px; border-top:1px solid #1bbd36 ">@Html.ActionLink(Vastu.Resources.Resource.English, "Change", "Language", new { LanguageAbbrevation = "en", @style = "color:black" }, null)</ul>
+                            <ul class="mgt" style="margin-top: 32px;  padding-top:10px; padding-bottom:10px">@Html.ActionLink(Vastu.Resources.Resource.Japanese, "Change", "Language", new { LanguageAbbrevation = "ja", @style = "color:black" }, null)</ul>
+
+
+
+                        </li>
+                       
+                        <div style=" padding-top: 15px; font-weight:bold; font-size:20px; color:black; ">
+                            @if (HttpContext.Current.Session["LOGIN_NAME"] != null)
+                            {
+
+                                @Html.Label(@HttpContext.Current.Session["LOGIN_NAME"].ToString())
+                            }
+                        </div>
+                        <li>
+
+
+                            <ul class="menu inner-content-div">
+
+                                <li>
+                                    <!-- start message -->
+
+                                    <div class="mail-contnet" style="height:29px;margin-left:8px;">
+
+
+                                        <span><input type="button" value="en" onclick="dosomething(this.value)"></span>
+                                    </div>
+
+                                </li>
+                                <!-- end message -->
+                                <li>
+
+                                    <div class="mail-contnet">
+
+                                        <span><input type="button" value="ja" onclick="dosomething(this.value)"></span>
+                                    </div>
+
+                                </li>
+
+                            </ul>
+
+
+
+                            <ul class="nav navbar-nav link">
+                            </ul>
+
+
+                            @*@if ((Convert.ToInt16(HttpContext.Current.Session["USER_TYPE"]) == 1))
+            {*@
+                            <a href="~/Login/SignOut" class="link" data-toggle="tooltip" title="Logout" data-original-title="Logout"><i class="fa fa-power-off"></i></a>
+                            @*}*@
+
+
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar-->
+            <section class="sidebar">
+                <!-- sidebar menu-->
+                <ul class="sidebar-menu mainmenu">
+                    @*<li class="treeview active">
+            <a href="@Url.Action("Index","User")">
+                <i class="fas fa-user-friends" aria-hidden="true" style="font-size: x-large;"></i>
+                <span>User Management</span>
+            </a>
+        </li>*@
+                    <li class="treeview">
+                        <a href="@Url.Action("Index","UserMaster")">
+                            @*<i class="fas fa-user-friends" aria-hidden="true" style="font-size: x-large;"></i>*@
+                            <img src="~/assets/img/icons/user_master.png">
+                            <span>@Vastu.Resources.Resource.UserMaster</span>
+                        </a>
+                    </li>
+                    @*<li class="treeview active">
+            <a href="@Url.Action("Index","StatusMaster")">
+                <img src="~/assets/img/icons/status_master.png">
+
+                <span>Status Master</span>
+            </a>
+        </li>*@
+                    <li class="treeview">
+                        <a href="@Url.Action("Index","ImageMaster")">
+                            <img src="~/assets/img/icons/image_master.png">
+                            @*<i class="fas fa-user-friends" aria-hidden="true" style="font-size: x-large;"></i>*@
+                            <span>@Vastu.Resources.Resource.ImageMaster</span>
+                        </a>
+                    </li>
+                    @*<li class="treeview active">
+            <a href="@Url.Action("Index","ContentMaster")">
+                <img src="~/assets/img/icons/content_master.png">
+
+                <span>Content Master</span>
+            </a>
+        </li>*@
+                    <li class="treeview">
+                        <a href="@Url.Action("Index","AreaMaster")">
+                            @*<i class="fas fa-user-friends" aria-hidden="true" style="font-size: x-large;"></i>*@
+                            <img src="~/assets/img/icons/area_master.png">
+                            <span>@Vastu.Resources.Resource.AreaMaster</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="@Url.Action("Index","AreaMasterTranDtl")">
+                            @*<i class="fas fa-user-friends" aria-hidden="true" style="font-size: x-large;"></i>*@
+                            <img src="~/assets/img/icons/vastumaster-log.png">
+                            <span>@Vastu.Resources.Resource.AreaMasterLog</span>
+                        </a>
+                    </li>
+                    @*<li class="treeview">
+            <a href="@Url.Action("Index","DirectionMaster")">
+                <img src="~/assets/img/icons/direction_master.png">
+
+                <span>@Vastu.Resources.Resource.DirectionMaster</span>
+            </a>
+        </li>
+        <li class="treeview">
+            <a href="@Url.Action("Index","VastuTypeMaster")">
+
+                <img src="~/assets/img/icons/type_master.png">
+                <span>@Vastu.Resources.Resource.VastuTypeMaster</span>
+            </a>
+        </li>*@
+                    <li class="treeview">
+                        <a href="@Url.Action("Index","ScoreMaster")">
+                            @*<i class="fas fa-user-friends" aria-hidden="true" style="font-size: x-large;"></i>*@
+                            <img src="~/assets/img/icons/score_master.png">
+                            <span>@Vastu.Resources.Resource.ScoreMaster</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="@Url.Action("Index","VastuMaster")">
+                            @*<i class="fas fa-user-friends" aria-hidden="true" style="font-size: x-large;"></i>*@
+                            <img src="~/assets/img/icons/vastu_master.png">
+                            <span>@Vastu.Resources.Resource.VastuMaster</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="@Url.Action("Index","VastuMasterTranDtl")">
+                            @*<i class="fas fa-user-friends" aria-hidden="true" style="font-size: x-large;"></i>*@
+                            <img src="~/assets/img/icons/vastumaster-log.png">
+                            <span>@Vastu.Resources.Resource.VastuMasterLog</span>
+                        </a>
+                    </li>
+                    @*<li class="treeview ">
+            <a href="@Url.Action("Index1","User")">
+                <img src="~/assets/img/icons/vastu report.png">
+                <span>Vasthu Report</span>
+            </a>
+        </li>*@
+                    <li class="treeview">
+                        <a href="@Url.Action("Index","TransactionHistory")">
+                            <img src="~/assets/img/icons/transaction history.png">
+                            @*<i class="fas fa-file-alt" aria-hidden="true" style="font-size: x-large;"></i>*@
+                            <span>@Vastu.Resources.Resource.TransactionHistory</span>
+                        </a>
+                    </li>
+
+                    <li class="treeview">
+                        <a href="@Url.Action("Index","FeedbackApproval")">
+                            <img src="~/assets/img/icons/feedback approvals.png">
+                            @*<i class="fas fa-comment-alt" aria-hidden="true" style="font-size: x-large;"></i>*@
+                            <span>@Vastu.Resources.Resource.FeedbackApproval</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+             
+
+                <ul class="sidebar-menu mainmenu" data-widget="tree">
+                    <li class="treeview active ">
+                        <a href="~/Home/UserVideo">
+                            @*<i class="fas fa-edit" aria-hidden="true" style="font-size: x-large;"></i>*@
+                            <img src="~/assets/img/icons/content management.png">
+                            <span>@Vastu.Resources.Resource.ContentManagement</span>
+                            <span class="pull-right-container">
+                                <i class="fas fa-angle-down"></i>
+
+                            </span>
+                        </a>
+                        <ul class="treeview-menu submenu">
+                            <li><a href="@Url.Action("Index", "HomeContent")"><i class="fa fa-ellipsis-h"></i>@Vastu.Resources.Resource.Home</a></li>
+                            <li><a href="@Url.Action("Index", "VastuTipsContent")"><i class="fa fa-ellipsis-h"></i>@Vastu.Resources.Resource.VASTUTIPS</a></li>
+                            <li><a href="@Url.Action("Index", "HomeVastuContent")"><i class="fa fa-ellipsis-h"></i>@Vastu.Resources.Resource.HOMEVASTU</a></li>
+                            <li><a href="@Url.Action("Index", "AboutContent")"><i class="fa fa-ellipsis-h"></i>@Vastu.Resources.Resource.ABOUT</a></li>
+                            <li><a href="@Url.Action("Index", "ContactContent")"><i class="fa fa-ellipsis-h"></i>@Vastu.Resources.Resource.CONTACT</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+
+            </section>
+
+        </aside>
+        <footer class="main-footer">
+            <div class="pull-right d-none d-sm-inline-block">
+                <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end"></ul>
+            </div>
+          @*@Vastu.Resources.Resource.WebApplicationAllRightsReserved*@
+          
+        </footer>
+
+        <div class="content-wrapper">
+            <section class="content">
+                @if (TempData["ErrMsg"] != null)
+                {
+                    <div class="alert alert-dismissible alert-warning">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        @TempData["ErrMsg"].ToString()
+                    </div>
+                }
+                @if (TempData["SuccMsg"] != null)
+                {
+                    <div class="alert alert-dismissible alert-success">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        @TempData["SuccMsg"].ToString()
+                    </div>
+                }
+                @RenderBody()
+                <hr />
+            </section>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- jQuery 3 -->
+    @*<script src="../assets2/vendor_components/jquery-3.3.1/jquery-3.3.1.min.js"></script>*@
+    <script src="~/Scripts2/jquery-2.2.4.min.js"></script>
+
+    <script src="~/Scripts2/Datatable/datatables.min.js"></script>
+    <script src="~/Scripts2/Datatable/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts2/Datatable/datatables.bootstrap.min.js"></script>
+    <script src="~/Scripts2/Datatable/sum.js"></script>
+
+    <!-- jQuery UI 1.11.4 -->
+
+    <script src="~/assets2/vendor_components/jquery-ui/jquery-ui.js"></script>
+
+    <!-- popper -->
+
+    <script src="~/assets2/vendor_components/popper/dist/popper.min.js"></script>
+
+    <!-- Bootstrap 4.0-->
+
+    <script src="~/assets2/vendor_components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!-- Slimscroll -->
+
+    <script src="~/assets2/vendor_components/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- FastClick -->
+
+    <script src="~/assets2/vendor_components/fastclick/lib/fastclick.js"></script>
+
+    <!-- Sparkline -->
+
+    <script src="~/assets2/vendor_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+
+    <!-- morris-->
+    @*<script src="../assets2/vendor_components/raphael/raphael.js"></script>
+        <script src="../assets2/vendor_components/morris.js/morris.js"></script>*@
+
+    <!-- peity -->
+
+    <script src="~/assets2/vendor_components/jquery.peity/jquery.peity.js"></script>
+
+    <!-- Qixa Admin App -->
+
+    <script src="~/main2/js/template.js"></script>
+
+    <!-- Qixa Admin dashboard demo (This is only for demo purposes) -->
+    @*<script src="../main2/js/pages/dashboard.js"></script>*@
+
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

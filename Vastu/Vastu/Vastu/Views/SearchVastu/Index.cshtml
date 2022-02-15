@@ -1,0 +1,229 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    ViewBag.Title = Vastu.Resources.Resource.SEARCHVASTU;
+
+}
+
+@model Vasthu_Models.ViewModel
+@{
+    ViewBag.Title = Vastu.Resources.Resource.SEARCHVASTU;
+
+}
+
+@*<h2>Search Vastu</h2>*@
+
+<link rel="stylesheet" type="text/css" href="~/Content/Site.css">
+
+@*<style type="text/css">
+        textarea {
+            border: none;
+        }
+    </style>*@
+
+
+
+
+
+<section id="searchvastu" class="searchvastu">
+
+    <div class="col-lg-6" data-aos="fade-right">
+        @*<h2 style="margin-left: 283px;">Search Vastu</h2>*@
+    </div>
+</section>
+
+<main id="main">
+    <!-- ======= searchvastu Section ======= -->
+    <section id="searchvastu" class="searchvastu">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+               
+                <h2>@Vastu.Resources.Resource.SEARCHVASTU</h2>
+                <div class="form-horizontal" @*style=" margin-left: -28px;"*@>
+                    @using (Html.BeginForm("Getsearchvalue", "SearchVastu", FormMethod.Post))
+                    {
+                        @*<div class="form-group">
+                @Html.Label("Vastu Type", new { @class = "labelvasthu" })
+                @Html.DropDownListFor(model => model.TypeVasthuDetail.VASTU_TYPE_ID, new SelectList(Model.lstViewModelTypeVasthu, "VASTU_TYPE_ID", "VASTU_TYPE"), "Select User", new { @class = " dropdwn" })
+            </div>*@
+                        @*if (HttpContext.Current.Request.Cookies["Language"] != null)
+            {
+
+                if (HttpContext.Current.Request.Cookies["Language"].Value == "en")
+                {
+                    <div class="form-group">
+                        @Html.Label(@Vastu.Resources.Resource.Area, new { @class = "labelvasthu" })
+                        @Html.DropDownListFor(model => model.AreaVasthuDetail.AREA_ID, new SelectList(Model.lstViewModelAreaVasthu, "AREA_ID", "AREA"), @Vastu.Resources.Resource.selectArea, new { @class = " dropdwn" })
+                        @Html.ValidationMessageFor(model => model.AreaVasthuDetail.AREA_ID, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        @Html.Label(@Vastu.Resources.Resource.Direction, new { @class = "labelvasthu" })
+                        @Html.DropDownListFor(model => model.DirctionVasthuDetail.DIRECTION_ID, new SelectList(Model.lstViewModelDirctionVasthu, "DIRECTION_ID", "DIRECTION"), @Vastu.Resources.Resource.SelectDirection, new { @class = " dropdwn" })
+                        @Html.ValidationMessageFor(model => model.DirctionVasthuDetail.DIRECTION_ID, "", new { @class = "text-danger" })
+                    </div>
+
+                }
+                else
+                {
+                    <div class="form-group">
+                        @Html.Label(@Vastu.Resources.Resource.Area, new { @class = "labelvasthu" })
+                        @Html.DropDownListFor(model => model.AreaVasthuDetail.AREA_ID, new SelectList(Model.lstViewModelAreaVasthu, "AREA_ID", "AREA_JN"), @Vastu.Resources.Resource.selectArea, new { @class = " dropdwn" })
+                        @Html.ValidationMessageFor(model => model.AreaVasthuDetail.AREA_ID, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        @Html.Label(@Vastu.Resources.Resource.Direction, new { @class = "labelvasthu" })
+                        @Html.DropDownListFor(model => model.DirctionVasthuDetail.DIRECTION_ID, new SelectList(Model.lstViewModelDirctionVasthu, "DIRECTION_ID", "DIRECTION_JN"), @Vastu.Resources.Resource.SelectDirection, new { @class = " dropdwn" })
+                        @Html.ValidationMessageFor(model => model.DirctionVasthuDetail.DIRECTION_ID, "", new { @class = "text-danger" })
+                    </div>
+                }
+            }
+
+            else
+            {*@
+                        <div class="form-group row">
+                            <div class="col-sm-2" style="font-weight: 600;">
+                                @Html.Label(@Vastu.Resources.Resource.Area, new { })
+                            </div>
+                            <div class="col-sm-4">
+
+                                @Html.DropDownListFor(model => model.AreaVasthuDetail.AREA_ID, new SelectList(Model.lstViewModelAreaVasthu, "AREA_ID", "AREA"), @Vastu.Resources.Resource.selectArea, new { @class = " dropdwn" })
+                                <div>
+                                    @Html.ValidationMessageFor(model => model.AreaVasthuDetail.AREA_ID, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-2" style="font-weight: 600;">
+                                @Html.Label(@Vastu.Resources.Resource.Direction, new { })
+                            </div>
+                            <div class="col-sm-4">
+                                @Html.DropDownListFor(model => model.DirctionVasthuDetail.DIRECTION_ID, new SelectList(Model.lstViewModelDirctionVasthu, "DIRECTION_ID", "DIRECTION"), @Vastu.Resources.Resource.SelectDirection, new { @class = " dropdwn" })
+
+                                <div>
+                                    @Html.ValidationMessageFor(model => model.DirctionVasthuDetail.DIRECTION_ID, "", new { @class = "text-danger" })
+
+                                </div>
+                            </div>
+                    </div>
+                        
+
+                        @*<div class="form-group">
+                            <div>
+                                <input type="submit" value="@Vastu.Resources.Resource.submit" class="vasthuseachbtn" />
+                            </div>
+                        </div>*@
+
+                        <div class="form-group col-sm-7 text-center">
+                            <button type="submit" value="@Vastu.Resources.Resource.submit">@Vastu.Resources.Resource.submit</button>
+                        </div>
+                        <div>
+
+                            @Html.Label("ErrorMsg", Convert.ToString(TempData["msgerror"]) == null ? "" : Convert.ToString(TempData["msgerror"]), new { @class = "text-danger textred", @style = "margin-left: 30px;" })
+                        </div>
+
+                    }
+                    <div class="form-group row">
+
+
+                        @if (ViewBag.TestResult != null)
+                        {
+                            var getlist = ViewBag.TestResult as IEnumerable<Vasthu_Models.Vasthumst>;
+
+
+                            foreach (var obj in getlist)
+                            {
+                        <div class="col-sm-2" style="font-weight: 600;">
+                            @Html.Label(Vastu.Resources.Resource.Result, new { @class = "labelvasthu" })
+                        </div>
+                                @*if (obj.SCORE_ID == 1)
+                    {
+                        <img src="~/Image/Favourable.png" style="width:50px; " />
+                    }
+                    if (obj.SCORE_ID == 2)
+                    {
+                        <img src="~/Image/Moderate.png" style="width:50px; " />
+                    }
+                    if (obj.SCORE_ID == 3)
+                    {
+                        <img src="~/Image/Unfavourable.png" style="width:50px; " />
+
+                    }*@
+                    <div class="col-sm-2">
+                        <img id="imgScore" src="@Url.Content("~/ScoreImage/" + obj.IMAGE_URL + "")" style="width: 50px;">
+                    </div>
+                                @*if (obj.SCORE_ID == 7 || obj.SCORE_ID == 8 || obj.SCORE_ID == 9 || obj.SCORE_ID == 10)
+                    {
+                        <img src="~/Image/Favourable.png" style="width:50px; " />
+                    }
+                    if (obj.SCORE_ID == 4 || obj.SCORE_ID == 5 || obj.SCORE_ID == 6)
+                    {
+                        <img src="~/Image/Moderate.png" style="width:50px; " />
+                    }
+                    if (obj.SCORE_ID == 1 || obj.SCORE_ID == 2 || obj.SCORE_ID == 3)
+                    {
+                        <img src="~/Image/Unfavourable.png" style="width:50px; " />
+                    }*@
+                            }
+
+
+                        }
+
+                    </div>
+                    <div class="form-group row" style="display:flex">
+
+
+                        @if (ViewBag.TestResult != null)
+                        {
+                            var getlist = ViewBag.TestResult as IEnumerable<Vasthu_Models.Vasthumst>;
+                            @*foreach (var obj in getlist)
+                {
+                    <div>
+                        @Html.Label(Vastu.Resources.Resource.Description, new { @class = "labelvasthu" })
+                    </div>
+                    <div>
+                        @Html.Label(obj.LONG_DESCRIPTION)
+
+                    </div>
+                }*@
+                            foreach (Vasthu_Models.Vasthumst obj in ViewBag.TestResult)
+                            {
+                                <div class="col-sm-2" style="font-weight: 600;">
+                                    @Html.Label(Vastu.Resources.Resource.Description, new { @class = "labelvasthu" })
+                                </div>
+                                <div class= "col-md">
+                                    @*@Html.Label(obj.COMMENTS, new { @class = "form-control", @maxlength = "100" })*@
+
+                                    @*@Html.TextArea("test",obj.COMMENTS, 5, 500, new { maxlength = 4000, @class = "form-control", @readonly = true, style = "overflow: hidden;resize: none;width: 25px;" })*@
+
+                                    <p >
+                                        @obj.COMMENTS
+                                    </p>
+
+                                </div>
+                            }
+                        }
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section><!-- End searchvastu Section -->
+
+</main><!-- End #main -->
+
+@section scripts{
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        var SelectedAreaID = parseInt(@ViewBag.SelectedAreaID);
+        var SelectedDirectionID = parseInt(@ViewBag.SelectedDirectionID);
+        @*var SelectedTypeID = parseInt(@ViewBag.SelectedTypeID);*@
+        $("#AreaVasthuDetail_AREA_ID  option[value=" + '@ViewBag.SelectedAreaID' + "]").prop("selected", true);
+        $("#DirctionVasthuDetail_DIRECTION_ID  option[value=" + '@ViewBag.SelectedDirectionID' + "]").prop("selected", true);
+        @*$("#TypeVasthuDetail_VASTU_TYPE_ID  option[value=" + '@ViewBag.SelectedTypeID' + "]").prop("selected", true);*@
+    </script>
+}

@@ -1,0 +1,196 @@
+﻿
+@{
+    ViewBag.Title = Vastu.Resources.Resource.ContentManagement;
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@Html.Hidden("HdnDeleteContentId")
+
+<div id="divLoader" style="display:none; margin-left:490px; ">
+    <img src="~/assets/img/ajax-loader2.gif" alt="Loader" />
+</div>
+<div class="modal fade" id="DeleteHomeModal" tabindex="-1" role="dialog" aria-labelledby="DeleteHomeModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="DeleteHomeModalLabel">@Vastu.Resources.Resource.DeleteContent</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body Deletemenucontent">
+                @Vastu.Resources.Resource.Areyousuredelete
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">@Vastu.Resources.Resource.No</button>
+                <button type="button" class="btn btn-primary btndeletepage btn-danger">@Vastu.Resources.Resource.yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <h1 class="mt-4">@Vastu.Resources.Resource.Home</h1>
+    @Html.DropDownList("Home", new SelectList(ViewBag.Home, "ContentID", "ContentName"))
+    <button class="btn btn-primary btn-sm" type="submit" id="btnLoad">@Vastu.Resources.Resource.Load</button>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">
+            <div id="txtEditor"></div>
+            @*<div class="container-fluid" id="editor2">
+                    <div class="row">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 nopadding">
+                                <textarea id="txtEditor" name="notes"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>*@
+        </li>
+    </ol>
+
+    <div class="col-md-3" style="padding-bottom: 5px;">
+        <button class="btn btn-primary" type="submit" id="btnSubmit">@Vastu.Resources.Resource.Save</button>
+        <button class="btn btn-primary" type="button" id="btnDelete">@Vastu.Resources.Resource.Delete</button>
+    </div>
+</div>
+
+
+
+
+
+@section scripts{
+
+    <script src="~/WYSIWY/editor.js"></script>
+
+    <script>
+        $("#txtEditor").Editor();
+    </script>
+
+    <script>
+        //$('#Home').change(function () {
+        $('#btnLoad').on('click', function () {
+            var dataobj = { 'ContentID': $("#Home option:selected").val() };
+            $.ajax({
+                url: '@Url.Action("LoadSelectedContent", "HomeContent")',
+                type: 'POST',
+                data: dataobj,
+                success: function (result) {
+                    //debugger;
+                    if (result.length != 0) {
+                        if (result.errorcode != -1) {
+                            $('.Editor-editor').html(result[0].ContentDescription)
+
+
+                            //$("#txtEditor").Editor("setText", result[0].ContentDescription); 
+
+                        }
+                    }
+                    else {
+                        $('.Editor-editor').html("");
+                    }
+                },
+                error: function (error) {
+                    //debugger;
+                    console.log(error);
+                }
+            });
+
+            });
+
+    </script>
+
+    <script>
+        $('#btnSubmit').on('click', function () {
+            $("#divLoader").show();
+            var PageDescription = $('.Editor-editor').html();
+
+            //var PageDescription = $("#txtEditor").Editor("getText");
+
+
+        //debugger;
+            var dataobj = { 'ContentDescription': PageDescription, 'ContentID': $("#Home option:selected").val() };
+            $.ajax({
+            url: '@Url.Action("SavePageInformation", "HomeContent")',
+            type: 'POST',
+            data: dataobj,
+            success: function (result) {
+
+            if (result.errorcode !=-1)
+            {
+                alert("@Vastu.Resources.Resource.SuccessfullySaved")
+                $('.Editor-editor').html("")
+                $('#Home').val(0)
+                $("#divLoader").hide();
+            }
+            else
+            {
+                alert("@Vastu.Resources.Resource.SaveFailed")
+                $('.Editor-editor').html("")
+                $('#Home').val(0)
+                $("#divLoader").hide();
+            }
+            },
+
+            error: function (error)
+            {
+                $('.Editor-editor').html("")
+                $('#Home').val(0)
+                console.log(error);
+                $("#divLoader").hide();
+            }
+
+            });
+    });
+    </script>
+
+
+    <script>
+        $('.btndeletepage').on('click', function () {
+            DeleteContent($('#HdnDeleteContentId').val());
+        });
+
+
+        $('#btnDelete').on('click', function () {
+            $('#HdnDeleteContentId').val($("#Home option:selected").val());
+            $('#DeleteHomeModal').modal('show');
+        });
+
+
+
+
+
+
+        function DeleteContent(ContentID) {
+            $('#DeleteHomeModal').modal('hide');
+            $("#divLoader").show();
+            $.ajax({
+                url: '@Url.Action("DeleteContentById", "HomeContent")',
+                type: 'POST',
+                data: { 'ContentID': ContentID },
+                success: function (result) {
+                    if (result.errorcode !=-1) {
+
+                        alert('@Vastu.Resources.Resource.ContentDeletedSuccessfully');
+                        //$("input:text").val("");
+                        $('.Editor-editor').html("")
+                        $('#HdnDeleteContentId').val("");
+                        $("#divLoader").hide();
+                    }
+                    else {
+                        $("#divLoader").hide();
+                        alert('@Vastu.Resources.Resource.Unabletodelete');
+                       
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
+                    $("#divLoader").hide();
+                    alert('@Vastu.Resources.Resource.Unabletodelete...Contact Admin');
+                }
+            });
+        }
+    </script>
+
+}

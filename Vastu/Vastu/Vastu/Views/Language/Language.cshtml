@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Language";
+    Layout = "~/Views/SearchVastu/Index.cshtml";
+}
+
+<h2>Language</h2>
+
+<li>@Html.ActionLink(Vastu.Resources.Resource.English, "Change", "Language", new { LanguageAbbrevation = "en" }, null)</li>
+<br />
+<li>@Html.ActionLink(Vastu.Resources.Resource.Japanese, "Change", "Language", new { LanguageAbbrevation = "ja" }, null)</li>

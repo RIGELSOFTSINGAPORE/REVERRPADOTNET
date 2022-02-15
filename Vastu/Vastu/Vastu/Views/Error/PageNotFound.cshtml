@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Page Not Found</title>
+</head>
+<body>
+    <div>
+        <center>
+            <a href="@Url.Action("Index", "Home")">@Vastu.Resources.Resource.Home</a>
+            @if (System.Threading.Thread.CurrentThread.CurrentUICulture.Name.ToString() == "ja")
+            {
+                <img src="~/Image/404J.jpg" style="display:block;margin-left:auto;margin-right:auto;" align="center" />
+            }
+            else
+            {
+                <img src="~/Image/404E.jpg" style="display:block;margin-left:auto;margin-right:auto;" align="center" />
+            }
+            
+        </center>
+    </div>
+   
+</body>
+</html>

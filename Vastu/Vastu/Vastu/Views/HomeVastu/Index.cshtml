@@ -1,0 +1,857 @@
+﻿@{
+    ViewBag.Title = Vastu.Resources.Resource.HOMEVASTU;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<style>
+    /* Tooltip container */
+    .tooltip {
+        cursor: pointer;
+        display: contents;
+        position: relative;
+        border-bottom: 1px dotted green;
+    }
+
+        /* Tooltip text */
+        .tooltip .tooltiptext {
+            background-color: #EFEFEF;
+            border-radius: 4px;
+            font-weight: 500;
+            border: 2px solid green;
+            bottom: 55%;
+            color: black;
+            left: 0;
+            margin-left: 30%;
+            opacity: 0;
+            padding: 1rem 0.5rem;
+            position: absolute;
+            /*text-align: center;*/
+            transition: opacity 0.5s;
+            visibility: hidden;
+            width: 430px;
+            z-index: 1;
+        }
+
+        /* Show the tooltip text when you mouse over the tooltip container */
+        .tooltip:hover .tooltiptext {
+            opacity: 1;
+            visibility: visible;
+        }
+        .tooltip .tooltiptext:after {
+            border-width: 10px;
+            border-style: solid;
+            border-color: green transparent transparent transparent;
+            content: "";
+            left: 50%;
+            margin-left: -5px;
+            position: absolute;
+            top: 100%;
+        }
+</style>
+
+@model List<Vasthu_Models.MasterHomeVastuContent>
+<section id="homevastu" class="homevastu">
+
+    <div class="col-lg-6" data-aos="fade-right">
+        <h2>@Vastu.Resources.Resource.HOMEVASTU</h2>
+    </div>
+</section>
+<main id="main">
+    <!-- ======= Home vastu ======= -->
+    <section id="homevastu" class="homevastu">
+
+        <div class="container" data-aos="fade-up">
+
+            <!-- <img src="assets/img/HomeVastu-banner.jpg"  class="image-responsive" style="margin-left: -35px"> </div>-->
+            <div class="section-title">
+               
+                <h2>@Vastu.Resources.Resource.HOMEVASTU</h2>
+
+                @if (Model != null && Model.Count > 0)
+                {
+                    if (Model[0].ContentID == 4 && Model[0].ContentName != "")
+                    {
+            <p>
+                @Html.Raw(Model[0].ContentName)
+                <br>
+                <br>
+            </p>
+                    }
+                    else
+                    {
+            <p>
+                @Vastu.Resources.Resource.homedes
+
+                <br>
+                <br>
+            </p><br>
+                    }
+                }
+                else
+                {
+            <p>
+                @Vastu.Resources.Resource.homedes
+
+                <br>
+                <br>
+            </p>
+                }
+
+
+                <br>
+            </div>
+        </div>
+    </section><!-- End Home Vastu Section -->
+
+</main><!-- End #main -->
+<!-- Container start -->
+<div class="container-fluid for-bg rm hcstmbgclr" style="background: #f3f3f3;">
+    <div class="container vstuconul">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="vastu-design">
+                    <div class="vastu-design-icon">
+                        <img src="~/assets/img/icons/home.png">
+                        <!-- <i class="fa fa-home" aria-hidden="true" style="font-size:32px;color:#1bbd36;"></i>-->
+                    </div>
+                    <div class="vastu-design-content ">
+                        <h3>@Vastu.Resources.Resource.MainEntrance</h3>
+                        <div style="height: 84px; overflow: hidden;">
+                            @if (Model != null && Model.Count > 0)
+                            {
+                                if (Model[1].ContentID == 5 && Model[1].ContentName != "")
+                                {
+                                  
+                            <p  @*style="height:60px; overflow:hidden"*@>
+                                @Html.Raw(Model[1].ContentName)
+                            </p>
+                                  
+                                }
+                                else
+                                {
+                                   
+                                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.MainEntrancedef</p>
+                                        
+                                    
+                                }
+                            }
+                            else
+                            {
+                                
+                                    <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.MainEntrancedef</p>
+                                   
+                            }
+                        </div>
+                    </div>
+
+                           
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="vastu-design">
+                    <div class="vastu-design-icon">
+                        <img src="~/assets/img/icons/dinner.png">
+
+                    </div>
+                    <div class="vastu-design-content">
+                        <h3>@Vastu.Resources.Resource.DiningRoom</h3>
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            if (Model[2].ContentID == 6 && Model[2].ContentName != "")
+                            {
+                    
+                        <p  @*style="height:60px; overflow:hidden"*@>
+                             @Html.Raw(Model[2].ContentName)
+                        </p>
+                    
+                    }
+                        else
+                        {
+                   
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.DiningRoomdef</p>
+                        
+                        }
+                            }
+                            else
+                            {
+                    
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.DiningRoomdef</p>
+                        
+                   
+                            }
+
+                            </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="vastu-design">
+                    <div class="vastu-design-icon">
+                        <img src="~/assets/img/icons/baking.png">
+                    </div>
+                    <div class="vastu-design-content">
+                        <h3>@Vastu.Resources.Resource.Kitchen</h3>
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            if (Model[3].ContentID == 7 && Model[3].ContentName != "")
+                            {
+                    
+                        <p  @*style="height:60px; overflow:hidden"*@>
+                             @Html.Raw(Model[3].ContentName) 
+                        </p>
+                   
+                    }
+                        else
+                        {
+                    
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Kitchendef</p>
+                        
+                        }
+                            }
+                            else
+                            {
+                    
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Kitchendef</p>
+                        
+                            }
+
+                            </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="vastu-design">
+                    <div class="vastu-design-icon">
+                        <img src="~/assets/img/icons/room.png">
+                    </div>
+                    <div class="vastu-design-content">
+                        <h3>@Vastu.Resources.Resource.Rooms</h3>
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            if (Model[4].ContentID == 8 && Model[4].ContentName != "")
+                            {
+                    
+                        <p  @*style="height:60px; overflow:hidden"*@>
+                             @Html.Raw(Model[4].ContentName) <span class="tooltiptext">@Html.Raw(Model[4].ContentName)</span>
+                        </p>
+                   
+                    }
+                        else
+                        {
+                    
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Roomsdef</p>
+                       
+                        }
+                            }
+                            else
+                            {
+                   
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Roomsdef</p>
+                        
+                            }
+
+                            </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="vastu-design">
+                    <div class="vastu-design-icon">
+                        <img src="~/assets/img/icons/altar.png">
+                    </div>
+                    <div class="vastu-design-content">
+                        <h3>@Vastu.Resources.Resource.Altar</h3>
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            if (Model[5].ContentID == 9 && Model[5].ContentName != "")
+                            {
+                   
+                        <p  @*style="height:60px; overflow:hidden"*@>
+                             @Html.Raw(Model[5].ContentName)
+                        </p>
+                  
+                    }
+                        else
+                        {
+                    
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Altardef</p>
+                        
+                        }
+                            }
+                            else
+                            {
+                   
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Altardef</p>
+                        
+                            }
+
+                            </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="vastu-design">
+                    <div class="vastu-design-icon">
+                        <img src="~/assets/img/icons/balcony.png">
+                    </div>
+                    <div class="vastu-design-content">
+                        <h3>@Vastu.Resources.Resource.Balcony</h3>
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            if (Model[6].ContentID == 10 && Model[6].ContentName != "")
+                            {
+                                
+                                    <p  @*style="height:60px; overflow:hidden"*@>
+                                         @Html.Raw(Model[6].ContentName)
+                                    </p>
+                                
+                            }
+                            else
+                            {
+                   
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Balconydef</p>
+                       
+                            }
+                        }
+                        else
+                        {
+                    
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Balconydef</p>
+                       
+                        }
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="vastu-design">
+                    <div class="vastu-design-icon">
+                        <img src="~/assets/img/icons/bathroom.png">
+                    </div>
+                    <div class="vastu-design-content">
+                        <h3>@Vastu.Resources.Resource.BathRoom</h3>
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            if (Model[7].ContentID == 11 && Model[7].ContentName != "")
+                            {
+                  
+                        <p  @*style="height:60px; overflow:hidden"*@>
+                            @Html.Raw(Model[7].ContentName)
+                        </p>
+                 
+                    }
+                        else
+                        {
+                            <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.BathRoomdef</p>
+                       
+                        }
+                            }
+                            else
+                            {
+                    
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.BathRoomdef</p>
+                        
+                            }
+
+                            </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="vastu-design">
+                    <div class="vastu-design-icon">
+                        <img src="~/assets/img/icons/beam.png">
+                    </div>
+                    <div class="vastu-design-content">
+                        <h3>@Vastu.Resources.Resource.Beams</h3>
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            if (Model[8].ContentID == 12 && Model[8].ContentName != "")
+                            {
+                   
+                        <p  @*style="height:60px; overflow:hidden"*@>
+                            @Html.Raw(Model[8].ContentName)     </p>
+                   
+                    }
+                        else
+                        {
+                    
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Beamsdef</p>
+                        
+                        }
+                            }
+                            else
+                            {
+                  
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Beamsdef</p>
+                       
+                            }
+
+                            </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="vastu-design">
+                    <div class="vastu-design-icon">
+                        <img src="~/assets/img/icons/bed.png">
+                    </div>
+                    <div class="vastu-design-content">
+                        <h3>@Vastu.Resources.Resource.Bedroom</h3>
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            if (Model[9].ContentID == 13 && Model[9].ContentName != "")
+                            {
+                  
+                        <p  @*style="height:60px; overflow:hidden"*@>
+                             @Html.Raw(Model[9].ContentName)        </p>
+                    
+                    }
+                        else
+                        {
+                    
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Bedroomdef</p>
+                       
+                            }
+                            }
+                            else
+                            {
+                    
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Bedroomdef</p>
+                       
+                            }
+
+                            </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="vastu-design">
+                    <div class="vastu-design-icon">
+                        <img src="~/assets/img/icons/money.png">
+                    </div>
+                    <div class="vastu-design-content">
+                        <h3>@Vastu.Resources.Resource.CashandValuables</h3>
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            if (Model[10].ContentID == 14 && Model[10].ContentName != "")
+                            {
+                  
+                        <p  @*style="height:60px; overflow:hidden"*@>
+                             @Html.Raw(Model[10].ContentName)   </p>
+                    
+                        }
+                        else
+                        {
+                 
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.CashandValuablesdef</p>
+                       
+                        }
+                            }
+                            else
+                            {
+                  
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.CashandValuablesdef</p>
+                        
+                            }
+
+                            </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="vastu-design">
+                    <div class="vastu-design-icon">
+                        <img src="~/assets/img/icons/window.png">
+                    </div>
+                    <div class="vastu-design-content">
+                        <h3>@Vastu.Resources.Resource.Windows</h3>
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            if (Model[11].ContentID == 15 && Model[11].ContentName != "")
+                            {
+                              
+                                    <p  @*style="height:60px; overflow:hidden"*@>
+                                         @Html.Raw(Model[11].ContentName)      </p>
+                               
+                            }
+                            else
+                            {
+                  
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Windowsdef</p>
+                       
+                            }
+                        }
+                        else
+                        {
+                  
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Windowsdef</p>
+                      
+                        }
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="vastu-design">
+                    <div class="vastu-design-icon">
+                        <img src="~/assets/img/icons/door.png">
+                    </div>
+                    <div class="vastu-design-content">
+                        <h3>@Vastu.Resources.Resource.Doors</h3>
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            if (Model[12].ContentID == 16 && Model[12].ContentName != "")
+                            {
+                  
+                        <p  @*style="height:60px; overflow:hidden"*@>
+                            @Html.Raw(Model[12].ContentName) <span class="tooltiptext">@Html.Raw(Model[12].ContentName)</span>
+                                </p>
+                   
+                    }
+                        else
+                        {
+                 
+                        <p  @*style="height:60px; overflow:hidden"*@>
+                            @Vastu.Resources.Resource.Doorsdef
+                        </p>
+                       
+                        }
+                            }
+                            else
+                            {
+                   
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Doorsdef</p>
+                        <span class="tooltiptext">@Vastu.Resources.Resource.Doorsdef</span>
+                    
+                            }
+
+                            </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="vastu-design">
+                    <div class="vastu-design-icon">
+                        <img src="~/assets/img/icons/pillers.png">
+                    </div>
+                    <div class="vastu-design-content">
+                        <h3>@Vastu.Resources.Resource.Pillars</h3>
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            if (Model[13].ContentID == 17 && Model[13].ContentName != "")
+                            {
+                   
+                        <p  @*style="height:60px; overflow:hidden"*@>
+                             @Html.Raw(Model[13].ContentName)   </p>
+
+                 
+                    }
+                        else
+                        {
+                    
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Pillarsdef   </p>
+                        
+                        }
+                            }
+                            else
+                            {
+                   
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Pillarsdef   </p>
+                       
+                            }
+
+                            </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="vastu-design">
+                    <div class="vastu-design-icon">
+                        <img src="~/assets/img/icons/stairs.png">
+                    </div>
+                    <div class="vastu-design-content">
+                        <h3>@Vastu.Resources.Resource.Staircase</h3>
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            if (Model[14].ContentID == 18 && Model[14].ContentName != "")
+                            {
+                  
+                        <p  @*style="height:60px; overflow:hidden"*@>
+                             @Html.Raw(Model[14].ContentName)    </p>
+                 
+                        }
+                        else
+                        {
+                  
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Staircasedef</p>
+                        
+                        }
+                        }
+                        else
+                        {
+                    
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Staircasedef</p>
+                      
+                        }
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="vastu-design">
+                    <div class="vastu-design-icon">
+                        <img src="~/assets/img/icons/restroom.png">
+                    </div>
+                    <div class="vastu-design-content">
+                        <h3>@Vastu.Resources.Resource.Toilets</h3>
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            if (Model[15].ContentID == 19 && Model[15].ContentName != "")
+                            {
+                   
+                        <p  @*style="height:60px; overflow:hidden"*@>
+                             @Html.Raw(Model[15].ContentName)    </p>
+                    
+                        }
+                        else
+                        {
+                  
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Toiletsdef</p>
+                      
+                        }
+                        }
+                        else
+                        {
+                 
+                        <p>@Vastu.Resources.Resource.Toiletsdef</p>
+                       
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="vastu-design">
+                    <div class="vastu-design-icon">
+                        <img src="~/assets/img/icons/tree.png">
+                    </div>
+                    <div class="vastu-design-content">
+                        <h3>@Vastu.Resources.Resource.Trees</h3>
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            if (Model[16].ContentID == 20 && Model[16].ContentName != "")
+                            {
+                  
+                        <p  @*style="height:60px; overflow:hidden"*@>
+                             @Html.Raw(Model[16].ContentName)            </p>
+                  
+                        }
+                        else
+                        {
+                         <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Treesdef</p>
+                    
+                            }
+                            }
+                            else
+                            {
+                  
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Treesdef</p>
+                       
+                    }
+                          
+
+                            </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-6">
+                <div class="vastu-design">
+                    <div class="vastu-design-icon">
+                        <img src="~/assets/img/icons/living_room.png" />
+                    </div>
+                    <div class="vastu-design-content">
+                        <h3>@Vastu.Resources.Resource.LivingRoom</h3>
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            if (Model[17].ContentID == 38 && Model[17].ContentName != "")
+                            {
+                 
+                        <p  @*style="height:60px; overflow:hidden"*@>
+                             @Html.Raw(Model[17].ContentName)   </p>
+                   
+                        }
+                        else
+                        {
+                    
+                        <p  @*style="height:60px; overflow:hidden"*@>
+                            @Vastu.Resources.Resource.LivingRoomdef
+
+                        </p>
+                        
+                            }
+                            }
+                            else
+                            {
+                    
+                        <p  @*style="height:60px; overflow:hidden"*@>
+                            @Vastu.Resources.Resource.LivingRoomdef
+                        </p>
+                      
+                                }
+
+                            </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-6">
+                <div class="vastu-design">
+                    <div class="vastu-design-icon">
+                        <img src="~/assets/img/icons/store-room.png" />
+                    </div>
+                    <div class="vastu-design-content">
+                        <h3>@Vastu.Resources.Resource.StoreRoom</h3>
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            if (Model[18].ContentID == 39 && Model[18].ContentName != "")
+                            {
+                   
+                        <p  @*style="height:60px; overflow:hidden"*@>
+                             @Html.Raw(Model[18].ContentName)    </p>
+                    
+                        }
+                        else
+                        {
+                   
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.StoreRoomdef</p>
+                      
+                        }
+                        }
+                        else
+                        {
+                    
+                        <p>@Vastu.Resources.Resource.StoreRoomdef</p>
+                        
+                        }
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <div class="vastu-design">
+                    <div class="vastu-design-icon">
+                        <img src="~/assets/img/icons/pooja-room_green.png" />
+                    </div>
+                    <div class="vastu-design-content">
+                        <h3>@Vastu.Resources.Resource.PoojaRoom</h3>
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            if (Model[19].ContentID == 40 && Model[19].ContentName != "")
+                            {
+                  
+                        <p  @*style="height:60px; overflow:hidden"*@>
+                             @Html.Raw(Model[19].ContentName)      </p>
+                    
+                        }
+                        else
+                        {
+                    
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.PoojaRoomdef</p>
+                       
+                        }
+                        }
+                        else
+                        {
+                    
+                        <p> @Vastu.Resources.Resource.PoojaRoomdef</p>
+                       
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <div class="vastu-design">
+                    <div class="vastu-design-icon">
+                        <img src="~/assets/img/icons/treasure room.png" />
+                    </div>
+                    <div class="vastu-design-content">
+                        <h3>@Vastu.Resources.Resource.Treasury</h3>
+                        @if (Model != null && Model.Count > 0)
+                        {
+                            if (Model[20].ContentID == 41 && Model[20].ContentName != "")
+                            {
+                 
+                        <p  @*style="height:60px; overflow:hidden"*@>
+                             @Html.Raw(Model[20].ContentName)          </p>
+               
+                        }
+                        else
+                        {
+                 
+                        <p  @*style="height:60px; overflow:hidden"*@>@Vastu.Resources.Resource.Treasurydef</p>
+                       
+                            }
+                            }
+                            else
+                            {
+                   
+                        <p  @*style="height:60px; overflow:hidden"*@> @Vastu.Resources.Resource.Treasurydef</p>
+                        
+                                }
+                           
+
+                            </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+</div>
+<!-- Container start -->

@@ -1,0 +1,70 @@
+﻿@model Vasthu_Models.VS_IMAGE_MST
+
+@{
+    ViewBag.Title = @Vastu.Resources.Resource.ImageMasterCreate;
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+    <h2>@Vastu.Resources.Resource.ImageMasterCreate</h2>
+
+
+@using (Html.BeginForm("Create", "ImageMaster", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group row">
+        @Html.Label(Vastu.Resources.Resource.ImageDetails, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-3">
+            @Html.EditorFor(model => model.IMAGE_DETAILS, new { htmlAttributes = new { @class = "form-control", @style = "border-radius: 6px;", @maxlength = "200", @autocomplete = "off" } })
+            @Html.ValidationMessageFor(model => model.IMAGE_DETAILS, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group row">
+        @Html.Label(Vastu.Resources.Resource.ImageFile, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(model => model.PostedFile, new { type = "file", @class = "choosenfile2" })
+            @Html.ValidationMessageFor(m => m.PostedFile, "", new { @class = "text-danger", @style = "display:contents;" })
+
+        </div>
+    </div>
+    <div class="form-group row">
+        @Html.Label(Vastu.Resources.Resource.ImageSymbol, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-3">
+            @Html.EditorFor(model => model.IMAGE_SYMBOL, new { htmlAttributes = new { @class = "form-control", @style = "border-radius: 6px;", @maxlength = "10", @autocomplete = "off" } })
+            @Html.ValidationMessageFor(model => model.IMAGE_SYMBOL, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+    <div class="form-group row">
+        @Html.Label(Vastu.Resources.Resource.Disable, htmlAttributes: new { @class = "control-label col-md-3" })
+        <div class="col-md-6" style="margin-left: -94px;">
+
+            @Html.EditorFor(model => model.DELETE_FLAG)
+            @Html.ValidationMessageFor(model => model.DELETE_FLAG, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="@Vastu.Resources.Resource.Create" class="btn btn-default btnCreate" style="background-color:#1bbd36; color:white;width: 84px;" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink(Vastu.Resources.Resource.BacktoList, "Index", null, htmlAttributes: new { @class = "edit", @style = "margin-left: 0px;" })
+</div>
+
+@section Scripts {
+
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquery")
+}
+
