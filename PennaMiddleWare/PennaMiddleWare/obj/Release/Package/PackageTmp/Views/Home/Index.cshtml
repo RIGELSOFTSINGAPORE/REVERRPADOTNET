@@ -1,0 +1,296 @@
+@model List<PennaMiddleWare.Models.ZSD_REAL_DATA_SRV_REAL>
+@{
+    Layout = null;
+    WebGrid webGrid = new WebGrid(source: Model, canSort: false, canPage: false);
+    //var maxid = ViewData["GroupID"].ToString();
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="~/Scripts/table2excel.js"></script>
+
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <title>Penna-MiddleWare</title>
+    <style type="text/css">
+        body {
+            font-family: Arial;
+            font-size: 10pt;
+        }
+
+        .table {
+            overflow-x: scroll;
+        }
+
+        .Grid {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+            .Grid th {
+                background-color: #F7F7F7;
+                font-weight: bold;
+            }
+
+            .Grid th, .Grid td {
+                padding: 5px;
+                border: 1px solid #ccc;
+            }
+
+            .Grid, .Grid table td {
+                border: 0px solid #ccc;
+            }
+
+                .Grida, .Grid a:visited {
+                    color: blue;
+                }
+    </style>
+</head>
+
+
+
+<header>
+    <nav class="navigation">
+
+        <!-- Logo -->
+        <div class="logo">
+            <a class="navbar-brand" href="index-2.html">
+                <img src="~/assets/img/Logo.png" alt="Logo">
+            </a>
+        </div>
+        <h1>MiddleWare Demo</h1>
+
+    </nav>
+
+</header>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<body>
+    <script type="text/javascript">
+        //$(function () {
+        //    $("#btnExport").click(function () {
+        //        $("#WebGrid").table2excel({
+        //            filename: "Table.xls"
+        //        });
+        //    });
+        //});
+
+        function Exportsubmit() {
+            //alert("Exportsubmit");
+
+            document.getElementById("InputID").value = "E";
+        }
+        function Importsubmit() {
+            //alert("Importsubmit");
+            document.getElementById("InputID").value = "I";
+        }
+        function Searchsubmit() {
+            // alert("Searchsubmit");
+            document.getElementById("InputID").value = "S";
+        }
+    </script>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @id = "WebGridForm" }))
+    {
+        <div class="hero-image">
+            <img src="~/assets/img/API_bg.jpg" alt="Image" style="width: 100%;margin-top: -27px;">
+        </div>
+        <div class="container">
+
+            Realization Report
+            <a href=@Url.Action("LogiCost","Home") class="btn btn-outline-secondary" class="clearright">
+                Logi Cost Report
+            </a>
+        </div>
+        <div class="container">
+            <div>
+                @*@Html.Hidden(ViewData["GroupID"].ToString(), new { @id = "GroupID" })*@
+                @*@Html.TextBox("GroupID", maxid);*@
+                @Html.Hidden("InputID")
+                From Date : @Html.TextBox("startDate", String.Format("{0:d}", ViewBag.startDate as string), new { placeholder = "yyyymmdd" })
+
+
+                @*Datepicker changed by sabeena*@
+
+                To Date : @Html.TextBox("endDate", String.Format("{0:d}", ViewBag.endDate as string), new { placeholder = "yyyymmdd" })
+                <div style="padding-top: 20px;">
+
+                    <input type="submit" value=Import class="btn btn-info" style="margin-left: 10px;" onclick="Importsubmit()" />
+                    <input type="submit" value=Search class="btn btn-info" style="margin-left: 10px;" onclick="Searchsubmit()" />
+                    <input type="submit" id="btnExport" value="Export" class="btn btn-info" style="margin-left: 10px;" onclick="Exportsubmit()" />
+                    <a href=@Url.Action("Index","Home") class="btn btn-outline-secondary" class="clearright">
+                        Clear
+                    </a>
+                    
+                   
+                </div>
+
+            </div>
+
+
+        </div>
+    }
+    <div class="card test" style="padding: 20px;margin-top: 10px;margin-bottom: 5%;">
+        <div class="table" @*style="overflow-x: scroll;"*@>
+
+            @webGrid.GetHtml(
+            htmlAttributes: new { @id = "WebGrid", @class = "Grid" },
+            columns: webGrid.Columns(
+                        webGrid.Column("Vbeln", "Billing Doc."),
+                        webGrid.Column("Vgbel", "Reference Doc."),
+                        webGrid.Column("Aubel", "Sales Document"),
+                        webGrid.Column("Erdat", "Created On"),
+                        webGrid.Column("Fkart", "Billing Type"),
+                        webGrid.Column("Regio", "Region"),
+                        webGrid.Column("Vkgrp", "Sales Group"),
+                        webGrid.Column("Dstrc", "District"),
+                        webGrid.Column("Mnfplant", "Plant"),
+                        webGrid.Column("Plant", "Plant"),
+                        webGrid.Column("Grade", "Mat.pricing grp"),
+                        webGrid.Column("Matkl", "Material Group"),
+                        webGrid.Column("Kalks", "Cust.pric.proc."),
+                        webGrid.Column("Kdgrp", "Customer group"),
+                        webGrid.Column("Fkdat", "Billing Date"),
+                        webGrid.Column("Matnr", "Material"),
+                        webGrid.Column("Custcode1", "Customer"),
+                        webGrid.Column("Cname1", "Name"),
+                        webGrid.Column("Custcode2", "Customer"),
+                        webGrid.Column("Cname2", "Name"),
+                        webGrid.Column("Custcode3", "Customer"),
+                        webGrid.Column("Cname3", "Name"),
+                        webGrid.Column("ComAg", "Customer"),
+                        webGrid.Column("ComName", "Name"),
+                        webGrid.Column("Trans", "Customer"),
+                        webGrid.Column("TransName", "Name"),
+                        webGrid.Column("Lgort", "Storage Loc."),
+                        webGrid.Column("Lgobe", "Description"),
+                        webGrid.Column("Fkimg", "Billed qty"),
+                        webGrid.Column("Grossturn", "Net Value"),
+                        webGrid.Column("Inco1", "Incoterms"),
+                        webGrid.Column("Inco2", "Incoterms 2"),
+                        webGrid.Column("Stprs", "Standard price"),
+                        webGrid.Column("Primaryfri", "Net Value"),
+                        webGrid.Column("Secondaryfri", "Net Value"),
+                        webGrid.Column("Exwpf", "Net Value"),
+                        webGrid.Column("Exgsf", "Net Value"),
+                        webGrid.Column("Salestax", "Net Value"),
+                        webGrid.Column("Commission", "Net Value"),
+                        webGrid.Column("Exciseduty", "Net Value"),
+                        webGrid.Column("Pddiscount", "Net Value"),
+                        webGrid.Column("Oddiscount", "Net Value"),
+                        webGrid.Column("Cfcharges", "Net Value"),
+                        webGrid.Column("Cddiscount", "Net Value"),
+                        webGrid.Column("Packing", "Net Value"),
+                        webGrid.Column("Unloading", "Net Value"),
+                        webGrid.Column("Octrai", "Net Value"),
+                        webGrid.Column("Vat", "Net Value"),
+                        webGrid.Column("Igst", "Net Value"),
+                        webGrid.Column("Cgst", "Net Value"),
+                        webGrid.Column("Sgst", "Net Value"),
+                        webGrid.Column("Ugst", "Net Value"),
+                        webGrid.Column("ExpHand", "Net Value"),
+                        webGrid.Column("Transport", "Net Value"),
+                        webGrid.Column("AmtDwFrt", "Net Value"),
+                        webGrid.Column("PltFrt", "Net Value"),
+                        webGrid.Column("Netturn", "Net Value"),
+                        webGrid.Column("Nakedreal", "Net Value"),
+                        webGrid.Column("Statedesc", "Description"),
+                        webGrid.Column("Sgrpdesc", "Description"),
+                        webGrid.Column("Disdesc", "Description"),
+                        webGrid.Column("Graddesc", "Description"),
+                        webGrid.Column("Mnfdesc", "Name 1"),
+                        webGrid.Column("Plantdesc", "Name 1"),
+                        webGrid.Column("Pgrpdesc", "Name"),
+                        webGrid.Column("Cdate", "Current Date"),
+                        webGrid.Column("Time", "Time"),
+                        webGrid.Column("Suser", "User Name"),
+                        webGrid.Column("BlockCt", "Block Ctgry"),
+                        webGrid.Column("Route", "Description"),
+                        webGrid.Column("Canceldate", "Created On"),
+                        webGrid.Column("Cancelflag", "Single-Character Flag"),
+                        webGrid.Column("Zzlgort1", "Storage location"),
+                        webGrid.Column("Bzirk", "Sales district"),
+                        webGrid.Column("Vkbur", "Sales Office"),
+                        webGrid.Column("Zzzone1", "Transport Zone"),
+                        webGrid.Column("Zzbranch", "Branch Office"),
+                        webGrid.Column("PernrEr", "Personnel No."),
+                        webGrid.Column("EnameEr", "Empl./appl.name"),
+                        webGrid.Column("PernrY1", "Personnel No."),
+                        webGrid.Column("EnameY1", "Empl./appl.name"),
+                        webGrid.Column("PernrY2", "Personnel No."),
+                        webGrid.Column("EnameY2", "Empl./appl.name"),
+                        webGrid.Column("PernrY3", "Personnel No."),
+                        webGrid.Column("EnameY3", "Empl./appl.name"),
+                        webGrid.Column("PernrY4", "Personnel No."),
+                        webGrid.Column("EnameY4", "Empl./appl.name"),
+                        webGrid.Column("PernrY5", "Personnel No."),
+                        webGrid.Column("EnameY5", "Empl./appl.name"),
+                        webGrid.Column("PernrY6", "Personnel No."),
+                        webGrid.Column("EnameY6", "Empl./appl.name"),
+                        webGrid.Column("PernrY7", "Personnel No."),
+                        webGrid.Column("EnameY7", "Empl./appl.name"),
+                        webGrid.Column("PernrY8", "Personnel No."),
+                        webGrid.Column("EnameY8", "Empl./appl.name"),
+                        webGrid.Column("UpfrntDiscount", "Upfront Discount"),
+                        webGrid.Column("IndPriFrt", "Indirect Primary Fre"),
+                        webGrid.Column("ShipFrtChrgs", "Ship Freight"),
+                        webGrid.Column("ShipHandChrgs", "Ship Handling Charge"),
+                        webGrid.Column("ZcustGrp", "Customer group"),
+                        webGrid.Column("ZcustGrpDesc", "Name"),
+                        webGrid.Column("Vc", "Varible Cost"),
+                        webGrid.Column("ZsalePromValue", "Sale Promotion Value"),
+                        webGrid.Column("Waers", "Currency"),
+                        webGrid.Column("Msehi", "Int. Meas. Unit"),
+                        webGrid.Column("PayFreight", "To Pay Frieght"),
+                        webGrid.Column("ExFreight", "Ex.Freight")
+
+            ))
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    @*<script type="text/javascript">
+            $("body").on("click", ".Grid tfoot a", function () {
+                $('#WebGridForm').attr('action', $(this).attr('href')).submit();
+                return false;
+            });
+        </script>*@
+    @*@if (Model.Count == 0)
+        {
+            <script type="text/javascript">
+                    $(function () {
+                        var row = $("#WebGrid")[0].insertRow(-1);
+                        var cell = $(row.insertCell(-1));
+                        cell.html("No records found.");
+                        cell.attr("colspan", "107").attr("align", "center");
+                    });
+                </script>
+        }*@
+
+    <script type="text/javascript" src="~/Scripts/ScrollableTablePlugin_1.0_min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#WebGrid').Scrollable({
+                ScrollHeight: 280
+            });
+        });
+    </script>
+</body>
+
+<footer id="footer">
+
+    <div>
+        2021 Copyright: Develop by REVERPRO
+    </div>
+
+    
+</footer>
+
+</html>  
