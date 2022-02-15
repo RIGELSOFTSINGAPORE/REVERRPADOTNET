@@ -1,0 +1,280 @@
+===========================================
+Scheduler From Date  20220224
+Scheduler To Date  20220124
+===========================================
+Scheduler From Date  20211225
+Scheduler To Date  20220124
+===========================================
+Scheduler From Date  20211225
+Scheduler To Date  20220124
+===========================================
+Scheduler From Date  20211225
+Scheduler To Date  20220124
+===========================================
+Scheduler From Date  20211225
+Scheduler To Date  20220124
+===========================================
+Scheduler From Date  20211225
+Scheduler To Date  20220124
+===========================================
+Scheduler From Date  20211225
+Scheduler To Date  20220124
+===========================================
+Scheduler From Date  20211225
+Scheduler To Date  20220124
+===========================================
+Scheduler From Date  20211225
+Scheduler To Date  20220124
+===========================================
+Scheduler From Date  20211225
+Scheduler To Date  20220124
+===========================================
+Scheduler From Date  20211225
+Scheduler To Date  20220124
+===========================================
+Scheduler From Date  20211225
+Scheduler To Date  20220124
+Executed on : 2022/01/25 22:19:14
+Insert / Upddate Table : YREALIZATION
+YREALIZATION Error Message : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+===========================================
+Scheduler From Date  20211225
+Scheduler To Date  20220124
+===========================================
+Scheduler From Date  20211225
+Scheduler To Date  20220124
+Executed on : 2022/01/25 22:25:04
+Insert / Upddate Table : YREALIZATION
+Insert / Upddate Table : YREALIZATION
+Insert / Upddate Table : YREALIZATION
+Insert / Upddate Table : YREALIZATION
+WebApi Record Count : 32930
+Tabel record Count : 32930
+Record Mathing
+===========================================
+Scheduler From Date  20211226
+Scheduler To Date  20220125
+===========================================
+Scheduler From Date  20211226
+Scheduler To Date  20220125
+Executed on : 2022/01/26 20:36:14
+Insert / Upddate Table : YREALIZATION
+Insert / Upddate Table : YREALIZATION
+Insert / Upddate Table : YREALIZATION
+Insert / Upddate Table : YREALIZATION
+WebApi Record Count : 32974
+Tabel record Count : 32974
+Record Mathing
+===========================================
+Scheduler From Date  20211226
+Scheduler To Date  20220125
+Executed on : 2022/01/26 20:52:36
+Insert / Upddate Table : YREALIZATION
+Insert / Upddate Table : YREALIZATION
+Insert / Upddate Table : YREALIZATION
+Insert / Upddate Table : YREALIZATION
+WebApi Record Count : 32974
+Tabel record Count : 32974
+Record Mathing
+===========================================
+Scheduler From Date  20211226
+Scheduler To Date  20220125
+Executed on : 2022/01/26 22:33:08
+Insert / Upddate Table : YREALIZATION
+WebApi Record Count : 32974
+Tabel record Count : 32974
+Record Mathing
+===========================================
+Scheduler From Date  20211226
+Scheduler To Date  20220125
+Executed on : 2022/01/26 23:54:01
+Insert / Upddate Table : YREALIZATION
+WebApi Record Count : 32974
+Tabel record Count : 32974
+Record Mathing
+Executed on : 2022/01/26 23:55:50
+Insert/Update Table : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 33108
+Tabel record Count : 33108
+Record Mathing
+===========================================
+===========================================
+Scheduler From Date  20211227
+Scheduler To Date  20220126
+Executed on : 2022/01/27 00:04:03
+Insert/Update Table : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 32540
+Tabel record Count : 32540
+Record Mathing
+===========================================
+===========================================
+Scheduler From Date  20211227
+Scheduler To Date  20220126
+Executed on : 2022/01/27 09:34:26
+Insert / Upddate Table : YREALIZATION
+WebApi Record Count : 33239
+Tabel record Count : 33239
+Record Mathing
+Executed on : 2022/01/27 09:36:46
+Insert/Update Table : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 33358
+Tabel record Count : 33358
+Record Mathing
+===========================================
+===========================================
+Scheduler From Date  20211227
+Scheduler To Date  20220126
+Executed on : 2022/01/27 10:24:38
+Insert / Upddate Table : YREALIZATION
+WebApi Record Count : 33239
+Tabel record Count : 33239
+Record Mathing
+Executed on : 2022/01/27 10:26:39
+Insert/Update Table : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 33358
+Tabel record Count : 33358
+Record Mathing
+===========================================
+===========================================
+Scheduler From Date  20211227
+Scheduler To Date  20220126
+Executed on : 2022/01/27 12:40:33
+Insert / Upddate Table : YREALIZATION
+WebApi Record Count : 33239
+Tabel record Count : 33239
+Record Mathing
+Executed on : 2022/01/27 12:42:36
+Insert/Update Table : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 33358
+Tabel record Count : 33358
+Record Mathing
+===========================================
+===========================================
+Scheduler From Date  20211227
+Scheduler To Date  20220126
+Executed on : 2022/01/27 17:15:04
+Insert / Upddate Table : YREALIZATION
+WebApi Record Count : 33239
+Tabel record Count : 33239
+Record Mathing
+Executed on : 2022/01/27 17:17:05
+Insert/Update Table : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 33358
+Tabel record Count : 33358
+Record Mathing
+===========================================
+===========================================
+Scheduler From Date  20211227
+Scheduler To Date  20220126
+===========================================
+Scheduler From Date  20211227
+Scheduler To Date  20220126
+===========================================
+Scheduler From Date  20211228
+Scheduler To Date  20220127
+===========================================
+Scheduler From Date  20211228
+Scheduler To Date  20220127
+===========================================
+Scheduler From Date  20211228
+Scheduler To Date  20220127
+Executed on : 2022/01/28 11:35:40
+Insert / Upddate Table : YREALIZATION
+WebApi Record Count : 32997
+Tabel record Count : 32997
+Record Mathing
+Executed on : 2022/01/28 11:39:46
+Insert/Update Table : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 33103
+Tabel record Count : 33103
+Record Mathing
+===========================================
+===========================================
+Scheduler From Date  20211228
+Scheduler To Date  20220127
+Executed on : 2022/01/28 11:53:47
+Insert / Upddate Table : YREALIZATION
+WebApi Record Count : 32997
+Tabel record Count : 32997
+Record Mathing
+Executed on : 2022/01/28 11:55:53
+Insert/Update Table : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 33103
+Tabel record Count : 33103
+Record Mathing
+===========================================
+===========================================
+Scheduler From Date  20211228
+Scheduler To Date  20220127
+===========================================
+Scheduler From Date  20211228
+Scheduler To Date  20220127
+===========================================
+Scheduler From Date  20211228
+Scheduler To Date  20220127
+===========================================
+Scheduler From Date  20211228
+Scheduler To Date  20220127
+===========================================
+Scheduler From Date  20211228
+Scheduler To Date  20220127
+===========================================
+Scheduler From Date  20211228
+Scheduler To Date  20220127
+Executed on : 2022/01/28 13:44:18
+Insert / Upddate Table : YREALIZATION
+WebApi Record Count : 32997
+Table record Count : 32997
+Record Mathing
+Executed on : 2022/01/28 13:46:37
+Insert/Update Table : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 33103
+Table record Count : 33103
+Record Mathing
+===========================================
+===========================================
+Scheduler From Date  20211228
+Scheduler To Date  20220127
+Executed on : 2022/01/28 15:12:11
+Insert / Upddate Table : YREALIZATION
+WebApi Record Count : 32997
+Table record Count : 32997
+Record Mathing
+Executed on : 2022/01/28 15:20:11
+Insert/Update Table : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 33103
+Table record Count : 33103
+Record Mathing
+===========================================
+===========================================
+Scheduler From Date  20211231
+Scheduler To Date  20220130
+Executed on : 2022/01/31 14:01:27
+Insert / Upddate Table : YREALIZATION
+YREALIZATION Error Message : Column 'MATNR' cannot be null
+===========================================
+Scheduler From Date  20211231
+Scheduler To Date  20220130
+Executed on : 2022/01/31 14:03:03
+Insert / Upddate Table : YREALIZATION
+YREALIZATION Error Message : Column 'MATNR' cannot be null
+===========================================
+Scheduler From Date  20211231
+Scheduler To Date  20220130
+Executed on : 2022/01/31 14:03:52
+Insert / Upddate Table : YREALIZATION
+YREALIZATION Error Message : Column 'MATNR' cannot be null
+===========================================
+Scheduler From Date  20211231
+Scheduler To Date  20220130
+Executed on : 2022/01/31 14:58:56
+Insert / Upddate Table : YREALIZATION
+WebApi Record Count : 31074
+Table record Count : 31075
+Record Insert Failed
+Executed on : 2022/01/31 15:06:37
+Insert/Update Table : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 31172
+Table record Count : 31172
+Record Mathing
+===========================================
