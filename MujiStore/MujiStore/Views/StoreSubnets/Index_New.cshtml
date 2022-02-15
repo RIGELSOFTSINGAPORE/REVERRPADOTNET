@@ -1,0 +1,361 @@
+﻿
+@using PagedList.Mvc
+@{
+    var lan = System.Threading.Thread.CurrentThread.CurrentCulture;
+    ViewBag.Lan = lan.Parent.Name;
+
+    var storedtl = ViewData["StoreInfo"] as PagedList.PagedList<MujiStore.Models.tblSubnet>;
+    
+    var subnetdtl = ViewData["SubnetInfo"] as IEnumerable<MujiStore.Models.tblSubnet>;
+}
+<style>
+    #link a {
+        background: none;
+        color: blue;
+    }
+</style>
+<ol class="breadcrumb" id="breadcrumb">
+    <li>@Html.ActionLink(MujiStore.Resources.Resource.breadcrumbVideoall, "ViewUploadDetails", "VideoFiles")</li>
+    <li>
+        @Html.ActionLink(@MujiStore.Resources.Resource.breadcrumbManagement, "Index", "Menus")
+    </li>
+    <li>@Html.ActionLink(MujiStore.Resources.Resource.breadcrumbSystemmaintenance, "InfoMenus", "Menus")</li>
+    <li>
+        @MujiStore.Resources.Resource.Breadcrumbstoresubnet
+    </li>
+</ol>
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-4px; margin-bottom:15px;">@MujiStore.Resources.Resource.StoreSubnetJoinReferenceDelete</h2>
+
+@using (Html.BeginForm("Index_new", "storeSubnets", FormMethod.Post, new { @name = "Form1" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.Hidden("btnSubmit")
+
+    <div class="col-sm-12" style="margin-left:-15px">
+        @MujiStore.Resources.Resource.Checkordeletesubnets
+        <br />
+        @MujiStore.Resources.Resource.StoreSelection : @Html.DropDownList("Store", new SelectList(ViewBag.Store, "Value", "Text"), htmlAttributes: new { @class = "form-control1",@style="width:80%" })
+
+    </div>
+    
+
+}
+
+
+
+<br />
+<br />
+@if (storedtl == null)
+{ }
+else
+{
+    <br />
+    <p>
+        @if (ViewBag.Lan == "ja")
+        {
+             <label style="font-weight:normal">
+                @ViewBag.storename @MujiStore.Resources.Resource.Listofsubnetsassociated
+            </label>
+        }
+        else if (ViewBag.Lan == "en")
+        {
+    <label style="font-weight:normal">
+        @MujiStore.Resources.Resource.Listofsubnetsassociated  @ViewBag.storename
+    </label>
+        }
+        else
+        {
+            <label style = "font-weight:normal" >
+                 @ViewBag.storename @MujiStore.Resources.Resource.Listofsubnetsassociated
+             </label>
+        }
+
+
+
+
+    </p>
+
+    <table class="usertbl table" style="background-color:#ffffff;">
+        <tr  class="thcolor" >
+            <th>
+                @Html.DisplayName(MujiStore.Resources.Resource.subnetID)
+            </th>
+            <th>
+                @Html.DisplayName(MujiStore.Resources.Resource.IPaddress)
+            </th>
+            <th>
+                @Html.DisplayName(MujiStore.Resources.Resource.ModtblSubnetSubMask)
+            </th>
+
+        </tr>
+        <tbody style="width:100%">
+
+
+            @foreach (var item in storedtl)
+            {
+                @Html.AntiForgeryToken()
+                <tr style="background-color:#EEE;" id="link">
+                    <td>
+                        
+                        <a href="#" onclick="UpdateStore(@item.SubnetID);" id="btnStore" data-toggle="modal" data-target="#StoreModal" title="Store">@item.SubnetID</a>
+
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SNIPAddress)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SubnetMask)
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    if (storedtl.PageSize < storedtl.TotalItemCount)
+    {
+        <div>
+            @MujiStore.Resources.Resource.CommonPage @(storedtl.PageCount < storedtl.PageNumber ? 0 : storedtl.PageNumber) @MujiStore.Resources.Resource.CommonOf @storedtl.PageCount
+
+            @Html.PagedListPager(storedtl, page => Url.Action("Index_new",
+                 new { page, SearchID = ViewBag.SearchID, btnSubmit = ViewBag.btnSubmit, store = ViewBag.store }))
+
+        </div>
+    }
+}
+<br />
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-4px; margin-bottom:15px;">@MujiStore.Resources.Resource.Addanexistingsubnet</h2>
+
+@using (Html.BeginForm("Index_new", "storeSubnets", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.Hidden("Store")
+
+    <div class="col-sm-12 form-group" style="margin-left:-15px">
+      
+            @MujiStore.Resources.Resource.SearchforasubnetandclickonthesubnetID
+            <br />
+            @MujiStore.Resources.Resource.CommonSearch: @Html.TextBox("SearchID", ViewBag.SearchID as string, new { @class = "form-control1", @style = "width:80%", @type = "search" })
+
+
+        <input type="submit" value="@MujiStore.Resources.Resource.CommonSearch" name="SubmitSubnet" style="margin-left:35px; margin-top:5px" class="btn btn-default " />
+    </div>
+}
+@if (subnetdtl == null)
+{ }
+else
+{
+    @Html.Hidden("Store")
+    <br />
+    <br />
+    <p>
+        <label style="font-weight:normal">@subnetdtl.Count() @MujiStore.Resources.Resource.applicablesubnets</label>
+
+    </p>
+    <div class="table-responsive">
+        <table class="table" style="background-color:#ffffff;">
+            <tr class="thcolor">
+                <th>
+                    @Html.DisplayName(MujiStore.Resources.Resource.subnetID)
+                </th>
+                <th>
+                    @Html.DisplayName(MujiStore.Resources.Resource.IPaddress)
+                </th>
+                <th>
+                    @Html.DisplayName(MujiStore.Resources.Resource.ModtblSubnetSubMask)
+                </th>
+
+                <th>
+                    @Html.DisplayName(MujiStore.Resources.Resource.WanBandWidth)
+                </th>
+                <th>
+                    @Html.DisplayName(MujiStore.Resources.Resource.ModtblSubnetLANBandW)
+                </th>
+            </tr>
+            <tbody style="width:100%">
+
+                @foreach (var item in subnetdtl)
+                {
+                    @Html.AntiForgeryToken()
+                    <tr style="background-color:#EEE;" id="link">
+                        <td>
+                            
+                            <a href="#" onclick="UpdateStoreSubnet(@item.SubnetID);" id="btnSubnet" data-toggle="modal" data-target="#StoreModal" title="Subnet">@item.SubnetID</a>
+
+
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SNIPAddress)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SubnetMask)
+                        </td>
+
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.WANBandWidth).00 KB/s
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LANBandWidth).00 KB/s
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+    
+}
+<div class="modal fade" id="ModelStoreSubnet" tabindex="-1" role="dialog" aria-labelledby="Store" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="height:100px">
+
+            <div class="modal-body Store">
+                <div>
+                    @MujiStore.Resources.Resource.DoyouwanttoremovetheSubnet
+
+                </div>
+                <div style="float:right">
+                    <button type="button" class="btn btn-secondary" style=" background: white; border:2px solid #822433" data-dismiss="modal">   @MujiStore.Resources.Resource.No</button>
+                    <button type="button" class="btn btn-primary btnOk ">   @MujiStore.Resources.Resource.Yes</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="ModelSubnet" tabindex="-1" role="dialog" aria-labelledby="Store" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style=" height:100px">
+
+            <div class="modal-body Store">
+                <div>
+                   
+                    <label id="msg" style="font-weight:normal"></label>
+
+                </div>
+                <div style="float:right">
+                    <button type="button" class="btn btn-secondary" style=" background: white; border:2px solid #822433" data-dismiss="modal">   @MujiStore.Resources.Resource.No</button>
+                    <button type="button" class="btn btn-primary btnOkSubnet ">   @MujiStore.Resources.Resource.Yes</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+@Html.Hidden("SubnetID")
+@*@Html.Hidden("Store")*@
+@section scripts
+{
+
+    <script>
+        $("body").on("change", "#Store", function () {
+          
+            var text = $(this).find('option:selected').text();
+            text = @Html.Raw(Json.Encode(@ViewBag.lst));
+
+            document.forms["Form1"].submit();
+        });
+        function UpdateStoreSubnet(SubnetID) {
+            $('#SubnetID').val(SubnetID);
+            
+            var subnetid = $('#SubnetID').val();
+            var Store = $('#Store').val();
+            
+            if ('@ViewBag.Lan' == "ja")
+            {
+                
+                var msg = "店舗 " + Store + " に対してサブネット " + subnetid + " を関連付けますか？";
+            }
+            else if ('@ViewBag.Lan' == "en")
+            {
+                var msg = "Do you want to associate subnet " + subnetid + " with store " + Store + "?";
+            }
+            else
+            {
+                var msg = "店舗" + Store + "に対してサブネット" + subnetid + "を関連付けますか？";
+            }
+               
+            $('#msg').text(msg);
+            $('#ModelSubnet').modal('show');
+            }
+        $('.btnOkSubnet').on('click', function () {
+            subnet($('#SubnetID').val());
+
+        });
+        function subnet(SubnetID,Store) {
+            Store = document.getElementById('Store').value;
+
+            $('#ModelStoreSubnet').modal('hide');
+            $.ajax({
+                url: '@Url.Action("updatesubnet", "StoreSubnets")',
+                type: 'POST',
+                data: { 'SubnetID': SubnetID, 'Store': Store },
+
+                success: function (SubnetID, Store) {
+                    var Store = $('#Store').val();
+                    var SearchID = $('#SearchID').val();
+                    var btnSubmit = $('#btnSubmit').val();
+                    var url =  '@Url.Action("Index_new", "StoreSubnets")';
+                    url += "?Store=" + escape(Store);
+                    url += "&SearchID=" + escape(SearchID);
+                    url += "&btnSubmit=" + escape(btnSubmit);
+                    window.location.href = url;
+                },
+                error: function (data) {
+                    var Store = $('#Store').val();
+                    var SearchID = $('#SearchID').val();
+                    var btnSubmit = $('#btnSubmit').val();
+                    var url =  '@Url.Action("Index_new", "StoreSubnets")';
+                    url += "?Store=" + escape(Store);
+                    url += "&SearchID=" + escape(SearchID);
+                    url += "&btnSubmit=" + escape(btnSubmit);
+                    window.location.href = url;
+                }
+
+            });
+        }
+
+        function UpdateStore(SubnetID) {
+            $('#SubnetID').val(SubnetID);
+            $('#ModelStoreSubnet').modal('show');
+        }
+        $('.btnOk').on('click', function () {
+            Storesubnet($('#SubnetID').val());
+
+        });
+        function Storesubnet(SubnetID,Store) {
+            Store = document.getElementById('Store').value;
+
+            $('#ModelStoreSubnet').modal('hide');
+            $.ajax({
+                url: '@Url.Action("updatestoresubnet", "StoreSubnets")',
+                type: 'POST',
+                data: { 'SubnetID': SubnetID, 'Store': Store },
+
+                success: function (SubnetID, Store) {
+                    var Store = $('#Store').val();
+                    var SearchID = $('#SearchID').val();
+                    var btnSubmit = $('#btnSubmit').val();
+                    var url =  '@Url.Action("Index_new", "StoreSubnets")';
+                    url += "?Store=" + escape(Store);
+                    url += "&SearchID=" + escape(SearchID);
+                    url += "&btnSubmit=" + escape(btnSubmit);
+                    window.location.href = url;
+                },
+                error: function (data) {
+                    var Store = $('#Store').val();
+                    var SearchID = $('#SearchID').val();
+                    var btnSubmit = $('#btnSubmit').val();
+                    var url =  '@Url.Action("Index_new", "StoreSubnets")';
+                    url += "?Store=" + escape(Store);
+                    url += "&SearchID=" + escape(SearchID);
+                    url += "&btnSubmit=" + escape(btnSubmit);
+                    window.location.href = url;
+                }
+
+            });
+        }
+    </script>
+}

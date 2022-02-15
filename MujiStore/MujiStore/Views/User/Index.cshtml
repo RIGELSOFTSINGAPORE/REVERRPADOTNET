@@ -1,0 +1,136 @@
+﻿@using PagedList.Mvc
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VieUserIndexBrowTitle;
+    var userDtl = ViewData["UserInfo"] as PagedList.PagedList<MujiStore.Models.tblUser>;
+}
+<style>
+    .btn-success {
+        color: #fff;
+        background-color: #822433;
+        border-color: #4CAE61;
+    }
+</style>
+
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-4px; margin-bottom:15px;">@MujiStore.Resources.Resource.VieUserIndexH2</h2>
+<p>
+    @Html.ActionLink(MujiStore.Resources.Resource.Createuser, "Create")
+</p>
+<table class="table" style="background-color:#ffffff;">
+    <tr style="background-color:#822433; color:#ffffff;">
+        <th>
+            @Html.DisplayName(MujiStore.Resources.Resource.VieUserIndexUserName)
+        </th>
+        <th>
+            @Html.DisplayName(MujiStore.Resources.Resource.VieUserIndexUserEmail)
+        </th>
+        
+        <th>
+            @Html.DisplayName(MujiStore.Resources.Resource.CommonDELFG)
+        </th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tbody style="width:100%">
+        @foreach (var item in userDtl)
+        {
+            @Html.AntiForgeryToken()
+            <tr style="background-color:#EEE;">
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserEmail)
+                </td>
+               
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.DELFG)
+                </td>
+                <td>
+                    @Html.ActionLink(MujiStore.Resources.Resource.Edit, "Edit", new { id = item.UserID })
+                </td>
+
+                <td>
+                    <a href="#" onclick="DeleteUserConfirmation(@item.UserID);" id="btnDelete" data-toggle="modal" data-target="#deleteModal" title="Delete">@MujiStore.Resources.Resource.CommonDelete</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+
+@if (userDtl.PageSize < userDtl.TotalItemCount)
+{
+    <div>
+        @MujiStore.Resources.Resource.CommonPage @(userDtl.PageCount < userDtl.PageNumber ? 0 : userDtl.PageNumber) @MujiStore.Resources.Resource.CommonOf @userDtl.PageCount
+
+        @Html.PagedListPager(userDtl, page => Url.Action("Index",
+             new { page }))
+
+    </div>
+}
+
+<div class="modal fade" id="DeleteUserModal" tabindex="-1" role="dialog" aria-labelledby="DeleteVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:470px; height:140px">
+            <div class="modal-header" style="background: #822433; margin-left:-1px; color:white;border-radius: 5px;">
+                <h5 class="modal-title" id="DeleteUserModalLabel" style="font-weight:600">   @MujiStore.Resources.Resource.DeleteUser</h5>
+
+            </div>
+            <div class="modal-body DeleteVastucontent">
+                <div>
+                    @MujiStore.Resources.Resource.Areyousureyoutodelete
+                </div>
+                <div style="float:right">
+                    <button type="button" class="btn btn-secondary" style=" background: white; border:2px solid #822433" data-dismiss="modal">   @MujiStore.Resources.Resource.No</button>
+                    <button type="button" class="btn btn-primary btndeleteUser btn-success" style="background:#822433">   @MujiStore.Resources.Resource.Yes</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+@Html.Hidden("DeleteUserId")
+@section scripts
+{
+
+    <script>
+
+        function DeleteUserConfirmation(UserID) {
+
+            $('#DeleteUserId').val(UserID);
+            $('#DeleteUserModal').modal('show');
+        }
+
+        $('.btndeleteUser').on('click', function () {
+
+            DeleteVastu($('#DeleteUserId').val());
+
+        });
+        function DeleteVastu(UserID) {
+
+            $('#DeleteUserModal').modal('hide');
+            $.ajax({
+                url: '@Url.Action("Deleteuser", "User")',
+                type: 'POST',
+                data: { 'UserID': UserID },
+                success: function (result) {
+                    if (result.errorcode == 1) {
+
+
+                        window.location.href = "@Url.Action("Index", "User", new { status = "sucess" })";
+                    }
+                    else {
+                          window.location.href = "@Url.Action("Index", "User", new { status = "sucess" })";
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+}

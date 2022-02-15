@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "OriginalVideo";
+    Layout = null;
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/Content/style.css" rel="stylesheet" />
+<style>
+    button:hover {
+        cursor: pointer;
+    }
+    .footer {
+        background-color: #7f0019;
+        text-align: center;
+        text-decoration-color: white;
+        min-height: 25px;
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+        color: white;
+        bottom: 0;
+    }
+</style>
+
+<div class="body-content"  style="padding:10px;margin-top:-60px">
+    <h2>@MujiStore.Resources.Resource.Acquisitionoforiginalfileofthisvideo</h2>
+    <br />
+
+    <div id="contentbody" class="videoarea" style="text-align:center;">
+        <video id="video" src="@Url.Content("~/Video/" + TempData["Videoplay"]  + "")" controls="true"
+               style="width:700px;height:400px;" />
+        <canvas id="myCanvas"
+                style="width:352px; height:250px; border: 1px solid #d3d3d3;">
+            @MujiStore.Resources.Resource.VietblMediaEditBrowSupport
+        </canvas>
+
+    </div>
+    <br />
+    <div style="text-align:center">
+        <button style="margin-left: 610px;" class="btn btn-primary" onclick="self.close()"> @MujiStore.Resources.Resource.VieMediaViewLogBackToVideo</button>
+    </div>
+</div>
+<div class="footer">
+  
+    <footer>  </footer>
+    </div>

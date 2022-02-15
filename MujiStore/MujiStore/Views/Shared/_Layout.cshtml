@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html>
+@{
+    var lan = System.Threading.Thread.CurrentThread.CurrentCulture;
+    ViewBag.Lan = lan.Parent.Name;
+    var ActionName = this.Request.RequestContext.RouteData.Values["action"].ToString();
+    var ContollerName = this.Request.RequestContext.RouteData.Values["controller"].ToString();
+
+    if (ContollerName.ToLower() == "menus".ToLower())
+    {
+        if (ActionName.ToLower() == "index".ToLower())
+        {
+            ViewBag.title = MujiStore.Resources.Resource.Managementmenu;
+        }
+        else if (ActionName.ToLower() == "infomenus".ToLower())
+        {
+            ViewBag.title = MujiStore.Resources.Resource.Systeminformationmaintenance;
+        }
+    }
+    else if (ContollerName.ToLower() == "login".ToLower())
+    {
+        if (ActionName.ToLower() == "index".ToLower())
+        {
+            ViewBag.title = MujiStore.Resources.Resource.Login;
+        }
+        else if (ActionName.ToLower() == "ChangePassword".ToLower())
+        {
+            ViewBag.title = MujiStore.Resources.Resource.Breadcrumbchangepassword;
+        }
+    }
+    else if (ContollerName.ToLower() == "VideoDemo".ToLower())
+    {
+        ViewBag.title = MujiStore.Resources.Resource.VideoChangeRequest;
+    }
+    else if (ContollerName.ToLower() == "MediaApproval".ToLower())
+    {
+        ViewBag.title = MujiStore.Resources.Resource.VideoChangeApproval;
+    }
+
+    else if (ContollerName.ToLower() == "StoreSubnetBatchReg".ToLower())
+    {
+        ViewBag.title = MujiStore.Resources.Resource.StoreSubnetBatchRegistration;
+    }
+    else if (ContollerName.ToLower() == "SubnetAll".ToLower())
+    {
+        ViewBag.title = MujiStore.Resources.Resource.MenuSubnet;
+    }
+    else if (ContollerName.ToLower() == "StoreAll".ToLower())
+    {
+        ViewBag.title = MujiStore.Resources.Resource.StoreMgt;
+    }
+    else if (ContollerName.ToLower() == "Folders".ToLower())
+    {
+        ViewBag.title = MujiStore.Resources.Resource.FolderMgt;
+    }
+    else if (ContollerName.ToLower() == "StoreSubnets".ToLower())
+    {
+        ViewBag.title = MujiStore.Resources.Resource.StoreSubnetMgt;
+    }
+    else if (ContollerName.ToLower() == "StoregroupAll".ToLower())
+    {
+        ViewBag.title = MujiStore.Resources.Resource.StoreGroupMgt;
+    }
+    else if (ContollerName.ToLower() == "User".ToLower())
+    {
+        ViewBag.title = MujiStore.Resources.Resource.UserMgt;
+    }
+    else if (ContollerName.ToLower() == "TroubleShoot".ToLower())
+    {
+        ViewBag.title = MujiStore.Resources.Resource.VieSearchH2;
+    }
+    else if (ContollerName.ToLower() == "Language".ToLower())
+    {
+        ViewBag.title = MujiStore.Resources.Resource.Language;
+    }
+
+
+}
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="Safari5=Safari14" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>@MujiStore.Resources.Resource.LayoutTitle </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
+
+    <script type="text/javascript">
+
+
+
+    </script>
+</head>
+<body>
+
+    <style>
+
+
+        #nav_bar a:hover {
+            color: white;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        img {
+            cursor: pointer;
+        }
+
+        .breadcrumb {
+            padding: 8px 27px;
+            margin-bottom: 20px;
+            list-style: none;
+            background-color: transparent;
+            border-radius: 0;
+            border-bottom: 1px solid;
+            width: 104%;
+            margin-left: -32px;
+            border-top: 1px solid;
+        }
+
+        #breadcrumb a {
+            background: none;
+            color: black;
+        }
+
+        #breadcrumb li {
+            color: black;
+        }
+
+        .container {
+            width: 100%
+        }
+
+        .footer {
+            background-color: #7f0019;
+            text-align: center;
+            text-decoration-color: white;
+            min-height: 25px;
+            position: fixed;
+            right: 0;
+            left: 0;
+            z-index: 1030;
+            color: white;
+            bottom: 0;
+        }
+
+        .navbar {
+            background-color: #7f0019;
+            border-color: black;
+        }
+
+            .navbar a {
+                background-color: transparent;
+            }
+
+            .navbar li:hover,
+            .navbar li:focus-within a {
+                background-color: transparent;
+                outline: none;
+            }
+
+        .displayflex {
+        }
+
+        .size {
+            margin-left: 84px;
+        }
+
+        .navbar-inverse {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        li {
+            color: red;
+            list-style: none
+        }
+
+        #nav ul {
+            display: none;
+        }
+
+        #nav li:hover > ul {
+            display: block;
+            float: left;
+        }
+
+        .mgt {
+            margin-left: 0px;
+            background-color: white;
+            border-radius: 0px;
+            padding: 0px;
+        }
+
+        .nav ul {
+            display: none;
+            position: fixed;
+            z-index: 1;
+        }
+
+        .navbar-nav > li > ul > a {
+            display: block;
+            width: 190px;
+            min-width: 185px;
+            border-radius: 0px;
+            border: 0.5px solid white;
+            background-color: #650a0a;
+        }
+
+        .navbar li ul :hover {
+            background-color: #860e23;
+            color: white;
+            text-decoration: none;
+            border: 1px solid black;
+        }
+
+
+        .modal {
+            text-align: center;
+            padding: 0 !important;
+        }
+
+            .modal:before {
+                content: '';
+                display: inline-block;
+                height: 100%;
+                vertical-align: middle;
+                margin-right: -4px;
+            }
+
+        .modal-dialog {
+            display: inline-block;
+            text-align: left;
+            vertical-align: middle;
+        }
+    </style>
+    <div id="nav_bar" class="navbar  navbar-fixed-top " style="height:52px">
+        <div class="container" style="width:100%;margin-left:10px;">
+            <div class="navbar-header ">
+                <a href=@Url.Action( "Index", "VideoFiles/ViewUploadDetails") class="navbar-brand">
+                    <img src="~/img/RYlogo.png" style="height:30px;width: 90px;" />
+                </a>
+
+                <label style="margin-top: 20px; color: white;" class="displaynone">
+                    @MujiStore.Resources.Resource.Videodistributionsystem
+                </label>
+                @if (ViewBag.title != null)
+                {
+                    <label style="color:white;" id="title" class="displaynone">
+                        - @ViewBag.title
+                    </label>
+                }
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar" style="background-color:#fff;"></span>
+                    <span class="icon-bar" style="background-color:#fff;"></span>
+                    <span class="icon-bar" style="background-color:#fff;"></span>
+                </button>
+
+
+            </div>
+           
+            <div class="navbar-collapse collapse size">
+                <ul class="navbar-nav mr-auto navmenu">
+                    <li class="nav-item active">
+                        <a href=@Url.Action( "Index", "Language")>
+                            <img src="~/img/Language.png" style="width:22px;height:22px;    vertical-align: sub;" />
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        @if (HttpContext.Current.Session["UserName"] != null && HttpContext.Current.Session["UserName"] != "")
+                        {
+
+                            <label style="color: white;margin-left:7px;margin-top:7px">@MujiStore.Resources.Resource.UserLogin：</label>
+                            @Html.Label(@HttpContext.Current.Session["LoginUserName"].ToString(), @HttpContext.Current.Session["LoginUserName"].ToString(), new { @style = "color: white;" })
+
+                        }
+                    </li>
+                    <li class="nav-item">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            if (HttpContext.Current.Session["Role"] != null && HttpContext.Current.Session["Role"].ToString() != "")
+                            {
+                                <a href=@Url.Action("Index", "Menus") style="border:1px solid">
+                                    @MujiStore.Resources.Resource.MgtScreen
+                                </a>
+                            }
+                        }
+
+                    </li>
+                    <li class="nav-item">
+                        @if (HttpContext.Current.Session["UserName"] != null && HttpContext.Current.Session["UserName"] != "")
+                        {
+                            <a href=@Url.Action("SignOut", "Login") style="border:1px solid">
+                                @MujiStore.Resources.Resource.Logout
+                            </a>
+                        }
+                        @if (HttpContext.Current.Session["UserName"] != null && HttpContext.Current.Session["UserName"] != "")
+                        {
+                        }
+                        else
+                        {
+                            if (HttpContext.Current.Session["StoreName"].ToString() == "Unknown")
+                            {
+                                <label style="color: white">
+                                    @MujiStore.Resources.Resource.Unknown
+                                </label>
+                            }
+                            else
+                            {
+                                <label style="color: white">
+                                    @HttpContext.Current.Session["StoreName"].ToString()
+                                </label>
+                            }
+                            <a href=@Url.Action("Index", "Login") style="margin-left: 10px; border: 1px solid">
+                                @MujiStore.Resources.Resource.Login
+                            </a>
+                        }
+
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="container body-content">
+        @if (TempData["ErrMsg"] != null)
+        {
+ 
+            <div class="modal" id="myModal" role="dialog">
+                <div class="modal-dialog modal-sm" >
+                    <div class="modal-content">
+                        <div class="modal-header" style="border:none">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                            <p style="text-align:center;font-weight:800;">  </p>
+                        </div>
+                        <div class="modal-body" style="color: black; word-break: break-all; text-align: justify;">
+                            <p style="text-align:center;font-weight:800;font-style:italic"> @TempData["ErrMsg"].ToString()  </p>
+                        </div>
+                        <div class="modal-footer" style="border:none">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        @if (TempData["SuccMsg"] != null)
+        {
+  
+
+            <div class="modal" id="myModalSucc" role="dialog">
+                <div class="modal-dialog modal-sm" >
+                    <div class="modal-content">
+                        <div class="modal-header" style="border:none">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <p style="text-align:center;font-weight:800;"> </p>
+                        </div>
+                        <div class="modal-body" style="color: black; word-break: break-all; text-align: justify;">
+                            <p style="text-align:center;font-weight:800;font-style:italic">@TempData["SuccMsg"].ToString() </p>
+                        </div>
+                        <div class="modal-footer" style="border:none">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        @RenderBody()
+        <hr /><div class="footer">
+            <div style="visibility:hidden">
+                @MujiStore.Resources.Resource.IPaddress : @HttpContext.Current.Session["IPAddress"].ToString() ,  @MujiStore.Resources.Resource.subnetID : @HttpContext.Current.Session["SubnetID"].ToString() , @MujiStore.Resources.Resource.FolderId : @HttpContext.Current.Session["FolderID"].ToString() , @MujiStore.Resources.Resource.VideoServerIPAddress : @HttpContext.Current.Session["VideoIPAddress"].ToString(), Host Address : @HttpContext.Current.Session["HostAddress"].ToString() , @MujiStore.Resources.Resource.StoreGroupID : @HttpContext.Current.Session["StoreGroupID"].ToString()
+            </div>
+            <footer>
+
+
+               
+
+            </footer>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("form").bind("keypress", function (e) {
+            if (e.keyCode == 13) {
+                return false;
+            }
+        });
+    });
+
+        var Err = '@TempData["ErrMsg"]';
+    if (Err != '') {
+
+                $("#myModal").modal('show');
+
+    }
+
+
+    var Succ = '@TempData["SuccMsg"]';
+    if (Succ != '') {
+
+        $("#myModalSucc").modal('show');
+
+    }
+
+   
+</script>

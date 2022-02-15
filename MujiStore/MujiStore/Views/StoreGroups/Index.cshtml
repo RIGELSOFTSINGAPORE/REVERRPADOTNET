@@ -1,0 +1,156 @@
+﻿@using PagedList.Mvc
+@model PagedList.PagedList<MujiStore.Models.tblStoreGroup>
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VieStoreGroupsIndexBrowTitle;
+    var StoreDtl = ViewData["StoreInfo"] as PagedList.PagedList<MujiStore.Models.tblStoreGroup>;
+}
+
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.VieStoreGroupsIndexH2</h2>
+<div>@MujiStore.Resources.Resource.storegroupline</div>
+</br>
+<p>
+    @Html.ActionLink(MujiStore.Resources.Resource.CreateNewStoreGroup, "Create", new { page = StoreDtl.PageNumber })
+</p>
+<table class="table" style="background-color:#ffffff; ">
+    <tr style="background-color:#822433; color:#ffffff;">
+        <th style="width:25%">
+            @Html.DisplayName(MujiStore.Resources.Resource.StoreGroupID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().Name)
+        </th>
+
+        <th></th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in StoreDtl)
+    {
+        <tr style="background-color:#EEE;">
+            <td>
+                @Html.DisplayFor(modelItem => item.StoreGroupID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+           
+            <td>
+                @Html.ActionLink(MujiStore.Resources.Resource.CommonEdit, "Edit", new { id = item.StoreGroupID, page = StoreDtl.PageNumber })
+            </td>
+            <td>
+                <a href="#" onclick="DeleteUserConfirmation(@item.StoreGroupID);" id="btnDelete" data-toggle="modal" data-target="#deleteModal" title="Delete">@MujiStore.Resources.Resource.CommonDelete</a>
+
+            </td>
+        </tr>
+    }
+
+</table>
+
+<br />
+
+@if (StoreDtl.PageSize < StoreDtl.TotalItemCount)
+{
+    <div>
+        @MujiStore.Resources.Resource.CommonPage @(StoreDtl.PageCount < StoreDtl.PageNumber ? 0 : StoreDtl.PageNumber) @MujiStore.Resources.Resource.CommonOf @StoreDtl.PageCount
+
+        @Html.PagedListPager(StoreDtl, page => Url.Action("Index",
+             new { page }))
+    </div>
+}
+@if (ViewBag.Language == "en")
+{
+    <div class="border-style">
+        <h5 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">Note</h5>
+        <p>
+
+            When you perform the delete operation, the store and subnet ID associated with the specified store group will also be deleted and
+            you will not be able to watch the video.
+        </p>
+
+    </div>
+}
+else
+{
+    <div class="border-style">
+
+        <h5 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">
+            注意
+        </h5>
+        <p>
+            削除の操作を行うと、指定された店舗グループに関連付けられている店舗とサブネットIDも一緒に削除されて動画が見られなくなります。
+        </p>
+    </div>
+
+}
+<div class="modal fade" id="DeleteUserModal" tabindex="-1" role="dialog" aria-labelledby="DeleteVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:470px; height:120px">
+           
+            <div class="modal-body DeleteVastucontent">
+                @if (ViewBag.Language == "en")
+                {
+                    <div>
+                        Are you want to delete  @MujiStore.Resources.Resource.Store,  @MujiStore.Resources.Resource.Storesubnet,  @MujiStore.Resources.Resource.VieStoreGroupFoldersIndexBrowTitle
+                        and @MujiStore.Resources.Resource.ModtblStoreStoreGroupID?
+                    </div>
+
+                }
+                else
+
+                {
+                    <div>
+                        削除の操作を行うと、指定された店舗グループに関連付けられている店舗とサブネットIDも一緒に削除されて動画が見られなくなります。削除してもよろしいですか？
+                    </div>
+                }
+                <div style="float:right">
+                    <button type="button" class="btn btn-secondary" style=" background: white; border:2px solid #822433" data-dismiss="modal">   @MujiStore.Resources.Resource.No</button>
+                    <button type="button" class="btn btn-primary btndeleteUser btn-success" style="background:#822433">   @MujiStore.Resources.Resource.Yes</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+@Html.Hidden("DeleteUserId")
+@section scripts
+{
+
+    <script>
+
+        function DeleteUserConfirmation(UserID) {
+
+            $('#DeleteUserId').val(UserID);
+            $('#DeleteUserModal').modal('show');
+        }
+
+        $('.btndeleteUser').on('click', function () {
+
+            DeleteVastu($('#DeleteUserId').val());
+
+        });
+        function DeleteVastu(UserID) {
+
+            $('#DeleteUserModal').modal('hide');
+            $.ajax({
+                url: '@Url.Action("Delete", "StoreGroups")',
+                type: 'POST',
+                data: { 'ID': UserID },
+                success: function (result) {
+                    if (result.errorcode == 1) {
+
+
+                        window.location.href = "@Url.Action("Index", "StoreGroups",new { @page1 = StoreDtl.PageNumber })";
+                    }
+                    else {
+                          window.location.href = "@Url.Action("Index", "StoreGroups", new { @page1 = StoreDtl.PageNumber })";
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+}

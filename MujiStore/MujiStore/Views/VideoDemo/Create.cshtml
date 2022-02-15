@@ -1,0 +1,279 @@
+﻿@model MujiStore.Models.tblMedia
+
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VietblMediaCreateBrowTitle;
+}
+<script src="~/Scripts/select2/dist/js/jquery-3.0.0.js" type="text/javascript"></script>
+<script src="~/Scripts/select2/dist/js/select2.js" defer type="text/javascript"></script>
+<link href="~/Scripts/select2/dist/css/select2.min.css" rel='stylesheet' type='text/css'>
+
+<script src="~/Scripts/jquery-2.1.1.min.js"></script>
+<style>
+    .form-horizontal .control-label {
+        padding-top: 7px; 
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    input, select, textarea {
+        max-width: 91px;
+        background-color: #fff;
+    }
+
+</style>
+<ol class="breadcrumb" id="breadcrumb">
+    <li>@Html.ActionLink(MujiStore.Resources.Resource.breadcrumbVideoall, "ViewUploadDetails", "VideoFiles")</li>
+    <li>
+        @Html.ActionLink(@MujiStore.Resources.Resource.breadcrumbManagement, "Index", "Menus")
+    </li>
+    <li>
+        @Html.ActionLink(@MujiStore.Resources.Resource.breadcrumbVideoChangerequest, "Index", "Videodemo")
+    </li>
+    <li>
+        @MujiStore.Resources.Resource.VideoChangeRequested  @MujiStore.Resources.Resource.CommonCreate
+    </li>
+</ol>
+<h2 style="color:#ec2213; background-color:#e7bebb;margin-left:-2px;">@MujiStore.Resources.Resource.StreamSreverCreateNew - @MujiStore.Resources.Resource.VideoChangeRequest</h2>
+
+
+<style type="text/css">
+    .maxlen {
+        max-width: 100%
+    }
+
+    textarea {
+        max-width: 100%;
+        border-radius:0px;
+    }
+    .form-control{
+        width:100%
+    }
+    .form-horizontal .control-label {
+        padding-top: 7px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    input[type=file]::-ms-clear {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+
+    input[type=file]::-ms-reveal {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+    .custom-file-upload {
+        border: 1px solid black;
+        display: inline-block;
+        padding: 2px 12px;
+        cursor: pointer;
+        border-radius: 2px;
+        font-weight:normal;
+
+    }
+
+    #uploadFile {
+        text-align: center;
+        border: none;
+        background-color: white;
+        color: black;
+    }
+
+    /* clears the 'X' from Chrome */
+input[type="file"]::-webkit-search-decoration,
+input[type="file"]::-webkit-search-cancel-button,
+input[type="file"]::-webkit-search-results-button,
+input[type="file"]::-webkit-search-results-decoration { display: none; }
+
+</style>
+
+@using (Html.BeginForm("Create", "VideoDemo", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control maxlen textarea", @maxlength = "500" } })
+            @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            <div style="float:right">
+                @Html.Label(MujiStore.Resources.Resource.viewtitlesize)
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.TextAreaFor(model => model.Description, 10, 1000, new { htmlAttributes = new { @class = "form-control textarea" }, @maxlength = "4000" })
+            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            <div style="float:right">
+                @Html.Label(MujiStore.Resources.Resource.viewdescriptionsize)
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Video, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <div>
+                <label for="file-upload" class="custom-file-upload">
+                    <i class="fa fa-cloud-upload"></i> choose file
+                </label>
+                @Html.TextBoxFor(model => model.PostedFile, new { type = "file", @class = "realupload ", @style = "border:0px;width:400px;display:none ", @accept = ".3gp, .mts, .avi, .mov, .mp4, .mpeg, .mpg, .vob, .wmv", @id = "file-upload" })
+                <div style="color: black; word-break: break-all; text-align: justify;">
+                    <label style="margin-top: -28px;position: absolute;margin-left: 120px; margin-right: 15px; font-weight:normal" id="file-name">No file chosen</label>
+                </div>
+            </div>
+            <div>
+
+                @Html.ValidationMessageFor(m => m.PostedFile, "", new { @class = "text-danger", @style = "display:contents;" })
+
+            </div>
+
+            @Html.Label(MujiStore.Resources.Resource.VieUploadMessage, htmlAttributes: new { @class = "control-label " })
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label(MujiStore.Resources.Resource.CntVideoDemoVideoFolderName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownListFor(model => model.FolderID, ViewBag.FolderList as SelectList, new { @class = "form-control", @style = "width:100%;" })
+        </div>
+    </div>
+    @*Datepicker changed by sabeena*@
+    <div class="form-group">
+        @Html.LabelFor(model => model.VideoPlayStartDate, htmlAttributes: new { @class = "control-label col-md-2" })
+
+        <div class="col-md-10">
+
+            @Html.TextBoxFor(model => model.VideoPlayStartDate, "{0:yyyy/MM/dd HH:mm}", new
+       {
+           @class = "form-control maxlen textarea",
+
+           placeholder = "yyyy/mm/dd HH:mm",
+           @style = "width:600px;"
+
+       })
+            @Html.ValidationMessageFor(model => model.VideoPlayStartDate, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.VideoPlayEndDate, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+
+            @Html.TextBoxFor(model => model.VideoPlayEndDate, "{0:yyyy/MM/dd HH:mm}", new
+       {
+           @class = "form-control maxlen textarea",
+
+           placeholder = "yyyy/mm/dd HH:mm",
+           @style = "width:600px;"
+
+       })
+
+            @Html.ValidationMessageFor(model => model.VideoPlayEndDate, "", new { @class = "text-danger" })
+
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-sm-2" style="margin-top:15px">
+            @Html.ActionLink(MujiStore.Resources.Resource.CommonBackToList, "Index", new { page = @ViewBag.Page, @class = "linkclass" }, null)
+        </div>
+        <div class=" col-md-10">
+            <input type="submit" value=@MujiStore.Resources.Resource.CommonCreate class="btn btn-default" style="margin-left: 0px;margin-top:10px; width: 85px; padding-bottom: 2px; padding-top: 4px;" />
+
+        </div>
+    </div>
+
+</div>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script type="text/javascript">
+    $("#file-upload").change(function () {
+        $("#file-name").text(this.files[0].name);
+    });
+    document.getElementById("file-upload").onchange = function () {
+        document.getElementById("uploadFile").value = this.value;
+        $("#file-name").text(this.files[0].name);
+    };
+   
+
+
+    $(document).ready(function () {
+        $("#FolderID").select2({
+            templateResult: formatOptions
+        });
+
+        
+    });
+
+    function formatOptions(state) {
+        $('.select2-search__field').remove();
+      
+        if (!state.id) { return state.text; }
+
+      
+        var strfolder = state.text;
+    
+        var root = strfolder.substr(1, (strfolder.length - strfolder.trim().length - 1))
+        var imgurl = window.location.href.split('/')[2] + "/" + window.location.href.split('/')[3] + "/img/folder-close1.png"
+        
+        if (location.hostname != 'localhost') {
+  
+            var $state = $(
+                '<span  style="color:black">' + root + '<img sytle="display: inline-block;" src="~/../../img/folder-close1.png"  /> ' + strfolder.trim() + '</span>'
+            );
+        }
+        else {
+
+            var $state = $(
+ 
+                '<span  style="color:black">' + root + '<img sytle="display: inline-block;" src="/../img/folder-close1.png"  /> ' + strfolder.trim() + '</span>'
+  
+            );
+            
+     
+        }
+
+      
+        return $state;
+
+    }
+    function split_on_first_word(str) {
+     
+        str = str.trim();  // Clean string by removing beginning and ending spaces.
+
+        var arr = [];
+        var pos = str.indexOf(' ');  // Find position of first space
+
+        if (pos === -1) {
+            // No space found
+            arr.push(str);                // First word (or empty)
+            arr.push('');                 // Empty (no next words)
+        } else {
+            // Split on first space
+            arr.push(str.substr(0, pos));         // First word
+            arr.push(str.substr(pos + 1).trim());  // Next words
+        }
+    
+        //arr = arr.substring(0, arr.length - 1);
+        return arr;
+    }
+
+    function getSourceID() {
+        alert($("#ParentID").val())
+    }
+</script>

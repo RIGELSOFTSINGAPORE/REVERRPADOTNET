@@ -1,0 +1,137 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    #divid
+    a {
+        background: none;
+        color: blue;
+    }
+
+    a:hover {
+        color: blue;
+    }
+
+    p {
+        margin-left: 30px;
+    }
+</style>
+<ol class="breadcrumb" id="breadcrumb">
+    <li>@Html.ActionLink(MujiStore.Resources.Resource.breadcrumbVideoall, "ViewUploadDetails", "VideoFiles")</li>
+    <li>
+        @MujiStore.Resources.Resource.breadcrumbManagement
+    </li>
+</ol>
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.Managementmenu</h2>
+
+
+<div id="divid">
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        if (HttpContext.Current.Session["Role"] != null && HttpContext.Current.Session["Role"].ToString() != "")
+        {
+
+
+            if ((Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 4 &&
+                 Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 7) ||
+                 (Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 20 &&
+                 Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 23)
+                 )
+            {
+                <div>
+                    @Html.ActionLink(MujiStore.Resources.Resource.VideoChangeRequest, "Index", "VideoDemo")
+                    <p>@MujiStore.Resources.Resource.VideochangerequestDescription</p>
+                </div>
+
+            }
+            if ((Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 8 &&
+                 Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 11) ||
+                 (Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 24 &&
+                 Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 27)
+                 )
+            {
+                <div>
+                    @Html.ActionLink(@MujiStore.Resources.Resource.VideoChangeApproval, "Index", "MediaApproval")
+                    <p>
+                    <p>
+                        @MujiStore.Resources.Resource.Videochangeapprovaldescription
+                        @*Confirm / correct the application contents from the applicant and approve it.*@
+                    </p>
+                </div>
+
+            }
+            if ((Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 12 &&
+                 Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 15) ||
+                 (Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 28 &&
+                 Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 31)
+                 )
+            {
+                <div>
+
+                    @Html.ActionLink(@MujiStore.Resources.Resource.VideoChangeRequest, "Index", "VideoDemo")
+                    <p>@MujiStore.Resources.Resource.VideochangerequestDescription</p>
+
+
+                </div>
+
+                <div>
+                    @Html.ActionLink(@MujiStore.Resources.Resource.VideoChangeApproval, "Index", "MediaApproval")
+                    <p>
+                        @MujiStore.Resources.Resource.Videochangeapprovaldescription
+                    </p>
+                </div>
+
+            }
+            if (HttpContext.Current.Session["Role"] != null && HttpContext.Current.Session["Role"].ToString() != "")
+            {
+                if ((Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 16 &&
+                                   Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 31)
+                                   )
+                {
+
+
+                    <div>
+                        @Html.ActionLink(MujiStore.Resources.Resource.Systeminformationmaintenance, "InfoMenus", "Menus")
+                        <p>
+                            @MujiStore.Resources.Resource.SystemInformationDescription
+                        </p>
+                    </div>
+                }
+            }
+            if (Convert.ToInt16(HttpContext.Current.Session["Role"]) == 2 ||
+            Convert.ToInt16(HttpContext.Current.Session["Role"]) == 3 ||
+            Convert.ToInt16(HttpContext.Current.Session["Role"]) == 6 ||
+            Convert.ToInt16(HttpContext.Current.Session["Role"]) == 7 ||
+            Convert.ToInt16(HttpContext.Current.Session["Role"]) == 10 ||
+            Convert.ToInt16(HttpContext.Current.Session["Role"]) == 11 ||
+            Convert.ToInt16(HttpContext.Current.Session["Role"]) == 14 ||
+            Convert.ToInt16(HttpContext.Current.Session["Role"]) == 15 ||
+            Convert.ToInt16(HttpContext.Current.Session["Role"]) == 18 ||
+            Convert.ToInt16(HttpContext.Current.Session["Role"]) == 19 ||
+            Convert.ToInt16(HttpContext.Current.Session["Role"]) == 22 ||
+            Convert.ToInt16(HttpContext.Current.Session["Role"]) == 23 ||
+            Convert.ToInt16(HttpContext.Current.Session["Role"]) == 26 ||
+            Convert.ToInt16(HttpContext.Current.Session["Role"]) == 27 ||
+            Convert.ToInt16(HttpContext.Current.Session["Role"]) == 30 ||
+            Convert.ToInt16(HttpContext.Current.Session["Role"]) == 31)
+            {
+
+                <div>
+                    @Html.ActionLink(MujiStore.Resources.Resource.investigationtool, "Search", "TroubleShoot")
+                    <p>
+                        @MujiStore.Resources.Resource.investigationtoolDescription
+                    </p>
+                </div>
+            }
+            <div>
+                @Html.ActionLink(MujiStore.Resources.Resource.Changeloginpassword, "ChangePassword", "Login")
+                <p>
+                    @MujiStore.Resources.Resource.ChangeloginpasswordDescription
+                </p>
+            </div>
+        }
+    }
+</div>

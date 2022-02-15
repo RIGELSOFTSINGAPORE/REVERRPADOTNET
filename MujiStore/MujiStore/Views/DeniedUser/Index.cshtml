@@ -1,0 +1,235 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<MujiStore.Models.tblDeniedIPAddress>
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.DeniedUser;
+
+}
+
+<h2 style="color:#ec2213; background-color:#e7bebb;  margin-left:-2px;">@MujiStore.Resources.Resource.DeniedUser</h2>
+
+<script type="text/javascript" src="~/Scripts/jquery-1.8.3.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="~/Content/FtpFile-pc1.css">
+
+<link rel="stylesheet" href="~/Content/font-awesome.min.css">
+<style>
+    .form-control1 {
+        width: 20%;
+        height: 31px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
+
+    .form-control2 {
+        width: 14%;
+        height: 29px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
+
+    .form-control3 {
+        width: 12%;
+        height: 29px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
+
+    .form-control5 {
+        width: 20%;
+        height: 29px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
+
+    .form-control4 {
+        width: 20%;
+        height: 29px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
+
+    .form-control1 {
+        width: 19%;
+        height: 29px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
+
+    .fa1 {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: #bf5e6e;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .fa-unsorted:before, .fa-sort:before {
+        content: "\f0dc";
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: right;
+        padding: 0px;
+        margin-left: 4px;
+    }
+
+    .Title {
+        width: 30%;
+    }
+
+
+
+    .border-style {
+        padding: 8px;
+        margin-bottom: 7px;
+        box-shadow: 2px 3px 8px -3px;
+        height: 100px;
+    }
+</style>
+
+<body>
+
+    @using (Html.BeginForm("Index", "DeniedUser", FormMethod.Post))
+    {
+        <div class="border-style">
+            <p>
+                <span style="margin-left:15px;">
+                    @MujiStore.Resources.Resource.VietblMediaIndexFindByTitle: @Html.TextBox("SearchTitle", ViewBag.SearTitle as string, new { @class = "form-control1" })
+                </span>
+                <span style="margin-left:15px;">
+                    @MujiStore.Resources.Resource.IPaddress : @Html.TextBox("IP", ViewBag.ip as string, new { @class = "form-control1" })
+                </span>
+
+                <span style="margin-left:15px;">
+                    @MujiStore.Resources.Resource.VietblMediaIndexDateFrom : @Html.TextBox("SearchFromCRTDT", String.Format("{0:d}", ViewBag.CdStDate as string), new { @class = "datefield form-control2", type = "date" })
+                </span>
+                <span style="margin-left:15px;">
+                    @MujiStore.Resources.Resource.VietblMediaIndexDateTo : @Html.TextBox("SearchToCRTDT", String.Format("{0:d}", ViewBag.CdEdDate as string), new { @class = "datefield form-control2", type = "date" })
+                </span>
+            </p>
+
+
+            <a href=@Url.Action("Index","DeniedUser") class="clearright">
+                @MujiStore.Resources.Resource.clear
+            </a>
+            <input type="submit" value=@MujiStore.Resources.Resource.CommonSearch class="btn btn-default" style="margin-bottom:6px; width: 85px; margin-right:10px; height:32px;float:right;" />
+
+        </div>
+
+
+    }
+    <table class="table " style="background-color:#ffffff; width:100%;  margin-bottom:0px;">
+        <thead>
+            <tr style="background-color:#822433; color:#ffffff;">
+
+                <th>
+                    @Html.DisplayName(MujiStore.Resources.Resource.VietblMediaIndexID)
+                </th>
+                <th>
+                    @Html.DisplayName(MujiStore.Resources.Resource.MediaID)
+                </th>
+                <th>
+                    @Html.DisplayName(MujiStore.Resources.Resource.Title)
+                </th>
+                <th>
+                    @Html.DisplayName(MujiStore.Resources.Resource.CommonCRTDT)
+                </th>
+                <th>
+                    @Html.DisplayName(MujiStore.Resources.Resource.IPaddress)
+                </th>
+
+                <th>
+                    @Html.DisplayName(MujiStore.Resources.Resource.Remarks)
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+
+            @foreach (var item in Model)
+            {
+                <tr style="background-color:#EEE;">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeniedIPAddressID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MediaID)
+                    </td>
+                    <td class="Title">
+                        @Html.DisplayFor(modelItem => item.title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.STRCRTDT)
+                        <br />
+                        @Html.DisplayFor(modelItem => item.STRCRTDTTIME)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IPAddress)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Remarks)
+                    </td>
+
+
+
+
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+
+</body>
+
+
+@if (Model.PageSize < Model.TotalItemCount)
+{
+    <div>
+        @MujiStore.Resources.Resource.CommonPage @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) @MujiStore.Resources.Resource.CommonOf @Model.PageCount
+
+        @Html.PagedListPager(Model, page => Url.Action("Index",
+             new { page, sortOrder = ViewBag.CurrentSort, SearchTitle = ViewBag.SearTitle, ConvertStatus = ViewBag.delfg, ip = ViewBag.ipadd, SearchFromCRTDT = ViewBag.CdStDate, SearchToCRTDT = ViewBag.CdEdDate }))
+    </div>
+}

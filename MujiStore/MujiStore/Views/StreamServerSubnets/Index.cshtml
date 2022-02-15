@@ -1,0 +1,84 @@
+﻿@using PagedList.Mvc
+@{
+    var StoreDtl = ViewData["StoreInfo"] as PagedList.PagedList<MujiStore.Models.tblStreamServerSubnet>;
+}
+
+@{
+    ViewBag.Title = "Index";
+}
+<link rel="stylesheet" type="text/css" href="~/Content/FtpFile-pc1.css">
+
+<link rel="stylesheet" href="~/Content/font-awesome.min.css">
+<style>
+    input[type="search"]::-webkit-search-cancel-button {
+        /*Bootstrap 3 override*/
+        -webkit-appearance: searchfield-cancel-button !important;
+    }
+</style>
+
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.StreamServerSubnetMgt1</h2>
+@using (Html.BeginForm("Index", "StreamServerSubnets", FormMethod.Post))
+{
+    <div class="border-style">
+        <p>
+            @MujiStore.Resources.Resource.VieSerIPaddress : @Html.TextBox("SearchID", ViewBag.SearchID as string, new { @class = "form-control1", @type = "search" })
+
+
+            <input type="submit" value=@MujiStore.Resources.Resource.CommonSearch class="btn btn-default" style="width:85px; margin-bottom: 4px; margin-left: 37px; height: 32px; " />
+            <a href=@Url.Action("Index","StreamServerSubnets") class="clear">
+                @MujiStore.Resources.Resource.clear
+            </a>
+        </p>
+    </div>
+}
+@{
+    var SearchID = ViewBag.SearchID;
+}
+<br />
+<p>
+    @Html.ActionLink(@MujiStore.Resources.Resource.CreateNewStreamServerSubnet, "Create")
+</p>
+<table class="table" style="background-color:#ffffff; ">
+    <tr style="background-color:#822433; color:#ffffff;">
+        <th>
+            @Html.DisplayNameFor(model => StoreDtl.FirstOrDefault().SSSServer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => StoreDtl.FirstOrDefault().IPAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => StoreDtl.FirstOrDefault().DELFG)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in StoreDtl)
+    {
+        <tr style="background-color:#EEE;">
+            <td>
+                @Html.DisplayFor(modelItem => item.SSSServer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IPAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DELFG)
+            </td>
+            <td>
+                @Html.ActionLink(@MujiStore.Resources.Resource.StreamSreverSubnetEdit, "Edit", new { id = item.StreamServerSubnetID })
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+
+@if (StoreDtl.PageSize < StoreDtl.TotalItemCount)
+{
+    <div>
+        @MujiStore.Resources.Resource.CommonPage @(StoreDtl.PageCount < StoreDtl.PageNumber ? 0 : StoreDtl.PageNumber) @MujiStore.Resources.Resource.CommonOf @StoreDtl.PageCount
+
+        @Html.PagedListPager(StoreDtl, page => Url.Action("Index",
+             new { page, SearchID = SearchID }))
+    </div>
+}

@@ -1,0 +1,205 @@
+﻿@using PagedList.Mvc
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VieStoreMstIndexBrowTitle;
+    var StoreDtl = ViewData["StoreInfo"] as PagedList.PagedList<MujiStore.Models.tblStore>;
+}
+
+<link rel="stylesheet" type="text/css" href="~/Content/FtpFile-pc1.css">
+@*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">*@
+<link rel="stylesheet" href="~/Content/font-awesome.min.css">
+
+<style>
+    input[type="search"]::-webkit-search-cancel-button {
+        /*Bootstrap 3 override*/
+        -webkit-appearance: searchfield-cancel-button !important;
+    }
+</style>
+
+
+<h2 style="color:#ec2213; background-color: #e7bebb; margin-left: -4px; margin-bottom: 15px;">@MujiStore.Resources.Resource.VieStoreMstIndexH2</h2>
+@using (Html.BeginForm("Index", "StoreMst", FormMethod.Post))
+{
+    <div class="border-style">
+        <p>
+            @MujiStore.Resources.Resource.VieSearchStorename /  @MujiStore.Resources.Resource.StoreNumber: @Html.TextBox("SearchID", ViewBag.SearchID as string, new { @class = "form-control1", @type = "search" })
+
+            <input type="submit" value=@MujiStore.Resources.Resource.CommonSearch class="btn btn-default" style="margin-left:37px;width:85px; margin-bottom:5px;height:32px;" />
+            <a href=@Url.Action("Index","StoreMst") class="clear">
+                @MujiStore.Resources.Resource.clear
+            </a>
+        </p>
+    </div>
+}
+@{
+    var SearchID = ViewBag.SearchID;
+}
+<br />
+<p>
+    @Html.ActionLink(MujiStore.Resources.Resource.CreateNewStore, "Create",new {  page = StoreDtl.PageNumber })
+</p>
+<table class="table" style="background-color:#ffffff; ">
+    <tr style="background-color:#822433; color:#ffffff;">
+        <th>
+            @Html.ActionLink(MujiStore.Resources.Resource.StoreNumber, "Index", new { sortOrder = ViewBag.IDSortnumber }, new { @class = "link" })
+
+            <span class="fa1 fa-sort fa-unsorted:before, .fa-sort:before"></span>
+        </th>
+        <th style="width:95px;">
+            @Html.DisplayNameFor(model => StoreDtl.FirstOrDefault().StoreName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => StoreDtl.FirstOrDefault().Zip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => StoreDtl.FirstOrDefault().State)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => StoreDtl.FirstOrDefault().City)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => StoreDtl.FirstOrDefault().AddressLine1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => StoreDtl.FirstOrDefault().AddressLine2)
+        </th>
+
+
+        <th>
+            @Html.DisplayNameFor(model => StoreDtl.FirstOrDefault().Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => StoreDtl.FirstOrDefault().tblStoreGroup.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => StoreDtl.FirstOrDefault().DELFG)
+        </th>
+
+        <th></th>
+        <th></th>
+    </tr>
+    <tbody style="width:100%">
+        @foreach (var item in StoreDtl)
+        {
+        <tr style="background-color:#EEE;">
+            <td>
+                @Html.DisplayFor(modelItem => item.StoreNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StoreName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddressLine1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddressLine2)
+            </td>
+
+
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Country)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Storegroupname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DELFG)
+            </td>
+
+            <td>
+                @Html.ActionLink(MujiStore.Resources.Resource.CommonEdit, "Edit", new { id = item.StoreID,page = StoreDtl.PageNumber })
+
+            </td>
+            <td>
+                <a href="#" onclick="DeleteUserConfirmation(@item.StoreID);" id="btnDelete" data-toggle="modal" data-target="#deleteModal" title="Delete">@MujiStore.Resources.Resource.CommonDelete</a>
+
+            </td>
+        </tr>
+
+        }
+    </tbody>
+</table>
+<br />
+
+@if (StoreDtl.PageSize < StoreDtl.TotalItemCount)
+{
+    <div>
+        @MujiStore.Resources.Resource.CommonPage @(StoreDtl.PageCount < StoreDtl.PageNumber ? 0 : StoreDtl.PageNumber) @MujiStore.Resources.Resource.CommonOf @StoreDtl.PageCount
+
+        @Html.PagedListPager(StoreDtl, page => Url.Action("Index",
+            new { page, sortOrder = ViewBag.CurrentSort, SearchID = SearchID }))
+    </div>
+}
+<div class="modal fade" id="DeleteUserModal" tabindex="-1" role="dialog" aria-labelledby="DeleteVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:470px; height:140px">
+            <div class="modal-header" style="background: #822433; margin-left:-1px; color:white;border-radius: 5px;">
+                <h5 class="modal-title" id="DeleteUserModalLabel" style="font-weight:600">   @MujiStore.Resources.Resource.VietblMediaIndextblDelete</h5>
+
+            </div>
+            <div class="modal-body DeleteVastucontent">
+                <div>
+                    @MujiStore.Resources.Resource.Areyousureyoutodelete
+                </div>
+                <div style="float:right">
+                    <button type="button" class="btn btn-secondary" style=" background: white; border:2px solid #822433" data-dismiss="modal">   @MujiStore.Resources.Resource.No</button>
+                    <button type="button" class="btn btn-primary btndeleteUser btn-success" style="background:#822433">   @MujiStore.Resources.Resource.Yes</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+@Html.Hidden("DeleteUserId")
+@section scripts
+{
+
+    <script>
+
+        function DeleteUserConfirmation(UserID) {
+
+            $('#DeleteUserId').val(UserID);
+            $('#DeleteUserModal').modal('show');
+        }
+
+        $('.btndeleteUser').on('click', function () {
+
+            DeleteVastu($('#DeleteUserId').val());
+
+        });
+        function DeleteVastu(UserID) {
+
+            $('#DeleteUserModal').modal('hide');
+            $.ajax({
+                url: '@Url.Action("Delete", "StoreMst")',
+                type: 'POST',
+                data: { 'ID': UserID },
+                success: function (result) {
+                    if (result.errorcode == 1) {
+
+
+                        window.location.href = "@Url.Action("Index", "StoreMst", new { @page1 = StoreDtl.PageNumber })";
+                    }
+                    else {
+                          window.location.href = "@Url.Action("Index", "StoreMst", new { @page1 = StoreDtl.PageNumber })";
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+}

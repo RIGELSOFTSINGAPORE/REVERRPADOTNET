@@ -1,0 +1,92 @@
+﻿@using PagedList.Mvc
+
+@{
+    var StoreDtl = ViewData["StoreInfo"] as PagedList.PagedList<MujiStore.Models.tblStoreSubnet>;
+}
+
+
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VieStoreSubnetsIndexBrowTitle;
+}
+<link rel="stylesheet" type="text/css" href="~/Content/FtpFile-pc1.css">
+
+<link rel="stylesheet" href="~/Content/font-awesome.min.css">
+<style>
+    input[type="search"]::-webkit-search-cancel-button {
+        /*Bootstrap 3 override*/
+        -webkit-appearance: searchfield-cancel-button !important;
+    }
+</style>
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.VieStoreSubnetsIndexH2</h2>
+@using (Html.BeginForm("Index", "StoreSubnets", FormMethod.Post))
+{
+    <div class="border-style">
+        <p>
+            @MujiStore.Resources.Resource.VieSerIPaddress / @MujiStore.Resources.Resource.SubnetNumber: @Html.TextBox("SearchID", ViewBag.SearchID as string, new { @class = "form-control1", @type = "search" })
+
+
+            <input type="submit" value=@MujiStore.Resources.Resource.CommonSearch class="btn btn-default" style="margin-bottom: 4px; width: 85px; margin-left: 37px; height: 32px; " />
+            <a href=@Url.Action("Index","StoreSubnets") class="clear">
+                @MujiStore.Resources.Resource.clear
+            </a>
+        </p>
+    </div>
+}
+@{
+    var SearchID = ViewBag.SearchID;
+}
+<br />
+<p>
+    @Html.ActionLink(MujiStore.Resources.Resource.CreateNewStoreSubent, "Create",new { page = StoreDtl.PageNumber })
+</p>
+<table class="table" style="background-color:#ffffff; ">
+    <tr style="background-color:#822433; color:#ffffff;">
+        <th>
+            @Html.DisplayNameFor(model => StoreDtl.FirstOrDefault().StoreNumber)
+        </th>
+        <th>
+            @Html.Label(MujiStore.Resources.Resource.Store, MujiStore.Resources.Resource.Store)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => StoreDtl.FirstOrDefault().IPAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => StoreDtl.FirstOrDefault().DELFG)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in StoreDtl)
+    {
+
+<tr style="background-color:#EEE;">
+    <td>
+        @Html.DisplayFor(modelItem => item.StoreNumber)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.StoreName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.IPAddress)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DELFG)
+    </td>
+
+
+    <td>
+        @Html.ActionLink(MujiStore.Resources.Resource.VieStoreSubnetsIndexEdit, "Edit", new { id = item.StoreSubnetID, page = StoreDtl.PageNumber })
+    </td>
+</tr>
+    }
+
+</table>
+<br />
+
+@if (StoreDtl.PageSize < StoreDtl.TotalItemCount)
+{
+    <div>
+        @MujiStore.Resources.Resource.CommonPage @(StoreDtl.PageCount < StoreDtl.PageNumber ? 0 : StoreDtl.PageNumber) @MujiStore.Resources.Resource.CommonOf @StoreDtl.PageCount
+        @Html.PagedListPager(StoreDtl, page => Url.Action("Index", new { page, SearchID = SearchID }))
+    </div>
+}

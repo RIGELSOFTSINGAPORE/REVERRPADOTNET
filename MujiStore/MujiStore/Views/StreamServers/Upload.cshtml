@@ -1,0 +1,91 @@
+﻿@model  IEnumerable<MujiStore.Models.SSDetails>
+@using PagedList.Mvc
+
+@{
+    var mediaDtl = Session["page"] as PagedList.PagedList<MujiStore.Models.SSDetails>;
+    var list = (IEnumerable<MujiStore.Models.SSDetails>)ViewData["videostatusList"];
+}
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+   
+    <link href="~/Content/Material-icon.css" rel="stylesheet">
+    
+    <script src='~/Scripts/a076d05399.js' crossorigin='anonymous'></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>Upload</title>
+    <style type="text/css">
+        .choosenfile2 {
+            width: 230px;
+            padding-right: 0px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.Streamserverimport</h2>
+
+    @using (Html.BeginForm("Upload", "StreamServers", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+
+        <div class=" border-style form-group">
+            <p>
+                <div class="col-sm-3">
+                    <input type="file" accept=".csv" name="postedFile" class="choosenfile2" style="width: 230px; padding-right: 0px;" />
+                </div>
+                <div>
+                    <input type="submit" value="@MujiStore.Resources.Resource.Import" class="btn btn-default" />
+                </div>
+
+            </p>
+
+        </div>
+        <div>
+            <br />
+            <span>
+
+                <label style="font-weight:bold"> &#8658;</label>
+                @Html.Label(MujiStore.Resources.Resource.Columnorder, new { @style = "font-weight:normal" }).
+
+            </span>
+            <br />
+
+            <span>
+                <label style="font-weight:bold"> &#8658;</label>  @Html.Label(MujiStore.Resources.Resource.mandatory, new { @style = "font-weight:normal" }).
+
+            </span>
+
+            <br />
+            <span>
+                <label style="font-weight:bold"> &#8658;</label>  @Html.Label(MujiStore.Resources.Resource.Eachimportfilefoless, new { @style = "font-weight:normal" }).
+
+            </span>
+            <br />
+            <span>
+                <label style="font-weight:bold"> &#8658;</label>  @Html.Label(MujiStore.Resources.Resource.Headernameshouldnotbemodified, new { @style = "font-weight:normal" }).
+
+            </span>
+           
+
+        </div>
+
+
+    }
+    @if (list != null && list.Count() > 0)
+    {
+        <h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.Remarks</h2>
+        foreach (var model1 in list)
+        {
+            {
+<p style="color:red">
+    @MujiStore.Resources.Resource.Row  @model1.Remarks @MujiStore.Resources.Resource.isnotimported
+</p>
+            }
+        }
+    }
+       
+    </body>
+</html>

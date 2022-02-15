@@ -1,0 +1,9 @@
+D:\Projects\NCR\Latest Deployment Kit\MujiVBFunction\bin\Release\MujiVBFunction.dll
+D:\Projects\NCR\Latest Deployment Kit\MujiVBFunction\bin\Release\MujiVBFunction.pdb
+D:\Projects\NCR\Latest Deployment Kit\MujiVBFunction\bin\Release\MujiVBFunction.xml
+D:\Projects\NCR\Latest Deployment Kit\MujiVBFunction\obj\Release\MujiVBFunction.Resources.resources
+D:\Projects\NCR\Latest Deployment Kit\MujiVBFunction\obj\Release\MujiVBFunction.vbproj.GenerateResource.cache
+D:\Projects\NCR\Latest Deployment Kit\MujiVBFunction\obj\Release\MujiVBFunction.vbproj.CoreCompileInputs.cache
+D:\Projects\NCR\Latest Deployment Kit\MujiVBFunction\obj\Release\MujiVBFunction.dll
+D:\Projects\NCR\Latest Deployment Kit\MujiVBFunction\obj\Release\MujiVBFunction.xml
+D:\Projects\NCR\Latest Deployment Kit\MujiVBFunction\obj\Release\MujiVBFunction.pdb

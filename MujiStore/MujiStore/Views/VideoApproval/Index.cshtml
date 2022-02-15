@@ -1,0 +1,198 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<h2>@MujiStore.Resources.Resource.VideoChangeApprovalheading</h2>
+<div style="margin-left:15px">@MujiStore.Resources.Resource.VideoChangeApprovalheading1</div>
+<style>
+    .table, td, th, tr, thead, tbody {
+        padding: 1px
+    }
+
+    .td, th, tr {
+        border: 1px solid #822433;
+    }
+
+    .tr, td {
+        border: 1px solid #822433;
+    }
+
+    #divid
+    a {
+        background: none;
+        color: white;
+    }
+
+    a:hover {
+        color: white;
+    }
+
+    input[type="button"] {
+        border: none;
+        background: none;
+        color: blue;
+    }
+
+    .myInput {
+        border-style: none;
+    }
+</style>
+
+@foreach (var item in (IEnumerable<MujiStore.Models.tblMedia>)ViewData["videoList"])
+{
+    <div style="margin-left:15px">
+        <table>
+            <tr>
+                <th style="background-color: #e7bebb ">@Html.Label(MujiStore.Resources.Resource.MediaID)</th>
+                <td id="divid">
+                    @Html.DisplayFor(modelItem => item.MediaID) - <input type="button" value=@item.Video onclick="setStoreInfo('@item.Video')" />
+
+                    <br>
+                    @if (item.Thumbnail != "" && item.Thumbnail != null)
+                    {
+                        if (File.Exists(Server.MapPath("~/Video/" + item.Thumbnail)))
+                        {
+                            <img src="@Url.Content("~/Video/" + item.Thumbnail + "")" style="width:160px; height:90px;">
+                        }
+                        else
+                        {
+                            <img src="@Url.Content("~/img/Image not found_JP.png")" style="width:160px;height:90px;">
+                        }
+
+                    }
+                    else
+                    {
+                        <img src="@Url.Content("~/img/Thumbnail not generated_JP.png")" style="width:160px;height:90px;">
+                    }
+                </td>
+
+            <tr ><th style="background-color: #e7bebb ">@Html.Label(MujiStore.Resources.Resource.CntVideoDemoVideoTitle)</th><td >@Html.DisplayFor(modelItem => item.Title)</td></tr>
+            <tr ><th style="background-color: #e7bebb ">@Html.Label(MujiStore.Resources.Resource.CntVideoDemoVideoDescription)</th><td>@Html.DisplayFor(modelItem => item.Description)</td>
+            <tr ><th style="background-color: #e7bebb ">@Html.Label(MujiStore.Resources.Resource.CntVideoDemoVideoFolderName)</th><td >@Html.DisplayFor(modelItem => item.FolderName)</td></tr>
+            <tr >
+                <th style="background-color: #e7bebb ">@Html.Label(MujiStore.Resources.Resource.Statechange)</th>
+                <td >
+                    @if (item.ApprovalStatus == 3)
+                    {
+                        @Html.LabelForModel(@MujiStore.Resources.Resource.requesttochangeaproval, new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+                    }
+                    else if (item.ApprovalStatus == 0)
+                    {
+                        @Html.LabelForModel(@MujiStore.Resources.Resource.requesttochangeunaproval, new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+                    }
+                </td>
+            </tr>
+            <tr >
+                <th style="background-color: #e7bebb ">@Html.Label(MujiStore.Resources.Resource.CommonDelete)</th>
+                <td >
+                    <div style="color:red">
+
+                        @if (item.PhysicalDELFG == true)
+                        {
+                            @Html.LabelForModel(@MujiStore.Resources.Resource.deleterequestThevideo, new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+                        }
+
+                    </div>
+                    <div>
+                        @if (item.PhysicalDELFG == false)
+                        {
+                            @Html.LabelForModel(@MujiStore.Resources.Resource.Itisnotdeletionrequest, new { htmlAttributes = new { @class = "form-control  col-md-2" } })
+                        }
+                    </div>
+                </td>
+            </tr>
+            <tr ><th style="background-color: #e7bebb ">@Html.Label(MujiStore.Resources.Resource.note)</th><td >@Html.DisplayFor(modelItem => item.Comments)<td></tr>
+            <tr ><th style="background-color: #e7bebb ">@Html.Label(MujiStore.Resources.Resource.Registeredperson)</th><td ><span class="danger">@Html.DisplayFor(modelItem => item.Registerer)</span></td></tr>
+            <tr ><th style="background-color: #e7bebb ">@Html.Label(MujiStore.Resources.Resource.RegisteredDate)</th><td >@Html.DisplayFor(modelItem => item.STRCRTDT)</td></tr>
+            <tr >
+                <th style="background-color: #e7bebb ">@Html.Label(MujiStore.Resources.Resource.Videoplaysdate)</th>
+                <td >
+                    @if (item.sstreamingconstartdatetime != "0001/01/01 00:00:00")
+                    {
+                        <div>
+                            @Html.DisplayFor(modelitem => item.sstreamingconstartdatetime)
+                        </div>
+                    }
+                </td>
+            <tr >
+                <th style="background-color: #e7bebb ">@Html.Label(MujiStore.Resources.Resource.Videoplayedate)</th>
+                <td >
+                    @if (item.sstreamingconenddatetime != "0001/01/01 00:00:00")
+                    {
+                        <div>
+                            @Html.DisplayFor(modelitem => item.sstreamingconenddatetime)
+                        </div>
+                    }
+                </td>
+            <tr>
+                <td colspan=2>
+                    <input type="submit" id="btnApprove" value=@MujiStore.Resources.Resource.toapprove onclick="setapprove('@item.ApplicationID')" class="btn btn-default" style="width: 85px; margin-bottom: 4px; margin-top: 4px; width: 85px; height: 32px;" />
+                    <input type="submit" id="btnDisApprove" value=@MujiStore.Resources.Resource.todisavow onclick="setdisapprove('@item.ApplicationID')" class="btn btn-default" style="width: 90px; margin-bottom: 4px; margin-top: 4px; width: 92px; height: 32px;" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <br>
+}
+
+
+@section scripts
+{
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+
+
+
+        function setapprove(Number) {
+           $.ajax({
+                url: '@Url.Action("Approve", "VideoApproval")',
+                type: 'POST',
+               data: { 'ID': Number,'NewApprovalStatus': 1},
+               success: function (result) {
+
+                  window.location.href = "@Url.Action("resultapprove", "VideoApproval")";
+               },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+
+                }
+
+        function setdisapprove(Number) {
+           $.ajax({
+                url: '@Url.Action("Approve", "VideoApproval")',
+                type: 'POST',
+               data: { 'ID': Number,'NewApprovalStatus': 0},
+                success: function (result) {
+                   window.location.href = "@Url.Action("result", "VideoApproval")";
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+
+        }
+        function setStoreInfo(Number) {
+$.ajax({
+                url: '@Url.Action("Index", "VideoApproval")',
+                type: 'POST',
+               data: { 'ID': Number},
+                success: function (result) {
+                   window.location.href = "@Url.Action("video", "VideoApproval")";
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+
+    </script>
+
+}
+
+
+

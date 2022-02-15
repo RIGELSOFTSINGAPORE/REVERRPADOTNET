@@ -1,0 +1,674 @@
+﻿
+@using MujiStore.Models;
+@using MujiStore.BLL;
+@{
+
+ 
+    var viddtl = ViewData["VideoFileDetails"] as IEnumerable<MujiStore.Models.tblMedia>;
+    var FielDtl = (MujiStore.Models.tblMedia)ViewData["FileDetails"];
+    var DefFormatID = ViewData["DefFormatID"];
+    var SerDtl = ViewData["ServerDtl"] as IList<MujiStore.Models.tblDeployStatu>;
+    var headerFolStructure = ViewData["headFolderStructue"] as IEnumerable<MujiStore.Models.tblFolder>;
+    var childFolderDtl = ViewData["ChildFolderDtl"] as IEnumerable<MujiStore.Models.tblFolder>;
+    var viewVideo = Convert.ToInt32(ViewData["PlayVideo"].ToString());
+    var videoFileName = ViewData["PlayVideoFileName"].ToString();
+    var videorecommanded = ViewData["VideoRecommened"].ToString();
+    var folidx = 0;
+    var VidErrMsg = "";
+    var lan = System.Threading.Thread.CurrentThread.CurrentCulture;
+    ViewBag.Lan = lan.Parent.Name;
+    var MedID = 0;
+    var folID = 0;
+    if (FielDtl != null)
+    {
+        MedID = FielDtl.MediaID;
+        folID = FielDtl.FolderID;
+    }
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <title>@MujiStore.Resources.Resource.VieUploadDetailsNewBrowTitle</title>
+    <script type="text/javascript" src="~/Scripts/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('video source').last().on('error', function () {
+                $('#Videoloadmsg').html("@MujiStore.Resources.Resource.Novideoavailable");
+            });
+        });
+    </script>
+    <meta content=" " name="description">
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet" href="~/Content/style-pc.css">
+    <style type="text/css">
+        .maxlen {
+            max-width: 100%
+        }
+
+        #detailsvideo a {
+            background: none;
+            color: blue;
+        }
+
+        #detailsvideoself a {
+            background: none;
+            color: blue;
+        }
+
+        .choosenfile2 {
+            display: block;
+            padding-bottom: 30px;
+            background-color: #e7bebb;
+            padding-right: 60px;
+            margin-left: auto;
+            margin-top: -33px;
+        }
+
+        .moviefolder:hover {
+            cursor: pointer;
+        }
+
+        input, select, textarea {
+            max-width: 242px;
+            background-color: #fff;
+        }
+
+        div.folderouter {
+            border: solid 0px;
+            height: 48px;
+            margin-left: 2px;
+            line-height: 45px;
+            border-radius: 0px;
+            font-size: 14px;
+            vertical-align: middle;
+            padding: 0 10px;
+            background-color: #e7bebb;
+            margin-top: -12px;
+        }
+
+        div.folder {
+            border: none;
+            line-height: 48px;
+            font-size: 14px;
+            float: left;
+            text-align: center;
+            border-radius: inherit;
+            height: -webkit-fill-available;
+        }
+
+        textarea {
+            max-width: 100%;
+            max-height: 100%;
+            border: none;
+            padding: 1px;
+            overflow: scroll;
+        }
+
+        img {
+            vertical-align: top;
+            cursor: pointer;
+            width: 120px;
+            height: 100px;
+        }
+
+        .column {
+            float: left;
+            width: 10px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .oneline {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+        }
+
+        .floatoneline {
+            width: 210px;
+            height: 20px;
+            float: left;
+        }
+
+        .floatoneline1 {
+            width: 416px;
+            height: 40px;
+            float: left;
+            display: inline;
+            padding-left: 300px;
+            margin-top: -28px
+        }
+
+        .floatoneline2 {
+            width: 170px;
+            float: left;
+            display: inline;
+        }
+
+        .floatoneline3 {
+            width: 150px;
+            height: 20px;
+            float: left;
+            display: inline;
+        }
+
+        .fbroot {
+            border: solid 2px #FFFFFF;
+            background: #f2dbd9;
+            padding: 10px;
+            font-size: 14px;
+            overflow: hidden;
+            margin-bottom: 5px;
+            height: auto;
+            margin: -40px -2px 50px 0px;
+        }
+
+        .command {
+            padding: 10px;
+            display: contents;
+            font-family: sans-serif;
+            font-size: smaller;
+        }
+
+
+        p {
+            padding: 2px 0 2px 4px;
+            margin: 0;
+            color: black;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+
+        .mm-text {
+            color: blue;
+            text-decoration: none;
+            pointer-events: none;
+            background-color: white;
+            padding: 0.4em;
+            margin-left: -6px;
+            margin-right: -6px;
+            padding-left: 0px;
+        }
+
+        .cut-text {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-width: 400px;
+            height: 4.2em;
+            white-space: nowrap;
+            color: white
+        }
+
+        #cut-text a {
+            border-radius: 0px;
+        }
+
+        div.foldercurrent {
+            border: none;
+            line-height: 48px;
+            font-size: 14px;
+            padding: 0 3px;
+            float: left;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="main-container">
+        <div class="folderouter" id="cut-text" style="height:60px">
+            <div class="foldergap " style="color:black; margin-top:13px;">
+                @MujiStore.Resources.Resource.VieUploadDetailsNewFolder
+            </div>
+            <div class="foldergap cut-text" style="color:black;margin-top:13px;">
+                &raquo;   @Html.ActionLink(MujiStore.Resources.Resource.tableofcontents, "ViewUploadDetails", "VideoFiles", new { style = "color: black;background:transparent" })
+
+            </div>
+            @foreach (var item in headerFolStructure)
+            {
+                folidx = folidx + 1;
+                <div class="foldergap " style="height:60px;margin-top:13px;"> &raquo; </div>
+                if (headerFolStructure.Count() == folidx)
+                {
+                    <div class="foldercurrent cut-text" style="margin-top: 13px;">
+                        @Html.ActionLink(item.Name, "ShowFolderDetails", new { folderID = item.FolderID }, new { style = "color: #fff;" })
+
+                    </div>
+                }
+                else
+                {
+                    <div class="folder cut-text" style="margin-top: 13px;">
+                        @Html.ActionLink(item.Name, "ShowFolderDetails", new { folderID = item.FolderID }, new { style = "color: #000; background-color:#e7bebb; font-weight: 600; text-decoration:underline;" })
+                    </div>
+                }
+            }
+        </div>
+        <div class="mainwrap">
+
+            <div id="myDiv" class="leftpart" style="margin-bottom:40px">
+                @foreach (var item in childFolderDtl)
+                {
+                    <a style="padding:0px;" href=@Url.Action("ShowFolderDetails","VideoFiles", new {folderID = item.FolderID})>
+                        <div class="movieouter" style="vertical-align:top;">
+                            <img src="~/img/folder-close.png" class="moviefolder" />
+                            <div class="moviecaption">
+                                <div>
+                                    <p style="color: black;height:80px;overflow:hidden ">@item.Name</p>
+                                </div>
+                                <div>
+                                    <p style="color: black; "><label style="margin-left:5px">@MujiStore.Resources.Resource.VieUploadDetailsNewFolder</label></p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                }
+
+                @foreach (var item in viddtl)
+                {
+
+            <a style="padding:0px;" id="@item.MediaID" href=@Url.Action("ViewUploadDetailsByID","VideoFiles", new {ID=item.MediaID,folderID=item.FolderID,formatid= Convert.ToInt32(HttpContext.Current.Session["DefaultFormatID"].ToString())})>
+
+                <div class="movieouter">
+
+                    @if (ViewBag.Lan == "ja")
+                    {
+                        if (item.Thumbnail != "" && item.Thumbnail != null)
+                        {
+                            if (File.Exists(Server.MapPath("~/thumbs/" + item.Thumbnail)))
+                            {
+                                <img src="@Url.Content("~/thumbs/" + item.Thumbnail + "")" class="moviethumb">
+                            }
+                            else
+                            {
+                                <img src="@Url.Content("~/img/Image not found_JP.png")" class="moviethumb">
+                            }
+
+                        }
+                        else
+                        {
+                            <img src="@Url.Content("~/img/Thumbnail not generated_JP.png")" class="moviethumb">
+                        }
+
+
+
+
+                    }
+                    else
+                    {
+
+                        if (item.Thumbnail != "" && item.Thumbnail != null)
+                        {
+                            if (File.Exists(Server.MapPath("~/thumbs/" + item.Thumbnail)))
+                            {
+                                <img src="@Url.Content("~/thumbs/" + item.Thumbnail + "")" class="moviethumb">
+                            }
+                            else
+                            {
+                                <img src="@Url.Content("~/img/Imagenotfound.jpg")" class="moviethumb">
+                            }
+
+                        }
+                        else
+                        {
+                            <img src="@Url.Content("~/img/Thumbnailnotgenerated.jpg")" class="moviethumb">
+                        }
+
+
+
+                    }
+
+
+
+
+
+
+                    <div class="moviecaption" style="color:black;overflow: hidden;">
+
+                        @(item.Title)  <br>
+                        <label style="font-weight:normal">  @(item.Description)</label>  <br>
+
+                        <small style="color: white; font-family: ＭＳ Ｐゴシック, Meiryo UI, MS UI Gothic, Sans-Serif;"></small>
+                    </div>
+                    <div class="movieproperty">
+
+                        @Html.Action("GetFileDuration", new { duration = item.Duration })
+                    </div>
+
+
+                </div>
+            </a>
+                }
+            </div>
+            <div class="rightpart" id="rightpart " style="word-break: break-all; text-align: justify;">
+                @if (FielDtl != null)
+                {
+                    if (FielDtl.Title != null)
+                    {
+                        <h2 style="color:black; font-weight:600;" ; id="contenttitle">@FielDtl.Title</h2>
+                    }
+                    else
+                    {
+                        <h2 style="color:black; font-weight:600" ; id="contenttitle"></h2>
+                    }
+
+                    <div class="videoarea">
+                        @if (SerDtl == null || SerDtl.Count == 0)
+                        {
+                            <div id="player" class="loading"><span class="loading">@MujiStore.Resources.Resource.ServerNotFound</span></div>
+                        }
+                        else
+                        {
+                            if (SerDtl[0].IPAddress != null && SerDtl[0].IPAddress != "-1" && SerDtl[0].FileName != null && viewVideo == 1)
+                            {
+                                <div id="player" class="loading">
+                                    <span class="loading">
+                                        <video class="loading" playsinline controls="controls" controlsList="nodownload" id="myVideoOne">
+                                            <source id="source" src="@Url.Content("http://" + SerDtl[0].IPAddress +"/Media/"+ videoFileName +"")" type="video/mp4" />
+                                            @MujiStore.Resources.Resource.VietblMediaEditBrowSupport
+                                        </video>
+                                    </span>
+                                </div>
+                                
+                            }
+                            else
+                            {
+
+                                if (viewVideo != 1)
+                                {
+                                    <div id="player" class="loading"><span class="loading">@MujiStore.Resources.Resource.NovideoSelected</span></div>
+
+                                }
+                                else
+                                {
+                                    <div id="player" class="loading"><span class="loading">@MujiStore.Resources.Resource.readerror</span></div>
+                                }
+                            }
+                            if (SerDtl[0].IPAddress != "-1")
+                            {
+                                <div class="text-center">
+
+                                    <br />
+                                    <p id="Videoloadmsg"></p>
+
+                                    <label style="font:normal">@MujiStore.Resources.Resource.CheckFormat </label>
+                                    @Html.DropDownList("Format", new SelectList(ViewBag.Format, "Value", "Text"), htmlAttributes: new { @class = "form-control1", @style = "width:80%", onchange = "FormatChange(this.value)" })
+                                </div>
+                            }
+                        }
+
+
+
+
+                        <script type="text/javascript">
+                            var fmat = @Html.Raw(Json.Encode(DefFormatID));
+                            $("#Format").val(fmat);
+
+                            function FormatChange(val) {
+                                var Qstr = "";
+                                var vFile = 0;
+
+                                for (i = window.location.href.split('/').length - 1; i > 0; i--) {
+                                    if (window.location.href.split('/')[i] === "VideoFiles") {
+                                        vFile = i
+                                        break;
+                                    }
+                                }
+                                for (i = 3; i < vFile; i++) {
+                                    Qstr += "/" + window.location.href.split('/')[i]
+                                }
+                                var mediaID =@Html.Raw(Json.Encode(FielDtl.MediaID));
+                                var folderID = @Html.Raw(Json.Encode(FielDtl.FolderID));
+                                window.location.href = Qstr + "/VideoFiles/FormatChange?ID=" + mediaID + "&folderID=" + folderID +"&formatid=" + val;
+                            }
+
+  
+
+
+                        </script>
+
+                        
+                    </div>
+                    
+                    if (SerDtl != null && SerDtl.Count > 0 && SerDtl[0].IPAddress != null)
+                    {
+
+                        if (SerDtl[0].IPAddress == null || SerDtl[0].IPAddress == "-1")
+                        {
+                            VidErrMsg = @MujiStore.Resources.Resource.ServerIpAddressNotFound;
+                        }
+
+                        if (FielDtl.Video == null)
+                        {
+                            VidErrMsg = @MujiStore.Resources.Resource.MeidaFileNotFound;
+                        }
+                        <div style="text-align:center">@VidErrMsg</div>
+
+
+
+                        if (videorecommanded == "0")
+                        {
+                            <br>
+                            if (SerDtl != null || SerDtl.Count != 0)
+                            {
+                                if (SerDtl[0].IPAddress != "-1")
+                                {
+
+                                    <span class="danger" id="danmsg" style="visibility:visible">
+
+                                        @MujiStore.Resources.Resource.TxtDangerPlayBackStart
+                                    </span>
+                                }
+                            }
+                        }
+                        else
+                        {
+                            <span class="danger" id="danmsg" style="visibility:hidden">
+
+                                @MujiStore.Resources.Resource.TxtDangerPlayBackStart
+                            </span>
+                        }
+                    }
+                    <div style="text-align: center;">
+                    </div>
+                    if (viewVideo == 1)
+                    {
+                        <div style="color: black; word-break: break-all; text-align: justify;" id="movieinfo">
+                            <h2 style="color:black">@MujiStore.Resources.Resource.VietblMediaIndexDescription</h2>
+                             <div style="margin-left:6px"> @FielDtl.Description </div>
+                        </div>
+                    }
+                    
+
+                }
+                else
+                {
+                    <h2 style="color:black; " id="contenttitle">@MujiStore.Resources.Resource.VieUploadDetailsNewNoVideoSelect</h2>
+                    <div class="videoarea">
+                        <div id="player" class="loading"><span class="loading">@MujiStore.Resources.Resource.NovideoSelected</span></div>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                    </div>
+                    <div id="movieinfo" style="text-align: center;"></div>
+ 
+
+                }
+
+                <div id="feedback">
+                    <div id="detailsvideo">
+
+
+                        @if (FielDtl != null && viewVideo == 1)
+                        {
+                            if ((HttpContext.Current.Session["Role"] != null)
+                    && (HttpContext.Current.Session["Role"].ToString() != ""))
+                            {
+                                <h2 style="color:black;">@MujiStore.Resources.Resource.VieUploadDetailsNewH2_1</h2>
+                            }
+                            
+                            if ((HttpContext.Current.Session["Role"] != null)
+                    && (HttpContext.Current.Session["Role"].ToString() != "")
+                    && (Convert.ToInt16(HttpContext.Current.Session["Role"]) % 2 != 0)
+                    )
+                            {
+
+                                <p>
+                                    @MujiStore.Resources.Resource.VieUploadDetailsNewNoOfTimeView：@FielDtl.ViewCount@MujiStore.Resources.Resource.Times
+                                </p>
+
+
+                            }
+
+                            if ((HttpContext.Current.Session["Role"] != null)
+                        && (HttpContext.Current.Session["Role"].ToString() != "")
+                        && ((Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 4 &&
+                                       Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 7) ||
+                                       (Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 12 &&
+                                       Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 15) ||
+                                       (Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 20 &&
+                                       Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 23) || (Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 28 &&
+                                         Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 31)))
+                            {
+                                <a href=@Url.Action("Edit", "VideoDemo", new { id = @FielDtl.MediaID })>
+                                    @MujiStore.Resources.Resource.Requestochangetheregistrationvideo
+                                </a>
+                                <br />
+                            }
+
+                            if ((HttpContext.Current.Session["Role"] != null)
+                   && (HttpContext.Current.Session["Role"].ToString() != "")
+                   && (Convert.ToInt16(HttpContext.Current.Session["Role"]) % 2 != 0)
+                   )
+                            {
+                                <a href=@Url.Action("MediaViewLog", "VideoFiles", new { MediaID = @FielDtl.MediaID })>
+                                    @MujiStore.Resources.Resource.VieUploadDetailsNewViewFeedBack
+                                </a>
+
+
+                            }
+
+                        }
+
+                    </div>
+                    <div id="detailsvideoself">
+
+
+                        @if (FielDtl != null && viewVideo == 1)
+                        {
+
+
+                            if ((HttpContext.Current.Session["Role"] != null)
+                   && (HttpContext.Current.Session["Role"].ToString() != "")
+                   && (Convert.ToInt16(HttpContext.Current.Session["Role"]) % 2 != 0)
+                   )
+                            {
+
+                                <a href=@Url.Action("OriginalVideo", "VideoFiles", new { filename = @FielDtl.Video,MediaID = @FielDtl.MediaID,FolderID = FielDtl.FolderID})>
+                                    @MujiStore.Resources.Resource.Acquisitionoforiginalfileofthisvideo
+                                </a>
+
+
+                            }
+
+                        }
+
+                    </div>
+                    <script>
+                        window.onload = function () {
+                            var anchors = document.getElementById('detailsvideo').getElementsByTagName('a');
+                            for (var i = 0; i < anchors.length; i++) {
+                                anchors[i].setAttribute('target', '_blank');
+                            }
+                        }
+                    </script>
+ 
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+</html>
+<div class="modal fade" id="DeleteFeedbackModal" tabindex="-1" role="dialog" aria-labelledby="DeleteVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:470px; height:140px">
+            <div class="modal-header" style="background: #822433; margin-left:-1px; color:white;border-radius: 5px;">
+                <h5 class="modal-title" id="DeleteUserModalLabel" style="font-weight:600">   @MujiStore.Resources.Resource.VietblMediaIndextblDelete</h5>
+
+            </div>
+            <div class="modal-body DeleteVastucontent">
+                <div>
+                    @MujiStore.Resources.Resource.Areyousureyoutodelete
+                </div>
+                <div style="float:right">
+                    <button type="button" class="btn btn-secondary" style=" background: white; border:2px solid #822433" data-dismiss="modal">   @MujiStore.Resources.Resource.No</button>
+                    <button type="button" class="btn btn-primary btndeleteUser btn-success" style="background:#822433">   @MujiStore.Resources.Resource.Yes</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function scrollSmoothTo(elementId) {
+
+        var element = document.getElementById(elementId);
+     
+        element.scrollIntoView({ behavior: 'instant', block: 'center' });
+      
+    }
+
+</script>
+@if (ViewBag.JavaScriptFunction != null)
+{
+    <script type="text/javascript">
+                           @Html.Raw(ViewBag.JavaScriptFunction)
+    </script>
+}
+<script>
+    //rightpart main - container
+    function Viedouploaddetails(MediaID, FolderID, FormatID) {
+        alert("dfsf")
+
+         $.ajax({
+                url: '@Url.Action("ViewUploadDetailsByID", "VideoFiles")',
+             type: 'POST',
+              dataType: "JSON",
+                data: { 'ID': MediaID, 'folderID': FolderID, 'formatid': FormatID},
+             success: function (result) {
+                 alert(result);
+                 alert(result.Title);
+                 alert(result.Video);
+                 
+                 // Settings.  
+                 jsonObj = $.parseJSON(result.data)
+
+                 // Data  
+                 alert(jsonObj.data);
+                 return jsonObj.data
+
+  
+                 },
+                error: function (error) {
+                    console.log(error);
+                }
+         });
+    }
+</script>
+ 
+
+
+

@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Store";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.VideoChangeApproval</h2>
+
+@if (ViewBag.Language == "en")
+{
+    
+<div>
+   I denied it.
+</div>
+}
+else
+{
+<div>
+    否認しました。
+</div>
+}
+
+<br />
+<div class="col-sm-2">
+    @Html.ActionLink(MujiStore.Resources.Resource.CommonBackToList, "Index", new { page = @ViewBag.Page }, null)
+</div>
+
+

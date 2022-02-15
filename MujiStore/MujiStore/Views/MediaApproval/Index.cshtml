@@ -1,0 +1,389 @@
+﻿
+@using PagedList.Mvc
+@{
+    var mediaDtl = ViewData["videoList"] as PagedList.PagedList<MujiStore.Models.tblMedia>;
+    ViewBag.Title = MujiStore.Resources.Resource.VideoChangeApproval;
+
+
+    if (ViewData["CvtStatus"] == null)
+    {
+        ViewData["CvtStatus"] = "4";
+    }
+    if (ViewData["FolID"] == null)
+    {
+        ViewData["FolID"] = "0";
+    }
+    if (ViewData["MedID"] == null)
+    {
+        ViewData["MedID"] = "0";
+    }
+}
+<style>
+    .vid1 {
+        word-break: break-all;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+        width: 13%;
+        text-align: justify;
+        padding: 8.5px;
+    }
+
+    .Folder2 {
+        word-break: break-all;
+        padding: 8.5px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+        width: 12%;
+    }
+
+    .Description2 {
+        word-break: break-all;
+        line-height: 0.571429;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+        width: 20%;
+        margin-left: 0px;
+        text-align: justify;
+        padding: 8.5px;
+    }
+
+    .th {
+        text-align: left;
+    }
+    .form-control1 {
+        width: 65%
+    }
+    .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+        position: relative;
+        min-height: 1px;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+</style>
+<ol class="breadcrumb" id="breadcrumb">
+    <li>@Html.ActionLink(MujiStore.Resources.Resource.breadcrumbVideoall, "ViewUploadDetails", "VideoFiles")</li>
+    <li>
+        @Html.ActionLink(@MujiStore.Resources.Resource.breadcrumbManagement, "Index", "Menus")
+    </li>
+    <li>
+        @MujiStore.Resources.Resource.breadcrumbVideoChangeApproval
+    </li>
+</ol>
+<br />
+
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-top:-18px; margin-left:-2px;">@MujiStore.Resources.Resource.VieUserCreateVideoChangeApp</h2>
+<script src="~/Scripts/select2/dist/js/jquery-3.0.0.js" type="text/javascript"></script>
+<script src="~/Scripts/select2/dist/js/select2.js" defer type="text/javascript"></script>
+<link href="~/Scripts/select2/dist/css/select2.min.css" rel='stylesheet' type='text/css'>
+
+<script type="text/javascript" src="~/Scripts/jquery-1.8.3.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="~/Content/FtpFile-pc1.css">
+
+<link rel="stylesheet" href="~/Content/font-awesome.min.css">
+<body >
+
+    @using (Html.BeginForm("Index", "MediaApproval", FormMethod.Post))
+    {
+    <div class="border-style form-group">
+
+        @*Datepicker changed by sabeena*@
+        <div class="col-sm-3 form-group">
+            <div class="col-sm-4" style="margin-top:7px">
+                @MujiStore.Resources.Resource.Title :
+            </div>
+            @Html.TextBox("SearchTitle", ViewBag.SearTitle as string, new { @class = "form-control1 form" })
+
+        </div>
+        <div class="col-sm-3 form-group">
+            <div class="col-sm-4" style="margin-top:7px">
+                @MujiStore.Resources.Resource.VietblMediaIndexDateFrom :
+            </div> @Html.TextBox("SearchFromCRTDT", String.Format("{0:d}", ViewBag.CdStDate as string),
+new { @class = "form-control1 form", placeholder = "yyyy/MM/dd" })
+        </div>
+        <div class="col-sm-3 form-group">
+            <div class="col-sm-2" style="margin-top:7px">
+                @MujiStore.Resources.Resource.VietblMediaIndexDateTo :
+            </div> @Html.TextBox("SearchToCRTDT", String.Format("{0:d}", ViewBag.CdEdDate as string),
+new { @class = "form-control1 form", placeholder = "yyyy/MM/dd" })
+        </div>
+        <div class="col-sm-3 form-group">
+            <div class="col-sm-4" style="margin-top:7px">
+                @MujiStore.Resources.Resource.ApprovalStatus :
+            </div>
+            @Html.DropDownList("ConvertStatus", null, new { @class = "form-control1 form1" })
+        </div>
+        <div class="col-sm-2 form-group">
+            <div class="col-sm-2" style="margin-top:7px">
+                @MujiStore.Resources.Resource.VietblMediaIndexID :
+            </div>@Html.DropDownList("MediaID", null, new { @class = "form-control1 form" })
+
+        </div>
+        <div class="col-sm-8 form-group">
+            <div class="col-sm-2" style="margin-top:7px">
+                @MujiStore.Resources.Resource.VietblMediaIndexFolderName :
+            </div> @Html.DropDownList("FolderID", null, new { @class = "form-control1 form", @style = "width:80%" })
+        </div>
+
+
+        <div class="col-sm-2 form-group">
+            <a href=@Url.Action("Index", new { page = mediaDtl.PageNumber }) style="margin-left: 10px; width:80px;padding-left: 19px;padding-right: 15px;" ;" class="clearright">
+                @MujiStore.Resources.Resource.clear
+            </a>
+            <input type="submit" value=@MujiStore.Resources.Resource.CommonSearch class="btn btn-default" style="width: 80px; margin-bottom: 6px;  float: right;  height: 32px;" />
+
+        </div>
+        <br />
+        <br />
+    </div>
+
+        <div class="table-responsive" style="width:100%">
+            @if (mediaDtl.Count < 1)
+            {
+                <table class="table " style="background-color:#ffffff;   margin-bottom:0px;">
+                    <tr>
+                        <td colspan="8" style="text-align:center;background-color:#EEE; ">
+                            @Html.Label(MujiStore.Resources.Resource.Novideolistforchangeapproval, MujiStore.Resources.Resource.Novideolistforchangeapproval)
+                        </td>
+                    </tr>
+                </table>
+            }
+            else
+            {
+
+                <table class="table " style="background-color:#ffffff;   margin-bottom:0px;">
+                    <thead>
+                        <tr class="thcolor">
+
+                            <th style="width: 5%;">
+                                @Html.ActionLink(MujiStore.Resources.Resource.VietblMediaIndexID, "Index", new { sortOrder = ViewBag.MediaIDSortParm, SearTitle = ViewBag.SearTitle, CdStDate = ViewBag.CdStDate, CdEdDate = ViewBag.CdEdDate, CvtStatus = ViewBag.cvtStatus, FolID = ViewBag.FolID, MedID = ViewBag.MedID }, new { @class = "link" })
+                                <span class="fa1 fa-sort fa-unsorted:before, .fa-sort:before"></span>
+                            </th>
+                            <th style="width:13%; ">
+                                @Html.ActionLink(MujiStore.Resources.Resource.RegisteredDate, "Index", new { sortOrder = ViewBag.ApplicationIDSortParm, SearTitle = ViewBag.SearTitle, CdStDate = ViewBag.CdStDate, CdEdDate = ViewBag.CdEdDate, CvtStatus = ViewBag.cvtStatus, FolID = ViewBag.FolID, MedID = ViewBag.MedID }, new { @class = "link" })
+                                <span class="fa1 fa-sort fa-unsorted:before, .fa-sort:before"></span>
+
+                            </th>
+                            <th style="width:12%;">
+                                @Html.ActionLink(MujiStore.Resources.Resource.VietblMediaIndexTitle, "Index", new { sortOrder = ViewBag.TitleSortParm, SearTitle = ViewBag.SearTitle, CdStDate = ViewBag.CdStDate, CdEdDate = ViewBag.CdEdDate, CvtStatus = ViewBag.cvtStatus, FolID = ViewBag.FolID, MedID = ViewBag.MedID }, new { @class = "link" })
+                                <span class="fa1 fa-sort fa-unsorted:before, .fa-sort:before"></span>
+                            </th>
+                            <th style="">
+                                @Html.DisplayName(MujiStore.Resources.Resource.VietblMediaIndexDescription)
+
+                            </th>
+                            <th style="">
+                                @Html.DisplayName(MujiStore.Resources.Resource.VietblMediaIndexVideo)
+                            </th>
+                            <th style="">
+                                @Html.ActionLink(MujiStore.Resources.Resource.ApprovalStatus, "Index", new { sortOrder = ViewBag.ConvertStatusSortParm, SearTitle = ViewBag.SearTitle, CdStDate = ViewBag.CdStDate, CdEdDate = ViewBag.CdEdDate, CvtStatus = ViewBag.cvtStatus, FolID = ViewBag.FolID, MedID = ViewBag.MedID }, new { @class = "link" })
+                                <span class="fa1 fa-sort fa-unsorted:before, .fa-sort:before"></span>
+                            </th>
+
+                            <th style="">
+                                @Html.ActionLink(MujiStore.Resources.Resource.VietblMediaIndexFolder, "Index", new { sortOrder = ViewBag.FolderSortParm, SearTitle = ViewBag.SearTitle, CdStDate = ViewBag.CdStDate, CdEdDate = ViewBag.CdEdDate, CvtStatus = ViewBag.cvtStatus, FolID = ViewBag.FolID, MedID = ViewBag.MedID }, new { @class = "link" })
+                                <span class="fa1 fa-sort fa-unsorted:before, .fa-sort:before"></span>
+
+                            </th>
+                            <th style=""></th>
+                            <th style=""></th>
+                        </tr>
+                    </thead>
+                    <tbody style="width:100%">
+
+
+                        @foreach (var item in mediaDtl)
+                        {
+                            <tr style="background-color:#EEE; width:100%">
+
+                                <td class="">
+                                    @Html.DisplayFor(modelItem => item.MediaID)
+                                </td>
+                                <td class="">
+                                    @Html.DisplayFor(modelItem => item.STRCRTDT)
+                                    <br />
+                                    @Html.DisplayFor(modelItem => item.STRCRTDTTIME)
+                                </td>
+                                <td class="Title">
+                                    @Html.DisplayFor(modelItem => item.Title)
+                                </td>
+                                <td class="Description2">
+                                    @Html.DisplayFor(modelItem => item.Description)
+                                </td>
+                                <td class="vid1">
+                                    @Html.DisplayFor(modelItem => item.Video)
+                                </td>
+                                <td class="">
+                                    @if (item.Delete == true)
+                                    {
+                                        @Html.DisplayName(MujiStore.Resources.Resource.Deleterequest)
+                                    }
+                                    else
+                                    {
+                                        @Html.DisplayName(MujiStore.Resources.Resource.Approvalrequest)
+                                    }
+                                </td>
+
+                                <td class="Folder2">
+                                    @Html.DisplayFor(modelItem => item.FolderName)
+
+
+                                </td>
+                                <td style="color:#000;">
+
+                                    @Html.ActionLink(MujiStore.Resources.Resource.CommonApproval, "Edit", new { id = item.ApplicationID, page = mediaDtl.PageNumber })
+
+                                </td>
+                                <td>
+                                    <a href="#" onclick="DeleteUserConfirmation(@item.ApplicationID);" id="btnDelete" data-toggle="modal" data-target="#deleteModal" title="Delete">@MujiStore.Resources.Resource.CommonDelete</a>
+
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+            }
+        </div>
+        if (mediaDtl.PageSize < mediaDtl.TotalItemCount)
+        {
+            <br />
+            <div>
+
+                @MujiStore.Resources.Resource.CommonPage @(mediaDtl.PageCount < mediaDtl.PageNumber ? 0 : mediaDtl.PageNumber) @MujiStore.Resources.Resource.CommonOf @mediaDtl.PageCount
+
+                @Html.PagedListPager(mediaDtl, page => Url.Action("Index",
+                     new { page, sortOrder = ViewBag.CurrentSort, SearTitle = ViewBag.SearTitle, CdStDate = ViewBag.CdStDate, CdEdDate = ViewBag.CdEdDate, CvtStatus = ViewBag.cvtStatus, FolID = ViewBag.FolID, MedID = ViewBag.MedID }))
+            </div>
+        }
+          
+        <br />
+        <br />
+    }
+    <div class="modal fade" id="DeleteUserModal" tabindex="-1" role="dialog" aria-labelledby="DeleteVideoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="width:470px; height:140px">
+                <div class="modal-header" style="background: #7f0019; margin-left:-1px; color:white;border-radius: 5px;">
+                    <h5 class="modal-title" id="DeleteUserModalLabel" style="font-weight:600">   @MujiStore.Resources.Resource.VietblMediaIndextblDelete</h5>
+
+                </div>
+                <div class="modal-body DeleteVastucontent">
+                    <div>
+                        @MujiStore.Resources.Resource.Areyousureyoutodelete
+                    </div>
+                    <div style="float:right">
+                        <button type="button" class="btn btn-secondary" style=" background: white; border:2px solid #7f0019" data-dismiss="modal">   @MujiStore.Resources.Resource.No</button>
+                        <button type="button" class="btn btn-primary btndeleteUser btn-success" style="background:#7f0019;">   @MujiStore.Resources.Resource.Yes</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    @Html.Hidden("DeleteUserId")
+    @section scripts
+{
+
+        <script>
+
+
+        function DeleteUserConfirmation(UserID) {
+
+            $('#DeleteUserId').val(UserID);
+            $('#DeleteUserModal').modal('show');
+        }
+
+        $('.btndeleteUser').on('click', function () {
+
+            DeleteVastu($('#DeleteUserId').val());
+
+        });
+        function DeleteVastu(UserID) {
+
+            $('#DeleteUserModal').modal('hide');
+            $.ajax({
+                url: '@Url.Action("Delete", "MediaApproval")',
+                type: 'POST',
+                data: { 'ID': UserID },
+                success: function (result) {
+                    if (result.errorcode == 1) {
+
+
+                        window.location.href = "@Url.Action("Index", "MediaApproval", new { @page1 = mediaDtl.PageNumber })";
+                    }
+                    else {
+                          window.location.href = "@Url.Action("Index", "MediaApproval", new { @page1 = mediaDtl.PageNumber })";
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+        </script>
+    }
+
+
+</body>
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        $("#FolderID").select2({
+            templateResult: formatOptions
+        });
+        
+    });
+
+    function formatOptions(state) {
+        $('.select2-search__field').remove();
+     
+        if (!state.id) { return state.text; }
+
+        
+        var strfolder = state.text;
+        
+        var root = strfolder.substr(1, (strfolder.length - strfolder.trim().length - 1))
+       
+
+        var Qstr = "";
+        var vDemo = 0
+        var FiUrl = "";
+        var url2 = window.location.href.replace(window.location.origin, "");
+        var url3 = url2.substr(0, url2.indexOf('/MediaApproval'));
+        FiUrl = url3 + "/img/folder-close1.png";
+        var $state = $(
+            '<span  style="color:black">' + root + '<img sytle="display: inline-block;" src=' + FiUrl + '  /> ' + strfolder.trim() + '</span>'
+        );
+        
+        return $state;
+
+    }
+    function split_on_first_word(str) {
+        str = str.trim();  // Clean string by removing beginning and ending spaces.
+
+        var arr = [];
+        var pos = str.indexOf(' ');  // Find position of first space
+
+        if (pos === -1) {
+            // No space found
+            arr.push(str);                // First word (or empty)
+            arr.push('');                 // Empty (no next words)
+        } else {
+            // Split on first space
+            arr.push(str.substr(0, pos));         // First word
+            arr.push(str.substr(pos + 1).trim());  // Next words
+        }
+        
+        return arr;
+    }
+
+    function getSourceID() {
+        alert($("#ParentID").val())
+    }
+</script>

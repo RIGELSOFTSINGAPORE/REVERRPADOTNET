@@ -1,0 +1,18 @@
+﻿
+
+@model System.Web.Mvc.HandleErrorInfo
+
+@if (HttpContext.Current.Session["UserName"] == null && HttpContext.Current.Session["UserName"] == "")
+{
+<h2 class="text-danger">Your Session has expired. Please login to continue. </h2>
+
+
+}
+else
+{
+    if (TempData["ErrMsg"] == null)
+    {
+        <h2 class="text-danger">An error occurred while processing your request. Please Try Again  / Contact system admininstrator</h2>
+    }
+}
+@Html.ActionLink("Home", "Index", "Home")

@@ -1,0 +1,426 @@
+﻿@model IEnumerable<MujiStore.Models.tblStore>
+@using System.Data
+@{
+    DataTable DeleteID = (DataTable)Session["Succsmsg"];
+    ViewBag.Title = "Store";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int i = 0;
+    var SGDTl = ViewData["SGList"] as IEnumerable<MujiStore.Models.tblStore>;
+}
+
+<style>
+    .table, td, th, tr, thead, tbody {
+        padding: 1px
+    }
+
+    .td, th, tr {
+        border: 1px solid #822433;
+    }
+
+    .tr, td {
+        border: 1px solid #822433;
+    }
+
+    #divid
+    a {
+        background: none;
+        color: white;
+    }
+
+    a:hover {
+        color: white;
+    }
+
+    input[type="button"] {
+        border: none;
+        background: none;
+        color: blue;
+    }
+
+    select {
+        max-width: 100%;
+        background-color: #fff;
+    }
+</style>
+
+<ol class="breadcrumb" id="breadcrumb">
+    <li>@Html.ActionLink(MujiStore.Resources.Resource.breadcrumbVideoall, "ViewUploadDetails", "VideoFiles")</li>
+    <li>
+        @Html.ActionLink(@MujiStore.Resources.Resource.breadcrumbManagement, "Index", "Menus")
+    </li>
+    <li>@Html.ActionLink(MujiStore.Resources.Resource.breadcrumbSystemmaintenance, "InfoMenus", "Menus")</li>
+    <li>
+        @MujiStore.Resources.Resource.BreadcrumbStore
+    </li>
+</ol>
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.StoreH2</h2>
+
+
+<div class="">
+    <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">
+            @MujiStore.Resources.Resource.storeheading1
+            <br>
+            @MujiStore.Resources.Resource.storeheading2
+        </font>
+    </font>
+</div>
+
+@using (Html.BeginForm("Create", "StoreAll", FormMethod.Post))
+{
+    <div class="table-responsive">
+
+        <table class="table1 usertbl" style="background-color:#ffffff;  ">
+
+            <tr class="thcolor">
+                <th>
+                    @Html.DisplayName(MujiStore.Resources.Resource.StoreNumber)
+                </th>
+                <th>
+                    @Html.DisplayName(MujiStore.Resources.Resource.ModtblStoreStoreName)
+                </th>
+                <th style="width:500px">@Html.DisplayName(MujiStore.Resources.Resource.ModtblStoreStoreGroupName) </th>
+                <th>@Html.DisplayName(MujiStore.Resources.Resource.VietblMediaIndextblDelete) </th>
+            <tbody>
+                @foreach (var model in Model)
+                {
+
+                    <tr>
+                        <td>
+
+                            @Html.TextBox("[" + i + "].StoreIDdummy", model.StoreIDdummy, new { id = "DeleteUserId" + i, htmlAttributes = new { @class = "form-control textbox", value = "" } })
+                        </td>
+                        <td>
+                            @Html.TextBox("[" + i + "].StoreName", model.StoreName, new { id = "name" + i, htmlAttributes = new { @class = "form-control textbox" } })
+                        </td>
+                        <td>
+                            @Html.DropDownList("[" + i + "].StoreGroupID", ViewBag.StoreGroupID as IEnumerable<SelectListItem>, new { @class = "form-control", @id = "StoreGroupID" + i, @style = "width:100%" })
+                        </td>
+                        <td style="text-align:center;width:10%">
+                            @Html.CheckBox("[" + i + "].DELFG", model.DELFG)
+                        </td>
+                    </tr>
+                    i = i + 1;
+                }
+
+
+
+            </tbody>
+
+        </table>
+    </div>
+    <p>
+        <br>
+        <input type="submit" name="submitbutton1" class="btn btn-default" style="width:85px; margin-bottom: 4px;width: 85px;  height: 32px;" value=@MujiStore.Resources.Resource.update />
+        <a href=@Url.Action("Index", "StoreAll") class="clear">
+            @MujiStore.Resources.Resource.reset
+        </a>
+
+    </p>
+
+}
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.storeheading4</h2>
+
+<div class="">
+    <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">
+            @MujiStore.Resources.Resource.storeheading3
+        </font>
+    </font>
+</div>
+<p>
+
+    @using (Html.BeginForm("Index", "StoreAll", FormMethod.Post))
+    {
+
+        @MujiStore.Resources.Resource.CommonSearch @Html.DisplayName(" : ")
+        @*@Html.TextBox("SearchID", ViewBag.SearchID as string, new { @class = "form-control1", @type = "search", @style = "width:80%" })
+            <input type="submit" value=@MujiStore.Resources.Resource.CommonSearch class="btn btn-default" style="width:85px;margin-top:5px; margin-bottom: 4px;width: 85px; margin-left: 37px; height: 32px;" />*@
+        @Html.TextBox("SearchID", ViewBag.SearchID as string, new { @class = "form-control1", @type = "search", @style = "width:80%" })
+        <input type="button" id="btnSearch" onclick="javascript:StoreSearch();" value=@MujiStore.Resources.Resource.CommonSearch class="btn btn-default" style="margin-left:35px; margin-top:5px;color:white; background-color: #7f0019;border-color: #5e0111;"  />
+
+    }
+</p>
+
+@{
+    var SearchID = ViewBag.SearchID;
+}
+@foreach (var item in (IEnumerable<MujiStore.Models.tblStore>)ViewData["StoreInfocount"])
+{
+    if (ViewBag.Language == "en")
+    {
+<th style="width:95px;">
+    @Html.DisplayName("There are")  @Html.LabelFor(modelItem => item.StoreID, new { id = "ttlCount" }) @Html.DisplayName("applicable stores")
+
+</th>
+
+    }
+    else
+    {
+        <th style="width:95px;">
+            @Html.LabelFor(modelItem => item.StoreID, new { id = "ttlCount" })  @Html.DisplayName(MujiStore.Resources.Resource.correspondingstores)
+
+        </th>
+    }
+}
+<div class="table-responsive">
+    @if (ViewBag.Language == "en")
+    {
+        <table id="tblTempSubnet"  class="table1 " style="background-color:#ffffff;">
+            <thead>
+                <tr class="thcolor" style="font:700">
+                    <td style="width:16%;"><label>Store Number</label></td>
+                    <td style="width:85px;"><label>Store Name</label></td>
+                    <td style="width:85px;"><label>Store Group Name</label></td>
+                  
+                </tr>
+
+            </thead>
+
+        </table>
+    }
+    else
+    {
+        <table id="tblTempSubnet"  class="table1 " style="background-color:#ffffff;">
+            <thead>
+                <tr class="thcolor " style="font:700">
+                    <td style="width:16%;"><label>店舗番号</label></td>
+                    <td style="width:85px;"><label>店舗名</label></td>
+                    <td style="width:85px;"><label>店舗グループ</label></td>
+                  
+                </tr>
+
+            </thead>
+
+        </table>
+    }
+</div>
+@*<div class="table-responsive">
+    <table class="table1 " style="background-color:#ffffff;">
+        @foreach (var item in (IEnumerable<MujiStore.Models.tblStore>)ViewData["StoreInfo"])
+        {
+
+            <tr class="thcolor">
+                <th style="width:16%;">
+                    @Html.DisplayName(MujiStore.Resources.Resource.StoreNumber)
+
+                </th>
+                <th style="width:85px;">
+                    @Html.Label(MujiStore.Resources.Resource.ModtblStoreStoreName)
+                </th>
+
+                <th style="width:85px;">
+                    @Html.Label(MujiStore.Resources.Resource.ModtblStoreStoreGroupName)
+                </th>
+
+
+            </tr>
+            break;
+        }
+        <tbody style="width:60%">
+            @foreach (var item in (IEnumerable<MujiStore.Models.tblStore>)ViewData["StoreInfo"])
+            {
+                <tr>
+                    <td id="divid" style="width:90px">
+
+                        <input type="button" value=@item.StoreID onclick="setStoreInfo('@item.StoreNumber','@item.StoreName','@item.Storegroupname','@item.StoreID')" />
+
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StoreName)
+                    </td>
+
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Country)
+                    </td>
+
+
+
+                </tr>
+
+            }
+
+
+        </tbody>
+    </table>
+</div>*@
+
+
+<div class="modal" id="myModalSucc" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header" style="border:none">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                <p style="text-align:center;font-weight:800;"> </p>
+            </div>
+            @if (ViewBag.Language == "en")
+            {
+                <div class="modal-body" style="color: black; word-break: break-all; text-align: justify;">
+                    <p style="text-align:center;font-weight:800;font-style:italic">The input field is full. </p>
+                </div>
+            }
+            else
+            {
+                <div class="modal-body" style="color: black; word-break: break-all; text-align: justify;">
+                    <p style="text-align:center;font-weight:800;font-style:italic">入力欄が一杯です。 </p>
+                </div>
+            }
+            <div class="modal-footer" style="border:none">
+                <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (TempData["Deletemsg"] != null)
+{
+    <div class="modal fade" id="DeleteUserModal" tabindex="-1" role="dialog" aria-labelledby="DeleteVideoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="height:100px">
+
+                <div class="modal-body DeleteVastucontent">
+                    <div>
+                        @TempData["Deletemsg"]
+                    </div>
+                    <div style="float:right">
+                        <button type="button" class="btn btn-secondary" style=" background: white; border:2px solid #822433" data-dismiss="modal">   @MujiStore.Resources.Resource.No</button>
+                        <button type="button" class="btn btn-primary btndeleteUser ">   @MujiStore.Resources.Resource.Yes</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+@if (TempData["deletesucmsg"] != null)
+{
+    if (DeleteID.Rows.Count != 0)
+    {
+        <div class="modal" id="DeletestoreModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header" style="border:none">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                        <p style="text-align:center;font-weight:800;"> </p>
+                    </div>
+                    <div class="modal-body" style="color: black; word-break: break-all; text-align: justify;">
+                        @foreach (DataRow row in DeleteID.Rows)
+                        {
+                            <p>
+                                @row["msg"]
+                            </p>
+                        }
+
+                    </div>
+                    <div class="modal-footer" style="border:none">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+}
+
+@section scripts
+{
+
+    <script>
+        pageload();
+        function pageload() {
+            StoreSearch();
+        }
+
+        var stgdtl = @Html.Raw(Json.Encode(SGDTl));
+        //var j = 0;
+
+        for (var i = 0; i < stgdtl.length; ++i) {
+            if (stgdtl[i].StoreGroupID == null) {
+                stgdtl[i].StoreGroupID = 0;
+            }
+            $("#StoreGroupID" + i).val(stgdtl[i].StoreGroupID)
+
+
+        }
+
+         $('.btndeleteUser').on('click', function () {
+            window.location.href = "@Url.Action("DeleteStore", "StoreAll")";
+        });
+
+        var Succ = '@TempData["deletesucmsg"]';
+        if (Succ != '')
+        {
+        $("#DeletestoreModal").modal('show');
+        }
+
+        var Succ = '@TempData["Deletemsg"]';
+        if (Succ != '')
+        {
+        $("#DeleteUserModal").modal('show');
+        }
+
+
+
+
+        function setStoreInfo(StoreNumber, storeName, Storegroupname, StoreID) {
+
+            var i = 0, maxid = 5;
+            if (Storegroupname == "") {
+                Storegroupname = 0;
+            }
+            while (i <= maxid && $("#DeleteUserId" + i).val() != 0) i++;
+
+            if (i > maxid) {
+
+                $("#myModalSucc").modal('show');
+            } else {
+                $("#DeleteUserId" + i).val(StoreID);
+                $("#name" + i).val(storeName);
+
+
+                $("#StoreGroupID" + i).val(Storegroupname);
+
+                $("#StoreID" + i).val(StoreID);
+            }
+
+        }
+        function StoreSearch() {
+            var searchKey = encodeURIComponent($('#SearchID').val().trim());
+            var searchUrl = "Search/?SearchID=" + searchKey;
+            $("#ttlCount").text("");
+             $("#tblTempSubnet").find("tr:gt(0)").remove();
+                //$("#btnSearch").attr({ 'value': 'Please wait..' });
+                $.ajax({
+                    url: searchUrl,
+                    type: "POST",
+                    success: function (data) {
+                        $("#ttlCount").text(data.length);
+                        var tr;
+                        console.log(data);
+                        for (var i = 0; i < data.length; i++) {
+
+                            var sgName = data[i].Storegroupname.replace(/ /g, "&#32;");
+                            var sName = data[i].StoreName.replace(/ /g, "&#32;");
+                            //var sgName = data[i].Storegroupname;
+                            //var sName = data[i].StoreName;
+                            @*//onclick="setStoreInfo('@item.StoreNumber','@item.StoreName','@item.Storegroupname','@item.StoreID')"*@
+                            var link = "setStoreInfo('" + data[i].StoreNumber + "','" + sName + "','" + sgName + "','" + data[i].StoreID + "')"
+
+                            tr = tr + "<tr>";
+                            tr = tr + "<td id='divid' style='width: 110px'> <input type='button' value='" + data[i].StoreID + "' onclick="+link+" '/> </td>";
+                            tr = tr + "<td>" + data[i].StoreName + "</td>";
+                            tr = tr + "<td>" + data[i].Country + "</td>";
+
+                            tr = tr + "</tr>";
+                        }
+                        $('#tblTempSubnet').append(tr);
+                        //$("#btnSearch").attr({ 'value': 'Search' });
+                    }
+                });
+            }
+    </script>
+   
+}

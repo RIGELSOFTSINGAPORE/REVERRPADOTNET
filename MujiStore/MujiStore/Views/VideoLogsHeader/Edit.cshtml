@@ -1,0 +1,360 @@
+﻿@model MujiStore.Models.tblMedia
+@using PagedList.Mvc
+
+@{
+
+    ViewBag.Title = MujiStore.Resources.Resource.VideoLogs;
+    int i = 0;
+    var mediaDtl = (IEnumerable<MujiStore.Models.tblMedia>)ViewData["videoList"];
+    var media = (IEnumerable<MujiStore.Models.tblMedia>)ViewData["videoList1"];
+    if (ViewData["CvtStatus"] == null)
+    {
+        ViewData["CvtStatus"] = "3";
+    }
+
+}
+<br />
+
+
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-top:-18px; margin-left:-2px;">@MujiStore.Resources.Resource.VideoLogs</h2>
+
+<script type="text/javascript" src="~/Scripts/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/FtpFile-pc1.css">
+<link rel="stylesheet" href="~/Content/font-awesome.min.css">
+
+<body>
+
+    @using (Html.BeginForm("Index", "VideoLogs", FormMethod.Post))
+    {
+       
+
+
+        
+        <table class="table " style=" width:100%;  margin-bottom:0px;">
+            <thead>
+                <tr style="background-color:#822433; color:#ffffff; width:90%">
+                  
+                    <th style="width:25%">
+                        @Html.DisplayName(MujiStore.Resources.Resource.VietblMediaIndexID)
+                    </th>
+
+                    <th style="width:15%">
+                        @Html.DisplayName(MujiStore.Resources.Resource.VietblMediaIndexTitle)
+                    </th>
+
+                    <th  >
+                        @Html.DisplayName(MujiStore.Resources.Resource.VietblMediaIndexVideo)
+                    </th>
+
+                    <th></th>
+                </tr>
+            </thead>
+            @foreach (var model1 in media)
+            {
+                <tbody style="width:90%">
+                    <tr style="background-color: #EEE;">
+                        <td >
+                            @Html.DisplayFor(modelItem => model1.MediaID)
+                        </td>
+                        <td style="word-break: break-all; text-align: justify;" >
+                            @Html.DisplayFor(modelItem => model1.Title)
+                        </td>
+                        <td colspan="2" style="word-break: break-all; text-align: justify; ">
+                            @Html.DisplayFor(modelItem => model1.Video)
+                        </td>
+
+                    </tr>
+                </tbody>
+            }
+            </table>
+            <table class="table " style="background-color:#ffffff; width:100%;  margin-bottom:0px;">
+                <thead>
+                    <tr style="background-color:#822433; color:#ffffff; width:90%">
+                       
+                        <th style="text-align:left;width:25%">
+                            @Html.DisplayName(MujiStore.Resources.Resource.VideoLogs)
+                        </th>
+
+                        <th style="text-align:left;width:15%">
+                            @Html.DisplayName(MujiStore.Resources.Resource.Dateandtime)
+                        </th>
+
+                        <th style="text-align:left;width:15%">
+                            @Html.DisplayName(MujiStore.Resources.Resource.userid)
+                        </th>
+                        <th style="text-align:left">
+                            @Html.DisplayName(MujiStore.Resources.Resource.RemarksandErrors)
+                        </th>
+
+                    </tr>
+                </thead>
+                <tbody style="width:90%">
+                    @foreach (var model1 in media)
+                    {
+                        <tr style="background-color: #EEE;">
+
+
+                            <td style="">
+                                <span style="font-weight: bolder;">
+                                    @Html.DisplayName(MujiStore.Resources.Resource.UploadStart)
+                                </span>
+                            </td>
+                            <td style="">
+                                <span style="font-weight: bolder;">
+                                    @if (model1.suploadstartdatetime != "0001/01/01 00:00:00")
+                                    {
+                                        @Html.DisplayFor(modelItem => model1.suploadstartdatetime)
+                                    }
+                                </span>
+                            </td>
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    @Html.DisplayFor(modelItem => model1.Registerer)
+                                </span>
+                            </td>
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    @if (model1.suploadstartdatetime != "0001/01/01 00:00:00" && model1.suploadenddatetime != "0001/01/01 00:00:00")
+                                    {
+                                        @Html.DisplayName(MujiStore.Resources.Resource.uploaded)
+                                    }
+                                    else
+                                    {
+                                        @Html.DisplayName(MujiStore.Resources.Resource.slow)
+                                    }
+                                </span>
+                            </td>
+
+                        </tr>
+                        <tr style="background-color: #EEE;">
+
+
+                            <td style=" ">
+                                <span style="font-weight: bolder;">
+                                    @Html.DisplayName(MujiStore.Resources.Resource.UploadEnd)
+                                </span>
+                            </td>
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    @if (model1.suploadenddatetime != "0001/01/01 00:00:00")
+                                    {
+                                        @Html.DisplayFor(modelItem => model1.suploadenddatetime)
+                                    }
+                                </span>
+                            </td>
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    @Html.DisplayFor(modelItem => model1.Accepter)
+                                </span>
+                            </td>
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    
+                                </span>
+                            </td>
+
+                        </tr>
+
+                        <tr style="background-color: #EEE;">
+
+
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    @Html.DisplayName(MujiStore.Resources.Resource.ConversionStart)
+                                </span>
+                            </td>
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    @if (model1.sstreamingconstartdatetime != "0001/01/01 00:00:00")
+                                    {
+                                        @Html.DisplayFor(modelItem => model1.sstreamingconstartdatetime)
+                                    }
+
+                                </span>
+                            </td>
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    @Html.DisplayFor(modelItem => model1.Registerer)
+                                </span>
+                            </td>
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    @if (model1.ConvertStatus == 3)
+                                    {
+                                        @Html.DisplayName(MujiStore.Resources.Resource.Conversioncompleted)
+                                    }
+                                    else if (model1.ConvertStatus == 2)
+                                    {
+                                        @Html.DisplayName(MujiStore.Resources.Resource.Conversionfailed)
+                                    }
+                                    else if (model1.ConvertStatus == 0)
+                                    {
+                                        @Html.DisplayName(MujiStore.Resources.Resource.slow)
+                                    }
+                                    </span>
+                            </td>
+                        </tr>
+                        <tr style="background-color: #EEE;">
+
+
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    @Html.DisplayName(MujiStore.Resources.Resource.conversionend)
+                                </span>
+                            </td>
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    @if (model1.sstreamingconenddatetime != "0001/01/01 00:00:00")
+                                    {
+                                        @Html.DisplayFor(modelItem => model1.sstreamingconenddatetime)
+                                    }
+                                </span>
+                            </td>
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    @Html.DisplayFor(modelItem => model1.Accepter)
+                                </span>
+                            </td>
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    
+                                    </span>
+                            </td>
+
+                        </tr>
+
+                    }
+                   
+                    @foreach (var model in Model.approvalSta)
+                    {
+                        <tr style="background-color: #EEE;">
+
+
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    @Html.DisplayName(MujiStore.Resources.Resource.VideoChangeRequest)
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    @if (model.Registereddate != "0001/01/01 00:00:00")
+                                    {
+                                        @Html.Label("approvalSta[" + i + "].Registereddate", model.Registereddate, new { @class = "textbox1", @readonly = "readonly" })
+                                    }
+                                </span>
+                            </td>
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    @Html.Label("approvalSta[" + i + "].Delete", model.Register, new { @class = "textbox1", @readonly = "readonly" })
+                                </span>
+                            </td>
+                            <td style="word-break: break-all; text-align: justify;">
+
+                                @Html.Label(MujiStore.Resources.Resource.Title)@Html.Label(":") @Html.Label("approvalSta[" + i + "].Delete", model.title, new { @style = "font-weight:normal" })
+                                <br />
+                                <div >
+                                    @Html.Label(MujiStore.Resources.Resource.CntVideoDemoVideoDescription) @Html.Label(":")   @Html.Label("approvalSta[" + i + "].Delete", model.description, new { @style = "font-weight:normal; " })
+                                </div>
+                                    <br />
+                                @Html.Label(MujiStore.Resources.Resource.CntVideoDemoVideoFolderName)@Html.Label(":")   @Html.Label("approvalSta[" + i + "].Delete", model.name, new { @style = "font-weight:normal" })
+
+                            </td>
+                          
+
+
+                        </tr>
+                        <tr style="background-color: #EEE;">
+
+
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    @Html.Label("approvalSta[" + i + "].Delete", model.status, new { @class = "textbox1", @readonly = "readonly" })
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    @if (model.Completedate != "0001/01/01 00:00:00")
+                                    {
+                                        @Html.Label("approvalSta[" + i + "].Registereddate", model.Completedate, new { @class = "textbox1", @readonly = "readonly" })
+                                    }
+                                </span>
+                            </td>
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    @Html.Label("approvalSta[" + i + "].Delete", model.Accepter, new { @class = "textbox1", @readonly = "readonly" })
+                                </span>
+                            </td>
+                            <td>
+                                <span style="font-weight: bolder;">
+
+                                </span>
+                            </td>
+                         
+
+
+                        </tr>
+                    }
+                    @foreach (var model in Model.deployStatus)
+                    {
+                        <tr style="background-color: #EEE;">
+
+
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    
+                                    @Html.Label("approvalSta[" + i + "].Delete", model.FormatName, new { @class = "textbox1", @readonly = "readonly" })
+
+
+
+                                </span>
+                            </td>
+
+
+                            <td>
+                                <span style="font-weight: bolder;">
+                                    @if (model.IPAddress != "0001/01/01 00:00:00")
+                                    {
+                                        @Html.Label("approvalSta[" + i + "].Delete", model.IPAddress, new { @class = "textbox1", @readonly = "readonly" })
+                                    }
+                                </span>
+                            </td>
+                            <td>
+                                <span style="font-weight: bolder;">
+
+                                    @Html.Label("approvalSta[" + i + "].Delete", model.UPDCD, new { @class = "textbox1", @readonly = "readonly" })
+
+                                </span>
+                            </td>
+                            <td>
+                                <span style="font-weight: bolder;">
+
+                                    @Html.DisplayName(MujiStore.Resources.Resource.ServerName) - @Html.Label("approvalSta[" + i + "].Delete", model.DSServer, new { @class = "textbox1", @readonly = "readonly" })
+
+
+                                </span>
+                            </td>
+                         
+
+
+                        </tr>
+                       
+                    }
+</table>
+
+                    
+
+
+
+            <br />
+            <br />
+
+        
+    }
+        <div class="col-sm-2">
+            @Html.ActionLink(MujiStore.Resources.Resource.CommonBackToList, "Index", new { page = @ViewBag.Page, @class = "linkclass" }, null)
+        </div>
+    </body>

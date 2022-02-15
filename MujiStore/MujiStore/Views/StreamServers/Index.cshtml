@@ -1,0 +1,94 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<MujiStore.Models.tblStreamServer>
+@{
+    ViewBag.Title = @MujiStore.Resources.Resource.StreamSreverIndex;
+}
+<link rel="stylesheet" type="text/css" href="~/Content/FtpFile-pc1.css">
+
+<link rel="stylesheet" href="~/Content/font-awesome.min.css">
+<style>
+    input[type="search"]::-webkit-search-cancel-button {
+        /*Bootstrap 3 override*/
+        -webkit-appearance: searchfield-cancel-button !important;
+    }
+</style>
+
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.StreamServerMgt1</h2>
+@using (Html.BeginForm("Index", "StreamServers", FormMethod.Post))
+{
+    <div class="border-style">
+        <p>
+            @MujiStore.Resources.Resource.VieSearchIPaddressstreamserver / @MujiStore.Resources.Resource.SubnetNumber: @Html.TextBox("SearchID", ViewBag.SearchID as string, new { @class = "form-control1", @type = "search" })
+
+
+            <input type="submit" value=@MujiStore.Resources.Resource.CommonSearch class="btn btn-default" style="width:85px; margin-bottom: 4px;width: 85px; margin-left: 37px; height: 32px;" />
+            <a href=@Url.Action("Index","StreamServers") class="clear">
+                @MujiStore.Resources.Resource.clear
+            </a>
+            <input type="submit" name="submitbutton1" class="btn btn-default" style="width:85px; margin-bottom: 4px;width: 85px;  height: 32px;" value=@MujiStore.Resources.Resource.Export />
+
+
+        </p>
+    </div>
+}
+@{
+    var SearchID = ViewBag.SearchID;
+}
+<br />
+
+<p>
+    @Html.ActionLink(@MujiStore.Resources.Resource.CreateNewStreamServer, "Create", new { page = Model.PageNumber })
+</p>
+<table class="table" style="background-color:#ffffff; ">
+    <tr style="background-color:#822433; color:#ffffff;">
+
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().SSServer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().IPAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().SubNetName)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().DELFG)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr style="background-color:#EEE;">
+    <td>
+        @Html.DisplayFor(modelItem => item.SSServer)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.IPAddress)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.SubNetName)
+    </td>
+    
+    <td>
+        @Html.DisplayFor(modelItem => item.DELFG)
+    </td>
+    <td style="width:100PX;">
+        @Html.ActionLink(@MujiStore.Resources.Resource.StreamSreverEdit, "Edit", new { id = item.StreamServerID, page = Model.PageNumber  })
+    </td>
+</tr>
+    }
+
+</table>
+<br />
+
+@if (Model.PageSize < Model.TotalItemCount)
+{
+    <div>
+        @MujiStore.Resources.Resource.CommonPage @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) @MujiStore.Resources.Resource.CommonOf @Model.PageCount
+
+        @Html.PagedListPager(Model, page => Url.Action("Index",
+             new { page, SearchID = SearchID }))
+    </div>
+}

@@ -1,0 +1,210 @@
+﻿@using PagedList.Mvc
+@model  IEnumerable<MujiStore.Models.SSDetails>
+@{
+    var mediaDtl = ViewData["videoList"] as PagedList.PagedList<MujiStore.Models.SSDetails>;
+    var mediaDtll = ViewData["pageList"] as PagedList.PagedList<MujiStore.Models.SSDetails>;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link rel="stylesheet" type="text/css" href="~/Content/FtpFile-pc1.css">
+
+<link rel="stylesheet" href="~/Content/font-awesome.min.css">
+<style>
+    input[type="search"]::-webkit-search-cancel-button {
+        /*Bootstrap 3 override*/
+        -webkit-appearance: searchfield-cancel-button !important;
+    }
+</style>
+
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.StreamServerViewLogs</h2>
+@using (Html.BeginForm("Index", "StreamServersLogs", FormMethod.Post))
+{
+    <div class="border-style">
+        <p>
+            <span style="margin-left:15px;">
+                @MujiStore.Resources.Resource.ModFeedbackMediaFileName :
+            </span> 
+           
+            @Html.TextBox("Fname", ViewBag.SearchID as string, new { @class = "form-control1", @type = "search" })
+
+            <span style="margin-left:15px;">
+                @MujiStore.Resources.Resource.VietblMediaIndexDateFrom :
+            </span> @Html.TextBox("SearchFromCRTDT", String.Format("{0:d}", ViewBag.SearchFDate as string),
+new { @class = "datefield form-control2 form", type = "date" })
+            <span style="margin-left:15px;">
+                @MujiStore.Resources.Resource.VietblMediaIndexDateTo :
+            </span> @Html.TextBox("ToDate", String.Format("{0:d}", ViewBag.SearchTDate as string),
+new { @class = "datefield form-control2 form", type = "date" })
+
+
+            <input type="submit" value=@MujiStore.Resources.Resource.CommonSearch class="btn btn-default"  style="width:85px; margin-bottom: 4px;width: 85px; margin-left: 37px; height: 32px;" />
+            <a href=@Url.Action("Index","StreamServersLogs") class="clear">
+                @MujiStore.Resources.Resource.clear
+            </a>
+            <input type="submit" name="submitbutton1" class="btn btn-default" style="width:85px; margin-bottom: 4px;width: 85px;  height: 32px;" value=@MujiStore.Resources.Resource.Export  />
+            
+
+        </p>
+    </div>
+}
+
+<br />
+
+<p>
+    <a href=@Url.Action("Upload","StreamServers") class="clear">
+        @MujiStore.Resources.Resource.UploadFile
+    </a>
+</p>
+@if (mediaDtl.Count < 1)
+{
+    <table class="table" style="background-color:#ffffff; ">
+        <tr style="background-color:#EEE;">
+            <td colspan="7" style="text-align:center">
+                @Html.Label(MujiStore.Resources.Resource.Nodata)
+            </td>
+        </tr>
+    </table>
+}
+else
+{
+
+    <table class="table" style="background-color:#ffffff; ">
+        <tr style="background-color:#822433; color:#ffffff;">
+
+            <th>
+                @Html.Label(MujiStore.Resources.Resource.StreamServerViewLogs) @Html.Label(MujiStore.Resources.Resource.StreamSreverFormatDetails)
+
+            </th>
+            @*<th>
+
+        </th>*@
+            <th>
+
+            </th>
+
+            <th></th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in mediaDtl)
+        {
+    <tr style="background-color:#EEE;">
+        <td style="width:25%">
+
+            @*@Html.Label(MujiStore.Resources.Resource.ServerName):
+        @Html.DisplayFor(modelItem => item.SSServer)
+        <br />
+        @Html.Label(MujiStore.Resources.Resource.TblStreamSreverIpAddress):
+        @Html.DisplayFor(modelItem => item.IPAddress)
+        <br />*@
+            @*@Html.Label(MujiStore.Resources.Resource.BelongingSubnetSelect1):
+        @Html.DisplayFor(modelItem => item.DeploySchedule)
+        <br />*@
+            @Html.Label(MujiStore.Resources.Resource.StreamServerSubnet1):
+            @Html.DisplayFor(modelItem => item.BelongingSubnet)
+            <br />
+            @Html.Label(MujiStore.Resources.Resource.SubnetNumber):
+            @Html.DisplayFor(modelItem => item.SubnetNumber)
+            <br />
+            @Html.Label(MujiStore.Resources.Resource.FolderName):
+            @Html.DisplayFor(modelItem => item.FolderName)
+        </td>
+        @*<td style="width:20%">
+            @Html.Label(MujiStore.Resources.Resource.TblDriveCTotal):
+            @Html.DisplayFor(modelItem => item.DriveCTotal)
+            <br />
+            @Html.Label(MujiStore.Resources.Resource.TblDriverCFree):
+            @Html.DisplayFor(modelItem => item.DriveCFree)
+            <br />
+            @Html.Label(MujiStore.Resources.Resource.TblDriveDTotal):
+            @Html.DisplayFor(modelItem => item.DriveDTotal)
+            <br />
+            @Html.Label(MujiStore.Resources.Resource.TblDriveDFree):
+            @Html.DisplayFor(modelItem => item.DriveDFree)
+        </td>*@
+
+        <td style="width:30%">
+            @*@Html.Label(MujiStore.Resources.Resource.FileType):
+            @Html.DisplayFor(modelItem => item.FileType)
+            <br />*@
+            @Html.Label(MujiStore.Resources.Resource.StoreNumber):
+            @Html.DisplayFor(modelItem => item.StoreNumber)
+            <br />
+            @Html.Label(MujiStore.Resources.Resource.Storename):
+            @Html.DisplayFor(modelItem => item.StoreName)
+            <br />
+            @Html.Label(MujiStore.Resources.Resource.ModtblStoreStoreGroupName):
+            @Html.DisplayFor(modelItem => item.StoreGroupName)
+          
+
+
+
+
+
+        </td>
+        <td style="width:25%">
+            @Html.Label(MujiStore.Resources.Resource.CommonCRTCD):
+            @Html.DisplayFor(modelItem => item.CRTCD)
+            <br />
+
+
+            @Html.Label(MujiStore.Resources.Resource.CommonCRTDT):
+            @Html.DisplayFor(modelItem => item.CRTDT)
+            @*@Html.DisplayFor(modelItem => item.CRTDTTIME)*@
+
+            <br />
+
+            @Html.Label(MujiStore.Resources.Resource.ModFeedbackMediaFileName):
+            @Html.DisplayFor(modelItem => item.FileName)
+            <br />
+
+            @Html.Label(MujiStore.Resources.Resource.Status):
+            @if (item.RecStatus == "I")
+            {
+                @MujiStore.Resources.Resource.Success
+            }
+            else if (item.RecStatus == "E")
+            {
+                @MujiStore.Resources.Resource.Failed
+            }
+            else if (item.RecStatus == "W")
+            {
+                @MujiStore.Resources.Resource.Warning
+            }
+            else
+            {
+                @Html.DisplayFor(modelItem => item.RecStatus)
+            }
+
+            
+
+        </td>
+        <td style="width:100">
+            @Html.Label(MujiStore.Resources.Resource.Remarks):
+            @if (ViewBag.Lan == "ja")
+            {
+                @Html.DisplayFor(modelItem => item.Remarks_ja)
+            }
+            else
+            {
+                @Html.DisplayFor(modelItem => item.Remarks)
+            }
+        </td>
+     </tr>
+        }
+
+    </table>
+}
+<br />
+ 
+
+@if (mediaDtl.PageSize < mediaDtl.TotalItemCount)
+{
+    <div>
+        @MujiStore.Resources.Resource.CommonPage @(mediaDtl.PageCount < mediaDtl.PageNumber ? 0 : mediaDtl.PageNumber) @MujiStore.Resources.Resource.CommonOf @mediaDtl.PageCount
+
+        @Html.PagedListPager(mediaDtl, page => Url.Action("Index",
+             new { page, Filename = ViewBag.searchID, SearchFromCRTDT = ViewBag.SearchFDate, ToDate = ViewBag.SearchTDate }))
+    </div>
+}

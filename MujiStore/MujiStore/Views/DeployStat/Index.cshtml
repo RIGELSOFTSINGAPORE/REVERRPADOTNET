@@ -1,0 +1,98 @@
+﻿@model IEnumerable<MujiStore.Models.tblStreamServer>
+
+@{
+    ViewBag.Title = "Index";
+    int nWidth = 150;
+    long nUsed = 0;
+    long nUsedPixels = 0;
+    long nFreePixels = 0;
+    long nTotal = 0;
+    long nFree = 0;
+}
+
+<h2  style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.MenuAdministration - @MujiStore.Resources.Resource.Deliverystatusreference</h2>
+<div class="content">
+    <table class="table" style="background-color:#ffffff; ">
+        <tr style="background-color:#822433; color:#ffffff;"><th>@MujiStore.Resources.Resource.StoreNumber</th><th>@MujiStore.Resources.Resource.Storename	</th><th>@MujiStore.Resources.Resource.Distributionserver</th><th>@MujiStore.Resources.Resource.Diskusage</th><th>@MujiStore.Resources.Resource.Deliverystatus</th><th></th></tr>
+        <tbody >
+            @foreach (var item in Model)
+            {
+                <tr  style="background-color:#EEE;">
+                    <td>
+                        @item.StoreID
+                    </td>
+                    <td>
+                        @item.StoreName
+                    </td>
+                    <td>
+                        @Html.ActionLink(item.SSServer, "ViewServerDetails", new { ServerName = item.SSServer, ViewPage = "1" })
+                    </td>
+                    <td>
+                        @if (item.DriveDTotal == 0 || item.DriveDFree == 0)
+                        {
+                            <div style="height: 16px; width: 150px; background: #DDDDDD; float: left; padding: 0; margin: 0; border-width: 0;"></div>
+                        }
+                        else
+                        {
+                            nUsed = Convert.ToInt32(item.DriveDTotal) - Convert.ToInt32(item.DriveDFree);
+
+                            if (item.DriveDTotal == 0)
+                            {
+                                nUsedPixels = 0;
+                            }
+                            else
+                            {
+                                nUsedPixels = Convert.ToInt32(nUsed * nWidth / item.DriveDTotal);
+                            }
+
+                            nFreePixels = nWidth - nUsedPixels;
+                            
+                            <div style="height: 16px; width: @(nUsedPixels+"px"); background: #DD6655; float: left; padding: 0; margin: 0;"></div>
+                            <div style="height: 16px; width: @(nFreePixels+"px"); background: #55BBDD; float: left; padding: 0; margin: 0;"></div>
+                            
+
+                        }
+                    </td>
+                    <td>
+                        @if (item.ExistsFileSize != 0 || item.NotExistsFileSize != 0)
+                        {
+                            nTotal = item.ExistsFileSize + item.NotExistsFileSize;
+                            nFree = item.NotExistsFileSize;
+                            nUsed = nTotal - nFree;
+                            if (nTotal == 0)
+                            {
+                                nUsedPixels = 0;
+                            }
+                            else
+                            {
+                                nUsedPixels = Convert.ToInt32(nUsed * nWidth / nTotal);
+                            }
+                            nFreePixels = nWidth - nUsedPixels;
+                            <div style="height: 16px; width: @(nUsedPixels+"px"); background: #55DD66; float: left; padding: 0; margin: 0;"></div>
+                            <div style="height: 16px; width: @(nFreePixels+"px"); background: #CC7755; float: left; padding: 0; margin: 0;"></div>
+                            
+                        }
+                        else
+                        {
+                            <div style="height: 16px; width: 150px; background: #DDDDDD; float: left; padding: 0; margin: 0; border-width: 0;"></div>
+                            
+                        }
+
+                    </td>
+                    <td>
+                        @if (item.ExistsMediaCount > 0)
+                        {
+                            <div>
+                                @(item.ExistsMediaCount)  /  @(item.ExistsMediaCount + item.NotExistsMediaCount)
+                            </div>
+
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+    
+    

@@ -1,0 +1,206 @@
+﻿@using PagedList.Mvc
+@model PagedList.PagedList<MujiStore.Models.tblSubnet>
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VieSubnetsIndexBrowTitle;
+}
+
+<link rel="stylesheet" type="text/css" href="~/Content/FtpFile-pc1.css">
+
+<link rel="stylesheet" href="~/Content/font-awesome.min.css">
+
+<style>
+    input[type="search"]::-webkit-search-cancel-button {
+        /*Bootstrap 3 override*/
+        -webkit-appearance: searchfield-cancel-button !important;
+    }
+</style>
+
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.VieSubnetsEditH2</h2>
+
+@using (Html.BeginForm("Index", "Subnets", FormMethod.Post))
+{
+
+    <div class="border-style">
+        <p>
+            @MujiStore.Resources.Resource.viesearchid / @MujiStore.Resources.Resource.SubnetNumber: @Html.TextBox("SearchID", ViewBag.SearchID as string, new { @class = "form-control1", @type = "search" })
+
+            <input type="submit" value=@MujiStore.Resources.Resource.CommonSearch id="Submit" class="btn btn-default" style="margin-bottom: 4px; width: 85px; margin-left: 37px; height: 32px; " />
+            <a href=@Url.Action("Index","Subnets") class="clear">
+                @MujiStore.Resources.Resource.clear
+            </a>
+        </p>
+    </div>
+}
+@{
+    var SearchID = ViewBag.SearchID;
+}
+<br />
+<p>
+    @Html.ActionLink(MujiStore.Resources.Resource.CreateNewSubent, "Create", new { page = Model.PageNumber })
+</p>
+<table class="table" style="background-color:#ffffff; ">
+    <tr style="background-color:#822433; color:#ffffff;">
+        
+        <th >
+            @Html.ActionLink(MujiStore.Resources.Resource.subnetID, "Index", new { sortOrder = ViewBag.IDSortParm, SubnetNumber = ViewBag.subnetNumber, SearchID = ViewBag.SearchID }, new { @class = "link" })
+            <span class="fa1 fa-sort fa-unsorted:before, .fa-sort:before"></span>
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().SNIPAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().SubnetMask)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().LANBandWidth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault().DELFG)
+        </th>
+        <th></th>
+        <th></th>
+    </tr>
+    @if (Model.Count != 0)
+    {
+        foreach (var item in Model)
+        {
+
+            <tr style="background-color:#EEE;">
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubnetNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SNIPAddress)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubnetMask)
+                </td>
+               
+                <td>
+                    @Html.DisplayFor(modelItem => item.LANBandWidth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DELFG)
+                </td>
+                <td>
+                    @Html.ActionLink(MujiStore.Resources.Resource.CommonEdit, "Edit", new { id = item.SubnetID, page = Model.PageNumber })
+                </td>
+                <td>
+                    <a href="#" onclick="DeleteUserConfirmation(@item.SubnetID);" id="btnDelete" data-toggle="modal" data-target="#deleteModal" title="Delete">@MujiStore.Resources.Resource.CommonDelete</a>
+
+                </td>
+            </tr>
+        }
+    }
+
+</table>
+<br />
+
+
+@if (Model.PageSize < Model.TotalItemCount)
+{
+    <div>
+        @MujiStore.Resources.Resource.CommonPage @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) @MujiStore.Resources.Resource.CommonOf @Model.PageCount
+
+        @Html.PagedListPager(Model, page => Url.Action("Index",
+             new { page, SearchID = SearchID, sortOrder = ViewBag.CurrentSort }))
+    </div>
+}
+@if (ViewBag.Language == "en")
+{
+    <div class="border-style">
+        <h5 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">Supplementary explanation</h5>
+        <p>
+            The number used for the subnet ID is not specified on the system, but the store number is used for operational clarity.
+            If you have an office network such as Yurakucho, add 1000000 to the subnet ID to make it 1045480.
+            WAN bandwidth is calculated automatically when the video is delivered to the store server. In the subnet where the store server is not installed, the default value remains, but there is no operational problem.
+            The LAN bandwidth has been set to 10,000,000KB/s (10MB/s), but this value has not been used so far.
+        </p>
+
+    </div>
+}
+else
+{
+    <div class="border-style">
+
+        <h5 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">
+            補足説明
+        </h5>
+        <p>
+            サブネットIDに使用される番号はシステムで指定されていませんが、操作をわかりやすくするためにストア番号が使用されています。
+            有楽町などのオフィスネットワークの場合は、サブネットIDに1000000を加算して1045480にします。
+            WAN帯域幅は、ビデオがストアサーバーに配信されるときに自動的に計算されます。 ストアサーバーがインストールされていないサブネットでは、デフォルト値のままですが、操作上の問題はありません。
+            LAN帯域幅は10,000,000KB/s（10MB/s）に設定されていますが、その値は使用されません。
+        </p>
+    </div>
+
+}
+
+<div class="modal fade" id="DeleteUserModal" tabindex="-1" role="dialog" aria-labelledby="DeleteVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:470px; height:140px">
+            <div class="modal-header" style="background: #822433; margin-left:-1px; color:white;border-radius: 5px;">
+                <h5 class="modal-title" id="DeleteUserModalLabel" style="font-weight:600">   @MujiStore.Resources.Resource.VietblMediaIndextblDelete</h5>
+
+            </div>
+            <div class="modal-body DeleteVastucontent">
+                <div>
+                    @MujiStore.Resources.Resource.Areyousureyoutodelete
+                </div>
+                <div style="float:right">
+                    <button type="button" class="btn btn-secondary" style=" background: white; border:2px solid #822433" data-dismiss="modal">   @MujiStore.Resources.Resource.No</button>
+                    <button type="button" class="btn btn-primary btndeleteUser btn-success" style="background:#822433">   @MujiStore.Resources.Resource.Yes</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+@Html.Hidden("DeleteUserId")
+@section scripts
+{
+
+    <script>
+
+        function DeleteUserConfirmation(UserID) {
+
+            $('#DeleteUserId').val(UserID);
+            $('#DeleteUserModal').modal('show');
+        }
+
+        $('.btndeleteUser').on('click', function () {
+
+            DeleteVastu($('#DeleteUserId').val());
+
+        });
+        function DeleteVastu(UserID) {
+
+            $('#DeleteUserModal').modal('hide');
+            $.ajax({
+                url: '@Url.Action("Delete", "Subnets")',
+                type: 'POST',
+                data: { 'ID': UserID },
+                success: function (result) {
+                    if (result.errorcode == 1) {
+
+
+                        window.location.href = "@Url.Action("Index", "Subnets", new { @page1 = Model.PageNumber })";
+                    }
+                    else {
+                          window.location.href = "@Url.Action("Index", "Subnets", new { @page1 = Model.PageNumber })";
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+}
+
+
+

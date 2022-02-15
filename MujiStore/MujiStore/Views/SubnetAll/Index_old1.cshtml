@@ -1,0 +1,501 @@
+﻿@model IEnumerable<MujiStore.Models.tblSubnet>
+@using System.Data
+@{
+
+    DataTable DeleteID = (DataTable)Session["Succsmsg"];
+    ViewBag.Title = "Store";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int i = 0;
+}
+
+<style>
+    .table, td, th, tr, thead, tbody {
+        padding: 1px
+    }
+
+    .td, th, tr {
+        border: 1px solid #822433;
+    }
+
+    .tr, td {
+        border: 1px solid #822433;
+    }
+
+    #divid
+    a {
+        background: none;
+        color: white;
+    }
+
+    a:hover {
+        color: white;
+    }
+
+    input[type="button"] {
+        border: none;
+        background: none;
+        color: blue;
+    }
+
+    input[type="text"] {
+        width: 100%
+    }
+</style>
+<ol class="breadcrumb" id="breadcrumb">
+    <li>@Html.ActionLink(MujiStore.Resources.Resource.breadcrumbVideoall, "ViewUploadDetails", "VideoFiles")</li>
+    <li>
+        @Html.ActionLink(@MujiStore.Resources.Resource.breadcrumbManagement, "Index", "Menus")
+    </li>
+    <li>@Html.ActionLink(MujiStore.Resources.Resource.breadcrumbSystemmaintenance, "InfoMenus", "Menus")</li>
+    <li>
+        @MujiStore.Resources.Resource.Breadcrumbsubnet
+    </li>
+</ol>
+
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.subnetheading</h2>
+
+
+<div class="">
+    <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">
+            @MujiStore.Resources.Resource.subnetheading1
+            <br>
+            @MujiStore.Resources.Resource.subnetheading2
+
+        </font>
+    </font>
+</div>
+
+@using (Html.BeginForm("Create", "SubnetAll", FormMethod.Post))
+{
+    <div class="table-responsive">
+        <table class="table1 usertbl" style="background-color:#ffffff; ">
+
+            <tr class="thcolor">
+                <th>
+
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().SubnetID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().SNIPAddress)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().SubnetMask)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().WANBandWidth)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.FirstOrDefault().LANBandWidth)
+                </th>
+
+                <th>@Html.DisplayName(MujiStore.Resources.Resource.VietblMediaIndextblDelete) </th>
+
+
+            </tr>
+            <tbody>
+                @foreach (var model in Model)
+                {
+
+                    <tr>
+                        <td>
+
+                            @Html.TextBox("[" + i + "].SubnetIDdummy", model.SubnetIDdummy, new { id = "SubnetNumber" + i, htmlAttributes = new { @class = "form-control textbox" } })
+                        </td>
+                        <td>
+                            @Html.TextBox("[" + i + "].SNIPAddress", model.SNIPAddress, new { id = "DeleteUserId" + i, @maxlength = "15", htmlAttributes = new { @class = "form-control textbox" } })
+                        </td>
+                        <td>
+                            @Html.TextBox("[" + i + "].SubnetMask", model.SubnetMask, new { id = "SubnetMask" + i, @maxlength = "15", htmlAttributes = new { @class = "form-control textbox" } })
+                        </td>
+                        <td>
+                            @Html.TextBox("[" + i + "].UpdWANBandWidth", model.UpdWANBandWidth, new { id = "WANBandWidth" + i, @maxlength = "16", htmlAttributes = new { @class = "form-control textbox" } })
+                        </td>
+                        <td>
+                            @Html.TextBox("[" + i + "].UpdLANBandWidth", model.UpdLANBandWidth, new { id = "LANBandWidth" + i, @maxlength = "16", htmlAttributes = new { @class = "form-control textbox" } })
+                        </td>
+                        <td style="text-align:center;width:70px">
+                            @Html.CheckBox("[" + i + "].DELFG", model.DELFG)
+                        </td>
+                    </tr>
+                    i = i + 1;
+                }
+
+
+
+            </tbody>
+
+        </table>
+    </div>
+    <p>
+        <br>
+        <input type="submit" name="submitbutton1" class="btn btn-default" style="width:85px; margin-bottom: 4px;width: 85px;  height: 32px;" value=@MujiStore.Resources.Resource.update />
+        <a href=@Url.Action("Index", "SubnetAll") class="clear">
+            @MujiStore.Resources.Resource.reset
+        </a>
+
+    </p>
+    <p>
+        @MujiStore.Resources.Resource.Subnetinfoinipaddress
+    </p>
+}
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.subnetheading4</h2>
+
+<div class="">
+    <font style="vertical-align: inherit;">
+        <font style="vertical-align: inherit;">
+            @MujiStore.Resources.Resource.subnetheading3
+        </font>
+    </font>
+</div>
+<p>
+    @using (Html.BeginForm("Index", "SubnetAll", FormMethod.Post))
+    {
+        @MujiStore.Resources.Resource.CommonSearch @Html.DisplayName(" : ")
+        @Html.TextBox("SearchID", ViewBag.SearchID as string, new { @class = "form-control1", @type = "search", @style = "width:80%" })
+        <input type="button" id="btnSearch" onclick="javascript:SubnetSearch();" value=@MujiStore.Resources.Resource.CommonSearch class="btn btn-default" style="margin-left:35px; margin-top:5px" />
+
+    }
+</p>
+
+@*@foreach (var item in (IEnumerable<MujiStore.Models.tblSubnet>
+        )ViewData["StoreInfocount"])
+    {*@
+@if (ViewBag.Language == "en")
+{
+    <th style="width:95px;">
+        @Html.DisplayName("There are")  @Html.Label(ViewData["StoreInfocount"].ToString(), new { id = "ttlCount" })  @Html.DisplayName("applicable subnets")
+
+    </th>
+
+}
+else
+{
+    <th style="width:95px;">
+        @Html.Label(ViewData["StoreInfocount"].ToString(), new { id = "ttlCount" })  @Html.DisplayName(MujiStore.Resources.Resource.applicablesubnets)
+
+    </th>
+}
+@*}*@
+
+@{
+    var SearchID = ViewBag.SearchID;
+}
+<div class="table-responsive">
+    @if (ViewBag.Language == "en")
+    {
+    <table id="tblTempSubnet" class="table1" style="background-color:#ffffff;width:50% ">
+        <thead>
+            <tr class="thcolor">
+                <td style="width:95px;">Subnet ID</td>
+                <td>Subnet IP Address</td>
+                <td>Subnet Mask</td>
+                <td>WAN Band Width</td>
+                <td>LAN Band Width</td>
+            </tr>
+
+        </thead>
+
+    </table>
+    }
+    else
+    {
+        <table id="tblTempSubnet" class="table1" style="background-color:#ffffff;width:50% ">
+            <thead>
+                <tr class="thcolor">
+                    <td style="width:95px;">サブネットID</td>
+                    <td>IPアドレス</td>
+                    <td>サブネットマスク</td>
+                    <td>WAN帯域幅</td>
+                    <td>LAN帯域幅</td>
+                </tr>
+
+            </thead>
+
+        </table>
+    }
+    </div>
+    @*<div class="table-responsive" id="divPageLoad" >
+        <table class="table1" style="background-color:#ffffff;width:50% ">
+            @foreach (var item in (IEnumerable<MujiStore.Models.tblSubnet>)ViewData["StoreInfo"])
+            {
+
+                <tr class="thcolor">
+                    <th style="width:95px;">
+                        @Html.DisplayNameFor(model => model.FirstOrDefault().SubnetID)
+
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstOrDefault().SNIPAddress)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstOrDefault().SubnetMask)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstOrDefault().WANBandWidth)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstOrDefault().LANBandWidth)
+                    </th>
+                </tr>
+                break;
+            }
+            <tbody style="width:60%">
+                @foreach (var item in (IEnumerable<MujiStore.Models.tblSubnet>)ViewData["StoreInfo"])
+                {
+                    <tr>
+                        <td id="divid" style="width:60px">
+
+                            <input type="button" value=@item.SubnetID onclick="setStoreInfo('@item.SubnetID','@item.SubnetNumber','@item.SNIPAddress','@item.SubnetMask','@item.UpdWANBandWidth','@item.UpdLANBandWidth')" />
+
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SNIPAddress)
+                        </td>
+
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SubnetMask)
+                        </td>
+
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ModWANBandWidth) KB/s
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ModLANBandWidth) KB/s
+                        </td>
+                    </tr>
+
+                }
+
+            </tbody>
+
+        </table>
+
+
+
+    </div>*@
+    <div class="modal" id="myModalSucc" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header" style="border:none">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    <p style="text-align:center;font-weight:800;"> </p>
+                </div>
+                @if (ViewBag.Language == "en")
+                {
+                    <div class="modal-body" style="color: black; word-break: break-all; text-align: justify;">
+                        <p style="text-align:center;font-weight:800;font-style:italic">The input field is full. </p>
+                    </div>
+                }
+                else
+                {
+                    <div class="modal-body" style="color: black; word-break: break-all; text-align: justify;">
+                        <p style="text-align:center;font-weight:800;font-style:italic">入力欄が一杯です。 </p>
+                    </div>
+                }
+                <div class="modal-footer" style="border:none">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @if (ViewBag.Language == "en")
+    {
+        <div class="border-style">
+            <h5 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">Supplementary explanation</h5>
+            <p>
+                The number used for the subnet ID is not specified on the system, but the store number is used for operational clarity.
+                <br>
+                If you have an office network such as Yurakucho, add 1000000 to the subnet ID to make it 1045480.
+                <br>
+                WAN bandwidth is calculated automatically when the video is delivered to the store server. In the subnet where the store server is not installed, the default value remains, but there is no operational problem.
+                <br>
+                I have  set the LAN bandwidth has been set to 10,000,000KB/s (10MB/s), but this value has not been used so far.
+            </p>
+
+        </div>
+    }
+    else
+    {
+        <div class="border-style">
+
+            <h5 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">
+                補足説明
+            </h5>
+            <p>
+                サブネットIDに使う数値はシステム上は特に決まっていませんが、運用上分かりやすくするため店舗番号を使用しています。
+                <br />
+                有楽町など事務所ネットワークがある場合はサブネットIDに1000000を加算して1045480等としています。
+                <br />
+                WAN帯域幅は店舗サーバへの動画配信時に自動で計算されます。 店舗サーバが設置されていないサブネットでは初期値のままとなりますが、運用上問題はありません。
+                <br />
+                LAN帯域幅には10,000,000KB/s (10MB/s)を設定していますが、今のところこの値は使用していません。
+            </p>
+        </div>
+
+    }
+
+
+    @if (TempData["Deletemsg"] != null)
+    {
+        <div class="modal fade" id="DeleteUserModal" tabindex="-1" role="dialog" aria-labelledby="DeleteVideoModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content" style="height:100px">
+
+                    <div class="modal-body DeleteVastucontent">
+                        <div>
+                            @TempData["Deletemsg"]
+                        </div>
+                        <div style="float:right">
+                            <button type="button" class="btn btn-secondary" style=" background: white; border:2px solid #822433" data-dismiss="modal">   @MujiStore.Resources.Resource.No</button>
+                            <button type="button" class="btn btn-primary btndeleteUser ">   @MujiStore.Resources.Resource.Yes</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+    @if (TempData["deletesucmsg"] != null)
+    {
+        if (DeleteID.Rows.Count != 0)
+        {
+            <div class="modal" id="DeletestoreModal" role="dialog">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header" style="border:none">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                            <p style="text-align:center;font-weight:800;"> </p>
+                        </div>
+                        <div class="modal-body" style="color: black; word-break: break-all; text-align: justify;">
+                            @foreach (DataRow row in DeleteID.Rows)
+                            {
+                                <p>
+                                    @row["msg"]
+                                </p>
+                            }
+                        </div>
+                        <div class="modal-footer" style="border:none">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+    }
+    @section scripts
+{
+
+        <script>
+            pageload();
+            function pageload() {
+                SubnetSearch();
+            }
+        $('.btndeleteUser').on('click', function () {
+            window.location.href = "@Url.Action("DeleteSubnet", "SubnetAll")";
+        });
+
+          var Succ = '@TempData["Deletemsg"]';
+        if (Succ != '')
+        {
+        $("#DeleteUserModal").modal('show');
+        }
+
+         var Succ = '@TempData["deletesucmsg"]';
+        if (Succ != '')
+        {
+        $("#DeletestoreModal").modal('show');
+        }
+
+        function setStoreInfo(StoreNumber, subnetid, storeName, Storegroupname, WanBan,LanBan) {
+  
+            var i = 0, maxid = 5;
+            if (Storegroupname == "") {
+                Storegroupname = 0;
+            }
+            while (i <= maxid && $("#DeleteUserId" + i).val() != 0) i++;
+
+            if (i > maxid) {
+
+                $("#myModalSucc").modal('show');
+            } else {
+                $("#SubnetID" + i).val(StoreNumber);
+                $("#SubnetNumber" + i).val(StoreNumber);
+                $("#DeleteUserId" + i).val(storeName);
+
+
+                $("#SubnetMask" + i).val(Storegroupname);
+                $("#WANBandWidth" + i).val(WanBan);
+                $("#LANBandWidth" + i).val(LanBan);
+            }
+
+        }
+            function setSubnetInfo(SubnetID, SubnetNumber, SNIPAddress, SubnetMask, WanBan, LanBan) {
+
+                var i = 0, maxid = 5;
+                if (SubnetMask == "") {
+                    SubnetMask = 0;
+                }
+                while (i <= maxid && $("#DeleteUserId" + i).val() != 0) i++;
+
+                if (i > maxid) {
+
+                    $("#myModalSucc").modal('show');
+                } else {
+                    $("#SubnetID" + i).val(SubnetID);
+                    $("#SubnetNumber" + i).val(SubnetID);
+                    $("#DeleteUserId" + i).val(SNIPAddress);
+
+
+                    $("#SubnetMask" + i).val(SubnetMask);
+                    $("#WANBandWidth" + i).val(WanBan);
+                    $("#LANBandWidth" + i).val(LanBan);
+                }
+
+        }
+
+            function SubnetSearch() {
+
+             var searchUrl = "Search/?SearchID=" + $("#SearchID").val();
+                $("#tblTempSubnet").find("tr:gt(0)").remove();
+                $("#ttlCount").val(0);
+               // $("#divPageLoad").attr("visibility", "hidden");
+                $("#divPageLoad").hide();
+               // $("#btnSearch").attr({ 'value': 'Please wait..' });
+                $.ajax({
+                    url: searchUrl,
+                    type: "POST",
+                    success: function (data) {
+
+                       // alert(data.length);
+                        //tblTempSubnet
+                        var tr;
+                        //console.log(data);
+                        $("#ttlCount").val(data.length +1);
+                        for (var i = 0; i < data.length; i++) {
+                            var link = "setSubnetInfo('"+ data[i].SubnetID + "','" + data[i].SubnetNumber + "','" + data[i].SNIPAddress + "','" + data[i].SubnetMask + "','" + data[i].UpdWANBandWidth + "','" + data[i].UpdLANBandWidth+"')"
+                            tr = tr + "<tr>";
+                            tr = tr + "<td id='divid' style='width: 60px'> <input type='button' value='" + data[i].SubnetID + "' onclick="+link+" '/> </td>";
+                            //tr = tr + "<td>" + data[i].SubnetID + "</td>";
+                            tr = tr + "<td>" + data[i].SNIPAddress + "</td>";
+                            tr = tr + "<td>" + data[i].SubnetMask + "</td>";
+                            tr = tr + "<td>" + data[i].ModWANBandWidth + " KB/s</td>";
+                            tr = tr + "<td>" + data[i].ModLANBandWidth + " KB/s</td>";
+                            tr = tr + "</tr>";
+                        }
+                        $('#tblTempSubnet').append(tr);
+                        //$("#btnSearch").attr({ 'value': 'Search' });
+                    }
+                });
+            }
+        </script>
+    }

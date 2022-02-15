@@ -1,0 +1,3464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Change Password</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="CntErrorBadRequestDescription" xml:space="preserve">
+    <value>The request cannot be fulfilled due to bad syntax</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorBadRequestMessage" xml:space="preserve">
+    <value>Bad request</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorDescription" xml:space="preserve">
+    <value>An unexpected error occured on our website. The website administrator has been notified</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorForbiddenDescription" xml:space="preserve">
+    <value>Forbidden: You don't have permission to access [directory] on this server</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorForbiddenMessage" xml:space="preserve">
+    <value>403 Forbidden</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorMessage" xml:space="preserve">
+    <value>An error has occured</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorNotFoundDescription" xml:space="preserve">
+    <value>The URL may be misspelled or the page you're looking for is no longer available</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorNotFoundMessage" xml:space="preserve">
+    <value>We are sorry, the page you requested cannot be found</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorServiceUnavailableDescription" xml:space="preserve">
+    <value>Our apologies for the temporary inconvenience. This is due to overloading or maintenance of the server.</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorServiceUnavailableMessage" xml:space="preserve">
+    <value>Service unavailable</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorURLTooLongDescription" xml:space="preserve">
+    <value>The requested URL is too large to process</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntErrorURLTooLongMessage" xml:space="preserve">
+    <value>URL too long</value>
+    <comment>Controllers\ErrorController</comment>
+  </data>
+  <data name="CntFoldersCreateErrMsg" xml:space="preserve">
+    <value>Unable to create folder already exists</value>
+    <comment>Controllers\FoldersController</comment>
+  </data>
+  <data name="CntFoldersCreateSuccMsg" xml:space="preserve">
+    <value>Folder created successfully</value>
+    <comment>Controllers\FoldersController</comment>
+  </data>
+  <data name="CntFoldersEditErrMsg1" xml:space="preserve">
+    <value>Unable to update folder. Folder name already exists.</value>
+    <comment>Controllers\FoldersController</comment>
+  </data>
+  <data name="CntFoldersEditErrMsg2" xml:space="preserve">
+    <value>Unable to update folder. Parent folder and child folder are same.</value>
+    <comment>Controllers\FoldersController</comment>
+  </data>
+  <data name="CntFoldersEditErrMsg3" xml:space="preserve">
+    <value>Unable to update folder</value>
+    <comment>Controllers\FoldersController</comment>
+  </data>
+  <data name="CntFoldersEditSuccMsg1" xml:space="preserve">
+    <value>Folder updated successfully</value>
+    <comment>Controllers\FoldersController</comment>
+  </data>
+  <data name="CntLoginChangePasswordErrMsg1" xml:space="preserve">
+    <value>Current password does not match</value>
+    <comment>Controllers\LoginController</comment>
+  </data>
+  <data name="CntLoginChangePasswordErrMsg2" xml:space="preserve">
+    <value>New password and confirm new password does not match</value>
+    <comment>Controllers\LoginController</comment>
+  </data>
+  <data name="CntLoginChangePasswordErrMsg3" xml:space="preserve">
+    <value>Unable to change password</value>
+    <comment>Controllers\LoginController</comment>
+  </data>
+  <data name="CntLoginChangePasswordErrSuccMsg" xml:space="preserve">
+    <value>Password changed successfully</value>
+    <comment>Controllers\LoginController</comment>
+  </data>
+  <data name="CntLoginSignInErrMsg" xml:space="preserve">
+    <value>Failed to login</value>
+    <comment>Controllers\LoginController</comment>
+  </data>
+  <data name="CntLoginUnknown" xml:space="preserve">
+    <value>Unknown</value>
+    <comment>Controllers\LoginController</comment>
+  </data>
+  <data name="CntStoreGroupFoldersCreateErrMsg1" xml:space="preserve">
+    <value>Unable to create store group folder</value>
+    <comment>Controllers\StoreGroupFoldersController</comment>
+  </data>
+  <data name="CntStoreGroupFoldersCreateErrMsg2" xml:space="preserve">
+    <value>Unable to create store group folder. Store group folder already exists.</value>
+    <comment>Controllers\StoreGroupFoldersController</comment>
+  </data>
+  <data name="CntStoreGroupFoldersCreateErrMsg3" xml:space="preserve">
+    <value>Unable to create store group folder</value>
+    <comment>Controllers\StoreGroupFoldersController</comment>
+  </data>
+  <data name="CntStoreGroupFoldersCreateSuccMsg" xml:space="preserve">
+    <value>Store group folder created successfully</value>
+    <comment>Controllers\StoreGroupFoldersController</comment>
+  </data>
+  <data name="CntStoreGroupFoldersEditErrMsg1" xml:space="preserve">
+    <value>Unable to update store group folder</value>
+    <comment>Controllers\StoreGroupFoldersController</comment>
+  </data>
+  <data name="CntStoreGroupFoldersEditErrMsg2" xml:space="preserve">
+    <value>Unable to update store group folder already exists</value>
+    <comment>Controllers\StoreGroupFoldersController</comment>
+  </data>
+  <data name="CntStoreGroupFoldersEditErrMsg3" xml:space="preserve">
+    <value>Unable to update store group folder</value>
+    <comment>Controllers\StoreGroupFoldersController</comment>
+  </data>
+  <data name="CntStoreGroupFoldersEditSuccMsg" xml:space="preserve">
+    <value>Store group folder updated successfully</value>
+    <comment>Controllers\StoreGroupFoldersController</comment>
+  </data>
+  <data name="CntStoreGroupsCreateErrMsg1" xml:space="preserve">
+    <value>Unable to create store group</value>
+    <comment>Controllers\StoreGroupsController</comment>
+  </data>
+  <data name="CntStoreGroupsCreateErrMsg2" xml:space="preserve">
+    <value>Unable to create store group. Store group name already exists.</value>
+    <comment>Controllers\StoreGroupsController</comment>
+  </data>
+  <data name="CntStoreGroupsCreateErrMsg3" xml:space="preserve">
+    <value>Unable to create store group</value>
+    <comment>Controllers\StoreGroupsController</comment>
+  </data>
+  <data name="CntStoreGroupsCreateSuccMsg" xml:space="preserve">
+    <value>Store group created successfully</value>
+    <comment>Controllers\StoreGroupsController</comment>
+  </data>
+  <data name="CntStoreGroupsEditErrMsg1" xml:space="preserve">
+    <value>Unable to update store group</value>
+    <comment>Controllers\StoreGroupsController</comment>
+  </data>
+  <data name="CntStoreGroupsEditErrMsg2" xml:space="preserve">
+    <value>Unable to update store group already exists</value>
+    <comment>Controllers\StoreGroupsController</comment>
+  </data>
+  <data name="CntStoreGroupsEditErrMsg3" xml:space="preserve">
+    <value>Unable to update store group</value>
+    <comment>Controllers\StoreGroupsController</comment>
+  </data>
+  <data name="CntStoreGroupsEditSuccMsg" xml:space="preserve">
+    <value>Store group updated successfully</value>
+    <comment>Controllers\StoreGroupsController</comment>
+  </data>
+  <data name="CntStoreMstCreateErrMsg1" xml:space="preserve">
+    <value>Unable to create store already exists</value>
+    <comment>Controllers\StoreMstController</comment>
+  </data>
+  <data name="CntStoreMstCreateErrMsg2" xml:space="preserve">
+    <value>Unable to create store</value>
+    <comment>Controllers\StoreMstController</comment>
+  </data>
+  <data name="CntStoreMstCreateErrMsg3" xml:space="preserve">
+    <value>Unable to create store already exists</value>
+    <comment>Controllers\StoreMstController</comment>
+  </data>
+  <data name="CntStoreMstCreateSuccMsg" xml:space="preserve">
+    <value>Store created successfully</value>
+    <comment>Controllers\StoreMstController</comment>
+  </data>
+  <data name="CntStoreMstEditErrMsg1" xml:space="preserve">
+    <value>Unable to create store already exists</value>
+    <comment>Controllers\StoreMstController</comment>
+  </data>
+  <data name="CntStoreMstEditErrMsg2" xml:space="preserve">
+    <value>Unable to update store</value>
+    <comment>Controllers\StoreMstController</comment>
+  </data>
+  <data name="CntStoreMstEditErrMsg3" xml:space="preserve">
+    <value>Unable to update store already exists</value>
+    <comment>Controllers\StoreMstController</comment>
+  </data>
+  <data name="CntStoreMstEditSuccMsg" xml:space="preserve">
+    <value>Store updated successfully</value>
+    <comment>Controllers\StoreMstController</comment>
+  </data>
+  <data name="CntStoreSubnetsCreateErrMsg1" xml:space="preserve">
+    <value>Unable to create store subnet. Store name/subnet IP address already exists.</value>
+    <comment>Controllers\StoreSubnetsController</comment>
+  </data>
+  <data name="CntStoreSubnetsCreateErrMsg2" xml:space="preserve">
+    <value>Unable to create store subnet</value>
+    <comment>Controllers\StoreSubnetsController</comment>
+  </data>
+  <data name="CntStoreSubnetsCreateErrMsg3" xml:space="preserve">
+    <value>Unable to create store subnet already exists</value>
+    <comment>Controllers\StoreSubnetsController</comment>
+  </data>
+  <data name="CntStoreSubnetsCreateSuccMsg" xml:space="preserve">
+    <value>Store subnet created successfully</value>
+    <comment>Controllers\StoreSubnetsController</comment>
+  </data>
+  <data name="CntStoreSubnetsEditErrMsg1" xml:space="preserve">
+    <value>Unable to update store subnet already exists</value>
+    <comment>Controllers\StoreSubnetsController</comment>
+  </data>
+  <data name="CntStoreSubnetsEditErrMsg2" xml:space="preserve">
+    <value>Unable to update store subnet</value>
+    <comment>Controllers\StoreSubnetsController</comment>
+  </data>
+  <data name="CntStoreSubnetsEditErrMsg3" xml:space="preserve">
+    <value>Unable to update store subnet already exists</value>
+    <comment>Controllers\StoreSubnetsController</comment>
+  </data>
+  <data name="CntStoreSubnetsEditSuccMsg" xml:space="preserve">
+    <value>Store subnet updated successfully</value>
+    <comment>Controllers\StoreSubnetsController</comment>
+  </data>
+  <data name="CntSubnetsCreateErrMsg1" xml:space="preserve">
+    <value>Unable to create subnet. Subnet IP address already exists.</value>
+    <comment>Controllers\SubnetsController</comment>
+  </data>
+  <data name="CntSubnetsCreateErrMsg2" xml:space="preserve">
+    <value>Unable to create subnet</value>
+    <comment>Controllers\SubnetsController</comment>
+  </data>
+  <data name="CntSubnetsCreateErrMsg3" xml:space="preserve">
+    <value>Unable to create subnet IP address already exists</value>
+    <comment>Controllers\SubnetsController</comment>
+  </data>
+  <data name="CntSubnetsCreateSuccMsg" xml:space="preserve">
+    <value>Subnet created successfully</value>
+    <comment>Controllers\SubnetsController</comment>
+  </data>
+  <data name="CntSubnetsEditErrMsg1" xml:space="preserve">
+    <value>Unable to update subnet IP address already exists</value>
+    <comment>Controllers\SubnetsController</comment>
+  </data>
+  <data name="CntSubnetsEditErrMsg2" xml:space="preserve">
+    <value>Unable to update subnet</value>
+    <comment>Controllers\SubnetsController</comment>
+  </data>
+  <data name="CntSubnetsEditErrMsg3" xml:space="preserve">
+    <value>Unable to update subnet IP address already exists</value>
+    <comment>Controllers\SubnetsController</comment>
+  </data>
+  <data name="CntSubnetsEditSuccMsg" xml:space="preserve">
+    <value>Subnet updated successfully</value>
+    <comment>Controllers\SubnetsController</comment>
+  </data>
+  <data name="CntUserCreateErrMsg1" xml:space="preserve">
+    <value>Password and confirm password does not match</value>
+    <comment>Controllers\UserController</comment>
+  </data>
+  <data name="CntUserCreateErrMsg2" xml:space="preserve">
+    <value>Unable to create user </value>
+    <comment>Controllers\UserController</comment>
+  </data>
+  <data name="CntUserCreateErrMsg3" xml:space="preserve">
+    <value>Unable to create username as it already exists</value>
+    <comment>Controllers\UserController</comment>
+  </data>
+  <data name="CntUserCreateSuccMsg" xml:space="preserve">
+    <value>User created successfully</value>
+    <comment>Controllers\UserController</comment>
+  </data>
+  <data name="CntUserEditErrMsg1" xml:space="preserve">
+    <value>Password and confirm password does not match</value>
+    <comment>Controllers\UserController</comment>
+  </data>
+  <data name="CntUserEditErrMsg2" xml:space="preserve">
+    <value>User unable to update</value>
+    <comment>Controllers\UserController</comment>
+  </data>
+  <data name="CntUserEditErrMsg3" xml:space="preserve">
+    <value>Unable to update username as it already exists</value>
+    <comment>Controllers\UserController</comment>
+  </data>
+  <data name="CntUserEditSuccMsg" xml:space="preserve">
+    <value>User updated successfully</value>
+    <comment>Controllers\UserController</comment>
+  </data>
+  <data name="CntVideoDemoCreate1SuccMsg" xml:space="preserve">
+    <value>Video change request created successfully</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoCreateErrMsg" xml:space="preserve">
+    <value>Unable to create new video request. Video name should not exceed 180 characters.</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoCreateFtpvideoErrMsg1" xml:space="preserve">
+    <value>Title of video file Not found</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoCreateFtpvideoErrMsg2" xml:space="preserve">
+    <value>Unable to create new video request. The description field is mandatory and cannot be empty.</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoCreateFtpvideoSuccMsg" xml:space="preserve">
+    <value>Video conversion is under processing!!! Wait for Update convert status button to populate or you can use other functionality / close the browser</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoCreateSuccMsg" xml:space="preserve">
+    <value>Video conversion is under processing!!! Wait for Update convert status button to populate or you can use other functionality / close the browser</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoSaveSaveVideoDetailsErrMsg" xml:space="preserve">
+    <value>Unable to update video details in video change request</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoSaveSaveVideoDetailsSuccMsg" xml:space="preserve">
+    <value>Video Change Request without thumbnail updated successfully</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoSaveSaveVideoDetailsSuccMsg3" xml:space="preserve">
+    <value>Video deploy status updated successfully</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoSaveThumbnailImageErrMsg" xml:space="preserve">
+    <value>Unable to update with thumbnail in video change request</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoSaveThumbnailImageSuccMsg" xml:space="preserve">
+    <value>Video Change Request with thumbnail updated successfully</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoSaveThumbnailImageSuccMsg1" xml:space="preserve">
+    <value>Video change request disapproved successfully</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoSaveThumbnailImageSuccMsg2" xml:space="preserve">
+    <value>Video change request approved successfully</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoUpdateVCSErrMsg" xml:space="preserve">
+    <value>Unable to update the streaming status</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoUpdateVCSSuccMsg" xml:space="preserve">
+    <value>Streaming conversion status has been updated</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoVideoApprovalStatus" xml:space="preserve">
+    <value>Approval Status</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoVideoCaption" xml:space="preserve">
+    <value>Video</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoVideoDelFlg" xml:space="preserve">
+    <value>Del Flag</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoVideoDescription" xml:space="preserve">
+    <value>Description</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoVideoFolderName" xml:space="preserve">
+    <value>Folder Name</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoVideoID" xml:space="preserve">
+    <value>Video ID</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoVideoPhysicalDel" xml:space="preserve">
+    <value>Physical File Delete</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoVideoThambnail" xml:space="preserve">
+    <value>Thumbnail</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoVideoTitle" xml:space="preserve">
+    <value>Title</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CntVideoDemoVideoUpdateVideoInfo" xml:space="preserve">
+    <value>Update Without Thumbnail</value>
+    <comment>Controllers\VideoDemoController</comment>
+  </data>
+  <data name="CommonApproval" xml:space="preserve">
+    <value>Approval</value>
+  </data>
+  <data name="CommonBack" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="CommonBackToList" xml:space="preserve">
+    <value>Back To List</value>
+  </data>
+  <data name="CommonBackToViewLogs" xml:space="preserve">
+    <value>Back to View Logs</value>
+    <comment>Views\ViewLogs\FeedbackMgmtViewLog</comment>
+  </data>
+  <data name="CommonCreate" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="CommonCRTCD" xml:space="preserve">
+    <value>Created By</value>
+  </data>
+  <data name="CommonCRTDT" xml:space="preserve">
+    <value>Uploaded Date and Time</value>
+  </data>
+  <data name="CommonDataAnna0of1" xml:space="preserve">
+    <value>{0} can have a max of {1} characters</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="CommonDelete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="CommonDELFG" xml:space="preserve">
+    <value>Delete Flag</value>
+  </data>
+  <data name="CommonDelFlg" xml:space="preserve">
+    <value>Delete Flag</value>
+  </data>
+  <data name="CommonEdit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="CommonFileName" xml:space="preserve">
+    <value>Folder Name</value>
+  </data>
+  <data name="CommonFolderName" xml:space="preserve">
+    <value>Folder Name</value>
+  </data>
+  <data name="CommonHome" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="CommonIpAddress" xml:space="preserve">
+    <value>IP Address</value>
+  </data>
+  <data name="CommonOf" xml:space="preserve">
+    <value>of</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="CommonPage" xml:space="preserve">
+    <value>Page</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="CommonSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="CommonSearch" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="CommonSubmit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="CommonUPDCD" xml:space="preserve">
+    <value>Updated By</value>
+  </data>
+  <data name="CommonUPDDT" xml:space="preserve">
+    <value>Updated Date and Time</value>
+  </data>
+  <data name="CommonVideoTitle" xml:space="preserve">
+    <value>Video Title</value>
+  </data>
+  <data name="CustomException1" xml:space="preserve">
+    <value>There is some error</value>
+    <comment>BLL\CustomExceptionHandling</comment>
+  </data>
+  <data name="CustomException2" xml:space="preserve">
+    <value>System Error</value>
+    <comment>BLL\CustomExceptionHandling</comment>
+  </data>
+  <data name="CustomException3" xml:space="preserve">
+    <value>Contact Administrator</value>
+    <comment>BLL\CustomExceptionHandling</comment>
+  </data>
+  <data name="CustomExtnDefaultErrorMessage" xml:space="preserve">
+    <value>Only the following file types are allowed: {0}</value>
+    <comment>BLL\RegularExp</comment>
+  </data>
+  <data name="Error403Msg" xml:space="preserve">
+    <value>Sorry, you do not have the required permission to perform this action.</value>
+    <comment>BLL\AuthorizeIPAddressAttribute</comment>
+  </data>
+  <data name="FeedbackMgt" xml:space="preserve">
+    <value>Feedback Mgt</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="FolderMgt" xml:space="preserve">
+    <value>Folder Mgt</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="FooterText1" xml:space="preserve">
+    <value>Video distribution system Copyright (C)  </value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="FooterText2" xml:space="preserve">
+    <value>NCR Japan, Helpdesk</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="LayoutTitle" xml:space="preserve">
+    <value>Video Streaming </value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="ModFeedbackComments" xml:space="preserve">
+    <value>Comments</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackDataAnnaValida1" xml:space="preserve">
+    <value>Please Enter Writer Name</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackDataAnnaValida2" xml:space="preserve">
+    <value>Please Enter Comments</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackDataAnnaValida3" xml:space="preserve">
+    <value>Only image files are allowed.</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackFileName" xml:space="preserve">
+    <value>File Name</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackMediaDescription" xml:space="preserve">
+    <value>Media Description</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackMediaFileName" xml:space="preserve">
+    <value>File Name</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackMediaFolderName" xml:space="preserve">
+    <value>Folder Name</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackMediaTitle" xml:space="preserve">
+    <value>Media Title</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackMovieID" xml:space="preserve">
+    <value>Movie ID</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackWriterDatetime" xml:space="preserve">
+    <value>Date time</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModFeedbackWriterName" xml:space="preserve">
+    <value>Writer Name</value>
+    <comment>Models\tblFeedback</comment>
+  </data>
+  <data name="ModtblFolderName" xml:space="preserve">
+    <value>Folder Name</value>
+    <comment>Models\tblFolder</comment>
+  </data>
+  <data name="ModtblFolderParentFolderName" xml:space="preserve">
+    <value>Parent Folder Name</value>
+    <comment>Models\tblFolder</comment>
+  </data>
+  <data name="ModtblFolderParentID" xml:space="preserve">
+    <value>Parent Folder</value>
+    <comment>Models\tblFolder</comment>
+  </data>
+  <data name="ModtblFolderParentIDDataAnnaValida1" xml:space="preserve">
+    <value>ParentID is required</value>
+    <comment>Models\tblFolder</comment>
+  </data>
+  <data name="ModtblFolderParentIDDataAnnaValida2" xml:space="preserve">
+    <value>Please enter valid parent ID</value>
+    <comment>Models\tblFolder</comment>
+  </data>
+  <data name="ModtblFolderParentIDDataAnnaValida3" xml:space="preserve">
+    <value>Please enter folder name</value>
+    <comment>Models\tblFolder</comment>
+  </data>
+  <data name="ModtblFolderParentIDDataAnnaValida4" xml:space="preserve">
+    <value>{0} can have a max of {1} characters</value>
+    <comment>Models\tblFolder</comment>
+  </data>
+  <data name="ModtblMediaTitleDataAnnaValida1" xml:space="preserve">
+    <value>Please enter title</value>
+    <comment>Models\tblMedia</comment>
+  </data>
+  <data name="ModtblMediaTitleDataAnnaValida2" xml:space="preserve">
+    <value>{0} can have a max of {1} characters</value>
+    <comment>Models\tblMedia</comment>
+  </data>
+  <data name="ModtblMediaTitleDataAnnaValida3" xml:space="preserve">
+    <value>Please select mp4,3gp,avi,mov,mpg,mpeg,vob,wmv,mts File</value>
+    <comment>Models\tblMedia</comment>
+  </data>
+  <data name="ModtblMediaTitleDataAnnaValida4" xml:space="preserve">
+    <value>Only files with the following extensions are allowed: mp4,3gp,avi,mov,mpg,mpeg,vob,wmv,mts</value>
+    <comment>Models\tblMedia</comment>
+  </data>
+  <data name="ModtblStoreAddressLine1" xml:space="preserve">
+    <value>Address Line 1</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblStoreAddressLine2" xml:space="preserve">
+    <value>Address Line 2</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblStoreCity" xml:space="preserve">
+    <value>City</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblStoreCountry" xml:space="preserve">
+    <value>Country</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblStoreGroupFolderFolderID" xml:space="preserve">
+    <value>Folder Name</value>
+    <comment>Models\tblStoreGroupFolder</comment>
+  </data>
+  <data name="ModtblStoreGroupFolderStoreGroupID" xml:space="preserve">
+    <value>Store Group Name</value>
+    <comment>Models\tblStoreGroupFolder</comment>
+  </data>
+  <data name="ModtblStoreGroupName" xml:space="preserve">
+    <value>Store Group Name</value>
+    <comment>Models\tblStoreGroup</comment>
+  </data>
+  <data name="ModtblStoreState" xml:space="preserve">
+    <value>State</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblStoreStoreGroupID" xml:space="preserve">
+    <value>Store Group</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblStoreStoreGroupName" xml:space="preserve">
+    <value>Store Group Name</value>
+    <comment>Views\StoreMst\Edit</comment>
+  </data>
+  <data name="ModtblStoreStoreIpAddress" xml:space="preserve">
+    <value>Store IP Address</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblStoreStoreIPAddressDataAnnaValida1" xml:space="preserve">
+    <value>Enter Valid IP Address</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblStoreStoreName" xml:space="preserve">
+    <value>Store Name</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblStoreStoreNameDataAnnaValida1" xml:space="preserve">
+    <value>Please enter store name</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblStoreSubnetStoreDataAnnaValida1" xml:space="preserve">
+    <value>Please select store name</value>
+    <comment>Models\tblStoreSubnet</comment>
+  </data>
+  <data name="ModtblStoreSubnetSubnetDataAnnaValida1" xml:space="preserve">
+    <value>Select subnet IP address</value>
+    <comment>Models\tblStoreSubnet</comment>
+  </data>
+  <data name="ModtblStoreSubnetSubnetStore" xml:space="preserve">
+    <value>Store Name</value>
+    <comment>Models\tblStoreSubnet</comment>
+  </data>
+  <data name="ModtblStoreSubnetSubnetSubnet" xml:space="preserve">
+    <value>Subnet IP Address</value>
+    <comment>Models\tblStoreSubnet</comment>
+  </data>
+  <data name="ModtblStoreZip" xml:space="preserve">
+    <value>Zip</value>
+    <comment>Models\tblStore</comment>
+  </data>
+  <data name="ModtblSubnetLANBandW" xml:space="preserve">
+    <value>LAN Band Width </value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetLANBandWDataAnnaValida1" xml:space="preserve">
+    <value>Please enter LAN Band Width</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetLANBandWDataAnnaValida2" xml:space="preserve">
+    <value>LAN Band Width must be between 1 and 50000000</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetSNIPAddres" xml:space="preserve">
+    <value>Subnet IP Address</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetSNIPAddressDataAnnaValida1" xml:space="preserve">
+    <value>Please enter IP address</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetSNIPAddressDataAnnaValida2" xml:space="preserve">
+    <value>Please enter valid IP address</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetSubMask" xml:space="preserve">
+    <value>Subnet Mask</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetSubMaskDataAnnaValida1" xml:space="preserve">
+    <value>Please enter subnet mask</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetSubMaskDataAnnaValida2" xml:space="preserve">
+    <value>Enter valid subnet mask</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetWANBandW" xml:space="preserve">
+    <value>WAN Band Width </value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetWANBandWDataAnnaValida1" xml:space="preserve">
+    <value>Please enter WAN Band Width</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblSubnetWANBandWDataAnnaValida2" xml:space="preserve">
+    <value>WAN Band Width must be between 1 and 50000000</value>
+    <comment>Models\tblSubnet</comment>
+  </data>
+  <data name="ModtblUserConfirmNewPassword" xml:space="preserve">
+    <value>Confirm New Password</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserConfirmPasswordDataAnnaValida1" xml:space="preserve">
+    <value>Please enter confirm new password</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserNewPassword" xml:space="preserve">
+    <value>New Password</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserNewPasswordDataAnnaValida1" xml:space="preserve">
+    <value>Please enter new password</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserCurrentPassword" xml:space="preserve">
+    <value>Current Password</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserOldPasswordDataAnnaValida1" xml:space="preserve">
+    <value>Please enter current password</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserPassword" xml:space="preserve">
+    <value>Password</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserPasswordDataAnnaValida1" xml:space="preserve">
+    <value>Please enter password</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserUserEmail" xml:space="preserve">
+    <value>User Email</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserUserEmailDataAnnaValida1" xml:space="preserve">
+    <value>Please enter email</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserUserEmailDataAnnaValida3" xml:space="preserve">
+    <value>Email is not Valid</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserUserName" xml:space="preserve">
+    <value>User Name</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="ModtblUserUserNameDataAnnaValida1" xml:space="preserve">
+    <value>Please enter Display Name</value>
+    <comment>Models\tblUser</comment>
+  </data>
+  <data name="StoreGroupFolderMgt" xml:space="preserve">
+    <value>Store Group Folder Mgt</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="StoreGroupMgt" xml:space="preserve">
+    <value>Store Group Mgt</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="StoreMgt" xml:space="preserve">
+    <value>Store Mgt</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="StoreSubnetMgt" xml:space="preserve">
+    <value>Store Subnet Mgt</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="SubnetMgt" xml:space="preserve">
+    <value>Subnet Mgt</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="TroubleShooting" xml:space="preserve">
+    <value>Trouble Shooting</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="UserMgt" xml:space="preserve">
+    <value>User Mgt</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="VideoAll" xml:space="preserve">
+    <value>Video All</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="VideoMgt" xml:space="preserve">
+    <value>Video Mgt</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="VieFeedbackMgmtViewLogBrowTitle" xml:space="preserve">
+    <value>Feedback Mgmt View Logs</value>
+    <comment>Views\ViewLogs\FeedbackMgmtViewLog</comment>
+  </data>
+  <data name="VieFeedbackMgmtViewLogH2" xml:space="preserve">
+    <value>Feedback Management View Logs</value>
+    <comment>Views\ViewLogs\FeedbackMgmtViewLog</comment>
+  </data>
+  <data name="VieFeedbacksEditBrowTitle" xml:space="preserve">
+    <value>Feedback Approval</value>
+    <comment>Views\Feedbacks\Edit</comment>
+  </data>
+  <data name="VieFeedbacksEditH2Title" xml:space="preserve">
+    <value>Feedback Management</value>
+    <comment>Views\Feedbacks\Edit</comment>
+  </data>
+  <data name="VieFeedbacksIndexBrowTitle" xml:space="preserve">
+    <value>Feedback List</value>
+    <comment>Views\Feedbacks\Index</comment>
+  </data>
+  <data name="VieFeedbacksIndexComments" xml:space="preserve">
+    <value>Comments</value>
+    <comment>Views\Feedbacks\Index</comment>
+  </data>
+  <data name="VieFeedbacksIndexH2Title" xml:space="preserve">
+    <value>Feedback Management</value>
+    <comment>Views\Feedbacks\Index</comment>
+  </data>
+  <data name="VieFolderMgmtViewLogBrowTitle1" xml:space="preserve">
+    <value>Folder Mgmt View Logs</value>
+    <comment>Views\ViewLogs\FolderMgmtViewLog</comment>
+  </data>
+  <data name="VieFolderMgmtViewLogH2" xml:space="preserve">
+    <value>Folder Management View Logs</value>
+    <comment>Views\ViewLogs\FolderMgmtViewLog</comment>
+  </data>
+  <data name="VieFoldersCreateBrowTitle" xml:space="preserve">
+    <value>Folder Create</value>
+    <comment>Views\Folders\Create</comment>
+  </data>
+  <data name="VieFoldersCreateH2Title" xml:space="preserve">
+    <value>Folder Management</value>
+    <comment>Views\Folders\Create</comment>
+  </data>
+  <data name="VieFoldersEditBrowTitle" xml:space="preserve">
+    <value>Folder Edit</value>
+    <comment>Views\Folders\Edit</comment>
+  </data>
+  <data name="VieFoldersEditH2Title" xml:space="preserve">
+    <value>Folder Management</value>
+    <comment>Views\Folders\Edit</comment>
+  </data>
+  <data name="VieFoldersFolderCreateButton" xml:space="preserve">
+    <value>Create New</value>
+    <comment>Views\Folders\Index</comment>
+  </data>
+  <data name="VieFoldersIndexBrowTitle" xml:space="preserve">
+    <value>Folder List</value>
+    <comment>Views\Folders\Index</comment>
+  </data>
+  <data name="VieFoldersIndexH2Title" xml:space="preserve">
+    <value>Folder Management</value>
+    <comment>Views\Folders\Index</comment>
+  </data>
+  <data name="VieLoginChangePwdBrowTitle" xml:space="preserve">
+    <value>Change Password Page</value>
+    <comment>Views\Login\ChangePassword</comment>
+  </data>
+  <data name="VieLoginChangePwdH2" xml:space="preserve">
+    <value>Change Password</value>
+    <comment>Views\Login\ChangePassword</comment>
+  </data>
+  <data name="VieLoginIndexBrowTitle" xml:space="preserve">
+    <value>Login Page</value>
+    <comment>Views\Login\Index</comment>
+  </data>
+  <data name="VieLoginIndexH2" xml:space="preserve">
+    <value>Login</value>
+    <comment>Views\Login\Index</comment>
+  </data>
+  <data name="VieLoginIndexPassword" xml:space="preserve">
+    <value>Password</value>
+    <comment>Views\Login\Index</comment>
+  </data>
+  <data name="VieLoginIndexUsername" xml:space="preserve">
+    <value>Username</value>
+    <comment>Views\Login\Index</comment>
+  </data>
+  <data name="VieMediaViewLogBackToVideo" xml:space="preserve">
+    <value>Back To Video</value>
+    <comment>Views\VideoFiles\MediaViewLog</comment>
+  </data>
+  <data name="VieMediaViewLogCRTDT" xml:space="preserve">
+    <value>CRTDT</value>
+    <comment>Views\VideoFiles\MediaViewLog</comment>
+  </data>
+  <data name="VieMediaViewLogH2" xml:space="preserve">
+    <value>Media View Logs</value>
+    <comment>Views\VideoFiles\MediaViewLog</comment>
+  </data>
+  <data name="VieMediaViewLogStoreIPAddress" xml:space="preserve">
+    <value>Store IP Address</value>
+    <comment>Views\VideoFiles\MediaViewLog</comment>
+  </data>
+  <data name="VieMediaViewLogStoreName" xml:space="preserve">
+    <value>Store Name</value>
+    <comment>Views\VideoFiles\MediaViewLog</comment>
+  </data>
+  <data name="VieMediaViewLogUserName" xml:space="preserve">
+    <value>User Name</value>
+    <comment>Views\VideoFiles\MediaViewLog</comment>
+  </data>
+  <data name="VieSearchCheckStoreDefin" xml:space="preserve">
+    <value>Check store definition</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchCheckStoreDefin0" xml:space="preserve">
+    <value>NG. Store definition not found.</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchCheckStoreDefin0_1" xml:space="preserve">
+    <value>The store to which the client belongs is not registered in the system.</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchCheckStoreDefin1" xml:space="preserve">
+    <value>OK</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchCheckSubnet" xml:space="preserve">
+    <value>Check subnet ID</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchCheckSubnet0" xml:space="preserve">
+    <value>NG. The network to which the client belongs is not registered in the system.</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchCheckSubnet1_1" xml:space="preserve">
+    <value>OK</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchCheckSubnet1_2" xml:space="preserve">
+    <value>Check</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchClientIP" xml:space="preserve">
+    <value>Client IP</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchGoButton" xml:space="preserve">
+    <value>Go</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchH2" xml:space="preserve">
+    <value>Reference failure investigation tool</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchIPAddress" xml:space="preserve">
+    <value>If you enter the IP address of the client, you can check if it works properly when you try to view the video from that client.</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchSelect" xml:space="preserve">
+    <value>Select videos that can be referenced</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchSelectNotNull_1" xml:space="preserve">
+    <value>OK</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchSelectNotNull_2" xml:space="preserve">
+    <value>Get</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchSelectNull" xml:space="preserve">
+    <value>NG. There is no video to which the store has access rights.</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieSearchSurveyResult" xml:space="preserve">
+    <value>Survey results</value>
+    <comment>Views\TroubleShoot\Search</comment>
+  </data>
+  <data name="VieStoreGroupFoldersCreateBrowTitle" xml:space="preserve">
+    <value>Store Group Folder Management - List</value>
+    <comment>Views\StoreGroupFolders\Create</comment>
+  </data>
+  <data name="VieStoreGroupFoldersCreateH2" xml:space="preserve">
+    <value>Store Group Folder Management - Create</value>
+    <comment>Views\StoreGroupFolders\Create</comment>
+  </data>
+  <data name="VieStoreGroupFoldersEditBrowTitle" xml:space="preserve">
+    <value>Store Group Folder Management - Edit</value>
+    <comment>Views\StoreGroupFolders\Edit</comment>
+  </data>
+  <data name="VieStoreGroupFoldersEditH2" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Views\StoreGroupFolders\Edit</comment>
+  </data>
+  <data name="VieStoreGroupFoldersIndexBrowTitle" xml:space="preserve">
+    <value>Store Group Folder</value>
+    <comment>Views\StoreGroupFolders\Index</comment>
+  </data>
+  <data name="VieStoreGroupFoldersIndexCreate" xml:space="preserve">
+    <value>Create New</value>
+    <comment>Views\StoreGroupFolders\Index</comment>
+  </data>
+  <data name="VieStoreGroupFoldersIndexH2" xml:space="preserve">
+    <value>Store Group Folder Management</value>
+    <comment>Views\StoreGroupFolders\Index</comment>
+  </data>
+  <data name="VieStoreGroupsCreateBrowTitle" xml:space="preserve">
+    <value>Store Group Management - Setup</value>
+    <comment>Views\StoreGroups\Create</comment>
+  </data>
+  <data name="VieStoreGroupsCreateH2" xml:space="preserve">
+    <value>Create</value>
+    <comment>Views\StoreGroups\Create</comment>
+  </data>
+  <data name="VieStoreGroupsEditBrowTitle" xml:space="preserve">
+    <value>Store Group Management - Edit</value>
+    <comment>Views\StoreGroups\Edit</comment>
+  </data>
+  <data name="VieStoreGroupsEditH2" xml:space="preserve">
+    <value>Store Group Management</value>
+    <comment>Views\StoreGroups\Edit</comment>
+  </data>
+  <data name="VieStoreGroupsIndexBrowTitle" xml:space="preserve">
+    <value>Store Group</value>
+    <comment>Views\StoreGroups\Index</comment>
+  </data>
+  <data name="VieStoreGroupsIndexCreate" xml:space="preserve">
+    <value>Create New</value>
+    <comment>Views\StoreGroups\Index</comment>
+  </data>
+  <data name="VieStoreGroupsIndexH2" xml:space="preserve">
+    <value>Store Group Management</value>
+    <comment>Views\StoreGroups\Index</comment>
+  </data>
+  <data name="VieStoreMgmtViewLogBrowTitle" xml:space="preserve">
+    <value>Store Mgmt View Logs</value>
+    <comment>Views\ViewLogs\StoreMgmtViewLog</comment>
+  </data>
+  <data name="VieStoreMgmtViewLogH2" xml:space="preserve">
+    <value>Store Management View Logs</value>
+    <comment>Views\ViewLogs\StoreMgmtViewLog</comment>
+  </data>
+  <data name="VieStoreMstCreateBrowTitle" xml:space="preserve">
+    <value>Store Management - Setup</value>
+    <comment>Views\StoreMst\Index</comment>
+  </data>
+  <data name="VieStoreMstCreateH2" xml:space="preserve">
+    <value>Store Information</value>
+    <comment>Views\StoreMst\Index</comment>
+  </data>
+  <data name="VieStoreMstEditBrowTitle" xml:space="preserve">
+    <value>Store Management - Modification</value>
+    <comment>Views\StoreMst\Edit</comment>
+  </data>
+  <data name="VieStoreMstEditH2" xml:space="preserve">
+    <value>Store Information - Edit</value>
+    <comment>Views\StoreMst\Edit</comment>
+  </data>
+  <data name="VieStoreMstIndexBrowTitle" xml:space="preserve">
+    <value>Store Management</value>
+    <comment>Views\StoreMst\Index</comment>
+  </data>
+  <data name="VieStoreMstIndexCreate" xml:space="preserve">
+    <value>Create New</value>
+    <comment>Views\StoreMst\Index</comment>
+  </data>
+  <data name="VieStoreMstIndexH2" xml:space="preserve">
+    <value>Store Management</value>
+    <comment>Views\StoreMst\Index</comment>
+  </data>
+  <data name="VieStoreSubnetsCreateBrowTitle" xml:space="preserve">
+    <value>Store Subnet - Create</value>
+    <comment>Views\StoreSubnets\Create</comment>
+  </data>
+  <data name="VieStoreSubnetsCreateH2" xml:space="preserve">
+    <value>Store Subnet - Create</value>
+    <comment>Views\StoreSubnets\Create</comment>
+  </data>
+  <data name="VieStoreSubnetsEditBrowTitle" xml:space="preserve">
+    <value>Store Subnet Management - Modification</value>
+    <comment>Views\StoreSubnets\Edit</comment>
+  </data>
+  <data name="VieStoreSubnetsEditH2" xml:space="preserve">
+    <value>Store Subnet Management - Modification</value>
+    <comment>Views\StoreSubnets\Edit</comment>
+  </data>
+  <data name="VieStoreSubnetsIndexBrowTitle" xml:space="preserve">
+    <value>Store Subnet - List</value>
+    <comment>Views\StoreSubnets\Index</comment>
+  </data>
+  <data name="VieStoreSubnetsIndexCreate" xml:space="preserve">
+    <value>Create New</value>
+    <comment>Views\StoreSubnets\Index</comment>
+  </data>
+  <data name="VieStoreSubnetsIndexEdit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Views\StoreSubnets\Index</comment>
+  </data>
+  <data name="VieStoreSubnetsIndexH2" xml:space="preserve">
+    <value>Store Subnet Management</value>
+    <comment>Views\StoreSubnets\Index</comment>
+  </data>
+  <data name="VieSubnetsCreateBrowTitle" xml:space="preserve">
+    <value>Subnet Management - Setup</value>
+    <comment>Views\Subnets\Create</comment>
+  </data>
+  <data name="VieSubnetsCreateH2" xml:space="preserve">
+    <value>Subnet Management - Create</value>
+    <comment>Views\Subnets\Create</comment>
+  </data>
+  <data name="VieSubnetsEditBrowTitle" xml:space="preserve">
+    <value>Subnet Management - Edit</value>
+    <comment>Views\Subnets\Edit</comment>
+  </data>
+  <data name="VieSubnetsEditH2" xml:space="preserve">
+    <value>Subnet Management</value>
+    <comment>Views\Subnets\Edit</comment>
+  </data>
+  <data name="VieSubnetsIndexBrowTitle" xml:space="preserve">
+    <value>Subnet List</value>
+    <comment>Views\Subnets\Index</comment>
+  </data>
+  <data name="VieSubnetsIndexCreate" xml:space="preserve">
+    <value>Create New</value>
+    <comment>Views\Subnets\Index</comment>
+  </data>
+  <data name="VieSubnetsIndexH2" xml:space="preserve">
+    <value>Subnet List</value>
+    <comment>Views\Subnets\Index</comment>
+  </data>
+  <data name="VietblMediaCreateBrowH2" xml:space="preserve">
+    <value>Video Information</value>
+    <comment>Views\VideoDemo\Create</comment>
+  </data>
+  <data name="VietblMediaCreateBrowTitle" xml:space="preserve">
+    <value>Video Information</value>
+    <comment>Views\VideoDemo\Create</comment>
+  </data>
+  <data name="VietblMediaEditBrowH2" xml:space="preserve">
+    <value>Edit Video Details</value>
+    <comment>Views\VideoDemo\Edit</comment>
+  </data>
+  <data name="VietblMediaEditBrowSupport" xml:space="preserve">
+    <value>Your browser does not support the HTML5 canvas tag.</value>
+    <comment>Views\VideoDemo\Edit</comment>
+  </data>
+  <data name="VietblMediaEditBrowTitle" xml:space="preserve">
+    <value>Video List - Edit</value>
+    <comment>Views\VideoDemo\Edit</comment>
+  </data>
+  <data name="VietblMediaEditUpdateDetailsButton" xml:space="preserve">
+    <value>Update With Thumbnail</value>
+    <comment>Views\VideoDemo\Edit</comment>
+  </data>
+  <data name="VietblMediaIndexBrowTitle" xml:space="preserve">
+    <value>Video Title</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexConvertedStatus" xml:space="preserve">
+    <value>Converted Status</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexConvertStatus" xml:space="preserve">
+    <value>Convert Status</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexCreate" xml:space="preserve">
+    <value>Add New Video</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexDateFrom" xml:space="preserve">
+    <value>Date From</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexDateTo" xml:space="preserve">
+    <value>To</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexDescription" xml:space="preserve">
+    <value>Description</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexFileName" xml:space="preserve">
+    <value>File Name</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexFindByTitle" xml:space="preserve">
+    <value>Find by Title</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexFolder" xml:space="preserve">
+    <value>Folder</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexFolderName" xml:space="preserve">
+    <value>Folder Name</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexH2" xml:space="preserve">
+    <value>Video Management</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexID" xml:space="preserve">
+    <value>ID</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexInCompleted" xml:space="preserve">
+    <value>Completed</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexInProgress" xml:space="preserve">
+    <value>In Progress</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexManageThumbnail" xml:space="preserve">
+    <value>ManageThumbnail</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexSelect" xml:space="preserve">
+    <value>Select</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexStreamVideoButton" xml:space="preserve">
+    <value>Streaming Video Conversion</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexStreamVideoH2Title" xml:space="preserve">
+    <value>Video Streaming File Managements (Webshare / FTP)</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndextblDelete" xml:space="preserve">
+    <value>Delete</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndextblDescription" xml:space="preserve">
+    <value>Description</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexTblTitle" xml:space="preserve">
+    <value>Title</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexTitle" xml:space="preserve">
+    <value>Title</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexVideo" xml:space="preserve">
+    <value>Video</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexVideoConversionPendingButton" xml:space="preserve">
+    <value>Update Streaming Converted Status (Pending)</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VietblMediaIndexVideoConversionUnderProcess" xml:space="preserve">
+    <value>Streaming Video Conversion is under process...</value>
+    <comment>Views\VideoDemo\Index</comment>
+  </data>
+  <data name="VieUploadDetailsNewBrowTitle" xml:space="preserve">
+    <value>View Upload Details New</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieUploadDetailsNewbtnSubmit" xml:space="preserve">
+    <value>Submit</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieUploadDetailsNewFolder" xml:space="preserve">
+    <value>Folder</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieUploadDetailsNewH2_1" xml:space="preserve">
+    <value>Management information</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieUploadDetailsNewH2_2" xml:space="preserve">
+    <value>Feedback</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieUploadDetailsNewlblAttachPhot" xml:space="preserve">
+    <value>Attach Photo</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieUploadDetailsNewlblClickVideo" xml:space="preserve">
+    <value>Click here for feedback on this video</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieUploadDetailsNewNoOfTimeView" xml:space="preserve">
+    <value>Number of times this video is referenced</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieUploadDetailsNewNoVideoSelect" xml:space="preserve">
+    <value>No video selected</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieUploadDetailsNewViewFeedBack" xml:space="preserve">
+    <value>View browsing history for this video</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieUserCreateAuthority" xml:space="preserve">
+    <value>Authority</value>
+    <comment>Views\User\Create</comment>
+  </data>
+  <data name="VieUserCreateBasicManagement" xml:space="preserve">
+    <value>Using basic management functions</value>
+    <comment>Views\User\Create</comment>
+  </data>
+  <data name="VieUserCreateBrowTitle" xml:space="preserve">
+    <value>Create User Page</value>
+    <comment>Views\User\Create</comment>
+  </data>
+  <data name="VieUserCreateConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+    <comment>Views\User\Create</comment>
+  </data>
+  <data name="VieUserCreateH2" xml:space="preserve">
+    <value>Create User</value>
+    <comment>Views\User\Create</comment>
+  </data>
+  <data name="VieUserCreateRemovingfeedback" xml:space="preserve">
+    <value>Removing feedback posted to videos</value>
+    <comment>Views\User\Create</comment>
+  </data>
+  <data name="VieUserCreatesystemManagement" xml:space="preserve">
+    <value>Refer to the system management screen</value>
+    <comment>Views\User\Create</comment>
+  </data>
+  <data name="VieUserCreateVideoChangeApp" xml:space="preserve">
+    <value>Video change approval</value>
+    <comment>Views\User\Create</comment>
+  </data>
+  <data name="VieUserCreateVideoChangeReq" xml:space="preserve">
+    <value>Video change request</value>
+    <comment>Views\User\Create</comment>
+  </data>
+  <data name="VieUserEditBrowTitle" xml:space="preserve">
+    <value>Edit User Page</value>
+    <comment>Views\User\Edit</comment>
+  </data>
+  <data name="VieUserEditH2" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Views\User\Edit</comment>
+  </data>
+  <data name="VieUserIndexBrowTitle" xml:space="preserve">
+    <value>User Management Page</value>
+    <comment>Views\User\Index</comment>
+  </data>
+  <data name="VieUserIndexCreateNew" xml:space="preserve">
+    <value>Create New</value>
+    <comment>Views\User\Index</comment>
+  </data>
+  <data name="VieUserIndexH2" xml:space="preserve">
+    <value>User Management</value>
+    <comment>Views\User\Index</comment>
+  </data>
+  <data name="VieUserIndexPassword" xml:space="preserve">
+    <value>Password</value>
+    <comment>Views\User\Index</comment>
+  </data>
+  <data name="VieUserIndexUpdate" xml:space="preserve">
+    <value>Update</value>
+    <comment>Views\User\Index</comment>
+  </data>
+  <data name="VieUserIndexUserEmail" xml:space="preserve">
+    <value>User Email</value>
+    <comment>Views\User\Index</comment>
+  </data>
+  <data name="VieUserIndexUserName" xml:space="preserve">
+    <value>User Name</value>
+    <comment>Views\User\Index</comment>
+  </data>
+  <data name="VieUserMgmtViewLogBrowTitle" xml:space="preserve">
+    <value>User Mgmt View Logs</value>
+    <comment>Views\ViewLogs\UserMgmtViewLog</comment>
+  </data>
+  <data name="VieUserMgmtViewLogH2" xml:space="preserve">
+    <value>User Management View Logs</value>
+    <comment>Views\ViewLogs\UserMgmtViewLog</comment>
+  </data>
+  <data name="VieVideoMgmtViewLogBrowTitle" xml:space="preserve">
+    <value>Video Mgmt View Logs</value>
+    <comment>Views\ViewLogs\UserMgmtViewLog</comment>
+  </data>
+  <data name="VieVideoMgmtViewLogH2" xml:space="preserve">
+    <value>Video Management View Logs</value>
+    <comment>Views\ViewLogs\UserMgmtViewLog</comment>
+  </data>
+  <data name="VieViewLogsIndexBrowTitle" xml:space="preserve">
+    <value>View Logs</value>
+    <comment>Views\ViewLogs\Index</comment>
+  </data>
+  <data name="VieViewLogsIndexCount" xml:space="preserve">
+    <value>Count</value>
+    <comment>Views\ViewLogs\Index</comment>
+  </data>
+  <data name="VieViewLogsIndexH2" xml:space="preserve">
+    <value>View Log History</value>
+    <comment>Views\ViewLogs\Index</comment>
+  </data>
+  <data name="VieViewLogsIndexMenuTitle" xml:space="preserve">
+    <value>Menu Title</value>
+    <comment>Views\ViewLogs\Index</comment>
+  </data>
+  <data name="VieViewLogsIndexSno" xml:space="preserve">
+    <value>S.No</value>
+    <comment>Views\ViewLogs\Index</comment>
+  </data>
+  <data name="ViewLogs" xml:space="preserve">
+    <value>View Logs</value>
+    <comment>Views\Shared\_Layout</comment>
+  </data>
+  <data name="VideoLogs" xml:space="preserve">
+    <value>Video Logs</value>
+    <comment>Views\Shared\_Layout</comment>
+  </data>
+  <data name="VieEnglish" xml:space="preserve">
+    <value>English</value>
+    <comment>Views\Language\Index</comment>
+  </data>
+  <data name="VieJapanese" xml:space="preserve">
+    <value>Japanese</value>
+    <comment>Views\Language\Index</comment>
+  </data>
+  <data name="VieLanguageChange" xml:space="preserve">
+    <value>Change Language</value>
+    <comment>Views\Language\Index</comment>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+    <comment>Views\Shared\_Layout.cshtml</comment>
+  </data>
+  <data name="CntDeployeDeleteFlag" xml:space="preserve">
+    <value>Delete Flag</value>
+    <comment>Models\DeploySchedule\</comment>
+  </data>
+  <data name="CntDeploySchedule" xml:space="preserve">
+    <value>Schedule</value>
+    <comment>Models\DeploySchedule\</comment>
+  </data>
+  <data name="CntDeployScheduleName" xml:space="preserve">
+    <value>Deploy Schedule Name</value>
+    <comment>Models\DeploySchedule\</comment>
+  </data>
+  <data name="DeployScheduleMgt" xml:space="preserve">
+    <value>Deploy Schedule </value>
+    <comment>Views\Shared\_Layout</comment>
+  </data>
+  <data name="DSServer" xml:space="preserve">
+    <value>DSServer</value>
+  </data>
+  <data name="FormatMgt" xml:space="preserve">
+    <value>Format Mgt</value>
+    <comment>Views\Shared\_Layout</comment>
+  </data>
+  <data name="FormatName" xml:space="preserve">
+    <value>Format Name</value>
+  </data>
+  <data name="MeidaFileNotFound" xml:space="preserve">
+    <value>Media File Not Found</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="ModtblDeployScheduleDataAnnaValida1" xml:space="preserve">
+    <value>Please enter schedule</value>
+    <comment>Models\DeploySchedule\</comment>
+  </data>
+  <data name="ModtblDriveDFreeDataAnnaValida2" xml:space="preserve">
+    <value>Please enter valid free space in drive D</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ModtblDriverCTotalDataAnnaValida2" xml:space="preserve">
+    <value>Please enter valid total space in drive C</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ModtblEnterDeployNameDataAnnaValida1" xml:space="preserve">
+    <value>Please enter deploy schedule name</value>
+    <comment>Models\DeploySchedule\</comment>
+  </data>
+  <data name="ModtblEnterIpAddressDataAnnaValida1" xml:space="preserve">
+    <value>Please enter server IP address</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ModtblEnterValidDriverCFreeDataAnnaValida2" xml:space="preserve">
+    <value>Please enter valid free space in drive C</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ModtblMaxLengthDataAnnaValida1" xml:space="preserve">
+    <value>Max Length 60 characters</value>
+    <comment>Models\DeploySchedule\</comment>
+  </data>
+  <data name="ModtblMaxLengthDataAnnaValida2" xml:space="preserve">
+    <value>Max Length 500 characters</value>
+    <comment>Models\DeploySchedule\</comment>
+  </data>
+  <data name="ModtblMediaSelectSubnetDataAnnaValida" xml:space="preserve">
+    <value>Please select subnet IP address</value>
+    <comment>Models\tblStreamServerSubnet\</comment>
+  </data>
+  <data name="ModtblMediaStreamServerMaxLenDataAnnaValida2" xml:space="preserve">
+    <value>Max Length 60 characters</value>
+    <comment>Models\tblStreamServerSubnet\</comment>
+  </data>
+  <data name="ModtblMediaStreamServerName" xml:space="preserve">
+    <value>Stream Server Name</value>
+    <comment>Models\tblStreamServerSubnet\</comment>
+  </data>
+  <data name="ModtblMediaSubnet" xml:space="preserve">
+    <value>Subnet</value>
+    <comment>Models\tblStreamServerSubnet\</comment>
+  </data>
+  <data name="ModtblSelectDeployeScheduleDataAnnaValida1" xml:space="preserve">
+    <value>Please select deploy schedule</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ModtblSelectIpAddressDataAnnaValida1" xml:space="preserve">
+    <value>Select IP Address</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ModtblStreamServerMaxLenCharDataAnnaValida2" xml:space="preserve">
+    <value>Max Length 15 characters</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ModtblStreamServerMaxLenDataAnnaValida2" xml:space="preserve">
+    <value>Max Length 60 characters</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ModtblStreamServerNameDataAnnaValida1" xml:space="preserve">
+    <value>Please enter stream server name</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ModtblMediaStreamServerNameDataAnnaValida1" xml:space="preserve">
+    <value>Please select stream server name</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ModtblValidDriverDTotalDataAnnaValida2" xml:space="preserve">
+    <value>Please enter valid total space in drive D</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="ServerIpAddressNotFound" xml:space="preserve">
+    <value>Server IP address not found</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="ServerNotFound" xml:space="preserve">
+    <value>Server details not found</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="StreamServerMgt" xml:space="preserve">
+    <value>Stream Server Mgt</value>
+    <comment>Views\Shared\_Layout</comment>
+  </data>
+  <data name="StreamServerSubnetMgt" xml:space="preserve">
+    <value>Stream Server Subnet Mgt</value>
+    <comment>Views\Shared\_Layout</comment>
+  </data>
+  <data name="StreamSreverCreateNew" xml:space="preserve">
+    <value>Create New</value>
+    <comment>Views\StreamServers\Index</comment>
+  </data>
+  <data name="StreamSreverEdit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Views\StreamServers\Index</comment>
+  </data>
+  <data name="StreamSreverFormatDelete" xml:space="preserve">
+    <value>Delete</value>
+    <comment>Views\StreamServersFormats\Index</comment>
+  </data>
+  <data name="StreamSreverFormatDetails" xml:space="preserve">
+    <value>Details</value>
+    <comment>Views\StreamServersFormats\Index</comment>
+  </data>
+  <data name="StreamSreverFormatEdit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Views\StreamServersFormats\Index</comment>
+  </data>
+  <data name="StreamSreverFormatIndex" xml:space="preserve">
+    <value>Index</value>
+    <comment>Views\StreamServersFormats\Index</comment>
+  </data>
+  <data name="StreamSreverFormatIndex1" xml:space="preserve">
+    <value>Index</value>
+    <comment>Views\StreamServersFormats\Index</comment>
+  </data>
+  <data name="StreamSreverFormatIndex2" xml:space="preserve">
+    <value>Create New</value>
+    <comment>Views\StreamServersFormats\Index</comment>
+  </data>
+  <data name="StreamSreverIndex" xml:space="preserve">
+    <value>Index</value>
+    <comment>Views\StreamServers\Index</comment>
+  </data>
+  <data name="StreamSreverIndex1" xml:space="preserve">
+    <value>Index</value>
+    <comment>Views\StreamServers\Index</comment>
+  </data>
+  <data name="StreamSreverSubnetCreateNew" xml:space="preserve">
+    <value>Create New</value>
+    <comment>Views\StreamServerSubnet\Index</comment>
+  </data>
+  <data name="StreamSreverSubnetEdit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Views\StreamServerSubnet\Index</comment>
+  </data>
+  <data name="StreamSreverSubnetIndex" xml:space="preserve">
+    <value>Index</value>
+    <comment>Views\StreamServers\Index</comment>
+  </data>
+  <data name="StreamSreverSubnetIndex1" xml:space="preserve">
+    <value>Index</value>
+    <comment>Views\StreamServerSubnet\Index</comment>
+  </data>
+  <data name="TblDeploySchedule" xml:space="preserve">
+    <value>Deploy Schedule</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblDeployScheduleName" xml:space="preserve">
+    <value>Deploy Schedule Name</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblDriveCFree" xml:space="preserve">
+    <value>Drive C Free Space</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblDriveCTotal" xml:space="preserve">
+    <value>Drive C Total Space</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblDriveDFree" xml:space="preserve">
+    <value>Drive D Free Space</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblDriveDFree1" xml:space="preserve">
+    <value>Drive D Free Space</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblDriveDTotal" xml:space="preserve">
+    <value>Drive D Total Space</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblDriverCCount" xml:space="preserve">
+    <value>Drive C Total Space</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblDriverCFree" xml:space="preserve">
+    <value>Drive C Free Space</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblDriverDTotal" xml:space="preserve">
+    <value>Drive D Total Space</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblFormatDELFG" xml:space="preserve">
+    <value>Delete Flag</value>
+  </data>
+  <data name="TblFormatEnterNameFormat" xml:space="preserve">
+    <value>Please enter format name</value>
+  </data>
+  <data name="TblFormatName" xml:space="preserve">
+    <value>Format Name</value>
+  </data>
+  <data name="TblFormatRequiredBandWidth" xml:space="preserve">
+    <value>Please enter required band width</value>
+  </data>
+  <data name="TblFormatRequiredBandWidth1" xml:space="preserve">
+    <value>Required Band Width</value>
+  </data>
+  <data name="TblFormatRequiredBandWidth2" xml:space="preserve">
+    <value>Range Between 1000 to 60000</value>
+  </data>
+  <data name="TblStreamSreverIpAddress" xml:space="preserve">
+    <value>Server IP Address</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblStreamSreverName" xml:space="preserve">
+    <value>Stream Server Name</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblSubnet" xml:space="preserve">
+    <value>Subnet</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TblSubnetName" xml:space="preserve">
+    <value>Subnet Name</value>
+    <comment>Models\tblStreamServer\</comment>
+  </data>
+  <data name="TxtDangerPlayBackStart" xml:space="preserve">
+    <value>Since the video is downloaded from the center, it may take some time before the playback starts.</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="Txtdistribution" xml:space="preserve">
+    <value>video from the distribution server</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="TxtReceiving" xml:space="preserve">
+    <value>We are receiving</value>
+    <comment>Views\VideoFiles\ViewUploadDetailsNew</comment>
+  </data>
+  <data name="VieFormatCreate" xml:space="preserve">
+    <value>Create New</value>
+    <comment>Views\Formats\Index</comment>
+  </data>
+  <data name="VieFormatsIndex" xml:space="preserve">
+    <value>Index</value>
+    <comment>Views\Formats\Index</comment>
+  </data>
+  <data name="BelongingSubnetName" xml:space="preserve">
+    <value>Subnet Name</value>
+    <comment>Views\StreamServer\Create</comment>
+  </data>
+  <data name="BelongingSubnetSelect" xml:space="preserve">
+    <value>BelongingSubnet</value>
+  </data>
+  <data name="BelongingSubnetSelect1" xml:space="preserve">
+    <value>Deploy Schedule</value>
+  </data>
+  <data name="CntStoreGroupUpdateCommon" xml:space="preserve">
+    <value>Store group updated successfully</value>
+  </data>
+  <data name="CommonCreatedSuccessfully" xml:space="preserve">
+    <value>Format created successfully</value>
+  </data>
+  <data name="CommonCreateStreamServerSubnetServerAlExists" xml:space="preserve">
+    <value>Stream server subnet already exists</value>
+  </data>
+  <data name="CommonCreateStreamServerUpdatedSuccess" xml:space="preserve">
+    <value>Stream server updated successfully</value>
+  </data>
+  <data name="CommonCreateSubnetAlreadyExists" xml:space="preserve">
+    <value>Subnet already exists</value>
+  </data>
+  <data name="CommonCreateSubnetUpdatedSuccess" xml:space="preserve">
+    <value>Stream Server subnet updated successfully</value>
+  </data>
+  <data name="CommonCreateUnableCreateStreamSer" xml:space="preserve">
+    <value>Unable to create stream server</value>
+  </data>
+  <data name="CommonCreateUnableUpdateStreamSer" xml:space="preserve">
+    <value>Unable to update stream server</value>
+  </data>
+  <data name="CommonCreateUnableUpdateSubnet" xml:space="preserve">
+    <value>Unable to update stream server subnet</value>
+  </data>
+  <data name="CommonFolderUnableUpdateFolder" xml:space="preserve">
+    <value>Unable to update folder</value>
+  </data>
+  <data name="CommonFolderUpdated" xml:space="preserve">
+    <value>Folder Updated </value>
+  </data>
+  <data name="CommonMessage" xml:space="preserve">
+    <value>Your application description page.</value>
+  </data>
+  <data name="CommonMessageContact" xml:space="preserve">
+    <value>Your contact page.</value>
+  </data>
+  <data name="CommonNameAlreadyExists" xml:space="preserve">
+    <value>Unable to create format already exists</value>
+  </data>
+  <data name="CommonNameAndScheduleAlreadyExist" xml:space="preserve">
+    <value>Unable to update deploy schedule already exists</value>
+  </data>
+  <data name="CommonNameAndScheduleUnableDeploySchedule" xml:space="preserve">
+    <value>Unable to update deploy schedule</value>
+  </data>
+  <data name="CommonNameAndScheduleUpdateSuc" xml:space="preserve">
+    <value>Deploy schedule updated successfully</value>
+  </data>
+  <data name="CommonNameDeployeScheduleUpdated" xml:space="preserve">
+    <value>Deploy schedule updated successfully </value>
+  </data>
+  <data name="CommonNameFolderCreated" xml:space="preserve">
+    <value>Folder Created </value>
+  </data>
+  <data name="CommonNameUnableCreateDeploySchedule" xml:space="preserve">
+    <value>Unable to create deploy schedule</value>
+  </data>
+  <data name="CommonNameUnableCreateFolder" xml:space="preserve">
+    <value>Unable to create folder</value>
+  </data>
+  <data name="CommonNameUnableCreateStreamSubnet" xml:space="preserve">
+    <value>Unable to create stream server subnet. Stream server name/subnet IP address already exists.</value>
+  </data>
+  <data name="CommonNameUpdateFormatNameAlreadyExists" xml:space="preserve">
+    <value>Unable to update format already exists</value>
+  </data>
+  <data name="CommonNameUpdateFormatUpdateForm" xml:space="preserve">
+    <value>Unable to update format</value>
+  </data>
+  <data name="CommonNameUpdateFormatUpdateSuc" xml:space="preserve">
+    <value>Format updated successfully</value>
+  </data>
+  <data name="CommonNmeStreamServerSubnetCreatedSuccess" xml:space="preserve">
+    <value>Stream server subnet created successfully</value>
+  </data>
+  <data name="CommonUnableCreateFormat" xml:space="preserve">
+    <value>Unable to create format</value>
+  </data>
+  <data name="DeployDeployLogCreate" xml:space="preserve">
+    <value>Create</value>
+    <comment>Views\DeployLog\Create</comment>
+  </data>
+  <data name="DeployDeployLogCreateH2" xml:space="preserve">
+    <value>Create</value>
+    <comment>Views\DeployLog\Create</comment>
+  </data>
+  <data name="DeployDeployLogResult" xml:space="preserve">
+    <value>Result</value>
+    <comment>Views\DeployLog\Create</comment>
+  </data>
+  <data name="DeployLog" xml:space="preserve">
+    <value>Index</value>
+    <comment>Views\DeployLog\Index</comment>
+  </data>
+  <data name="DeployLog1" xml:space="preserve">
+    <value>Media ID</value>
+  </data>
+  <data name="DeployLog2" xml:space="preserve">
+    <value>Media ID</value>
+  </data>
+  <data name="DeployLogEdit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Views\DeployLog\Edit</comment>
+  </data>
+  <data name="DeployLogEditH2" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Views\DeployLog\Edit</comment>
+  </data>
+  <data name="DeployLogH2" xml:space="preserve">
+    <value>Index</value>
+    <comment>Views\DeployLog\Index</comment>
+  </data>
+  <data name="DeployLogResult" xml:space="preserve">
+    <value>Result</value>
+    <comment>Views\DeployLog\Edit</comment>
+  </data>
+  <data name="DeploySchedule" xml:space="preserve">
+    <value>Index</value>
+    <comment>Views\DeploySchedule\Index</comment>
+  </data>
+  <data name="DeployScheduleCreate" xml:space="preserve">
+    <value>Create</value>
+    <comment>Views\DeploySchedule\Create</comment>
+  </data>
+  <data name="DeployScheduleCreateH2" xml:space="preserve">
+    <value>Create</value>
+    <comment>Views\DeploySchedule\Create</comment>
+  </data>
+  <data name="DeployScheduleEdit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Views\DeploySchedule\Edit</comment>
+  </data>
+  <data name="DeployScheduleEditH2" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Views\DeploySchedule\Edit</comment>
+  </data>
+  <data name="DeployScheduleH2" xml:space="preserve">
+    <value>Index</value>
+    <comment>Views\DeploySchedule\Index</comment>
+  </data>
+  <data name="DeployScheduleName" xml:space="preserve">
+    <value>Deploy Schedule Name</value>
+    <comment>Views\StreamServer\Create</comment>
+  </data>
+  <data name="DeployStatuIndex" xml:space="preserve">
+    <value>Index</value>
+    <comment>Views\DeployStatus\Index</comment>
+  </data>
+  <data name="DeployStatuIndexH2" xml:space="preserve">
+    <value>Index</value>
+    <comment>Views\DeployStatus\Index</comment>
+  </data>
+  <data name="DeployStatusFormatId" xml:space="preserve">
+    <value>Format ID</value>
+  </data>
+  <data name="StoreGroupCreateCommon" xml:space="preserve">
+    <value>Store group created successfully </value>
+  </data>
+  <data name="StoreGroupCreateFolderCreate" xml:space="preserve">
+    <value>Store group folder created successfully </value>
+  </data>
+  <data name="StreamServerEdit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Views\StreamServer\Edit</comment>
+  </data>
+  <data name="StreamServerEditH2" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Views\StreamServer\Edit</comment>
+  </data>
+  <data name="StreamServerFormatCreate" xml:space="preserve">
+    <value>Create</value>
+    <comment>Views\StreamServerFormat\Create</comment>
+  </data>
+  <data name="StreamServerFormatCreateH2" xml:space="preserve">
+    <value>Create</value>
+    <comment>Views\StreamServerFormat\Create</comment>
+  </data>
+  <data name="StreamServerFormatEdit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Views\StreamServerFormat\Edit</comment>
+  </data>
+  <data name="StreamServerFormatEditH2" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Views\StreamServerFormat\Edit</comment>
+  </data>
+  <data name="StreamServerSelect" xml:space="preserve">
+    <value>Select</value>
+    <comment>Views\tblStreamServerSubnet\Create</comment>
+  </data>
+  <data name="StreamServerSubnet1" xml:space="preserve">
+    <value>Subnet IP Address</value>
+  </data>
+  <data name="StreamServerSubnetBelongingSubnet" xml:space="preserve">
+    <value>Subnet Name</value>
+  </data>
+  <data name="StreamServerSubnetCreate" xml:space="preserve">
+    <value>Create</value>
+    <comment>Views\StreamServerSubnet\Create</comment>
+  </data>
+  <data name="StreamServerSubnetCreateH2" xml:space="preserve">
+    <value>Create</value>
+    <comment>Views\StreamServerSubnet\Create</comment>
+  </data>
+  <data name="StreamServerSubnetDeploySchedule" xml:space="preserve">
+    <value>Deploy Schedule Name</value>
+  </data>
+  <data name="StreamServerSubnetEdit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Views\StreamServerSubnet\Edit</comment>
+  </data>
+  <data name="StreamServerSubnetEditH2" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Views\StreamServerSubnet\Edit</comment>
+  </data>
+  <data name="StreamServerSubnetName" xml:space="preserve">
+    <value>Subnet IP Address</value>
+    <comment>Views\tblStreamServerSubnet\Create</comment>
+  </data>
+  <data name="StreamServerSubnetSelect" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="tblDeployStatusCreate" xml:space="preserve">
+    <value>Create</value>
+    <comment>Views\DeployStatus\Create</comment>
+  </data>
+  <data name="tblDeployStatusCreateH2" xml:space="preserve">
+    <value>Create</value>
+    <comment>Views\DeployStatus\Create</comment>
+  </data>
+  <data name="tblDeployStatusEdit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Views\DeployStatus\Edit</comment>
+  </data>
+  <data name="tblDeployStatusEditH2" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Views\DeployStatus\Edit</comment>
+  </data>
+  <data name="tblDeployStatusFormatId" xml:space="preserve">
+    <value>Format ID</value>
+    <comment>Views\DeployStatus\Create</comment>
+  </data>
+  <data name="tblFormatCreate" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="tblFormatCreateH2" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="tblFormatEdit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="tblFormatEditH2" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="UnableCreateDeployeSch" xml:space="preserve">
+    <value>Unable to create deploy schedule. Name and Schedule already exists</value>
+  </data>
+  <data name="UnableCreateDeployeSchedule" xml:space="preserve">
+    <value>Deploy schedule created successfully </value>
+  </data>
+  <data name="UnableCreateDeployeScheduleCreateSuc" xml:space="preserve">
+    <value>Deploy schedule created successfully</value>
+  </data>
+  <data name="VieStreamServerCreate" xml:space="preserve">
+    <value>Create</value>
+    <comment>Views\StreamServer\Create</comment>
+  </data>
+  <data name="VieStreamServerCreateH2" xml:space="preserve">
+    <value>Create</value>
+    <comment>Views\StreamServer\Create</comment>
+  </data>
+  <data name="Deliverystatusreference" xml:space="preserve">
+    <value>Delivery Status Reference</value>
+  </data>
+  <data name="Estimateddeliverytimereference" xml:space="preserve">
+    <value>Estimated Delivery Time Reference</value>
+  </data>
+  <data name="AdministrationMenuDeliveryStatus" xml:space="preserve">
+    <value>Administration Menu-Delivery Status</value>
+  </data>
+  <data name="BackTothelist" xml:space="preserve">
+    <value>Back To the list</value>
+  </data>
+  <data name="Copyresult" xml:space="preserve">
+    <value>Copy result</value>
+  </data>
+  <data name="CUsagestatus" xml:space="preserve">
+    <value>C: Usage status</value>
+  </data>
+  <data name="Dateandtime" xml:space="preserve">
+    <value>Date and Time</value>
+  </data>
+  <data name="Deliveryschedule" xml:space="preserve">
+    <value>Delivery schedule</value>
+  </data>
+  <data name="Deliverystatus" xml:space="preserve">
+    <value>Delivery status</value>
+  </data>
+  <data name="Diskusage" xml:space="preserve">
+    <value>Disk usage</value>
+  </data>
+  <data name="Distributionserver" xml:space="preserve">
+    <value>Distribution server</value>
+  </data>
+  <data name="DUsagestatus" xml:space="preserve">
+    <value>D: Usage status</value>
+  </data>
+  <data name="EstimatedtimeRequired" xml:space="preserve">
+    <value>Estimated Time Required</value>
+  </data>
+  <data name="ExpectedDeliveryTime" xml:space="preserve">
+    <value>Estimated Delivery Time</value>
+  </data>
+  <data name="FolderName" xml:space="preserve">
+    <value>Folder Name</value>
+  </data>
+  <data name="Instalisationstore" xml:space="preserve">
+    <value>Installisation store</value>
+  </data>
+  <data name="IPaddress" xml:space="preserve">
+    <value>IP address</value>
+  </data>
+  <data name="MediaID" xml:space="preserve">
+    <value>Media ID</value>
+  </data>
+  <data name="MenuAdministration" xml:space="preserve">
+    <value>Administration</value>
+  </data>
+  <data name="MenuStream" xml:space="preserve">
+    <value>Stream</value>
+  </data>
+  <data name="MenuSubnet" xml:space="preserve">
+    <value>Subnet</value>
+  </data>
+  <data name="Processingtimeseconds" xml:space="preserve">
+    <value>Processing time (seconds)</value>
+  </data>
+  <data name="ServerName" xml:space="preserve">
+    <value>Server Name</value>
+  </data>
+  <data name="Storename" xml:space="preserve">
+    <value>Store Name</value>
+  </data>
+  <data name="StoreNumber" xml:space="preserve">
+    <value>Store Number</value>
+  </data>
+  <data name="SubnetDataAcquisitionWANBandwidth" xml:space="preserve">
+    <value>Subnet Data Acquisition: WAN Bandwidth</value>
+  </data>
+  <data name="Targetfilesize" xml:space="preserve">
+    <value>Target file size</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Totaltimerequiredforprediction" xml:space="preserve">
+    <value>Total time required for prediction:</value>
+  </data>
+  <data name="UnDeliveredFileSize" xml:space="preserve">
+    <value>UnDelivered File Size</value>
+  </data>
+  <data name="Video" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="Videodistributionstatus" xml:space="preserve">
+    <value>Video distribution status</value>
+  </data>
+  <data name="WanBandWidth" xml:space="preserve">
+    <value>WAN Band Width </value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Approved" xml:space="preserve">
+    <value>Approved </value>
+  </data>
+  <data name="DeployStatus" xml:space="preserve">
+    <value>Deploy Status</value>
+  </data>
+  <data name="distributionisnotcompleted" xml:space="preserve">
+    <value>(or distribution is not completed)</value>
+  </data>
+  <data name="Distributionserverdetails" xml:space="preserve">
+    <value>Distribution server details</value>
+  </data>
+  <data name="IsExists" xml:space="preserve">
+    <value>Is Exists</value>
+  </data>
+  <data name="MenuStore" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="RobocopyExitcodeContent" xml:space="preserve">
+    <value>Robo Copy Exits Code Content</value>
+  </data>
+  <data name="SameSubnet" xml:space="preserve">
+    <value>Same Subnet Is there a video delivery server:</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="SelectRobocopyExitcodeContent" xml:space="preserve">
+    <value>Select Robo copy Exit code Content</value>
+  </data>
+  <data name="StreamServerName" xml:space="preserve">
+    <value>Stream Server Name</value>
+  </data>
+  <data name="Thedeliveryisnotover" xml:space="preserve">
+    <value>or (The delivery is not over)</value>
+  </data>
+  <data name="UnApproved" xml:space="preserve">
+    <value>UnApproved</value>
+  </data>
+  <data name="Videodeliverylog" xml:space="preserve">
+    <value>Video delivery log</value>
+  </data>
+  <data name="videodeliveryserveronanother" xml:space="preserve">
+    <value>There a video delivery server on another subnet:</value>
+  </data>
+  <data name="Videodistributionserver" xml:space="preserve">
+    <value>Video distribution server on other subnet:</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="ApprovalStatus" xml:space="preserve">
+    <value>Approval Status</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>Content</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EnterContent" xml:space="preserve">
+    <value>Please enter content</value>
+  </data>
+  <data name="FormatCreatedSuccessfully" xml:space="preserve">
+    <value>Format created successfully</value>
+  </data>
+  <data name="InsufficientlyRegistered" xml:space="preserve">
+    <value>Insufficiently Registered</value>
+  </data>
+  <data name="LengthMaximum120Charactor" xml:space="preserve">
+    <value>Length Maximum 120 Character</value>
+  </data>
+  <data name="RoboCopyExistsCode" xml:space="preserve">
+    <value>Robo Copy Exists Code</value>
+  </data>
+  <data name="RoboCopyExistsCodescreated" xml:space="preserve">
+    <value>Robo copy exists codes created successfully</value>
+  </data>
+  <data name="RoboCopyExistsCodesUpdated" xml:space="preserve">
+    <value>Robo copy exists code updated successfully </value>
+  </data>
+  <data name="RoboCopyExitCodesUpdatedSuccessfully" xml:space="preserve">
+    <value>Robo copy exists code updated successfully</value>
+  </data>
+  <data name="UnableCreateRoboCopyExistsCodes" xml:space="preserve">
+    <value>Unable to create robo copy exists code. Robo copy exists code already exists.</value>
+  </data>
+  <data name="UnableCreateRoboCopyExistsCodes1" xml:space="preserve">
+    <value>Unable to create robo copy exists code</value>
+  </data>
+  <data name="UnableRoboCopyExistsCodesRoboCopyExistsCodesAlreadyexists" xml:space="preserve">
+    <value>Unable to update robo copy exists code. Robo copy exists code already exists.</value>
+  </data>
+  <data name="UnableUpdateRoboCopyExistsCodes" xml:space="preserve">
+    <value>Unable to update robo copy exists code</value>
+  </data>
+  <data name="VideoChangeApproval" xml:space="preserve">
+    <value>Video Change Approval</value>
+  </data>
+  <data name="VideoChangeRequest" xml:space="preserve">
+    <value>Video Change Request</value>
+  </data>
+  <data name="VideoDeployStatusUpdate" xml:space="preserve">
+    <value>Video Deploy Status Update</value>
+  </data>
+  <data name="ApplicationId" xml:space="preserve">
+    <value>Application ID</value>
+  </data>
+  <data name="associatedwithanystore" xml:space="preserve">
+    <value>is not associated with any store.</value>
+  </data>
+  <data name="belongsdoesnotexis" xml:space="preserve">
+    <value>belongs does not exist.</value>
+  </data>
+  <data name="doesnotcontainasubnet" xml:space="preserve">
+    <value>does not contain a subnet.</value>
+  </data>
+  <data name="insufficientlyregistered1" xml:space="preserve">
+    <value>Items that seem to be insufficiently registered</value>
+  </data>
+  <data name="isnotassociatedwithanystore" xml:space="preserve">
+    <value>is not associated with any store.</value>
+  </data>
+  <data name="isnotconfiguredtodistributetoanysubnet" xml:space="preserve">
+    <value>is not configured to distribute to any subnet.</value>
+  </data>
+  <data name="Itemsthatseemtobeinsufficientlyregistered" xml:space="preserve">
+    <value>Items that seem to be insufficiently registered</value>
+  </data>
+  <data name="IwilllisttheitemsthatIthinkarenotenoughregistratio" xml:space="preserve">
+    <value>Detailed list of items registered with insufficient information</value>
+  </data>
+  <data name="Store" xml:space="preserve">
+    <value>Store Name</value>
+  </data>
+  <data name="subnetID" xml:space="preserve">
+    <value>Subnet ID</value>
+  </data>
+  <data name="Thedistributionserver" xml:space="preserve">
+    <value>The distribution server</value>
+  </data>
+  <data name="Thesubnettowhichdistributionserver" xml:space="preserve">
+    <value>The subnet to which distribution server</value>
+  </data>
+  <data name="thinkarenotenoughregistration" xml:space="preserve">
+    <value>Detailed list of items registered with insufficient information</value>
+  </data>
+  <data name="underregistered" xml:space="preserve">
+    <value>There are no items that appear to be under-registered.</value>
+  </data>
+  <data name="Authorizer" xml:space="preserve">
+    <value>Authorizer</value>
+  </data>
+  <data name="deleterequestThevideo" xml:space="preserve">
+    <value>This is a delete request. The video will be deleted if approved.</value>
+  </data>
+  <data name="FeedbackID" xml:space="preserve">
+    <value>Feedback ID</value>
+  </data>
+  <data name="FolderId" xml:space="preserve">
+    <value>FolderID</value>
+  </data>
+  <data name="Itisnotdeletionrequest" xml:space="preserve">
+    <value>It is not a deletion request.</value>
+  </data>
+  <data name="memofortheapprover" xml:space="preserve">
+    <value>This is a message memo for the approver. Please use it to fill in the reason for application.</value>
+  </data>
+  <data name="note" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="RegisteredDate" xml:space="preserve">
+    <value>Registered Date</value>
+  </data>
+  <data name="Registeredperson" xml:space="preserve">
+    <value>Registered person</value>
+  </data>
+  <data name="requesttochangeaproval" xml:space="preserve">
+    <value>Request to Change to approved</value>
+  </data>
+  <data name="requesttochangeunaproval" xml:space="preserve">
+    <value>Request to Change to unapproved</value>
+  </data>
+  <data name="Statechange" xml:space="preserve">
+    <value>State change</value>
+  </data>
+  <data name="storeid" xml:space="preserve">
+    <value>Store ID</value>
+  </data>
+  <data name="toapprove" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="todisavow" xml:space="preserve">
+    <value>Disapprove</value>
+  </data>
+  <data name="userid" xml:space="preserve">
+    <value>User ID</value>
+  </data>
+  <data name="videowillbedeleted" xml:space="preserve">
+    <value>Check it and request deletion. If approved, this video will be deleted.</value>
+  </data>
+  <data name="RobocopyExitcodes" xml:space="preserve">
+    <value>Robo Copy Exists Code</value>
+  </data>
+  <data name="StreamServerMgt1" xml:space="preserve">
+    <value>Stream Server Management</value>
+  </data>
+  <data name="StreamServerSubnetMgt1" xml:space="preserve">
+    <value>Stream Server Subnet Management</value>
+  </data>
+  <data name="VieFormats" xml:space="preserve">
+    <value>Format Management</value>
+  </data>
+  <data name="downloadsucessmessage" xml:space="preserve">
+    <value>Video downloded successfully</value>
+  </data>
+  <data name="viesearchid" xml:space="preserve">
+    <value>Search Subnet IP Address</value>
+  </data>
+  <data name="VieSearchStorename" xml:space="preserve">
+    <value>Search Store Name</value>
+  </data>
+  <data name="listtheitemthatyouthinknotregisteredenough" xml:space="preserve">
+    <value>List the item that you think not registered enough</value>
+  </data>
+  <data name="VieSearchIPaddressstreamserver" xml:space="preserve">
+    <value>Search IP Address/Stream Server Name</value>
+  </data>
+  <data name="VieSerIPaddress" xml:space="preserve">
+    <value>Search IP Address</value>
+  </data>
+  <data name="vieunderregistered" xml:space="preserve">
+    <value>Items that seems to be under-registered</value>
+  </data>
+  <data name="Nodata" xml:space="preserve">
+    <value>No matching record found for the given search input</value>
+  </data>
+  <data name="CommonCreateStreamServerCreatedSuccess" xml:space="preserve">
+    <value>Stream server created successfully</value>
+  </data>
+  <data name="DriveCTotalspace" xml:space="preserve">
+    <value>Total space should be lesser than or equal to free space in Drive C </value>
+  </data>
+  <data name="DriveDTotalspace" xml:space="preserve">
+    <value>Total space should be lesser than or equal to free space in Drive D</value>
+  </data>
+  <data name="ModtblSubnetSubnetID" xml:space="preserve">
+    <value>Subnet ID</value>
+  </data>
+  <data name="SelectDeploySchedule" xml:space="preserve">
+    <value>Please select deploy schedule</value>
+  </data>
+  <data name="SelectSubnet" xml:space="preserve">
+    <value>Please select subnet</value>
+  </data>
+  <data name="StreamServerAlreadyExists" xml:space="preserve">
+    <value>Stream Server already exists</value>
+  </data>
+  <data name="SubnetAlreadyExists" xml:space="preserve">
+    <value>Subnet already exists</value>
+  </data>
+  <data name="PleaseUploadVideo1" xml:space="preserve">
+    <value>Please upload video</value>
+  </data>
+  <data name="StreamServerupdatedsuccessfully" xml:space="preserve">
+    <value>Stream server updated successfully</value>
+  </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="vieuploadsize" xml:space="preserve">
+    <value>Maximum upload file size: 1GB</value>
+  </data>
+  <data name="viewdescriptionsize" xml:space="preserve">
+    <value>Maximum 4000 Characters</value>
+  </data>
+  <data name="viewtitlesize" xml:space="preserve">
+    <value>Maximum 500 Characters</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="VieUploadMessage" xml:space="preserve">
+    <value>Maximum Upload File Size: 1 GB</value>
+  </data>
+  <data name="Approvedisapprove" xml:space="preserve">
+    <value>Approve/disapprove</value>
+  </data>
+  <data name="Attachedfile" xml:space="preserve">
+    <value>Attached File</value>
+  </data>
+  <data name="commentmax" xml:space="preserve">
+    <value>Maximum Length 3000 Characters</value>
+  </data>
+  <data name="Createfolder" xml:space="preserve">
+    <value>Create New Folder</value>
+  </data>
+  <data name="CreateNewDeploySchedule" xml:space="preserve">
+    <value>Create New Deploy Schedule</value>
+  </data>
+  <data name="CreateNewFormat" xml:space="preserve">
+    <value>Create New Format</value>
+  </data>
+  <data name="CreateNewRobocopy" xml:space="preserve">
+    <value>Create New Robo copy Exists code</value>
+  </data>
+  <data name="CreateNewStore" xml:space="preserve">
+    <value>Create New Store</value>
+  </data>
+  <data name="CreateNewStoreGroup" xml:space="preserve">
+    <value>Create New Store Group</value>
+  </data>
+  <data name="CreateNewStoreGroupFolder" xml:space="preserve">
+    <value>Create New Store Group Folder</value>
+  </data>
+  <data name="CreateNewStoreSubent" xml:space="preserve">
+    <value>Create New Store Subnet</value>
+  </data>
+  <data name="CreateNewStreamServer" xml:space="preserve">
+    <value>Create New Stream Server</value>
+  </data>
+  <data name="CreateNewStreamServerSubnet" xml:space="preserve">
+    <value>Create New Stream Server Subnet</value>
+  </data>
+  <data name="CreateNewSubent" xml:space="preserve">
+    <value>Create New Subnet</value>
+  </data>
+  <data name="Createuser" xml:space="preserve">
+    <value>Create New User</value>
+  </data>
+  <data name="dropselect" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Videodescription" xml:space="preserve">
+    <value>Video Description</value>
+  </data>
+  <data name="SelectFormatID" xml:space="preserve">
+    <value>Please select format type</value>
+  </data>
+  <data name="active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="Areyousureyoutodelete" xml:space="preserve">
+    <value>Are you sure you want to delete?</value>
+  </data>
+  <data name="DeleteUser" xml:space="preserve">
+    <value>Delete User</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="Nofeedback" xml:space="preserve">
+    <value>No Feedback</value>
+  </data>
+  <data name="Novideochangerequest" xml:space="preserve">
+    <value>No Video Change Request</value>
+  </data>
+  <data name="Novideodeployfound" xml:space="preserve">
+    <value>No matching record found for the given search input</value>
+  </data>
+  <data name="Novideolistforchangeapproval" xml:space="preserve">
+    <value>There is no video change request to approve/disapprove</value>
+  </data>
+  <data name="Unabletodeleteuser" xml:space="preserve">
+    <value>Unable to delete user</value>
+  </data>
+  <data name="UserDeletedSuccessfully" xml:space="preserve">
+    <value>User deleted successfully</value>
+  </data>
+  <data name="DeniedUser" xml:space="preserve">
+    <value>Denied User</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="CntFeedbackCreateFailMsg" xml:space="preserve">
+    <value>Unable to create feedback</value>
+  </data>
+  <data name="CntFeedbackCreateSuccMsg" xml:space="preserve">
+    <value>Feedback posted successfully</value>
+  </data>
+  <data name="CntFeedbackEditSuccMsg" xml:space="preserve">
+    <value>Feedback updated successfully</value>
+  </data>
+  <data name="VieErrorLogFilename" xml:space="preserve">
+    <value>Batch File Name</value>
+  </data>
+  <data name="VieErrorLogStatus" xml:space="preserve">
+    <value>Conversion Result</value>
+  </data>
+  <data name="CntFeedbackApprovedSuccMsg" xml:space="preserve">
+    <value>Feedback approved successfully</value>
+  </data>
+  <data name="CntFeedbackDisApprovedSuccMsg" xml:space="preserve">
+    <value>Feedback disapproved successfully</value>
+  </data>
+  <data name="clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Pleaseenteracommenthere" xml:space="preserve">
+    <value>Please enter a comment here.</value>
+  </data>
+  <data name="Storedeletedsucessfully" xml:space="preserve">
+    <value>Store deleted successfully</value>
+  </data>
+  <data name="Storegroupdeletedsucessfully" xml:space="preserve">
+    <value>Store group deleted successfully</value>
+  </data>
+  <data name="VideoLog" xml:space="preserve">
+    <value>Video Logs</value>
+  </data>
+  <data name="ViewFolderHierarchy" xml:space="preserve">
+    <value>Folder Hierarchy</value>
+  </data>
+  <data name="deletedsucessfully" xml:space="preserve">
+    <value>Video change request deleted successfully</value>
+  </data>
+  <data name="Feedbackdeletedsucessfully" xml:space="preserve">
+    <value>Feedback deleted successfully</value>
+  </data>
+  <data name="disapproved" xml:space="preserve">
+    <value>Disapproved</value>
+  </data>
+  <data name="pending" xml:space="preserve">
+    <value>Pending</value>
+  </data>
+  <data name="Videoapprovalstatus" xml:space="preserve">
+    <value>Video approval status logs</value>
+  </data>
+  <data name="ConversionResult" xml:space="preserve">
+    <value>Conversion Result</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="StreamconendDateandTime" xml:space="preserve">
+    <value>Conversion End Date &amp; Time</value>
+  </data>
+  <data name="StreamconstartDateandTime" xml:space="preserve">
+    <value>Conversion Start Date &amp; Time</value>
+  </data>
+  <data name="Uploadedby" xml:space="preserve">
+    <value>Uploaded by</value>
+  </data>
+  <data name="UploadEndDateandTime" xml:space="preserve">
+    <value>Upload End Date &amp; Time</value>
+  </data>
+  <data name="UploadStartDateandTime" xml:space="preserve">
+    <value>Upload Start Date &amp; Time</value>
+  </data>
+  <data name="VideoChangeRequested" xml:space="preserve">
+    <value>Video Change Requested</value>
+  </data>
+  <data name="VideoDeploySta" xml:space="preserve">
+    <value>Video Deploy Status</value>
+  </data>
+  <data name="ApprovalStatusLogs" xml:space="preserve">
+    <value>Approval Status Logs</value>
+  </data>
+  <data name="Approvalrequest" xml:space="preserve">
+    <value>Approval Request</value>
+  </data>
+  <data name="Deleterequest" xml:space="preserve">
+    <value>Delete Request</value>
+  </data>
+  <data name="Deployed" xml:space="preserve">
+    <value>Deployed</value>
+  </data>
+  <data name="Disapprove" xml:space="preserve">
+    <value>Disapprove</value>
+  </data>
+  <data name="necessaryandpressChangeRequest" xml:space="preserve">
+    <value>Change the content if necessary and press "Change Request".</value>
+    <comment>Change the content if necessary and press "Change Request".</comment>
+  </data>
+  <data name="NotDeployed" xml:space="preserve">
+    <value>Not Deployed</value>
+  </data>
+  <data name="Pleasenotethatitistoolong" xml:space="preserve">
+    <value>Please note that it will stick out if it is too long</value>
+    <comment>Please note that it will stick out if it is too long.</comment>
+  </data>
+  <data name="Pleaseprocessapprovalordenial" xml:space="preserve">
+    <value>It is a list display of application. Please process approval or denial.</value>
+  </data>
+  <data name="Pleaseuseitfillinthereasonforapplication" xml:space="preserve">
+    <value>This is a message memo for the approver. Please use it to fill in the reason for application.</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="test" xml:space="preserve">
+    <value>tetst</value>
+  </data>
+  <data name="Conversioncompleted" xml:space="preserve">
+    <value>Conversion Completed</value>
+  </data>
+  <data name="Conversionfailed" xml:space="preserve">
+    <value>Conversion Failed</value>
+  </data>
+  <data name="Conversionongoing" xml:space="preserve">
+    <value>Conversion Ongoing</value>
+  </data>
+  <data name="ChangeRequested" xml:space="preserve">
+    <value>Change Requested</value>
+  </data>
+  <data name="FileType" xml:space="preserve">
+    <value>FileType</value>
+  </data>
+  <data name="RequestApproval" xml:space="preserve">
+    <value>Request Approval</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="StreamServerImportSuccessfullyCompleted" xml:space="preserve">
+    <value>Stream Server Import Successfully Completed</value>
+  </data>
+  <data name="StreamServersLogs" xml:space="preserve">
+    <value>Stream Servers Logs</value>
+  </data>
+  <data name="StreamSeverUpload" xml:space="preserve">
+    <value>Stream Server Import</value>
+  </data>
+  <data name="Upload" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="UploadFile" xml:space="preserve">
+    <value>Upload File</value>
+  </data>
+  <data name="Format" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="Streamserverimport" xml:space="preserve">
+    <value>Stream Server Imports</value>
+  </data>
+  <data name="StreamServerViewLogs" xml:space="preserve">
+    <value>Stream Server View Logs</value>
+  </data>
+  <data name="Columnorder" xml:space="preserve">
+    <value>Column order should not be changed</value>
+  </data>
+  <data name="Eachimportfilefoless" xml:space="preserve">
+    <value>Each import file should be configured for 600 records or less</value>
+  </data>
+  <data name="mandatory" xml:space="preserve">
+    <value>Subnet IP Address, Subnet Number, Store Name and Store Number are mandatory</value>
+  </data>
+  <data name="conversionend" xml:space="preserve">
+    <value>Conversion End</value>
+  </data>
+  <data name="ConversionStart" xml:space="preserve">
+    <value>Conversion Start</value>
+  </data>
+  <data name="RemarksandErrors" xml:space="preserve">
+    <value>Errors and Remarks</value>
+  </data>
+  <data name="slow" xml:space="preserve">
+    <value>slow</value>
+  </data>
+  <data name="uploaded" xml:space="preserve">
+    <value>uploaded</value>
+  </data>
+  <data name="UploadEnd" xml:space="preserve">
+    <value>Upload End</value>
+  </data>
+  <data name="UploadStart" xml:space="preserve">
+    <value>Upload Start</value>
+  </data>
+  <data name="Remarksisnotimported" xml:space="preserve">
+    <value>Remarks is not imported</value>
+  </data>
+  <data name="Row" xml:space="preserve">
+    <value>Row</value>
+  </data>
+  <data name="BelongingSubnetisempty" xml:space="preserve">
+    <value>Subnet IP Address is empty</value>
+  </data>
+  <data name="BelongingSubnetisnotvalidIPaddress" xml:space="preserve">
+    <value>Subnet IP Address is not valid</value>
+  </data>
+  <data name="DriveCFreeisgreaterthanDriveCTotal" xml:space="preserve">
+    <value>DriveCFree is greater than DriveCTotal</value>
+  </data>
+  <data name="DriveDFreeisgreaterthanDriveDTotal" xml:space="preserve">
+    <value>DriveDFree is greater than DriveDTotal</value>
+  </data>
+  <data name="IPAddressisempty" xml:space="preserve">
+    <value>Server IP Address is empty</value>
+  </data>
+  <data name="IPAddressisnotvalidIPaddress" xml:space="preserve">
+    <value>Server IP Address is not valid</value>
+  </data>
+  <data name="SSServerisempty" xml:space="preserve">
+    <value>Stream Server Name is empty</value>
+  </data>
+  <data name="StoreNameisempty" xml:space="preserve">
+    <value>StoreName is empty</value>
+  </data>
+  <data name="VideoDeployed" xml:space="preserve">
+    <value>Video Deployed</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="Failure" xml:space="preserve">
+    <value>Failure</value>
+  </data>
+  <data name="Fileheadernamenotmatch" xml:space="preserve">
+    <value>File header name not match</value>
+  </data>
+  <data name="Headernameshouldnotbemodified." xml:space="preserve">
+    <value>Header name should not be modified.</value>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="isnotimported" xml:space="preserve">
+    <value>is not imported for more details check Stream Servers Logs</value>
+  </data>
+  <data name="Pleaseselectthefile" xml:space="preserve">
+    <value>Please select the file</value>
+  </data>
+  <data name="Streamserverimportedsuccessfully" xml:space="preserve">
+    <value>Stream server imported successfully</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="Unabletoimportstreamserver" xml:space="preserve">
+    <value>Unable to import stream server</value>
+  </data>
+  <data name="Uploadedfileisempty" xml:space="preserve">
+    <value>Uploaded file is empty</value>
+  </data>
+  <data name="Uploadedfileisinvalid" xml:space="preserve">
+    <value>Uploaded file is invalid</value>
+  </data>
+  <data name="Headernameshouldnotbemodified" xml:space="preserve">
+    <value>Header name should not be modified</value>
+  </data>
+  <data name="SelectCSVfileonly" xml:space="preserve">
+    <value>Select CSV file only</value>
+  </data>
+  <data name="CntStoreGroupNameErrMsg1" xml:space="preserve">
+    <value>Unable to Create Store Group Name Already Exists</value>
+  </data>
+  <data name="CntStoreGroupNameErrMsg2" xml:space="preserve">
+    <value>Unable to Update Store Group Name Already Exists</value>
+  </data>
+  <data name="FolderNotMapped" xml:space="preserve">
+    <value>Folder is not associated with the store group</value>
+  </data>
+  <data name="StoreGroupNameIsEmpty" xml:space="preserve">
+    <value>Store Group Name Is Empty</value>
+  </data>
+  <data name="VideoServerIPAddress" xml:space="preserve">
+    <value>Video Server IP Address</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Insert" xml:space="preserve">
+    <value>Insert</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="dateval" xml:space="preserve">
+    <value>End date must be greater than start date</value>
+  </data>
+  <data name="selectstoregroupID" xml:space="preserve">
+    <value>Select Store Group Name</value>
+  </data>
+  <data name="SubnetDeletedSucess" xml:space="preserve">
+    <value>Subnet deleted successfully</value>
+  </data>
+  <data name="Videoplayedate" xml:space="preserve">
+    <value>Video Play End Date</value>
+  </data>
+  <data name="Videoplaysdate" xml:space="preserve">
+    <value>Video Play Start Date</value>
+  </data>
+  <data name="storenumberisempty" xml:space="preserve">
+    <value>StoreNumber is Empty</value>
+  </data>
+  <data name="storenumberisinvalid" xml:space="preserve">
+    <value>StoreNumber is Invalid</value>
+  </data>
+  <data name="Pleaseenterthestorenumber" xml:space="preserve">
+    <value>Please Enter The Store Number</value>
+  </data>
+  <data name="PleaseentervalidStoreNumber" xml:space="preserve">
+    <value>Please Enter Valid Store Number</value>
+  </data>
+  <data name="CommonDataAnna0of2" xml:space="preserve">
+    <value>{0} can have a max of {1} characters</value>
+  </data>
+  <data name="FolderNamedoesnotexistinfoldermanagement" xml:space="preserve">
+    <value>Folder Name does not exist in folder management</value>
+  </data>
+  <data name="FolderNameisEmpty" xml:space="preserve">
+    <value>Folder Name is Empty</value>
+  </data>
+  <data name="Pleaseenterthesubnetnumber" xml:space="preserve">
+    <value>Please Enter the Subnet Number</value>
+  </data>
+  <data name="Storehead" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="StoreNumberAlreadyExists" xml:space="preserve">
+    <value>Store Number is Already Exists</value>
+  </data>
+  <data name="Storesubnet" xml:space="preserve">
+    <value>Store subnet</value>
+  </data>
+  <data name="Subnet" xml:space="preserve">
+    <value>Subnet</value>
+  </data>
+  <data name="SubnetNumber" xml:space="preserve">
+    <value>Subnet Number</value>
+  </data>
+  <data name="SubnetNumberisAlreadyexists" xml:space="preserve">
+    <value>Subnet Number is Already exists</value>
+  </data>
+  <data name="ValidateSubnetNumberInvalid" xml:space="preserve">
+    <value>Subnet Number is Invalid</value>
+  </data>
+  <data name="StoreSubnetBatchRegistration" xml:space="preserve">
+    <value>Store Subnet Batch Registration</value>
+  </data>
+  <data name="ModtblStoreNumberMaxvalue" xml:space="preserve">
+    <value>Store Number must be between 1 and 999999</value>
+  </data>
+  <data name="ModtblSubnetNumberMaxvalue" xml:space="preserve">
+    <value>Subnet Number must be between 1 and 999999</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="ModtblMediaTitleDataAnnaValida5" xml:space="preserve">
+    <value>Please Enter the Description</value>
+  </data>
+  <data name="StoreGroupID" xml:space="preserve">
+    <value>StoreGroup ID</value>
+  </data>
+  <data name="CntStoreGroupFoldersDeletedSuccMsg" xml:space="preserve">
+    <value>Store Group Folder Deleted Successfully</value>
+  </data>
+  <data name="Addstoregrouptofolder" xml:space="preserve">
+    <value>Add store group to folder</value>
+  </data>
+  <data name="Registration" xml:space="preserve">
+    <value>Registration</value>
+  </data>
+  <data name="Nofolderisselected" xml:space="preserve">
+    <value>No folder is selected.</value>
+  </data>
+  <data name="NoStoreGroupisselected" xml:space="preserve">
+    <value>No Store Group is selected.</value>
+  </data>
+  <data name="Folderdetails" xml:space="preserve">
+    <value>Folder details</value>
+  </data>
+  <data name="Folderselection" xml:space="preserve">
+    <value>Folder selection</value>
+  </data>
+  <data name="registerwiththefolderIDemptyitwillbenewly" xml:space="preserve">
+    <value>If you register with the folder ID empty, it will be newly created.</value>
+  </data>
+  <data name="Selectthefolderyouwanttochange" xml:space="preserve">
+    <value>Select the folder you want to change.</value>
+  </data>
+  <data name="Youcannotedittherootfolder" xml:space="preserve">
+    <value>You cannot edit the root folder.</value>
+  </data>
+  <data name="FolderNote1" xml:space="preserve">
+    <value>The videos in the selected folder can be viewed for the stores displayed in "Store Group".</value>
+  </data>
+  <data name="FolderNote2" xml:space="preserve">
+    <value>You can cancel the association by clicking the store group name displayed in "Store Group".</value>
+  </data>
+  <data name="FolderNote3" xml:space="preserve">
+    <value>The addition / deletion of store groups is not reflected even if the registration button is pressed, but is immediately reflected when the addition / deletion operation is performed.</value>
+  </data>
+  <data name="FolderNote4" xml:space="preserve">
+    <value>Deleting a folder is not implemented because it affects the videos contained in the folder.</value>
+  </data>
+  <data name="Enterthepasswordwhenyouchange" xml:space="preserve">
+    <value>Enter the password when you change the password or when you create a new user</value>
+  </data>
+  <data name="IfyouenteranexistinguserID" xml:space="preserve">
+    <value>If you enter an existing user ID, it will be modified, and if you enter a new user ID, it will be created.
+If you check Delete and press the update button, the specified user will be deleted.</value>
+  </data>
+  <data name="Ifyouwanttomodifyanexistinguser" xml:space="preserve">
+    <value>If you want to modify an existing user, click the user ID in the list below, modify it in the input field above, and click the update button.</value>
+  </data>
+  <data name="applicablesubnets" xml:space="preserve">
+    <value>Corresponding subnet.</value>
+  </data>
+  <data name="Checkordeletesubnets" xml:space="preserve">
+    <value>Check or delete (remove) the subnets contained in a particular store.</value>
+  </data>
+  <data name="Doyouwanttoaddthissubnetwithstore" xml:space="preserve">
+    <value>Do you want to add this subnet with the store ?.</value>
+  </data>
+  <data name="DoyouwanttoremovetheSubnet" xml:space="preserve">
+    <value>Do you want to remove this subnet in store?</value>
+  </data>
+  <data name="Listofsubnetsassociated" xml:space="preserve">
+    <value>List of subnets associated with</value>
+  </data>
+  <data name="Pleaseselectthestore" xml:space="preserve">
+    <value>Please select the store</value>
+  </data>
+  <data name="SearchforasubnetandclickonthesubnetID" xml:space="preserve">
+    <value>Search for a subnet and click on the subnet ID to add a subnet to the stores found above.</value>
+  </data>
+  <data name="SubnetRemovedSuccessfully" xml:space="preserve">
+    <value>Subnet Removed Successfully</value>
+  </data>
+  <data name="SubnetUpdatedSuccessfully" xml:space="preserve">
+    <value>Subnet Updated Successfully</value>
+  </data>
+  <data name="storeheading" xml:space="preserve">
+    <value>Create / Modify Store Definition</value>
+  </data>
+  <data name="storeheading1" xml:space="preserve">
+    <value>If you enter an existing store number, it will be modified, and if you enter a new store number, it will be created.</value>
+  </data>
+  <data name="storeheading2" xml:space="preserve">
+    <value>If you check Delete and press the update button, the specified store will be deleted.</value>
+  </data>
+  <data name="storeheading3" xml:space="preserve">
+    <value>Search for a store and click on the store number to enter the store information in the input form above. Make corrections as necessary and click the register button to make corrections / deletions.</value>
+  </data>
+  <data name="storeheading4" xml:space="preserve">
+    <value>Search / Modify Existing Stores</value>
+  </data>
+  <data name="subnetheading" xml:space="preserve">
+    <value>Create / modify subnet definition</value>
+  </data>
+  <data name="subnetheading1" xml:space="preserve">
+    <value>If you enter an existing subnet ID, it will be modified, and if you enter a new subnet ID, it will be created.</value>
+  </data>
+  <data name="subnetheading2" xml:space="preserve">
+    <value>If you check Delete and press the update button, the specified subnet will be deleted</value>
+  </data>
+  <data name="subnetheading3" xml:space="preserve">
+    <value>Search for a subnet and click on the subnet ID to enter the subnet information in the input form above. Make corrections as necessary and click the register button to make corrections / deletions.</value>
+  </data>
+  <data name="subnetheading4" xml:space="preserve">
+    <value>Find / modify existing subnets</value>
+  </data>
+  <data name="reset" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Addanexistingsubnet" xml:space="preserve">
+    <value>Add an existing subnet</value>
+  </data>
+  <data name="StoreSelection" xml:space="preserve">
+    <value>Store Selection</value>
+  </data>
+  <data name="StoreSubnetJoinReferenceDelete" xml:space="preserve">
+    <value>Store / Subnet Join Reference / Delete</value>
+  </data>
+  <data name="Createmodifyuser" xml:space="preserve">
+    <value>Create / modify user</value>
+  </data>
+  <data name="DeleteUsermgt" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Display name</value>
+  </data>
+  <data name="IfyoucheckDeleteandpresstheupdatebutton" xml:space="preserve">
+    <value>If you check Delete and press the update button, the specified user will be deleted.</value>
+  </data>
+  <data name="PleaseentertheUserID" xml:space="preserve">
+    <value>Please enter the User ID</value>
+  </data>
+  <data name="ipcontent" xml:space="preserve">
+    <value>Enter the address with the subnet mask applied(for example,10.2.10.0)</value>
+  </data>
+  <data name="Newstorebatchregistration" xml:space="preserve">
+    <value>New store batch registration</value>
+  </data>
+  <data name="storebatchcontent" xml:space="preserve">
+    <value>Enter the required information and register the required information for a general new store at once</value>
+  </data>
+  <data name="update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="AreyouwanttodeleteStoregroup" xml:space="preserve">
+    <value>Are you want to delete Store, Storesubnet, Storegroupfolder and Storegroup</value>
+  </data>
+  <data name="Modifyingexistingusers" xml:space="preserve">
+    <value>Modifying existing users</value>
+  </data>
+  <data name="UserUpdate" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="AdministarionMGT" xml:space="preserve">
+    <value>Administration</value>
+  </data>
+  <data name="ConfimpasswordDescription1" xml:space="preserve">
+    <value>Enter the password you are currently using in the Current Password field.</value>
+  </data>
+  <data name="ConfimpasswordDescription2" xml:space="preserve">
+    <value>Enter the new password you want to set in the new password field and the new password confirmation input field.</value>
+  </data>
+  <data name="correspondingstores" xml:space="preserve">
+    <value>corresponding stores</value>
+  </data>
+  <data name="Correspondingsubnet" xml:space="preserve">
+    <value>Corresponding subnets</value>
+  </data>
+  <data name="LoginDescription1" xml:space="preserve">
+    <value>You must be logged in to access management features such as posting videos.</value>
+  </data>
+  <data name="LoginDescription2" xml:space="preserve">
+    <value>Please enter your username and password.</value>
+  </data>
+  <data name="storegroupheading" xml:space="preserve">
+    <value>Create / Modify StoreGroup Definition   StoreGroup</value>
+  </data>
+  <data name="storegroupheading1" xml:space="preserve">
+    <value>If you select an existing StoreGroup ID, it will be modified, and if you enter a new storegroup, it will be created.</value>
+  </data>
+  <data name="storegroupheading2" xml:space="preserve">
+    <value>If you check Delete and press the update button, the specified storeGroup will be deleted.</value>
+  </data>
+  <data name="storegroupheading3" xml:space="preserve">
+    <value>Search for a storegroup and click on the store number to enter the store information in the input form above. Make corrections as necessary and click the register button to make corrections / deletions.</value>
+  </data>
+  <data name="storegroupheading4" xml:space="preserve">
+    <value>Search / Modify Existing StoreGroup</value>
+  </data>
+  <data name="Subnetinfoinipaddress" xml:space="preserve">
+    <value>For the IP address, enter the address to which the subnet mask is applied! (10.20.30.0 etc.)</value>
+  </data>
+  <data name="storegroupline" xml:space="preserve">
+    <value>Check the groups that categorize your stores .</value>
+  </data>
+  <data name="EditFolder" xml:space="preserve">
+    <value>Edit folder</value>
+  </data>
+  <data name="Folderdescription" xml:space="preserve">
+    <value>Create / delete / change video folders.</value>
+  </data>
+  <data name="Folderdescription2" xml:space="preserve">
+    <value>Also, edit the association between the folder and the store group to be distributed.</value>
+  </data>
+  <data name="H2syseminfo" xml:space="preserve">
+    <value>Items that seem to be under-registered</value>
+  </data>
+  <data name="H2syseminfoDescription" xml:space="preserve">
+    <value>List the items that you think are not registered enough.</value>
+  </data>
+  <data name="modifystoredefinition" xml:space="preserve">
+    <value>Create / modify store definition</value>
+  </data>
+  <data name="modifysubnetdefinition" xml:space="preserve">
+    <value>Create / modify subnet definition</value>
+  </data>
+  <data name="Newstorebatchregistration1" xml:space="preserve">
+    <value>New store batch registration</value>
+  </data>
+  <data name="Storebatchdescription" xml:space="preserve">
+    <value>You can register all the information you need for a general new store.</value>
+  </data>
+  <data name="Storedescription" xml:space="preserve">
+    <value>Create a store definition or modify an existing store.</value>
+  </data>
+  <data name="Storegroupdescription" xml:space="preserve">
+    <value>Create / delete / change store groups.</value>
+  </data>
+  <data name="StoreGroupEdting" xml:space="preserve">
+    <value>Store group editing</value>
+  </data>
+  <data name="StoreSubnet1" xml:space="preserve">
+    <value>Create / unjoin store / subnet</value>
+  </data>
+  <data name="storesubnetdescription" xml:space="preserve">
+    <value>Associate the store with the subnet.</value>
+  </data>
+  <data name="Subnetdescription" xml:space="preserve">
+    <value>Create a subnet definition or modify an existing subnet.</value>
+  </data>
+  <data name="Systeminformationmaintenance" xml:space="preserve">
+    <value>System information maintenance</value>
+  </data>
+  <data name="Systemmaintenancedescription" xml:space="preserve">
+    <value>When adding a new store, create a subnet, create a store, and create a distribution server in that order to avoid waste.</value>
+  </data>
+  <data name="Userdescription" xml:space="preserve">
+    <value>Create and edit users who use the management function.</value>
+  </data>
+  <data name="UserEdit" xml:space="preserve">
+    <value>User edit</value>
+  </data>
+  <data name="Changeloginpassword" xml:space="preserve">
+    <value>Change login password</value>
+  </data>
+  <data name="ChangeloginpasswordDescription" xml:space="preserve">
+    <value>Change the login password when using the management function.</value>
+  </data>
+  <data name="FeedbackDescription1" xml:space="preserve">
+    <value>Below is list of feedback. Please process approval / disapproval or deletion of feedback.</value>
+  </data>
+  <data name="FeedbackDescription2" xml:space="preserve">
+    <value>If you approve, the feedback will appear below the video.</value>
+  </data>
+  <data name="FeedbackDescription3" xml:space="preserve">
+    <value>If you check the delete flag and press the approve button, the specified feedback will be hidden.</value>
+  </data>
+  <data name="FeedbackDescription4" xml:space="preserve">
+    <value>The delete process deletes the specified feedback.</value>
+  </data>
+  <data name="investigationtool" xml:space="preserve">
+    <value>Unreferenceable cause investigation tool</value>
+  </data>
+  <data name="investigationtoolDescription" xml:space="preserve">
+    <value>Investigate the cause when the video cannot be viewed on the store's PC.</value>
+  </data>
+  <data name="Managementmenu" xml:space="preserve">
+    <value>Management menu</value>
+  </data>
+  <data name="Managementscreen" xml:space="preserve">
+    <value>Management screen</value>
+  </data>
+  <data name="StoreGroupDescription1" xml:space="preserve">
+    <value>Check the groups that categorize your stores.</value>
+  </data>
+  <data name="StoreGroupH2" xml:space="preserve">
+    <value>StoreGroup</value>
+  </data>
+  <data name="StoreH2" xml:space="preserve">
+    <value>Create / modify store definition</value>
+  </data>
+  <data name="SystemInformationDescription" xml:space="preserve">
+    <value>System-related maintenance such as new registration of distribution servers and creation of subnet definitions.</value>
+  </data>
+  <data name="Videochangeapprovaldescription" xml:space="preserve">
+    <value>Confirm / correct the application contents from the applicant and approve it.</value>
+  </data>
+  <data name="VideochangerequestDescription" xml:space="preserve">
+    <value>For newly copied videos and existing videos, register the title and description, change the location folder, and apply for deletion</value>
+  </data>
+  <data name="Changeloginpassword1" xml:space="preserve">
+    <value>Change login password</value>
+  </data>
+  <data name="Menustoresubnet" xml:space="preserve">
+    <value>Create / unjoin store / subnet</value>
+  </data>
+  <data name="NovideoSelected" xml:space="preserve">
+    <value>No Video Selected</value>
+  </data>
+  <data name="Returntothevideoviewingscreen" xml:space="preserve">
+    <value>Return to the video viewing screen</value>
+  </data>
+  <data name="tableofcontents" xml:space="preserve">
+    <value>table of contents</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unknown Store</value>
+  </data>
+  <data name="UserLogin" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="BreadcrumbAdministration" xml:space="preserve">
+    <value>Administration</value>
+  </data>
+  <data name="Breadcrumbchangepassword" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="Breadcrumbfolder" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="breadcrumbManagement" xml:space="preserve">
+    <value>Management Screen</value>
+  </data>
+  <data name="BreadcrumbStore" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="Breadcrumbstorebatch" xml:space="preserve">
+    <value>Store batch registeration</value>
+  </data>
+  <data name="BreadcrumbStoregroup" xml:space="preserve">
+    <value>Store Group</value>
+  </data>
+  <data name="Breadcrumbstoresubnet" xml:space="preserve">
+    <value>Store subet</value>
+  </data>
+  <data name="Breadcrumbsubnet" xml:space="preserve">
+    <value>Subnet</value>
+  </data>
+  <data name="breadcrumbSystemmaintenance" xml:space="preserve">
+    <value>System information maintenance</value>
+  </data>
+  <data name="BreadcrumbUser" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="breadcrumbVideoall" xml:space="preserve">
+    <value>Video All</value>
+  </data>
+  <data name="breadcrumbVideoChangeApproval" xml:space="preserve">
+    <value>Video change approval</value>
+  </data>
+  <data name="breadcrumbVideoChangerequest" xml:space="preserve">
+    <value>Video change request</value>
+  </data>
+  <data name="Caution" xml:space="preserve">
+    <value>Caution:</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Change</value>
+  </data>
+  <data name="correspondingstoregroup" xml:space="preserve">
+    <value>corresponding Storegroup</value>
+  </data>
+  <data name="readerror" xml:space="preserve">
+    <value>read error</value>
+  </data>
+  <data name="StoreGroupDescription4" xml:space="preserve">
+    <value>When you perform the delete operation, the store and subnet ID associated with the specified store group will also be deleted and you will not be able to watch the video.</value>
+  </data>
+  <data name="StoreGroupH21" xml:space="preserve">
+    <value>StoreGroup</value>
+  </data>
+  <data name="VideoChangeApprovalheading" xml:space="preserve">
+    <value>Manage Menu-Video Change Approval</value>
+  </data>
+  <data name="VideoChangeApprovalheading1" xml:space="preserve">
+    <value>It is a list display of applications. Please process approval or denial.</value>
+  </data>
+  <data name="CheckFormat" xml:space="preserve">
+    <value>Video quality selection method: </value>
+  </data>
+  <data name="Confrimnewpassword" xml:space="preserve">
+    <value>Confirm new password</value>
+  </data>
+  <data name="ModtblUserOldPassword" xml:space="preserve">
+    <value>CurrentPassword</value>
+  </data>
+  <data name="ChangeRequest" xml:space="preserve">
+    <value>Change Request</value>
+  </data>
+  <data name="CheckApprovalstatus" xml:space="preserve">
+    <value>Approval status</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="Folder" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="ListDisplayPreiew" xml:space="preserve">
+    <value>List display preview</value>
+  </data>
+  <data name="Requesttochange" xml:space="preserve">
+    <value>Request to change</value>
+  </data>
+  <data name="Returntomanagementmenu" xml:space="preserve">
+    <value>Return to management menu</value>
+  </data>
+  <data name="VideoChangeRequestdescription1" xml:space="preserve">
+    <value>For videos that can be viewed now, the "Request to change the registration of this video" link is displayed on the video viewing screen, so please make the request from there.</value>
+  </data>
+  <data name="VideoChangeRequestdescription2" xml:space="preserve">
+    <value>Unauthorized videos are displayed below.</value>
+  </data>
+  <data name="VideoChangeRequestdescription3" xml:space="preserve">
+    <value>Please select the video to change the registered contents or request the change.</value>
+  </data>
+  <data name="VideoChangeRequestEditdescription1" xml:space="preserve">
+    <value>Change the content if necessary and press "Change Request".</value>
+  </data>
+  <data name="VideoChangeRequestEditH2" xml:space="preserve">
+    <value>Video Change Request Edit</value>
+  </data>
+  <data name="VideoID" xml:space="preserve">
+    <value>Video ID</value>
+  </data>
+  <data name="Acquisitionoforiginalfileofthisvideo" xml:space="preserve">
+    <value>Acquisition of original file of this video</value>
+  </data>
+  <data name="Requestochangetheregistrationvideo" xml:space="preserve">
+    <value>Request to change the registration of this video</value>
+  </data>
+  <data name="Times" xml:space="preserve">
+    <value>Times</value>
+  </data>
+  <data name="PleaseEnterTheStoreGroupName" xml:space="preserve">
+    <value>Please Enter The StoreGroup Name</value>
+  </data>
+  <data name="MgtScreen" xml:space="preserve">
+    <value>Management Screen</value>
+  </data>
+  <data name="Videodistributionsystem" xml:space="preserve">
+    <value>Video distribution system</value>
+  </data>
+  <data name="VideodistributionsystemManagementmenu" xml:space="preserve">
+    <value>Video distribution system Management menu</value>
+  </data>
+  <data name="datevalidation" xml:space="preserve">
+    <value>Enter valid from / to date</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Auto</value>
+  </data>
+  <data name="High" xml:space="preserve">
+    <value>Prioritize high image quality</value>
+  </data>
+  <data name="Low" xml:space="preserve">
+    <value>Prioritize  Low image quality</value>
+  </data>
+  <data name="Medium" xml:space="preserve">
+    <value>Prioritize  Medium image quality</value>
+  </data>
+  <data name="Novideoavailable" xml:space="preserve">
+    <value>There are no videos available on the current network bandwidth.</value>
+  </data>
+  <data name="browser" xml:space="preserve">
+    <value>browser</value>
+  </data>
+  <data name="Imagequalitysetting" xml:space="preserve">
+    <value>Image quality setting</value>
+  </data>
+  <data name="WanBanRequired" xml:space="preserve">
+    <value>Enter WAN Band Width</value>
+  </data>
+  <data name="LanBanRequired" xml:space="preserve">
+    <value>Enter LAN Band Width</value>
+  </data>
+</root>

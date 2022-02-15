@@ -1,0 +1,348 @@
+﻿@model MujiStore.Models.tblMedia
+
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VietblMediaEditBrowTitle;
+    var VidDur = "";
+    int i = 0;
+ 
+    var lan = System.Threading.Thread.CurrentThread.CurrentCulture;
+    ViewBag.Lan = lan.Parent.Name;
+}
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/Site.css">
+<script src="~/Scripts/select2/dist/js/jquery-3.0.0.js" type="text/javascript"></script>
+<script src="~/Scripts/select2/dist/js/select2.js" defer type="text/javascript"></script>
+<link href="~/Scripts/select2/dist/css/select2.min.css" rel='stylesheet' type='text/css'>
+<ol class="breadcrumb" id="breadcrumb">
+    <li>@Html.ActionLink(MujiStore.Resources.Resource.breadcrumbVideoall, "ViewUploadDetails", "VideoFiles")</li>
+    <li>
+        @Html.ActionLink(@MujiStore.Resources.Resource.breadcrumbManagement, "Index", "Menus")
+    </li>
+    <li>
+        @MujiStore.Resources.Resource.breadcrumbVideoChangerequest
+    </li>
+</ol>
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px;">@MujiStore.Resources.Resource.CommonEdit - @MujiStore.Resources.Resource.VideoChangeRequest</h2>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#UpdateImage").click(function () {
+
+
+            var Qstr = "";
+            var vDemo = 0;
+            for (i = window.location.href.split('/').length - 1; i > 0; i--) {
+                if (window.location.href.split('/')[i] === "VideoDemo") {
+                    vDemo = i
+                    break;
+                }
+          
+            }
+            for (i = 3; i < vDemo; i++) {
+                Qstr += "/" + window.location.href.split('/')[i]
+            }
+            $("form").attr("action", Qstr + "/VideoDemo/SaveThumbnailImage");
+        });
+
+        $("#UpdateVidDetail").click(function () {
+
+            var Qstr = "";
+            var vDemo = 0;
+
+            for (i = window.location.href.split('/').length - 1; i > 0; i--) {
+                if (window.location.href.split('/')[i] === "VideoDemo") {
+                    vDemo = i
+                  
+                    break;
+                }
+                
+            }
+
+            for (i = 3; i < vDemo; i++) {
+                Qstr += "/" + window.location.href.split('/')[i]
+            }
+            $("form").attr("action", Qstr + "/VideoDemo/SaveVideoDetails");
+          
+        });
+
+    });
+
+</script>
+<style type="text/css">
+    .maxwidth {
+        width: auto
+    }
+
+    .maxlen {
+        max-width: 100%
+    }
+
+    textarea {
+        max-width: 880px;
+    }
+
+    .form-horizontal .control-label {
+        text-align: left;
+    }
+    td{
+        border:1px solid;
+    }
+    input,
+    select {
+        max-width: 400px;
+        background-color: #fff;
+    }
+</style>
+@using (Html.BeginForm("Edit_new", "VideoDemo", FormMethod.Post, new { enctype = "multipart/form-data" }))
+
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.MediaID)
+    @Html.HiddenFor(model => model.CRTDT)
+    @Html.HiddenFor(model => model.Video)
+    @Html.HiddenFor(model => model.Thumbnail)
+    @Html.HiddenFor(model => model.CRTCD)
+    @Html.HiddenFor(model => model.IpAddress)
+    @Html.HiddenFor(model => model.UploadType)
+    @Html.HiddenFor(model => model.ThumbnailFileName)
+    @Html.HiddenFor(model => model.DELFG)
+    @Html.HiddenFor(model => model.Video)
+    @Html.HiddenFor(model => model.VideoPlayStartDate)
+    @Html.HiddenFor(model => model.VideoPlayEndDate)
+    @Html.HiddenFor(model => model.Thumbnail)
+    <div class="form-group" style="margin-left:0px">
+        @MujiStore.Resources.Resource.necessaryandpressChangeRequest
+    </div>
+    <table class="table" style="width:70%; border:none">
+        <tr>
+            <td  style="width:30%;border: 1px solid;">
+                @Html.Label(MujiStore.Resources.Resource.VideoID, new { @class = "control-label " })
+
+            </td>
+            <td style="border: 1px solid;">
+                @Html.DisplayFor(model => model.MediaID, new { htmlAttributes = new { @class = "form-control  " } })
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label(MujiStore.Resources.Resource.Title, new { @class = "control-label " })
+
+            </td>
+            <td>
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control maxlen textarea", @maxlength = "500" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label " })
+
+            </td>
+            <td>
+                @Html.TextAreaFor(model => model.Description, 10, 1000, new { htmlAttributes = new { @class = "form-control textarea" }, @maxlength = "4000" })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                <br />
+                @MujiStore.Resources.Resource.Pleasenotethatitistoolong
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label(MujiStore.Resources.Resource.Folder, htmlAttributes: new { @class = "control-label " })
+
+            </td>
+            <td>
+                @Html.DropDownListFor(model => model.FolderID, (List<SelectListItem>)ViewData["FolderDtl"], htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FolderID, "", new { @class = "text-danger" })
+
+            </td>
+        </tr>
+
+       
+        <tr>
+            <td>
+                @Html.Label(MujiStore.Resources.Resource.CheckApprovalstatus, htmlAttributes: new { @class = "control-label " })
+
+            </td>
+            <td>
+                <div>
+                    @Html.DropDownListFor(model => model.ApprovalStatus, (List<SelectListItem>)ViewData["ApprovalDtl"], htmlAttributes: new { @class = "form-control col-sm-5" })
+                </div>
+                    @MujiStore.Resources.Resource.Requesttochange
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label(@MujiStore.Resources.Resource.CommonDelete, htmlAttributes: new { @class = "control-label " })
+
+            </td>
+            <td>
+                @Html.CheckBoxFor(model => model.PhysicalDELFG, htmlAttributes: new { @class = "control-label col-md-1", @style = "    width: 20px;" })
+                @MujiStore.Resources.Resource.videowillbedeleted
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label(MujiStore.Resources.Resource.Comments, htmlAttributes: new { @class = "control-label " })
+
+            </td>
+            <td>
+                @Html.TextAreaFor(model => model.Comments, 10, 1000, new { htmlAttributes = new { @class = "form-control textarea" }, @maxlength = "2000" })
+                <br />
+                @MujiStore.Resources.Resource.memofortheapprover
+
+                @Html.ValidationMessageFor(model => model.Comments, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label(@MujiStore.Resources.Resource.Registeredperson, htmlAttributes: new { @class = "control-label " })
+            </td>
+            <td>
+                @Html.LabelForModel(Model.Registerer, new { htmlAttributes = new { @class = "form-control  " } })
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.Label(@MujiStore.Resources.Resource.Authorizer, htmlAttributes: new { @class = "control-label " })
+            </td>
+            <td>
+                @Html.LabelForModel(Model.Accepter, new { htmlAttributes = new { @class = "form-control  " } })
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+               
+                <input type="submit" style=" margin-left:0px;    border: solid 1px #ccc; border-radius:5px; background-color:#822433;color:#fff;" value="@MujiStore.Resources.Resource.ChangeRequest" />
+
+            </td>
+            
+        </tr>
+
+
+    </table>
+    <div>
+        <div class="col-sm-4" style="background:#e7bebb; border:10px solid white; margin:0px;">
+
+            @if (Model.Thumbnail != "" && Model.Thumbnail != null)
+            {
+                if (File.Exists(Server.MapPath("~/Video/" + Model.Thumbnail)))
+                {
+                    <img src="@Url.Content("~/Video/" + Model.Thumbnail + "")" class="moviethumb" style=" width: 200px; height: 137px;">
+                }
+                else
+                {
+                    if (ViewBag.Lan == "en")
+                    {
+                        <img src="@Url.Content("~/img/Imagenotfound.jpg")" class="moviethumb" style="width: 200px; height: 137px;">
+                    }
+                    else
+                    {
+                        <img src="@Url.Content("~/img/Image not found_JP.png")" class="moviethumb" style=" width: 200px; height: 137px;">
+
+                    }
+
+                }
+            }
+            else
+            {
+                if (ViewBag.Lan == "en")
+                {
+                    <img src="@Url.Content("~/img/Thumbnailnotgenerated.jpg")" class="moviethumb" style="width: 200px; height: 137px;">
+                }
+                else
+                {
+                    <img src="@Url.Content("~/img/Thumbnail not generated_JP.png")" class="moviethumb" style="width: 200px; height: 137px;">
+                }
+            }
+        </div>
+        <br>
+        @MujiStore.Resources.Resource.ListDisplayPreiew
+    </div>
+    <div class="col-sm-12">
+        <br />
+        <a href=@Url.Action("Index","Menus")>
+            @MujiStore.Resources.Resource.Returntomanagementmenu
+        </a>
+
+    </div>
+</div>
+<br />
+    
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script type="text/javascript">
+
+
+            $(document).ready(function () {
+                $("#FolderID").select2({
+                    templateResult: formatOptions
+                });
+
+
+                
+            });
+
+            function formatOptions(state) {
+                $('.select2-search__field').remove();
+          
+                if (!state.id) { return state.text; }
+
+           
+                var strfolder = state.text;
+      
+                var root = strfolder.substr(1, (strfolder.length - strfolder.trim().length - 1))
+     
+
+                if (location.hostname != 'localhost') {
+
+                    var $state = $(
+                        '<span  style="color:black">' + root + '<img sytle="display: inline-block;" src="~/../../../img/folder-close1.png"  /> ' + strfolder.trim() + '</span>'
+                    );
+                }
+                else {
+                    var $state = $(
+                        '<span  style="color:black">' + root + '<img sytle="display: inline-block;" src="/../img/folder-close1.png"  /> ' + strfolder.trim() + '</span>'
+                    );
+                }
+        
+                return $state;
+
+            }
+            function split_on_first_word(str) {
+                str = str.trim();  // Clean string by removing beginning and ending spaces.
+
+                var arr = [];
+                var pos = str.indexOf(' ');  // Find position of first space
+
+                if (pos === -1) {
+                    // No space found
+                    arr.push(str);                // First word (or empty)
+                    arr.push('');                 // Empty (no next words)
+                } else {
+                    // Split on first space
+                    arr.push(str.substr(0, pos));         // First word
+                    arr.push(str.substr(pos + 1).trim());  // Next words
+                }
+               
+                return arr;
+            }
+
+            function getSourceID() {
+                alert($("#ParentID").val())
+            }
+</script>

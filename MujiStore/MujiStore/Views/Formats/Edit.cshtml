@@ -1,0 +1,69 @@
+﻿@model MujiStore.Models.tblFormat
+
+@{
+    ViewBag.Title = @MujiStore.Resources.Resource.tblFormatEdit;
+}
+
+<style>
+    .form-horizontal .control-label {
+        padding-top: 7px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+</style>
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.Edit - @MujiStore.Resources.Resource.VieFormats</h2>
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.FormatID)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+
+            @Html.EditorFor(model => model.Name, Model.Name.ToUpper().ToString() == "MP4" ? (object)new { htmlAttributes = new { @readonly = "readonly", @class = "form-control", @maxlength = "10" } } : new { htmlAttributes = new { @class = "form-control", @maxlength = "10" } })
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.RequiredBandWidth, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.RequiredBandWidth, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.RequiredBandWidth, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.DELFG, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <div class="checkbox" style="margin-left: 20px">
+                @Html.HiddenFor(model => model.CRTCD)
+                @Html.HiddenFor(model => model.CRTDT)
+                @Html.CheckBoxFor(model => model.DELFG, Model.Name.ToUpper().ToString() == "MP4" ? new { onclick = "return false" } : (object)new { })
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="form-group row">
+        <div class="col-sm-2">
+            @Html.ActionLink(MujiStore.Resources.Resource.CommonBackToList, "Index", new { @class = "linkclass" }, null)
+        </div>
+        <div class=" col-md-10">
+            <input type="submit" value=@MujiStore.Resources.Resource.CommonSave class="btn btn-default" style="margin-left: 0px; width: 90px; margin-top: -5px; padding-bottom: 2px; padding-top: 4px;" />
+
+        </div>
+    </div>
+</div>
+}
+

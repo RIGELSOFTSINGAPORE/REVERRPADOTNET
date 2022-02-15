@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Store";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.VideoChangeApproval</h2>
+<div class="col-sm-2">
+    @Html.ActionLink(MujiStore.Resources.Resource.CommonBackToList, "Index", new { @class = "linkclass" }, null)
+    <br>
+    <br>
+    <video id="video" src="@Url.Content("~/Video/" + TempData["Videoplay"]  + "")" controls="true"
+           width="400" height="250" />
+    <canvas id="myCanvas" width="352" height="250"
+            style="border: 1px solid #d3d3d3;">
+        @MujiStore.Resources.Resource.VietblMediaEditBrowSupport
+    </canvas>
+
+    <br />
+
+</div>
+

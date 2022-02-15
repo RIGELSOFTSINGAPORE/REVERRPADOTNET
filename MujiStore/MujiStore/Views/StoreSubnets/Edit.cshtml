@@ -1,0 +1,79 @@
+﻿@model MujiStore.Models.tblStoreSubnet
+
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VieStoreSubnetsEditBrowTitle;
+}
+<style>
+    .form-horizontal .control-label {
+        padding-top: 7px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    li {
+        color: black;
+        /* border-right: 0.8px solid #4f3207; */
+        list-style: none;
+    }
+</style>
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.Edit - @MujiStore.Resources.Resource.VieStoreSubnetsIndexH2</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <hr />
+    <div class="form-horizontal">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.StoreSubnetID)
+
+        <div class="form-group">
+            <div class="col-sm-2">
+              @Html.Label(MujiStore.Resources.Resource.StoreNumber, htmlAttributes: new { @class = "control-label " })
+            </div>
+                <div class="col-md-10">
+                @Html.DropDownList("Store", null, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Subnet, MujiStore.Resources.Resource.ModtblStoreSubnetSubnetSubnet, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Subnet", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Subnet, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DELFG, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox" style="margin-left:20px">
+                    @Html.HiddenFor(model => model.CRTCD)
+                    @Html.HiddenFor(model => model.CRTDT)
+                    @Html.EditorFor(model => model.DELFG)
+                    @Html.ValidationMessageFor(model => model.DELFG, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <div class="col-sm-2">
+                @Html.ActionLink(MujiStore.Resources.Resource.CommonBackToList, "Index", new { page = Model.page,@class = "linkclass" }, null)
+            </div>
+            <div class=" col-md-10">
+                <input type="submit" value=@MujiStore.Resources.Resource.CommonSave class="btn btn-default" style="margin-left: 0px; width: 90px; margin-top: -5px; padding-bottom: 2px; padding-top: 4px;" />
+
+            </div>
+        </div>
+    </div>
+}
+
+@section scripts{
+    <link href="~/Scripts/select2/dist/css/select2.css" rel="stylesheet" />
+    <script src="~/Scripts/select2/dist/js/select2.min.js"></script>
+     <script>
+        $(document).ready(function () { $("#Subnet").select2(); });
+               
+    </script>
+}

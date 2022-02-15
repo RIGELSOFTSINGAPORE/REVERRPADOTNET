@@ -1,0 +1,149 @@
+﻿
+@{
+    ViewBag.Title = "InfoMenus";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var snlist = ViewData["snlist"] as IEnumerable<MujiStore.Models.tblSubnet>;
+    var sslist1 = ViewData["sslist1"] as IEnumerable<MujiStore.Models.tblStreamServer>;
+    var sslist2 = ViewData["sslist2"] as IEnumerable<MujiStore.Models.tblStreamServer>;
+    var storelist = ViewData["storelist"] as IEnumerable<MujiStore.Models.tblStore>;
+    var IsRecExists = ViewData["RecExists"];
+    var lan = System.Threading.Thread.CurrentThread.CurrentCulture;
+    ViewBag.Lan = lan.Parent.Name;
+}
+<style>
+    #divid
+    a {
+        background: none;
+        color: blue;
+    }
+
+    a:hover {
+        color: blue;
+    }
+
+    #divid p {
+        margin-left: 30px;
+    }
+</style>
+<ol class="breadcrumb" id="breadcrumb">
+    <li>@Html.ActionLink(MujiStore.Resources.Resource.breadcrumbVideoall, "ViewUploadDetails", "VideoFiles")</li>
+    <li>
+        @Html.ActionLink(@MujiStore.Resources.Resource.breadcrumbManagement, "Index", "Menus")
+    </li>
+    <li>
+        @MujiStore.Resources.Resource.breadcrumbSystemmaintenance
+    </li>
+</ol>
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.Systeminformationmaintenance</h2>
+<p>
+    @MujiStore.Resources.Resource.Systemmaintenancedescription
+</p>
+<div id="divid">
+    @if (User.Identity.IsAuthenticated)
+    {
+
+        if (HttpContext.Current.Session["Role"] != null && HttpContext.Current.Session["Role"].ToString() != "")
+        {
+            if ((Convert.ToInt16(HttpContext.Current.Session["Role"]) >= 16 &&
+                               Convert.ToInt16(HttpContext.Current.Session["Role"]) <= 31)
+                               )
+            {
+
+                <div>
+                    @Html.ActionLink(MujiStore.Resources.Resource.Newstorebatchregistration, "Create", "StoreSubnetBatchReg")
+                    <p>
+                        @MujiStore.Resources.Resource.Storebatchdescription
+                    </p>
+                </div>
+                <div>
+                    @Html.ActionLink(MujiStore.Resources.Resource.modifysubnetdefinition, "Index", "SubnetAll")
+                    <p>
+                        @MujiStore.Resources.Resource.Subnetdescription
+                    </p>
+                </div>
+                <div>
+                    @Html.ActionLink(MujiStore.Resources.Resource.modifystoredefinition, "Index", "StoreAll")
+                    <p>
+                        @MujiStore.Resources.Resource.Storedescription
+                    </p>
+                </div>
+                <div>
+                    @Html.ActionLink(MujiStore.Resources.Resource.Menustoresubnet, "Index_new", "StoreSubnets")
+                    <p>
+                        @MujiStore.Resources.Resource.storesubnetdescription
+                    </p>
+                </div>
+                <div>
+                    @Html.ActionLink(MujiStore.Resources.Resource.EditFolder, "Index", "Folders")
+                    <p>
+                        @MujiStore.Resources.Resource.Folderdescription
+
+                        <br />
+                        @MujiStore.Resources.Resource.Folderdescription2
+                    </p>
+                </div>
+                <div>
+                    @Html.ActionLink(MujiStore.Resources.Resource.StoreGroupEdting, "Index", "StoregroupAll")
+                    <p>
+                        @MujiStore.Resources.Resource.Storegroupdescription
+                    </p>
+                </div>
+                <div>
+                    @Html.ActionLink(MujiStore.Resources.Resource.UserEdit, "Index_new", "User")
+                    <p>
+
+                        @MujiStore.Resources.Resource.Userdescription
+                    </p>
+                </div>
+               
+
+            }
+
+
+
+        }
+    }
+</div>
+<br />
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">    @MujiStore.Resources.Resource.H2syseminfo</h2>
+<p>
+
+  @MujiStore.Resources.Resource.H2syseminfoDescription
+</p>
+<div class="content">
+   
+    @if (snlist != null && snlist.Count() > 0)
+    {
+        foreach (var item in snlist)
+        {
+            <p style="color:red">
+                @MujiStore.Resources.Resource.subnetID @item.SubnetID @MujiStore.Resources.Resource.associatedwithanystore
+            </p>
+        }
+    }
+
+    @if (sslist2 != null && sslist2.Count() > 0)
+    {
+        foreach (var item in sslist2)
+        {
+            <p style="color:red">
+                @MujiStore.Resources.Resource.Thesubnettowhichdistributionserver
+                @item.SSServer @MujiStore.Resources.Resource.belongsdoesnotexis
+            </p>
+        }
+    }
+    @if (storelist != null && storelist.Count() > 0)
+    {
+        foreach (var item in storelist)
+        {
+            <p style="color:red">
+                @MujiStore.Resources.Resource.Store @item.StoreID :@item.StoreName @MujiStore.Resources.Resource.doesnotcontainasubnet
+            </p>
+        }
+    }
+</div>
+@if (Convert.ToBoolean(IsRecExists) == false)
+{
+    <p><span style="color:blue">@MujiStore.Resources.Resource.underregistered</span></p>
+
+}

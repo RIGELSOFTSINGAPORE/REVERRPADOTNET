@@ -1,0 +1,56 @@
+﻿@model MujiStore.Models.tblUser
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VieLoginIndexBrowTitle;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2 style="color:#ec2213;background-color:#e7bebb;margin-left:0px">@MujiStore.Resources.Resource.Login</h2>
+
+
+@using (Html.BeginForm("SignIn", "Login", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <p >
+        <label style="font-weight:normal">
+            @MujiStore.Resources.Resource.LoginDescription1
+        </label>
+        <br />
+        <label style="font-weight:normal">
+            
+            @MujiStore.Resources.Resource.LoginDescription2
+        </label>
+    </p>
+    <div class="form-horizontal" style="">
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.Label(MujiStore.Resources.Resource.userid, new { @class = "control-label col-md-1",@style="text-align:left" })
+            <div class="col-md-4" style="white-space: nowrap;">
+                @Html.TextBoxFor(model => model.ID, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.UserName, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label(MujiStore.Resources.Resource.VieLoginIndexPassword, new { @class = "control-label col-md-1", @style = "text-align:left" })
+            <div class="col-md-4" style="white-space: nowrap;">
+                @Html.TextBoxFor(model => model.Password, new { @class = "form-control", @type = "password" ,@style="width:100%"})
+                @Html.ValidationMessageFor(model => model.Password, null, new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <input type="submit" value=@MujiStore.Resources.Resource.Login class="btn btn-primary" style="margin-left: 0px;" />
+            </div>
+        </div>
+        <div class="margin-top:10px">
+            <a href=@Url.Action("ViewUploadDetails", "VideoFiles") >
+                @MujiStore.Resources.Resource.Returntothevideoviewingscreen
+            </a>
+        </div>
+    </div>
+}
+

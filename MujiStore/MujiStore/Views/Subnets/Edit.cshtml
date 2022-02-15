@@ -1,0 +1,81 @@
+﻿@model MujiStore.Models.tblSubnet
+
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VieSubnetsEditBrowTitle;
+}
+<style>
+    .form-horizontal .control-label {
+        padding-top: 7px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+</style>
+
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.Edit - @MujiStore.Resources.Resource.VieSubnetsEditH2</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<div class="form-horizontal">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.SubnetID)
+    @Html.HiddenFor(model => model.WANBandWidth)
+    <div class="form-group">
+        @Html.Label(MujiStore.Resources.Resource.SubnetNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.SubnetNumber, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.SNIPAddress, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.SNIPAddress, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.SNIPAddress, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.SNIPAddress, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SubnetMask, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.SubnetMask, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.SubnetMask, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+   
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LANBandWidth, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LANBandWidth, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.LANBandWidth, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.DELFG, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <div class="checkbox" style="margin-left:20px">
+                @Html.HiddenFor(model => model.CRTCD)
+                @Html.HiddenFor(model => model.CRTDT)
+                @Html.EditorFor(model => model.DELFG)
+                @Html.ValidationMessageFor(model => model.DELFG, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-group row">
+        <div class="col-sm-2">
+            @Html.ActionLink(MujiStore.Resources.Resource.CommonBackToList, "Index", new { page = Model.page, @class = "linkclass" }, null)
+        </div>
+        <div class=" col-md-10">
+            <input type="submit" value=@MujiStore.Resources.Resource.CommonSave class="btn btn-default" style="margin-left: 0px; width: 90px; margin-top: -5px; padding-bottom: 2px; padding-top: 4px;" />
+
+        </div>
+    </div>
+</div>
+}
+

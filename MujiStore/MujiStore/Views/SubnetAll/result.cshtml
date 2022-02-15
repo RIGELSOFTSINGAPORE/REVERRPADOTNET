@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Store";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var product = Html.Encode(ViewData["sb"]).Replace("br", ",");
+    string[] Auth = product.Split(',');
+
+}
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.subnetheading</h2>
+
+
+@for (int i = 0; i < Auth.Length; i++)
+{
+    <div>
+    @Auth[i]
+        </div>
+}
+
+<br />
+<div class="col-sm-2">
+    @Html.ActionLink(MujiStore.Resources.Resource.CommonBackToList, "Index", new { page = @ViewBag.Page, @class = "linkclass" }, null)
+</div>
+
+
+

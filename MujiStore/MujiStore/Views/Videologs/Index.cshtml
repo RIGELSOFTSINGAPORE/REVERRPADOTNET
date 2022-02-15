@@ -1,0 +1,243 @@
+﻿
+@using PagedList.Mvc
+@{
+    var mediaDtl = ViewData["videoList"] as PagedList.PagedList<MujiStore.Models.tblMedia>;
+    ViewBag.Title = MujiStore.Resources.Resource.VideoLogs;
+
+
+    if (ViewData["CvtStatus"] == null)
+    {
+        ViewData["CvtStatus"] = "3";
+    }
+
+}
+<br />
+
+
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-top:-18px; margin-left:-2px;">@MujiStore.Resources.Resource.VideoLogs</h2>
+
+
+<script type="text/javascript" src="~/Scripts/jquery-1.8.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/FtpFile-pc1.css">
+<link rel="stylesheet" href="~/Content/font-awesome.min.css">
+
+<body>
+
+    @using (Html.BeginForm("Index", "VideoLogs", FormMethod.Post))
+    {<div class="border-style">
+
+
+
+         <p>
+             <span style="margin-left:15px;">
+                 @MujiStore.Resources.Resource.VietblMediaIndexDateFrom :
+             </span> @Html.TextBox("SearchFromCRTDT", String.Format("{0:d}", ViewBag.CdStDate as string),
+new { @class = "datefield form-control2 form", type = "date" })
+             <span style="margin-left:15px;">
+                 @MujiStore.Resources.Resource.VietblMediaIndexDateTo :
+             </span> @Html.TextBox("SearchToCRTDT", String.Format("{0:d}", ViewBag.CdEdDate as string),
+new { @class = "datefield form-control2 form", type = "date" })
+             <span style="margin-left:15px;">
+                 @MujiStore.Resources.Resource.VietblMediaIndexConvertStatus :
+             </span>  @Html.DropDownList("ConvertStatus", null, new { @class = "form-control5 form1" })
+             <input type="submit" value=@MujiStore.Resources.Resource.CommonSearch id="Submit" class="btn btn-default" style="margin-bottom: 4px; width: 85px; margin-left: 37px; height: 32px; " />
+             <a href=@Url.Action("Index","VideoLogs") class="clear">
+                 @MujiStore.Resources.Resource.clear
+             </a>
+         </p>
+
+
+
+
+
+        </div>
+        <p style="margin-top:-36px;">
+            <br />
+            <br />
+
+
+        </p>
+        <style type="text/css">
+        </style>
+        if (mediaDtl.Count < 1)
+        {
+            <table class="table " style="background-color:#ffffff; width:100%;  margin-bottom:0px;">
+                <tr>
+                    <td colspan="8" style="text-align:center;background-color:#EEE; ">
+                        @Html.Label(MujiStore.Resources.Resource.Nodata, MujiStore.Resources.Resource.Nodata)
+                    </td>
+                </tr>
+            </table>
+        }
+        else
+        {
+
+            <table class="table " style="background-color:#ffffff; width:100%;  margin-bottom:0px;">
+                <thead>
+                    <tr style="background-color:#822433; color:#ffffff; width:90%">
+                       
+                        <th style="width:4%;text-align:left">
+                            @Html.DisplayName(MujiStore.Resources.Resource.Dateandtime)
+                        </th>
+
+                        <th style="width:14%;text-align:left">
+                            @Html.DisplayName(MujiStore.Resources.Resource.StreamSreverFormatDetails)
+                        </th>
+
+                        <th class="Folderth" style="text-align:center">
+                           
+
+                        </th>
+
+
+                    </tr>
+                </thead>
+                <tbody style="width:90%">
+
+                    @foreach (var item in mediaDtl)
+                    {
+                    <tr style="background-color:#EEE; width:90%">
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.STRCRTDT)
+                            <br />
+                            @Html.DisplayFor(modelItem => item.STRCRTDTTIME)
+                        </td>
+
+
+                        <td class="Folder">
+                            <span style="font-weight: bolder;">
+                                @Html.DisplayName(MujiStore.Resources.Resource.Video) :
+                            </span>
+                            @Html.DisplayFor(modelItem => item.Title)
+                            <br />
+                            <span style="font-weight: bolder;">
+                                @Html.DisplayName(MujiStore.Resources.Resource.UploadStartDateandTime) :
+                            </span>
+                            @if (item.suploadstartdatetime != "0001/01/01 12:00:00 AM")
+                            {
+                                @Html.DisplayFor(modelItem => item.suploadstartdatetime)
+                            }
+                            <br />
+                            <span style="font-weight: bolder;">
+                                @Html.DisplayName(MujiStore.Resources.Resource.StreamconstartDateandTime) :
+                            </span>
+                            @if (item.sstreamingconstartdatetime != "0001/01/01 12:00:00 AM")
+                            {
+                                @Html.DisplayFor(modelItem => item.sstreamingconstartdatetime)
+                            }
+                            <br />
+                            <span style="font-weight: bolder;">
+                                @Html.DisplayName(MujiStore.Resources.Resource.VieLoginIndexUsername) :
+                            </span>
+                            @Html.DisplayFor(modelItem => item.Registerer)
+
+                            <br />
+
+                            <span style="font-weight: bolder;">
+                                @Html.DisplayName(MujiStore.Resources.Resource.VideoDeploySta) :
+                            </span>
+                            @if (item.IpAddress == "Deployed")
+                            {
+                                @Html.DisplayName(MujiStore.Resources.Resource.Deployed)
+
+                            }
+
+                            else if (item.IpAddress == "Not Deployed")
+                            {
+                                @Html.DisplayName(MujiStore.Resources.Resource.NotDeployed)
+
+                            }
+                            <br />
+                            <span style="font-weight: bolder;">
+                                @Html.DisplayName(MujiStore.Resources.Resource.VideoChangeRequested) :
+                            </span>
+
+                            @if (item.Video == "Approval Request")
+                            {
+                                @Html.DisplayName(MujiStore.Resources.Resource.Approvalrequest) @Html.DisplayName(" --> ") @Html.DisplayName(MujiStore.Resources.Resource.VietblMediaIndextblDescription)@Html.DisplayName(" - ")@Html.DisplayFor(modelItem => item.UPDCD)@Html.DisplayName(" / ")@Html.DisplayName(MujiStore.Resources.Resource.VieUploadDetailsNewFolder)@Html.DisplayName(" - ")@Html.DisplayFor(modelItem => item.UploadType)
+                            }
+                            else if (item.Video == "Delete Request")
+                            {
+                                @Html.DisplayName(MujiStore.Resources.Resource.Deleterequest)@Html.DisplayName(" --> ") @Html.DisplayName(MujiStore.Resources.Resource.VietblMediaIndextblDescription)@Html.DisplayName(" - ")@Html.DisplayFor(modelItem => item.UPDCD)@Html.DisplayName(" / ")@Html.DisplayName(MujiStore.Resources.Resource.VieUploadDetailsNewFolder)@Html.DisplayName(" - ")@Html.DisplayFor(modelItem => item.UploadType)
+                            }
+
+
+                        </td>
+                        <td class="Folder">
+
+                            <br />
+                            <span style="font-weight: bolder;">
+                                @Html.DisplayName(MujiStore.Resources.Resource.UploadEndDateandTime) :
+                            </span>
+                            @if (item.suploadenddatetime != "0001/01/01 12:00:00 AM")
+                            {
+                                @Html.DisplayFor(modelItem => item.suploadenddatetime)
+                            }
+                            <br />
+                            <span style="font-weight: bolder;">
+
+                                @Html.DisplayName(MujiStore.Resources.Resource.StreamconendDateandTime) :
+                            </span>
+                            @if (item.sstreamingconenddatetime != "0001/01/01 12:00:00 AM")
+                            {
+                                @Html.DisplayFor(modelItem => item.sstreamingconenddatetime)
+                            }
+                            <br />
+                            <span style="font-weight: bolder;">
+                                @Html.DisplayName(MujiStore.Resources.Resource.ConversionResult) :
+                            </span>
+                            @if (item.Description == "Conversion Ongoing")
+                            {
+                                @Html.DisplayName(MujiStore.Resources.Resource.Conversionongoing)
+                            }
+                            else if (item.Description == "Conversion Failed")
+                            {
+                                @Html.DisplayName(MujiStore.Resources.Resource.Conversionfailed)
+                            }
+                            else if (item.Description == "Conversion Completed")
+                            {
+                                @Html.DisplayName(MujiStore.Resources.Resource.Conversioncompleted)
+                            }
+                            <br />
+                            <span style="font-weight: bolder;">
+                                @Html.DisplayName(MujiStore.Resources.Resource.Approvedisapprove) :
+                            </span>
+                            @if (item.Thumbnail == "Approved")
+                            {
+                                @Html.DisplayName(MujiStore.Resources.Resource.Approved)
+                            }
+                            else if (item.Thumbnail == "Dis Approved")
+                            {
+                                @Html.DisplayName(MujiStore.Resources.Resource.disapproved)
+                            }
+                            else if (item.Thumbnail == "Pending")
+                            {
+                                @Html.DisplayName(MujiStore.Resources.Resource.ChangeRequested)
+                            }
+                            <br />
+
+                        </td>
+                      
+
+</tr>
+                    }
+
+                </tbody>
+
+            </table>
+        }
+        if (mediaDtl.PageSize < mediaDtl.TotalItemCount)
+        {
+            <div>
+
+                @MujiStore.Resources.Resource.CommonPage @(mediaDtl.PageCount < mediaDtl.PageNumber ? 0 : mediaDtl.PageNumber) @MujiStore.Resources.Resource.CommonOf @mediaDtl.PageCount
+
+                @Html.PagedListPager(mediaDtl, page => Url.Action("Index",
+                     new { page, sortOrder = ViewBag.CurrentSort, SearTitle = ViewBag.SearTitle, CdStDate = ViewBag.CdStDate, CdEdDate = ViewBag.CdEdDate, CvtStatus = ViewBag.cvtStatus, FolID = ViewBag.FolID, MedID = ViewBag.MedID }))
+            </div>
+        }
+        <br />
+        <br />
+    }
+</body>

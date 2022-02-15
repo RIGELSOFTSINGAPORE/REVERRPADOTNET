@@ -1,0 +1,280 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<MujiStore.Models.tblFeedback>
+
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VieFeedbacksEditBrowTitle;
+}
+<style>
+
+    .form-control1 {
+        width: 19%;
+        height: 29px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #000;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
+
+    .container {
+        width: 100%
+    }
+
+    .border-style {
+        
+        padding: 8px;
+        margin-bottom: 7px;
+        box-shadow: 2px 3px 8px -3px;
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+
+    .Title {
+        word-break: break-all;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+        width: 16%;
+        padding: 8.5px;
+    }
+
+    .feed {
+        word-break: break-all;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #ddd;
+        width: 25%;
+        padding: 8.5px;
+    }
+</style>
+
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.VieFeedbacksEditH2Title</h2>
+
+
+@using (Html.BeginForm("Index", "Feedbacks", FormMethod.Post))
+{
+
+<div class="border-style">
+    <p>
+
+        <span style="margin-left:15px;">
+            @MujiStore.Resources.Resource.CommonVideoTitle: @Html.TextBox("SearchTitle", ViewBag.SearTitle as string, new { @class = "form-control1" })
+        </span>
+
+        <span style="margin-left:15px;">
+            @MujiStore.Resources.Resource.IPaddress: @Html.TextBox("ip", ViewBag.ipadd as string, new { @class = "form-control1" })
+
+        </span>
+
+        <span style="margin-left:15px;">
+            @MujiStore.Resources.Resource.ModFeedbackWriterName: @Html.TextBox("writer", ViewBag.Searhwriter as string, new { @class = "form-control1" })
+        </span>
+
+        <input type="submit" value=@MujiStore.Resources.Resource.CommonSearch class="btn btn-default" style="padding-left: 22px; padding-right: 20px;float:right; padding-bottom: 5px; padding-top: 6px; width:85px; margin-right: 30px" />
+
+    </p>
+
+    <br />
+    <p>
+        <span style="margin-left:15px;">
+            @MujiStore.Resources.Resource.CommonDELFG: @Html.DropDownList("ConvertStatus", null, new { @class = "form-control1" })
+        </span>
+
+        <a href=@Url.Action("Index","Feedbacks") style="padding-left: 22px; padding-right: 20px;float:right; padding-bottom: 5px; padding-top: 6px; width:85px; margin-right: 30px">
+            @MujiStore.Resources.Resource.clear
+        </a>
+    </p>
+
+    <p>
+        @MujiStore.Resources.Resource.FeedbackDescription1
+    </p>
+    <p>
+        @MujiStore.Resources.Resource.FeedbackDescription2
+    </p>
+    <p>
+        @MujiStore.Resources.Resource.FeedbackDescription3
+    </p>
+    <p>
+        @MujiStore.Resources.Resource.FeedbackDescription4
+    </p>
+
+</div>
+}
+@if (Model.Count < 1)
+{
+    <table style="background-color:#ffffff; width:100%;  margin-bottom:0px;">
+        <tr style="background-color:#EEE;">
+            <td colspan="7" style="text-align:center">
+                @Html.Label(MujiStore.Resources.Resource.Nofeedback, MujiStore.Resources.Resource.Nofeedback)
+            </td>
+        </tr>
+    </table>
+}
+else
+{
+    <table class="table" style="background-color:#ffffff; height:100%;">
+        <tr style="background-color:#822433; color:#ffffff;">
+            <th>
+                @Html.DisplayName(MujiStore.Resources.Resource.CommonVideoTitle)
+            </th>
+            <th>
+                @Html.DisplayName(MujiStore.Resources.Resource.VieFeedbacksIndexComments)
+            </th>
+
+            <th>
+                @Html.DisplayName(MujiStore.Resources.Resource.CommonIpAddress)
+            </th>
+
+
+            <th>
+                @Html.DisplayName(MujiStore.Resources.Resource.ModFeedbackWriterName)
+            </th>
+
+            <th>
+                @Html.DisplayName(MujiStore.Resources.Resource.ModFeedbackWriterDatetime)
+            </th>
+            <th>
+                @Html.DisplayName(MujiStore.Resources.Resource.CommonDelFlg)
+            </th>
+
+            <th></th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr style="background-color:#EEE;">
+                <td class="Title">
+                    @Html.DisplayFor(modelItem => item.MediaTitle)
+                </td>
+                <td class="feed">
+                    @Html.DisplayFor(modelItem => item.Comments)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.IPAddress)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.WriterName)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.STRCRTDT)
+                    <br />
+                    @Html.DisplayFor(modelItem => item.STRCRTDTTIME)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DELFG)
+                </td>
+                <td>
+
+                    @if (Session["FeedBackApproval"].ToString() == "D")
+                    {
+                        @Html.ActionLink(MujiStore.Resources.Resource.CommonDelete, "Edit", new { id = item.FeedbackID , page = Model.PageNumber })
+                    }
+                    else if (Session["FeedBackApproval"].ToString() == "A")
+                    {
+                        @Html.ActionLink(MujiStore.Resources.Resource.CommonApproval, "Edit", new { id = item.FeedbackID, page = Model.PageNumber })
+                    }
+                    else if (Session["FeedBackApproval"].ToString() == "B")
+                    {
+                        @Html.ActionLink(MujiStore.Resources.Resource.CommonApproval, "Edit", new { id = item.FeedbackID, page = Model.PageNumber })
+                    }
+
+
+
+                </td>
+                <td>
+                    <a href="#" onclick="DeleteUserConfirmation(@item.FeedbackID);" id="btnDelete" data-toggle="modal" data-target="#deleteModal" title="Delete">@MujiStore.Resources.Resource.CommonDelete</a>
+
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+
+
+
+
+@if (Model.PageSize < Model.TotalItemCount)
+{
+     
+    <div>
+        @MujiStore.Resources.Resource.CommonPage @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) @MujiStore.Resources.Resource.CommonOf @Model.PageCount
+
+        @Html.PagedListPager(Model, page => Url.Action("Index",
+             new { page, sortOrder = ViewBag.CurrentSort, SearchTitle = ViewBag.SearTitle, ConvertStatus = ViewBag.delfg, ip = ViewBag.ipadd, writer = ViewBag.writer }))
+    </div>
+}
+
+<div class="modal fade" id="DeleteUserModal" tabindex="-1" role="dialog" aria-labelledby="DeleteVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="width:470px; height:140px">
+            <div class="modal-header" style="background: #822433; margin-left:-1px; color:white;border-radius: 5px;">
+                <h5 class="modal-title" id="DeleteUserModalLabel" style="font-weight:600">   @MujiStore.Resources.Resource.VietblMediaIndextblDelete</h5>
+
+            </div>
+            <div class="modal-body DeleteVastucontent">
+                <div>
+                    @MujiStore.Resources.Resource.Areyousureyoutodelete
+                </div>
+                <div style="float:right">
+                    <button type="button" class="btn btn-secondary" style=" background: white; border:2px solid #822433" data-dismiss="modal">   @MujiStore.Resources.Resource.No</button>
+                    <button type="button" class="btn btn-primary btndeleteUser btn-success" style="background:#822433">   @MujiStore.Resources.Resource.Yes</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+@Html.Hidden("DeleteUserId")
+@section scripts
+{
+
+    <script>
+
+        function DeleteUserConfirmation(UserID) {
+
+            $('#DeleteUserId').val(UserID);
+            $('#DeleteUserModal').modal('show');
+        }
+
+        $('.btndeleteUser').on('click', function () {
+
+            DeleteVastu($('#DeleteUserId').val());
+
+        });
+        function DeleteVastu(UserID) {
+
+            $('#DeleteUserModal').modal('hide');
+            $.ajax({
+                url: '@Url.Action("Delete", "Feedbacks")',
+                type: 'POST',
+                data: { 'ID': UserID },
+                success: function (result) {
+                   
+                    if (result.errorcode == 1) {
+
+
+                        window.location.href = "@Url.Action("Index", "Feedbacks", new { @page1 = Model.PageNumber })";
+                    }
+                    else {
+                          window.location.href = "@Url.Action("Index", "Feedbacks", new { @page1 = Model.PageNumber })";
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+}

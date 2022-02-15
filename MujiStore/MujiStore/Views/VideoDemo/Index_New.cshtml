@@ -1,0 +1,189 @@
+﻿@model IEnumerable<MujiStore.Models.BulkUploadVideo>
+
+    @using PagedList.Mvc
+    @{
+        var mediaDtl = ViewData["videoList"] as PagedList.PagedList<MujiStore.Models.tblMedia>;
+        ViewBag.Title = MujiStore.Resources.Resource.VietblMediaIndexBrowTitle;
+        var lan = System.Threading.Thread.CurrentThread.CurrentCulture;
+        ViewBag.Lan = lan.Parent.Name;
+        int i = 0;
+
+        int modcnt = Model.Count();
+
+        if (ViewData["CvtStatus"] == null)
+        {
+            ViewData["CvtStatus"] = "4";
+        }
+        if (ViewData["FolID"] == null)
+        {
+            ViewData["FolID"] = "0";
+        }
+        if (ViewData["ConvtStatus"] == null)
+        {
+            ViewData["ConvtStatus"] = "4";
+        }
+        }
+
+
+        <ol class="breadcrumb" id="breadcrumb">
+            <li>@Html.ActionLink(MujiStore.Resources.Resource.breadcrumbVideoall, "ViewUploadDetails", "VideoFiles")</li>
+            <li>
+                @Html.ActionLink(@MujiStore.Resources.Resource.breadcrumbManagement, "Index", "Menus")
+            </li>
+            <li>
+                @MujiStore.Resources.Resource.breadcrumbVideoChangerequest
+            </li>
+        </ol>
+        <br />
+        <h2 style="color:#ec2213; background-color:#e7bebb; margin-top:-18px; margin-left:-2px;">@MujiStore.Resources.Resource.VideoChangeRequested</h2>
+        <script src="~/Scripts/select2/dist/js/jquery-3.0.0.js" type="text/javascript"></script>
+        <script src="~/Scripts/select2/dist/js/select2.js" defer type="text/javascript"></script>
+        <link href="~/Scripts/select2/dist/css/select2.min.css" rel='stylesheet' type='text/css'>
+
+       
+        <script type="text/javascript">
+    $(document).ready(function () {
+
+        $('input[type=checkbox]').change(function () {
+            if (this.checked == true) {
+                var ChkSelect = "IsUpload";
+                var chkDelete = "IsDelete"
+                var ctlName = this.name;
+                var rowIndex = $(this).closest('tr')[0].sectionRowIndex;
+
+                if (ctlName.indexOf(ChkSelect) != -1) {
+                    $(this).closest('tr')[0].cells[5].children["[" + rowIndex + "].IsDelete"].checked = false;
+
+                }
+                if (ctlName.indexOf(chkDelete) != -1) {
+                    $(this).closest('tr')[0].cells[0].children["[" + rowIndex + "].IsUpload"].checked = false;
+                    $(this).closest('tr')[0].cells[3].children["[" + rowIndex + "].UploadTitle"].value = "";
+                    $(this).closest('tr')[0].cells[4].children["[" + rowIndex + "].UploadDescription"].value = "";
+
+                }
+            }
+
+        });
+
+    });
+        </script>
+        <link rel="stylesheet" type="text/css" href="~/Content/FtpFile-pc1.css">
+        
+        <link rel="stylesheet" href="~/Content/font-awesome.min.css">
+        <style>
+            select, textarea {
+                max-width: 100%;
+                background-color: #fff;
+            }
+            #videoouter
+            {}
+        </style>
+        <div>
+            <p>
+                @MujiStore.Resources.Resource.VideoChangeRequestdescription1
+            </p>
+            <p>
+                @MujiStore.Resources.Resource.VideoChangeRequestdescription2
+            </p>
+            <p>
+                @Html.ActionLink(MujiStore.Resources.Resource.VietblMediaIndexCreate, "Create", new { page = mediaDtl.PageNumber })
+
+                @if (ViewBag.videoConvertedFilesCount == -99)
+                {
+                    <span style="padding:10px">
+                        <a href=@Url.Action("Index","VideoDemo")>
+                            @MujiStore.Resources.Resource.Refresh<i class="fa fa-refresh" style=" padding-left: 5px;"></i>
+                        </a>
+                    </span>
+                    <font color="green">@MujiStore.Resources.Resource.VietblMediaIndexVideoConversionUnderProcess</font>
+                    <progress>
+
+                    </progress>
+                }
+
+            </p>
+        </div>
+        <div class="form-group">
+            <div>
+                <br />
+                <p>
+
+                    @MujiStore.Resources.Resource.VideoChangeRequestdescription3
+                </p>
+            </div>
+
+            @foreach (var item in mediaDtl)
+            {
+            <div class="col-sm-3 " id="videoouter" style="background:#e7bebb; border:10px solid white; margin-left:0px;">
+                <a style="padding:0px; color:black" href=@Url.Action("Edit_new","VideoDemo", new {Id = item.MediaID})>
+
+                    <div class="col-sm-6">
+
+                        @if (item.Thumbnail != "" && item.Thumbnail != null)
+                        {
+                            if (File.Exists(Server.MapPath("~/Video/" + item.Thumbnail)))
+                            {
+                                <img src="@Url.Content("~/Video/" + item.Thumbnail + "")" class="moviethumb" style="border:1px solid black; width: 135px;height:100px; margin-left: -15px;">
+                            }
+                            else
+                            {
+                                if (ViewBag.Lan == "en")
+                                {
+                                    <img src="@Url.Content("~/img/Imagenotfound.jpg")" class="moviethumb" style="border: 1px solid black; width: 135px; height: 100px; margin-left: -15px;">
+                                }
+                                else
+                                {
+                                    <img src="@Url.Content("~/img/Image not found_JP.png")" class="moviethumb" style="border: 1px solid black; width: 135px; height: 100px; margin-left: -15px;">
+
+                                }
+
+                            }
+                        }
+                        else
+                        {
+                            if (ViewBag.Lan == "en")
+                            {
+                                <img src="@Url.Content("~/img/Thumbnailnotgenerated.jpg")" class="moviethumb" style="border: 1px solid black; height: 100px; width: 135px; margin-left: -15px;">
+                            }
+                            else
+                            {
+                                <img src="@Url.Content("~/img/Thumbnail not generated_JP.png")" class="moviethumb" style="border: 1px solid black; height: 100px; width: 135px; margin-left: -15px;">
+                            }
+                        }
+
+                    </div>
+
+                    <div class="col-sm-6">
+                        <label>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </label>
+                        <br />
+                        <p>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </p>
+                  
+                        <label style="">
+                            @if (item.ConvertStatus == 0)
+                            {
+                                @Html.DisplayName(MujiStore.Resources.Resource.Conversionongoing)
+
+                            }
+                            else if (item.ConvertStatus == 3)//VJ 20200603 ConvertStatus 3 Converted  Changed
+                            {
+                                @Html.DisplayName(MujiStore.Resources.Resource.Conversioncompleted)
+
+                            }
+                            else if (item.ConvertStatus == 2)
+                            {
+                                @Html.DisplayName(MujiStore.Resources.Resource.Conversionfailed)
+
+                            }
+                        </label>
+
+                    </div>
+                    </a>
+            </div>
+            }
+        </div>
+     
+     

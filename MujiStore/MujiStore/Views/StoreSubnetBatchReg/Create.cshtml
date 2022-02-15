@@ -1,0 +1,135 @@
+﻿@model MujiStore.Models.tblStoreSubnetReg
+
+
+@{
+    ViewBag.Title = MujiStore.Resources.Resource.VieSubnetsCreateBrowTitle;
+}
+<style>
+    .form-horizontal .control-label {
+        padding-top: 7px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    li {
+        color: black;
+        /* border-right: 0.8px solid #4f3207; */
+        list-style: none;
+    }
+</style>
+<ol class="breadcrumb" id="breadcrumb">
+    <li>@Html.ActionLink(MujiStore.Resources.Resource.breadcrumbVideoall, "ViewUploadDetails", "VideoFiles")</li>
+    <li>
+        @Html.ActionLink(@MujiStore.Resources.Resource.breadcrumbManagement, "Index", "Menus")
+    </li>
+    <li>@Html.ActionLink(MujiStore.Resources.Resource.breadcrumbSystemmaintenance, "InfoMenus", "Menus")</li>
+    <li>
+        @MujiStore.Resources.Resource.Breadcrumbstorebatch
+    </li>
+</ol>
+<h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.Newstorebatchregistration </h2>
+<div>
+    @MujiStore.Resources.Resource.storebatchcontent
+</div>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<div class="form-horizontal">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.Storehead </h2>
+
+    <div class="form-group">
+        @Html.Label(MujiStore.Resources.Resource.StoreNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.StoreNumber, new { htmlAttributes = new { @class = "form-control textbox", @maxlength = "10" } })
+            @Html.ValidationMessageFor(model => model.StoreNumber, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.StoreName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.StoreName, new { htmlAttributes = new { @class = "form-control textbox" } })
+            @Html.ValidationMessageFor(model => model.StoreName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.StoreGroupID, MujiStore.Resources.Resource.ModtblStoreStoreGroupName, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("StoreGroupID", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.StoreGroupID, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <h2 style="color:#ec2213; background-color:#e7bebb; margin-left:-2px; margin-bottom:14px;">@MujiStore.Resources.Resource.Subnet </h2>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.SNIPAddress, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.SNIPAddress, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.SNIPAddress, "", new { @class = "text-danger" })
+            @MujiStore.Resources.Resource.ipcontent
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.SubnetMask, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.SubnetMask, new { htmlAttributes = new { @Value = "255.255.255.0", @class = "form-control"} })
+            @Html.ValidationMessageFor(model => model.SubnetMask, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.WANBandWidth, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.WANBandWidth, new { htmlAttributes = new { @Value = "250000", @class = "form-control", @maxlength = "16" } })
+            @Html.ValidationMessageFor(model => model.WANBandWidth, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LANBandWidth, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.LANBandWidth, new { htmlAttributes = new { @Value = "10000000", @class = "form-control", @maxlength = "16" } })
+            @Html.ValidationMessageFor(model => model.LANBandWidth, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class=" col-md-10">
+
+        </div>
+        <div class=" col-md-10">
+            <input type="submit" value=@MujiStore.Resources.Resource.Registration class="btn btn-default" style="margin-left: 0px; width: 100px; margin-top: -5px; padding-bottom: 2px; padding-top: 4px;" />
+
+        </div>
+    </div>
+</div>
+
+}
+<script src="~/Scripts/select2/dist/js/jquery-3.0.0.js" type="text/javascript"></script>
+<script src="~/Scripts/select2/dist/js/select2.js" defer type="text/javascript"></script>
+<link href="~/Scripts/select2/dist/css/select2.min.css" rel='stylesheet' type='text/css'>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        $("#StoreGroupID").select2({
+            templateResult: formatOptions
+        });
+    });
+
+    function formatOptions(state) {
+        $('.select2-search__field').remove();
+        if (!state.id) { return state.text; }
+        var strfolder = state.text;      
+        var $state = $(
+            '<span  style="color:black">' + strfolder.trim() + '</span>'
+        );
+        return $state;
+    }
+   
+</script>
