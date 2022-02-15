@@ -1,0 +1,201 @@
+﻿
+@{
+    /**/
+
+    /**/
+
+    ViewBag.Title = "CRM";
+}
+
+<h2>@Kaisokku_Sales.Resources.Resource.CRM</h2>
+
+<style>
+    /*.previewimg {
+        height: 200px;
+        width: 800px;
+        border: 1px solid;
+    }*/
+</style>
+
+
+
+@*@using (Html.BeginForm("CRM", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {*@
+<div class="row">
+    <div class="col-md-2">
+        @Html.Label(@Kaisokku_Sales.Resources.Resource.SelectOption)
+    </div>
+    <div class="col-md-4">
+        @Html.DropDownList("SelectTypes", (IEnumerable<SelectListItem>)TempData["SelectTypes"])
+    </div>
+    @{TempData.Keep("SelectTypes");}
+
+</div>
+<div class="row">
+    <div class="col-md-2">
+        @Html.Label(@Kaisokku_Sales.Resources.Resource.SelectCustomer)
+    </div>
+    <div class="col-md-4">
+        @Html.DropDownList("CustomerSelection", (IEnumerable
+       <SelectListItem>)TempData["CustomerSelection"])
+    </div>
+
+    @{TempData.Keep("CustomerSelection");}
+</div>
+<div class="row">
+    <div class="col-md-2">
+        @Html.Label(@Kaisokku_Sales.Resources.Resource.SenderFrom)
+    </div>
+    <div class="col-md-4">
+        @Html.TextBox("SenderFrom", null, new { @class = "form-control", id = "SenderFrom" })
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-2">
+        @Html.Label(@Kaisokku_Sales.Resources.Resource.EmailTo)
+    </div>
+    <div class="col-md-4">
+        @Html.TextArea("EmailTo", null, new { @class = "form-control", id = "EmailTo" })
+    </div>
+
+
+</div>
+<div class="row">
+    <div class="col-md-2">
+        @Html.Label(@Kaisokku_Sales.Resources.Resource.CC)
+    </div>
+    <div class="col-md-4">
+        @Html.TextBox("CC", null, new { @class = "form-control", id = "CC", @readonly = "readonly", @Value = "gnanavallal1900@gmail.com" })
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-2">
+        @Html.Label(@Kaisokku_Sales.Resources.Resource.Subject)
+    </div>
+    <div class="col-md-4">
+        @Html.TextBox("Subject", null, new { @class = "form-control", id = "Subject" })
+    </div>
+
+
+</div>
+<input type="hidden" id="Body" />
+<div id="texteditor"></div>
+<div class="row" style="padding-top: 12px;">
+    <div class="col-md-5">
+
+    </div>
+    <div class="col-md-3">
+        <input type="button" value=@Kaisokku_Sales.Resources.Resource.Send class="btn btn-primary" id="btnsendemail" name="Command" />
+    </div>
+    @*<input type="submit" value="submit" id="btnsubmitemailfrom" name="Command" hidden="hidden" /><br />*@
+    <br />
+</div>
+@*<div>
+        Select Image
+        <input type='file' id="imgInp" name="imgInp" />
+
+        Preview:<br />
+
+        <div class="previewimg">
+            <img id="blah" src="" alt="your image" class="previewimg" />
+        </div>
+        <div>
+            <input type="submit" value="Submit" name="Command" /><br />
+        </div>
+    </div>
+    <div>
+        @ViewBag.Message
+    </div>*@
+
+@*}*@
+
+
+
+@section ScriptSection
+{
+    <script src="../assets/vendor_components/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+    <script src="~/WYSIWY/editor.js"></script>
+    <script>
+        $("#texteditor").Editor();
+    </script>
+    <script>
+        //function readURL(input) {
+        //    if (input.files && input.files[0]) {
+        //        var reader = new FileReader();
+        //        reader.onload = function (e) {
+        //            $('#blah').attr('src', e.target.result);
+        //        }
+        //        reader.readAsDataURL(input.files[0]); // convert to base64 string
+        //    }
+        //}
+        //$("#imgInp").change(function () {
+        //    readURL(this);
+        //});
+
+        $('#btnsendemail').on('click', function () {
+            //debugger;
+            var CC = $('#CC').val();
+            var From = $('#From').val();
+            var EmailTo = $('#EmailTo').val();
+            var Subject = $('#Subject').val();
+            var Body = $(".Editor-editor").html();
+            var SenderFrom = $("#SenderFrom").val()
+
+
+            $.ajax({
+                url: '@Url.Action("CRM","Home")',
+                type: 'POST',
+                data: { 'CC': CC, 'From': From, 'EmailTo': EmailTo, 'Subject': Subject, 'Body': Body, 'SenderFrom': SenderFrom},
+                success: function (result) {
+
+                    if (result == true) {
+                         $('#EmailTo').val('');
+                       $('#Subject').val('');
+                       $(".Editor-editor").html('');
+                        alert('Successfully mail sent');
+                    }
+                    else {
+                        alert('Unable to send mail...');
+                    }
+
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+
+        });
+
+        $('#CustomerSelection').change(function () {
+            $.ajax({
+                url: '@Url.Action("GetCRMMail", "Home")',
+                type: 'GET',
+                data: {
+                    id: $('#CustomerSelection option:selected').val()
+                },
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (result) {
+                    $('#EmailTo').val(result)
+                },
+                error: function () {
+                    alert("error");
+                }
+            });
+            return false;
+        });
+    </script>
+
+    <script>
+        $('#SelectTypes').change(function () {
+            $('#Subject').val($('#SelectTypes option:selected').text())
+        });
+
+    </script>
+
+
+
+}
+

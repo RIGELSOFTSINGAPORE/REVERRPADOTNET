@@ -1,0 +1,15 @@
+﻿@model IEnumerable<string>
+@foreach (var pagefilename in Model)
+{
+    <ul class="sidebar-menu mainmenu">
+        <li class="treeview ">
+           
+                <a href="@Url.Action("UserClientPage", "Home",new {PageFileName=pagefilename })">
+           
+                    <i class="fa fa-th-large" aria-hidden="true"></i>
+                    <span> @pagefilename</span>
+                </a>
+</li>
+    </ul>
+}
+

@@ -1,0 +1,77 @@
+﻿@model Kaisokku_Common.video
+@{
+    ViewBag.Title = "SocialMedia";
+}
+<style>
+    table, th, td {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 10px;
+    }
+</style>
+<h2>@Kaisokku.Resources.Resource.VideoManagement - @Request.QueryString["test"] </h2>
+@if (TempData["Sucess"] != null)
+{
+    <div class="row">
+        <div class="col-md-4" style="width:1022px;padding-left: 5px;padding-top: 10px;">
+            <div class="alert alert-success alert-dismissible ">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                @TempData["Sucess"].ToString()
+            </div>
+        </div>
+    </div>
+}
+<div style="width:1022px;background:#f4f4f4;padding:4px; border:0px solid grey;text-align:right;">
+    @Html.ActionLink("Back to List", "VideoManagement")
+</div>
+@using (Html.BeginForm("VideoManagementCreate", "Home", new { test = Request.QueryString["test"] }, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(model => model.MediaID)
+    <div id="searchParameters" style="width:1022px;background:#f4f4f4;padding:10px; border:1px solid grey">
+
+        <table>
+            <tr style="padding-bottom:50px">
+                <th>@Kaisokku.Resources.Resource.Title</th>
+                <th>@Html.TextBoxFor(model => model.Title, new { @class = "form-control2" })</th>
+            </tr>
+
+            <tr style="padding-top:50px">
+                <th>@Kaisokku.Resources.Resource.Description</th>
+
+                <th>  @Html.TextAreaFor(model => model.Description, 5, 100, new { htmlAttributes = new { @class = "form-control textarea" }, @maxlength = "1000" })</th>
+            </tr>
+            @if (Request.QueryString["test"].Equals("Create"))
+            {
+                <tr>
+                    <th>@Kaisokku.Resources.Resource.UploadVideo</th>
+
+                    <th>
+                        @Html.TextBoxFor(model => model.Filename, new { type = "file"  } )
+                    
+            </tr>
+            }
+            else
+            {
+                <tr>
+                    <th>@Kaisokku.Resources.Resource.UploadVideo</th>
+
+                    <th>
+                        @Html.DisplayFor(model => model.Filename)
+                        @Html.TextBoxFor(model => model.Filename, new { type = "file" })
+</tr>
+            }
+            <tr>
+                <th>@Kaisokku.Resources.Resource.Folder </th>
+                <th>@Html.TextBoxFor(model => model.Folderid)</th>
+            </tr>
+
+            <tr>
+                <th>
+                </th>
+                <th> <input type="submit" value=@Request.QueryString["test"] /></th>
+            </tr>
+        </table>
+
+    </div>
+
+}

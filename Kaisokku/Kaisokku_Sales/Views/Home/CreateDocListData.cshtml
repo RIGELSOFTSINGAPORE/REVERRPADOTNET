@@ -1,0 +1,27 @@
+﻿
+
+
+@using Kaisokku_Common;
+@model Document
+@{ Layout = null; }
+
+<form>
+    <div class="form-group">
+        <label for="Title">@Kaisokku_Sales.Resources.Resource.Title</label>
+        <input type="text" class="form-control" id="CreateDocTitle" aria-describedby="emailHelp">
+        <p id="title" style="color:red;"></p>
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+    </div>
+    <div class="form-group">
+        <label for="Description">@Kaisokku_Sales.Resources.Resource.Description</label>
+        <input type="text" class="form-control" id="CreateDocDesc" aria-describedby="updatedby">
+        <p id="des" style="color:red;"></p>
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+    </div>
+    <div class="form-group">
+        <label for="Description">@Kaisokku_Sales.Resources.Resource.UploadDocument</label>
+        <input type="file" class="form-control" id="CreateDocFile" multiple aria-describedby="updatedby">
+        <p id="upload" style="color:red;"></p>
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+    </div>
+</form>

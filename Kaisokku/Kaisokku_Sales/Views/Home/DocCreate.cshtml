@@ -1,0 +1,32 @@
+﻿
+
+
+@using Kaisokku_Common;
+@model Document
+@{ Layout = null; }
+
+<form>
+    @Html.Hidden("EditDocId", Model.MediaID)
+    <div class="form-group">
+        <label for="Title">@Kaisokku_Sales.Resources.Resource.Title</label>
+        <input type="text" class="form-control" id="EditDocTitle" value="@Model.Title" aria-describedby="emailHelp">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+    </div>
+    <div class="form-group">
+        <label for="Description">@Kaisokku_Sales.Resources.Resource.Description</label>
+        <input type="text" class="form-control" id="EditDocDesc" value="@Model.Description" aria-describedby="updatedby">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+    </div>
+
+    <div class="form-group">
+        <label for="Description">@Kaisokku_Sales.Resources.Resource.DocumentList</label>
+        <br />
+        @Html.DropDownList("SelectDoc", TempData["SelectDoc"] as SelectList)
+        @{TempData.Keep("SelectDoc");}
+    </div>
+    <div class="form-group">
+        <label for="Description">@Kaisokku_Sales.Resources.Resource.UploadDocument</label>
+        <input type="file" class="form-control" id="EdtiDocFile" value="@Model.Filename" multiple aria-describedby="updatedby">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+    </div>
+</form>

@@ -1,0 +1,322 @@
+﻿@model Kaisokku_Sales.Models.SavePageContent
+
+@{
+    /**/
+
+    /**/
+
+    ViewBag.Title = "PageManagement";
+}
+<h2>@Kaisokku_Sales.Resources.Resource.PageManagement: @ViewBag.MyPageName</h2>
+@Html.Hidden("HdnPageMenuId", (int)ViewBag.PageMenuId)
+
+
+<div id="txtEditor"></div>
+
+
+
+<div class="row" style="padding-top: 10px;">
+    <div class="col-md-2">
+        @Html.Label(@Kaisokku_Sales.Resources.Resource.Description)
+    </div>
+    <div class="col-md-3">
+        @Html.TextAreaFor(m => m.pagedescription, new { @class = "form-control", id = "txtPageDescription" })
+
+        @Html.Hidden("PageNameFld", (string)ViewBag.MyPageName)
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-2">
+        @Html.Label(@Kaisokku_Sales.Resources.Resource.AssignTo)
+    </div>
+    <div class="col-md-3">
+        @Html.DropDownList("UserId", (IEnumerable<SelectListItem>)ViewBag.UsersName, null, new { })
+    </div>
+
+</div>
+
+<div class="row checkbox">
+    <div class="col-md-2">
+        @Html.Label(Kaisokku_Sales.Resources.Resource.Active)
+    </div>
+    <div class="col-md-1">
+        @Html.CheckBox(@Kaisokku_Sales.Resources.Resource.IsActive, false, new { })
+    </div>
+    <div class="col-md-3" style="padding-bottom: 5px;">
+        <button class="btn btn-primary" type="submit" id="btnSubmit">@Kaisokku_Sales.Resources.Resource.Submit</button>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="cold-md-5">
+
+    </div>
+
+
+    @Html.Hidden("HdnEditFlag")
+    @Html.Hidden("HdnEditPageId")
+    @Html.Hidden("DeletePageId")
+</div>
+<div class="container" style="border: 1px solid;">
+    <br />
+    <div style="width:100%; margin:0 auto;">
+        <table id="PageGrid" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>PageID</th>
+                    <th>@Kaisokku_Sales.Resources.Resource.FileName</th>
+                    <th>@Kaisokku_Sales.Resources.Resource.CreatedDate</th>
+                    <th>@Kaisokku_Sales.Resources.Resource.Username</th>
+                    <th>@Kaisokku_Sales.Resources.Resource.Active</th>
+                    <th>@Kaisokku_Sales.Resources.Resource.Edit</th>
+                    <th>@Kaisokku_Sales.Resources.Resource.Delete</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+<div class="modal fade" id="DeletePageModal" tabindex="-1" role="dialog" aria-labelledby="DeletePageModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="DeletePageModalLabel">@Kaisokku_Sales.Resources.Resource.DeletePage</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body Deletemenucontent">
+                @Kaisokku_Sales.Resources.Resource.Areyousuretodeletepage
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">@Kaisokku_Sales.Resources.Resource.No</button>
+                <button type="button" class="btn btn-primary btndeletepage btn-danger">@Kaisokku_Sales.Resources.Resource.Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section ScriptSection{
+    <script src="~/WYSIWY/editor.js"></script>
+    <script>
+        $("#txtEditor").Editor();
+    </script>
+
+    <script>
+        function RefreshDataTable() {
+            //debugger;
+            $('#PageGrid').DataTable().ajax.reload(null, false);
+            $("#PageGrid").DataTable().page('first').draw('page');
+        }
+
+        $(document).ready(function () {
+            //debugger;
+            var PageName = $('#PageNameFld').val()
+
+            $("#PageGrid").DataTable({
+                "processing": true, // for show progress bar
+                "serverSide": false, // for process server side
+                "filter": true, // this is for disable filter (search box)
+                "orderMulti": false, // for disable multiple column at once
+                "pageLength": 5,
+
+
+                "ajax": {
+                    "url":  "@Url.Action("LoadPageListData", "Home")",
+                    "type": "POST",
+                    "data": { "PageName": PageName },
+                    "datatype": "json"
+                },
+
+                "columnDefs":
+                    [{
+                        "targets": [0],
+                        "visible": false,
+                        "searchable": false,
+                        "orderable": false
+                    },
+                    {
+                        "targets": [1],
+                        "searchable": true,
+                        "orderable": true
+                    },
+                    {
+                        "targets": [2],
+                        "searchable": true,
+                        "orderable": true
+                    },
+
+                    {
+                        "targets": [3],
+                        "searchable": true,
+                        "orderable": true
+                    },
+                    {
+                        "targets": [4],
+                        "searchable": true,
+                        "orderable": true
+                    },
+                    {
+                        "targets": [5],
+                        "searchable": false,
+                        "orderable": false
+                    },
+                    {
+                        "targets": [6],
+                        "searchable": false,
+                        "orderable": false
+                    }
+                    ],
+
+
+                "columns": [
+                    { "data": "PageID", "name": "PageID", "autoWidth": true },
+                    { "data": "PageFileName", "name": "PageFileName", "autoWidth": true },
+
+                    {
+                        "data": "CreatedDate",
+                        "name": "CreatedDate",
+                        "autoWidth": true,
+                        "type": "date ",
+                        "render": function (value) {
+                            if (value === null) return "";
+                            var pattern = /Date\(([^)]+)\)/;
+                            var results = pattern.exec(value);
+                            var dt = new Date(parseFloat(results[1]));
+                            var month = dt.getMonth() + 1;
+                            //return (month.toString().length > 1 ? month : "0" + month) + "/" + dt.getDate() + "/" + dt.getFullYear()
+                            return (dt.getFullYear() + "/" + (month.toString().length > 1 ? month : "0" + month) + "/" + dt.getDate())
+
+                        }
+
+                    },
+
+
+                    { "data": "UserName", "name": "UserName", "autoWidth": true },
+                    { "data": "IsActive", "name": "IsActive", "autoWidth": true },
+                    {
+                        "render": function (data, type, row, meta) { return "<a class='btn btn-info' href='javascript:void(0);' onclick=EditMenu('" + row.PageID + "');>Edit</a>"; }
+                    },
+                    {
+                        data: null, render: function (data, type, row) {
+                            return "<a href='#' class='btn btn-danger' onclick=DeletePageConfirmation('" + row.PageID + "'); >Delete</a>";
+                        }
+                    },
+
+                ]
+
+            });
+        });
+
+    </script>
+
+
+    <script>
+    $('#btnSubmit').on('click', function () {
+    var PageFileName = $('#PageNameFld').val();
+    var PageDescription = $('#txtPageDescription').val();
+    var PageContent = $('.Editor-editor').html()
+    var Uid = $("#UserId option:selected").val();
+    var IsActive = $("#IsActive").is(':checked')
+    var HdnEditFlag = $('#HdnEditFlag').val();
+    var HdnEditPageId = $("#HdnEditPageId").val();
+    var HdnPageMenuId = $("#HdnPageMenuId").val();
+        
+    var dataobj = { 'pagefilename': PageFileName, 'pagedescription': PageDescription, 'pagecontent': PageContent, 'UserId': Uid, 'IsActive': IsActive, 'Editable': HdnEditFlag, 'EditPageId': HdnEditPageId, 'PageMenuId': HdnPageMenuId};
+    $.ajax({
+    url: '@Url.Action("AddPageInformation", "Home")',
+    type: 'POST',
+    data: dataobj,
+    success: function (result) {
+
+        if (result.errorcode == 0)
+        {
+            $("input:text").val("");
+            $('#txtPageDescription').val("");
+            $('.Editor-editor').html("")
+            $("#IsActive").prop("checked", false);
+            $('#HdnEditFlag').val("");
+            
+            RefreshDataTable();
+            alert('@Kaisokku_Sales.Resources.Resource.PageSavedSuccessfully');
+        }
+        else
+        {
+            alert('@Kaisokku_Sales.Resources.Resource.PageSaveFailed');
+        }
+   },
+
+   error: function (error)
+   {
+    console.log(error);
+   }
+
+   });
+ });
+    </script>
+
+    <script>
+        function EditMenu(pageId) {
+            $.ajax({
+                url: '@Url.Action("GetPageListDataById", "Home")',
+                type: 'POST',
+                data: { 'PageId': pageId },
+                success: function (result) {
+                 $("#HdnEditFlag").val("EditTrue");
+                 $("#HdnEditPageId").val(pageId);
+                 $('#txtPageDescription').val(result.PageDescription);
+                    $('.Editor-editor').html(result.PageContent)
+                    //alert(result.IsActive)
+                    //$('#IsActive').attr('checked', result.IsActive);
+                    $('#IsActive').prop('checked', result.IsActive)
+                    $("#UserId").val(result.UserId);
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+
+    </script>
+
+    <script>
+        $('.btndeletepage').on('click', function () {
+            DeletePage($('#DeletePageId').val());
+        });
+
+        function DeletePageConfirmation(PageId) {
+            $('#DeletePageId').val(PageId);
+            $('#DeletePageModal').modal('show');
+        }
+
+        function DeletePage(PageId) {
+            $('#DeletePageModal').modal('hide');
+            $.ajax({
+                url: '@Url.Action("DeletePageById", "Home")',
+                type: 'POST',
+                data: { 'PageId': PageId },
+                success: function (result) {
+                    if (result.errorcode == 0) {
+
+                        alert('@Kaisokku_Sales.Resources.Resource.PageDeletedSuccessfully');
+                        $("input:text").val("");
+                        $('#txtPageDescription').val("");
+                        $('.Editor-editor').html("")
+                        $("#IsActive").prop("checked", false);
+                        $('#HdnEditFlag').val("");
+                        RefreshDataTable();
+                    }
+                    else {
+                        alert('@Kaisokku_Sales.Resources.Resource.PageDeletionFailed');
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+
+}

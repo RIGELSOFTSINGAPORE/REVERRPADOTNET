@@ -1,0 +1,32 @@
+﻿
+
+@using Kaisokku_Common;
+@model PPT
+@{ Layout = null; }
+
+<form>
+    @Html.Hidden("EditVideoId", Model.MediaID)
+    <p id="demo" style="color:red;"></p>
+    <div class="form-group">
+        <label for="Title">@Kaisokku_Sales.Resources.Resource.Title</label>
+        <input type="text" class="form-control" id="EditVideoTitle" value="@Model.Title" aria-describedby="emailHelp">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+    </div>
+    <div class="form-group">
+        <label for="Description">@Kaisokku_Sales.Resources.Resource.Description</label>
+        <input type="text" class="form-control" id="EditVideoDesc" value="@Model.Description" aria-describedby="updatedby">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+    </div>
+
+    <div class="form-group">
+        <label for="Description">@Kaisokku_Sales.Resources.Resource.PPTList</label>
+        <br />
+        @Html.DropDownList("SelectVideo", TempData["SelectVideo"] as SelectList, new { })
+        @{TempData.Keep("SelectVideo");}
+    </div>
+    <div class="form-group">
+        <label for="Description">@Kaisokku_Sales.Resources.Resource.UploadPPT</label>
+        <input type="file" class="form-control" id="EdtiVideoFile" value="@Model.Filename" aria-describedby="updatedby">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+    </div>
+</form>

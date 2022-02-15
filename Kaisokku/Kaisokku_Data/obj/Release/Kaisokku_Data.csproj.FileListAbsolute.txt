@@ -1,0 +1,14 @@
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Data\bin\Release\Kaisokku_Data.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Data\bin\Release\Kaisokku_Data.pdb
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Data\bin\Release\Dapper.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Data\bin\Release\Kaisokku_Common.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Data\bin\Release\log4net.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Data\bin\Release\Kaisokku_Common.pdb
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Data\bin\Release\Kaisokku_Common.dll.config
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Data\bin\Release\Dapper.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Data\bin\Release\log4net.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Data\obj\Release\Kaisokku_Data.csproj.AssemblyReference.cache
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Data\obj\Release\Kaisokku_Data.csproj.CoreCompileInputs.cache
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Data\obj\Release\Kaisokku_Data.csproj.CopyComplete
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Data\obj\Release\Kaisokku_Data.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Data\obj\Release\Kaisokku_Data.pdb

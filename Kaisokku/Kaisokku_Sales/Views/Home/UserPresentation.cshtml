@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Kaisokku_Common.GetPresentation>
+
+@{
+    ViewBag.Title = "UserPresentation";
+}
+
+<h2>@Kaisokku_Sales.Resources.Resource.UserPowerPointPresentation</h2>
+
+@*<link rel="stylesheet" href="~/Content/style.css">*@
+@*<link rel="stylesheet" href="~/Content/style-pc.css">*@
+
+
+@*<h2 id="contenttitle">@Model.Title</h2>*@
+@*@foreach (var item in Model)*@
+
+
+<table class="table" style="background-color:#ffffff; width:100%; height:100px; margin-bottom:-50px;">
+    <thead>
+        <tr style="background-color:#512063; color:#ffffff;">
+            <th style="font-size: larger; font-weight: 500; width: 152px;">
+                @*@Html.DisplayNameFor(model => model.DownloadPPT)*@
+                @Kaisokku_Sales.Resources.Resource.DownloadPPT
+            </th>
+            <th style="font-size: larger; font-weight: 500;">
+                @*@Html.DisplayNameFor(model => model.filename)*@
+                @Kaisokku_Sales.Resources.Resource.FileName
+            </th>
+            <th style="font-size: larger; font-weight: 500;">
+                @*@Html.DisplayNameFor(model => model.Title)*@
+                @Kaisokku_Sales.Resources.Resource.Title
+            </th>
+            <th style="font-size: larger; font-weight: 500;">
+                @*@Html.DisplayNameFor(model => model.Description)*@
+                @Kaisokku_Sales.Resources.Resource.Description
+
+            </th>
+
+        </tr>
+    </thead>
+    <tbody style="width:100%">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a href='@Url.Action("DownLoadPPT", "Home",new {pptid=item.mediaid, pptfilename=item.filename })'>
+
+                        <i style="height:70px;"><img style="width:170px; height:auto" src="~/Images/PPTLogo.jpg" /></i>
+                    </a>
+                </td>
+                <td>
+                    @item.filename
+                </td>
+                <td>
+                    @item.Title
+                </td>
+                <td>
+                    @item.Description
+
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

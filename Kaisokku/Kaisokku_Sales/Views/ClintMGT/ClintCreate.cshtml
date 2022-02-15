@@ -1,0 +1,63 @@
+﻿@using Kaisokku_Common;
+@model ClintUser
+@{ Layout = null; }
+
+<form>
+
+
+    @if (Model != null)
+    {
+        @*@Html.Hidden("Id", Model.Id)*@
+       
+    <div class="form-group">
+        <input type="text" class="form-control" style="display:none" value="@Model.Id" id="clientid" aria-describedby="emailHelp">
+
+        <label for="ClintName">Client Name</label>
+        <input type="text" class="form-control" value="@Model.ClientName" id="ClintName" aria-describedby="emailHelp">
+        <p id="Cname" style="color:red;"></p>
+    </div>
+        <div class="form-group">
+            <label for="Website">Website</label>
+            <input type="text" class="form-control" value="@Model.Website" id="Website" aria-describedby="updatedby">
+            <p id="site" style="color:red;"></p>
+        </div>
+        <div class="form-group">
+            <label for="Description">Description</label>
+            <textarea class="form-control" value="" id="Description" aria-describedby="updatedby">@Model.Description</textarea>
+            <p id="des" style="color:red;"></p>
+        </div>
+        <div>
+            <img style="width: 30%;"  src="~/Images/@Model.Image" />
+            <input type="text"  style="display:none" for="Img" value="@Model.Image" id="Img" />
+        </div>
+        <div class="form-group">
+            <label for="Image">Image</label>
+            <input type="file" class="form-control" alt="" id="Image" multiple aria-describedby="updatedby">
+            <p id="upload" style="color:red;"></p>
+        </div>
+    }
+    else
+    {
+        <div class="form-group">
+            <label for="ClintName">Name</label>
+            <input type="text" class="form-control" id="ClintName" aria-describedby="emailHelp">
+            <p id="Cname" style="color:red;"></p>
+        </div>
+        <div class="form-group">
+            <label for="Website">Website</label>
+            <input type="text" class="form-control" id="Website" aria-describedby="updatedby">
+            <p id="site" style="color:red;"></p>
+        </div>
+        <div class="form-group">
+            <label for="Description">Description</label>
+            <textarea type="text" class="form-control" id="Description" aria-describedby="updatedby"></textarea>
+            <p id="des" style="color:red;"></p>
+        </div>
+        <div class="form-group">
+            <label for="Image">Image</label>
+            <input type="file" class="form-control" id="Image" multiple aria-describedby="updatedby">
+            <p id="upload" style="color:red;"></p>
+        </div>
+    }
+
+</form>

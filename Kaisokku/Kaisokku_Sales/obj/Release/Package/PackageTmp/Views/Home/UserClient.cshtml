@@ -1,0 +1,37 @@
+﻿@model IEnumerable<RPA_Common.ClintUser>
+
+
+@{
+    ViewBag.Title = "UserClient";
+}
+<style>
+    .alignment {
+        text-align: justify;
+    }
+
+    .clintalignment {
+        padding-left: 40px;
+        width: 400px;
+    }
+</style>
+@*<h2>@RPA_Sales.Resources.Resource.Client</h2>*@
+<table>
+    <tr>
+        @foreach (var result in Model)
+        {
+            <td class="clintalignment">
+                <span>
+
+                    <img src="~/Logo/@result.Image" />
+
+                </span>
+                <p>
+                    @result.Description
+                </p>
+
+
+            </td>
+        }
+    </tr>
+
+</table>

@@ -1,0 +1,54 @@
+﻿
+
+
+@using RPA_Common;
+@model Document
+@{ Layout = null; }
+
+<form>
+    @Html.Hidden("EditVideoId", Model.MediaID)
+    @Html.Hidden("VideoId")
+    <div class="form-group">
+        <label for="Title">Title</label>
+        <input type="text" class="form-control" id="EditVideoTitle" value="@Model.Title" aria-describedby="emailHelp">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+    </div>
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <input type="text" class="form-control" id="EditVideoDesc" value="@Model.Description" aria-describedby="updatedby">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+    </div>
+    <div class="form-group">
+        @Html.DropDownList("SelectDoc", TempData["SelectDoc"] as SelectList, "-Download Doc-", new { @onchange = "SelectedValue(this)" })
+        @{TempData.Keep("SelectDoc");}
+    </div>
+
+    @*<div class="form-group">
+            <label for="Description">Upload Video</label>
+            <div class="video-frame">
+                <video playsinline style="width:100%; height:10%;" controls="controls" controlsList="nodownload" id="myVideoOne">
+                    <source src="@Url.Content("~/Video/" + Model.Filename + "")" type="video/mp4" />
+
+                </video>
+            </div>
+        </div>*@
+
+</form>
+<script>
+
+    //To get selected value an text of dropdownlist
+    function SelectedValue(ddlObject)
+    {
+
+        //Selected value of dropdownlist
+        var selectedValue = ddlObject.value;
+        //Selected text of dropdownlist
+        var selectedText = ddlObject.options[ddlObject.selectedIndex].innerHTML;
+       var baseUrl = '@Url.Action("DownLoadDoc", "Home")';
+        location.href = baseUrl + '?doc=' + selectedText;
+    }
+    //$('#btndownload').click(function () {
+    //    debugger;
+
+
+</script>

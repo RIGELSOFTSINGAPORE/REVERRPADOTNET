@@ -1,0 +1,24 @@
+﻿@model List<RPA_Common.UserPageManagement>
+
+@foreach (var page in Model)
+{
+    <h2>@page.pagefilename</h2>
+
+    <div class="row">
+        <div class="col-md-4">
+            @Html.Label(@RPA_Sales.Resources.Resource.PageDescription)
+        </div>
+        <div class="col-md-4">
+            @page.pagedescription
+        </div>
+    </div>
+
+
+
+    <div id="testtest" style="border: 1px solid;">
+        @Html.Raw(page.pagecontent)
+
+    </div>
+}
+
+

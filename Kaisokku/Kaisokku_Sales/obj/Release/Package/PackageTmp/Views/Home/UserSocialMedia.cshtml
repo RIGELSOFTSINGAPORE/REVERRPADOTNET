@@ -1,0 +1,61 @@
+﻿
+@*@{
+    ViewBag.Title = "UserSocialMedia";
+}*@
+
+@*<style>
+    .imgtd {
+        width: 100px;
+        padding-left: 15px;
+        padding-top: 10px;
+    }
+</style>
+<h2 style="line-height: 36px; font-size: 24px; background:mediumpurple; border-radius: 6px;padding-left: 10px;">UserSocialMedia</h2>
+<table>
+    <tr>
+
+        <td class="imgtd">
+            <a href="https://www.facebook.com/kalamcentre/">
+                <img src="~/Logo/social media/facebook.png" />
+            </a>
+        </td>
+        <td class="imgtd">
+            <a href="https://www.instagram.com/abdulkalam_devotees">
+                <img src="~/Logo/social media/insta.png" />
+            </a>
+        </td>
+        <td class="imgtd">
+            <a href="https://twitter.com/OfficialKalam">
+                <img src="~/Logo/social media/twitter.png" />
+            </a>
+
+        </td>
+    </tr>
+</table>*@
+
+@model IEnumerable<RPA_Common.Social>
+@{
+    ViewBag.Title = "UserSocialMedia";
+}
+<style>
+    .imgtd {
+        width: 100px;
+        padding-left: 15px;
+        padding-top: 10px;
+    }
+</style>
+<h2>@RPA_Sales.Resources.Resource.SocialMedia</h2>
+<table>
+    <tr>
+        @foreach (var result in Model)
+        {
+            <td class="imgtd">
+                <span>
+                    <a href="@result.Url">
+                        <img src="~/images/@result.FileName" />
+                    </a>
+                </span>
+            </td>
+        }
+    </tr>
+</table>

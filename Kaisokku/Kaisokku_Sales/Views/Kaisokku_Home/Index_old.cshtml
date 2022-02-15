@@ -1,0 +1,1450 @@
+﻿
+@{
+    Layout = null;
+    var Pricedtl = ViewData["PriceInfo"] as IEnumerable<Kaisokku_Common.Pricemgt>;
+    var ClientInfo = ViewData["ClientInfo"] as IEnumerable<Kaisokku_Common.ClintUser>;
+    var DemoVideo = ViewData["DemoVideos"] as IEnumerable<Kaisokku_Common.tbl_Video>;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/dist/js/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>Kaisokku_Home</title>
+    <style>
+        body {
+            background: white;
+            color: black;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+        }
+
+        #nav a {
+            
+            font-weight: bold;
+        }
+
+        #footer a {
+            color: white;
+        }
+
+        a:focus, a:hover {
+            color: White;
+            text-decoration: none;
+        }
+
+        .contactForm {
+            margin-top: 70px;
+            padding: 35px;
+            background: white;
+            width: 80%;
+            position: absolute;
+            border-radius: 10px;
+            margin-left: 10%;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+
+        .LearmMore {
+            overflow: hidden;
+            height: 225px
+        }
+
+        footer {
+            width: 100%;
+            height: 550px;
+            left: 0px;
+            margin-top: 150px;
+            font-weight: bold;
+            background: #2e2e2e;
+        }
+
+        .shadow {
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+
+        .brands {
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            width: 95%;
+            height: 200px;
+            margin-left: 2.5%;
+            margin-top: -110px;
+            border-radius: 10px;
+            background: white;
+            position: absolute;
+        }
+
+        .navbar1 {
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            height: 70px;
+            background: white;
+            color: black;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+        .navbar {
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            height: 70px;
+            background: none;
+            color: white;
+          
+        }
+        .nava {
+            color: white;
+        }
+
+        .nava1 {
+            color: black;
+        }
+        .signin {
+            border: 1px solid;
+            border-radius: 25px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-top: 10px;
+
+        }
+
+        .LOGTEXT {
+            color: #949494;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .imgcontainer {
+            float: right;
+            background-image: url("~/assets/containter_Rectangle.png");
+        }
+
+        .imgcontainer1 {
+            background-image: url("~/assets/img/Group 243.jpg");
+        }
+
+        #imgcontainer h1 {
+            color: black;
+        }
+
+        #imgcontainer p {
+            color: black;
+            z-index: 1;
+        }
+
+        .demo {
+            color: white;
+            padding: 10px 25px;
+            border-radius: 20px;
+            background: #da291c;
+        }
+
+        .clintdiv {
+            background: #f6f4f5;
+            width: 100%;
+            text-align: center;
+           
+        }
+
+        .boxshadow {
+            width: 30%;
+            margin: 30px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            border-radius: 10px;
+            padding: 20px;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .pricediv {
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            margin-left: 20px;
+            width: 90%;
+        }
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        element.style {
+        }
+
+       /* #nav a {
+            color: white;
+            font-weight: bold;
+            padding: 15px 15px;
+            font-size: 17px;
+        }*/
+
+        .nav > li > a:focus, .nav > li > a:hover {
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        h1 {
+            font-weight: bold
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        div.text-container {
+            margin: 0 auto;
+            width: 75%;
+        }
+
+        .hideContent {
+            overflow: hidden;
+            line-height: 1em;
+            height: 2em;
+        }
+
+        .showContent {
+            line-height: 1em;
+            height: auto;
+        }
+
+        .showContent {
+            height: auto;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            padding: 10px 0;
+        }
+
+        .show-more {
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .slideshow-container {
+            position: relative;
+            background: #f1f1f1f1;
+        }
+
+        /* Slides */
+        .mySlides {
+            display: none;
+            padding: 80px;
+            text-align: center;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -30px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            position: absolute;
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.8);
+                color: white;
+            }
+
+        /* The dot/bullet/indicator container */
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: #ddd;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+            /* Add a background color to the active dot/circle */
+            .active, .dot:hover {
+                background-color: #717171;
+            }
+
+        /* Add an italic font style to all quotes */
+        q {
+            font-style: italic;
+        }
+
+        /* Add a blue color to the author */
+        .author {
+            color: cornflowerblue;
+        }
+
+        #btn-back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            z-index:5;
+        }
+        .mySlides {
+           
+        }
+        h1{
+            font-size:28px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <button type="button"
+            class="btn btn-danger btn-floating btn-lg"
+            id="btn-back-to-top">
+        <i class="fa fa-arrow-circle-up"></i>
+    </button>
+    <div>
+
+
+
+        <nav class="navbar" id="nav">
+            <div class="">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img style="margin-top: -12px;" src="~/assets/logo.jpg" />
+                    </a>
+                </div>
+                <div>
+                    <ul class="nav navbar-nav" style="float:right;margin-right: 50px;margin-top:10px;position: sticky;z-index: 1;">
+
+                        <li><a class="nava" id="nava" href="#About">About Us</a></li>
+                        <li><a class="nava" id="nava" href="#Services">Services</a></li>
+                        <li><a class="nava" id="nava" href="#Contact">Contact Us</a></li>
+
+                        <li><a class="nava signin" id="nava" href="@Url.Action("Index","Login")" style=" padding: 5px 25px;">Sign In</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="imgcontainer" style="background: white;min-height: 700px;margin-top:70px;">
+
+        <div>
+            <!-- <img style="width:700px;margin-top: 85px;margin-left: 590px;position: absolute;" src="~/assets/container_img (2).png"/>-->
+            <div class="col-sm-5">
+                <h1 style="color:black   ; margin-left: 10px;margin-top: 160px;">
+                    @* Robotic Process Automation*@
+                    @ViewBag.FirstH1
+                </h1>
+                <div style="margin-left: 10px;">
+                    @*RPA is s form of buisness process automation technology
+                        <br>
+                        based on software Robots*@
+
+                    @Html.Raw(ViewBag.Description1)
+
+                    <br>
+                    <br>
+                    <a class="demo" href="#Demo">
+                        Demo
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-sm-7 " style="padding:0">
+
+                <img style="margin-top:-75px;width:100%" src="~/assets/img/container_RPA.png" />
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="clintdiv">
+        <br />
+        <h1>
+            Clients/Partners
+            <br>
+            <br>
+        </h1>
+        @*@foreach (var item in ClientInfo)
+            {
+                if (File.Exists(Server.MapPath("~/Images/" + item.Image)))
+                {
+
+                    <img style="margin-right:110px" src="@Url.Content("~/Images/" + item.Image + "")">
+                }
+                else
+                {
+
+                    <img style="margin-right:200px" src="@Url.Content("~/img/Image not found_JP.png")">
+                }
+            }*@
+        <img src="~/assets/img/Group 224.jpg" />
+        <img style="margin-Left: 200px" src="~/assets/img/RLogic.png" />
+
+
+        <a herf="">
+
+
+
+        </a>
+        <a href="https://www.hayaai.com/" target="_blank"><img style="margin-Left:200px" src="~/assets/img/Hayaai.png" /></a>
+        <br>
+        <br>
+    </div>
+    <section id="About">
+        <div class="">
+
+            <div class="col-sm-6" style="padding:0px">
+                <img style="width:600px;" src="~/assets/img/RPA.png" />
+                <!--<img style="position: absolute;margin-left: -380px;margin-top: -58px;" src="~/assets/image_8-removebg-preview.png"/>-->
+            </div>
+            <div class="col-sm-5">
+                <h1 style="    margin-top: 70px;">
+                    @*RPA*@
+                    @ViewBag.FirstH2
+                </h1>
+                <img style="position: absolute; margin-left: 84%; margin-top: 225px; " src="~/assets/img/dots.png" />
+                <div>
+                    <div class="LearmMore">
+                        @Html.Raw(ViewBag.Description2)
+                    </div>
+                    @*Robotic process automation (RPA) is the application of technology that allows employees in a company to
+                        configure computer software or a “robot” to capture and interpret existing applications for processing a
+                        transaction, manipulating data, triggering responses and communicating with other digital systems.<br /><br />RPA
+                        systems develop the action list by watching the user perform that task in the application&#39;s
+                        graphical user interface (GUI), and then perform the automation by repeating those tasks directly in the
+                        GUI*@
+
+                    <br />
+                    <a class="demo" id="RPA0" onclick="Learnmore(RPA0)">
+                        Learn more
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <div style="    margin-top: 800px;">
+        <h2 style="text-align:center;font-weight:bold;">
+            Why RPA
+        </h2>
+
+        @*<img style="position: absolute;margin-left: 90%;margin-top: -56px;width: 130px;" src="~/assets/Ellipse 39.png" />*@
+        <img style="position: absolute;margin-top: -67px;margin-left: 89%;width: 141px;" src="~/assets/img/Ellipse.png" />
+        <div class="col-sm-4">
+            <br>
+            <img style="width:30px;  margin-left:17%;" src="~/assets/img/Mask Group-1.png" />
+            <label style="margin-left:15px;">
+                Distinct product for after sale
+            </label>
+            <br>
+            <br>
+            <br>
+            <img style="width:30px; margin-left:17%;" src="~/assets/img/Mask Group-2.png" />
+            <label style="margin-left:15px;">
+                Accuracy and timed reports
+            </label>
+            <br>
+            <br>
+            <br>
+            <img style="width:30px; margin-left:17%;" src="~/assets/img/Mask Group-3.png" />
+            <label style="margin-left:15px;">
+                Increased call volume
+            </label>
+        </div>
+        <div class="col-sm-4" style="text-align:center;">
+            <img style="margin-left:30px;" src="~/assets/img/Group 241.jpg" />
+        </div>
+        <div class="col-sm-4">
+            <br>
+
+            <img style="width:30px; margin-left:70px;" src="~/assets/img/Mask Group-5.png" />
+            <label style="margin-left:15px;">
+                KPI score achivement
+            </label>
+            <br>
+            <br>
+            <br>
+            <img style="width:30px;margin-left:70px;" src="~/assets/img/Mask Group.png" />
+            <label style="margin-left:15px;">
+                Hastle-Free installation
+            </label>
+            <br>
+            <br>
+            <br>
+            <img style="width:25px;margin-left:70px;" src="~/assets/img/Mask Group-4.png" />
+            <label style="margin-left:15px;">
+                Zero infrastructure
+            </label>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div>
+        <div class="col-sm-5">
+            <br />
+            <br />
+            <img style="width:100%" src="~/assets/img/Tecnology.png" />
+
+        </div>
+        <div class="col-sm-6">
+            <div style="margin-left:100px">
+                <br />
+                <br />
+                <h1 style="margin-top:200px;">
+                    @ViewBag.FirstH3
+                    @*Technology*@
+                </h1>
+                <p>
+                    @*Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text
+                        of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry.*@
+                    @Html.Raw(ViewBag.Description3)
+                </p>
+            </div>
+        </div>
+    </div>
+    <section id="Services">
+        <div style="margin-top:900px;height:800px">
+
+            <div class="col-sm-6">
+                <div style="margin-left:40px">
+                    <h1 style="margin-top:35px;">
+                        @*Product & Services*@
+                        @ViewBag.FirstH4
+                    </h1>
+
+                    <div class="LearmMore">
+                        @Html.Raw(ViewBag.Description4)
+                        @*Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text
+                            of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry.*@
+
+
+                    </div>
+                    <br>
+                    <a class="demo" id="Service1" onclick="Learnmore1(Service1)">
+                        Learn more
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="col-sm-6 boxshadow" style="margin-left:8%">
+
+                    <img style=" width:40px;text-align:center;    margin-left: 40%;" src="~/assets/image 11.png" />
+                    <br>
+                    <br>
+                    RPA offers improved services to processes that have a high probability of human error, thereby increasing accuracy.
+                    <br>
+                    <br>
+                </div>
+                <div class="col-sm-6 boxshadow">
+
+                    <img style=" width:40px;text-align:center;    margin-left: 40%;" src="~/assets/image 12.png" />
+                    <br>
+                    <br>
+
+                    Robotics is a safe, non-invasive technology that doesn’t interfere with the inherent systems
+                    <br>
+                    <br>
+                </div>
+                <div style="position: absolute;margin-top: 225px;margin-left: 70%;">
+                    <img src="~/assets/img/Dots.png" />
+                </div>
+                <div class="col-sm-6 boxshadow" style="margin-left: 15%;">
+                    <img style=" width:40px;text-align:center;    margin-left: 40%;" src="~/assets/image 13.png" />
+                    <br>
+                    <br>
+
+                    Having access to error-free, accurate data from various sources would improve the quality of analytics.
+                    <br>
+                    <br>
+                </div>
+                <div class="col-sm-6 boxshadow">
+
+                    <img style=" width:40px;text-align:center;    margin-left: 40%;" src="~/assets/image 14.png" />
+                    <br>
+                    <br>
+                    RPA ultimately facilitates humans and robots to do just what they excel at.
+                    <br>
+                    <br>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <section id="Demo">
+        <div>
+            @*<h1 style="    position: absolute;margin-left: 40%;color: white;"> RPA Demo</h1>*@
+
+            @*<img style="position:absolute;margin-top:300px;margin-left:10%;width:40px" src="~/assets/Frame 223.png" />
+            <img style="position:absolute;margin-top:300px;margin-left:82%;width:40px" src="~/assets/Frame 222.png" />
+            <img style="height: 650px;width:100%" src="~/assets/img/Group 243.jpg" />*@
+
+            <div>
+
+
+                @*<img style="position:absolute;margin-top:300px;margin-left:10%;width:40px" src="~/assets/Frame 223.png" />
+                <img style="position:absolute;margin-top:300px;margin-left:82%;width:40px" src="~/assets/Frame 222.png" />*@
+
+                @*<video playsinline style="width:50%; height:5%;margin-left:350px" controls="controls" controlsList="nodownload" id="myVideoOne">
+                    <source type="video/mp4" />
+
+                </video>*@
+
+                <div class="slideshow-container" style="background-color: #da291c;height:750px;z-index:1;">
+                    <br />
+                    <h1 style="position:absolute;margin-left:45%;color: white;"> RPA Demo</h1>
+
+                    <div style="position: absolute;margin-top: -110px;z-index:-1;">
+                        <img src="~/assets/img/RPA_demo-whitebox.png" />
+                    </div>
+
+                    <div style="position: absolute;margin-top:545px;margin-left:5%;z-index:-1;">
+
+
+                        <img src="~/assets/img/RPA_demo_Dots.png" />
+                    </div>
+                    <div style="float:right;z-index:-1;">
+                        <img src="~/assets/img/RPA_demo_circles.png" />
+                    </div>
+                    @foreach (var item in DemoVideo)
+                    {
+                        <div class="mySlides" style="position: absolute; width: 100%;">
+                            <video playsinline style="width: 80%;border-radius:15px " controls="controls" controlsList="nodownload" id="myVideoOne" onplay="PlayVideo()">
+                                <source src="@Url.Content("~/Video/" + item.Filename + "")" type="video/mp4" />
+
+                            </video>
+                            @*@Html.Hidden(item.MediaID.ToString());*@
+                            @Html.Hidden("hdnMediaID", item.MediaID.ToString());
+                        </div>
+                    }
+                    @*<div class="mySlides">
+            <video playsinline style="width: 80%; border-radius: 15px" controls="controls" controlsList="nodownload" id="myVideoOne">
+                <source src="~/Video/1052.mp4" type="video/mp4" />
+
+            </video>
+        </div>
+
+        <div class="mySlides">
+            <video playsinline style="width: 80%; border-radius: 15px" controls="controls" controlsList="nodownload" id="myVideoOne">
+                <source src="~/Video/3.mp4" type="video/mp4" />
+
+            </video>
+        </div>*@
+
+                    <a class="prev" onclick="plusSlides(-1)">  <img src="~/assets/img/Frame 223.png" /></a>
+                    <a class="next" onclick="plusSlides(1)"><img src="~/assets/img/Frame 222.png" /></a>
+
+                </div>
+
+                @*<div class="dot-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>*@
+
+            </div>
+        </div>
+    </section>
+    <div style="background:#f6f4f5; height:1050px;  margin-top: -20px;">
+        <br>
+        <br>
+        <br><br>
+        <h1 style="text-align:center">
+            Our Pricing plan
+        </h1>
+        <br>
+        <br>
+
+
+        @foreach (var item in Pricedtl)
+        {
+
+            <div class="col-sm-4 mySlides1" style="background: #f6f4f5;margin-top: -10px;">
+                <div class="pricediv">
+                    <div class="col-sm-7">
+
+                        <label>
+                            @item.product_name
+                        </label>
+                        <br>
+                        Most popular
+                    </div>
+                    <div class="col-sm-5">
+
+                        <div style="background:#e2e2e2;width:100%;    padding: 10px;border-radius:20px">
+                            <label style="font-size:24px">
+
+                                $@item.Price
+
+                            </label>
+                            <br>
+                            <label style="font-size:12px">
+                                @item.Validity
+                            </label>
+
+                        </div>
+                        <br> <br>
+                    </div>
+                    <br>
+                    <div style="border-top:2px solid #f6f4f5;    margin-top: 80px;">
+                        <br>
+                        <br>
+                        <img src="~/assets/Group 234.png" />
+                        <label>
+                            Support 24 * 7 online support
+                        </label>
+                        <br>
+                        <br>
+                        <img src="~/assets/Group 234.png" />
+                        <label>
+                            SMS Alert
+                        </label>
+                        <br>
+                        <br>
+                        <img src="~/assets/Group 234.png" />
+                        <label>
+                            Email  Alert
+                        </label>
+                        <br>
+                        <br>
+                        <img src="~/assets/Group 234.png" />
+                        <label>
+                            Web Interface
+                        </label>
+                        <br>
+                        <br>
+                        <img src="~/assets/Group 237.png" />
+                        <label>
+                            Customize Scheduler
+                        </label>
+
+                        <br>
+                        <br>
+                        <img src="~/assets/Group 237.png" />
+                        <label>
+                            Re Run (If any failures)
+                        </label>
+                        <br>
+                        <br>
+                        <img src="~/assets/Group 237.png" />
+                        <label>
+                            Store All reports for 12 Months
+                        </label><br>
+                        <br>
+                        <img src="~/assets/Group 237.png" />
+                        <label>
+                            KPI Auditing  Remote
+                        </label>
+                    </div>
+                    <div>
+                        <br>
+                        <br>
+                        <button style="color: black;padding: 15px 0;border-radius: 6px;background: #e2e2e2;font-weight: bold;width: 100%; border: none;">
+                            Get started
+                        </button>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+
+            </div>
+        }
+        @*<div class="col-sm-4 " style="background: #f6f4f5;margin-top: -10px;">
+                <div class="pricediv">
+                    <div class="col-sm-8">
+
+                        <label>
+                            Private Cloud
+                        </label>
+                        <br>
+                        Most popular
+                    </div>
+                    <div class="col-sm-4">
+                        <div style="background:#db291d;width:100%; color:white;     padding: 20px;border-radius:20px">
+                            <label style="font-size:24px">
+                                $0.00
+                            </label>
+                            <br>
+                            <label style="font-size:12px">
+                                per month
+                            </label>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div style="border-top:2px solid #f6f4f5;    margin-top: 80px;">
+                        <br>
+                        <br>
+                        <img src="~/assets/Group 234.png" />
+                        <label>
+                            Unlimited Updates and products
+                        </label>
+                        <br>
+
+
+                        <br>
+                        <img src="~/assets/Group 234.png" />
+                        <br>
+                        <br>
+                        <img src="~/assets/Group 234.png" />
+                        <br>
+                        <br>
+                        <img src="~/assets/Group 234.png" />
+                        <br>
+                        <br>
+                        <img src="~/assets/Group 237.png" />
+                        <br>
+                        <br>
+                        <img src="~/assets/Group 237.png" />
+                        <br>
+                        <br>
+                        <img src="~/assets/Group 237.png" />
+                    </div>
+                    <br>
+                    <br>
+
+                    <button style="color: white;padding: 15px 0;border-radius: 6px;background: #db291d;font-weight: bold;width: 100%; border: none;">
+                        Get started
+                    </button>
+                    <br>
+                    <br>
+                </div>
+                <br>
+                <br><br>
+                <br>
+                <br>
+                <br>
+                <br><br>
+                <br>
+
+            </div>
+            <div class="col-sm-4 " style="background: #f6f4f5;margin-top: -10px;">
+                <div class="pricediv">
+                    <div class="col-sm-8">
+
+                        <label>
+                            Premises
+                        </label>
+                        <br>
+                        Most popular
+                    </div>
+                    <div class="col-sm-4">
+                        <div style="background:#e2e2e2;width:100%;    padding: 20px;border-radius:20px">
+                            <label style="font-size:24px">
+                                $0.00
+                            </label>
+                            <br>
+                            <label style="font-size:12px">
+                                per month
+                            </label>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div style="border-top:2px solid #f6f4f5;    margin-top: 80px;">
+                        <br>
+                        <br>
+                        <img src="~/assets/Group 234.png" />
+                        <label>
+                            Unlimited Updates and products
+                        </label>
+                        <br>
+                        <br>
+                        <img src="~/assets/Group 234.png" />
+                        <br>
+                        <br>
+                        <img src="~/assets/Group 234.png" />
+                        <br>
+                        <br>
+                        <img src="~/assets/Group 234.png" />
+                        <br>
+                        <br>
+                        <img src="~/assets/Group 237.png" />
+                        <br>
+                        <br>
+                        <img src="~/assets/Group 237.png" />
+                        <br>
+                        <br>
+                        <img src="~/assets/Group 237.png" />
+                        <br>
+
+                    </div>
+                    <br>
+                    <br>
+                    <button style="color: black;padding: 15px 0;border-radius: 6px;background: #e2e2e2;font-weight: bold;width: 100%; border: none;">
+                        Get started
+                    </button>
+                    <br>
+                    <br>
+                </div>
+
+                <br>
+                <br><br>
+                <br>
+                <br>
+                <br>
+                <br><br>
+                <br>
+
+            </div>*@
+
+    </div>
+
+
+    <section id="Contact" class="ftco-section">
+        <div>
+            <img style="position: absolute;width: 250px;transform: rotate( 180deg);opacity: 0.15;margin-top: -147px;z-index: -2;" src="~/assets/Ellipse 39.png">
+
+            <img style=" position: absolute; width: 110px; transform: rotate( 180deg); margin-top: 190px; opacity: 0.15;" src="~/assets/Ellipse 39.png">
+
+        </div>
+        <div class="container">
+            <div class="row justify-content-center" style="margin-top:50px">
+                <div class="col-md-12 text-center mb-5">
+                    @*<h2 class="heading-section">Contact Us </h2>*@
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="wrapper">
+                        <div class="row no-gutters mb-5">
+                            <div class="col-md-6 d-flex align-items-stretch">
+                                <div style="margin-left:15%">
+                                    <h1>
+                                        Get In Touch
+                                    </h1>
+                                    <p>
+                                        We are have Processing the RPA (Robotic Process Automation) for your needs, the advice you
+                                        provide is highly expect to improve the quality to your
+                                        Comfort. stay connected to explore the RPA.
+                                    </p>
+
+
+                                    <div>
+                                        <div style="padding-left: 0px;" class="col-sm-1">
+                                            <br />
+                                            <img style="width:20px" src="~/assets/img/mail_outline_24px.png" />
+                                        </div>
+                                        <div class="col-sm-11">
+                                            <br />
+                                            kaisokku@support.com
+                                        </div>
+
+
+
+
+                                    </div>
+                                    <div>
+                                        <div style="padding-left: 0px;" class="col-sm-1">
+                                            <br />
+                                            <img style="width:20px" src="~/assets/img/place_24px.png" />
+                                        </div>
+                                        <div class="col-sm-11">
+                                            <br />
+                                            Inside the TOC Building,
+                                            7-22-17 Nishigotanda,  Shinagawa-ku, Tokyo 141-0031
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <div style="padding-left: 0px;" class="col-sm-1">
+
+                                            <br />
+                                            <img style="width:15px" src="~/assets/img/phone_iphone_24px.png" />
+                                        </div>
+                                        <div class="col-sm-11">
+                                            <br />
+                                            +65 0000000
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 ">
+                                <img style="float: right;margin-right: -15%;" src="~/assets/img/Dots.png">
+                                <div class="contact-wrap w-100 shadow p-md-5 p-4 contactform" style="margin-left:10%">
+
+                                    <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label-contact" for="name">Full Name</label>
+                                                    <input type="text" class="form-control" name="name" id="FUllName" placeholder="Name">
+                                                    <label style="color:red;font-size:14px" id="FName"></label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label-contact" for="email">Email ID</label>
+                                                    <input type="email" class="form-control" name="email" id="EmailID" placeholder="Email">
+                                                    <label style="color:red;font-size:14px" id="Email"></label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="label-contact" for="subject">Subject</label>
+                                                    <input type="text" class="form-control" name="subject" id="Subject" placeholder="Subject">
+                                                    <label style="color:red;font-size:14px" id="Sbj"></label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="label-contact" for="#">Message</label>
+                                                    <textarea name="message" class="form-control" id="Message" cols="30" rows="4" placeholder="Message"></textarea>
+                                                    <label style="color:red;font-size:14px" id="Msg"></label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <a style="background:#db291d;border:1px solid red" onclick="support()" class="btn btn-primary" id="support">Send Message</a>
+
+                                                    <div class="submitting"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <br />
+            <br />
+
+            <iframe src=" https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1621.6176532162235!2d139.71796825872195!3d35.6219252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ae5778c053f%3A0x97286e595380bcda!2z44Kw44Ot44O844OQ44Or44K944Oq44Ol44O844K344On44Oz44K144O844OT44K55qCq5byP5Lya56S-!5e0!3m2!1sen!2sin!4v1635411340417!5m2!1sen!2sin" style="width:100%;height:450px;border:0;" allowfullscreen="allow" loading="lazy"></iframe>
+
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="brands">
+            <h1 style="color:black;font-weight:bold; text-align:center">
+                BRANDS
+            </h1>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-sm-3 " style="text-align:center">
+                    <img src="~/assets/img/Group 225.png" />
+                </div>
+                <div class="col-sm-3 " style="text-align:center">
+                    <img src="~/assets/img/Group 221.png" />
+                </div>
+                <div class="col-sm-3 " style="text-align:center">
+                    <img src="~/assets/img/VOLTAS.png" />
+                </div>
+                <div class="col-sm-3 " style="text-align:center">
+                    <img style="margin-top:-25px;" src="~/assets/img/Group 220.png" />
+                </div>
+            </div>
+
+        </div>
+        <div class="" style="color:white">
+
+            <div class="footer-item">
+                <div class="footer-category">
+
+                    <div class="col-sm-10" style="margin-left:20px;">
+                        <br />
+                        <h1 style="margin-top: 100px;">KAISOKKU</h1>
+                        <div class="col-sm-6" style="padding:0;">
+                            <div>
+
+                                <br>
+                                <img style="margin-left: -7px;" src="~/assets/place.png" />
+                                <label >
+                                    Inside the TOC Building,
+                                </label>
+
+                                <br />
+                                <label style=" margin-left: 25px;">7-22-17 Nishigotanda, Shinagawa-ku,  </label> <br /> 
+                                <label  style=" margin-left: 25px;">Tokyo 141-0031 </label>
+</div>
+                            <div>
+                                <br>
+                                <img style="margin-left: -5px;" src="~/assets/mail.png" />
+                                kaisokku@support.com
+                                <br>
+
+
+                            </div>
+                            <div>
+                                <br>
+                                <img style="margin-left: -7px;" src="~/assets/stay_current_portrait_24px.png" />
+                                +65 0000000
+
+                                <br>
+                                <br>
+                                <br>
+                                <img src="~/assets/facebook.png" />
+                                <img style="margin-left:25px" src="~/assets/instagram.png" />
+                                <img style="margin-left:25px" src="~/assets/linkedin.png" />
+
+                            </div>
+                            <div>
+                                <p>
+
+                                </p>
+
+
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="#About">
+                                        <i class="icofont-simple-right"></i>
+                                        About US
+                                    </a>
+                                </li>
+                                <br />
+                                <li>
+                                    <a href="#">
+                                        <i class="icofont-simple-right"></i>
+                                        FAQs
+                                    </a>
+                                </li>
+                                <br>
+                                <li>
+                                    <a href="#">
+                                        <i class="icofont-simple-right"></i>
+                                        Terms and Conditions
+                                    </a>
+                                </li>
+                                <br>
+                                <li>
+                                    <a href="#">
+                                        <i class="icofont-simple-right"></i>
+                                        Privacy and Policy
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="col-sm-12" style="text-align:center;">
+                        
+                        © 2021 Copyright: kaisokku.All Rights Reserved
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <div class="modal fade" id="SucMSG" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                
+                <div class="modal-body ">
+                   <p id="MSG"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //$("#myVideoOne[" + slideIndex+"]").on("play", function (e) {
+        //    alert(e.target.currentTime);
+
+        //    //console.debug("Video paused. Current time of videoplay: " + e.target.currentTime);
+        //});
+        function PlayVideo() {
+            var slides = document.getElementsByClassName("mySlides");
+            //alert(slides[slideIndex - 1].children[1].value);
+            //alert(slideIndex);
+            var mediaID = slides[slideIndex - 1].children[1].value;
+            $.ajax({
+                    url: '@Url.Action("UpdateVideoCount", "Home")',
+                    type: 'POST',
+                data: { 'VideoId': mediaID },
+                    success: function (result) {
+                        //debugger;
+                       // $('#lblvisitorcount').text(result)
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+
+                });
+        }
+        function Learnmore(Id) {
+
+            var id1 = Id
+            var text = $(id1).text();
+            var lastChar = id1[id1.length - 1];
+            if (text == "Learn Less") {
+                var element = document.getElementsByClassName('LearmMore')[0];
+                $(id1).text("Learn More");
+                console.log(element.style);
+                element.style.height = "225px";
+            }
+            else {
+                var element = document.getElementsByClassName('LearmMore')[0];
+                $(id1).text("Learn Less");
+                console.log(element.style);
+                element.style.height = "Auto";
+
+            }
+
+        }
+        function Learnmore1(Id) {
+
+            var id1 = Id
+            var text = $(id1).text();
+
+            if (text == "Learn Less") {
+                var element = document.getElementsByClassName('LearmMore')[1];
+                $(id1).text("Learn More");
+                console.log(element.style);
+                element.style.height = "220px";
+            }
+            else {
+                var element = document.getElementsByClassName('LearmMore')[1];
+                $(id1).text("Learn Less");
+                console.log(element.style);
+                element.style.height = "Auto";
+
+            }
+
+        }
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            //var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                //$("myVideoOne[" + i + "]").prop('muted', true);
+                //slides[i].children[0].children[0].muted = true;
+                slides[i].children[0].muted = true;
+                //slides[i].muted = true;
+            }
+            //for (i = 0; i < dots.length; i++) {
+            //    dots[i].className = dots[i].className.replace(" active", "");
+            //}
+            slides[slideIndex - 1].style.display = "block";
+            //slides[slideIndex - 1].children[0].children[0].muted = false;
+            slides[slideIndex - 1].children[0].muted = false;
+            slides[slideIndex - 1].children[0].currentTime = 0;
+            slides[slideIndex - 1].children[0].pause();
+            //slides[slideIndex - 1].muted = true;
+            //for (i = 0; i < slides.length; i++) {
+            //    var vid = document.getElementById("myVideoOne")[i]
+            //    vid.muted = true;
+            //    if (n == i) {
+            //        vid.muted = false;
+            //    }
+            //    //slides[i].style.display = "none";
+            //    //slides[i].muted = true;
+            //}
+            //dots[slideIndex - 1].className += " active";
+        }
+        function support()
+         {
+
+            var FUllName = $('#FUllName').val();
+            if (FUllName == "") {
+                $(FName).text("*Enter the name");
+                return false;
+            }
+            else {
+                $(FName).text("")
+            }
+            var EmailID = $('#EmailID').val();
+            if (EmailID == "") {
+                $(Email).text("*Enter the Email ID");
+                return;
+            }
+            else {
+                $(Email).text("");
+            }
+            var Subject = $('#Subject').val();
+            if (Subject == "") {
+                $(Sbj).text("*Enter the Subject");
+                return;
+            }
+            else {
+                $(Sbj).text("");
+            }
+            var Message = $('#Message').val();
+            if (Message == "") {
+                $(Msg).text("Enter the Message");
+                return;
+            }
+            else {
+                $(Msg).text("");
+            }
+            var dataobj = { 'FUllName': FUllName, 'EmailID': EmailID, 'Subject': Subject, 'Message': Message };
+
+            $.ajax({
+
+    url: '@Url.Action("ContactUs", "Kaisokku_Home")',
+    type: 'POST',
+    data: dataobj,
+    success: function (result) {
+
+        if (result.errorcode == 0)
+        {
+
+            $("FUllName").val("");
+            $('#EmailID').val("");
+            $('#Subject').val("");
+            $("#Message").val("");
+            alert('Feedback Submitted succesfully');
+            $('#MSG').val("Feedback Submitted succesfully")
+
+            msgfun();
+
+        }
+        else
+        {
+
+            $("FUllName").val("");
+            $('#EmailID').val("");
+            $('#Subject').val("");
+            $("#Message").val("");
+            alert('Feedback Submitted succesfully');
+            $('#MSG').val("Feedback Failed to submitted")
+
+            //msgfun();
+        }
+   },
+
+   error: function (error)
+   {
+    console.log(error);
+   }
+
+   });
+        }
+
+        //Get the button
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+
+        function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                if (scroll > 200) {
+                    $('#nav').removeClass('navbar').addClass('navbar1');
+                   /* $('#nava').removeClass('nava').addClass('nava1');*/
+                    //$(".navbar").css("background", "#fff", "color", "Black");
+
+                    $(".nava").css("color", "Black");
+                }
+
+                else {
+                    $('#nav').removeClass('navbar1').addClass('navbar');
+                  /*  $('#nava').removeClass('nava1').addClass('nava');*/
+                    //$(".navbar").css("background", "none");
+
+                    $(".nava").css("color", "White");
+                }
+            })
+        })
+        //var slideIndex = 1;
+        //showDivs(slideIndex);
+
+        //function plusDivs(n) {
+        //    showDivs(slideIndex += n);
+        //}
+
+        //function showDivs(n) {
+        //    var i;
+        //    var x = document.getElementsByClassName("mySlides1");
+        //    if (n > x.length) { slideIndex = 1 }
+        //    if (n < 1) { slideIndex = x.length }
+        //    for (i = 0; i < x.length; i++) {
+        //        x[i].style.display = "block";
+        //    }
+        //    x[slideIndex - 1].style.display = "block";
+        //}
+        function msgfun() {
+            debugger;
+            $('#SucMSG').modal('show');
+            $("#SucMSG").modal('show');
+        }
+    </script>
+
+
+</body>
+</html>

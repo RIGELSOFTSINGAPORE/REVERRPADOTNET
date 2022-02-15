@@ -1,0 +1,47 @@
+﻿@using RPA_Common;
+@using System.Collections.Generic;
+@model EditCRMDetails
+@{ Layout = null; }
+
+<form>
+    @Html.Hidden("EditCRMId", Model.UserCustomId)
+    <div class="form-group">
+        <label for="ContactName"> @RPA_Sales.Resources.Resource.ContactName</label>
+        <input type="text" class="form-control" id="EditContactName" value="@Model.ContactName" aria-describedby="emailHelp">
+
+    </div>
+    <div class="form-group">
+        <label for="CompanyName"> @RPA_Sales.Resources.Resource.CompanyName</label>
+        <input type="text" class="form-control" id="EditCompanyName" value="@Model.CompanyName" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+        <label for="Email"> @RPA_Sales.Resources.Resource.Email</label>
+        <input type="text" class="form-control" id="EditEmail" value="@Model.Email" aria-describedby="emailHelp">
+    </div>
+
+    @*<div class="form-group">
+        <label for="Email">Customer Type</label>
+        <input type="text" class="form-control" id="EditEmail" value="@Model.Email" aria-describedby="emailHelp">
+        @{
+            var listItems = new List<SelectListItem>();
+            listItems.Add(new SelectListItem { Text = "Existing Customer", Value = "1" });
+            listItems.Add(new SelectListItem { Text = "General Cusotmer", Value = "2" });
+            @Html.DropDownListFor(m => m.CustomerType, listItems, listItems[Model.CustomerType - 1].Selected = true);
+        }
+
+
+    </div>*@
+
+
+
+
+
+
+
+    @*<div class="form-group">
+        <label for="Active">Active</label>
+        @Html.CheckBoxFor(m => m.Active)
+
+    </div>*@
+
+</form>

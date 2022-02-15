@@ -1,0 +1,40 @@
+﻿@using RPA_Common;
+@using System.Collections.Generic;
+@model EditUserDetails
+@{ Layout = null; }
+
+<form>
+    @Html.Hidden("EditUserId", Model.UserMasterId)
+    <div class="form-group">
+        <label for="UserName">@RPA_Sales.Resources.Resource.Username</label>
+        <input type="text" class="form-control" id="EditUserName" value="@Model.UserName" aria-describedby="emailHelp">
+
+    </div>
+    <div class="form-group">
+        <label for="Password">@RPA_Sales.Resources.Resource.Password</label>
+        <input type="text" class="form-control" id="EditPassword" value="@Model.Password" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+        <label for="Email">@RPA_Sales.Resources.Resource.Email</label>
+        <input type="text" class="form-control" id="EditEmail" value="@Model.Email" aria-describedby="emailHelp">
+    </div>
+
+    <div class="form-group">
+        <label for="Email">@RPA_Sales.Resources.Resource.CustomerType</label>
+        @*<input type="text" class="form-control" id="EditEmail" value="@Model.Email" aria-describedby="emailHelp">*@
+        @{
+            var listItems = new List<SelectListItem>();
+            listItems.Add(new SelectListItem { Text = "Existing Customer", Value = "1" });
+            listItems.Add(new SelectListItem { Text = "General Cusotmer", Value = "2" });
+            @Html.DropDownListFor(m => m.CustomerType, listItems, listItems[Model.CustomerType - 1].Selected = true);
+        }
+    </div>
+    <div class="form-group">
+        <label for="Active">@RPA_Sales.Resources.Resource.Active</label>
+        @Html.CheckBoxFor(m => m.Active)
+    </div>
+    <div class="form-group">
+        <label for="ClientUser">@RPA_Sales.Resources.Resource.ClientUser</label>
+        @Html.CheckBoxFor(m => m.Client)
+    </div>
+</form>

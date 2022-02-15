@@ -1,0 +1,792 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active" xml:space="preserve">
+    <value>アクティブ</value>
+  </data>
+  <data name="ActivityManagement" xml:space="preserve">
+    <value>活動管理</value>
+  </data>
+  <data name="AdminPanel" xml:space="preserve">
+    <value>アドミンパネル</value>
+  </data>
+  <data name="AllRightsReserved" xml:space="preserve">
+    <value>全著作権所有</value>
+  </data>
+  <data name="Approve" xml:space="preserve">
+    <value>承認する</value>
+  </data>
+  <data name="ApprovedBy" xml:space="preserve">
+    <value>によって承認された</value>
+  </data>
+  <data name="ApproveUpdatedSuccessfully" xml:space="preserve">
+    <value>更新が正常に承認されました</value>
+  </data>
+  <data name="ApproveUpdationFailed" xml:space="preserve">
+    <value>更新の承認に失敗しました</value>
+  </data>
+  <data name="Areyousuretodeletepage" xml:space="preserve">
+    <value>ページを削除してもよろしいですか？</value>
+  </data>
+  <data name="Areyousuretodeleteuser" xml:space="preserve">
+    <value>ユーザーを削除してもよろしいですか？</value>
+  </data>
+  <data name="AreyousureyouwanttodeleteImage" xml:space="preserve">
+    <value>画像を削除してもよろしいですか？</value>
+  </data>
+  <data name="Areyousureyouwanttodeletemenu" xml:space="preserve">
+    <value>メニューを削除してもよろしいですか？</value>
+  </data>
+  <data name="AreyousureyouwanttodeletePPT" xml:space="preserve">
+    <value>PPTを削除してもよろしいですか？</value>
+  </data>
+  <data name="AreyousureyouwanttodeletetheTask" xml:space="preserve">
+    <value>タスクを削除してもよろしいですか？</value>
+  </data>
+  <data name="AreyousureyouwanttodeleteVideo" xml:space="preserve">
+    <value>ビデオを削除してもよろしいですか？</value>
+  </data>
+  <data name="AssignTo" xml:space="preserve">
+    <value>に割り当てます</value>
+  </data>
+  <data name="CC" xml:space="preserve">
+    <value>CC</value>
+  </data>
+  <data name="Client" xml:space="preserve">
+    <value>クライアント</value>
+  </data>
+  <data name="Clint" xml:space="preserve">
+    <value>クリント</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>コメント</value>
+  </data>
+  <data name="comments" xml:space="preserve">
+    <value>コメント</value>
+  </data>
+  <data name="CommentsUpdatedSuccessfully" xml:space="preserve">
+    <value>コメントが正常に更新されました</value>
+  </data>
+  <data name="CommentsUpdationFailed" xml:space="preserve">
+    <value>コメントの更新に失敗しました</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>お問い合わせ</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>カウント</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>によって作成された</value>
+  </data>
+  <data name="CreatedDate" xml:space="preserve">
+    <value>作成日</value>
+  </data>
+  <data name="CreateMenu" xml:space="preserve">
+    <value>メニューを作成</value>
+  </data>
+  <data name="CreateNewImages" xml:space="preserve">
+    <value>新しい画像を作成する</value>
+  </data>
+  <data name="CreateNewPPT" xml:space="preserve">
+    <value>新しいPPTを作成</value>
+  </data>
+  <data name="CreateNewTask" xml:space="preserve">
+    <value>新しいタスクを作成</value>
+  </data>
+  <data name="CreateNewVideo" xml:space="preserve">
+    <value>新しいビデオを作成する</value>
+  </data>
+  <data name="CreatePPT" xml:space="preserve">
+    <value>PPTを作成する</value>
+  </data>
+  <data name="CreateTask" xml:space="preserve">
+    <value>タスクを作成</value>
+  </data>
+  <data name="CreateUploadImage" xml:space="preserve">
+    <value>アップロード画像を作成</value>
+  </data>
+  <data name="CreateVideo" xml:space="preserve">
+    <value>ビデオを作ろう</value>
+  </data>
+  <data name="CRM" xml:space="preserve">
+    <value>CRM</value>
+  </data>
+  <data name="CustomerType" xml:space="preserve">
+    <value>顧客タイプ</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>ダッシュボード</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>デリート</value>
+  </data>
+  <data name="DeleteImage" xml:space="preserve">
+    <value>画像を削除</value>
+  </data>
+  <data name="DeleteMenu" xml:space="preserve">
+    <value>メニューを削除</value>
+  </data>
+  <data name="DeletePage" xml:space="preserve">
+    <value>ページを削除</value>
+  </data>
+  <data name="DeletePPT" xml:space="preserve">
+    <value>PPTを削除</value>
+  </data>
+  <data name="DeleteTask" xml:space="preserve">
+    <value>タスクを削除</value>
+  </data>
+  <data name="DeleteUser" xml:space="preserve">
+    <value>ユーザーを削除</value>
+  </data>
+  <data name="DeleteVideo" xml:space="preserve">
+    <value>ビデオを削除</value>
+  </data>
+  <data name="demovideo" xml:space="preserve">
+    <value>デモビデオ</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>叙述</value>
+  </data>
+  <data name="DownloadPPT" xml:space="preserve">
+    <value>PPTをダウンロード</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>エディット</value>
+  </data>
+  <data name="EditImage" xml:space="preserve">
+    <value>画像を編集</value>
+  </data>
+  <data name="EditMenu" xml:space="preserve">
+    <value>編集メニュー</value>
+  </data>
+  <data name="EditPPT" xml:space="preserve">
+    <value>PPTを編集</value>
+  </data>
+  <data name="EditTask" xml:space="preserve">
+    <value>タスクを編集</value>
+  </data>
+  <data name="EditUser" xml:space="preserve">
+    <value>ユーザーを編集</value>
+  </data>
+  <data name="EditVideo" xml:space="preserve">
+    <value>ビデオを編集</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Eメール</value>
+  </data>
+  <data name="EmailTo" xml:space="preserve">
+    <value>にメールする</value>
+  </data>
+  <data name="Enddate" xml:space="preserve">
+    <value>終了日</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>英語</value>
+  </data>
+  <data name="entries" xml:space="preserve">
+    <value>エントリー</value>
+  </data>
+  <data name="ExistingCustomer" xml:space="preserve">
+    <value>既存のお客様</value>
+  </data>
+  <data name="ExporttoCSV" xml:space="preserve">
+    <value>CSVにエクスポート</value>
+  </data>
+  <data name="ExporttoExcel" xml:space="preserve">
+    <value>Excelにエクスポート</value>
+  </data>
+  <data name="ExporttoPDF" xml:space="preserve">
+    <value>PDFにエクスポート</value>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>ファイル名</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>フォント</value>
+  </data>
+  <data name="Forgotten" xml:space="preserve">
+    <value>忘れられた</value>
+  </data>
+  <data name="Forgottenpassword" xml:space="preserve">
+    <value>パスワードを忘れましたか</value>
+  </data>
+  <data name="GeneralCustomer" xml:space="preserve">
+    <value>一般のお客様</value>
+  </data>
+  <data name="GenerateReport" xml:space="preserve">
+    <value>レポートを生成</value>
+  </data>
+  <data name="GetnewPassword" xml:space="preserve">
+    <value>新しいパスワードを取得</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>ホーム</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>画像</value>
+  </data>
+  <data name="ImageCreationFailed" xml:space="preserve">
+    <value>画像の作成に失敗しました。</value>
+  </data>
+  <data name="ImageDeletedSuccessfully" xml:space="preserve">
+    <value>画像が正常に削除されました</value>
+  </data>
+  <data name="ImageDeletionFailed" xml:space="preserve">
+    <value>画像の削除に失敗しました。</value>
+  </data>
+  <data name="ImageUploadSuccessfully" xml:space="preserve">
+    <value>画像が正常にアップロードされました</value>
+  </data>
+  <data name="IpAddress" xml:space="preserve">
+    <value>IPアドレス</value>
+  </data>
+  <data name="IsActive" xml:space="preserve">
+    <value>アクティブです</value>
+  </data>
+  <data name="IsApproved" xml:space="preserve">
+    <value>承認済み</value>
+  </data>
+  <data name="Japanese" xml:space="preserve">
+    <value>日本語</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>言語</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>ログイン</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>ログアウト</value>
+  </data>
+  <data name="ManageComments" xml:space="preserve">
+    <value>マネージャーコメント</value>
+  </data>
+  <data name="ManageVideos" xml:space="preserve">
+    <value>ビデオを管理する</value>
+  </data>
+  <data name="MenuAddesSuccessfully" xml:space="preserve">
+    <value>メニューが正常に追加されました</value>
+  </data>
+  <data name="MenuDeletionFailed" xml:space="preserve">
+    <value>メニューの削除に失敗しました。</value>
+  </data>
+  <data name="MenuId" xml:space="preserve">
+    <value>メニューID</value>
+  </data>
+  <data name="MenuManagement" xml:space="preserve">
+    <value>メニュー管理</value>
+  </data>
+  <data name="MenuName" xml:space="preserve">
+    <value>メニュー名</value>
+  </data>
+  <data name="MenuUpdatedSuccessfully" xml:space="preserve">
+    <value>メニューが正常に更新されました</value>
+  </data>
+  <data name="MenuUpdationFailed" xml:space="preserve">
+    <value>メニューの更新に失敗しました。</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>名前</value>
+  </data>
+  <data name="next" xml:space="preserve">
+    <value>次</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>いいえ</value>
+  </data>
+  <data name="Nofilechosen" xml:space="preserve">
+    <value>ファイルが選択されていません</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>の</value>
+  </data>
+  <data name="PageDeletedSuccessfully" xml:space="preserve">
+    <value>ページが正常に削除されました</value>
+  </data>
+  <data name="PageDeletionFailed" xml:space="preserve">
+    <value>ページの削除に失敗しました。</value>
+  </data>
+  <data name="PageDescription" xml:space="preserve">
+    <value>ページの説明</value>
+  </data>
+  <data name="PageManagement" xml:space="preserve">
+    <value>ページ管理</value>
+  </data>
+  <data name="PageSavedSuccessfully" xml:space="preserve">
+    <value>ページが正常に保存されました。</value>
+  </data>
+  <data name="PageSaveFailed" xml:space="preserve">
+    <value>ページの保存に失敗しました</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>パスワード</value>
+  </data>
+  <data name="phoneno" xml:space="preserve">
+    <value>電話番号</value>
+  </data>
+  <data name="PPTCreatedSuccessfully" xml:space="preserve">
+    <value>PPTが正常に作成されました</value>
+  </data>
+  <data name="PPTCreationFailed" xml:space="preserve">
+    <value>PPTの作成に失敗しました。</value>
+  </data>
+  <data name="PPTDeletedSuccessfully" xml:space="preserve">
+    <value>PPTが正常に削除されました</value>
+  </data>
+  <data name="PPTDeletionFailed" xml:space="preserve">
+    <value>PPTの削除に失敗しました。</value>
+  </data>
+  <data name="PPTList" xml:space="preserve">
+    <value>PPTリスト</value>
+  </data>
+  <data name="PPTManagement" xml:space="preserve">
+    <value>PPT管理</value>
+  </data>
+  <data name="Presentation" xml:space="preserve">
+    <value>プレゼンテーション</value>
+  </data>
+  <data name="previous" xml:space="preserve">
+    <value>前</value>
+  </data>
+  <data name="records" xml:space="preserve">
+    <value>記録</value>
+  </data>
+  <data name="RegisteredTaskExport" xml:space="preserve">
+    <value>登録されたタスクのエクスポート</value>
+  </data>
+  <data name="RegisteredTaskReport" xml:space="preserve">
+    <value>登録されたタスクレポート</value>
+  </data>
+  <data name="Reject" xml:space="preserve">
+    <value>拒否する</value>
+  </data>
+  <data name="RejectedUpdationSuccessfully" xml:space="preserve">
+    <value>更新が拒否されました</value>
+  </data>
+  <data name="RejectUpdationFailed" xml:space="preserve">
+    <value>更新の拒否に失敗しました</value>
+  </data>
+  <data name="Rememberme" xml:space="preserve">
+    <value>私を覚えて</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>報告書</value>
+  </data>
+  <data name="kaisokkuSampleReport" xml:space="preserve">
+    <value>kaisokkuサンプルレポート</value>
+  </data>
+  <data name="kaisokkuSampleReports" xml:space="preserve">
+    <value>kaisokkuサンプルレポート</value>
+  </data>
+  <data name="kaisokkuSampleReports1" xml:space="preserve">
+    <value>ファイル</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>変更内容を保存</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>探す</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>選択する</value>
+  </data>
+  <data name="SelectCustomer" xml:space="preserve">
+    <value>顧客を選択</value>
+  </data>
+  <data name="SelectOption" xml:space="preserve">
+    <value>オプションを選択</value>
+  </data>
+  <data name="SelectVideo" xml:space="preserve">
+    <value>ビデオを選択</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>送る</value>
+  </data>
+  <data name="SenderFrom" xml:space="preserve">
+    <value>から、送信者</value>
+  </data>
+  <data name="SerialNo" xml:space="preserve">
+    <value>シリアル番号</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>示す</value>
+  </data>
+  <data name="SocialMedia" xml:space="preserve">
+    <value>ソーシャルメディア</value>
+  </data>
+  <data name="Startdate" xml:space="preserve">
+    <value>開始日</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>件名</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>提出します</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>成功！</value>
+  </data>
+  <data name="TaskCreatedSuccessfully" xml:space="preserve">
+    <value>タスクが正常に作成されました</value>
+  </data>
+  <data name="TaskCreationFailed" xml:space="preserve">
+    <value>タスクの作成に失敗しました。</value>
+  </data>
+  <data name="TaskDeletedSuccessfully" xml:space="preserve">
+    <value>タスクが正常に削除されました</value>
+  </data>
+  <data name="TaskDeletionFailed" xml:space="preserve">
+    <value>タスクの削除に失敗しました。</value>
+  </data>
+  <data name="TaskManagement" xml:space="preserve">
+    <value>タスク管理</value>
+  </data>
+  <data name="TaskUpdatedSuccessfully" xml:space="preserve">
+    <value>タスクが正常に更新されました</value>
+  </data>
+  <data name="TaskUpdationFailed" xml:space="preserve">
+    <value>タスクの更新に失敗しました。</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>タイトル</value>
+  </data>
+  <data name="to" xml:space="preserve">
+    <value>に</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>タイプ</value>
+  </data>
+  <data name="UpdatedBy" xml:space="preserve">
+    <value>によって更新</value>
+  </data>
+  <data name="UploadIcon" xml:space="preserve">
+    <value>アップロードアイコン</value>
+  </data>
+  <data name="UploadImage" xml:space="preserve">
+    <value>画像をアップロード</value>
+  </data>
+  <data name="UploadImages" xml:space="preserve">
+    <value>画像をアップロードする</value>
+  </data>
+  <data name="UploadPPT" xml:space="preserve">
+    <value>PPTをアップロード</value>
+  </data>
+  <data name="UploadVideo" xml:space="preserve">
+    <value>ビデオをアップロード</value>
+  </data>
+  <data name="URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="UserComments" xml:space="preserve">
+    <value>ユーザーのコメント</value>
+  </data>
+  <data name="UserDeletedSuccessfully" xml:space="preserve">
+    <value>ユーザーが正常に削除されました</value>
+  </data>
+  <data name="UserDeletionFailed" xml:space="preserve">
+    <value>ユーザーの削除に失敗しました</value>
+  </data>
+  <data name="UserId" xml:space="preserve">
+    <value>ユーザーID</value>
+  </data>
+  <data name="UserManagement" xml:space="preserve">
+    <value>ユーザー管理</value>
+  </data>
+  <data name="UserMenu" xml:space="preserve">
+    <value>ユーザーメニュー</value>
+  </data>
+  <data name="UserMenu1" xml:space="preserve">
+    <value>ユーザーメニュー</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>ユーザー名</value>
+  </data>
+  <data name="UserPowerPointpresentation" xml:space="preserve">
+    <value>ユーザーパワーポイントのプレゼンテーション</value>
+  </data>
+  <data name="UserSavedSuccessfully" xml:space="preserve">
+    <value>ユーザーが正常に保存されました</value>
+  </data>
+  <data name="UserSaveFailed" xml:space="preserve">
+    <value>ユーザーの保存に失敗しました</value>
+  </data>
+  <data name="UsersImages" xml:space="preserve">
+    <value>ユーザー画像</value>
+  </data>
+  <data name="UserUpdatedSuccessfully" xml:space="preserve">
+    <value>ユーザーが更新されました</value>
+  </data>
+  <data name="UserUpdationFailed" xml:space="preserve">
+    <value>ユーザーの更新に失敗しました</value>
+  </data>
+  <data name="UserVideo" xml:space="preserve">
+    <value>ユーザービデオ</value>
+  </data>
+  <data name="Video" xml:space="preserve">
+    <value>ビデオ</value>
+  </data>
+  <data name="VideoComments" xml:space="preserve">
+    <value>ビデオコメント</value>
+  </data>
+  <data name="VideoCreatedSuccessfully" xml:space="preserve">
+    <value>動画が正常に作成されました</value>
+  </data>
+  <data name="VideoDeletedSuccessfully" xml:space="preserve">
+    <value>ビデオが正常に削除されました</value>
+  </data>
+  <data name="VideoDeletionFailed" xml:space="preserve">
+    <value>ビデオの削除に失敗しました</value>
+  </data>
+  <data name="VideoList" xml:space="preserve">
+    <value>ビデオリスト</value>
+  </data>
+  <data name="VideoManagement" xml:space="preserve">
+    <value>ビデオ管理</value>
+  </data>
+  <data name="VideoName" xml:space="preserve">
+    <value>ビデオ名</value>
+  </data>
+  <data name="VideoUpdatedSuccessfully" xml:space="preserve">
+    <value>ビデオが正常に更新されました</value>
+  </data>
+  <data name="VideoUpdationFailed" xml:space="preserve">
+    <value>ビデオの更新に失敗しました</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>ビュー</value>
+  </data>
+  <data name="ViewCount" xml:space="preserve">
+    <value>ビューカウント</value>
+  </data>
+  <data name="ViewImage" xml:space="preserve">
+    <value>画像を見る</value>
+  </data>
+  <data name="ViewLogHistory" xml:space="preserve">
+    <value>ログ履歴を表示</value>
+  </data>
+  <data name="ViewPPT" xml:space="preserve">
+    <value>PPTを表示</value>
+  </data>
+  <data name="ViewVideo" xml:space="preserve">
+    <value>ビデオを見る</value>
+  </data>
+  <data name="VisitedDate" xml:space="preserve">
+    <value>訪問日</value>
+  </data>
+  <data name="VisitedName" xml:space="preserve">
+    <value>訪問した名前</value>
+  </data>
+  <data name="VisitorName" xml:space="preserve">
+    <value>訪問者名</value>
+  </data>
+  <data name="VisitorsCount" xml:space="preserve">
+    <value>訪問者数</value>
+  </data>
+  <data name="WelcometoGSS" xml:space="preserve">
+    <value>GSSへようこそ</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>はい</value>
+  </data>
+  <data name="PreviewImage" xml:space="preserve">
+    <value>プレビュー画像</value>
+  </data>
+  <data name="areyousuretodeleeDocument" xml:space="preserve">
+    <value>ドキュメントを削除してもよろしいですか？</value>
+  </data>
+  <data name="ClientUser" xml:space="preserve">
+    <value>クライアント/ユーザー</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>会社名</value>
+  </data>
+  <data name="ContactName" xml:space="preserve">
+    <value>連絡先</value>
+  </data>
+  <data name="CreateDocument" xml:space="preserve">
+    <value>ドキュメントを作成</value>
+  </data>
+  <data name="CRMContact" xml:space="preserve">
+    <value>CRM連絡先</value>
+  </data>
+  <data name="DeleteCRM" xml:space="preserve">
+    <value>CRMを削除</value>
+  </data>
+  <data name="DeleteDocument" xml:space="preserve">
+    <value>ドキュメントを削除</value>
+  </data>
+  <data name="DocumentCreatedSuccessfully" xml:space="preserve">
+    <value>ドキュメントが正常に作成されました.</value>
+  </data>
+  <data name="DocumentCreationFailed" xml:space="preserve">
+    <value>ドキュメントの作成に失敗しました。</value>
+  </data>
+  <data name="DocumentDeletedSuccessfully" xml:space="preserve">
+    <value>ドキュメントは正常に削除されました。</value>
+  </data>
+  <data name="DocumentDeletionFailed" xml:space="preserve">
+    <value>ドキュメントの削除に失敗しました</value>
+  </data>
+  <data name="DocumenteletedSuccessfully" xml:space="preserve">
+    <value>ドキュメントが正常に削除されました.</value>
+  </data>
+  <data name="DocumentList" xml:space="preserve">
+    <value>ドキュメントリスト</value>
+  </data>
+  <data name="DocumentManagement" xml:space="preserve">
+    <value>文書管理</value>
+  </data>
+  <data name="DocumentUpdationFailed" xml:space="preserve">
+    <value>ドキュメントの更新に失敗しました.</value>
+  </data>
+  <data name="EditDocument" xml:space="preserve">
+    <value>ドキュメントを編集</value>
+  </data>
+  <data name="ImageUpdatefailed" xml:space="preserve">
+    <value>画像の更新に失敗しました.</value>
+  </data>
+  <data name="ImageUpdateSuccessfully" xml:space="preserve">
+    <value>画像が正常に更新されました.</value>
+  </data>
+  <data name="PhoneNo1" xml:space="preserve">
+    <value>電話番号</value>
+  </data>
+  <data name="PPTUpdateSuccess" xml:space="preserve">
+    <value>PPT更新成功.</value>
+  </data>
+  <data name="PPTUpdationFailed" xml:space="preserve">
+    <value>PPTの更新に失敗しました</value>
+  </data>
+  <data name="UpdatedSuccessfullyDocument" xml:space="preserve">
+    <value>ドキュメントが正常に更新されました</value>
+  </data>
+  <data name="UploadDocument" xml:space="preserve">
+    <value>ドキュメントをアップロード</value>
+  </data>
+  <data name="ViewDocument" xml:space="preserve">
+    <value>文書を表示する</value>
+  </data>
+  <data name="CustomerTypeName" xml:space="preserve">
+    <value>顧客タイプ</value>
+  </data>
+</root>

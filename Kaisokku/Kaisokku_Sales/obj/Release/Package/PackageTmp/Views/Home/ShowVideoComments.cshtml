@@ -1,0 +1,51 @@
+﻿@model RPA_Common.ShowVideoComments
+
+
+@Html.HiddenFor(m => m.Sno)
+@Html.HiddenFor(m => m.IsApproved)
+@Html.HiddenFor(m => m.IsDeleted)
+
+<div class="row">
+    <div class="col-md-6">
+        <video class="loading" playsinline controls="controls" controlsList="nodownload" id="videocomments" style="width:100%; height:100%;">
+            <source src="@Url.Content("~/Video/" + Model.VideoName +"")" type="video/mp4" />
+        </video>
+    </div>
+</div>
+
+
+
+
+
+<div class="row" style="padding-bottom: 17px; padding-top: 10px;">
+    <div class="col-md-2">
+        @Html.Label(@RPA_Sales.Resources.Resource.UserComments)
+    </div>
+    <div class="col-md-4">
+       
+        @Html.TextAreaFor(m => m.VideoComments, new { @class = "form-control" })
+    </div>
+</div>
+
+
+<div class="row" style="padding-bottom: 17px; padding-top: 10px;">
+    <div class="col-md-2">
+        @Html.Label(@RPA_Sales.Resources.Resource.UsersImages)
+    </div>
+    <div class="col-md-4">
+        <img src="@Url.Content("~/VideoComments/" + Model.FileName + "")" class="center-block" style="margin-left:2px; height:200px; width:100%" />
+
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-2">
+        <button type="button" class="btn btn-primary btnapprovalcomments">@RPA_Sales.Resources.Resource.Approve</button>
+    </div>
+    <div class="col-md-2">
+        <button type="button" class="btn btn-primary btnrejectedcomments">@RPA_Sales.Resources.Resource.Reject</button>
+    </div>
+</div>

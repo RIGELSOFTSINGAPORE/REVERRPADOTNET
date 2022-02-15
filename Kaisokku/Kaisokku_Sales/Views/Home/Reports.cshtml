@@ -1,0 +1,67 @@
+﻿@model  Kaisokku_Common.report
+@{
+    /**/
+
+    /**/
+
+    ViewBag.Title = "CRM";
+}
+
+<h2>@Kaisokku_Sales.Resources.Resource.Reports</h2>
+
+<style>
+    /*.previewimg {
+        height: 200px;
+        width: 800px;
+        border: 1px solid;
+    }*/
+</style>
+@using (Html.BeginForm("Export", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div style="padding-right: 12px;">
+        <label for="Description">@Kaisokku_Sales.Resources.Resource.Reports :</label>
+
+
+        <select id="reportddp" name="ReportName">
+            <option value="1">@Kaisokku_Sales.Resources.Resource.VideoManagement</option>
+            <option value="2">@Kaisokku_Sales.Resources.Resource.PPTManagement</option>
+
+        </select>
+   
+        <label for="Description">@Kaisokku_Sales.Resources.Resource.Type :</label>
+
+
+        <select id="reportddp" name="ReportType">
+            <option value="1">@Kaisokku_Sales.Resources.Resource.ExporttoExcel</option>
+            <option value="2">@Kaisokku_Sales.Resources.Resource.ExporttoCSV</option>
+            <option value="3">@Kaisokku_Sales.Resources.Resource.ExporttoPDF</option>
+        </select>
+    </div>
+    <div>
+        <label for="Description">@Kaisokku_Sales.Resources.Resource.Startdate:</label>
+        <input type="date" id="startdate" name="startdate">
+
+        <label for="Description">@Kaisokku_Sales.Resources.Resource.Enddate:</label>
+        <input type="date" id="enddate" name="enddate">
+    </div>
+    <div class="row" style="padding-top: 12px;">
+
+        <div class="col-md-3">
+            <input type="submit" value="@Kaisokku_Sales.Resources.Resource.GenerateReport" class="btn btn-primary" name="Command" />
+
+        </div>
+        @*<div class="col-md-3">
+            <input type="submit" value="Export to PDF" class="btn btn-primary" id="btnsendemail" name="Command" />
+        </div>
+        <div class="col-md-3">
+            <input type="submit" value="Export to CSV" class="btn btn-primary" id="btnsendemail2" name="Command" />
+        </div>*@
+    </div>
+}
+
+
+
+
+
+
+

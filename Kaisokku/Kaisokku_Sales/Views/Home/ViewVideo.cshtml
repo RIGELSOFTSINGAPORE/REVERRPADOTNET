@@ -1,0 +1,52 @@
+﻿
+@using Kaisokku_Common;
+@model video
+@{ Layout = null; }
+
+<form>
+    @Html.Hidden("EditVideoId", Model.MediaID)
+    @Html.Hidden("VideoId")
+    @*// @Html.Hidden("EditVideoFile", location)*@
+    <div class="form-group">
+        <label for="Title">@Kaisokku_Sales.Resources.Resource.Title</label>
+        <input type="text" class="form-control" id="EditVideoTitle" value="@Model.Title" readonly="readonly" aria-describedby="emailHelp">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+    </div>
+    <div class="form-group">
+        <label for="Description">@Kaisokku_Sales.Resources.Resource.Description</label>
+        <input type="text" class="form-control" id="EditVideoDesc" value="@Model.Description" readonly="readonly" aria-describedby="updatedby">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+    </div>
+    <div class="form-group">
+        @Html.DropDownList("SelectVideo", TempData["SelectVideo"] as SelectList, new { @onchange = "SelectedValue(this)", @disabled = "disabled" })
+        @{TempData.Keep("SelectVideo");}
+    </div>
+
+    <div class="video-frame">
+        <video playsinline style="width:100%; height:10%;" controls="controls" controlsList="nodownload" id="myVideoOne">
+            <source src="@Url.Content("~/Video/" + Model.PlayVideoFileName + "")" type="video/mp4" />
+            
+        </video>
+    </div>
+</form>
+<script>
+
+    //To get selected value an text of dropdownlist
+    function SelectedValue(ddlObject)
+    {
+        
+        //Selected value of dropdownlist
+        var selectedValue = ddlObject.value;
+        //Selected text of dropdownlist
+        var selectedText = ddlObject.options[ddlObject.selectedIndex].innerHTML;
+        var x = document.getElementById("myVideoOne");
+        //$('#VideoId').val(selectedText);
+        //x.type = "video/mp4";
+        //x.play();
+        x.src = '@Url.Content("~/Video/")' + selectedText;
+        //alert popup with detail of seleceted value and text
+       
+        x.play();
+      
+        }
+</script>  

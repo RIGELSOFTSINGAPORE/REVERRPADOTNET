@@ -1,0 +1,354 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        a.disabled {
+            color: #666;
+            text-decoration: none;
+        }
+
+        body {
+            background: white;
+            color: black;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+        }
+
+        #nav a {
+            font-weight: bold;
+        }
+
+        #footer a {
+            color: white;
+        }
+
+        a:focus, a:hover {
+            color: White;
+            text-decoration: none;
+        }
+
+        .contactForm {
+            margin-top: 70px;
+            padding: 35px;
+            background: white;
+            width: 80%;
+            position: absolute;
+            border-radius: 10px;
+            margin-left: 10%;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+
+        .LearmMore {
+            overflow: hidden;
+            height: 225px
+        }
+
+        footer {
+            width: 100%;
+            height: 550px;
+            left: 0px;
+            margin-top: 150px;
+            font-weight: bold;
+            background: #2e2e2e;
+        }
+
+        .shadow {
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+
+        .brands {
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            width: 95%;
+            height: 200px;
+            margin-left: 2.5%;
+            margin-top: -110px;
+            border-radius: 10px;
+            background: white;
+            position: absolute;
+        }
+
+        .navbar1 {
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            height: 70px;
+            background: white;
+            color: black;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+
+        .navbar {
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            height: 70px;
+            background: none;
+            color: white;
+        }
+
+        .nava {
+            color: white;
+        }
+
+        .nava1 {
+            color: black;
+        }
+
+        .signin {
+            border: 1px solid;
+            border-radius: 25px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-top: 10px;
+        }
+
+        .LOGTEXT {
+            color: #949494;
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .imgcontainer {
+            float: right;
+            background-image: url("~/assets/containter_Rectangle.png");
+        }
+
+        .imgcontainer1 {
+            background-image: url("~/assets/img/Group 243.jpg");
+        }
+
+        #imgcontainer h1 {
+            color: black;
+        }
+
+        #imgcontainer p {
+            color: black;
+            z-index: 1;
+        }
+
+        .demo {
+            color: white;
+            padding: 10px 25px;
+            border-radius: 20px;
+            background: #da291c;
+        }
+
+        .clintdiv {
+            background: #f6f4f5;
+            width: 100%;
+            text-align: center;
+        }
+
+        .boxshadow {
+            width: 30%;
+            margin: 30px;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            border-radius: 10px;
+            padding: 20px;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .pricediv {
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            margin-left: 20px;
+            width: 90%;
+        }
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        element.style {
+        }
+
+        /* #nav a {
+            color: white;
+            font-weight: bold;
+            padding: 15px 15px;
+            font-size: 17px;
+        }*/
+
+        .nav > li > a:focus, .nav > li > a:hover {
+            text-decoration: none;
+            background-color: transparent;
+        }
+
+        h1 {
+            font-weight: bold
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        div.text-container {
+            margin: 0 auto;
+            width: 75%;
+        }
+
+        .hideContent {
+            overflow: hidden;
+            line-height: 1em;
+            height: 2em;
+        }
+
+        .showContent {
+            line-height: 1em;
+            height: auto;
+        }
+
+        .showContent {
+            height: auto;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            padding: 10px 0;
+        }
+
+        .show-more {
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .slideshow-container {
+            position: relative;
+            background: #f1f1f1f1;
+        }
+
+        /* Slides */
+        .mySlides {
+            display: none;
+            padding: 80px;
+            text-align: center;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -30px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            position: absolute;
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.8);
+                color: white;
+            }
+
+        /* The dot/bullet/indicator container */
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: #ddd;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+            /* Add a background color to the active dot/circle */
+            .active, .dot:hover {
+                background-color: #717171;
+            }
+
+        /* Add an italic font style to all quotes */
+        q {
+            font-style: italic;
+        }
+
+        /* Add a blue color to the author */
+        .author {
+            color: cornflowerblue;
+        }
+
+        #btn-back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            z-index: 5;
+        }
+
+        .mySlides {
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        .cut-text {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    </style>
+
+
+    <meta name="viewport" content="width=device-width" />
+    <title>FAQS</title>
+</head>
+<body>
+
+    <div>
+        <nav class="navbar" id="nav">
+            <div class="">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="@Url.Action("Index","Kaisokku_Home")">
+                        <img style="margin-top: -12px;" src="~/assets/logo.jpg" />
+                    </a>
+                </div>
+                <div>
+
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <h1 style=" margin-top: 90px;text-align:center">
+            FAQS
+        </h1>
+    </div>
+</body>
+</html>

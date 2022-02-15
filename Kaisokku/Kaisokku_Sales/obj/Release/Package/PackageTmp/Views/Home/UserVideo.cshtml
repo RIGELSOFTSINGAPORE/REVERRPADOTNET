@@ -1,0 +1,278 @@
+﻿@model List<RPA_Common.LoadVideoCommentsGrid>
+
+
+@{
+    /**/
+
+    ViewBag.Title = "UserVideo";
+}
+<style>
+    .card[class*="border"] {
+        border: 1px solid #9e9e9e;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .border-primary {
+        border-color: #4285f4 !important;
+    }
+
+    .card {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,0.125);
+        border-radius: .25rem;
+    }
+
+    .text-primary {
+        color: #4285f4 !important;
+    }
+
+    .card .card-body .card-text {
+        font-size: .9rem;
+        font-weight: 400;
+        color: #747373;
+    }
+
+    .card-body {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        border-radius: 0 !important;
+    }
+
+    .card-header {
+        padding: .75rem 1.25rem;
+        margin-bottom: 0;
+        background-color: rgba(0,0,0,0.03);
+        border-bottom: 1px solid rgba(0,0,0,0.125);
+    }
+</style>
+<h2>@RPA_Sales.Resources.Resource.UserVideo</h2>
+
+@*<link rel="stylesheet" href="~/Content/style-pc.css">*@
+
+
+
+
+
+<div class="row">
+    <div class="col-md-2">
+        <label for="VisitorsCount">@RPA_Sales.Resources.Resource.VisitorsCount</label>
+    </div>
+    <div class="col-md-4">
+
+        <label id="lblvisitorcount"></label>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-2">
+        <label for="SelectVideo">@RPA_Sales.Resources.Resource.SelectVideo</label>
+    </div>
+    <div class="col-md-4">
+        @Html.DropDownList("SelectVideotest", (IEnumerable<SelectListItem>)TempData["SelectVideoTest"], "-Select Video-", new { @onchange = "SelectedValue(this)" })
+    </div>
+</div>
+
+
+<div class="row">
+
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="video-frame">
+                    <video playsinline style="width:100%; height:10%;" controls="controls" controlsList="nodownload" id="myVideoOne"></video>
+                </div>
+                <div></div>
+            </div>
+
+
+            <div class="col-md-4" style="padding-bottom: 17px; padding-top: 10px;">
+                <label for="UploadComments">@RPA_Sales.Resources.Resource.UploadImage</label>
+            </div>
+            <div class="col-md-8" style="padding-bottom: 17px; padding-top: 10px;">
+                <input type="file" class="form-control" id="UploadImageComments" value="" aria-describedby="updatedby">
+            </div>
+
+
+
+
+            <div class="col-md-4">
+                @Html.Label(@RPA_Sales.Resources.Resource.Comment)
+            </div>
+            <div class="col-md-8">
+                @Html.TextArea("Comments", null, new { @class = "form-control", id = "Comments" })
+            </div>
+
+
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-primary btnsavemenu">@RPA_Sales.Resources.Resource.Submit</button>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="col-md-4" style="height: 523px;overflow: scroll;">
+
+        @foreach (var item in Model)
+        {
+
+            <div class="card border-primary mb-3" style="max-width: 20rem;">
+                <div class="card-header">@item.VisitorName <span>@item.VisitedDate</span></div>
+                <div class="card-body text-primary">
+                    <h5 class="card-title">@RPA_Sales.Resources.Resource.Comment</h5>
+                    <p class="card-text">@item.VideoComments</p>
+                    <h5 class="card-title">@RPA_Sales.Resources.Resource.Image</h5>
+                    <p class="card-text">
+                        <a href="javascript:void(0);" title="Click here to preview image">
+                            <img src="@Url.Content("~/VideoComments/" + item.FileName + "")" class="center-block PreviewUserImage" style="margin-left:2px; height:100px; width:100px" />
+                        </a>
+                    </p>
+                </div>
+            </div>
+        }
+
+
+    </div>
+</div>
+
+
+<!-- Modal View Image -->
+<div class="modal fade" id="ViewImageModal" tabindex="-1" role="dialog" aria-labelledby="ViewImageModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="max-width: 700px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ViewImageModalLabel">@RPA_Sales.Resources.Resource.PreviewImage</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body ViewImageContent">
+                
+                <img src="" id="imgUserImagePreview" style="width: 560px;height: 400px;" />
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">@RPA_Sales.Resources.Resource.Close</button>
+                @*<button type="button" class="btn btn-primary btnsavemenu">@RPA_Sales.Resources.Resource.SaveChanges</button>*@
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section ScriptSection{
+    <script>
+        $(document).ready(function () {
+            $("#SelectVideotest").change(function () {
+                var selectedValue = $('#SelectVideotest option:selected').val();
+                var selectedText = $('#SelectVideotest option:selected').text();
+                if (selectedValue != "") {
+                    var serverlocation = window.location.pathname.split('/')
+                    var filepath;
+                    if (serverlocation[1] != 'Home') {
+
+                        filepath = '/'+serverlocation[1] + '/Video/' + selectedText;
+                    }
+                    else {
+                        filepath = '/Video/' + selectedText;
+                    }
+
+                    $("#myVideoOne").attr('src', filepath);
+
+
+               $.ajax({
+                    url: '@Url.Action("UpdateVideoViewCount", "Home")',
+                    type: 'POST',
+                   data: { 'VideoId': selectedValue, 'VideoFileName': selectedText },
+                    success: function (result) {
+                        debugger;
+                        $('#lblvisitorcount').text(result)
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+
+                });
+
+
+
+                }
+                else {
+                    $("#myVideoOne").attr('src', '');
+                }
+
+            });
+
+            $('.PreviewUserImage').on('click', function () {
+                debugger;
+                $('#imgUserImagePreview').attr('src', $(this).attr('src'));
+                $('#ViewImageModal').modal('show');
+            });
+        });
+
+
+
+
+            $('.btnsavemenu').on('click', function () {
+                debugger;
+                var VideoId = $('#SelectVideotest option:selected').val();;
+                var VideoName = $('#SelectVideotest option:selected').text();
+                var VideoComments = $('#Comments').val();
+                var UploadImageComments = $('#UploadImageComments').get(0).files;
+
+                var fileData = new FormData();
+
+                for (var i = 0; i < UploadImageComments.length; i++) {
+                    fileData.append("UploadFile", UploadImageComments[i]);
+                }
+                fileData.append('VideoId', VideoId)
+                fileData.append('VideoName', VideoName)
+                fileData.append('VideoComments', VideoComments)
+
+                $.ajax({
+                    url: '@Url.Action("SaveVideoComments", "Home")',
+                    type: 'POST',
+                    contentType: false,
+                    processData: false,
+                    data: fileData,
+                    success: function (result) {
+
+                        if (result.errorcode == 0) {
+
+                            $('#Comments').val('');
+                            $('#UploadImageComments').val('');
+
+                            alert('@RPA_Sales.Resources.Resource.CommentsUpdatedSuccessfully');
+
+                        }
+                        else {
+                            alert('@RPA_Sales.Resources.Resource.CommentsUpdationFailed');
+                        }
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+
+                });
+            });
+
+
+
+
+    </script>
+}
+

@@ -1,0 +1,40 @@
+﻿@*@model  IEnumerable<Kaisokku_Common.VideoViewLog>*@
+@model  IEnumerable<Kaisokku_Common.PPTChart>
+@{
+    ViewBag.Title = "DashBoard";
+}
+
+<h2>@Kaisokku_Sales.Resources.Resource.Dashboard</h2>
+
+
+@section ScriptSection{
+
+
+}
+
+
+
+
+
+<div class="row">
+    <div class="col-md-6">
+        <img src="@Url.Action("CreatePie")" style="width:100%" alt="Pie Chart" />
+    </div>
+    <div class="col-md-6">
+        <img src="@Url.Action("CreateLine")" style="width:100%" alt="Line Chart" />
+
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+
+        <img src="@Url.Action("CreateBar")" style="width:100%" alt="Bar Chart" />
+    </div>
+    <div class="col-md-6">
+        <img src="https://hitwebcounter.com/counter/counter.php?page=7353474&style=0009&nbdigits=9&type=ip&initCount=0" title="Web Counter" Alt="counter free" border="0">
+    </div>
+</div>
+
+

@@ -1,0 +1,63 @@
+﻿@model  RPA_Common.video
+@{
+    ViewBag.Title = "SocialMedia";
+}
+<style>
+    /*table, th, td {*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    }
+</style>
+
+<h2>@RPA_Sales.Resources.Resource.VideoManagement - @Request.QueryString["test"] </h2>
+
+<div style="width:1022px;background:#f4f4f4;padding:4px; border:0px solid grey;text-align:right;">
+    @Html.ActionLink("Back to List", "VideoManagement")
+</div>
+@using (Html.BeginForm("VideoManagementView", "Home", new { test = "Delete" }, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.HiddenFor(model => model.MediaID)
+
+    <div id="searchParameters" style="width:1022px;background:#f4f4f4;padding:10px; border:1px solid grey">
+        <table>
+            <tr style="padding-bottom:50px">
+                <th>
+                    @RPA_Sales.Resources.Resource.Title:
+
+                    @Html.HiddenFor(model => model.Title)
+                    @Html.DisplayFor(model => model.Title, new { @class = "form-control2" })
+                </th>
+
+            </tr>
+
+            <tr style="padding-top:50px">
+                <th> @RPA_Sales.Resources.Resource.Description: @Html.HiddenFor(model => model.Description) @Html.DisplayFor(model => model.Description)</th>
+            </tr>
+            <tr>
+                <th>
+
+                    @Html.HiddenFor(model => model.Filename)
+                    @Html.HiddenFor(model => model.Folderid)
+                    <div class="video-frame">
+                        <video playsinline style="width:210%; height:10%;" controls="controls" controlsList="nodownload" id="myVideoOne">
+                            <source src="@Url.Content("~/Video/" + Model.Filename + "")" type="video/mp4" />
+
+                        </video>
+                    </div>
+                </th>
+            </tr>
+            @if (Request.QueryString["test"].Equals("Delete"))
+            {
+                <tr>
+                    <th> <input type="submit" value="@RPA_Sales.Resources.Resource.DeleteVideo" /></th>
+                </tr>
+            }
+
+
+        </table>
+    </div>
+}
+
+
+

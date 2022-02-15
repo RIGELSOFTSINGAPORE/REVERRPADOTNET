@@ -1,0 +1,96 @@
+﻿@model RPA_Common.UserContactUsViewModel
+
+@{
+                /**/
+
+                ViewBag.Title = "UserContactUs";
+}
+<style>
+    .address {
+        BACKGROUND: #5148d6;
+        FONT-FAMILY: NONE;
+        COLOR: aliceblue;
+        BORDER-RADIUS: 3PX;
+        PADDING-LEFT: 15PX;
+        width: 335px;
+    }
+</style>
+<h2>@RPA_Sales.Resources.Resource.ContactUs</h2>
+<div>
+
+    @*<div>
+
+        <div class="address">
+            <p>
+                @Model.ClientDetails.CompanyName
+
+            </p>
+            <p>
+                @Model.ClientDetails.BuildingName
+
+            </p>
+            <p>
+
+                @Model.ClientDetails.BuidingNo
+            </p>
+            <p>
+                @Model.ClientDetails.street
+
+            </p>
+            <p>
+                @Model.ClientDetails.Area
+
+            </p>
+            <p>
+                @Model.ClientDetails.state_pin_Country
+            </p>
+
+        </div>
+
+
+    </div>*@
+
+    <div>
+        @using (Html.BeginForm("UserContactUs", "Home", FormMethod.Post))
+        {
+
+
+            <div style=" display:inline;">
+                <div>
+                    @Html.Label(@RPA_Sales.Resources.Resource.Name)
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.EnquiryFormDetails.Name)
+                    </div>
+                </div>
+                <div>
+                    @Html.Label(@RPA_Sales.Resources.Resource.Email)
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.EnquiryFormDetails.Email)
+                    </div>
+                </div>
+                <div>
+                    @Html.Label(@RPA_Sales.Resources.Resource.PhoneNo1)
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.EnquiryFormDetails.phoneno)
+                    </div>
+                </div>
+                <div>
+                    @Html.Label(@RPA_Sales.Resources.Resource.Comment)
+                
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.EnquiryFormDetails.comments)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button type="submit" value="Create" class="btnlogin">@RPA_Sales.Resources.Resource.Submit</button>
+                    </div>
+
+                </div>
+
+            </div>
+        }
+    </div>
+
+</div>
+

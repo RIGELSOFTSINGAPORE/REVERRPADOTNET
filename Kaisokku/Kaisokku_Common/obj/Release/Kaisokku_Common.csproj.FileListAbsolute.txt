@@ -1,0 +1,14 @@
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\bin\Release\Kaisokku_Common.dll.config
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\bin\Release\Kaisokku_Common.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\bin\Release\Kaisokku_Common.pdb
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\bin\Release\EntityFramework.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\bin\Release\EntityFramework.SqlServer.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\bin\Release\log4net.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\bin\Release\EntityFramework.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\bin\Release\EntityFramework.SqlServer.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\bin\Release\log4net.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\obj\Release\Kaisokku_Common.csproj.AssemblyReference.cache
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\obj\Release\Kaisokku_Common.csproj.CoreCompileInputs.cache
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\obj\Release\Kaisokku_Common.csproj.CopyComplete
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\obj\Release\Kaisokku_Common.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\obj\Release\Kaisokku_Common.pdb

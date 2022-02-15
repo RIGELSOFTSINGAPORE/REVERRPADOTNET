@@ -1,0 +1,374 @@
+﻿@using Kaisokku_Common;
+@model ClintUser
+@{
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Demo </title>
+    <style>
+
+
+        .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+            font-size: 16px !important;
+            font-weight: 600 !important;
+        }
+
+        .table-bordered > tbody > tr > td, .table-bordered > tbody > tr > td {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    @Html.Hidden("DeleteSocialMediaId")
+    @Html.HiddenFor(m => m.Id, new { id = "Id" })
+    <div>
+        <h1>
+            Demo  Management
+        </h1>
+        <div>
+            <br />
+            <button type="submit" class="btn btn-primary btncreatemenu">Create New</button>
+            <br />
+            <br />
+            <div>
+                <br />
+                <div style="background:white;padding:10px;">
+                    <table id="ClientGrid" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0" cellpadding="5">
+                        <thead>
+                            <tr>
+
+                                <th style="width:10%">ID</th>
+                                <th style="width:20%">Name</th>
+                                <th style="width:20%">Title</th>
+                                @*<th style="width:30%">Descriptiion</th>*@
+                                <th style="width:10%">@Kaisokku_Sales.Resources.Resource.Edit</th>
+                                @*<th style="display:none">@Kaisokku_Sales.Resources.Resource.View</th>*@
+                                <th style="width:10%">@Kaisokku_Sales.Resources.Resource.Delete</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+
+          
+        </div>
+    </div>
+    <div class="modal fade" id="CreateSocialModal" tabindex="-1" role="dialog" aria-labelledby="CreateSocialModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="CreateSocialModalLabel">Create Demo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                @*<div class="modal-body createSocialcontent">
+                        CreateSocialMedia
+
+                    </div>*@
+                <div class="modal-body createSocialcontent">
+                    CreateClient
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">@Kaisokku_Sales.Resources.Resource.Close</button>
+                    <button type="button" class="btn btn-primary btnscreateavemenu">@Kaisokku_Sales.Resources.Resource.SaveChanges</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="EditSocialMedia" tabindex="-1" role="dialog" aria-labelledby="EditSocialMediaModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="EditSocialMediaLabel">Edit Client</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body editSocialMediacontent">
+                    EditClient
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">@Kaisokku_Sales.Resources.Resource.Close</button>
+                    <button type="button" class="btn btn-primary btnsaveclient">@Kaisokku_Sales.Resources.Resource.SaveChanges</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="DeleteClintModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="DeleteVideoModalLabel">@Kaisokku_Sales.Resources.Resource.DeleteImage</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body DeleteSocialcontent">
+                    Are you sure you want to delete Client's Details?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">@Kaisokku_Sales.Resources.Resource.No</button>
+                    <button type="button" style="background:#da291c;" class="btn btn-primary btndeletevideo btn-danger" onclick="DeleteVideo()">@Kaisokku_Sales.Resources.Resource.Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+
+</html>
+@section ScriptSection{
+    <script>
+        $('.btncreatemenu').on('click', function () {
+
+                $.ajax({
+                    url: '@Url.Action("ClintCreate", "ClintMGT")',
+                    type: 'GET',
+                    success: function (result) {
+                       // debugger;
+                        $('.createSocialcontent').html(result);
+                        $('#CreateSocialModal').modal('show');
+
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+
+                });
+        });
+
+
+        function EditSocialMedia(ID) {
+            //debugger;
+            $.ajax({
+               url: '@Url.Action("GetClientDataById", "ClintMGT")',
+                type: 'POST',
+                data: { 'ID': ID },
+                success: function (result) {
+                    //debugger;
+                    $('.editSocialMediacontent').html(result);
+                    $('#EditSocialMedia').modal('show');
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+          $(document).ready(function () {
+            //debugger;
+              $("#Demo").DataTable({
+
+                  //"processing": true, // for show progress bar
+                  //"serverSide": false, // for process server side
+                  //"filter": true, // this is for disable filter (search box)
+                  //"orderMulti": false, // for disable multiple column at once
+                  //"pageLength": 5,
+
+                  "ajax": {
+
+                      "url": "@Url.Action("LoadClienddata", "ClintMGT")",
+                      "type": "POST",
+                      "datatype": "json"
+                  },
+
+                  "columnDefs":
+                      [
+
+                    {
+                        "targets": [0],
+                        //"visible": true,
+                        "searchable": true,
+                        "orderable": true
+                    },
+                    {
+                        "targets": [1],
+                        "searchable": false,
+                        "orderable": true
+                    },
+                    {
+                        "targets": [2],
+                        "searchable": false,
+                        "orderable": true
+                    },
+                        {
+                            "targets": [3],
+                            "searchable": false,
+                            "orderable": false
+                        },
+
+                    {
+                            "targets": [4],
+                            "searchable": false,
+                            "orderable": false
+                        }
+
+
+                    ],
+
+                  "columns": [
+
+
+                      { "data": "Id", "name": "ID", "autoWidth": false},
+                      { "data": "ClientName", "name": "Client Name", "autoWidth": false },
+                      { "data": "Website", "name": "Website", "autoWidth": false },
+                    //{ "data": "Description", "name": "Description", "autoWidth": false },
+
+
+                    {
+                        "render": function (data, type, row, meta) { return "<a class='' href='javascript:void(0);' onclick=EditSocialMedia('" + row.Id + "');><span  class='glyphicon glyphicon-pencil' aria-hidden='true'></a>"; }
+                    },
+                    //{
+                     //   "render": function (data, type, row, meta) { return "<a class='btn btn-info' style='Display:none' href='javascript:void(0);' onclick=ViewSocialMedia('" + row.SocialMediaID + "');>@Kaisokku_Sales.Resources.Resource.View</a>"; }
+                    //},
+                    {
+                        data: null, render: function (data, type, row) {
+                            return "<a href='#' class='' onclick=DeleteSocialConfirmation('" + row.Id + "'); ><span  class='glyphicon glyphicon-trash' aria-hidden='true'></span></a>";
+                        }
+                    },
+
+               ]
+
+
+            });
+
+        });
+
+        $('.btnscreateavemenu').on('click', function () {
+            //debugger;
+             if ($('#CreateSocialTitle').val() == "" && $('#CreateSocialUrl').val() == "" && $("#CreateSocialFile").get(0).files.length == 0) {
+                 document.getElementById("title").innerHTML = "Please enter Title";
+                 document.getElementById("des").innerHTML = "Please enter Description";
+                 document.getElementById("upload").innerHTML = "Please upload Video File";
+             }
+             
+
+             else {
+                 var ClintName = $('#ClintName').val();
+                 var Website = $('#Website').val();
+                 var Description = $('#Description').val();
+
+                 var Image = $("#Image").get(0).files;
+                 var fileData = new FormData();
+
+                 for (var i = 0; i < Image.length; i++) {
+                     fileData.append("Image", Image[i]);
+                 }
+                 fileData.append('ClintName', ClintName)
+                 fileData.append('Image', Image)
+                 fileData.append('Website', Website)
+                 fileData.append('Description', Description)
+
+                 $('#CreateSocialModal').modal('hide');
+                 $.ajax({
+                     url: '@Url.Action("SaveClient", "ClintMGT")',
+                     type: 'POST',
+                     contentType: false,
+                     processData: false,
+                     data: fileData,
+                     success: function (result) {
+
+                         if (result.errorcode == 0) {
+                             alert('client created succesfully');
+                             window.location.href =  '@Url.Action("Index", "ClintMGT")';
+
+                         }
+                         else {
+                             alert('client created failed');
+                         }
+                     },
+                     error: function (error) {
+                         console.log(error);
+                     }
+
+                 });
+             }
+
+        });
+        $('.btnsaveclient').on('click', function () {
+            
+                var ClintName = $('#ClintName').val();
+                var Website = $('#Website').val();
+            var Id = $('#clientid').val();
+                var Description = $('#Description').val();
+
+                var Image = $("#Image").get(0).files;
+                var fileData = new FormData();
+
+                for (var i = 0; i < Image.length; i++) {
+                    fileData.append("Image", Image[i]);
+                }
+                fileData.append('ClintName', ClintName)
+                fileData.append('Image', Image)
+                fileData.append('Website', Website)
+                fileData.append('Description', Description)
+                fileData.append('Id', Id)
+                $('#EditSocialMedia').modal('hide');
+                $.ajax({
+                    url: '@Url.Action("SaveClientListData", "ClintMGT")',
+                    type: 'POST',
+                    contentType: false,
+                    processData: false,
+                    data: fileData,
+                    success: function (result) {
+
+                        if (result.errorcode == 0) {
+                            alert('Client Updated Succesfully');
+                          window.location.href =  '@Url.Action("Index", "ClintMGT")';
+                        }
+                        else {
+                            alert('Client Updated failed');
+                        }
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+
+                });
+
+            //}
+
+            });
+         function DeleteSocialConfirmation(Id) {
+
+            //$('#DeleteSocialId').val(SocialMediaID);
+             $('#Id').val(Id);
+
+            $('#DeleteClintModal').modal('show');
+        }
+
+        function DeleteVideo() {
+
+            var Id = $('#Id').val();
+            $('#DeleteClintModal').modal('hide');
+            $.ajax({
+                url: '@Url.Action("DeleteClientById", "ClintMGT")',
+                type: 'POST',
+                data: { 'Id': Id },
+                success: function (result) {
+                    if (result.errorcode == 0) {
+
+                        alert('Client Deleted Succesfully');
+                      window.location.href =  '@Url.Action("Index", "ClintMGT")';
+                    }
+                    else {
+                        alert('Client Updated Succesfully');
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+
+    </script>
+}

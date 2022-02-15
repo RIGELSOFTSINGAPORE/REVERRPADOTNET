@@ -1,0 +1,26 @@
+﻿
+
+@using RPA_Common;
+@model video
+@{ Layout = null; }
+
+<form>
+    <div class="form-group">
+        <label for="Title">@RPA_Sales.Resources.Resource.Title</label>
+        <input type="text" class="form-control" id="CreateVideoTitle" aria-describedby="emailHelp">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+        <p id="title" style="color:red;"></p>
+    </div>
+    <div class="form-group">
+        <label for="Description">@RPA_Sales.Resources.Resource.Description</label>
+        <input type="text" class="form-control" id="CreateVideoDesc" aria-describedby="updatedby">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+        <p id="des" style="color:red;"></p>
+    </div>
+    <div class="form-group">
+        <label for="Description">@RPA_Sales.Resources.Resource.UploadVideo</label>
+        <input type="file" class="form-control" id="CreateVideoFile" multiple aria-describedby="updatedby">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+        <p id="upload" style="color:red;"></p>
+    </div>
+</form>

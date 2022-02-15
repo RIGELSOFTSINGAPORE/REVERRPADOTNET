@@ -1,0 +1,486 @@
+﻿
+@model RPA_Common.PPT
+
+@{
+    /**/
+
+    /**/
+
+    ViewBag.Title = "PPTManagement";
+}
+
+@Html.Hidden("DeleteVideoId")
+<h2>@RPA_Sales.Resources.Resource.PPTManagement</h2>
+
+@*@using (Html.BeginForm("VideoManagement", "Home", FormMethod.Post))
+    {*@
+<button type="submit" class="btn btn-primary btncreatemenu">@RPA_Sales.Resources.Resource.CreateNewPPT</button>
+@*}*@
+
+@if (TempData["Message"] != null && TempData["Message"].ToString() != "")
+{
+    <div class="container">
+
+        @if (TempData["ErrorCode"] != null && TempData["ErrorCode"].ToString() == "1")
+        {
+            <div class="row">
+                <div class="col-md-4" style="padding-left: 0px;padding-top: 10px;">
+                    <div class="alert alert-success alert-dismissible ">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Success!</strong> @TempData["Message"].ToString()
+                    </div>
+                </div>
+            </div>
+
+        }
+        else
+        {
+            <div class="row">
+                <div class="col-md-4" style="padding-left: 0px;padding-top: 10px;">
+                    <div class="alert alert-danger alert-dismissible ">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Danger!</strong> @TempData["Message"].ToString()
+                    </div>
+                </div>
+            </div>
+
+        }
+
+    </div>
+
+}
+
+<div class="container">
+    <br />
+    <div style="width:90%; margin:0 auto;">
+        <table id="VideoGrid" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0" cellpadding="5">
+            <thead>
+                <tr>
+                    <th>MediaId</th>
+                    <th>@RPA_Sales.Resources.Resource.Title</th>
+                    <th>@RPA_Sales.Resources.Resource.Description</th>
+                    @*<th>Filename</th>*@
+                    <th>@RPA_Sales.Resources.Resource.IpAddress</th>
+                    <th>@RPA_Sales.Resources.Resource.ViewCount</th>
+                    <th>@RPA_Sales.Resources.Resource.Edit</th>
+                    <th>@RPA_Sales.Resources.Resource.View</th>
+                    <th>@RPA_Sales.Resources.Resource.Delete</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+<!-- Modal CreateMenuModal -->
+<div class="modal fade" id="CreateVideoModal" tabindex="-1" role="dialog" aria-labelledby="CreateVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="CreateVideoModalLabel">@RPA_Sales.Resources.Resource.CreatePPT</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body createVideocontent">
+                CreatePPTModal
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">@RPA_Sales.Resources.Resource.Close</button>
+                <button type="button" class="btn btn-primary btnscreateavemenu">@RPA_Sales.Resources.Resource.SaveChanges</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Button EditMenuModal trigger modal -->
+@*<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#EditMenuModal"></button>*@
+
+<!-- Modal EditMenuModal -->
+<div class="modal fade" id="EditVideoModal" tabindex="-1" role="dialog" aria-labelledby="EditVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="EditVideoModalLabel">@RPA_Sales.Resources.Resource.EditVideo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body editVideocontent">
+                EditPPTModal
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">@RPA_Sales.Resources.Resource.Close</button>
+                <button type="button" class="btn btn-primary btnsavemenu">@RPA_Sales.Resources.Resource.SaveChanges</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal ViewMenuModal -->
+<div class="modal fade" id="ViewVideoModal" tabindex="-1" role="dialog" aria-labelledby="ViewVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ViewVideoModalLabel">@RPA_Sales.Resources.Resource.ViewPPT</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body ViewVideocontent">
+                ViewPPTModal
+
+            </div>
+            @*<div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary btnsavemenu">Save changes</button>
+                </div>*@
+        </div>
+    </div>
+</div>
+
+
+<!-- Button DeleteMenuModal trigger modal -->
+@*<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#DeleteMenuModal"></button>*@
+
+<!-- Modal DeleteMenuModal -->
+<div class="modal fade" id="DeleteVideoModal" tabindex="-1" role="dialog" aria-labelledby="DeleteVideoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="DeleteVideoModalLabel">@RPA_Sales.Resources.Resource.DeletePPT</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body DeleteVideocontent">
+                @RPA_Sales.Resources.Resource.AreyousureyouwanttodeletePPT
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary btndeletevideo btn-danger">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section ScriptSection
+{
+    <script>
+            function RefreshDataTable() {
+                debugger;
+                $('#VideoGrid').DataTable().ajax.reload(null, false);
+                $("#VideoGrid").DataTable().page('first').draw('page');
+            //mApp.unblock('#dltpopup .modal-content');
+            //mApp.unblockPage();
+        }
+        $(document).ready(function () {
+            debugger;
+            $("#VideoGrid").DataTable({
+
+                "processing": true, // for show progress bar
+                "serverSide": false, // for process server side
+                "filter": true, // this is for disable filter (search box)
+                "orderMulti": false, // for disable multiple column at once
+                "pageLength": 5,
+
+                "ajax": {
+                    
+                    "url":  "@Url.Action("LoadPPTListData", "Home")",
+                    "type": "POST",
+                    "datatype": "json"
+                },
+
+                "columnDefs":
+                    [{
+                        "targets": [0],
+                        "visible": false,
+                        "searchable": true,
+                        "orderable": true
+                    },
+                    {
+                        "targets": [1],
+                        //"visible": true,
+                        "searchable": true,
+                        "orderable": true
+                    },
+                    {
+                        "targets": [2],
+                        "searchable": false,
+                        "orderable": true
+                    },
+                    {
+                        "targets": [3],
+                        "searchable": false,
+                        "orderable": false
+                    },
+                    {
+                        "targets": [4],
+                        "searchable": false,
+                        "orderable": false
+                    },
+                    {
+                        "targets": [5],
+                        "searchable": false,
+                        "orderable": false
+                    },
+                    {
+                            "targets": [6],
+                            "searchable": false,
+                            "orderable": false
+                        },
+                        {
+                            "targets": [7],
+                            "searchable": false,
+                            "orderable": false
+                        }
+                        //{
+                        //    "targets": [8],
+                        //    "searchable": false,
+                        //    "orderable": false
+                        //}
+
+                    ],
+
+
+                "columns": [
+                    { "data": "MediaID", "name": "MediaID", "autoWidth": true },
+                    { "data": "Title", "name": "Title", "autoWidth": true },
+                    { "data": "Description", "name": "Description", "autoWidth": true },
+                   // { "data": "Filename", "name": "Filename", "autoWidth": true },
+
+                    { "data": "IPaddress", "name": "IPaddress", "autoWidth": true },
+                    { "data": "Viewcount", "name": "Viewcount", "autoWidth": true },
+
+                    {
+                        "render": function (data, type, row, meta) { return "<a class='btn btn-info' href='javascript:void(0);' onclick=EditVideo('" + row.MediaID + "');>@RPA_Sales.Resources.Resource.Edit</a>"; }
+                    },
+                    {
+                        "render": function (data, type, row, meta) { return "<a class='btn btn-info' href='javascript:void(0);' onclick=ViewVideo('" + row.MediaID + "');>@RPA_Sales.Resources.Resource.View</a>"; }
+                    },
+                    {
+                        data: null, render: function (data, type, row) {
+                            return "<a href='#' class='btn btn-danger' onclick=DeleteVideoConfirmation('" + row.MediaID + "'); >@RPA_Sales.Resources.Resource.Delete</a>";
+                        }
+                    },
+
+                ]
+
+            });
+            $('.btncreatemenu').on('click', function () {
+              //  $('.editVideocontent').html();
+              //  $('#EditVideoModal').modal('show');
+                debugger;
+                $.ajax({
+                url: '@Url.Action("CreatePPTListData", "Home")',
+                type: 'GET',
+                success: function (result) {
+                    debugger;
+                    $('.createVideocontent').html(result);
+                    $('#CreateVideoModal').modal('show');
+                     },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+            });
+
+            $('.btnsavemenu').on('click', function () {
+                if ($('#EditVideoId').val() == "") {
+                    document.getElementById("demo").innerHTML = "Please enter ID";
+                }
+                else if ($('#EditVideoTitle').val() == "") {
+                    document.getElementById("demo").innerHTML = "Please enter Title";
+                }
+                else if ($('#EditVideoDesc').val() == "") {
+                    document.getElementById("demo").innerHTML = "Please enter Description";
+                }
+                else {
+                    var VideoId = $('#EditVideoId').val();
+                    var VideoTitle = $('#EditVideoTitle').val();
+                    var VideoDesc = $('#EditVideoDesc').val();
+                    var updateVideoFile = $('#EdtiVideoFile').get(0).files;
+
+                    var fileData = new FormData();
+
+                    for (var i = 0; i < updateVideoFile.length; i++) {
+                        fileData.append("EdtiVideoFile", updateVideoFile[i]);
+                    }
+                    fileData.append('VideoId', VideoId)
+                    fileData.append('VideoTitle', VideoTitle)
+                    fileData.append('VideoDesc', VideoDesc)
+                    $('#EditVideoModal').modal('hide');
+                    $.ajax({
+                        url: '@Url.Action("SavePPTListData", "Home")',
+                        type: 'POST',
+                        contentType: false,
+                        processData: false,
+                        data: fileData,
+                        success: function (result) {
+
+                            if (result.errorcode == 0) {
+                                alert('@RPA_Sales.Resources.Resource.PPTUpdateSuccess');
+                                RefreshDataTable();
+                            }
+                            else {
+                                alert('@RPA_Sales.Resources.Resource.PPTUpdateSuccess');
+                            }
+                        },
+                        error: function (error) {
+                            console.log(error);
+                        }
+
+                    });
+                }
+            });
+
+
+
+            $('.btnscreateavemenu').on('click', function () {
+                if ($('#CreateVideoTitle').val() == "" && $('#CreateVideoDesc').val() == "" && $("#CreateVideoFile").get(0).files.length == 0) {
+                    document.getElementById("title").innerHTML = "Please enter Title";
+                    document.getElementById("des").innerHTML = "Please enter Description";
+                    document.getElementById("upload").innerHTML = "Please upload Video File";
+                }
+                else if ($('#CreateVideoTitle').val() != "" && $('#CreateVideoDesc').val() == "" && $("#CreateVideoFile").get(0).files.length == 0) {
+                    document.getElementById("title").innerHTML = "";
+                    document.getElementById("des").innerHTML = "Please enter Description";
+                    document.getElementById("upload").innerHTML = "Please upload Video File";
+                }
+                else if ($('#CreateVideoTitle').val() != "" && $('#CreateVideoDesc').val() != "" && $("#CreateVideoFile").get(0).files.length == 0) {
+                    document.getElementById("title").innerHTML = "";
+                    document.getElementById("des").innerHTML = "";
+                    document.getElementById("upload").innerHTML = "Please upload Video File";
+                }
+                else if ($('#CreateVideoTitle').val() == "" && $('#CreateVideoDesc').val() == "" && $("#CreateVideoFile").get(0).files.length != 0) {
+                    document.getElementById("title").innerHTML = "Please enter Title";
+                    document.getElementById("des").innerHTML = "Please enter Description";
+                    document.getElementById("upload").innerHTML = "";
+                }
+                else if ($('#CreateVideoTitle').val() != "" && $('#CreateVideoDesc').val() == "" && $("#CreateVideoFile").get(0).files.length != 0) {
+                    document.getElementById("title").innerHTML = "";
+                    document.getElementById("des").innerHTML = "Please enter Description";
+                    document.getElementById("upload").innerHTML = "";
+                }
+                else if ($('#CreateVideoTitle').val() == "" && $('#CreateVideoDesc').val() != "" && $("#CreateVideoFile").get(0).files.length != 0) {
+                    document.getElementById("title").innerHTML = "Please enter Title";
+                    document.getElementById("des").innerHTML = "";
+                    document.getElementById("upload").innerHTML = "";
+                }
+                else if ($('#CreateVideoTitle').val() == "" && $('#CreateVideoDesc').val() != "" && $("#CreateVideoFile").get(0).files.length == 0) {
+                    document.getElementById("title").innerHTML = "Please enter Title";
+                    document.getElementById("des").innerHTML = "";
+                    document.getElementById("upload").innerHTML = "Please upload Video File";
+                }
+                else {
+
+                    var VideoTitle = $('#CreateVideoTitle').val();
+                    var VideoDesc = $('#CreateVideoDesc').val();
+                    //var updateVideoFile = $('#CreateVideoFile').val();
+                    var updateVideoFile = $("#CreateVideoFile").get(0).files;
+                    var fileData = new FormData();
+
+                    for (var i = 0; i < updateVideoFile.length; i++) {
+                        fileData.append("CreateVideoFile", updateVideoFile[i]);
+                    }
+                    fileData.append('VideoTitle', VideoTitle)
+                    fileData.append('VideoDesc', VideoDesc)
+                    $('#CreateVideoModal').modal('hide');
+                    $.ajax({
+                        url: '@Url.Action("SaveCreatePPTListData", "Home")',
+                        type: 'POST',
+                        contentType: false,
+                        processData: false,
+                        data: fileData,
+                        success: function (result) {
+
+                            if (result.errorcode == 0) {
+                                alert('@RPA_Sales.Resources.Resource.PPTCreatedSuccessfully');
+                                RefreshDataTable();
+                            }
+                            else {
+                                alert('@RPA_Sales.Resources.Resource.PPTCreationFailed');
+                            }
+                        },
+                        error: function (error) {
+                            console.log(error);
+                        }
+
+                    });
+
+                }
+
+            });
+            $('.btndeletevideo').on('click', function () {
+                DeleteVideo($('#DeleteVideoId').val());
+            });
+        });
+
+        function EditVideo(MediaID) {
+            debugger;
+            $.ajax({
+                url: '@Url.Action("GetPPTListDataById", "Home")',
+                type: 'POST',
+                data: { 'MediaID': MediaID },
+                success: function (result) {
+                    debugger;
+                    $('.editVideocontent').html(result);
+                    $('#EditVideoModal').modal('show');
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+        function ViewVideo(MediaID) {
+            debugger;
+            $.ajax({
+                url: '@Url.Action("ViewPPTListDataById", "Home")',
+                type: 'POST',
+                data: { 'MediaID': MediaID },
+                success: function (result) {
+                    debugger;
+                    //$('#videofiles').empty();
+                    //$('#videofiles').append("<option value='0'>--Select--</option>");
+                    //$.each(result, function () {
+                    //    videofiles.append($("<option></option>").val(this['Value']).html(this['Text']));
+                    //});
+                    $('.ViewVideocontent').html(result);
+                    $('#ViewVideoModal').modal('show');
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+
+        function DeleteVideoConfirmation(MediaID) {
+            debugger;
+            $('#DeleteVideoId').val(MediaID);
+             $('#DeleteVideoModal').modal('show');
+        }
+
+        function DeleteVideo(MediaID) {
+            debugger;
+            $('#DeleteVideoModal').modal('hide');
+            $.ajax({
+                url: '@Url.Action("DeletePPTById", "Home")',
+                type: 'POST',
+                data: { 'MediaID': MediaID },
+                success: function (result) {
+                    if (result.errorcode == 0) {
+
+                        alert('@RPA_Sales.Resources.Resource.PPTDeletedSuccessfully');
+                        RefreshDataTable();
+                    }
+                    else {
+                        alert('@RPA_Sales.Resources.Resource.PPTDeletionFailed');
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        }
+    </script>
+}

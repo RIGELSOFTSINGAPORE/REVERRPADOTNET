@@ -1,0 +1,36 @@
+﻿
+
+@using Kaisokku_Common;
+@model video
+@{ Layout = null; }
+
+<form>
+    <div class="form-group">
+        <label for="Title">@Kaisokku_Sales.Resources.Resource.Title</label>
+        <input type="text" class="form-control" id="CreateVideoTitle" aria-describedby="emailHelp" maxlength="400">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+        <p id="title" style="color:red;"></p>
+    </div>
+    <div class="form-group">
+        <label for="Description">@Kaisokku_Sales.Resources.Resource.Description</label>
+        <input type="text" class="form-control" id="CreateVideoDesc" aria-describedby="updatedby" maxlength="2000">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+        <p id="des" style="color:red;"></p>
+    </div>
+    <div class="form-group">
+        <label for="Description">@Kaisokku_Sales.Resources.Resource.UploadVideo</label>
+        <input type="file" class="form-control" id="CreateVideoFile" multiple aria-describedby="updatedby">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+        <p id="upload" style="color:red;"></p>
+    </div>
+    <div class="form-group">
+        <label for="Type">Type</label>
+        @Html.DropDownList("UserType", null, htmlAttributes: new { @class = "form-control" })
+        @*<select id="Type" class="form-control" name="Type">
+            <option value="0">None</option>
+            <option value="1">Genaral</option>
+            <option value="2">Existing</option>
+        </select>*@
+        <p id="Type" style="color:red;"></p>
+    </div>
+</form>

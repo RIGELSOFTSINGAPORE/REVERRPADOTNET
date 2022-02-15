@@ -1,0 +1,248 @@
+﻿@model IEnumerable<Kaisokku_Common.Menu>
+@{
+
+    string IsActive = string.Empty;
+    string ParentCSS = string.Empty;
+
+
+}
+@{
+    Layout = null;
+}
+@if (ViewBag.showUserMenu != null && ViewBag.showUserMenu)
+{
+    @Html.Hidden("ClientWindowName")
+    <ul class="sidebar-menu mainmenu">
+        <li class="treeview ">
+            <a href="~/Home/UserHome">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                <span>@Kaisokku_Sales.Resources.Resource.Home</span>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="sidebar-menu mainmenu">
+        <li class="treeview ">
+            <a href="~/Home/UserVideo">
+
+                <i class="fa fa-laptop" aria-hidden="true"></i>
+                <span>@Kaisokku_Sales.Resources.Resource.Video</span>
+            </a>
+        </li>
+    </ul>
+
+
+    <ul class="sidebar-menu mainmenu">
+        <li class="treeview ">
+            <a href="~/Home/UserPresentation">
+
+                <i class="fa fa-file-powerpoint-o" aria-hidden="true"></i>
+                <span>@Kaisokku_Sales.Resources.Resource.Presentation</span>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="sidebar-menu mainmenu" data-widget="tree">
+        <li class="treeview ">
+            <a href="#">
+
+                <i class="fa fa-spinner" aria-hidden="true"></i>
+                <span>@Kaisokku_Sales.Resources.Resource.KaisokkuSampleReports</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-right pull-right" aria-hidden="true"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu submenu">
+
+                <li><a href="~/Home/UserKaisokku"><i class="fa fa-ellipsis-h"></i>@Kaisokku_Sales.Resources.Resource.KaisokkuSampleReports1</a></li>
+
+            </ul>
+        </li>
+    </ul>
+
+    <ul class="sidebar-menu mainmenu">
+        <li class="treeview ">
+            <a href="~/Home/UserClient">
+
+                <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                <span>@Kaisokku_Sales.Resources.Resource.Client</span>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="sidebar-menu mainmenu">
+        <li class="treeview ">
+            <a href="~/Home/UserSocialMedia">
+                <i class="fa fa-th-large" aria-hidden="true"></i>
+                <span>@Kaisokku_Sales.Resources.Resource.SocialMedia</span>
+            </a>
+        </li>
+    </ul>
+    @Html.Action("UserPages", "Home");
+
+    <ul class="sidebar-menu mainmenu">
+        <li class="treeview ">
+            <a href="~/Home/UserContactUs">
+                <i class="fa fa-at" aria-hidden="true"></i>
+                <span>@Kaisokku_Sales.Resources.Resource.ContactUs</span>
+            </a>
+        </li>
+    </ul>
+}
+else
+{
+    foreach (var parent in Model)
+    {
+        if (parent.MenuParentID == 0)
+        {
+            var submenu = Model.Where(n => n.MenuParentID == parent.MID).ToList();
+
+            if (submenu != null && submenu.Count > 0)
+            {
+                if (parent.MenuName == "Dashboard" || parent.LanguageJapanease == "ダッシュボード")
+                {
+                    IsActive = "active";
+                    ParentCSS = "fa fa-tachometer";
+
+
+                }
+                else
+                {
+                    IsActive = string.Empty;
+                    ParentCSS = parent.MenuParentCss1;
+
+                }
+                <ul class="sidebar-menu mainmenu" data-widget="tree">
+                    <li class="treeview @IsActive">
+                        <a href="~/@parent.ControllerName/@parent.ActionMethod">
+
+                            <i class="@ParentCSS" aria-hidden="true"></i>
+                            @if (string.IsNullOrEmpty(parent.MenuName))
+                            {
+                                <span> @parent.LanguageJapanease</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-right pull-right" aria-hidden="true"></i>
+                                </span>
+
+                            }
+                            else
+                            {
+                                <span> @parent.MenuName</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-right pull-right" aria-hidden="true"></i>
+                                </span>
+                            }
+
+
+
+                        </a>
+                        <ul class="treeview-menu submenu">
+
+                            @foreach (var child in submenu)
+                            {
+                                if (string.IsNullOrEmpty(parent.MenuName))
+                                {
+                                    <li><a href="~/@child.ControllerName/@child.ActionMethod?PageMenuName=@child.LanguageJapanease &MID=@child.MID"><i class="fa fa-ellipsis-h"></i>@child.LanguageJapanease</a></li>
+                                }
+                                else
+                                {
+                                    <li><a href="~/@child.ControllerName/@child.ActionMethod?PageMenuName=@child.MenuName &MID=@child.MID"><i class="fa fa-ellipsis-h"></i>@child.MenuName</a></li>
+                                }
+
+                            }
+                        </ul>
+                    </li>
+                </ul>
+
+            }
+            else
+            {
+                //if parent menu does not have child menu
+
+                if (parent.MenuName == "Dashboard" || parent.LanguageJapanease == "ダッシュボード")
+                {
+                    IsActive = "active";
+                    ParentCSS = "fa fa-tachometer";
+                }
+                else
+                {
+                    IsActive = string.Empty;
+                    ParentCSS = parent.MenuParentCss1;
+                }
+                <ul class="sidebar-menu mainmenu">
+                    <li class="treeview @IsActive">
+
+                        @{
+
+                            if (parent.MenuName == "Page Management" || parent.LanguageJapanease == "ページ管理")
+                            {
+                                <a href="javascript:void(0);">
+
+                                    <i class="@ParentCSS" aria-hidden="true"></i>
+                                    @if (string.IsNullOrEmpty(parent.MenuName))
+                                    {
+                                        <span> @parent.LanguageJapanease</span>
+                                        <span class="pull-right-container">
+                                            @*<i class="fa fa-angle-right pull-right" aria-hidden="true"></i>*@
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        <span> @parent.MenuName</span>
+                                        <span class="pull-right-container">
+                                            @*<i class="fa fa-angle-right pull-right" aria-hidden="true"></i>*@
+                                        </span>
+                                    }
+                                </a>
+                            }
+                            else
+                            {
+                                <a href="~/@parent.ControllerName/@parent.ActionMethod">
+
+                                    <i class="@ParentCSS" aria-hidden="true"></i>
+                                    @if (string.IsNullOrEmpty(parent.MenuName))
+                                    {
+                                        <span> @parent.LanguageJapanease;</span>
+                                        <span class="pull-right-container">
+                                            @*<i class="fa fa-angle-right pull-right" aria-hidden="true"></i>*@
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        <span> @parent.MenuName</span>
+                                        <span class="pull-right-container">
+                                            @*<i class="fa fa-angle-right pull-right" aria-hidden="true"></i>*@
+                                        </span>
+                                    }
+
+                                </a>
+                            }
+                        }
+
+                    </li>
+                </ul>
+            }
+        }
+    }
+    <ul class="sidebar-menu mainmenu" data-widget="tree">
+        <li class="treeview">
+            <a href="javascript:void(0);" onclick="redirectUserMenu();">
+
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <span>@Kaisokku_Sales.Resources.Resource.UserMenu1</span>
+
+            </a>
+        </li>
+    </ul>
+
+}
+
+<script>
+
+       var redirectUserMenu = function() {
+           var myWindow = window.open('@Url.Action("Index", "Home",new { showUserMenu=true})');
+        }
+</script>
+
+
+

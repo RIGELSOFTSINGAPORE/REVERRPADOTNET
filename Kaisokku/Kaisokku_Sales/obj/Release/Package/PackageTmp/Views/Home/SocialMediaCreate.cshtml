@@ -1,0 +1,33 @@
+﻿
+@using RPA_Common;
+@model SocialMediaGrid
+@{ Layout = null; }
+
+
+<form>
+    @Html.Hidden("EditSocialMediaId", Model.SocialMediaID)
+    <p id="demo" style="color:red;"></p>
+    <div class="form-group">
+
+        <label for="Title">@RPA_Sales.Resources.Resource.Title</label>
+        <input type="text" class="form-control" id="EditSocialMediaTitle" value="@Model.Title" aria-describedby="emailHelp">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+    </div>
+    <div class="form-group">
+        <label for="Description">@RPA_Sales.Resources.Resource.URL</label>
+        <input type="text" class="form-control" id="EditSocialMediaUrl" value="@Model.URL" aria-describedby="updatedby">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+    </div>
+
+    @*<div class="form-group">
+            <label for="Description">PPT List</label>
+            <br />
+            @Html.DropDownList("SelectVideo", TempData["SelectVideo"] as SelectList, new { })
+            @{TempData.Keep("SelectVideo");}
+        </div>*@
+    <div class="form-group">
+        <label for="Description">@RPA_Sales.Resources.Resource.UploadImages</label>
+        <input type="file" class="form-control" id="EditSocialMediaFile" value="@Model.Filename" aria-describedby="updatedby">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+    </div>
+</form>

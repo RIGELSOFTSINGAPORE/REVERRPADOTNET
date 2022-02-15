@@ -1,0 +1,51 @@
+﻿
+@using Kaisokku_Common;
+@model video
+@{ Layout = null; }
+
+<form>
+    @Html.Hidden("EditVideoId", Model.MediaID)
+    <p id="demo" style="color:red;"></p>
+    <div class="form-group">
+        <label for="Title">@Kaisokku_Sales.Resources.Resource.Title</label>
+        <input type="text" class="form-control" id="EditVideoTitle" value="@Model.Title" aria-describedby="emailHelp" maxlength="400">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+        <p id="title" style="color:red;"></p>
+    </div>
+    <div class="form-group">
+        <label for="Description">@Kaisokku_Sales.Resources.Resource.Description</label>
+        <input type="text" class="form-control" id="EditVideoDesc" value="@Model.Description" aria-describedby="updatedby" maxlength="2000">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+        <p id="des" style="color:red;"></p>
+    </div>
+
+    <div class="form-group">
+        <label for="Description">@Kaisokku_Sales.Resources.Resource.VideoList</label>
+        <br />
+        @Html.DropDownList("SelectVideo", TempData["SelectVideo"] as SelectList, new { @onchange = "SelectedValue(this)", @disabled = "disabled" })
+        @{TempData.Keep("SelectVideo");}
+    </div>
+    <div class="video-frame">
+        <video playsinline style="width:100%; height:10%;" controls="controls" controlsList="nodownload" id="myVideoOne">
+            <source src="@Url.Content("~/Video/" + Model.PlayVideoFileName + "")" type="video/mp4" />
+        </video>
+    </div>
+    <div class="form-group">
+        <label for="Description">@Kaisokku_Sales.Resources.Resource.UploadVideo</label>
+        <input type="file" class="form-control" id="EdtiVideoFile" value="@Model.Filename" aria-describedby="updatedby">
+        <p id="upload" style="color:red;"></p>
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+    </div>
+    <div class="form-group">
+        <label for="Type">Type</label>
+        @* <input type="file" class="form-control" id="CreateVideoFile" multiple aria-describedby="updatedby">*@
+        @*<select id="Type" class="form-control" name="Type">
+            <option value="0">None</option>
+            <option value="1">Genaral</option>
+            <option value="2">Existing</option>
+        </select>*@
+        @Html.DropDownList("UserType", null, htmlAttributes: new { @class = "form-control" })
+
+        <p id="Type" style="color:red;"></p>
+    </div>
+</form>

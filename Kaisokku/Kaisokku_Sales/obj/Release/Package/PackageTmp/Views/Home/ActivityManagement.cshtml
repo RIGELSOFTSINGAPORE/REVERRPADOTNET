@@ -1,0 +1,196 @@
+﻿@model IEnumerable<RPA_Common.ViewLogHistory>
+@{
+    ViewBag.Title = "ActivityManagement";
+}
+
+<h2>@RPA_Sales.Resources.Resource.ActivityManagement</h2>
+
+<div class="container" style="border: 1px solid;">
+    <br />
+    <div style="width:100%; margin:0 auto;">
+        <table id="ActivityGrid" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>rownumber</th>
+                    <th>@RPA_Sales.Resources.Resource.MenuId</th>
+                    <th>@RPA_Sales.Resources.Resource.MenuName</th>
+                    <th>@RPA_Sales.Resources.Resource.Count</th>
+
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<div class="container" style="border: 1px solid;">
+    <br />
+    <div style="width:100%; margin:0 auto;">
+        <table id="ActivityDetailGrid" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>@RPA_Sales.Resources.Resource.SerialNo</th>
+                    <th>@RPA_Sales.Resources.Resource.MenuName</th>
+                    <th>@RPA_Sales.Resources.Resource.Username</th>
+                    <th>@RPA_Sales.Resources.Resource.VisitedDate</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+
+@section ScriptSection{
+    <script>
+        function RefreshDataTable() {
+            $('#ActivityGrid').DataTable().ajax.reload(null, false);
+            $("#ActivityGrid").DataTable().page('first').draw('page');
+        }
+       
+        $(document).ready(function () {
+            $("#ActivityGrid").DataTable({
+                "processing": true, // for show progress bar
+                "serverSide": false, // for process server side
+                "filter": true, // this is for disable filter (search box)
+                "orderMulti": false, // for disable multiple column at once
+                "pageLength": 5,
+
+
+                "ajax": {
+                     "url":  "@Url.Action("ViewLogHistory", "Home")",
+                    "type": "POST",
+                    "datatype": "json"
+                },
+
+                "columnDefs":
+                    [{
+                        "targets": [0],
+                        "visible": false,
+                        "searchable": false,
+                        "orderable": false
+                    },
+                    {
+                        "targets": [1],
+                        "searchable": true,
+                        "orderable": true
+                    },
+                    {
+                        "targets": [2],
+                        "searchable": true,
+                        "orderable": true
+                    },
+
+                    //{
+                    //    "targets": [3],
+                    //    "searchable": true,
+                    //    "orderable": true
+                    //},
+
+                    ],
+
+
+                "columns": [
+                    { "data": "rownumber", "name": "rownumber", "autoWidth": true },
+                    { "data": "MenuId", "name": "MenuId", "autoWidth": true },
+                    { "data": "MenuName", "name": "MenuName", "autoWidth": true },
+                    {
+                        data: null, render: function (data, type, row) {
+                            return "<a href='#' class='text-danger' onclick=ViewLogHistoryById('" + row.MenuId + "'); >"+ row.count +"</a>";
+                        }
+                     }
+
+                ]
+
+            });
+        });
+
+        function ViewLogHistoryById(MenuId) {
+            debugger;
+            @*$.ajax({
+                url: '@Url.Action("GetViewLogHistoryById", "Home")',
+                type: 'POST',
+                data: { 'MenuId':MenuId},
+                success: function (result) {
+
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+
+            });*@
+
+        
+
+            $("#ActivityDetailGrid").DataTable().destroy();
+
+            $("#ActivityDetailGrid").DataTable({
+                "processing": true, // for show progress bar
+                "serverSide": false, // for process server side
+                "filter": true, // this is for disable filter (search box)
+                "orderMulti": false, // for disable multiple column at once
+                "pageLength": 5,
+
+
+                "ajax": {
+                     "url":  "@Url.Action("GetViewLogHistoryById", "Home")",
+                    "type": "POST",
+                    "datatype": "json",
+                    "data": { 'MenuId': MenuId },
+                },
+
+                "columnDefs":
+                    [{
+                        "targets": [0],
+                        "visible": false,
+                        "searchable": true,
+                        "orderable": true
+                    },
+                    {
+                        "targets": [1],
+                        "searchable": true,
+                        "orderable": true
+                    },
+                    {
+                        "targets": [2],
+                        "searchable": true,
+                        "orderable": true
+                    },
+
+                    {
+                        "targets": [3],
+                        "searchable": true,
+                        "orderable": true
+                    },
+
+                    ],
+
+
+                "columns": [
+                    //{ "data": "rownumber", "name": "rownumber", "autoWidth": true },
+                    { "data": "SerialNo", "name": "SerialNo", "autoWidth": true },
+                    { "data": "MenuName", "name": "MenuName", "autoWidth": true },
+                    { "data": "UserName", "name": "UserName", "autoWidth": true },
+                    { "data": "VisitedDate", "name": "VisitedDate", "autoWidth": true },
+                    //{
+                    //    "data": "VisitedDate",
+                    //    "name": "VisitedDate",
+                    //    "autoWidth": true,
+                    //    "type": "date ",
+                    //    "render": function (value) {
+                    //        if (value === null) return "";
+                    //        var pattern = /Date\(([^)]+)\)/;
+                    //        var results = pattern.exec(value);
+                    //        var dt = new Date(parseFloat(results[1]));
+                    //        var month = dt.getMonth() + 1;
+                    //        //return (month.toString().length > 1 ? month : "0" + month) + "/" + dt.getDate() + "/" + dt.getFullYear()
+                    //        return (dt.getFullYear() + "/" + (month.toString().length > 1 ? month : "0" + month) + "/" + dt.getDate() )
+                    //        //return (month.length > 1 ? month : "0" + month) + "/" + dt.getDate() + "/" + dt.getFullYear() + "&nbsp;&nbsp;" + (dt.getHours() < 10 ? ("0" + dt.getHours()) : dt.getHours()) + ":" + (dt.getMinutes() < 10 ? ("0" + dt.getMinutes()) : dt.getMinutes());
+                           
+                    //    }
+                    //},                 
+
+                ]
+
+            });
+        }
+    </script>
+}

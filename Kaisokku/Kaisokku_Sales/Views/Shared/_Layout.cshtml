@@ -1,0 +1,986 @@
+﻿<!DOCTYPE html>
+<html>
+@{
+    var ActionName = this.Request.RequestContext.RouteData.Values["action"].ToString();
+    var ContollerName = this.Request.RequestContext.RouteData.Values["controller"].ToString();
+    if (ContollerName.ToLower() == "pricemgt".ToLower())
+    {
+        if (ActionName.ToLower() == "index".ToLower())
+        {
+            ViewBag.classpricemgt = "treeview menu-open";
+        }
+
+    }
+    else
+    {
+        ViewBag.classpricemgt = "treeview ";
+    }
+    if (ContollerName.ToLower() == "Home".ToLower())
+    {
+        if (ActionName.ToLower() == "UserManagement".ToLower())
+        {
+            ViewBag.classUser = "treeview menu-open";
+        }
+        else if (ActionName.ToLower() == "VideoManagement".ToLower())
+        {
+            ViewBag.classVideo = "treeview menu-open";
+        }
+        else
+        {
+            ViewBag.classVideo = "treeview ";
+            ViewBag.classUser = "treeview ";
+        }
+    }
+    else
+    {
+        ViewBag.classUser = "treeview ";
+    }
+
+   
+   
+
+    if (ContollerName.ToLower() == "content".ToLower())
+    {
+        if (ActionName.ToLower() == "index".ToLower())
+        {
+            ViewBag.classcontent = "treeview active";
+        }
+
+    }
+    else
+    {
+        ViewBag.classcontent = "treeview ";
+    }
+    if (ContollerName.ToLower() == "ClintMGT".ToLower())
+    {
+
+        ViewBag.classClint = "treeview active";
+
+
+    }
+    else
+    {
+        ViewBag.classcontent = "treeview ";
+    }
+    if (ContollerName.ToLower() == "DemoMGT".ToLower())
+    {
+
+        ViewBag.classDemo = "treeview active";
+
+
+    }
+    else
+    {
+        ViewBag.classDemo = "treeview ";
+    }
+
+
+     }
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="https://use.fontawesome.com/6e2e2c871f.js"></script>
+
+
+    <link href="~/assets/vendor_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Bootstrap extend-->
+
+    <link href="~/main/css/bootstrap-extend.css" rel="stylesheet" />
+
+    <!-- theme style -->
+
+    <link href="~/main/css/master_style.css" rel="stylesheet" />
+
+    <!-- Qixa Admin skins -->
+
+    <link href="~/main/css/skins/_all-skins.css" rel="stylesheet" />
+
+    <!-- morris CSS -->
+
+    <link href="~/assets/vendor_components/morris.js/morris.css" rel="stylesheet" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="~/WYSIWY/editor.css" rel="stylesheet" />
+
+    <link href="~/Content/Datatable/datatables.min.css" rel="stylesheet" />
+    <link href="~/Content/Datatable/datatables.bootstrap.min.css" rel="stylesheet" />
+
+
+    <style>
+        select::-ms-expand {
+            display: none;
+        }
+        /*body {
+            width: 610px;
+        }*/
+
+        .frmSearch {
+            border: 1px solid #a8d4b1;
+            background-color: #c6f7d0;
+            margin: 2px 0px;
+            padding: 40px;
+            border-radius: 4px;
+        }
+
+        /*.ulsearch1 {
+            float: left;
+            list-style: none;
+            margin-top: -3px;
+            padding: 0;
+            width: 190px;
+            position: absolute;
+        }*/
+
+        .ulsearch1 {
+            float: left;
+            list-style: none;
+            margin-top: 2px;
+            padding: 0;
+            margin-left: -885px;
+            width: 1260px;
+            position: absolute;
+            text-align: left;
+        }
+            /*.ulsearch1 {
+            border-style: solid;
+            visibility: hidden;
+        }*/
+            .ulsearch1 li {
+                padding: 10px;
+                background: #f0f0f0;
+                border-bottom: #bbb9b9 1px solid;
+            }
+
+                .ulsearch1 li:hover {
+                    background: #ece3d2;
+                    cursor: pointer;
+                }
+
+        /*#search-box {
+            padding: 10px;
+            border: #a8d4b1 1px solid;
+            border-radius: 4px;
+        }*/
+
+        .SearchLeft {
+            margin-left: 30px;
+        }
+    </style>
+
+    
+</head>
+<body class="hold-transition skin-black dark-sidebar sidebar-mini">
+
+    <div class="wrapper">
+
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <!-- mini logo -->
+                <b class="logo-mini">
+                    <span class="light-logo"><img src="" alt="logo"></span>
+                    <span class="dark-logo"><img src="" alt="logo"></span>
+                </b>
+                <!-- logo-->
+                <span class="logo-lg">
+                    <img src="" alt="logo" class="light-logo">
+                    <img src="" alt="logo" class="dark-logo">
+                </span>
+            </a>
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <div style="width:60%">
+                    @*<a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <i class="ti-align-left"></i>
+                    </a>*@
+                    <a id="toggle_res_search" data-toggle="collapse" data-target="#search_form" class="res-only-view" href="javascript:void(0);"><i class="fa fa-search"></i></a>
+                    @*<form id="search_form" role="search" class="top-nav-search pull-left collapse">
+                        <div class="input-group ">
+                            <input type="text" name="example-input1-group2" class="form-control" placeholder="Search" id="search-box">
+                            <div id="suggesstion-box" style="display: block;position: relative;left: 825px;padding-top: 56px;/* margin-top: 92px; */"><ul class="ulsearch1"></ul></div>
+                            <span class="input-group-btn">
+                                <button type="button" class="btn  btn-default" data-target="#search_form" data-toggle="collapse" aria-label="Close" aria-expanded="true"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+
+                    </form>*@
+                <a href="@Url.Action("Index", "Kaisokku_Home")" target="_blank">
+                    <img style="width: 225px;float:right;padding:15px" src="~/assets/logo.jpg" />
+                </a>
+                </div>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown messages-menu">
+                            @*<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-language" style="font-size: inherit; margin-top: 13px;">
+
+                <h6>@Kaisokku_Sales.Resources.Resource.Language</h6>
+            </i>
+
+        </a>*@
+                          
+                            <ul class="dropdown-menu scale-up">
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <ul class="menu inner-content-div">
+                                        <li>
+                                            <!-- start message -->
+
+                                            <div class="mail-contnet" style="height:29px;margin-left:8px;">
+
+                                                @*<span>@Html.ActionLink(Kaisokku_Sales.Resources.Resource.English, "Change", "Language", new { LanguageAbbrevation = "en" }, null)</span>*@
+                                                @*<span>@Html.ActionLink("English", "Change", "Home", new { LanguageAbbrevation = "en" }, null)</span>*@
+                                                <span><input type="button" value="en" onclick="dosomething(this.value)"></span>
+                                            </div>
+                                            @*</a>*@
+                                        </li>
+                                        <!-- end message -->
+                                        <li>
+
+                                            <div class="mail-contnet">
+
+                                                @*<span>@Html.ActionLink(Kaisokku_Sales.Resources.Resource.Japanese, "Change", "Language", new { LanguageAbbrevation = "ja" }, null)</span>*@
+                                                @*<span>@Html.ActionLink("日本語", "Change", "Home", new { LanguageAbbrevation = "ja" }, null)</span>*@
+                                                <span><input type="button" value="ja" onclick="dosomething(this.value)"></span>
+                                            </div>
+                                            @*</a>*@
+                                        </li>
+                                        @*<li>
+                        <a href="#">
+
+                        </a>
+                    </li>*@
+                                    </ul>
+                                </li>
+                                @*<li class="footer"><a href="#">See all e-Mails</a></li>*@
+                            </ul>
+                        </li>
+                        @*<li style="padding:19px;">
+                                @Kaisokku_Sales.Resources.Resource.Language
+
+                            </li>*@
+                        <!-- Messages -->
+
+                        <li class="dropdown messages-menu">
+                            @*<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-envelope"></i>
+                            </a>*@
+                            @* <ul class="dropdown-menu scale-up">
+                                        <li class="header">You have 5 messages</li>
+                                        <li>
+                                            <!-- inner menu: contains the actual data -->
+                                            <ul class="menu inner-content-div">
+                                                <li>
+                                                    <!-- start message -->
+                                                    <a href="#">
+                                                    <div class="pull-left">
+
+
+                                    </div>
+                                                    <div class="mail-contnet" style="height:29px;margin-left:8px;">
+                                                        <h4>
+
+                                            Lorem Ipsum
+                                            <small><i class="fa fa-clock-o"></i> 15 mins</small>
+                                        </h4>
+                                                        <span>@Html.ActionLink(Kaisokku_Sales.Resources.Resource.English, "Change", "Language", new { LanguageAbbrevation = "en" }, null)</span>
+                                                    </div>
+                                                    </a>
+                                                </li>
+                                                <!-- end message -->
+                                                <li>
+                                                    <a href="#">
+                                                    <div class="pull-left">
+                                    </div>
+                                                    <div class="mail-contnet">
+                                                        <h4>
+                                            Nullam tempor
+                                            <small><i class="fa fa-clock-o"></i> 4 hours</small>
+                                        </h4>
+                                                        <span>@Html.ActionLink(Kaisokku_Sales.Resources.Resource.Japanese, "Change", "Language", new { LanguageAbbrevation = "ja" }, null)</span>
+                                                    </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+
+                                        </div>
+                                        <div class="mail-contnet">
+                                            <h4>
+                                                Proin venenatis
+                                                <small><i class="fa fa-clock-o"></i> Today</small>
+                                            </h4>
+                                            <span>Vestibulum nec ligula nec quam sodales rutrum sed luctus.</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+
+                                        </div>
+                                        <div class="mail-contnet">
+                                            <h4>
+                                                Praesent suscipit
+                                                <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                            </h4>
+                                            <span>Curabitur quis risus aliquet, luctus arcu nec, venenatis neque.</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+
+                                        </div>
+                                        <div class="mail-contnet">
+                                            <h4>
+                                                Donec tempor
+                                                <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                            </h4>
+                                            <span>Praesent vitae tellus eget nibh lacinia pretium.</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="footer"><a href="#">See all e-Mails</a></li>
+                                    </ul>*@
+                        </li>
+                        <!-- User Account-->
+                        <li class="dropdown user user-menu">
+
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-user"></i>
+                                <span> @Session["UserName"]</span>
+                            </a>
+                           
+                        </li>
+                        <!-- Control Sidebar Toggle Button -->
+                        <li>
+                            <a  href="@Url.Action("Index","Login")" class="link" data-toggle="tooltip" title="Logout" data-original-title="Logout"><i class="fa fa-power-off"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar-->
+            <section class="sidebar">
+                <!-- sidebar menu-->
+                @* @Html.Action("Menu", "Home");*@
+
+                <ul class="sidebar-menu mainmenu">
+                    <li id="User" class="@ViewBag.classUser">
+
+                        <a href="@Url.Action("UserManagement","Home")">
+
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <span> User Management</span>
+                            <span class="pull-right-container">
+
+                            </span>
+
+                        </a>
+
+
+                    </li>
+                </ul>
+                <!--<ul class="sidebar-menu mainmenu tree" data-widget="tree">
+                    <li class="@ViewBag.classpricemgt">
+                        <a>
+
+                            <i class="fa fa-laptop" aria-hidden="true"></i>
+                            <span> Price Management</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right" aria-hidden="true"></i>
+                            </span>
+
+
+
+                        </a>
+                        <ul class="treeview-menu submenu" style="display: none;">
+
+                            <li>
+                                <a href="@Url.Action("Index","PriceMGT")">
+                                    <i class="fa fa-ellipsis-h"></i>Pricing
+                                </a>
+                            </li>-->
+                            @*<li><a href="#"><i class="fa fa-ellipsis-h"></i>Payment Method</a></li>*@
+                        <!--</ul>
+                    </li>
+                </ul>-->
+
+
+
+
+                <ul class="sidebar-menu mainmenu tree" data-widget="tree">
+                    <li class="@ViewBag.classcontent">
+                        <a>
+
+                            <i class="fa fa-edit" aria-hidden="true"></i>
+                            <span> Page Management</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-right pull-right" aria-hidden="true"></i>
+                            </span>
+
+
+
+                        </a>
+                        <ul class="treeview-menu submenu" style="display: none;">
+
+                            <li><a href="@Url.Action("Index","content/Index")"><i class="fa fa-ellipsis-h"></i>Content Management</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="sidebar-menu mainmenu">
+                    <li id="User" class="@ViewBag.classClint ">
+
+                        <a href="@Url.Action("Index","ClintMGT")">
+
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <span> Client Management</span>
+                            <span class="pull-right-container">
+
+                            </span>
+
+                        </a>
+
+
+                    </li>
+                </ul>
+                @*<ul class="sidebar-menu mainmenu">
+                    <li id="User" class="@ViewBag.classDemo ">
+
+                        <a href="@Url.Action("Index","DemoMGT")">
+
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <span> Demo  Management</span>
+                            <span class="pull-right-container">
+
+                            </span>
+
+                        </a>
+
+
+                    </li>
+                </ul>*@
+                <ul class="sidebar-menu mainmenu">
+                    <li id="User" class="@ViewBag.classVideo ">
+
+                        <a href="@Url.Action("VideoManagement","Home")">
+
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <span> Video  Management</span>
+                            <span class="pull-right-container">
+
+                            </span>
+
+                        </a>
+
+
+                    </li>
+                </ul>
+            </section>
+
+        </aside>
+        <div style="background:#fff">
+            <footer class="main-footer">
+                <div class="pull-right d-none d-sm-inline-block">
+                    <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end"></ul>
+                </div>
+                <div style=" margin-left: 30%;">
+                    @*&copy; 2021 Kaisokku. @Kaisokku_Sales.Resources.Resource.AllRightsReserved*@
+                    © 2021 Copyright: GSSJ.All Rights Reserved
+                </div>
+            </footer>
+
+            <div class="content-wrapper">
+                <section class="content">
+                    @RenderBody()
+                    <hr />
+                </section>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    @*<div class="modal globalsearch" tabindex="-1" role="dialog" id="globalsearching" style="display: none;padding-top: 54px;margin: 0px;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Menus</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Modal body text goes here.</p>
+                        <ul></ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- jQuery 3 -->
+    @*<script src="../assets/vendor_components/jquery-3.3.1/jquery-3.3.1.min.js"></script>*@
+    <script src="~/Scripts/jquery-2.2.4.min.js"></script>
+
+    <script src="~/Scripts/Datatable/datatables.min.js"></script>
+    <script src="~/Scripts/Datatable/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/Datatable/datatables.bootstrap.min.js"></script>
+    <script src="~/Scripts/Datatable/sum.js"></script>
+
+    <!-- jQuery UI 1.11.4 -->
+
+    <script src="~/assets/vendor_components/jquery-ui/jquery-ui.js"></script>
+
+    <!-- popper -->
+
+    <script src="~/assets/vendor_components/popper/dist/popper.min.js"></script>
+
+    <!-- Bootstrap 4.0-->
+
+    <script src="~/assets/vendor_components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!-- Slimscroll -->
+
+    <script src="~/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- FastClick -->
+
+    <script src="~/assets/vendor_components/fastclick/lib/fastclick.js"></script>
+
+    <!-- Sparkline -->
+
+    <script src="~/assets/vendor_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+
+    <!-- morris-->
+    @*<script src="../assets/vendor_components/raphael/raphael.js"></script>
+        <script src="../assets/vendor_components/morris.js/morris.js"></script>*@
+
+    <!-- peity -->
+
+    <script src="~/assets/vendor_components/jquery.peity/jquery.peity.js"></script>
+
+    <!-- Qixa Admin App -->
+
+    <script src="~/main/js/template.js"></script>
+
+    <!-- Qixa Admin dashboard demo (This is only for demo purposes) -->
+    @*<script src="../main/js/pages/dashboard.js"></script>*@
+
+
+    <script>
+        $(document).on('click', '.treeview a', function () {
+            $('.mainmenu li').each(function () {
+                if ($(this).hasClass('menu-open')) {
+                    $(this).removeClass('menu-open');
+                    $(this).find('.submenu').css('display', 'none');
+                }
+            });
+            $(this).closest('li').addClass('menu-open');
+            $(this).siblings('.submenu').css('display', 'block');
+        });
+    </script>
+
+    <script>
+        @*$('#headersearch').on('change', function () {
+
+            var SearchMenu=   $('#headersearch').val()
+
+               $.ajax({
+                    url: '@Url.Action("SearchMenus", "Home")',
+                    type: 'POST',
+                   data: { 'SearchMenu': SearchMenu},
+                   success: function (result) {
+                       //$("div.modal globalsearch").css("display", "block");
+                       $("#globalsearching").css("display", "block");
+
+                        $.each(result, function (index) {
+                            //alert(result[index].ColumnName);
+                            //alert("test")
+                           $("<li><a href='#'>" + result[index].TableName + "</a></li>").appendTo(".modal-body");
+                            //alert(result[index].TableName + "," + result[index].ColumnName + "," + result[index].ColumnValue);
+                            //$("<li><a href='#'>" + result[index].TableName + "</a></li>").appendTo("ul.modal-body");
+                            //$('span .select2-results').find('ul').append('<li class="select2-results__option" role="treeitem" aria-selected="false" data-select2-id="select2-ppxs-result-jqzr-Car">'+result[index].ColumnName+'</li>');
+
+                            //$('.select2')[0].val(result[index].TableName);
+                        });
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+
+                });
+        });*@
+
+        //$("#headersearch").autocomplete({
+
+        //    source: getData,
+        //    select: selectItem,
+        //    minLength: 4,
+        //    change: function () {
+        //        debugger
+        //        $("#headersearch").val("").css("display", 2);
+        //    }
+        //});
+        //var selectItem = function (event, ui) {
+        //    $("#headersearch").val(ui.item.value);
+        //    return false;
+        //}
+
+
+
+        //var getData = function (request, response) {
+        //    debugger
+        //    var SearchMenu = $('#headersearch').val()
+        //    //$.getJSON(
+            //    "http://gd.geobytes.com/AutoCompleteCity?callback=?&q=" + request.term,
+
+            //    function (data) {
+            //        response(data);
+            //    });
+
+                  @*$.ajax({
+                    url: '@Url.Action("SearchMenus", "Home")',
+                    type: 'POST',
+                   data: { 'SearchMenu': SearchMenu},
+                      success: function (result) {
+
+                        $.each(result, function (index) {
+                            //alert(result[index].ColumnName);
+                            //alert("test")
+                           //$("<li><a href='#'>" + result[index].TableName + "</a></li>").appendTo(".modal-body");
+                            //alert(result[index].TableName + "," + result[index].ColumnName + "," + result[index].ColumnValue);
+                            //$("<li><a href='#'>" + result[index].TableName + "</a></li>").appendTo("ul.modal-body");
+                            //$('span .select2-results').find('ul').append('<li class="select2-results__option" role="treeitem" aria-selected="false" data-select2-id="select2-ppxs-result-jqzr-Car">'+result[index].ColumnName+'</li>');
+
+                            //$('.select2')[0].val(result[index].TableName);
+                        });
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+
+                });
+
+        };*@
+
+
+        @*$(function () {
+
+            function log(message) {
+                debugger;
+                    $("<div>").text(message).prependTo("#log");
+                    $("#log").scrollTop(0);
+                }
+
+
+                $("#headersearch").autocomplete({
+
+                    source: function (request, response) {
+                        alert(request.term)
+                $.ajax({
+                    url: '@Url.Action("SearchMenus", "Home")',
+                    dataType: "json",
+                    type:'POST',
+                    data: {
+                        SearchMenu: request.term
+                    },
+
+                    success: function (data) {
+
+                        response(data);
+                    }
+                });
+            },
+            minLength: 3,
+      select: function( event, ui ) {
+                log(ui.item ? "Selected: " + ui.item.label : "Nothing selected, input was " + this.value);
+            },
+      open: function() {
+                $(this).removeClass("ui-corner-all").addClass("ui-corner-top");
+            },
+      close: function() {
+                $(this).removeClass("ui-corner-top").addClass("ui-corner-all");
+      }
+          });
+        });*@
+
+
+        @*$(function () {
+            var getData = function (request, response) {
+                //$.getJSON(
+                //    "http://gd.geobytes.com/AutoCompleteCity?callback=?&q=" + request.term,
+                //    function (data) {
+                //        response(data);
+                //    });
+                debugger;
+                     $.ajax({
+                    url: '@Url.Action("SearchMenus", "Home")',
+                    dataType: "json",
+                    type:'POST',
+                    data: {
+                        SearchMenu: request.term
+                    },
+
+                    success: function (data) {
+
+                        return data;
+                    }
+                });
+            };
+
+            var selectItem = function (event, ui) {
+                debugger;
+                $("#headersearch").val(ui.item.value);
+                return false;
+            }
+
+            $("#headersearch").autocomplete({
+                source: getData,
+                select: selectItem,
+                minLength: 4,
+                change: function () {
+                    $("#headersearch").val("").css("display", 2);
+                }
+            });
+        });*@
+
+        //$(function () {
+        //    var availableTags = [
+        //        "ActionScript",
+        //        "AppleScript",
+        //        "Asp",
+        //        "BASIC",
+        //        "C",
+        //        "C++",
+        //        "Clojure",
+        //        "COBOL",
+        //        "ColdFusion",
+        //        "Erlang",
+        //        "Fortran",
+        //        "Groovy",
+        //        "Haskell",
+        //        "Java",
+        //        "JavaScript",
+        //        "Lisp",
+        //        "Perl",
+        //        "PHP",
+        //        "Python",
+        //        "Ruby",
+        //        "Scala",
+        //        "Scheme"
+        //    ];
+        //    $("#headersearch").autocomplete({
+        //        source: availableTags
+        //    });
+        //});
+
+
+
+        $(document).ready(function () {
+            $("#search-box").keydown(function (e) {
+
+                //debugger;
+                $('.ulsearch1').css('border', '1px solid');
+               var searchinput = '';
+                if (e.which == 8)//backspace
+                {
+                    if ($(this).val().length > 0) {
+
+                        if ($(this).val() == 'no rec found') {
+                            $("#search-box").val('')
+                            $("#suggesstion-box").hide();
+                        }
+
+
+                            searchinput = $(this).val().substring(0, $(this).val().length - 1);
+                             }
+                }
+                else {
+                    searchinput = $(this).val()+String.fromCharCode(e.which);
+                }
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("SearchMenus", "Home")',
+                    data: { 'SearchMenu': searchinput },
+                    beforeSend: function () {
+                        //$("#search-box").css("background", "#FFF");
+
+                    },
+                    success: function (data) {
+
+                        $(".ulsearch1").html('');
+                        var serverlocation = window.location.pathname.split('/')
+                        //debugger;
+                        if (data.MenuList.length > 0) {
+                            $("#suggesstion-box").show();
+                            if ($("#search-box").val() != '') {
+
+                                if (data.IsAdminMenu==true) //admin menu
+                                {
+                                    $.each(data.MenuList, function (index) {
+
+                                        if (serverlocation[1] != 'Home') {
+
+                                            if (data.MenuList[index].ActionMethod == 'PageManagement' || data.MenuList[index].ActionMethod == 'VideoComments' || data.MenuList[index].ActionMethod == 'KaisokkuSampleReports') {
+
+                                                $(".ulsearch1").append($("<li class='SearchLeft'><u><a href='/" + serverlocation[1] + "/" + data.MenuList[index].ControllerName + "/" + data.MenuList[index].ActionMethod + "?PageMenuName=" + data.MenuList[index].MenuName + "&MID=" + data.MenuList[index].MID + "'>" + data.MenuList[index].MenuName + "</u></a></li><li class='SearchLeft'><i>" + searchinput.toLowerCase() + "</i></li>")).appendTo('#suggesstion-box');
+                                            }
+
+                                            else {
+                                                $(".ulsearch1").append($("<li class='SearchLeft'><u><a href='/" + serverlocation[1] + "/" + data.MenuList[index].ControllerName + "/" + data.MenuList[index].ActionMethod + "'>" + data.MenuList[index].MenuName + "</u></a></li><li class='SearchLeft'><i>" + searchinput.toLowerCase() + "</i></li>")).appendTo('#suggesstion-box');
+
+                                            }
+                                        }
+                                        else {
+
+                                            if (data.MenuList[index].ActionMethod == 'PageManagement' || data.MenuList[index].ActionMethod == 'VideoComments' || data.MenuList[index].ActionMethod == 'VideoManagement' || data.MenuList[index].ActionMethod == 'KaisokkuSampleReports') {
+
+                                                $(".ulsearch1").append($("<li class='SearchLeft'><u><a href='/" + data.MenuList[index].ControllerName + "/" + data.MenuList[index].ActionMethod + "?PageMenuName=" + data.MenuList[index].MenuName + "&MID=" + data.MenuList[index].MID + "'>" + data.MenuList[index].MenuName + "</u></a></li><li class='SearchLeft'><i>" + searchinput.toLowerCase() + "</i></li>")).appendTo('#suggesstion-box');
+                                            }
+
+                                            else {
+                                                $(".ulsearch1").append($("<li class='SearchLeft'><u><a href='/" + data.MenuList[index].ControllerName + "/" + data.MenuList[index].ActionMethod + "'>" + data.MenuList[index].MenuName + "</u></a></li><li class='SearchLeft'><i>" + searchinput.toLowerCase() + "</i></li>")).appendTo('#suggesstion-box');
+
+
+                                            }
+                                        }
+                                    });
+                                }
+                                else //user menu
+                                {
+                                    //debugger;
+                                    $.each(data.MenuList, function (index) {
+
+                                        if (serverlocation[1] != 'Home') {
+
+                                            if (data.MenuList[index].ActionMethod == 'UserClientPage')
+                                            {
+                                                $(".ulsearch1").append($("<li class='SearchLeft'><u><a href='/" + serverlocation[1] + "/" + data.MenuList[index].ControllerName + "/" + data.MenuList[index].ActionMethod + "?PageFileName=" + data.MenuList[index].MenuName + "'>" + data.MenuList[index].MenuName + "</u></a></li><li class='SearchLeft'><i>" + searchinput.toLowerCase() + "</i></li>")).appendTo('#suggesstion-box');
+                                            }
+                                            else
+                                            {
+                                                $(".ulsearch1").append($("<li class='SearchLeft'><u><a href='/" + serverlocation[1] + "/" + data.MenuList[index].ControllerName + "/" + data.MenuList[index].ActionMethod + "'>" + data.MenuList[index].MenuName + "</u></a></li><li class='SearchLeft'><i>" + searchinput.toLowerCase() + "</i></li>")).appendTo('#suggesstion-box');
+                                            }
+
+                                        }
+                                        else {
+
+                                            if (data.MenuList[index].ActionMethod == 'UserClientPage')
+                                            {
+                                                $(".ulsearch1").append($("<li class='SearchLeft'><u><a href='/" + data.MenuList[index].ControllerName + "/" + data.MenuList[index].ActionMethod + "?PageFileName=" + data.MenuList[index].MenuName + "'>" + data.MenuList[index].MenuName + "</u></a></li><li class='SearchLeft'><i>" + searchinput.toLowerCase() + "</i></li>")).appendTo('#suggesstion-box');
+                                            }
+                                            else
+                                            {
+
+                                                $(".ulsearch1").append($("<li class='SearchLeft'><u><a href='/" + data.MenuList[index].ControllerName + "/" + data.MenuList[index].ActionMethod + "'>" + data.MenuList[index].MenuName + "</u></a></li><li class='SearchLeft'><i>" + searchinput.toLowerCase() + "</i></li>")).appendTo('#suggesstion-box');
+                                            }
+                                        }
+                                    });
+
+                                }
+                            }
+                        }
+                        else {
+                            $("#search-box").val('no rec found')
+                            $("#suggesstion-box").hide();
+                        }
+
+
+                    },
+                    error: function () {
+
+                        $("#suggesstion-box").hide();
+                    }
+                });
+            });
+        });
+
+
+
+
+        //To select country name
+        function selectCountry(val) {
+            $("#search-box").val(val);
+            $("#suggesstion-box").hide();
+        }
+
+
+        function dosomething(val) {
+           
+             $.ajax({
+                        url: '@Url.Action("Index", "Home")',
+                        type: 'GET',
+                        data: {'LanguageAbbrevation': val },
+                        success: function (result) {
+                            location.reload();
+                           
+                        },
+                        error: function (error) {
+                            console.log(error);
+                        }
+
+                    });
+        }
+
+        
+    </script>
+
+
+
+    @RenderSection("ScriptSection", false)
+</body>
+</html>

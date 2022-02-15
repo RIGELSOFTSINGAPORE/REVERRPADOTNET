@@ -1,0 +1,447 @@
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Sales.dll.config
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Sales.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Sales.pdb
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\ja\Kaisokku_Sales.resources.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\csc.exe
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\csc.exe.config
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\csc.rsp
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\csi.exe
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\csi.exe.config
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\csi.rsp
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.AppContext.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Collections.Immutable.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Console.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.IO.Compression.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.IO.FileSystem.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.IO.Pipes.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.AccessControl.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.Claims.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.ValueTuple.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Xml.XPath.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\vbc.exe
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\vbc.exe.config
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\vbc.rsp
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\VBCSCompiler.exe
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\roslyn\VBCSCompiler.exe.config
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Antlr3.Runtime.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\ClosedXML.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\DocumentFormat.OpenXml.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\EntityFramework.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\EntityFramework.SqlServer.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\ExcelNumberFormat.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Business.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Common.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\log4net.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Microsoft.Office.Interop.PowerPoint.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Newtonsoft.Json.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Office.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\PagedList.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Rotativa.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\System.IO.FileSystem.Primitives.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\System.IO.Packaging.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\System.Web.Helpers.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\System.Web.Mvc.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\System.Web.Optimization.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\System.Web.Razor.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\System.Web.WebPages.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\System.Web.WebPages.Razor.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\WebGrease.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Data.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Microsoft.Vbe.Interop.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\stdole.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Dapper.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Business.pdb
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Common.pdb
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Common.dll.config
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\ClosedXML.pdb
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\ClosedXML.xml
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\DocumentFormat.OpenXml.xml
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\EntityFramework.xml
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\EntityFramework.SqlServer.xml
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\ExcelNumberFormat.xml
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\log4net.xml
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\PagedList.xml
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\System.Web.Helpers.xml
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\System.Web.Mvc.xml
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\System.Web.Optimization.xml
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\System.Web.Razor.xml
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\System.Web.WebPages.xml
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\System.Web.WebPages.Razor.xml
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Newtonsoft.Json.xml
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Antlr3.Runtime.pdb
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Data.pdb
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\bin\Dapper.xml
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.csproj.AssemblyReference.cache
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.Resources.Resource.resources
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.Resources.Resource.ja.resources
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.csproj.GenerateResource.cache
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.csproj.CoreCompileInputs.cache
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\obj\Debug\ja\Kaisokku_Sales.resources.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.csproj.CopyComplete
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.pdb
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Kaisokku_Sales.dll.config
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Kaisokku_Sales.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Kaisokku_Sales.pdb
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\ja\Kaisokku_Sales.resources.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\csc.exe
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\csc.exe.config
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\csc.rsp
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\csi.exe
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\csi.exe.config
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\csi.rsp
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.AppContext.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.Collections.Immutable.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.Console.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.IO.Compression.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.IO.FileSystem.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.IO.Pipes.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.Security.AccessControl.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.Security.Claims.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.ValueTuple.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.Xml.XPath.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\vbc.exe
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\vbc.exe.config
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\vbc.rsp
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\VBCSCompiler.exe
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\roslyn\VBCSCompiler.exe.config
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Antlr3.Runtime.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\ClosedXML.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\DocumentFormat.OpenXml.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\EntityFramework.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\EntityFramework.SqlServer.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\ExcelNumberFormat.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Kaisokku_Business.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Kaisokku_Common.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\log4net.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Microsoft.Office.Interop.PowerPoint.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Newtonsoft.Json.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Office.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\PagedList.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Rotativa.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\System.IO.FileSystem.Primitives.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\System.IO.Packaging.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\System.Web.Helpers.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\System.Web.Mvc.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\System.Web.Optimization.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\System.Web.Razor.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\System.Web.WebPages.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\System.Web.WebPages.Razor.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\WebGrease.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Kaisokku_Data.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Microsoft.Vbe.Interop.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\stdole.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Dapper.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Kaisokku_Business.pdb
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Kaisokku_Common.pdb
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Kaisokku_Common.dll.config
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\ClosedXML.pdb
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\ClosedXML.xml
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\DocumentFormat.OpenXml.xml
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\EntityFramework.xml
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\EntityFramework.SqlServer.xml
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\ExcelNumberFormat.xml
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\log4net.xml
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\PagedList.xml
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\System.Web.Helpers.xml
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\System.Web.Mvc.xml
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\System.Web.Optimization.xml
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\System.Web.Razor.xml
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\System.Web.WebPages.xml
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\System.Web.WebPages.Razor.xml
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Newtonsoft.Json.xml
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Antlr3.Runtime.pdb
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Kaisokku_Data.pdb
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\bin\Dapper.xml
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.csproj.AssemblyReference.cache
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.Resources.Resource.resources
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.Resources.Resource.ja.resources
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.csproj.GenerateResource.cache
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.csproj.CoreCompileInputs.cache
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\obj\Debug\ja\Kaisokku_Sales.resources.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.csproj.CopyComplete
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.pdb
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Sales.dll.config
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Sales.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Sales.pdb
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\ja\Kaisokku_Sales.resources.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\csc.exe
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\csc.exe.config
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\csc.rsp
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\csi.exe
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\csi.exe.config
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\csi.rsp
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.AppContext.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Collections.Immutable.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Console.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.IO.Compression.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.IO.FileSystem.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.IO.Pipes.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.AccessControl.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.Claims.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.ValueTuple.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Xml.XPath.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\vbc.exe
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\vbc.exe.config
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\vbc.rsp
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\VBCSCompiler.exe
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\VBCSCompiler.exe.config
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Antlr3.Runtime.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\ClosedXML.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\DocumentFormat.OpenXml.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\EntityFramework.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\EntityFramework.SqlServer.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\ExcelNumberFormat.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Business.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Common.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\log4net.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Microsoft.Office.Interop.PowerPoint.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Microsoft.Web.Infrastructure.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Newtonsoft.Json.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Office.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\PagedList.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Rotativa.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.IO.FileSystem.Primitives.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.IO.Packaging.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.Helpers.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.Mvc.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.Optimization.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.Razor.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.WebPages.Deployment.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.WebPages.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.WebPages.Razor.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\WebGrease.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Data.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Microsoft.Vbe.Interop.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\stdole.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Dapper.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Business.pdb
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Common.pdb
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Common.dll.config
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\ClosedXML.pdb
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\ClosedXML.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\DocumentFormat.OpenXml.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\EntityFramework.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\EntityFramework.SqlServer.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\ExcelNumberFormat.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\log4net.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\PagedList.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.Helpers.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.Mvc.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.Optimization.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.Razor.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.WebPages.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.WebPages.Deployment.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.WebPages.Razor.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Newtonsoft.Json.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Antlr3.Runtime.pdb
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Data.pdb
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Dapper.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.csproj.AssemblyReference.cache
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.Resources.Resource.resources
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.Resources.Resource.ja.resources
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.csproj.GenerateResource.cache
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.csproj.CoreCompileInputs.cache
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\obj\Debug\ja\Kaisokku_Sales.resources.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.csproj.CopyComplete
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.pdb
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Sales.dll.config
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Sales.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Sales.pdb
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\ja\Kaisokku_Sales.resources.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\csc.exe
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\csc.exe.config
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\csc.rsp
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\csi.exe
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\csi.exe.config
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\csi.rsp
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.AppContext.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Collections.Immutable.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Console.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.IO.Compression.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.IO.FileSystem.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.IO.Pipes.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Reflection.Metadata.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.AccessControl.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.Claims.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.ValueTuple.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Xml.XPath.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\vbc.exe
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\vbc.exe.config
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\vbc.rsp
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\VBCSCompiler.exe
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\roslyn\VBCSCompiler.exe.config
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Antlr3.Runtime.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\ClosedXML.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\DocumentFormat.OpenXml.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\EntityFramework.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\EntityFramework.SqlServer.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\ExcelNumberFormat.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Business.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Common.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\log4net.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Microsoft.Office.Interop.PowerPoint.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Microsoft.Web.Infrastructure.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Newtonsoft.Json.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Office.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\PagedList.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Rotativa.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.IO.FileSystem.Primitives.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.IO.Packaging.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.Helpers.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.Mvc.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.Optimization.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.Razor.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.WebPages.Deployment.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.WebPages.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.WebPages.Razor.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\WebGrease.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Data.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\stdole.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Dapper.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Business.pdb
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Common.pdb
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Common.dll.config
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\ClosedXML.pdb
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\ClosedXML.xml
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\DocumentFormat.OpenXml.xml
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\EntityFramework.xml
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\EntityFramework.SqlServer.xml
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\ExcelNumberFormat.xml
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\log4net.xml
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\PagedList.xml
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.Helpers.xml
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.Mvc.xml
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.Optimization.xml
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.Razor.xml
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.WebPages.xml
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.WebPages.Deployment.xml
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\System.Web.WebPages.Razor.xml
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Newtonsoft.Json.xml
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Antlr3.Runtime.pdb
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Kaisokku_Data.pdb
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\bin\Dapper.xml
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.csproj.AssemblyReference.cache
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.Resources.Resource.resources
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.Resources.Resource.ja.resources
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.csproj.GenerateResource.cache
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.csproj.CoreCompileInputs.cache
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\obj\Debug\ja\Kaisokku_Sales.resources.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.csproj.CopyComplete
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Sales\obj\Debug\Kaisokku_Sales.pdb

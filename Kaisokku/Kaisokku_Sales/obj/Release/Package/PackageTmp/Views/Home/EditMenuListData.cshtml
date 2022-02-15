@@ -1,0 +1,18 @@
+﻿@using RPA_Common;
+@model EditMenuDetails
+@{ Layout = null; }
+
+<form>
+    @Html.Hidden("EditMenuId",Model.MenuId)
+    <div class="form-group">
+        <label for="MenuName">@RPA_Sales.Resources.Resource.MenuName</label>
+        <input type="text" class="form-control" id="EditMenuName" value="@Model.MenuName" aria-describedby="emailHelp" >
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+
+    </div>
+    <div class="form-group">
+        <label for="updatedby">@RPA_Sales.Resources.Resource.UpdatedBy</label>
+        <input type="text" class="form-control" id="EdtiMenuupdatedby" value="@Model.updatedby" aria-describedby="updatedby">
+        @*<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>*@
+    </div>
+</form>

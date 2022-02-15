@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Kaisokku_Common.PPT>
+
+<table class="table">
+    <tr style="background-color:#5e2572">
+        <th style="color:white">
+            @Html.DisplayName("VideoTitle")
+        </th>
+        <th style="color:white">
+            @Html.DisplayName("Video Description")
+        </th>
+        <th style="color:white">
+            @Html.DisplayName("File  Name")
+        </th>
+        <th style="color:white">
+            @Html.DisplayName("IP Address")
+        </th>
+        <th style="color:white">
+            @Html.DisplayName("View Count")
+        </th>
+
+        <th>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr style="background-color:#EEE;">
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Filename)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IPaddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Viewcount)
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+
+
