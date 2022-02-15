@@ -112,7 +112,8 @@ namespace PennaScheduler
                 var formats = new[] { "ddMMyyyy", "yyyyMMdd", "yyyyMMdd" };
 
                 List<Schdates> schdt = new List<Schdates>();
-                schdt = PennaScdlr.schdat(startDate, endDate);
+                //schdt = PennaScdlr.schdat(startDate, endDate);
+                schdt = PennaScdlr.schdatNew();
 
                 log1.WriteLine("Insert / Upddate Table : YREALIZATION");
                 Console.WriteLine("YREALIZATION");
@@ -676,7 +677,8 @@ namespace PennaScheduler
                 log1.WriteLine("Insert/Update Table : ZSD_LCOST_DATA_SRV");
 
                 List<Schdates> schdt = new List<Schdates>();
-                schdt = PennaScdlr.schdat(startDate, endDate);
+                //schdt = PennaScdlr.schdat(startDate, endDate);
+                schdt = PennaScdlr.schdatNew();
                 Console.WriteLine("zsd_lcost_data_srv");
 
                 query = "";
@@ -2618,6 +2620,39 @@ namespace PennaScheduler
             //}
 
             return schdat;
+        }
+        public static List<Schdates> schdatNew()
+        {
+            List<Schdates> schdat = new List<Schdates>();
+
+            int i = 0;
+            DateTime StartDate = DateTime.Today.AddDays(Convert.ToInt16(System.Configuration.ConfigurationManager.AppSettings["FromDay"].ToString()));
+            DateTime EndDate = DateTime.Today.AddDays(Convert.ToInt16(System.Configuration.ConfigurationManager.AppSettings["ToDay"].ToString()));
+            foreach (DateTime day in PennaScdlr.EachCalendarDay(StartDate, EndDate))
+            {
+                Schdates sch = new Schdates();
+                sch.RowNo = i;
+                sch.startdate = day.ToString("yyyyMMdd");
+
+                if (EndDate < day.AddDays(Convert.ToInt16(System.Configuration.ConfigurationManager.AppSettings["NoofDaySplit"].ToString()) - 1))
+                {
+                    sch.enddate = EndDate.ToString("yyyyMMdd");
+                }
+                else
+                {
+                    sch.enddate = day.AddDays(Convert.ToInt16(System.Configuration.ConfigurationManager.AppSettings["NoofDaySplit"].ToString()) - 1).ToString("yyyyMMdd");
+                }
+                //Console.WriteLine("Date is : " + day.ToString("dd-MM-yyyy"));
+                i += 1;
+                schdat.Add(sch);
+            }
+
+            return schdat;
+        }
+        public static IEnumerable<DateTime> EachCalendarDay(DateTime startDate, DateTime endDate)
+        {
+            for (var date = startDate.Date; date.Date <= endDate.Date; date = date.AddDays(Convert.ToInt16(System.Configuration.ConfigurationManager.AppSettings["NoofDaySplit"].ToString()))) yield
+            return date;
         }
     }
 
