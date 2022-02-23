@@ -1,0 +1,140 @@
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\bin\Kuroganeya_Wrn.exe.config
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\bin\Kuroganeya_Wrn.exe
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\bin\Kuroganeya_Wrn.pdb
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\bin\Kuroganeya_Wrn.xml
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\bin\GrapeCity.Win.Editors.v100.dll
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\bin\GrapeCity.Win.Editors.v100.xml
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.vbprojAssemblyReference.cache
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.DataGridEx.resources
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form1.resources
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form2.resources
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form2_S.resources
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form2_S2.resources
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form3.resources
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form4.resources
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form5.resources
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.KANA_input.resources
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.vbproj.GenerateResource.cache
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.exe.licenses
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.vbproj.CoreCompileInputs.cache
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.vbproj.CopyComplete
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.exe
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.xml
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.pdb
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\Kuroganeya_Wrn.exe.config
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\Kuroganeya_Wrn.exe
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\Kuroganeya_Wrn.pdb
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\Kuroganeya_Wrn.xml
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\GrapeCity.Win.Editors.v100.dll
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\GrapeCity.Win.Editors.v100.xml
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.vbprojAssemblyReference.cache
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.DataGridEx.resources
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form1.resources
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form2.resources
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form2_S.resources
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form2_S2.resources
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form3.resources
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form4.resources
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form5.resources
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.KANA_input.resources
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.vbproj.GenerateResource.cache
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.exe.licenses
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.vbproj.CoreCompileInputs.cache
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.vbproj.CopyComplete
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.exe
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.xml
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.pdb
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\Kuroganeya_Wrn.exe.config
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\Kuroganeya_Wrn.exe
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\Kuroganeya_Wrn.pdb
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\Kuroganeya_Wrn.xml
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\GrapeCity.Win.Editors.v100.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\GrapeCity.Win.Editors.v100.xml
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.vbprojAssemblyReference.cache
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.DataGridEx.resources
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form1.resources
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form2.resources
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form2_S.resources
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form2_S2.resources
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form3.resources
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form4.resources
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form5.resources
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.KANA_input.resources
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.vbproj.GenerateResource.cache
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.exe.licenses
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.vbproj.CoreCompileInputs.cache
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.vbproj.CopyComplete
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.exe
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.xml
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.pdb
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\bin\Kuroganeya_Wrn.exe.config
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\bin\Kuroganeya_Wrn.exe
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\bin\Kuroganeya_Wrn.pdb
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\bin\Kuroganeya_Wrn.xml
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\bin\GrapeCity.Win.Editors.v100.dll
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\bin\GrapeCity.Win.Editors.v100.xml
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.vbprojAssemblyReference.cache
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.DataGridEx.resources
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form1.resources
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form2.resources
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form2_S.resources
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form2_S2.resources
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form3.resources
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form4.resources
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form5.resources
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.KANA_input.resources
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.vbproj.GenerateResource.cache
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.exe.licenses
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.vbproj.CoreCompileInputs.cache
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.vbproj.CopyComplete
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.exe
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.xml
+D:\AsIs_ソース\Sonia\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.pdb
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\bin\GrapeCity.Win.Editors.v100.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\bin\GrapeCity.Win.Editors.v100.xml
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.vbprojAssemblyReference.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.DataGridEx.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form1.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form2.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form2_S.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form2_S2.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form3.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form4.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.Form5.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.KANA_input.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.vbproj.GenerateResource.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.vbproj.CoreCompileInputs.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.vbproj.CopyComplete
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\bin\Kuroganeya_Wrn.exe.config
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\bin\Kuroganeya_Wrn.exe
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\bin\Kuroganeya_Wrn.pdb
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\bin\Kuroganeya_Wrn.xml
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.exe.licenses
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.exe
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.xml
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_Wrn\obj\Debug\Kuroganeya_Wrn.pdb

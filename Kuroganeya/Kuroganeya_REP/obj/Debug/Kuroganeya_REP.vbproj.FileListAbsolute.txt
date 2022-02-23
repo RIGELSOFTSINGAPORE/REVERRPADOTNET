@@ -1,0 +1,81 @@
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_REP\bin\Kuroganeya_REP.exe
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_REP\bin\Kuroganeya_REP.pdb
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_REP\bin\Kuroganeya_REP.xml
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_REP\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_REP\bin\GrapeCity.Win.Editors.v100.dll
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_REP\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_REP\bin\GrapeCity.Win.Editors.v100.xml
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_REP\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_REP\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_REP\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.vbprojAssemblyReference.cache
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.DataGridEx.resources
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.Form1.resources
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.vbproj.GenerateResource.cache
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.exe.licenses
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.vbproj.CoreCompileInputs.cache
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.vbproj.CopyComplete
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.exe
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.xml
+C:\new pr\New folder (2)\AsIs_ソース\くろがねや\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.pdb
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\Kuroganeya_REP.exe.config
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\Kuroganeya_REP.exe
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\Kuroganeya_REP.pdb
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\Kuroganeya_REP.xml
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\GrapeCity.Win.Editors.v100.dll
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\GrapeCity.Win.Editors.v100.xml
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.DataGridEx.resources
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.Form1.resources
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.vbproj.GenerateResource.cache
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.exe.licenses
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.vbproj.CoreCompileInputs.cache
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.vbproj.CopyComplete
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.exe
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.xml
+C:\Projects\SQA\Deployment\V2\Kuroganeya\Kuroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.pdb
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\Kuroganeya_REP.exe.config
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\Kuroganeya_REP.exe
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\Kuroganeya_REP.pdb
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\Kuroganeya_REP.xml
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\GrapeCity.Win.Editors.v100.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\GrapeCity.Win.Editors.v100.xml
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.vbprojAssemblyReference.cache
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.DataGridEx.resources
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.Form1.resources
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.vbproj.GenerateResource.cache
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.exe.licenses
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.vbproj.CoreCompileInputs.cache
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.vbproj.CopyComplete
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.exe
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.xml
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\Kuroganeya\Kuroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.pdb
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_REP\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_REP\bin\GrapeCity.Win.Editors.v100.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_REP\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_REP\bin\GrapeCity.Win.Editors.v100.xml
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_REP\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_REP\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_REP\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.DataGridEx.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.Form1.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.vbproj.GenerateResource.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.vbproj.CoreCompileInputs.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.vbproj.CopyComplete
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_REP\bin\Kuroganeya_REP.exe.config
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_REP\bin\Kuroganeya_REP.exe
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_REP\bin\Kuroganeya_REP.pdb
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_REP\bin\Kuroganeya_REP.xml
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.exe.licenses
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.exe
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.xml
+C:\Prabu\SoniyaLatest_2020-11-27\Koroganeya\Koroganeya\Kuroganeya_REP\obj\Debug\Kuroganeya_REP.pdb
