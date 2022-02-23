@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>7.10.3077</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F14DF7BA-9654-47A7-905D-32A4797E6FCA}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>BIC.ico</ApplicationIcon>
+    <AssemblyKeyContainerName />
+    <AssemblyName>admin</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>admin</RootNamespace>
+    <StartupObject>admin.f_menu</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>admin.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>admin.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GrapeCity.Win.Input.Interop.v100, Version=10.0.4005.2012, Culture=neutral, PublicKeyToken=40ae1c5c604f43d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\InputManWin10\Bin\v10.0.4005.2012\GrapeCity.Win.Input.Interop.v100.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="f_CNT_MTR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_count.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_pwd_mod.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_shop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_shop_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_STS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_STS_rtn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f_user_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_DB.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ModuleüQDIM.vb" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.vb" />
+    <EmbeddedResource Include="f_CNT_MTR.resx">
+      <DependentUpon>f_CNT_MTR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_count.resx">
+      <DependentUpon>f_count.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_menu.resx">
+      <DependentUpon>f_menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_pwd_mod.resx">
+      <DependentUpon>f_pwd_mod.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_shop.resx">
+      <DependentUpon>f_shop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_shop_2.resx">
+      <DependentUpon>f_shop_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_STS.resx">
+      <DependentUpon>f_STS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_STS_rtn.resx">
+      <DependentUpon>f_STS_rtn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="f_user_add.resx">
+      <DependentUpon>f_user_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BIC.ico" />
+    <Content Include="bin\admin.exe" />
+    <Content Include="UpgradeLog.htm" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

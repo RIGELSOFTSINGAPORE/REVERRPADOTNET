@@ -1,0 +1,76 @@
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_hosyou\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_hosyou\bin\GrapeCity.Win.Editors.v100.dll
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_hosyou\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_hosyou\bin\GrapeCity.Win.Editors.v100.xml
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_hosyou\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_hosyou\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_hosyou\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.vbproj.GenerateResource.cache
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.vbproj.CoreCompileInputs.cache
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.vbproj.CopyComplete
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_hosyou\bin\Bic_Report_hosyou.exe.config
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_hosyou\bin\Bic_Report_hosyou.exe
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_hosyou\bin\Bic_Report_hosyou.xml
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.Form3.resources
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.WaitDlg.resources
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.exe.licenses
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.exe
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.xml
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.vbprojAssemblyReference.cache
+C:\Users\LENOVO\Downloads\Bic_Report_hosyou\bin\Bic_Report_hosyou.exe.config
+C:\Users\LENOVO\Downloads\Bic_Report_hosyou\bin\Bic_Report_hosyou.exe
+C:\Users\LENOVO\Downloads\Bic_Report_hosyou\bin\Bic_Report_hosyou.xml
+C:\Users\LENOVO\Downloads\Bic_Report_hosyou\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Users\LENOVO\Downloads\Bic_Report_hosyou\bin\GrapeCity.Win.Editors.v100.dll
+C:\Users\LENOVO\Downloads\Bic_Report_hosyou\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Users\LENOVO\Downloads\Bic_Report_hosyou\bin\GrapeCity.Win.Editors.v100.xml
+C:\Users\LENOVO\Downloads\Bic_Report_hosyou\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Users\LENOVO\Downloads\Bic_Report_hosyou\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Users\LENOVO\Downloads\Bic_Report_hosyou\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Users\LENOVO\Downloads\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.vbprojAssemblyReference.cache
+C:\Users\LENOVO\Downloads\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.Form3.resources
+C:\Users\LENOVO\Downloads\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.WaitDlg.resources
+C:\Users\LENOVO\Downloads\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.vbproj.GenerateResource.cache
+C:\Users\LENOVO\Downloads\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.exe.licenses
+C:\Users\LENOVO\Downloads\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.vbproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Downloads\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.vbproj.CopyComplete
+C:\Users\LENOVO\Downloads\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.exe
+C:\Users\LENOVO\Downloads\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.xml
+F:\downloadbackup-2020-11\Bic_Report_hosyou\bin\Bic_Report_hosyou.exe.config
+F:\downloadbackup-2020-11\Bic_Report_hosyou\bin\Bic_Report_hosyou.exe
+F:\downloadbackup-2020-11\Bic_Report_hosyou\bin\Bic_Report_hosyou.xml
+F:\downloadbackup-2020-11\Bic_Report_hosyou\bin\GrapeCity.Win.Input.Interop.v100.dll
+F:\downloadbackup-2020-11\Bic_Report_hosyou\bin\GrapeCity.Win.Editors.v100.dll
+F:\downloadbackup-2020-11\Bic_Report_hosyou\bin\GrapeCity.Framework.InputMan.v24.dll
+F:\downloadbackup-2020-11\Bic_Report_hosyou\bin\GrapeCity.Win.Editors.v100.xml
+F:\downloadbackup-2020-11\Bic_Report_hosyou\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+F:\downloadbackup-2020-11\Bic_Report_hosyou\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+F:\downloadbackup-2020-11\Bic_Report_hosyou\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+F:\downloadbackup-2020-11\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.vbprojAssemblyReference.cache
+F:\downloadbackup-2020-11\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.Form3.resources
+F:\downloadbackup-2020-11\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.WaitDlg.resources
+F:\downloadbackup-2020-11\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.vbproj.GenerateResource.cache
+F:\downloadbackup-2020-11\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.exe.licenses
+F:\downloadbackup-2020-11\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.vbproj.CoreCompileInputs.cache
+F:\downloadbackup-2020-11\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.vbproj.CopyComplete
+F:\downloadbackup-2020-11\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.exe
+F:\downloadbackup-2020-11\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.xml
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_hosyou\Bic_Report_hosyou\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_hosyou\Bic_Report_hosyou\bin\GrapeCity.Win.Editors.v100.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_hosyou\Bic_Report_hosyou\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_hosyou\Bic_Report_hosyou\bin\GrapeCity.Win.Editors.v100.xml
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_hosyou\Bic_Report_hosyou\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_hosyou\Bic_Report_hosyou\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_hosyou\Bic_Report_hosyou\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_hosyou\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.Form3.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_hosyou\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.WaitDlg.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_hosyou\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.vbproj.GenerateResource.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_hosyou\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.vbproj.CoreCompileInputs.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_hosyou\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.vbproj.CopyComplete
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_hosyou\Bic_Report_hosyou\bin\Bic_Report_hosyou.exe.config
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_hosyou\Bic_Report_hosyou\bin\Bic_Report_hosyou.exe
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_hosyou\Bic_Report_hosyou\bin\Bic_Report_hosyou.xml
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_hosyou\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.exe.licenses
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_hosyou\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.exe
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_hosyou\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.xml
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_hosyou\Bic_Report_hosyou\obj\Release\Bic_Report_hosyou.vbprojAssemblyReference.cache

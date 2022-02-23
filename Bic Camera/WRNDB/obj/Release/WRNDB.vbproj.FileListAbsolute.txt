@@ -1,0 +1,400 @@
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\WRNDB.exe.config
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\WRNDB.exe
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\WRNDB.xml
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\CrystalDecisions.ReportSource.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\CrystalDecisions.Shared.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\log4net.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\GrapeCity.Win.Editors.v100.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\log4net.xml
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\GrapeCity.Win.Editors.v100.xml
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\cs\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\da\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\de\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\en\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\es\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\fi\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\fr\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\hu\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\it\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\ja\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\ko\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\nb-NO\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\nl\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\pl\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\pt\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\ru\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\sk\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\sv\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\th\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\tr\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\zh-CHS\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\zh-CHT\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\cs\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\da\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\de\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\en\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\es\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\fi\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\fr\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\hu\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\it\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\ja\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\ko\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\nb-NO\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\nl\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\pl\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\pt\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\ru\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\sk\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\sv\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\th\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\tr\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\zh-CHS\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\zh-CHT\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\cs\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\da\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\de\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\en\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\es\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\fi\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\fr\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\hu\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\it\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\ja\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\ko\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\nb-NO\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\nl\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\pl\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\pt\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\ru\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\sk\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\sv\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\th\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\tr\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\zh-CHS\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\zh-CHT\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\obj\Release\WRNDB.Form1.resources
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\obj\Release\WRNDB.Form2.resources
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\obj\Release\WRNDB.Form2_S.resources
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\obj\Release\WRNDB.Form2_S1.resources
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\obj\Release\WRNDB.Form3.resources
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\obj\Release\WRNDB.Form4.resources
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\obj\Release\WRNDB.Form5.resources
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\obj\Release\WRNDB.Form6.resources
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\obj\Release\WRNDB.Form7.resources
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\obj\Release\WRNDB.KANA_input.resources
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\obj\Release\WRNDB.Print1.resources
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\obj\Release\WRNDB.vbproj.GenerateResource.cache
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\obj\Release\WRNDB.exe.licenses
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\obj\Release\WRNDB.vbproj.CoreCompileInputs.cache
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\obj\Release\WRNDB.vbproj.CopyComplete
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\obj\Release\WRNDB.exe
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\obj\Release\WRNDB.xml
+C:\Users\nprem\Desktop\Bic Camara\WRNDB\obj\Release\WRNDB.vbprojAssemblyReference.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\CrystalDecisions.ReportSource.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\CrystalDecisions.Shared.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\log4net.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\GrapeCity.Win.Editors.v100.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\log4net.xml
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\GrapeCity.Win.Editors.v100.xml
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\cs\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\da\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\de\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\en\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\es\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\fi\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\fr\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\hu\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\it\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\ja\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\ko\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\nb-NO\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\nl\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\pl\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\pt\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\ru\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\sk\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\sv\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\th\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\tr\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\zh-CHS\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\zh-CHT\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\cs\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\da\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\de\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\en\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\es\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\fi\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\fr\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\hu\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\it\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\ja\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\ko\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\nb-NO\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\nl\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\pl\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\pt\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\ru\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\sk\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\sv\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\th\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\tr\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\zh-CHS\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\zh-CHT\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\cs\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\da\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\de\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\en\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\es\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\fi\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\fr\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\hu\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\it\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\ja\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\ko\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\nb-NO\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\nl\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\pl\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\pt\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\ru\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\sk\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\sv\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\th\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\tr\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\zh-CHS\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\zh-CHT\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\obj\Release\WRNDB.Form1.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\obj\Release\WRNDB.Form2.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\obj\Release\WRNDB.Form2_S.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\obj\Release\WRNDB.Form2_S1.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\obj\Release\WRNDB.Form3.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\obj\Release\WRNDB.Form4.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\obj\Release\WRNDB.Form5.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\obj\Release\WRNDB.Form6.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\obj\Release\WRNDB.Form7.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\obj\Release\WRNDB.KANA_input.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\obj\Release\WRNDB.Print1.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\obj\Release\WRNDB.vbproj.GenerateResource.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\obj\Release\WRNDB.vbproj.CoreCompileInputs.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\obj\Release\WRNDB.vbproj.CopyComplete
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\WRNDB.exe.config
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\WRNDB.exe
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\bin\WRNDB.xml
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\obj\Release\WRNDB.vbprojAssemblyReference.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\obj\Release\WRNDB.exe.licenses
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\obj\Release\WRNDB.exe
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\WRNDB\obj\Release\WRNDB.xml
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\WRNDB.exe.config
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\WRNDB.exe
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\WRNDB.xml
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\CrystalDecisions.ReportSource.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\CrystalDecisions.Shared.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\log4net.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\GrapeCity.Win.Editors.v100.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\log4net.xml
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\GrapeCity.Win.Editors.v100.xml
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\cs\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\da\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\de\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\en\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\es\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\fi\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\fr\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\hu\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\it\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\ja\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\ko\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\nb-NO\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\nl\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\pl\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\pt\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\ru\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\sk\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\sv\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\th\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\tr\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\zh-CHS\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\zh-CHT\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\cs\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\da\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\de\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\en\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\es\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\fi\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\fr\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\hu\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\it\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\ja\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\ko\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\nb-NO\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\nl\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\pl\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\pt\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\ru\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\sk\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\sv\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\th\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\tr\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\zh-CHS\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\zh-CHT\CrystalDecisions.ReportSource.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\cs\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\da\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\de\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\en\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\es\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\fi\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\fr\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\hu\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\it\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\ja\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\ko\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\nb-NO\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\nl\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\pl\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\pt\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\ru\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\sk\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\sv\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\th\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\tr\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\zh-CHS\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\zh-CHT\CrystalDecisions.Shared.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Users\nprem\Desktop\New folder\WRNDB\obj\Release\WRNDB.Form1.resources
+C:\Users\nprem\Desktop\New folder\WRNDB\obj\Release\WRNDB.Form2.resources
+C:\Users\nprem\Desktop\New folder\WRNDB\obj\Release\WRNDB.Form2_S.resources
+C:\Users\nprem\Desktop\New folder\WRNDB\obj\Release\WRNDB.Form2_S1.resources
+C:\Users\nprem\Desktop\New folder\WRNDB\obj\Release\WRNDB.Form3.resources
+C:\Users\nprem\Desktop\New folder\WRNDB\obj\Release\WRNDB.Form4.resources
+C:\Users\nprem\Desktop\New folder\WRNDB\obj\Release\WRNDB.Form5.resources
+C:\Users\nprem\Desktop\New folder\WRNDB\obj\Release\WRNDB.Form6.resources
+C:\Users\nprem\Desktop\New folder\WRNDB\obj\Release\WRNDB.Form7.resources
+C:\Users\nprem\Desktop\New folder\WRNDB\obj\Release\WRNDB.KANA_input.resources
+C:\Users\nprem\Desktop\New folder\WRNDB\obj\Release\WRNDB.Print1.resources
+C:\Users\nprem\Desktop\New folder\WRNDB\obj\Release\WRNDB.vbproj.GenerateResource.cache
+C:\Users\nprem\Desktop\New folder\WRNDB\obj\Release\WRNDB.exe.licenses
+C:\Users\nprem\Desktop\New folder\WRNDB\obj\Release\WRNDB.vbproj.CoreCompileInputs.cache
+C:\Users\nprem\Desktop\New folder\WRNDB\obj\Release\WRNDB.vbproj.CopyComplete
+C:\Users\nprem\Desktop\New folder\WRNDB\obj\Release\WRNDB.exe
+C:\Users\nprem\Desktop\New folder\WRNDB\obj\Release\WRNDB.xml
+C:\Users\nprem\Desktop\New folder\WRNDB\obj\Release\WRNDB.vbprojAssemblyReference.cache
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\WRNDB.exe.config
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\WRNDB.exe
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\WRNDB.xml
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\CrystalDecisions.ReportSource.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\CrystalDecisions.Shared.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\log4net.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\GrapeCity.Win.Editors.v100.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\log4net.xml
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\GrapeCity.Win.Editors.v100.xml
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\cs\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\da\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\de\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\en\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\es\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\fi\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\fr\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\hu\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\it\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\ja\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\ko\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\nb-NO\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\nl\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\pl\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\pt\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\ru\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\sk\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\sv\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\th\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\tr\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\zh-CHS\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\zh-CHT\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\cs\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\da\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\de\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\en\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\es\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\fi\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\fr\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\hu\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\it\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\ja\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\ko\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\nb-NO\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\nl\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\pl\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\pt\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\ru\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\sk\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\sv\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\th\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\tr\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\zh-CHS\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\zh-CHT\CrystalDecisions.ReportSource.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\cs\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\da\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\de\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\en\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\es\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\fi\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\fr\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\hu\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\it\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\ja\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\ko\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\nb-NO\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\nl\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\pl\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\pt\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\ru\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\sk\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\sv\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\th\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\tr\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\zh-CHS\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\zh-CHT\CrystalDecisions.Shared.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\obj\Release\WRNDB.vbprojAssemblyReference.cache
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\obj\Release\WRNDB.Form1.resources
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\obj\Release\WRNDB.Form2.resources
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\obj\Release\WRNDB.Form2_S.resources
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\obj\Release\WRNDB.Form2_S1.resources
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\obj\Release\WRNDB.Form3.resources
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\obj\Release\WRNDB.Form4.resources
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\obj\Release\WRNDB.Form5.resources
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\obj\Release\WRNDB.Form6.resources
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\obj\Release\WRNDB.Form7.resources
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\obj\Release\WRNDB.KANA_input.resources
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\obj\Release\WRNDB.Print1.resources
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\obj\Release\WRNDB.vbproj.GenerateResource.cache
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\obj\Release\WRNDB.exe.licenses
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\obj\Release\WRNDB.vbproj.CoreCompileInputs.cache
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\obj\Release\WRNDB.vbproj.CopyComplete
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\obj\Release\WRNDB.exe
+C:\Prabu\SONIA_SOURCE_20201202\Bic Camera\Ram_WRNDB\WRNDB\WRNDB\obj\Release\WRNDB.xml

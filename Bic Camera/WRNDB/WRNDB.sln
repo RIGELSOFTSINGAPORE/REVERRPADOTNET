@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WRNDB", "WRNDB.vbproj", "{C530871E-702E-4607-9194-BF22D8A74D82}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "setup_WRNDB", "..\setup_WRNDB\setup_WRNDB.vdproj", "{76806A94-9031-4B11-BC38-BB66863FC68C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C530871E-702E-4607-9194-BF22D8A74D82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C530871E-702E-4607-9194-BF22D8A74D82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C530871E-702E-4607-9194-BF22D8A74D82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C530871E-702E-4607-9194-BF22D8A74D82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76806A94-9031-4B11-BC38-BB66863FC68C}.Debug|Any CPU.ActiveCfg = Debug
+		{76806A94-9031-4B11-BC38-BB66863FC68C}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {13E36380-6B2F-4F12-AAEE-05E680D6680E}
+	EndGlobalSection
+EndGlobal

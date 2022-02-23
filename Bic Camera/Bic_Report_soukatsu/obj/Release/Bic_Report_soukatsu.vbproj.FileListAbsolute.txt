@@ -1,0 +1,56 @@
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\bin\Bic_Report_soukatsu.exe.config
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\bin\Bic_Report_soukatsu.exe
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\bin\Bic_Report_soukatsu.xml
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\bin\GrapeCity.Win.Editors.v100.dll
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\bin\stdole.dll
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\bin\GrapeCity.Win.Editors.v100.xml
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\bin\Interop.Microsoft.Office.Core.dll
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.vbprojAssemblyReference.cache
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.exe.config
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\obj\Release\Interop.Microsoft.Office.Core.dll
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.vbproj.ResolveComReference.cache
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.Form1.resources
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.WaitDialog.resources
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.vbproj.GenerateResource.cache
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.exe.licenses
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.vbproj.CoreCompileInputs.cache
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.vbproj.CopyComplete
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.exe
+C:\Projects\SQA\AccessTo.Net\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.xml
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_soukatsu\bin\ﾋﾞｯｸｶﾒﾗ総括表.exe.config
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_soukatsu\bin\ﾋﾞｯｸｶﾒﾗ総括表.exe
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_soukatsu\bin\ﾋﾞｯｸｶﾒﾗ総括表.xml
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_soukatsu\bin\stdole.dll
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_soukatsu\bin\Interop.Microsoft.Office.Core.dll
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_soukatsu\obj\Release\ﾋﾞｯｸｶﾒﾗ総括表.exe.config
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_soukatsu\obj\Release\Interop.Microsoft.Office.Core.dll
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.vbproj.ResolveComReference.cache
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_soukatsu\obj\Release\ﾋﾞｯｸｶﾒﾗ総括表.Form1.resources
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_soukatsu\obj\Release\ﾋﾞｯｸｶﾒﾗ総括表.WaitDialog.resources
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.vbproj.GenerateResource.cache
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.vbproj.CoreCompileInputs.cache
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.vbproj.CopyComplete
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_soukatsu\obj\Release\ﾋﾞｯｸｶﾒﾗ総括表.exe
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_soukatsu\obj\Release\ﾋﾞｯｸｶﾒﾗ総括表.xml
+C:\Projects\SQA\Deployment\V3\Bic Camara\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.vbprojAssemblyReference.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_soukatsu\bin\stdole.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_soukatsu\bin\Interop.Microsoft.Office.Core.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_soukatsu\obj\Release\Interop.Microsoft.Office.Core.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.vbproj.ResolveComReference.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.Form1.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.WaitDialog.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.vbproj.GenerateResource.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.vbproj.CoreCompileInputs.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.vbproj.CopyComplete
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_soukatsu\bin\Bic_Report_soukatsu.exe.config
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_soukatsu\bin\Bic_Report_soukatsu.exe
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_soukatsu\bin\Bic_Report_soukatsu.xml
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.vbprojAssemblyReference.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.exe.config
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.exe
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\Bic_Report_soukatsu\obj\Release\Bic_Report_soukatsu.xml

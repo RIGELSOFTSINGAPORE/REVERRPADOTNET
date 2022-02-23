@@ -1,0 +1,54 @@
+C:\Users\nprem\Desktop\Bic Camara\BIC_Import_bat\bin\BIC_Import_bat.exe.config
+C:\Users\nprem\Desktop\Bic Camara\BIC_Import_bat\bin\BIC_Import_bat.exe
+C:\Users\nprem\Desktop\Bic Camara\BIC_Import_bat\bin\BIC_Import_bat.xml
+C:\Users\nprem\Desktop\Bic Camara\BIC_Import_bat\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Users\nprem\Desktop\Bic Camara\BIC_Import_bat\bin\GrapeCity.Win.Editors.v100.dll
+C:\Users\nprem\Desktop\Bic Camara\BIC_Import_bat\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Users\nprem\Desktop\Bic Camara\BIC_Import_bat\bin\GrapeCity.Win.Editors.v100.xml
+C:\Users\nprem\Desktop\Bic Camara\BIC_Import_bat\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\BIC_Import_bat\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\BIC_Import_bat\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\BIC_Import_bat\obj\Release\BIC_Import_bat.vbprojAssemblyReference.cache
+C:\Users\nprem\Desktop\Bic Camara\BIC_Import_bat\obj\Release\BIC_Import_bat.Form1.resources
+C:\Users\nprem\Desktop\Bic Camara\BIC_Import_bat\obj\Release\BIC_Import_bat.vbproj.GenerateResource.cache
+C:\Users\nprem\Desktop\Bic Camara\BIC_Import_bat\obj\Release\BIC_Import_bat.exe.licenses
+C:\Users\nprem\Desktop\Bic Camara\BIC_Import_bat\obj\Release\BIC_Import_bat.vbproj.CoreCompileInputs.cache
+C:\Users\nprem\Desktop\Bic Camara\BIC_Import_bat\obj\Release\BIC_Import_bat.vbproj.CopyComplete
+C:\Users\nprem\Desktop\Bic Camara\BIC_Import_bat\obj\Release\BIC_Import_bat.exe
+C:\Users\nprem\Desktop\Bic Camara\BIC_Import_bat\obj\Release\BIC_Import_bat.xml
+D:\AsIs_ソース\Sonia\Bic Camera\BIC_Import_bat\bin\BIC_Import_bat.exe.config
+D:\AsIs_ソース\Sonia\Bic Camera\BIC_Import_bat\bin\BIC_Import_bat.exe
+D:\AsIs_ソース\Sonia\Bic Camera\BIC_Import_bat\bin\BIC_Import_bat.xml
+D:\AsIs_ソース\Sonia\Bic Camera\BIC_Import_bat\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\AsIs_ソース\Sonia\Bic Camera\BIC_Import_bat\bin\GrapeCity.Win.Editors.v100.dll
+D:\AsIs_ソース\Sonia\Bic Camera\BIC_Import_bat\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\AsIs_ソース\Sonia\Bic Camera\BIC_Import_bat\bin\GrapeCity.Win.Editors.v100.xml
+D:\AsIs_ソース\Sonia\Bic Camera\BIC_Import_bat\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+D:\AsIs_ソース\Sonia\Bic Camera\BIC_Import_bat\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\AsIs_ソース\Sonia\Bic Camera\BIC_Import_bat\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\AsIs_ソース\Sonia\Bic Camera\BIC_Import_bat\obj\Release\BIC_Import_bat.vbprojAssemblyReference.cache
+D:\AsIs_ソース\Sonia\Bic Camera\BIC_Import_bat\obj\Release\BIC_Import_bat.Form1.resources
+D:\AsIs_ソース\Sonia\Bic Camera\BIC_Import_bat\obj\Release\BIC_Import_bat.vbproj.GenerateResource.cache
+D:\AsIs_ソース\Sonia\Bic Camera\BIC_Import_bat\obj\Release\BIC_Import_bat.exe.licenses
+D:\AsIs_ソース\Sonia\Bic Camera\BIC_Import_bat\obj\Release\BIC_Import_bat.vbproj.CoreCompileInputs.cache
+D:\AsIs_ソース\Sonia\Bic Camera\BIC_Import_bat\obj\Release\BIC_Import_bat.vbproj.CopyComplete
+D:\AsIs_ソース\Sonia\Bic Camera\BIC_Import_bat\obj\Release\BIC_Import_bat.exe
+D:\AsIs_ソース\Sonia\Bic Camera\BIC_Import_bat\obj\Release\BIC_Import_bat.xml
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\BIC_Import_bat\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\BIC_Import_bat\bin\GrapeCity.Win.Editors.v100.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\BIC_Import_bat\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\BIC_Import_bat\bin\GrapeCity.Win.Editors.v100.xml
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\BIC_Import_bat\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\BIC_Import_bat\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\BIC_Import_bat\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\BIC_Import_bat\obj\Release\BIC_Import_bat.Form1.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\BIC_Import_bat\obj\Release\BIC_Import_bat.vbproj.GenerateResource.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\BIC_Import_bat\obj\Release\BIC_Import_bat.vbproj.CoreCompileInputs.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\BIC_Import_bat\obj\Release\BIC_Import_bat.vbproj.CopyComplete
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\BIC_Import_bat\bin\BIC_Import_bat.exe.config
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\BIC_Import_bat\bin\BIC_Import_bat.exe
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\BIC_Import_bat\bin\BIC_Import_bat.xml
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\BIC_Import_bat\obj\Release\BIC_Import_bat.vbprojAssemblyReference.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\BIC_Import_bat\obj\Release\BIC_Import_bat.exe.licenses
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\BIC_Import_bat\obj\Release\BIC_Import_bat.exe
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\BIC_Import_bat\obj\Release\BIC_Import_bat.xml

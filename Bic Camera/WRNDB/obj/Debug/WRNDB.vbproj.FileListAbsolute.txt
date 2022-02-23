@@ -1,0 +1,211 @@
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\WRNDB.exe
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\WRNDB.pdb
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\WRNDB.xml
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\CrystalDecisions.ReportSource.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\CrystalDecisions.Shared.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\log4net.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\ActiveReports.Chart.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\GrapeCity.Win.Editors.v100.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\log4net.xml
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\GrapeCity.Win.Editors.v100.xml
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\ja\ActiveReports.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\ja\ActiveReports.Viewer.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\cs\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\da\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\de\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\en\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\es\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\fi\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\fr\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\hu\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\it\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\ja\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\ko\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\nb-NO\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\nl\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\pl\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\pt\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\ru\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\sk\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\sv\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\th\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\tr\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\zh-CHS\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\zh-CHT\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\cs\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\da\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\de\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\en\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\es\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\fi\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\fr\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\hu\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\it\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\ja\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\ko\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\nb-NO\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\nl\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\pl\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\pt\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\ru\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\sk\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\sv\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\th\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\tr\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\zh-CHS\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\zh-CHT\CrystalDecisions.ReportSource.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\cs\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\da\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\de\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\en\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\es\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\fi\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\fr\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\hu\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\it\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\ja\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\ko\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\nb-NO\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\nl\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\pl\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\pt\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\ru\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\sk\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\sv\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\th\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\tr\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\zh-CHS\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\zh-CHT\CrystalDecisions.Shared.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\ja\ActiveReports.Chart.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\obj\Debug\WRNDB.vbprojAssemblyReference.cache
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\obj\Debug\WRNDB.Form1.resources
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\obj\Debug\WRNDB.Form2.resources
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\obj\Debug\WRNDB.Form2_S.resources
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\obj\Debug\WRNDB.Form2_S1.resources
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\obj\Debug\WRNDB.Form3.resources
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\obj\Debug\WRNDB.Form4.resources
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\obj\Debug\WRNDB.Form5.resources
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\obj\Debug\WRNDB.Form6.resources
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\obj\Debug\WRNDB.Form7.resources
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\obj\Debug\WRNDB.KANA_input.resources
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\obj\Debug\WRNDB.Print1.resources
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\obj\Debug\WRNDB.vbproj.GenerateResource.cache
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\obj\Debug\WRNDB.exe.licenses
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\obj\Debug\WRNDB.vbproj.CoreCompileInputs.cache
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\obj\Debug\WRNDB.vbproj.CopyComplete
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\obj\Debug\WRNDB.exe
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\obj\Debug\WRNDB.xml
+C:\new pr\New folder (2)\AsIs_ソース\BIC\WRNDB\obj\Debug\WRNDB.pdb
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\WRNDB.exe.config
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\WRNDB.exe
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\WRNDB.pdb
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\WRNDB.xml
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\CrystalDecisions.ReportSource.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\CrystalDecisions.Shared.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\log4net.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\ActiveReports.Chart.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\GrapeCity.Win.Editors.v100.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\log4net.xml
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\GrapeCity.Win.Editors.v100.xml
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\ja\ActiveReports.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\ja\ActiveReports.Viewer.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\cs\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\da\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\de\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\en\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\es\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\fi\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\fr\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\hu\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\it\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\ja\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\ko\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\nb-NO\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\nl\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\pl\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\pt\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\ru\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\sk\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\sv\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\th\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\tr\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\zh-CHS\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\zh-CHT\CrystalDecisions.CrystalReports.Engine.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\cs\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\da\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\de\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\en\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\es\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\fi\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\fr\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\hu\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\it\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\ja\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\ko\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\nb-NO\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\nl\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\pl\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\pt\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\ru\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\sk\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\sv\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\th\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\tr\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\zh-CHS\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\zh-CHT\CrystalDecisions.ReportSource.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\cs\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\da\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\de\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\en\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\es\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\fi\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\fr\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\hu\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\it\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\ja\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\ko\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\nb-NO\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\nl\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\pl\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\pt\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\ru\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\sk\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\sv\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\th\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\tr\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\zh-CHS\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\zh-CHT\CrystalDecisions.Shared.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\ja\ActiveReports.Chart.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\obj\Debug\WRNDB.vbprojAssemblyReference.cache
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\obj\Debug\WRNDB.Form1.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\obj\Debug\WRNDB.Form2.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\obj\Debug\WRNDB.Form2_S.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\obj\Debug\WRNDB.Form2_S1.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\obj\Debug\WRNDB.Form3.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\obj\Debug\WRNDB.Form4.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\obj\Debug\WRNDB.Form5.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\obj\Debug\WRNDB.Form6.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\obj\Debug\WRNDB.Form7.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\obj\Debug\WRNDB.KANA_input.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\obj\Debug\WRNDB.Print1.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\obj\Debug\WRNDB.vbproj.GenerateResource.cache
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\obj\Debug\WRNDB.exe.licenses
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\obj\Debug\WRNDB.vbproj.CoreCompileInputs.cache
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\obj\Debug\WRNDB.vbproj.CopyComplete
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\obj\Debug\WRNDB.exe
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\obj\Debug\WRNDB.xml
+C:\Projects\SQA\Deployment\V2\Bic Camara\WRNDB\obj\Debug\WRNDB.pdb

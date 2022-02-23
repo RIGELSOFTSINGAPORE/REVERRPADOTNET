@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3" PrintWidth="10950" DocumentName="ActiveReports Document" ScriptLang="C#" CodeFile="ActiveReport1.vb">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: MS UI Gothic; font-style: normal; font-variant: inherit; font-weight: normal; font-size: 10pt; font-size-adjust: inherit; font-stretch: inherit; color: rgb(0,0,0); background-repeat: inherit; background-attachment: inherit; opacity: inherit; word-spacing: inherit; letter-spacing: inherit; text-decoration: none; vertical-align: inherit; text-transform: inherit; text-align: inherit; text-indent: inherit; unicode-bidi: inherit; line-height: inherit; white-space: inherit; ddo-char-set: 128; " />
+    <Style Name="Heading1" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 16pt; font-size-adjust: inherit; font-stretch: inherit; " />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-style: italic; font-variant: inherit; font-weight: bold; font-size: 14pt; font-size-adjust: inherit; font-stretch: inherit; " />
+    <Style Name="Heading3" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 13pt; font-size-adjust: inherit; font-stretch: inherit; " />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="0" BackColor="16777215" CanShrink="0" />
+    <Section Type="Detail" Name="Detail" Height="15390" BackColor="16777215" CanShrink="0">
+      <Control Type="AR.Shape" Name="Shape3" MOD="4" Left="8730" Top="12690" Width="1800" Height="2250" BackColor="16777215" LineWeight="3" />
+      <Control Type="AR.Line" Name="Line1" MOD="4" X1="1980" Y1="3060" X2="3780" Y2="3060" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape23" MOD="4" Left="6030" Top="10620" Width="1800" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape18" MOD="4" Left="6930" Top="7740" Width="3600" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape17" MOD="4" Left="1980" Top="8460" Width="1890" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape16" MOD="4" Left="1980" Top="8100" Width="1890" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape15" MOD="4" Left="1980" Top="7740" Width="1890" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape14" MOD="4" Left="6930" Top="7380" Width="3600" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape11" MOD="4" Left="2970" Top="6480" Width="5670" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape10" MOD="4" Left="2970" Top="6120" Width="5670" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape7" MOD="4" Left="1980" Top="4680" Width="3060" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape6" MOD="4" Left="1980" Top="4320" Width="3060" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape5" MOD="4" Left="1980" Top="3870" Width="3060" Height="421.92" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Line" Name="Line" MOD="4" X1="8730" Y1="13140" X2="10530" Y2="13140" LineWeight="3" />
+      <Control Type="AR.Field" Name="TextBox32" MOD="4" Left="4950" Top="14130" Width="2250" Height="360" Text="TextBox32" Style="ddo-char-set: 1; text-align: center; font-size: 13pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label49" MOD="4" Left="8820" Top="12780" Width="1620" Height="360" Caption="受信確認欄" Style="ddo-char-set: 1; text-align: center; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label48" MOD="4" Left="2250" Top="14670" Width="5400" Height="360" Caption="ファックス番号　   ０３－５９５６－６７８９" Style="ddo-char-set: 1; font-size: 12pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label47" MOD="4" Left="2250" Top="14400" Width="5400" Height="360" Caption="電話番号　　　　０５７０－０００－２１２" Style="ddo-char-set: 1; font-size: 12pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label46" MOD="4" Left="7200" Top="14130" Width="990" Height="360" Caption="まで" Style="ddo-char-set: 1; font-size: 12pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label45" MOD="4" Left="540" Top="14130" Width="4590" Height="360" Caption="ビック修理受付センター　池袋窓口　担当" Style="ddo-char-set: 1; font-size: 12pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label44" MOD="4" Left="540" Top="13860" Width="2340" Height="360" Caption="【確認等ご連絡先】" Style="ddo-char-set: 1; font-size: 12pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label43" MOD="4" Left="630" Top="13140" Width="7110" Height="720" Caption="修理完了報告書および修理限度額内のご請求書は、㈱東京サービスステーション（ＦＡＸ：０３－３９８２－４４０９）までお願い致します。　　※修理限度額は税別額となります。" Style="ddo-char-set: 1; font-size: 10pt; font-family: Arial; " />
+      <Control Type="AR.Label" Name="Label42" MOD="4" Left="360" Top="13140" Width="270" Height="270" Caption="2)" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; " />
+      <Control Type="AR.Label" Name="Label41" MOD="4" Left="360" Top="12690" Width="270" Height="270" Caption="1)" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; " />
+      <Control Type="AR.Label" Name="Label40" MOD="4" Left="630" Top="12690" Width="6750" Height="720" Caption="修理限度額を超過する場合、およびご不明点がございましたら、下記のビック修理受付センターまでご連絡下さい。" Style="ddo-char-set: 1; font-size: 10pt; font-family: Arial; " />
+      <Control Type="AR.Label" Name="Label39" MOD="4" Left="4410" Top="12240" Width="1620" Height="360" Caption="メーカー受付№" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label38" MOD="4" Left="4410" Top="11880" Width="1620" Height="360" Caption="メーカーサービス" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label37" MOD="4" Left="360" Top="12240" Width="1530" Height="360" Caption="メーカー担当者" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label36" MOD="4" Left="360" Top="11880" Width="1530" Height="360" Caption="メーカー依頼日" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label35" MOD="4" Left="3240" Top="10620" Width="2790" Height="360" Caption="媒体内データ消去の可能性" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label34" MOD="4" Left="360" Top="11250" Width="1530" Height="360" Caption="ご要望事項等" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label33" MOD="4" Left="360" Top="10980" Width="1530" Height="360" Caption="その他" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label32" MOD="4" Left="360" Top="10620" Width="1530" Height="360" Caption="梱包箱要否" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label31" MOD="4" Left="360" Top="9990" Width="1530" Height="360" Caption="（付属品等）" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label30" MOD="4" Left="360" Top="9720" Width="1530" Height="360" Caption="お預かり品" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label29" MOD="4" Left="360" Top="8820" Width="1530" Height="360" Caption="ご指摘症状" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label28" MOD="4" Left="3960" Top="8460" Width="810" Height="360" Caption="（税別）" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label27" MOD="4" Left="3960" Top="8100" Width="810" Height="360" Caption="（税別）" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label26" MOD="4" Left="5310" Top="8100" Width="1620" Height="360" Caption="購入店舗" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label25" MOD="4" Left="5310" Top="7740" Width="1620" Height="360" Caption="延長保証期間" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label24" MOD="4" Left="5310" Top="7380" Width="1620" Height="360" Caption="商品型式番号" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label23" MOD="4" Left="360" Top="8460" Width="1530" Height="360" Caption="修理限度額" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label22" MOD="4" Left="360" Top="8100" Width="1530" Height="360" Caption="購入金額" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label21" MOD="4" Left="360" Top="7740" Width="1530" Height="360" Caption="購入日" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label20" MOD="4" Left="360" Top="7380" Width="1530" Height="360" Caption="商品名" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label19" MOD="4" Left="360" Top="7020" Width="1530" Height="360" Caption="メーカー名" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label18" MOD="4" Left="1980" Top="6480" Width="1080" Height="360" Caption="第二希望" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label17" MOD="4" Left="1980" Top="6120" Width="1080" Height="360" Caption="第一希望" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label16" MOD="4" Left="360" Top="6120" Width="1620" Height="360" Caption="希望日時" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label15" MOD="4" Left="1980" Top="5400" Width="990" Height="360" Caption="ご住所" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label14" MOD="4" Left="1980" Top="5040" Width="990" Height="360" Caption="郵便番号" Style="ddo-char-set: 1; font-size: 10pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label13" MOD="4" Left="360" Top="5040" Width="1620" Height="360" Caption="訪問先" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label12" MOD="4" Left="5130" Top="4680" Width="1620" Height="360" Caption="連絡可能時間" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label11" MOD="4" Left="360" Top="4680" Width="1620" Height="360" Caption="連絡先番号" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label10" MOD="4" Left="360" Top="4320" Width="1620" Height="360" Caption="お電話番号" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label9" MOD="4" Left="5040" Top="3870" Width="540" Height="450" Caption="様" Style="ddo-char-set: 1; font-size: 14pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label8" MOD="4" Left="360" Top="3870" Width="1620" Height="450" Caption="お客様ご氏名" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label7" MOD="4" Left="360" Top="3600" Width="1620" Height="270" Caption="フリガナ" Style="ddo-char-set: 1; font-size: 9pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label6" MOD="4" Left="4050" Top="3150" Width="1620" Height="360" Caption="長期保証番号" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label5" MOD="4" Left="360" Top="3150" Width="1620" Height="360" Caption="修理受付日" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label4" MOD="4" Left="360" Top="2700" Width="1620" Height="360" Caption="修理受付番号" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Shape" Name="Shape2" MOD="4" Left="5940" Top="3150" Width="4590" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape8" MOD="4" Left="6750" Top="4680" Width="3780" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape9" MOD="4" Left="2970" Top="5040" Width="7560" Height="1051.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape12" MOD="4" Left="1980" Top="7020" Width="3060" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape13" MOD="4" Left="1980" Top="7380" Width="3060" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape19" MOD="4" Left="6930" Top="8100" Width="3600" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape20" MOD="4" Left="1980" Top="8820" Width="8550" Height="871.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape21" MOD="4" Left="1980" Top="9720" Width="8550" Height="871.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape28" MOD="4" Left="1980" Top="10980" Width="8550" Height="871.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape22" MOD="4" Left="1980" Top="10620" Width="990" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape24" MOD="4" Left="1980" Top="11880" Width="1890" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape25" MOD="4" Left="1980" Top="12240" Width="1890" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape27" MOD="4" Left="6030" Top="12240" Width="2610" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape26" MOD="4" Left="6030" Top="11880" Width="2610" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape4" MOD="4" Left="1980" Top="3150" Width="1890" Height="331.2" BackColor="16777215" LineColor="8421504" LineWeight="3" />
+      <Control Type="AR.Shape" Name="Shape1" MOD="4" Left="7830" Top="360" Width="2970" Height="1440" BackColor="16777215" />
+      <Control Type="AR.Shape" Name="Shape" MOD="4" Left="0" Top="1890" Width="10800" Height="630" BackColor="16777215" LineWeight="3" />
+      <Control Type="AR.Field" Name="TextBox2" MOD="4" Left="90" Top="1890" Width="10620" Height="540" Text="TextBox2" Style="ddo-char-set: 1; text-align: center; font-size: 23pt; font-family: Arial Unicode MS; vertical-align: top; " />
+      <Control Type="AR.Field" Name="TextBox3" MOD="4" Left="8100" Top="1440" Width="2520" Height="288" Text="TextBox3" Style="ddo-char-set: 1; text-align: center; font-size: 11pt; font-family: Arial; " />
+      <Control Type="AR.Barcode" Name="Barcode1" MOD="4" Left="8100" Top="630" Width="2520" Height="810" BarStyle="18" Text="4901681503513" />
+      <Control Type="AR.Label" Name="Label3" MOD="4" Left="8100" Top="360" Width="1260" Height="270" Caption="EAN13" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; " />
+      <Control Type="AR.Field" Name="TextBox1" MOD="4" Left="0" Top="0" Width="7830" Height="360" Text="TextBox1" Style="ddo-char-set: 1; font-size: 14pt; font-family: Arial; " />
+      <Control Type="AR.Label" Name="Label1" MOD="4" Left="270" Top="450" Width="270" Height="270" Caption="※" Style="ddo-char-set: 1; font-size: 10pt; font-family: Arial; " />
+      <Control Type="AR.Label" Name="Label2" MOD="4" Left="540" Top="450" Width="7200" Height="900" Caption="お客様の不適切な使用（落下、衝撃、冠水等）や維持、管理の不備、使用上の誤り（取扱説明書記載以外の使用）等が故障原因となる場合は、当社長期保証の対象外となるため、修理代はお客様に請求いただきますようお願い申し上げます。" Style="ddo-char-set: 1; font-size: 10pt; font-family: Arial; " />
+      <Control Type="AR.Field" Name="TextBox28" MOD="4" Left="2070" Top="9720" Width="8370" Height="810" Text="TextBox28" CanGrow="0" Style="ddo-char-set: 1; font-size: 12pt; font-family: Arial; vertical-align: top; " />
+      <Control Type="AR.Field" Name="TextBox4" MOD="4" Left="2070" Top="2610" Width="2340" Height="450" Text="TextBox4" Style="ddo-char-set: 1; font-size: 18pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox5" MOD="4" Left="2070" Top="3150" Width="1710" Height="360" Text="TextBox5" Style="ddo-char-set: 1; font-size: 14pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox6" MOD="4" Left="6030" Top="3150" Width="4410" Height="360" Text="TextBox6" Style="ddo-char-set: 1; font-size: 14pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox7" MOD="4" Left="1980" Top="3600" Width="3060" Height="270" Text="TextBox7" Style="ddo-char-set: 1; font-size: 10pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox8" MOD="4" Left="2070" Top="3870" Width="2880" Height="450" Text="TextBox8" Style="ddo-char-set: 1; font-size: 14pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox9" MOD="4" Left="2070" Top="4320" Width="2880" Height="360" Text="TextBox9" Style="ddo-char-set: 1; font-size: 14pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox10" MOD="4" Left="2070" Top="4680" Width="2880" Height="360" Text="TextBox10" Style="ddo-char-set: 1; font-size: 14pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox11" MOD="4" Left="6840" Top="4680" Width="3600" Height="360" Text="TextBox11" Style="ddo-char-set: 1; font-size: 12pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox12" MOD="4" Left="3060" Top="5040" Width="1350" Height="360" Text="TextBox12" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox13" MOD="4" Left="3060" Top="5400" Width="7380" Height="360" Text="TextBox13" Style="ddo-char-set: 1; font-size: 12pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox14" MOD="4" Left="3060" Top="5670" Width="7380" Height="360" Text="TextBox14" Style="ddo-char-set: 1; font-size: 12pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox15" MOD="4" Left="3060" Top="6120" Width="2700" Height="360" Text="TextBox15" Style="ddo-char-set: 1; font-size: 14pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox16" MOD="4" Left="5760" Top="6120" Width="2790" Height="360" Text="TextBox16" Style="ddo-char-set: 1; font-size: 14pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox17" MOD="4" Left="3060" Top="6480" Width="2700" Height="360" Text="TextBox17" Style="ddo-char-set: 1; font-size: 14pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox18" MOD="4" Left="5760" Top="6480" Width="2790" Height="360" Text="TextBox18" Style="ddo-char-set: 1; font-size: 14pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox19" MOD="4" Left="2070" Top="7020" Width="2790" Height="360" Text="TextBox19" Style="ddo-char-set: 1; font-size: 12pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox20" MOD="4" Left="2070" Top="7380" Width="2790" Height="360" Text="TextBox20" Style="ddo-char-set: 1; font-size: 12pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox21" MOD="4" Left="7020" Top="7380" Width="3420" Height="360" Text="TextBox21" Style="ddo-char-set: 1; font-size: 13pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox22" MOD="4" Left="2070" Top="7740" Width="1710" Height="360" Text="TextBox22" Style="ddo-char-set: 1; font-size: 14pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox23" MOD="4" Left="7020" Top="7740" Width="3420" Height="360" Text="TextBox23" Style="ddo-char-set: 1; font-size: 14pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox24" MOD="4" Left="2070" Top="8100" Width="1710" Height="360" Text="TextBox24" Style="ddo-char-set: 1; text-align: right; font-size: 14pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox25" MOD="4" Left="2070" Top="8460" Width="1710" Height="360" Text="TextBox25" Style="ddo-char-set: 1; text-align: right; font-size: 14pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox26" MOD="4" Left="7020" Top="8100" Width="3420" Height="360" Text="TextBox26" Style="ddo-char-set: 1; font-size: 12pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox27" MOD="4" Left="2070" Top="8820" Width="8370" Height="810" Text="TextBox27" CanGrow="0" Style="ddo-char-set: 1; font-size: 12pt; font-family: Arial; vertical-align: top; " />
+      <Control Type="AR.Field" Name="TextBox29" MOD="4" Left="2070" Top="10620" Width="810" Height="360" Text="TextBox29" Style="ddo-char-set: 1; text-align: center; font-size: 12pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox30" MOD="4" Left="6120" Top="10620" Width="1620" Height="360" Text="TextBox30" Style="ddo-char-set: 1; font-size: 13pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox31" MOD="4" Left="2070" Top="10980" Width="8370" Height="810" Text="TextBox31" CanGrow="0" Style="ddo-char-set: 1; font-size: 12pt; font-family: Arial; vertical-align: top; " />
+      <Control Type="AR.Label" Name="Label" MOD="4" Left="90" Top="450" Width="1530" Height="270" Caption="【ケースタイプ】" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; " />
+      <Control Type="AR.Label" Name="Label50" MOD="4" Left="1620" Top="450" Width="6030" Height="270" Caption="003（インクジェットプリンタ）" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; " />
+      <Control Type="AR.Label" Name="Label51" MOD="4" Left="1620" Top="720" Width="6030" Height="270" Caption="045（デスクトップＰＣ+液晶モニタ（２個口））" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; " />
+      <Control Type="AR.Label" Name="Label52" MOD="4" Left="1620" Top="990" Width="6030" Height="270" Caption="005（レーザープリンタ/複合機/ＣＲＴモニタ/デスク" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; " />
+      <Control Type="AR.Label" Name="Label53" MOD="4" Left="2070" Top="1260" Width="5580" Height="270" Caption="トップ液晶一体型ＰＣ）" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; " />
+      <Control Type="AR.Field" Name="TextBox" MOD="4" Left="8010" Top="15030" Width="2250" Height="270" Text="TextBox" Style="ddo-char-set: 1; text-align: right; font-size: 11pt; font-family: Arial; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label54" MOD="4" Left="1620" Top="1530" Width="6030" Height="270" Caption="009（デスクトップＰＣ本体/液晶モニタ/ＦＡＸ電話機）" Style="ddo-char-set: 1; font-size: 11pt; font-family: Arial; " />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter" Height="0" BackColor="16777215" CanShrink="0" />
+  </Sections>
+  <PageSettings LeftMargin="576" RightMargin="0" TopMargin="720" BottomMargin="0" />
+</ActiveReportsLayout>

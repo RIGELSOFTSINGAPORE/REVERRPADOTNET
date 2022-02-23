@@ -1,0 +1,39 @@
+C:\new pr\New folder (2)\AsIs_ソース\BIC\BIC_Import_bat\bin\BIC_Import_bat.exe
+C:\new pr\New folder (2)\AsIs_ソース\BIC\BIC_Import_bat\bin\BIC_Import_bat.pdb
+C:\new pr\New folder (2)\AsIs_ソース\BIC\BIC_Import_bat\bin\BIC_Import_bat.xml
+C:\new pr\New folder (2)\AsIs_ソース\BIC\BIC_Import_bat\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\BIC_Import_bat\bin\GrapeCity.Win.Editors.v100.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\BIC_Import_bat\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\BIC_Import_bat\bin\GrapeCity.Win.Editors.v100.xml
+C:\new pr\New folder (2)\AsIs_ソース\BIC\BIC_Import_bat\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\BIC_Import_bat\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\BIC_Import_bat\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BIC\BIC_Import_bat\obj\Debug\BIC_Import_bat.Form1.resources
+C:\new pr\New folder (2)\AsIs_ソース\BIC\BIC_Import_bat\obj\Debug\BIC_Import_bat.vbproj.GenerateResource.cache
+C:\new pr\New folder (2)\AsIs_ソース\BIC\BIC_Import_bat\obj\Debug\BIC_Import_bat.exe.licenses
+C:\new pr\New folder (2)\AsIs_ソース\BIC\BIC_Import_bat\obj\Debug\BIC_Import_bat.vbproj.CoreCompileInputs.cache
+C:\new pr\New folder (2)\AsIs_ソース\BIC\BIC_Import_bat\obj\Debug\BIC_Import_bat.vbproj.CopyComplete
+C:\new pr\New folder (2)\AsIs_ソース\BIC\BIC_Import_bat\obj\Debug\BIC_Import_bat.exe
+C:\new pr\New folder (2)\AsIs_ソース\BIC\BIC_Import_bat\obj\Debug\BIC_Import_bat.xml
+C:\new pr\New folder (2)\AsIs_ソース\BIC\BIC_Import_bat\obj\Debug\BIC_Import_bat.pdb
+C:\new pr\New folder (2)\AsIs_ソース\BIC\BIC_Import_bat\obj\Debug\BIC_Import_bat.vbprojAssemblyReference.cache
+C:\Projects\SQA\Deployment\V2\Bic Camara\BIC_Import_bat\bin\BIC_Import_bat.exe.config
+C:\Projects\SQA\Deployment\V2\Bic Camara\BIC_Import_bat\bin\BIC_Import_bat.exe
+C:\Projects\SQA\Deployment\V2\Bic Camara\BIC_Import_bat\bin\BIC_Import_bat.pdb
+C:\Projects\SQA\Deployment\V2\Bic Camara\BIC_Import_bat\bin\BIC_Import_bat.xml
+C:\Projects\SQA\Deployment\V2\Bic Camara\BIC_Import_bat\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\BIC_Import_bat\bin\GrapeCity.Win.Editors.v100.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\BIC_Import_bat\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\BIC_Import_bat\bin\GrapeCity.Win.Editors.v100.xml
+C:\Projects\SQA\Deployment\V2\Bic Camara\BIC_Import_bat\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\BIC_Import_bat\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\BIC_Import_bat\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\BIC_Import_bat\obj\Debug\BIC_Import_bat.vbprojAssemblyReference.cache
+C:\Projects\SQA\Deployment\V2\Bic Camara\BIC_Import_bat\obj\Debug\BIC_Import_bat.Form1.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\BIC_Import_bat\obj\Debug\BIC_Import_bat.vbproj.GenerateResource.cache
+C:\Projects\SQA\Deployment\V2\Bic Camara\BIC_Import_bat\obj\Debug\BIC_Import_bat.exe.licenses
+C:\Projects\SQA\Deployment\V2\Bic Camara\BIC_Import_bat\obj\Debug\BIC_Import_bat.vbproj.CoreCompileInputs.cache
+C:\Projects\SQA\Deployment\V2\Bic Camara\BIC_Import_bat\obj\Debug\BIC_Import_bat.vbproj.CopyComplete
+C:\Projects\SQA\Deployment\V2\Bic Camara\BIC_Import_bat\obj\Debug\BIC_Import_bat.exe
+C:\Projects\SQA\Deployment\V2\Bic Camara\BIC_Import_bat\obj\Debug\BIC_Import_bat.xml
+C:\Projects\SQA\Deployment\V2\Bic Camara\BIC_Import_bat\obj\Debug\BIC_Import_bat.pdb

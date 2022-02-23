@@ -1,0 +1,102 @@
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\bin\admin.exe.config
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\bin\admin.exe
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\bin\admin.xml
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\bin\GrapeCity.Win.Editors.v100.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\bin\GrapeCity.Win.Editors.v100.xml
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\obj\Release\admin.f_CNT_MTR.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\obj\Release\admin.f_count.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\obj\Release\admin.f_menu.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\obj\Release\admin.f_pwd_mod.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\obj\Release\admin.f_shop.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\obj\Release\admin.f_shop_2.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\obj\Release\admin.f_STS.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\obj\Release\admin.f_STS_rtn.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\obj\Release\admin.f_user_add.resources
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\obj\Release\admin.vbproj.GenerateResource.cache
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\obj\Release\admin.exe.licenses
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\obj\Release\admin.vbproj.CoreCompileInputs.cache
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\obj\Release\admin.vbproj.CopyComplete
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\obj\Release\admin.exe
+C:\Projects\SQA\Deployment\V2\Bic Camara\admin\obj\Release\admin.xml
+C:\Users\nprem\Desktop\Bic Camara\admin\bin\admin.exe.config
+C:\Users\nprem\Desktop\Bic Camara\admin\bin\admin.exe
+C:\Users\nprem\Desktop\Bic Camara\admin\bin\admin.xml
+C:\Users\nprem\Desktop\Bic Camara\admin\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Users\nprem\Desktop\Bic Camara\admin\bin\GrapeCity.Win.Editors.v100.dll
+C:\Users\nprem\Desktop\Bic Camara\admin\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Users\nprem\Desktop\Bic Camara\admin\bin\GrapeCity.Win.Editors.v100.xml
+C:\Users\nprem\Desktop\Bic Camara\admin\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\admin\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\admin\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Users\nprem\Desktop\Bic Camara\admin\obj\Release\admin.vbprojAssemblyReference.cache
+C:\Users\nprem\Desktop\Bic Camara\admin\obj\Release\admin.f_CNT_MTR.resources
+C:\Users\nprem\Desktop\Bic Camara\admin\obj\Release\admin.f_count.resources
+C:\Users\nprem\Desktop\Bic Camara\admin\obj\Release\admin.f_menu.resources
+C:\Users\nprem\Desktop\Bic Camara\admin\obj\Release\admin.f_pwd_mod.resources
+C:\Users\nprem\Desktop\Bic Camara\admin\obj\Release\admin.f_shop.resources
+C:\Users\nprem\Desktop\Bic Camara\admin\obj\Release\admin.f_shop_2.resources
+C:\Users\nprem\Desktop\Bic Camara\admin\obj\Release\admin.f_STS.resources
+C:\Users\nprem\Desktop\Bic Camara\admin\obj\Release\admin.f_STS_rtn.resources
+C:\Users\nprem\Desktop\Bic Camara\admin\obj\Release\admin.f_user_add.resources
+C:\Users\nprem\Desktop\Bic Camara\admin\obj\Release\admin.vbproj.GenerateResource.cache
+C:\Users\nprem\Desktop\Bic Camara\admin\obj\Release\admin.exe.licenses
+C:\Users\nprem\Desktop\Bic Camara\admin\obj\Release\admin.vbproj.CoreCompileInputs.cache
+C:\Users\nprem\Desktop\Bic Camara\admin\obj\Release\admin.vbproj.CopyComplete
+C:\Users\nprem\Desktop\Bic Camara\admin\obj\Release\admin.exe
+C:\Users\nprem\Desktop\Bic Camara\admin\obj\Release\admin.xml
+D:\AsIs_ソース\Sonia\Bic Camera\admin\bin\admin.exe.config
+D:\AsIs_ソース\Sonia\Bic Camera\admin\bin\admin.exe
+D:\AsIs_ソース\Sonia\Bic Camera\admin\bin\admin.xml
+D:\AsIs_ソース\Sonia\Bic Camera\admin\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\AsIs_ソース\Sonia\Bic Camera\admin\bin\GrapeCity.Win.Editors.v100.dll
+D:\AsIs_ソース\Sonia\Bic Camera\admin\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\AsIs_ソース\Sonia\Bic Camera\admin\bin\GrapeCity.Win.Editors.v100.xml
+D:\AsIs_ソース\Sonia\Bic Camera\admin\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+D:\AsIs_ソース\Sonia\Bic Camera\admin\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\AsIs_ソース\Sonia\Bic Camera\admin\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\AsIs_ソース\Sonia\Bic Camera\admin\obj\Release\admin.vbprojAssemblyReference.cache
+D:\AsIs_ソース\Sonia\Bic Camera\admin\obj\Release\admin.f_CNT_MTR.resources
+D:\AsIs_ソース\Sonia\Bic Camera\admin\obj\Release\admin.f_count.resources
+D:\AsIs_ソース\Sonia\Bic Camera\admin\obj\Release\admin.f_menu.resources
+D:\AsIs_ソース\Sonia\Bic Camera\admin\obj\Release\admin.f_pwd_mod.resources
+D:\AsIs_ソース\Sonia\Bic Camera\admin\obj\Release\admin.f_shop.resources
+D:\AsIs_ソース\Sonia\Bic Camera\admin\obj\Release\admin.f_shop_2.resources
+D:\AsIs_ソース\Sonia\Bic Camera\admin\obj\Release\admin.f_STS.resources
+D:\AsIs_ソース\Sonia\Bic Camera\admin\obj\Release\admin.f_STS_rtn.resources
+D:\AsIs_ソース\Sonia\Bic Camera\admin\obj\Release\admin.f_user_add.resources
+D:\AsIs_ソース\Sonia\Bic Camera\admin\obj\Release\admin.vbproj.GenerateResource.cache
+D:\AsIs_ソース\Sonia\Bic Camera\admin\obj\Release\admin.exe.licenses
+D:\AsIs_ソース\Sonia\Bic Camera\admin\obj\Release\admin.vbproj.CoreCompileInputs.cache
+D:\AsIs_ソース\Sonia\Bic Camera\admin\obj\Release\admin.vbproj.CopyComplete
+D:\AsIs_ソース\Sonia\Bic Camera\admin\obj\Release\admin.exe
+D:\AsIs_ソース\Sonia\Bic Camera\admin\obj\Release\admin.xml
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\bin\GrapeCity.Win.Editors.v100.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\bin\GrapeCity.Win.Editors.v100.xml
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\obj\Release\admin.f_CNT_MTR.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\obj\Release\admin.f_count.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\obj\Release\admin.f_menu.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\obj\Release\admin.f_pwd_mod.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\obj\Release\admin.f_shop.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\obj\Release\admin.f_shop_2.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\obj\Release\admin.f_STS.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\obj\Release\admin.f_STS_rtn.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\obj\Release\admin.f_user_add.resources
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\obj\Release\admin.vbproj.GenerateResource.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\obj\Release\admin.vbproj.CoreCompileInputs.cache
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\obj\Release\admin.vbproj.CopyComplete
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\bin\admin.exe.config
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\bin\admin.exe
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\bin\admin.xml
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\obj\Release\admin.exe.licenses
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\obj\Release\admin.exe
+C:\Prabu\SoniyaLatest_2020-11-27\Bic Camera\Bic Camera\admin\obj\Release\admin.xml
