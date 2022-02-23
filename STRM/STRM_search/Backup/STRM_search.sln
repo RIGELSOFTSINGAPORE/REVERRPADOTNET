@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "STRM_search", "STRM_search.vbproj", "{64F2CCC5-A3B9-4308-9F4A-A1D2AAA421EB}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{64F2CCC5-A3B9-4308-9F4A-A1D2AAA421EB}.Debug.ActiveCfg = Debug|.NET
+		{64F2CCC5-A3B9-4308-9F4A-A1D2AAA421EB}.Debug.Build.0 = Debug|.NET
+		{64F2CCC5-A3B9-4308-9F4A-A1D2AAA421EB}.Release.ActiveCfg = Release|.NET
+		{64F2CCC5-A3B9-4308-9F4A-A1D2AAA421EB}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
