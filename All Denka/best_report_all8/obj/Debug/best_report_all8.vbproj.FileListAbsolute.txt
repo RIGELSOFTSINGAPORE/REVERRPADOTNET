@@ -1,0 +1,143 @@
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_report_all8\obj\Debug\best_report_all8.vbprojAssemblyReference.cache
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_report_all8\obj\Debug\best_report_all8.Form1.resources
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_report_all8\obj\Debug\best_report_all8.WaitDialog.resources
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_report_all8\obj\Debug\best_report_all8.vbproj.GenerateResource.cache
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_report_all8\obj\Debug\best_report_all8.exe.licenses
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_report_all8\obj\Debug\best_report_all8.vbproj.CoreCompileInputs.cache
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_report_all8\obj\Debug\best_report_all8.exe
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_report_all8\obj\Debug\best_report_all8.pdb
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_report_all8\bin\best_report_all8.exe
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_report_all8\bin\best_report_all8.pdb
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_report_all8\bin\best_report_all8.xml
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_report_all8\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_report_all8\bin\GrapeCity.Win.Editors.v100.dll
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_report_all8\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_report_all8\bin\GrapeCity.Win.Editors.v100.xml
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_report_all8\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_report_all8\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_report_all8\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_report_all8\obj\Debug\best_report_all8.vbproj.CopyComplete
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_report_all8\obj\Debug\best_report_all8.xml
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_report_all8\bin\best_report_all8.exe.config
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_report_all8\bin\best_report_all8.exe
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_report_all8\bin\best_report_all8.pdb
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_report_all8\bin\best_report_all8.xml
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_report_all8\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_report_all8\bin\GrapeCity.Win.Editors.v100.dll
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_report_all8\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_report_all8\bin\GrapeCity.Win.Editors.v100.xml
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_report_all8\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_report_all8\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_report_all8\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_report_all8\obj\Debug\best_report_all8.Form1.resources
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_report_all8\obj\Debug\best_report_all8.WaitDialog.resources
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_report_all8\obj\Debug\best_report_all8.vbproj.GenerateResource.cache
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_report_all8\obj\Debug\best_report_all8.exe.licenses
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_report_all8\obj\Debug\best_report_all8.vbproj.CoreCompileInputs.cache
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_report_all8\obj\Debug\best_report_all8.vbproj.CopyComplete
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_report_all8\obj\Debug\best_report_all8.exe
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_report_all8\obj\Debug\best_report_all8.xml
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_report_all8\obj\Debug\best_report_all8.pdb
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\bin\best_report_all8.exe.config
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\bin\best_report_all8.exe
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\bin\best_report_all8.pdb
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\bin\best_report_all8.xml
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\bin\GrapeCity.Win.Editors.v100.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\bin\GrapeCity.Win.Editors.v100.xml
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\obj\Debug\best_report_all8.vbprojAssemblyReference.cache
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\obj\Debug\best_report_all8.Form1.resources
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\obj\Debug\best_report_all8.WaitDialog.resources
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\obj\Debug\best_report_all8.vbproj.GenerateResource.cache
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\obj\Debug\best_report_all8.exe.licenses
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\obj\Debug\best_report_all8.vbproj.CoreCompileInputs.cache
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\obj\Debug\best_report_all8.vbproj.CopyComplete
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\obj\Debug\best_report_all8.exe
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\obj\Debug\best_report_all8.xml
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_report_all8\obj\Debug\best_report_all8.pdb
+D:\AsIs_ソース\Sonia\All Denka\best_report_all8\bin\best_report_all8.exe.config
+D:\AsIs_ソース\Sonia\All Denka\best_report_all8\bin\best_report_all8.exe
+D:\AsIs_ソース\Sonia\All Denka\best_report_all8\bin\best_report_all8.pdb
+D:\AsIs_ソース\Sonia\All Denka\best_report_all8\bin\best_report_all8.xml
+D:\AsIs_ソース\Sonia\All Denka\best_report_all8\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\AsIs_ソース\Sonia\All Denka\best_report_all8\bin\GrapeCity.Win.Editors.v100.dll
+D:\AsIs_ソース\Sonia\All Denka\best_report_all8\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\AsIs_ソース\Sonia\All Denka\best_report_all8\bin\GrapeCity.Win.Editors.v100.xml
+D:\AsIs_ソース\Sonia\All Denka\best_report_all8\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+D:\AsIs_ソース\Sonia\All Denka\best_report_all8\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\AsIs_ソース\Sonia\All Denka\best_report_all8\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\AsIs_ソース\Sonia\All Denka\best_report_all8\obj\Debug\best_report_all8.Form1.resources
+D:\AsIs_ソース\Sonia\All Denka\best_report_all8\obj\Debug\best_report_all8.WaitDialog.resources
+D:\AsIs_ソース\Sonia\All Denka\best_report_all8\obj\Debug\best_report_all8.vbproj.GenerateResource.cache
+D:\AsIs_ソース\Sonia\All Denka\best_report_all8\obj\Debug\best_report_all8.exe.licenses
+D:\AsIs_ソース\Sonia\All Denka\best_report_all8\obj\Debug\best_report_all8.vbproj.CoreCompileInputs.cache
+D:\AsIs_ソース\Sonia\All Denka\best_report_all8\obj\Debug\best_report_all8.vbproj.CopyComplete
+D:\AsIs_ソース\Sonia\All Denka\best_report_all8\obj\Debug\best_report_all8.exe
+D:\AsIs_ソース\Sonia\All Denka\best_report_all8\obj\Debug\best_report_all8.xml
+D:\AsIs_ソース\Sonia\All Denka\best_report_all8\obj\Debug\best_report_all8.pdb
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_report_all8\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_report_all8\bin\GrapeCity.Win.Editors.v100.dll
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_report_all8\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_report_all8\bin\GrapeCity.Win.Editors.v100.xml
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_report_all8\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_report_all8\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_report_all8\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_report_all8\obj\Debug\best_report_all8.Form1.resources
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_report_all8\obj\Debug\best_report_all8.WaitDialog.resources
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_report_all8\obj\Debug\best_report_all8.vbproj.GenerateResource.cache
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_report_all8\obj\Debug\best_report_all8.vbproj.CoreCompileInputs.cache
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_report_all8\obj\Debug\best_report_all8.vbproj.CopyComplete
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_report_all8\bin\best_report_all8.exe.config
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_report_all8\bin\best_report_all8.exe
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_report_all8\bin\best_report_all8.pdb
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_report_all8\bin\best_report_all8.xml
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_report_all8\obj\Debug\best_report_all8.exe.licenses
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_report_all8\obj\Debug\best_report_all8.exe
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_report_all8\obj\Debug\best_report_all8.xml
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_report_all8\obj\Debug\best_report_all8.pdb
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\bin\best_report_all8.exe.config
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\bin\best_report_all8.exe
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\bin\best_report_all8.pdb
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\bin\best_report_all8.xml
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\bin\GrapeCity.Win.Editors.v100.dll
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\bin\GrapeCity.Win.Editors.v100.xml
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\obj\Debug\best_report_all8.vbprojAssemblyReference.cache
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\obj\Debug\best_report_all8.Form1.resources
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\obj\Debug\best_report_all8.WaitDialog.resources
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\obj\Debug\best_report_all8.vbproj.GenerateResource.cache
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\obj\Debug\best_report_all8.exe.licenses
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\obj\Debug\best_report_all8.vbproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\obj\Debug\best_report_all8.vbproj.CopyComplete
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\obj\Debug\best_report_all8.exe
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\obj\Debug\best_report_all8.xml
+C:\Users\LENOVO\Downloads\best_report_all8_SourceCode\best_report_all8\obj\Debug\best_report_all8.pdb
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\bin\best_report_all8.exe.config
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\bin\best_report_all8.exe
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\bin\best_report_all8.pdb
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\bin\best_report_all8.xml
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\bin\GrapeCity.Win.Editors.v100.dll
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\bin\GrapeCity.Win.Editors.v100.xml
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\obj\Debug\best_report_all8.vbprojAssemblyReference.cache
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\obj\Debug\best_report_all8.Form1.resources
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\obj\Debug\best_report_all8.WaitDialog.resources
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\obj\Debug\best_report_all8.vbproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\obj\Debug\best_report_all8.exe.licenses
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\obj\Debug\best_report_all8.vbproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\obj\Debug\best_report_all8.vbproj.CopyComplete
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\obj\Debug\best_report_all8.exe
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\obj\Debug\best_report_all8.xml
+C:\Users\Administrator\Desktop\VijaySir\2021-02-02\best_report_all8_SourceCode\best_report_all8\obj\Debug\best_report_all8.pdb

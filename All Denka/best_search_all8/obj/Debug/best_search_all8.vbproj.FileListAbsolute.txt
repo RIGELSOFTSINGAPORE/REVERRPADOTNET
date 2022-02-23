@@ -1,0 +1,136 @@
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.Form1.resources
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.Form2.resources
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.Form3.resources
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.List.resources
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.vbproj.GenerateResource.cache
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.exe.licenses
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.vbproj.CoreCompileInputs.cache
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\bin\best_search_all8.exe
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\bin\best_search_all8.pdb
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\bin\best_search_all8.xml
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\bin\GrapeCity.Win.Editors.v100.dll
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\bin\GrapeCity.Win.Editors.v100.xml
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.vbproj.CopyComplete
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.exe
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.xml
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.pdb
+C:\new pr\New folder (2)\AsIs_ソース\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.vbprojAssemblyReference.cache
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\bin\best_search_all8.exe.config
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\bin\best_search_all8.exe
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\bin\best_search_all8.pdb
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\bin\best_search_all8.xml
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\bin\GrapeCity.Win.Editors.v100.dll
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\bin\GrapeCity.Win.Editors.v100.xml
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.vbprojAssemblyReference.cache
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.Form1.resources
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.Form2.resources
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.Form3.resources
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.List.resources
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.vbproj.GenerateResource.cache
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.exe.licenses
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.vbproj.CoreCompileInputs.cache
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.vbproj.CopyComplete
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.exe
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.xml
+C:\Projects\SQA\Deployment\V2\BESTオール電化\best_search_all8\obj\Debug\best_search_all8.pdb
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\bin\best_search_all8.exe.config
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\bin\best_search_all8.exe
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\bin\best_search_all8.pdb
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\bin\best_search_all8.xml
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\bin\GrapeCity.Win.Editors.v100.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\bin\GrapeCity.Win.Editors.v100.xml
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.vbprojAssemblyReference.cache
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.Form1.resources
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.Form2.resources
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.Form3.resources
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.List.resources
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.vbproj.GenerateResource.cache
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.exe.licenses
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.vbproj.CoreCompileInputs.cache
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.vbproj.CopyComplete
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.exe
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.xml
+C:\Prabu\SoniyaProgram\SetupProject\AllDenka_Homac_Kuroganeya_Stream\AllDenka_Homac_Kuroganeya_Stream\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.pdb
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\bin\best_search_all8.exe.config
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\bin\best_search_all8.exe
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\bin\best_search_all8.pdb
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\bin\best_search_all8.xml
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\bin\GrapeCity.Win.Editors.v100.dll
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\bin\GrapeCity.Win.Editors.v100.xml
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\obj\Debug\best_search_all8.vbprojAssemblyReference.cache
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\obj\Debug\best_search_all8.Form1.resources
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\obj\Debug\best_search_all8.Form2.resources
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\obj\Debug\best_search_all8.Form3.resources
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\obj\Debug\best_search_all8.List.resources
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\obj\Debug\best_search_all8.vbproj.GenerateResource.cache
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\obj\Debug\best_search_all8.exe.licenses
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\obj\Debug\best_search_all8.vbproj.CoreCompileInputs.cache
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\obj\Debug\best_search_all8.vbproj.CopyComplete
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\obj\Debug\best_search_all8.exe
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\obj\Debug\best_search_all8.xml
+C:\Users\Rever\Desktop\VijaySir\Kuroganeya\OriginalFile\All Denka\best_search_all8\obj\Debug\best_search_all8.pdb
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\bin\best_search_all8.exe.config
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\bin\best_search_all8.exe
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\bin\best_search_all8.pdb
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\bin\best_search_all8.xml
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\bin\GrapeCity.Win.Editors.v100.dll
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\bin\GrapeCity.Win.Editors.v100.xml
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\obj\Debug\best_search_all8.vbprojAssemblyReference.cache
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\obj\Debug\best_search_all8.Form1.resources
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\obj\Debug\best_search_all8.Form2.resources
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\obj\Debug\best_search_all8.Form3.resources
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\obj\Debug\best_search_all8.List.resources
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\obj\Debug\best_search_all8.vbproj.GenerateResource.cache
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\obj\Debug\best_search_all8.exe.licenses
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\obj\Debug\best_search_all8.vbproj.CoreCompileInputs.cache
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\obj\Debug\best_search_all8.vbproj.CopyComplete
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\obj\Debug\best_search_all8.exe
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\obj\Debug\best_search_all8.xml
+D:\AsIs_ソース\Sonia\All Denka\best_search_all8\obj\Debug\best_search_all8.pdb
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\bin\GrapeCity.Win.Editors.v100.dll
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\bin\GrapeCity.Win.Editors.v100.xml
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.Form1.resources
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.Form2.resources
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.Form3.resources
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.List.resources
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.vbproj.GenerateResource.cache
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.vbproj.CoreCompileInputs.cache
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.vbproj.CopyComplete
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\bin\best_search_all8.exe.config
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\bin\best_search_all8.exe
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\bin\best_search_all8.pdb
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\bin\best_search_all8.xml
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.exe.licenses
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.exe
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.xml
+C:\Prabu\SoniyaLatest_2020-11-27\All Denka\All Denka\best_search_all8\obj\Debug\best_search_all8.pdb
