@@ -1,0 +1,111 @@
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\bin\MrMAX_Mtr.exe.config
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\bin\MrMAX_Mtr.exe
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\bin\MrMAX_Mtr.xml
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\bin\GrapeCity.Win.Editors.v100.dll
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\bin\GrapeCity.Win.Editors.v100.xml
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\obj\Release\MrMAX_Mtr.vbprojAssemblyReference.cache
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\obj\Release\MrMAX_Mtr.DataGridEx.resources
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form01.resources
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form01_2.resources
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form02.resources
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form02_2.resources
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form03.resources
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form03_2.resources
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form04.resources
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form04_2.resources
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\obj\Release\MrMAX_Mtr.f_STS.resources
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Menu.resources
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\obj\Release\MrMAX_Mtr.vbproj.GenerateResource.cache
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\obj\Release\MrMAX_Mtr.exe.licenses
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\obj\Release\MrMAX_Mtr.vbproj.CoreCompileInputs.cache
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\obj\Release\MrMAX_Mtr.vbproj.CopyComplete
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\obj\Release\MrMAX_Mtr.exe
+C:\Prabu\SoniyaProgram\AsIs_â\ü[âX\MrMAX\MrMAX_Mtr\obj\Release\MrMAX_Mtr.xml
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\bin\MrMAX_Mtr.exe.config
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\bin\MrMAX_Mtr.exe
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\bin\MrMAX_Mtr.xml
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\bin\GrapeCity.Win.Editors.v100.dll
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\bin\GrapeCity.Win.Editors.v100.xml
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.DataGridEx.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form01.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form01_2.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form02.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form02_2.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form03.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form03_2.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form04.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form04_2.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.f_STS.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Menu.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.vbproj.GenerateResource.cache
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.exe.licenses
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.vbproj.CoreCompileInputs.cache
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.vbproj.CopyComplete
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.exe
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.xml
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\bin\MrMAX_Mtr.exe.config
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\bin\MrMAX_Mtr.exe
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\bin\MrMAX_Mtr.xml
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\bin\GrapeCity.Win.Editors.v100.dll
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\bin\GrapeCity.Win.Editors.v100.xml
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.vbprojAssemblyReference.cache
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.DataGridEx.resources
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form01.resources
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form01_2.resources
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form02.resources
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form02_2.resources
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form03.resources
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form03_2.resources
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form04.resources
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form04_2.resources
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.f_STS.resources
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Menu.resources
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.vbproj.GenerateResource.cache
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.exe.licenses
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.vbproj.CoreCompileInputs.cache
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.vbproj.CopyComplete
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.exe
+D:\AsIs_ソース\Sonia\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.xml
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\bin\GrapeCity.Win.Editors.v100.dll
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\bin\GrapeCity.Win.Editors.v100.xml
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.vbprojAssemblyReference.cache
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.DataGridEx.resources
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form01.resources
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form01_2.resources
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form02.resources
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form02_2.resources
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form03.resources
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form03_2.resources
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form04.resources
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Form04_2.resources
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.f_STS.resources
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.Menu.resources
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.vbproj.GenerateResource.cache
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.vbproj.CoreCompileInputs.cache
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.vbproj.CopyComplete
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\bin\MrMAX_Mtr.exe.config
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\bin\MrMAX_Mtr.exe
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\bin\MrMAX_Mtr.xml
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.exe.licenses
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.exe
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_Mtr\obj\Release\MrMAX_Mtr.xml

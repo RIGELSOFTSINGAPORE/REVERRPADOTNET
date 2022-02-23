@@ -1,0 +1,111 @@
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.vbprojAssemblyReference.cache
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.DataGridEx.resources
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form1.resources
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form2.resources
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form2_S.resources
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form2_S2.resources
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form3.resources
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form4.resources
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form5.resources
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.KANA_input.resources
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.vbproj.GenerateResource.cache
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.exe.licenses
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.vbproj.CoreCompileInputs.cache
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\bin\MrMAX_Wrn.exe
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\bin\MrMAX_Wrn.pdb
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\bin\MrMAX_Wrn.xml
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\bin\GrapeCity.Win.Editors.v100.dll
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\bin\GrapeCity.Win.Editors.v100.xml
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.vbproj.CopyComplete
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.exe
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.xml
+D:\new pr\AsIs_â\ü[âX\MrMAX\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.pdb
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\bin\MrMAX_Wrn.exe.config
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\bin\MrMAX_Wrn.exe
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\bin\MrMAX_Wrn.pdb
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\bin\MrMAX_Wrn.xml
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\bin\GrapeCity.Win.Editors.v100.dll
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\bin\GrapeCity.Win.Editors.v100.xml
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.vbprojAssemblyReference.cache
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.DataGridEx.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form1.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form2.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form2_S.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form2_S2.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form3.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form4.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form5.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.KANA_input.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.vbproj.GenerateResource.cache
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.exe.licenses
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.vbproj.CoreCompileInputs.cache
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.vbproj.CopyComplete
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.exe
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.xml
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.pdb
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\bin\MrMAX_Wrn.exe.config
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\bin\MrMAX_Wrn.exe
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\bin\MrMAX_Wrn.pdb
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\bin\MrMAX_Wrn.xml
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\bin\GrapeCity.Win.Editors.v100.dll
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\bin\GrapeCity.Win.Editors.v100.xml
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.vbprojAssemblyReference.cache
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.DataGridEx.resources
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form1.resources
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form2.resources
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form2_S.resources
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form2_S2.resources
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form3.resources
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form4.resources
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form5.resources
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.KANA_input.resources
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.vbproj.GenerateResource.cache
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.exe.licenses
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.vbproj.CoreCompileInputs.cache
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.vbproj.CopyComplete
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.exe
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.xml
+D:\Projects\SQA\Deployment\V14\MrMax_Wrn_20210222_New\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.pdb
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\bin\MrMAX_Wrn.exe.config
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\bin\MrMAX_Wrn.exe
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\bin\MrMAX_Wrn.pdb
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\bin\MrMAX_Wrn.xml
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\bin\GrapeCity.Win.Editors.v100.dll
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\bin\GrapeCity.Win.Editors.v100.xml
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.vbprojAssemblyReference.cache
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.DataGridEx.resources
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form1.resources
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form2.resources
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form2_S.resources
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form2_S2.resources
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form3.resources
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form4.resources
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.Form5.resources
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.KANA_input.resources
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.vbproj.GenerateResource.cache
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.exe.licenses
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.vbproj.CoreCompileInputs.cache
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.vbproj.CopyComplete
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.exe
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.xml
+D:\Projects\SQA\Deployment\V14\MrMAX_Wrn\obj\Debug\MrMAX_Wrn.pdb

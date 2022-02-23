@@ -1,0 +1,40 @@
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_INQUIRY\bin\MrMAX_INQUIRY.exe.config
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_INQUIRY\bin\MrMAX_INQUIRY.exe
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_INQUIRY\bin\MrMAX_INQUIRY.xml
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_INQUIRY\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_INQUIRY\bin\GrapeCity.Win.Editors.v100.dll
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_INQUIRY\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_INQUIRY\bin\GrapeCity.Win.Editors.v100.xml
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_INQUIRY\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_INQUIRY\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_INQUIRY\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_INQUIRY\obj\Release\MrMAX_INQUIRY.vbprojAssemblyReference.cache
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_INQUIRY\obj\Release\MrMAX_INQUIRY.DataGridEx.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_INQUIRY\obj\Release\MrMAX_INQUIRY.Form1.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_INQUIRY\obj\Release\MrMAX_INQUIRY.Form2.resources
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_INQUIRY\obj\Release\MrMAX_INQUIRY.vbproj.GenerateResource.cache
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_INQUIRY\obj\Release\MrMAX_INQUIRY.exe.licenses
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_INQUIRY\obj\Release\MrMAX_INQUIRY.vbproj.CoreCompileInputs.cache
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_INQUIRY\obj\Release\MrMAX_INQUIRY.vbproj.CopyComplete
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_INQUIRY\obj\Release\MrMAX_INQUIRY.exe
+C:\Projects\SQA\Deployment\V2\SoniyaMrMAX\Source Code\MrMax_2020-09-07\MrMax\MrMAX_INQUIRY\obj\Release\MrMAX_INQUIRY.xml
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_INQUIRY\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_INQUIRY\bin\GrapeCity.Win.Editors.v100.dll
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_INQUIRY\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_INQUIRY\bin\GrapeCity.Win.Editors.v100.xml
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_INQUIRY\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_INQUIRY\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_INQUIRY\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_INQUIRY\obj\Release\MrMAX_INQUIRY.vbprojAssemblyReference.cache
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_INQUIRY\obj\Release\MrMAX_INQUIRY.DataGridEx.resources
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_INQUIRY\obj\Release\MrMAX_INQUIRY.Form1.resources
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_INQUIRY\obj\Release\MrMAX_INQUIRY.Form2.resources
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_INQUIRY\obj\Release\MrMAX_INQUIRY.vbproj.GenerateResource.cache
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_INQUIRY\obj\Release\MrMAX_INQUIRY.vbproj.CoreCompileInputs.cache
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_INQUIRY\obj\Release\MrMAX_INQUIRY.vbproj.CopyComplete
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_INQUIRY\bin\MrMAX_INQUIRY.exe.config
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_INQUIRY\bin\MrMAX_INQUIRY.exe
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_INQUIRY\bin\MrMAX_INQUIRY.xml
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_INQUIRY\obj\Release\MrMAX_INQUIRY.exe.licenses
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_INQUIRY\obj\Release\MrMAX_INQUIRY.exe
+C:\Prabu\SoniyaLatest_2020-11-27\MrMax\MrMax\MrMAX_INQUIRY\obj\Release\MrMAX_INQUIRY.xml

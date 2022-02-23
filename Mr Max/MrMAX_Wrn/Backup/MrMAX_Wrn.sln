@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MrMAX_Wrn", "MrMAX_Wrn.vbproj", "{C530871E-702E-4607-9194-BF22D8A74D82}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MrMAX_Wrn_Setup", "..\MrMAX_Wrn_Setup\MrMAX_Wrn_Setup.vdproj", "{2AC14136-A42C-409C-B2DD-154CDC7DE6F1}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{C530871E-702E-4607-9194-BF22D8A74D82}.Debug.ActiveCfg = Debug|.NET
+		{C530871E-702E-4607-9194-BF22D8A74D82}.Debug.Build.0 = Debug|.NET
+		{C530871E-702E-4607-9194-BF22D8A74D82}.Release.ActiveCfg = Release|.NET
+		{C530871E-702E-4607-9194-BF22D8A74D82}.Release.Build.0 = Release|.NET
+		{2AC14136-A42C-409C-B2DD-154CDC7DE6F1}.Debug.ActiveCfg = Debug
+		{2AC14136-A42C-409C-B2DD-154CDC7DE6F1}.Release.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
