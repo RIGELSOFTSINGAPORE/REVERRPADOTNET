@@ -1,0 +1,1034 @@
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\nQGCare.exe.config
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\nQGCare.exe
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\nQGCare.pdb
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\nQGCare.xml
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\ActiveReports.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\ActiveReports.Interop.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\ActiveReports.PdfExport.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\ActiveReports.Viewer.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Chart.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Core.DataProviders.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Core.Drawing.Gc.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Core.Drawing.Gdi.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Core.Export.Excel.Page.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Core.Export.Html.Page.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Core.Export.Image.Page.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Core.Export.Pdf.Page.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Core.Export.Svg.Page.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Core.Export.Text.Page.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Core.Export.Word.Page.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Core.Rdl.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Core.Rendering.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Design.Win.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.DesignerClassic.exe
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Document.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Export.Excel.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Export.Html.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Export.Image.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Export.Pdf.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Export.Rdf.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Export.Word.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Export.Xml.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Imports.Access.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Imports.Crystal.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Imports.Excel.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Imports.exe
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Imports.Rpx.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Interop.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Viewer.exe
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Viewer.Win.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.Viewer.Wpf.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.ActiveReports.WpfViewer.exe
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\Grapecity.DataVisualization.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.Documents.Common.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.Documents.Common.Windows.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.Documents.DX.Windows.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.Documents.Imaging.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.Documents.Pdf.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.Win.Editors.v100.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\Gcef.Data.DataEngine.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\Gcef.Data.ExpressionInfo.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\Newtonsoft.Json.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\System.ValueTuple.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\System.Numerics.Vectors.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\System.Memory.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\System.Buffers.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\Gcef.Data.VBFunctionLib.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\GrapeCity.Win.Editors.v100.xml
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\Gcef.Data.DataEngine.xml
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\Gcef.Data.ExpressionInfo.xml
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\Gcef.Data.VBFunctionLib.xml
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.vbprojAssemblyReference.cache
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F00_Form10.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F00_Form10_01.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F00_Form10_02.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F00_Form10_03.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F00_Form11.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F00_Form20.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F00_Form20_01.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F00_Form21.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F00_Form21_01.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F00_Form22.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F00_Form22_01.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F00_Form30.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F00_Form31.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F00_Form40.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F00_Form41.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F00_Form51.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F50_Form01.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F50_Form01_01.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F50_Form02.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F90_Form01.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F90_Form01_01.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F90_Form02.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F90_Form02_01.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F90_Form03.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F90_Form03_01.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F90_Form04.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F90_Form04_01.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F90_Form11.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F90_Form14.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F90_Form14_old.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.F90_Form15.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.MENU00.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.MENU50.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.MENU90.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.Print_View.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.R_kakuninSectionReport.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.R_Kanyu_ipadSectionReport.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.R_Kanyu_NormalSectionReport.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.R_member_listSectionReport.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.R_member_list_ipadSectionReport.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.R_nevaSectionReport.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.WaitDialog.resources
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.vbproj.GenerateResource.cache
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.exe.licenses
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.vbproj.CoreCompileInputs.cache
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.vbproj.CopyComplete
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.exe
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.xml
+C:\Soniya\2020-11-04\20201104nQGCarevsup\nQGCare\obj\Debug\nQGCare.pdb
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\bin\nQGCare.exe.config
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\bin\nQGCare.exe
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\bin\nQGCare.pdb
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\bin\nQGCare.xml
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\bin\GrapeCity.Win.Editors.v100.dll
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\bin\System.Numerics.Vectors.dll
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\bin\System.Buffers.dll
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\bin\GrapeCity.Win.Editors.v100.xml
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.vbprojAssemblyReference.cache
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F00_Form10.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F00_Form10_01.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F00_Form10_02.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F00_Form10_03.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F00_Form11.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F00_Form20.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F00_Form20_01.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F00_Form21.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F00_Form21_01.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F00_Form22.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F00_Form22_01.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F00_Form30.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F00_Form31.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F00_Form40.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F00_Form41.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F00_Form51.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F50_Form01.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F50_Form01_01.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F50_Form02.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F90_Form01.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F90_Form01_01.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F90_Form02.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F90_Form02_01.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F90_Form03.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F90_Form03_01.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F90_Form04.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F90_Form04_01.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F90_Form11.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F90_Form14.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F90_Form14_old.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.F90_Form15.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.MENU00.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.MENU50.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.MENU90.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.Print_View.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.R_kakuninSectionReport.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.R_Kanyu_ipadSectionReport.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.R_Kanyu_NormalSectionReport.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.R_member_listSectionReport.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.R_member_list_ipadSectionReport.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.R_nevaSectionReport.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.WaitDialog.resources
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.vbproj.GenerateResource.cache
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.exe.licenses
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.vbproj.CoreCompileInputs.cache
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.vbproj.CopyComplete
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.exe
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.xml
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.pdb
+C:\Soniya\Ngcare\nMVAR\Nmvar\nQGCare\nQGCare\obj\Debug\nQGCare.Resources.resources
+C:\Users\LENOVO\Downloads\nQGCare\bin\nQGCare.exe.config
+C:\Users\LENOVO\Downloads\nQGCare\bin\nQGCare.exe
+C:\Users\LENOVO\Downloads\nQGCare\bin\nQGCare.pdb
+C:\Users\LENOVO\Downloads\nQGCare\bin\nQGCare.xml
+C:\Users\LENOVO\Downloads\nQGCare\bin\GrapeCity.Win.Editors.v100.dll
+C:\Users\LENOVO\Downloads\nQGCare\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Users\LENOVO\Downloads\nQGCare\bin\System.Numerics.Vectors.dll
+C:\Users\LENOVO\Downloads\nQGCare\bin\System.Buffers.dll
+C:\Users\LENOVO\Downloads\nQGCare\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Users\LENOVO\Downloads\nQGCare\bin\GrapeCity.Win.Editors.v100.xml
+C:\Users\LENOVO\Downloads\nQGCare\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Users\LENOVO\Downloads\nQGCare\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Users\LENOVO\Downloads\nQGCare\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.vbprojAssemblyReference.cache
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F00_Form10.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F00_Form10_01.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F00_Form10_02.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F00_Form10_03.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F00_Form11.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F00_Form20.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F00_Form20_01.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F00_Form21.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F00_Form21_01.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F00_Form22.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F00_Form22_01.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F00_Form30.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F00_Form31.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F00_Form40.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F00_Form41.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F00_Form51.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F50_Form01.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F50_Form01_01.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F50_Form02.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F90_Form01.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F90_Form01_01.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F90_Form02.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F90_Form02_01.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F90_Form03.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F90_Form03_01.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F90_Form04.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F90_Form04_01.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F90_Form11.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F90_Form14.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F90_Form14_old.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.F90_Form15.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.MENU00.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.MENU50.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.MENU90.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.Resources.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.Print_View.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.R_kakuninSectionReport.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.R_Kanyu_ipadSectionReport.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.R_Kanyu_NormalSectionReport.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.R_member_listSectionReport.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.R_member_list_ipadSectionReport.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.R_nevaSectionReport.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.WaitDialog.resources
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.vbproj.GenerateResource.cache
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.exe.licenses
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.vbproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.vbproj.CopyComplete
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.exe
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.xml
+C:\Users\LENOVO\Downloads\nQGCare\obj\Debug\nQGCare.pdb
+C:\Users\Admin\Desktop\nQGCare\bin\nQGCare.exe.config
+C:\Users\Admin\Desktop\nQGCare\bin\nQGCare.exe
+C:\Users\Admin\Desktop\nQGCare\bin\nQGCare.pdb
+C:\Users\Admin\Desktop\nQGCare\bin\nQGCare.xml
+C:\Users\Admin\Desktop\nQGCare\bin\GrapeCity.Win.Editors.v100.dll
+C:\Users\Admin\Desktop\nQGCare\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Users\Admin\Desktop\nQGCare\bin\System.ValueTuple.dll
+C:\Users\Admin\Desktop\nQGCare\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Users\Admin\Desktop\nQGCare\bin\GrapeCity.Win.Editors.v100.xml
+C:\Users\Admin\Desktop\nQGCare\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Users\Admin\Desktop\nQGCare\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Users\Admin\Desktop\nQGCare\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.vbprojAssemblyReference.cache
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F00_Form10.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F00_Form10_01.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F00_Form10_02.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F00_Form10_03.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F00_Form11.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F00_Form20.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F00_Form20_01.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F00_Form21.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F00_Form21_01.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F00_Form22.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F00_Form22_01.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F00_Form30.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F00_Form31.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F00_Form40.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F00_Form41.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F00_Form51.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F50_Form01.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F50_Form01_01.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F50_Form02.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F90_Form01.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F90_Form01_01.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F90_Form02.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F90_Form02_01.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F90_Form03.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F90_Form03_01.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F90_Form04.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F90_Form04_01.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F90_Form11.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F90_Form14.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F90_Form14_old.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.F90_Form15.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.MENU00.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.MENU50.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.MENU90.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.Resources.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.Print_View.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.R_kakuninSectionReport.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.R_Kanyu_ipadSectionReport.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.R_Kanyu_NormalSectionReport.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.R_member_listSectionReport.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.R_member_list_ipadSectionReport.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.R_nevaSectionReport.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.WaitDialog.resources
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.vbproj.GenerateResource.cache
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.exe.licenses
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.vbproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.vbproj.CopyComplete
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.exe
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.xml
+C:\Users\Admin\Desktop\nQGCare\obj\Debug\nQGCare.pdb
+C:\Users\LENOVO\Downloads\nQGCare Source\bin\nQGCare.exe.config
+C:\Users\LENOVO\Downloads\nQGCare Source\bin\nQGCare.exe
+C:\Users\LENOVO\Downloads\nQGCare Source\bin\nQGCare.pdb
+C:\Users\LENOVO\Downloads\nQGCare Source\bin\nQGCare.xml
+C:\Users\LENOVO\Downloads\nQGCare Source\bin\GrapeCity.Win.Editors.v100.dll
+C:\Users\LENOVO\Downloads\nQGCare Source\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Users\LENOVO\Downloads\nQGCare Source\bin\System.ValueTuple.dll
+C:\Users\LENOVO\Downloads\nQGCare Source\bin\System.Numerics.Vectors.dll
+C:\Users\LENOVO\Downloads\nQGCare Source\bin\System.Buffers.dll
+C:\Users\LENOVO\Downloads\nQGCare Source\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Users\LENOVO\Downloads\nQGCare Source\bin\GrapeCity.Win.Editors.v100.xml
+C:\Users\LENOVO\Downloads\nQGCare Source\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Users\LENOVO\Downloads\nQGCare Source\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Users\LENOVO\Downloads\nQGCare Source\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.vbprojAssemblyReference.cache
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F00_Form10.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F00_Form10_01.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F00_Form10_02.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F00_Form10_03.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F00_Form11.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F00_Form20.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F00_Form20_01.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F00_Form21.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F00_Form21_01.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F00_Form22.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F00_Form22_01.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F00_Form30.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F00_Form31.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F00_Form40.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F00_Form41.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F00_Form51.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F50_Form01.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F50_Form01_01.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F50_Form02.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F90_Form01.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F90_Form01_01.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F90_Form02.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F90_Form02_01.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F90_Form03.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F90_Form03_01.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F90_Form04.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F90_Form04_01.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F90_Form11.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F90_Form14.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F90_Form14_old.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.F90_Form15.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.MENU00.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.MENU50.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.MENU90.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.Resources.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.Print_View.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.R_kakuninSectionReport.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.R_Kanyu_ipadSectionReport.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.R_Kanyu_NormalSectionReport.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.R_member_listSectionReport.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.R_member_list_ipadSectionReport.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.R_nevaSectionReport.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.WaitDialog.resources
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.vbproj.GenerateResource.cache
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.exe.licenses
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.vbproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.vbproj.CopyComplete
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.exe
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.xml
+C:\Users\LENOVO\Downloads\nQGCare Source\obj\Debug\nQGCare.pdb
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.vbprojAssemblyReference.cache
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form10.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form10_01.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form10_02.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form10_03.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form11.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form20.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form20_01.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form21.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form21_01.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form22.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form22_01.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form30.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form31.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form40.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form41.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form51.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F50_Form01.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F50_Form01_01.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F50_Form02.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form01.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form01_01.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form02.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form02_01.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form03.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form03_01.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form04.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form04_01.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form11.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form14.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form14_old.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form15.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.MENU00.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.MENU50.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.MENU90.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.Resources.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.Print_View.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.R_kakuninSectionReport.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.R_Kanyu_ipadSectionReport.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.R_Kanyu_NormalSectionReport.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.R_member_listSectionReport.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.R_member_list_ipadSectionReport.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.R_nevaSectionReport.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.WaitDialog.resources
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.vbproj.GenerateResource.cache
+D:\nMVAR\nQGcare\obj\Debug\nQGCare.exe.licenses
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\bin\nQGCare.exe.config
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\bin\nQGCare.exe
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\bin\nQGCare.pdb
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\bin\nQGCare.xml
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\bin\GrapeCity.Win.Editors.v100.dll
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\bin\System.ValueTuple.dll
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\bin\GrapeCity.Win.Editors.v100.xml
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.vbprojAssemblyReference.cache
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form10.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form10_01.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form10_02.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form10_03.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form11.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form20.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form20_01.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form21.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form21_01.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form22.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form22_01.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form30.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form31.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form40.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form41.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form51.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F50_Form01.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F50_Form01_01.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F50_Form02.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form01.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form01_01.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form02.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form02_01.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form03.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form03_01.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form04.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form04_01.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form11.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form14.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form14_old.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form15.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.MENU00.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.MENU50.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.MENU90.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.Resources.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.Print_View.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.R_kakuninSectionReport.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.R_Kanyu_ipadSectionReport.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.R_Kanyu_NormalSectionReport.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.R_member_listSectionReport.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.R_member_list_ipadSectionReport.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.R_nevaSectionReport.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.WaitDialog.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.vbproj.GenerateResource.cache
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.exe.licenses
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.vbproj.CoreCompileInputs.cache
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.vbproj.CopyComplete
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.exe
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.xml
+D:\OldHarddrive\nMVARFinalSourceCode\nQGCARE_RAM_2021-04-12\nQGcare\nQGcare\obj\Debug\nQGCare.pdb
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\bin\nQGCare.exe.config
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\bin\nQGCare.exe
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\bin\nQGCare.pdb
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\bin\nQGCare.xml
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\bin\GrapeCity.Win.Editors.v100.dll
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\bin\System.ValueTuple.dll
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\bin\GrapeCity.Win.Editors.v100.xml
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.vbproj.AssemblyReference.cache
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F00_Form10.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F00_Form10_01.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F00_Form10_02.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F00_Form10_03.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F00_Form11.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F00_Form20.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F00_Form20_01.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F00_Form21.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F00_Form21_01.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F00_Form22.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F00_Form22_01.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F00_Form30.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F00_Form31.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F00_Form40.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F00_Form41.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F00_Form51.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F00_Form60.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F00_Form61.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F00_Form61_01.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F50_Form01.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F50_Form01_01.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F50_Form02.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F90_Form01.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F90_Form01_01.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F90_Form02.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F90_Form02_01.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F90_Form03.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F90_Form03_01.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F90_Form04.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F90_Form04_01.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F90_Form11.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F90_Form14.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F90_Form14_old.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.F90_Form15.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.MENU00.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.MENU50.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.MENU90.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.Resources.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.Print_View.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.R_kakuninSectionReport.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.R_Kanyu_ipadSectionReport.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.R_Kanyu_NormalSectionReport.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.R_member_listSectionReport.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.R_member_list_ipadSectionReport.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.R_nevaSectionReport.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.WaitDialog.resources
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.vbproj.GenerateResource.cache
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.exe.licenses
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.vbproj.CoreCompileInputs.cache
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.vbproj.CopyComplete
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.exe
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.xml
+D:\OldHarddrive\nQGCARE\nAQGCARE_20211216\nAQGCARE_20211216\nQGcare\obj\Debug\nQGCare.pdb
+D:\nMVAR\nMVAR\nQGcare\bin\nQGCare.exe.config
+D:\nMVAR\nMVAR\nQGcare\bin\nQGCare.exe
+D:\nMVAR\nMVAR\nQGcare\bin\nQGCare.pdb
+D:\nMVAR\nMVAR\nQGcare\bin\nQGCare.xml
+D:\nMVAR\nMVAR\nQGcare\bin\GrapeCity.Win.Editors.v100.dll
+D:\nMVAR\nMVAR\nQGcare\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\nMVAR\nMVAR\nQGcare\bin\System.ValueTuple.dll
+D:\nMVAR\nMVAR\nQGcare\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\nMVAR\nMVAR\nQGcare\bin\GrapeCity.Win.Editors.v100.xml
+D:\nMVAR\nMVAR\nQGcare\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\nMVAR\nMVAR\nQGcare\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+D:\nMVAR\nMVAR\nQGcare\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.vbproj.AssemblyReference.cache
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form10.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form10_01.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form10_02.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form10_03.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form11.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form20.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form20_01.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form21.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form21_01.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form22.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form22_01.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form30.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form31.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form40.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form41.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form51.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form60.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form61.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F00_Form61_01.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F50_Form01.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F50_Form01_01.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F50_Form02.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form01.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form01_01.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form02.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form02_01.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form03.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form03_01.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form04.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form04_01.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form11.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form14.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form14_old.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.F90_Form15.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.MENU00.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.MENU50.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.MENU90.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.Resources.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.Print_View.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.R_kakuninSectionReport.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.R_Kanyu_ipadSectionReport.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.R_Kanyu_NormalSectionReport.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.R_member_listSectionReport.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.R_member_list_ipadSectionReport.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.R_nevaSectionReport.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.WaitDialog.resources
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.vbproj.GenerateResource.cache
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.exe.licenses
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.vbproj.CoreCompileInputs.cache
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.vbproj.CopyComplete
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.exe
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.xml
+D:\nMVAR\nMVAR\nQGcare\obj\Debug\nQGCare.pdb
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\nQGCare.exe.config
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\nQGCare.exe
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\nQGCare.pdb
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\nQGCare.xml
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Win.Editors.v100.dll
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\System.ValueTuple.dll
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Win.Editors.v100.xml
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form10.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form10_01.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form10_02.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form10_03.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form11.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form20.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form20_01.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form21.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form21_01.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form22.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form22_01.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form30.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form31.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form40.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form41.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form51.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form60.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form61.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form61_01.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F50_Form01.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F50_Form01_01.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F50_Form02.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form01.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form01_01.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form02.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form02_01.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form03.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form03_01.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form04.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form04_01.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form11.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form14.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form14_old.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form15.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.MENU00.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.MENU50.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.MENU90.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.Resources.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.Print_View.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_kakuninSectionReport.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_Kanyu_ipadSectionReport.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_Kanyu_NormalSectionReport.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_member_listSectionReport.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_member_list_ipadSectionReport.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_nevaSectionReport.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.WaitDialog.resources
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.vbproj.GenerateResource.cache
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.exe.licenses
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.vbproj.CoreCompileInputs.cache
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.vbproj.CopyComplete
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.exe
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.xml
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.pdb
+D:\OldHarddrive\nMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.vbproj.AssemblyReference.cache
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\nQGCare.exe.config
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\nQGCare.exe
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\nQGCare.pdb
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\nQGCare.xml
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Win.Editors.v100.dll
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\System.ValueTuple.dll
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Win.Editors.v100.xml
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.vbproj.AssemblyReference.cache
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form10.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form10_01.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form10_02.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form10_03.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form11.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form20.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form20_01.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form21.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form21_01.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form22.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form22_01.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form30.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form31.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form40.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form41.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form51.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form60.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form61.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form61_01.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F50_Form01.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F50_Form01_01.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F50_Form02.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form01.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form01_01.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form02.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form02_01.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form03.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form03_01.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form04.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form04_01.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form11.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form14.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form14_old.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form15.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.MENU00.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.MENU50.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.MENU90.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.Resources.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.Print_View.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_kakuninSectionReport.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_Kanyu_ipadSectionReport.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_Kanyu_NormalSectionReport.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_member_listSectionReport.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_member_list_ipadSectionReport.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_nevaSectionReport.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.WaitDialog.resources
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.vbproj.GenerateResource.cache
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.exe.licenses
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.vbproj.CoreCompileInputs.cache
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.vbproj.CopyComplete
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.exe
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.xml
+D:\OldHarddrive\LatestnMVAR&nQGCARE_20220203\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.pdb
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\nQGCare.exe.config
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\nQGCare.exe
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\nQGCare.pdb
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\nQGCare.xml
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Win.Editors.v100.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\System.ValueTuple.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Win.Editors.v100.xml
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form10.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form10_01.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form10_02.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form10_03.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form11.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form20.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form20_01.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form21.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form21_01.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form22.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form22_01.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form30.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form31.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form40.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form41.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form51.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form60.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form61.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form61_01.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F50_Form01.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F50_Form01_01.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F50_Form02.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form01.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form01_01.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form02.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form02_01.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form03.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form03_01.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form04.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form04_01.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form11.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form14.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form14_old.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form15.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.MENU00.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.MENU50.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.MENU90.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.Resources.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.Print_View.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_kakuninSectionReport.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_Kanyu_ipadSectionReport.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_Kanyu_NormalSectionReport.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_member_listSectionReport.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_member_list_ipadSectionReport.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_nevaSectionReport.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.WaitDialog.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.vbproj.GenerateResource.cache
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.exe.licenses
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.vbproj.CoreCompileInputs.cache
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.vbproj.CopyComplete
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.exe
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.xml
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.pdb
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Chart.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.DataProviders.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Drawing.Gc.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Drawing.Gdi.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Export.Excel.Page.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Export.Html.Page.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Export.Image.Page.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Export.Pdf.Page.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Export.Svg.Page.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Export.Text.Page.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Export.Word.Page.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Rdl.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Rendering.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Design.Win.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.DesignerClassic.exe
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Document.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Export.Excel.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Export.Html.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Export.Image.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Export.Pdf.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Export.Rdf.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Export.Word.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Export.Xml.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Imports.Access.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Imports.Crystal.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Imports.Excel.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Imports.exe
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Imports.Rpx.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Imports.Win.exe
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Interop.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.ThemeEditor.exe
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Viewer.exe
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Viewer.Win.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Viewer.Wpf.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.WpfViewer.exe
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\Grapecity.DataVisualization.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Documents.Common.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Documents.Common.Windows.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Documents.DX.Windows.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Documents.Imaging.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Documents.Pdf.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\Gcef.Data.DataEngine.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\Gcef.Data.ExpressionInfo.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\Newtonsoft.Json.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\DocumentFormat.OpenXml.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\BouncyCastle.Crypto.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\System.Numerics.Vectors.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\System.Memory.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\System.Buffers.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\Gcef.Data.VBFunctionLib.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.DesignerClassic.exe.config
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Imports.exe.config
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Imports.Win.exe.config
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.ThemeEditor.exe.config
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Viewer.exe.config
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.WpfViewer.exe.config
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Chart.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Design.Win.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.DesignerClassic.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Document.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Export.Excel.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Export.Html.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Export.Image.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Export.Word.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Export.Xml.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Imports.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Imports.Access.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Imports.Crystal.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Imports.Excel.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Imports.Rpx.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Imports.Win.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.ThemeEditor.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Viewer.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Viewer.Win.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Viewer.Wpf.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.WpfViewer.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.vbproj.AssemblyReference.cache
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\nQGCare.exe.config
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\nQGCare.exe
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\nQGCare.pdb
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\nQGCare.xml
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Chart.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.DataProviders.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Drawing.Gc.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Drawing.Gdi.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Export.Excel.Page.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Export.Html.Page.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Export.Image.Page.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Export.Pdf.Page.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Export.Svg.Page.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Export.Text.Page.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Export.Word.Page.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Rdl.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Core.Rendering.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Design.Win.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.DesignerClassic.exe
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Document.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Export.Excel.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Export.Html.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Export.Image.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Export.Pdf.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Export.Rdf.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Export.Word.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Export.Xml.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Imports.Access.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Imports.Crystal.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Imports.Excel.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Imports.exe
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Imports.Rpx.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Imports.Win.exe
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Interop.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.ThemeEditor.exe
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Viewer.exe
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Viewer.Win.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Viewer.Wpf.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.WpfViewer.exe
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\Grapecity.DataVisualization.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Documents.Common.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Documents.Common.Windows.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Documents.DX.Windows.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Documents.Imaging.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Documents.Pdf.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Win.Editors.v100.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\Gcef.Data.DataEngine.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\Gcef.Data.ExpressionInfo.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\Newtonsoft.Json.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\DocumentFormat.OpenXml.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\BouncyCastle.Crypto.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\System.ValueTuple.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\System.Numerics.Vectors.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\System.Memory.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\System.Buffers.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\Gcef.Data.VBFunctionLib.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.DesignerClassic.exe.config
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Imports.exe.config
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Imports.Win.exe.config
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.ThemeEditor.exe.config
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.Viewer.exe.config
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.ActiveReports.WpfViewer.exe.config
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\GrapeCity.Win.Editors.v100.xml
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Chart.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Design.Win.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.DesignerClassic.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Document.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Export.Excel.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Export.Html.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Export.Image.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Export.Word.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Export.Xml.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Imports.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Imports.Access.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Imports.Crystal.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Imports.Excel.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Imports.Rpx.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Imports.Win.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.ThemeEditor.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Viewer.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Viewer.Win.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.Viewer.Wpf.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.ActiveReports.WpfViewer.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.vbproj.AssemblyReference.cache
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form10.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form10_01.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form10_02.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form10_03.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form11.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form20.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form20_01.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form21.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form21_01.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form22.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form22_01.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form30.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form31.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form40.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form41.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form51.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form60.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form61.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F00_Form61_01.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F50_Form01.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F50_Form01_01.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F50_Form02.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form01.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form01_01.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form02.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form02_01.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form03.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form03_01.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form04.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form04_01.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form11.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form14.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.F90_Form15.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.MENU00.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.MENU50.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.MENU90.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.Resources.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.Print_View.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_kakuninSectionReport.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_Kanyu_ipadSectionReport.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_Kanyu_NormalSectionReport.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_member_listSectionReport.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_member_list_ipadSectionReport.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.R_nevaSectionReport.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.WaitDialog.resources
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.vbproj.GenerateResource.cache
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.exe.licenses
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.vbproj.CoreCompileInputs.cache
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.vbproj.CopyComplete
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.exe
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.xml
+D:\OldHarddrive\New folder (2)\nMVAR\nMVARnQGCARE_SOURCE_CODE_20220301\nQGCARE_Project\nQGcare\nQGcare\obj\Debug\nQGCare.pdb

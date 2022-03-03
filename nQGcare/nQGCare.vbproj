@@ -1,0 +1,698 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>7.10.3077</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E928F8E3-F07D-48C7-BC56-0CBE343636EF}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>nQGCare.ico</ApplicationIcon>
+    <AssemblyKeyContainerName />
+    <AssemblyName>nQGCare</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>nQGCare</RootNamespace>
+    <StartupObject>nQGCare.MENU00</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>nQGCare.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>nQGCare.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveReports">
+      <HintPath>..\..\..\best_ivc_err_mnt\bin\ActiveReports.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.Interop">
+      <HintPath>..\..\..\best_ivc_err_mnt\bin\ActiveReports.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.PdfExport">
+      <HintPath>..\..\..\best_ivc_err_mnt\bin\ActiveReports.PdfExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.Viewer">
+      <HintPath>..\..\..\best_ivc_err_mnt\bin\ActiveReports.Viewer.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Chart, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.DataProviders, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.DataProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Drawing.Gc, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Drawing.Gc.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Drawing.Gdi, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Drawing.Gdi.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Excel.Page, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Excel.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Html.Page, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Html.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Image.Page, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Image.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Pdf.Page, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Pdf.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Svg.Page, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Svg.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Text.Page, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Text.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Word.Page, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Word.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rdl, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Rdl.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rendering, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Rendering.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Design.Win, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Design.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.DesignerClassic, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.DesignerClassic.exe</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Document, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Document.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Excel, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Html, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Html.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Image, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Image.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Pdf, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Rdf, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Rdf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Word, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Xml, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Imports.exe</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Access, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Imports.Access.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Crystal, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Imports.Crystal.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Excel, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Imports.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Rpx, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Imports.Rpx.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Win">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Imports.Win.exe</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Interop, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.ThemeEditor">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.ThemeEditor.exe</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Viewer, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Viewer.exe</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Viewer.Win, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Viewer.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Viewer.Wpf, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Viewer.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.WpfViewer, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.WpfViewer.exe</HintPath>
+    </Reference>
+    <Reference Include="Grapecity.DataVisualization, Version=0.1.239.0, Culture=neutral, PublicKeyToken=171ec59c7733b360, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\Grapecity.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Common, Version=3.1.0.508, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.Documents.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Common.Windows, Version=3.1.0.508, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.Documents.Common.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.DX.Windows, Version=3.1.0.508, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.Documents.DX.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Imaging, Version=3.1.0.508, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.Documents.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Pdf, Version=3.1.0.508, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.Documents.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Framework.InputMan.v24, Version=2.4.4006.2012, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\InputManWin10\Bin\v10.0.4006.2012\GrapeCity.Framework.InputMan.v24.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Editors.v100, Version=10.0.4006.2012, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\InputManWin10\Bin\v10.0.4006.2012\GrapeCity.Win.Editors.v100.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Input.Interop.v100, Version=10.0.4006.2012, Culture=neutral, PublicKeyToken=40ae1c5c604f43d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\InputManWin10\Bin\v10.0.4006.2012\GrapeCity.Win.Input.Interop.v100.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="F00_Form10.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form10_01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form10_02.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form10_03.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form11.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form20.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form20_01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form21.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form21_01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form22.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form22_01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form30.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form31.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form40.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form41.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form51.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form60.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form61.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form61_01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form01_01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form02.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F90_Form01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F90_Form01_01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F90_Form02.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F90_Form02_01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F90_Form03.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F90_Form03_01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F90_Form04.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F90_Form04_01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F90_Form11.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F90_Form14.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F90_Form15.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MENU00.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MENU50.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MENU90.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_DB.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module_Dim.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module_Sub.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Print_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R_kakunin.vb">
+      <DependentUpon>R_kakunin.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_kakuninSectionReport.Designer.vb">
+      <DependentUpon>R_kakuninSectionReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="R_kakuninSectionReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="R_Kanyu_iPad.vb">
+      <DependentUpon>R_Kanyu_iPad.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Kanyu_ipadSectionReport.Designer.vb">
+      <DependentUpon>R_Kanyu_ipadSectionReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="R_Kanyu_ipadSectionReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="R_Kanyu_Normal.vb">
+      <DependentUpon>R_Kanyu_Normal.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Kanyu_NormalSectionReport.Designer.vb">
+      <DependentUpon>R_Kanyu_NormalSectionReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="R_Kanyu_NormalSectionReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="R_member_list.vb">
+      <DependentUpon>R_member_list.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_member_listSectionReport.Designer.vb">
+      <DependentUpon>R_member_listSectionReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="R_member_listSectionReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="R_member_list_iPad.vb">
+      <DependentUpon>R_member_list_iPad.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_member_list_ipadSectionReport.Designer.vb">
+      <DependentUpon>R_member_list_ipadSectionReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="R_member_list_ipadSectionReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="R_neva.vb">
+      <DependentUpon>R_neva.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_nevaSectionReport.Designer.vb">
+      <DependentUpon>R_nevaSectionReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="R_nevaSectionReport.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WaitDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Content Include="nQGCare.ico" />
+    <EmbeddedResource Include="F00_Form10.resx">
+      <DependentUpon>F00_Form10.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form10_01.resx">
+      <DependentUpon>F00_Form10_01.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form10_02.resx">
+      <DependentUpon>F00_Form10_02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form10_03.resx">
+      <DependentUpon>F00_Form10_03.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form11.resx">
+      <DependentUpon>F00_Form11.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form20.resx">
+      <DependentUpon>F00_Form20.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form20_01.resx">
+      <DependentUpon>F00_Form20_01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form21.resx">
+      <DependentUpon>F00_Form21.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form21_01.resx">
+      <DependentUpon>F00_Form21_01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form22.resx">
+      <DependentUpon>F00_Form22.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form22_01.resx">
+      <DependentUpon>F00_Form22_01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form30.resx">
+      <DependentUpon>F00_Form30.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form31.resx">
+      <DependentUpon>F00_Form31.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form40.resx">
+      <DependentUpon>F00_Form40.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form41.resx">
+      <DependentUpon>F00_Form41.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form51.resx">
+      <DependentUpon>F00_Form51.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form60.resx">
+      <DependentUpon>F00_Form60.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form61.resx">
+      <DependentUpon>F00_Form61.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form61_01.resx">
+      <DependentUpon>F00_Form61_01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form01.resx">
+      <DependentUpon>F50_Form01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form01_01.resx">
+      <DependentUpon>F50_Form01_01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form02.resx">
+      <DependentUpon>F50_Form02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F90_Form01.resx">
+      <DependentUpon>F90_Form01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F90_Form01_01.resx">
+      <DependentUpon>F90_Form01_01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F90_Form02.resx">
+      <DependentUpon>F90_Form02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F90_Form02_01.resx">
+      <DependentUpon>F90_Form02_01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F90_Form03.resx">
+      <DependentUpon>F90_Form03.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F90_Form03_01.resx">
+      <DependentUpon>F90_Form03_01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F90_Form04.resx">
+      <DependentUpon>F90_Form04.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F90_Form04_01.resx">
+      <DependentUpon>F90_Form04_01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F90_Form11.resx">
+      <DependentUpon>F90_Form11.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F90_Form14.resx">
+      <DependentUpon>F90_Form14.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F90_Form15.resx">
+      <DependentUpon>F90_Form15.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="MENU00.resx">
+      <DependentUpon>MENU00.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MENU50.resx">
+      <DependentUpon>MENU50.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MENU90.resx">
+      <DependentUpon>MENU90.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print_View.resx">
+      <DependentUpon>Print_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_kakunin.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_kakunin.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_kakuninSectionReport.resx">
+      <DependentUpon>R_kakuninSectionReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Kanyu_iPad.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Kanyu_iPad.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Kanyu_ipadSectionReport.resx">
+      <DependentUpon>R_Kanyu_ipadSectionReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Kanyu_Normal.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Kanyu_Normal.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Kanyu_NormalSectionReport.resx">
+      <DependentUpon>R_Kanyu_NormalSectionReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_member_list.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_member_list.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_member_listSectionReport.resx">
+      <DependentUpon>R_member_listSectionReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_member_list_iPad.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_member_list_iPad.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_member_list_ipadSectionReport.resx">
+      <DependentUpon>R_member_list_ipadSectionReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_neva.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_neva.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_nevaSectionReport.resx">
+      <DependentUpon>R_nevaSectionReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitDialog.resx">
+      <DependentUpon>WaitDialog.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

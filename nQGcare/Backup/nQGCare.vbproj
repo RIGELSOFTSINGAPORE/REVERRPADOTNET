@@ -1,0 +1,600 @@
+<VisualStudioProject>
+    <VisualBasic
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{E928F8E3-F07D-48C7-BC56-0CBE343636EF}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = "nQGCare.ico"
+                AssemblyKeyContainerName = ""
+                AssemblyName = "nQGCare"
+                AssemblyOriginatorKeyFile = ""
+                AssemblyOriginatorKeyMode = "None"
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "WinExe"
+                OptionCompare = "Binary"
+                OptionExplicit = "On"
+                OptionStrict = "Off"
+                RootNamespace = "nQGCare"
+                StartupObject = "nQGCare.MENU00"
+            >
+                <Config
+                    Name = "Debug"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "true"
+                    DefineTrace = "true"
+                    DebugSymbols = "true"
+                    IncrementalBuild = "true"
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+                <Config
+                    Name = "Release"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "false"
+                    DefineTrace = "true"
+                    DebugSymbols = "false"
+                    IncrementalBuild = "false"
+                    Optimize = "true"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                />
+                <Reference
+                    Name = "System.Windows.Forms"
+                    AssemblyName = "System.Windows.Forms"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+                <Reference
+                    Name = "GrapeCity.Win.Input.v20"
+                    AssemblyName = "GrapeCity.Win.Input.v20"
+                    HintPath = "C:\Program Files\InputManNETwin2\Bin\GrapeCity.Win.Input.v20.dll"
+                    AssemblyFolderKey = "hklm\inputmannet2"
+                />
+                <Reference
+                    Name = "System.Design"
+                    AssemblyName = "System.Design"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Design.dll"
+                />
+                <Reference
+                    Name = "ActiveReports"
+                    AssemblyName = "ActiveReports"
+                    HintPath = "C:\PROGRA~1\ACTIVE~1\Bin\ActiveReports.dll"
+                />
+                <Reference
+                    Name = "ActiveReports.Viewer"
+                    AssemblyName = "ActiveReports.Viewer"
+                    HintPath = "C:\PROGRA~1\ACTIVE~1\Bin\ActiveReports.Viewer.dll"
+                />
+                <Reference
+                    Name = "ActiveReports.PdfExport"
+                    AssemblyName = "ActiveReports.PdfExport"
+                    HintPath = "C:\PROGRA~1\ACTIVE~1\Bin\ActiveReports.PdfExport.dll"
+                />
+                <Reference
+                    Name = "ActiveReports.Interop"
+                    AssemblyName = "ActiveReports.Interop"
+                    HintPath = "C:\PROGRA~1\ACTIVE~1\Bin\ActiveReports.Interop.dll"
+                />
+            </References>
+            <Imports>
+                <Import Namespace = "Microsoft.VisualBasic" />
+                <Import Namespace = "System" />
+                <Import Namespace = "System.Collections" />
+                <Import Namespace = "System.Data" />
+                <Import Namespace = "System.Drawing" />
+                <Import Namespace = "System.Diagnostics" />
+                <Import Namespace = "System.Windows.Forms" />
+            </Imports>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form10.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form10.resx"
+                    DependentUpon = "F00_Form10.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form10_01.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form10_01.resx"
+                    DependentUpon = "F00_Form10_01.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form10_02.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form10_02.resx"
+                    DependentUpon = "F00_Form10_02.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form10_03.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form10_03.resx"
+                    DependentUpon = "F00_Form10_03.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form11.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form11.resx"
+                    DependentUpon = "F00_Form11.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form20.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form20.resx"
+                    DependentUpon = "F00_Form20.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form20_01.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form20_01.resx"
+                    DependentUpon = "F00_Form20_01.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form21.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form21.resx"
+                    DependentUpon = "F00_Form21.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form21_01.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form21_01.resx"
+                    DependentUpon = "F00_Form21_01.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form22.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form22.resx"
+                    DependentUpon = "F00_Form22.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form22_01.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form22_01.resx"
+                    DependentUpon = "F00_Form22_01.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form30.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form30.resx"
+                    DependentUpon = "F00_Form30.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form31.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form31.resx"
+                    DependentUpon = "F00_Form31.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form40.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form40.resx"
+                    DependentUpon = "F00_Form40.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form41.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form41.resx"
+                    DependentUpon = "F00_Form41.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form51.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form51.resx"
+                    DependentUpon = "F00_Form51.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F50_Form01.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F50_Form01.resx"
+                    DependentUpon = "F50_Form01.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F50_Form01_01.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F50_Form01_01.resx"
+                    DependentUpon = "F50_Form01_01.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F50_Form02.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F50_Form02.resx"
+                    DependentUpon = "F50_Form02.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F90_Form01.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F90_Form01.resx"
+                    DependentUpon = "F90_Form01.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F90_Form01_01.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F90_Form01_01.resx"
+                    DependentUpon = "F90_Form01_01.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F90_Form02.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F90_Form02.resx"
+                    DependentUpon = "F90_Form02.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F90_Form02_01.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F90_Form02_01.resx"
+                    DependentUpon = "F90_Form02_01.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F90_Form03.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F90_Form03.resx"
+                    DependentUpon = "F90_Form03.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F90_Form03_01.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F90_Form03_01.resx"
+                    DependentUpon = "F90_Form03_01.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F90_Form04.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F90_Form04.resx"
+                    DependentUpon = "F90_Form04.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F90_Form04_01.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F90_Form04_01.resx"
+                    DependentUpon = "F90_Form04_01.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F90_Form11.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F90_Form11.resx"
+                    DependentUpon = "F90_Form11.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F90_Form14.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F90_Form14.resx"
+                    DependentUpon = "F90_Form14.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F90_Form14_old.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F90_Form14_old.resx"
+                    DependentUpon = "F90_Form14_old.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F90_Form15.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F90_Form15.resx"
+                    DependentUpon = "F90_Form15.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "licenses.licx"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "MENU00.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "MENU00.resx"
+                    DependentUpon = "MENU00.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "MENU50.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "MENU50.resx"
+                    DependentUpon = "MENU50.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "MENU90.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "MENU90.resx"
+                    DependentUpon = "MENU90.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Module_DB.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Module_Dim.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Module_Sub.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "nQGCare.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "Print_View.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Print_View.resx"
+                    DependentUpon = "Print_View.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "R_kakunin.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_kakunin.vb"
+                />
+                <File
+                    RelPath = "R_kakunin.vb"
+                    DependentUpon = "R_kakunin.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Kanyu_iPad.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Kanyu_iPad.vb"
+                />
+                <File
+                    RelPath = "R_Kanyu_iPad.vb"
+                    DependentUpon = "R_Kanyu_iPad.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Kanyu_Normal.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Kanyu_Normal.vb"
+                />
+                <File
+                    RelPath = "R_Kanyu_Normal.vb"
+                    DependentUpon = "R_Kanyu_Normal.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_member_list.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_member_list.vb"
+                />
+                <File
+                    RelPath = "R_member_list.vb"
+                    DependentUpon = "R_member_list.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_member_list_iPad.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_member_list_iPad.vb"
+                />
+                <File
+                    RelPath = "R_member_list_iPad.vb"
+                    DependentUpon = "R_member_list_iPad.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_neva.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_neva.vb"
+                />
+                <File
+                    RelPath = "R_neva.vb"
+                    DependentUpon = "R_neva.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "WaitDialog.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "WaitDialog.resx"
+                    DependentUpon = "WaitDialog.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+            </Include>
+        </Files>
+    </VisualBasic>
+</VisualStudioProject>
+
