@@ -1,0 +1,201 @@
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.vbprojAssemblyReference.cache
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.DataGridEx.resources
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.F00_Form02.resources
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.F00_Form05.resources
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.F00_Form05_2.resources
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.F00_Form06.resources
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.F00_Form15.resources
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.F01_Form11.resources
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.F01_Form12.resources
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.F01_Form21.resources
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.F01_Form22.resources
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.F01_Form23.resources
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.F02_Form81.resources
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.F10_Form01.resources
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.F10_Form02.resources
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.F70_Form01.resources
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.F80_Form01.resources
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.Menu.resources
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.WaitDialog.resources
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.vbproj.GenerateResource.cache
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.exe.licenses
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.exe
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.pdb
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.vbproj.CoreCompileInputs.cache
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\nMVAR_TSS.exe.config
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\nMVAR_TSS.exe
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\nMVAR_TSS.pdb
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\nMVAR_TSS.xml
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\ActiveReports.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\ActiveReports.Interop.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\ActiveReports.PdfExport.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\ActiveReports.Viewer.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\Gcef.Data.DataEngine.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\Gcef.Data.ExpressionInfo.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\Gcef.Data.VBFunctionLib.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Chart.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Core.DataProviders.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Core.Drawing.Gc.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Core.Drawing.Gdi.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Core.Export.Excel.Page.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Core.Export.Html.Page.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Core.Export.Image.Page.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Core.Export.Pdf.Page.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Core.Export.Svg.Page.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Core.Export.Text.Page.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Core.Export.Word.Page.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Core.Rdl.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Core.Rendering.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Design.Win.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.DesignerClassic.exe
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Document.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Export.Excel.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Export.Html.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Export.Image.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Export.Pdf.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Export.Rdf.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Export.Word.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Export.Xml.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Imports.Access.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Imports.Crystal.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Imports.Excel.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Imports.exe
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Imports.Rpx.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Interop.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Viewer.exe
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Viewer.Win.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.Viewer.Wpf.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.ActiveReports.WpfViewer.exe
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\Grapecity.DataVisualization.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.Documents.Common.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.Documents.Common.Windows.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.Documents.DX.Windows.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.Documents.Imaging.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.Documents.Pdf.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.Win.Editors.v100.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\Newtonsoft.Json.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\System.ValueTuple.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\System.Numerics.Vectors.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\System.Memory.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\System.Buffers.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\Gcef.Data.DataEngine.xml
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\Gcef.Data.ExpressionInfo.xml
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\bin\Gcef.Data.VBFunctionLib.xml
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.vbproj.CopyComplete
+C:\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\nMVAR_TSS\obj\Debug\nMVAR_TSS.xml
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\bin\nMVAR_TSS.exe.config
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\bin\nMVAR_TSS.exe
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\bin\nMVAR_TSS.pdb
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\bin\nMVAR_TSS.xml
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\bin\GrapeCity.Win.Editors.v100.dll
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.DataGridEx.resources
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F00_Form02.resources
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F00_Form05.resources
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F00_Form05_2.resources
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F00_Form06.resources
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F00_Form15.resources
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F01_Form11.resources
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F01_Form12.resources
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F01_Form21.resources
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F01_Form22.resources
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F01_Form23.resources
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F02_Form81.resources
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F10_Form01.resources
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F10_Form02.resources
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F70_Form01.resources
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F80_Form01.resources
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.Menu.resources
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.WaitDialog.resources
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.vbproj.GenerateResource.cache
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.exe.licenses
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.vbproj.CoreCompileInputs.cache
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.vbproj.CopyComplete
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.exe
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.xml
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.pdb
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\bin\GrapeCity.Win.Editors.v100.xml
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.vbprojAssemblyReference.cache
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\bin\nMVAR_TSS.exe.config
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\bin\nMVAR_TSS.exe
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\bin\nMVAR_TSS.pdb
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\bin\nMVAR_TSS.xml
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\bin\GrapeCity.Win.Editors.v100.dll
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\bin\GrapeCity.Win.Editors.v100.xml
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.DataGridEx.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F00_Form02.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F00_Form05.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F00_Form05_2.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F00_Form06.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F00_Form15.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F01_Form11.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F01_Form12.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F01_Form21.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F01_Form22.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F01_Form23.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F02_Form81.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F10_Form01.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F10_Form02.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F70_Form01.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.F80_Form01.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.Menu.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.WaitDialog.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.vbproj.GenerateResource.cache
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.exe.licenses
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.vbproj.CoreCompileInputs.cache
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.vbproj.CopyComplete
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.exe
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.xml
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.pdb
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.vbprojAssemblyReference.cache
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\nMVAR_TSS\obj\Debug\nMVAR_TSS.SectionReport_R_Azukari_Sheet.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\bin\nMVAR_TSS.exe.config
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\bin\nMVAR_TSS.exe
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\bin\nMVAR_TSS.pdb
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\bin\nMVAR_TSS.xml
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\bin\GrapeCity.Win.Editors.v100.xml
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.vbproj.AssemblyReference.cache
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.DataGridEx.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.F00_Form02.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.F00_Form05.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.F00_Form05_2.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.F00_Form06.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.F00_Form15.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.F01_Form11.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.F01_Form12.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.F01_Form21.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.F01_Form22.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.F01_Form23.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.F02_Form81.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.F10_Form01.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.F10_Form02.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.F70_Form01.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.F80_Form01.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.Menu.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.SectionReport_R_Azukari_Sheet.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.WaitDialog.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.vbproj.GenerateResource.cache
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.exe.licenses
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.vbproj.CoreCompileInputs.cache
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.vbproj.CopyComplete
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.exe
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.xml
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\obj\Debug\nMVAR_TSS.pdb
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\bin\System.ValueTuple.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\bin\GrapeCity.ActiveReports.DesignerClassic.exe.config
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\bin\GrapeCity.ActiveReports.Imports.exe.config
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\bin\GrapeCity.ActiveReports.Imports.Win.exe.config
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\bin\GrapeCity.ActiveReports.ThemeEditor.exe.config
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\bin\GrapeCity.ActiveReports.Viewer.exe.config
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\nMVAR_TSS\bin\GrapeCity.ActiveReports.WpfViewer.exe.config
