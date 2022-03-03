@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3" PrintWidth="15465" DocumentName="ActiveReports Document" ScriptLang="C#" CodeFile="R_Invc_Ks.vb">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: MS UI Gothic; font-style: normal; font-variant: inherit; font-weight: normal; font-size: 10pt; font-size-adjust: inherit; font-stretch: inherit; color: rgb(0,0,0); background-repeat: inherit; background-attachment: inherit; opacity: inherit; word-spacing: inherit; letter-spacing: inherit; text-decoration: none; vertical-align: inherit; text-transform: inherit; text-align: inherit; text-indent: inherit; unicode-bidi: inherit; line-height: inherit; white-space: inherit; ddo-char-set: 128; " />
+    <Style Name="Heading1" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 16pt; font-size-adjust: inherit; font-stretch: inherit; " />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-style: italic; font-variant: inherit; font-weight: bold; font-size: 14pt; font-size-adjust: inherit; font-stretch: inherit; " />
+    <Style Name="Heading3" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 13pt; font-size-adjust: inherit; font-stretch: inherit; " />
+  </StyleSheet>
+  <Sections>
+    <Section Type="Detail" Name="Detail" Height="9075" BackColor="16777215" NewPage="2" CanShrink="0">
+      <Control Type="AR.Field" Name="TextBox33" MOD="4" Left="810" Top="4860" Width="2880" Height="360" Text="①前月残高金額" Style="ddo-char-set: 128; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox34" MOD="4" Left="810" Top="6300" Width="2880" Height="360" Text="⑤当月返品金額" Style="ddo-char-set: 128; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox35" DataField="brch_name" MOD="4" Left="10260" Top="2430" Width="3420" Height="450" Text="ｸﾞﾛｰﾊﾞﾙｿﾘｭｰｼｮﾝｻｰﾋﾞｽ株式会社" Multiline="0" Style="ddo-char-set: 1; text-align: left; font-size: 11pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox36" MOD="4" Left="1260" Top="540" Width="720" Height="360" Text="月切" Style="ddo-char-set: 128; text-align: center; font-weight: bold; font-size: 14.25pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox37" MOD="4" Left="810" Top="5220" Width="2880" Height="360" Text="②当月入金金額" Style="ddo-char-set: 128; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox38" MOD="4" Left="810" Top="5580" Width="2880" Height="360" Text="③差引残高金額（①-②）" Style="ddo-char-set: 128; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox39" MOD="4" Left="810" Top="7380" Width="2880" Height="360" Text="⑧小計金額（④-⑤-⑥-⑦）" Style="ddo-char-set: 128; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox40" MOD="4" Left="810" Top="7740" Width="2880" Height="360" Text="⑨消費税額（⑧×税率）" Style="ddo-char-set: 128; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox41" MOD="4" Left="810" Top="8100" Width="2880" Height="360" Text="⑩合計金額（③＋⑧＋⑨）" Style="ddo-char-set: 128; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox42" MOD="4" Left="540" Top="8640" Width="5400" Height="360" Text="（上記金額は、お取引先様の帳簿金額でお願い致します）" Style="ddo-char-set: 1; font-size: 11pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox43" MOD="4" Left="11340" Top="1350" Width="630" Height="360" Text="社名" Style="ddo-char-set: 1; font-size: 11pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox46" MOD="4" Left="810" Top="6660" Width="2880" Height="360" Text="⑥当月拡売金額" Style="ddo-char-set: 128; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox47" MOD="4" Left="810" Top="7020" Width="2880" Height="360" Text="⑦当月交換手数料" Style="ddo-char-set: 128; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox48" DataField="invc_name" MOD="4" Left="11970" Top="1350" Width="3420" Height="360" Text="㈱ケーズホールディングス　御中" Multiline="0" Style="ddo-char-set: 1; font-size: 11pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox49" MOD="4" Left="8640" Top="2430" Width="1620" Height="450" Text="請求書作成者" Style="ddo-char-set: 1; font-size: 11pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox55" DataField="brch_tel" MOD="4" Left="10260" Top="2880" Width="2700" Height="450" Text="tel_０３（５７４０）０１９９" Style="ddo-char-set: 1; text-align: center; font-size: 11pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox56" MOD="4" Left="8640" Top="2880" Width="1620" Height="450" Text="電話番号" Style="ddo-char-set: 1; font-size: 11pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox57" MOD="4" Left="8640" Top="3330" Width="1620" Height="450" Text="FAX番号" Style="ddo-char-set: 1; font-size: 11pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox58" MOD="4" Left="8640" Top="4860" Width="4140" Height="360" Text="◎キャッシュリベート&lt;該当に丸を付ける&gt;" Multiline="0" Style="ddo-char-set: 128; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox65" MOD="4" Left="8550" Top="360" Width="630" Height="360" Text="作成" Style="ddo-char-set: 1; font-size: 11pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox14" MOD="4" Left="8640" Top="5490" Width="5670" Height="360" Text="0　　3　　3.5　　4　　4.5　　その他（　　）" Style="ddo-char-set: 128; text-align: center; font-size: 14.25pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox19" MOD="4" Left="540" Top="1980" Width="1440" Height="450" Text="お取引先コード" Style="ddo-char-set: 1; font-size: 11pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox20" MOD="4" Left="4590" Top="810" Width="6300" Height="450" Text="ケーズホールディングス　専用請求書" Style="ddo-char-set: 128; text-align: center; font-size: 20.25pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox1" MOD="4" Left="6660" Top="360" Width="1890" Height="360" Text="20yy年 mm月 dd日" Multiline="0" Style="ddo-char-set: 128; text-align: center; font-size: 11.25pt; font-family: ＭＳ Ｐゴシック; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox2" MOD="4" Left="540" Top="2430" Width="1440" Height="450" Text="お取引先住所" Style="ddo-char-set: 1; font-size: 11pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox4" MOD="4" Left="540" Top="2880" Width="1440" Height="450" Text="お取引先名称" Style="ddo-char-set: 1; font-size: 11pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox5" MOD="4" Left="810" Top="5940" Width="2880" Height="360" Text="④当月仕入金額" Style="ddo-char-set: 128; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox3" DataField="client_code" MOD="4" Left="1980" Top="1980" Width="5490" Height="450" Text="00183" Style="ddo-char-set: 128; text-align: center; font-size: 15.75pt; vertical-align: middle; " />
+      <Control Type="AR.Line" Name="Line" MOD="4" X1="450" Y1="2340" X2="7470" Y2="2340" />
+      <Control Type="AR.Field" Name="TextBox6" DataField="brch_zip" MOD="4" Left="1980" Top="2430" Width="1440" Height="450" Text="〒141-0031" Style="ddo-char-set: 1; text-align: center; font-size: 11pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox7" DataField="brch_adrs" MOD="4" Left="3420" Top="2430" Width="4050" Height="450" Text="東京都品川区西五反田7-22-17" Multiline="0" Style="ddo-char-set: 128; text-align: left; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox8" DataField="brch_name" MOD="4" Left="1980" Top="2880" Width="5490" Height="450" Text="グローバルソリューションサービス株式会社" Multiline="0" Style="ddo-char-set: 128; text-align: center; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Line" Name="Line1" MOD="4" X1="720" Y1="5175" X2="7650" Y2="5175" />
+      <Control Type="AR.Line" Name="Line2" MOD="4" X1="720" Y1="5535" X2="7650" Y2="5535" />
+      <Control Type="AR.Line" Name="Line3" MOD="4" X1="720" Y1="5895" X2="7650" Y2="5895" />
+      <Control Type="AR.Line" Name="Line4" MOD="4" X1="720" Y1="6255" X2="7650" Y2="6255" />
+      <Control Type="AR.Line" Name="Line5" MOD="4" X1="720" Y1="6615" X2="7650" Y2="6615" />
+      <Control Type="AR.Line" Name="Line6" MOD="4" X1="720" Y1="6975" X2="7650" Y2="6975" />
+      <Control Type="AR.Line" Name="Line7" MOD="4" X1="720" Y1="7695" X2="7650" Y2="7695" />
+      <Control Type="AR.Line" Name="Line8" MOD="4" X1="720" Y1="8055" X2="7650" Y2="8055" />
+      <Control Type="AR.Line" Name="Line9" MOD="4" X1="720" Y1="8415" X2="7650" Y2="8415" />
+      <Control Type="AR.Line" Name="Line10" MOD="4" X1="720" Y1="7335" X2="7650" Y2="7335" />
+      <Control Type="AR.Line" Name="Line11" MOD="4" X1="450" Y1="2790" X2="7470" Y2="2790" />
+      <Control Type="AR.Line" Name="Line12" MOD="4" X1="450" Y1="3240" X2="7470" Y2="3240" />
+      <Control Type="AR.Field" Name="TextBox9" DataField="empl_name" MOD="4" Left="13680" Top="2430" Width="1350" Height="450" Text="TextBox23" Style="ddo-char-set: 1; font-size: 11pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox10" DataField="brch_fax" MOD="4" Left="10260" Top="3330" Width="2700" Height="450" Text="fax_０３（５７４０）０１９８" Style="ddo-char-set: 1; text-align: center; font-size: 11pt; vertical-align: middle; " />
+      <Control Type="AR.Line" Name="Line13" MOD="4" X1="8550" Y1="2790" X2="15210" Y2="2790" />
+      <Control Type="AR.Line" Name="Line14" MOD="4" X1="8550" Y1="3240" X2="15210" Y2="3240" />
+      <Control Type="AR.Line" Name="Line15" MOD="4" X1="8550" Y1="3690" X2="15210" Y2="3690" />
+      <Control Type="AR.Line" Name="Line16" MOD="4" X1="11070" Y1="1665" X2="15300" Y2="1665" />
+      <Control Type="AR.Field" Name="TextBox" DataField="amnt1" MOD="4" Left="4230" Top="4860" Width="2430" Height="360" Text="\　金額1" OutputFormat="¥#,##0" Style="ddo-char-set: 128; text-align: right; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox11" DataField="amnt2" MOD="4" Left="4230" Top="5220" Width="2430" Height="360" Text="\　金額2" OutputFormat="¥#,##0" Style="ddo-char-set: 128; text-align: right; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox12" DataField="amnt3" MOD="4" Left="4230" Top="5580" Width="2430" Height="360" Text="\　金額3" OutputFormat="¥#,##0" Style="ddo-char-set: 128; text-align: right; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox13" DataField="amnt4" MOD="4" Left="4230" Top="5940" Width="2430" Height="360" Text="\　金額4" OutputFormat="¥#,##0" Style="ddo-char-set: 128; text-align: right; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox15" DataField="amnt5" MOD="4" Left="4230" Top="6300" Width="2430" Height="360" Text="\　金額5" OutputFormat="¥#,##0" Style="ddo-char-set: 128; text-align: right; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox16" DataField="amnt6" MOD="4" Left="4230" Top="6660" Width="2430" Height="360" Text="\　金額6" OutputFormat="¥#,##0" Style="ddo-char-set: 128; text-align: right; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox17" DataField="amnt7" MOD="4" Left="4230" Top="7020" Width="2430" Height="360" Text="\　金額7" OutputFormat="¥#,##0" Style="ddo-char-set: 128; text-align: right; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox18" DataField="amnt8" MOD="4" Left="4230" Top="7380" Width="2430" Height="360" Text="\　金額8" OutputFormat="¥#,##0" Style="ddo-char-set: 128; text-align: right; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox21" DataField="amnt9" MOD="4" Left="4230" Top="7740" Width="2430" Height="360" Text="\　金額9" OutputFormat="¥#,##0" Style="ddo-char-set: 128; text-align: right; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox22" DataField="amnt10" MOD="4" Left="4230" Top="8100" Width="2430" Height="360" Text="\　金額10" OutputFormat="¥#,##0" Style="ddo-char-set: 128; text-align: right; font-size: 12pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox23" DataField="tuki" MOD="4" Left="810" Top="540" Width="450" Height="360" Text="1" Style="ddo-char-set: 128; text-align: right; font-weight: bold; font-size: 14.25pt; vertical-align: middle; " />
+    </Section>
+  </Sections>
+  <PageSettings LeftMargin="864" RightMargin="0" TopMargin="720" BottomMargin="0" PaperSize="9" PaperWidth="11906" PaperHeight="16838" PaperName="" Orientation="2" />
+</ActiveReportsLayout>

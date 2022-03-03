@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ActiveReportsLayout Version="3.3" PrintWidth="11055" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: MS UI Gothic; font-style: normal; font-variant: inherit; font-weight: normal; font-size: 10pt; font-size-adjust: inherit; font-stretch: inherit; color: rgb(0,0,0); background-repeat: inherit; background-attachment: inherit; opacity: inherit; word-spacing: inherit; letter-spacing: inherit; text-decoration: none; vertical-align: inherit; text-transform: inherit; text-align: inherit; text-indent: inherit; unicode-bidi: inherit; line-height: inherit; white-space: inherit; ddo-char-set: 128" />
+    <Style Name="Heading1" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 16pt; font-size-adjust: inherit; font-stretch: inherit" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-style: italic; font-variant: inherit; font-weight: bold; font-size: 14pt; font-size-adjust: inherit; font-stretch: inherit" />
+    <Style Name="Heading3" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 13pt; font-size-adjust: inherit; font-stretch: inherit" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="ReportHeader" Name="ReportHeader" Height="0" BackColor="16777215" />
+    <Section Type="PageHeader" Name="PageHeader" Height="2204" BackColor="16777215">
+      <Control Type="AR.Label" Name="Label" Left="90" Top="90" Width="2520" Height="450" Caption="請求明細表" Style="font-family: ＭＳ Ｐ明朝; font-size: 20pt; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox" Left="180" Top="720" Width="8910" Height="360" Text="               御中" Multiline="0" Style="font-family: ＭＳ Ｐ明朝; font-size: 16pt; font-weight: bold; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox1" Left="7920" Top="180" Width="2430" Height="360" Text="yyyy年M月d日" Style="font-family: ＭＳ Ｐ明朝; font-size: 11pt; font-weight: normal; text-align: right; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox2" Left="1529.28" Top="1349.28" Width="5220" Height="360" Text="集計期間　　2010年1月21日～2010年2月20日" Style="font-family: ＭＳ Ｐ明朝; font-size: 11pt; font-weight: normal; text-align: left; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label1" Left="0" Top="1890" Width="630" Height="270" Caption="完了" Style="font-family: ＭＳ Ｐ明朝; font-size: 10pt; font-weight: bold; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label2" Left="2610" Top="1890" Width="1350" Height="270" Caption="報告書番号" Style="font-family: ＭＳ Ｐ明朝; font-size: 10pt; font-weight: bold; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label3" Left="9450" Top="1890" Width="1530" Height="270" Caption="販社依頼書番号" Style="font-family: ＭＳ Ｐ明朝; font-size: 10pt; font-weight: bold; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label4" Left="3960" Top="1890" Width="1440" Height="270" Caption="メーカー" Style="font-family: ＭＳ Ｐ明朝; font-size: 10pt; font-weight: bold; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label5" Left="5400" Top="1890" Width="1980" Height="270" Caption="お客様名" Style="font-family: ＭＳ Ｐ明朝; font-size: 10pt; font-weight: bold; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label6" Left="630" Top="1890" Width="1980" Height="270" Caption="店名" Style="font-family: ＭＳ Ｐ明朝; font-size: 10pt; font-weight: bold; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label7" Left="8460" Top="1890" Width="900" Height="270" Caption="請求額" Style="font-family: ＭＳ Ｐ明朝; font-size: 10pt; font-weight: bold; text-align: right; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox13" DataField="invc_date" Visible="0" Left="9270" Top="720" Width="990" Height="270" Text="TextBox13" Multiline="0" Style="background-color: #C0C0FF; font-family: ＭＳ Ｐゴシック; font-size: 10pt; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox11" DataField="invc_code" Visible="0" Left="9270" Top="1080" Width="990" Height="270" Text="TextBox11" Multiline="0" Style="background-color: #C0C0FF; font-family: ＭＳ Ｐゴシック; font-size: 10pt; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox14" DataField="rcpt_brch_code" Visible="0" Left="9270" Top="1440" Width="990" Height="270" Text="TextBox14" Multiline="0" Style="background-color: #C0C0FF; font-family: ＭＳ Ｐゴシック; font-size: 10pt; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label8" Left="7380" Top="1890" Width="1080" Height="270" Caption="ネバ伝番号" Style="font-family: ＭＳ Ｐ明朝; font-size: 10pt; font-weight: bold; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox12" DataField="invc_name" Visible="0" Left="6300" Top="360" Width="990" Height="270" Text="TextBox12" Multiline="0" Style="background-color: #C0C0FF; font-family: ＭＳ Ｐゴシック; font-size: 10pt; ddo-char-set: 1" />
+      <Control Type="AR.Line" Name="Line" X1="0" Y1="2160" X2="10890" Y2="2160" />
+      <Control Type="AR.Field" Name="TextBox15" DataField="cls_date" Visible="0" Left="6750" Top="1440" Width="990" Height="270" Text="TextBox15" Multiline="0" Style="background-color: #C0C0FF; font-family: ＭＳ Ｐゴシック; font-size: 10pt; ddo-char-set: 1" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="299" BackColor="16777215">
+      <Control Type="AR.Field" Name="TextBox01" DataField="comp_date" Left="0" Top="0" Width="630.72" Height="270.72" Text="TextBox01" OutputFormat="M/d" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 10pt; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox02" DataField="rcpt_no" Left="2610" Top="0" Width="1350" Height="270" Text="TextBox02" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 10pt; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox03" DataField="store_repr_no" Left="9450" Top="0" Width="1530" Height="270" Text="TextBox03" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 10pt; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox04" DataField="vndr_name" Left="3960" Top="0" Width="1440" Height="270" Text="TextBox04" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 10pt; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox05" DataField="user_name" Left="5400" Top="0" Width="1980" Height="270" Text="TextBox05" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 10pt; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox06" DataField="store_name" Left="630" Top="0" Width="1980" Height="270" Text="TextBox06" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 10pt; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox07" DataField="invc_amnt" Left="8460" Top="0" Width="900" Height="270" Text="TextBox07" OutputFormat="##,##0" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 10pt; text-align: right; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox08" DataField="sals_no" Left="7380" Top="0" Width="1080" Height="270" Text="TextBox08" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 10pt; ddo-char-set: 1" />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter" Height="315" BackColor="16777215">
+      <Control Type="AR.Field" Name="TextBox25" Left="9270" Top="0" Width="990" Height="270" Text="TextBox25" OutputFormat="##0 ページ" Style="font-family: ＭＳ Ｐ明朝; font-size: 9.75pt; text-align: left; vertical-align: middle" SummaryType="4" SummaryFunc="2" />
+      <Control Type="AR.Field" Name="TextBox24" Left="8280" Top="0" Width="990" Height="270" Text="TextBox24" OutputFormat="##0 /" Style="font-family: ＭＳ Ｐ明朝; font-size: 10pt; text-align: right; vertical-align: middle; ddo-char-set: 1" SummaryType="4" SummaryRunning="2" />
+      <Control Type="AR.Line" Name="Line1" X1="0" Y1="0" X2="10890" Y2="0" />
+    </Section>
+    <Section Type="ReportFooter" Name="ReportFooter" Height="1198" BackColor="16777215">
+      <Control Type="AR.Field" Name="TextBox8" Left="8190" Top="180" Width="1170" Height="270" Text="0" OutputFormat="\##,##0" Style="font-family: ＭＳ Ｐ明朝; font-size: 10pt; text-align: right; ddo-char-set: 1" SummaryDistinct="sals_amnt" />
+      <Control Type="AR.Field" Name="TextBox9" Left="8190" Top="540" Width="1170" Height="270" Text="0" OutputFormat="\##,##0" Style="font-family: ＭＳ Ｐ明朝; font-size: 10pt; text-align: right; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox10" Left="8190" Top="900" Width="1170" Height="270" Text="0" OutputFormat="\##,##0" Style="font-family: ＭＳ Ｐ明朝; font-size: 10pt; text-align: right; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label11" Left="6840" Top="180" Width="1350" Height="270" Caption="合計" Style="font-family: ＭＳ Ｐ明朝; font-size: 10pt; font-weight: bold; text-align: right; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label12" Left="6840" Top="540" Width="1350" Height="270" Caption="消費税" Style="font-family: ＭＳ Ｐ明朝; font-size: 10pt; font-weight: bold; text-align: right; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label13" Left="6840" Top="900" Width="1350" Height="270" Caption="総計" Style="font-family: ＭＳ Ｐ明朝; font-size: 10pt; font-weight: bold; text-align: right; ddo-char-set: 1" />
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <PageSettings LeftMargin="720" RightMargin="0" TopMargin="864" BottomMargin="576" PaperSize="9" PaperWidth="11906" PaperHeight="16838" PaperName="" Orientation="1" />
+  <Parameters />
+</ActiveReportsLayout>
