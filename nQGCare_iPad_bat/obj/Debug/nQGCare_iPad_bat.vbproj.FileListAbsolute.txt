@@ -1,0 +1,20 @@
+D:\OldHarddrive\QMVAR\nQGCare\nQGCare\nQGCare program source\nQGCare_iPad_bat\bin\nQGCare_iPad_bat.exe
+D:\OldHarddrive\QMVAR\nQGCare\nQGCare\nQGCare program source\nQGCare_iPad_bat\bin\nQGCare_iPad_bat.pdb
+D:\OldHarddrive\QMVAR\nQGCare\nQGCare\nQGCare program source\nQGCare_iPad_bat\bin\nQGCare_iPad_bat.xml
+D:\OldHarddrive\QMVAR\nQGCare\nQGCare\nQGCare program source\nQGCare_iPad_bat\obj\Debug\nQGCare_iPad_bat.vbproj.AssemblyReference.cache
+D:\OldHarddrive\QMVAR\nQGCare\nQGCare\nQGCare program source\nQGCare_iPad_bat\obj\Debug\nQGCare_iPad_bat.Form1.resources
+D:\OldHarddrive\QMVAR\nQGCare\nQGCare\nQGCare program source\nQGCare_iPad_bat\obj\Debug\nQGCare_iPad_bat.vbproj.GenerateResource.cache
+D:\OldHarddrive\QMVAR\nQGCare\nQGCare\nQGCare program source\nQGCare_iPad_bat\obj\Debug\nQGCare_iPad_bat.vbproj.CoreCompileInputs.cache
+D:\OldHarddrive\QMVAR\nQGCare\nQGCare\nQGCare program source\nQGCare_iPad_bat\obj\Debug\nQGCare_iPad_bat.exe
+D:\OldHarddrive\QMVAR\nQGCare\nQGCare\nQGCare program source\nQGCare_iPad_bat\obj\Debug\nQGCare_iPad_bat.xml
+D:\OldHarddrive\QMVAR\nQGCare\nQGCare\nQGCare program source\nQGCare_iPad_bat\obj\Debug\nQGCare_iPad_bat.pdb
+D:\nMVAR\nMVAR\nQGCare_iPad_bat\bin\nQGCare_iPad_bat.exe.config
+D:\nMVAR\nMVAR\nQGCare_iPad_bat\bin\nQGCare_iPad_bat.exe
+D:\nMVAR\nMVAR\nQGCare_iPad_bat\bin\nQGCare_iPad_bat.pdb
+D:\nMVAR\nMVAR\nQGCare_iPad_bat\bin\nQGCare_iPad_bat.xml
+D:\nMVAR\nMVAR\nQGCare_iPad_bat\obj\Debug\nQGCare_iPad_bat.Form1.resources
+D:\nMVAR\nMVAR\nQGCare_iPad_bat\obj\Debug\nQGCare_iPad_bat.vbproj.GenerateResource.cache
+D:\nMVAR\nMVAR\nQGCare_iPad_bat\obj\Debug\nQGCare_iPad_bat.vbproj.CoreCompileInputs.cache
+D:\nMVAR\nMVAR\nQGCare_iPad_bat\obj\Debug\nQGCare_iPad_bat.exe
+D:\nMVAR\nMVAR\nQGCare_iPad_bat\obj\Debug\nQGCare_iPad_bat.xml
+D:\nMVAR\nMVAR\nQGCare_iPad_bat\obj\Debug\nQGCare_iPad_bat.pdb
