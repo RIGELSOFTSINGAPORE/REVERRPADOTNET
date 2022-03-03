@@ -1,0 +1,52 @@
+C:\Soniya\New folder (3)\nMVAR\nMVAR program source\QA_export_bat\bin\QA_export_bat.exe
+C:\Soniya\New folder (3)\nMVAR\nMVAR program source\QA_export_bat\bin\QA_export_bat.pdb
+C:\Soniya\New folder (3)\nMVAR\nMVAR program source\QA_export_bat\bin\QA_export_bat.xml
+C:\Soniya\New folder (3)\nMVAR\nMVAR program source\QA_export_bat\obj\Debug\QA_export_bat.vbprojAssemblyReference.cache
+C:\Soniya\New folder (3)\nMVAR\nMVAR program source\QA_export_bat\obj\Debug\QA_export_bat.Form1.resources
+C:\Soniya\New folder (3)\nMVAR\nMVAR program source\QA_export_bat\obj\Debug\QA_export_bat.vbproj.GenerateResource.cache
+C:\Soniya\New folder (3)\nMVAR\nMVAR program source\QA_export_bat\obj\Debug\QA_export_bat.vbproj.CoreCompileInputs.cache
+C:\Soniya\New folder (3)\nMVAR\nMVAR program source\QA_export_bat\obj\Debug\QA_export_bat.exe
+C:\Soniya\New folder (3)\nMVAR\nMVAR program source\QA_export_bat\obj\Debug\QA_export_bat.xml
+C:\Soniya\New folder (3)\nMVAR\nMVAR program source\QA_export_bat\obj\Debug\QA_export_bat.pdb
+C:\Users\nprem\Desktop\nMVAR\QA_export_bat\bin\QA_export_bat.exe.config
+C:\Users\nprem\Desktop\nMVAR\QA_export_bat\bin\QA_export_bat.exe
+C:\Users\nprem\Desktop\nMVAR\QA_export_bat\bin\QA_export_bat.pdb
+C:\Users\nprem\Desktop\nMVAR\QA_export_bat\bin\QA_export_bat.xml
+C:\Users\nprem\Desktop\nMVAR\QA_export_bat\obj\Debug\QA_export_bat.Form1.resources
+C:\Users\nprem\Desktop\nMVAR\QA_export_bat\obj\Debug\QA_export_bat.vbproj.GenerateResource.cache
+C:\Users\nprem\Desktop\nMVAR\QA_export_bat\obj\Debug\QA_export_bat.vbproj.CoreCompileInputs.cache
+C:\Users\nprem\Desktop\nMVAR\QA_export_bat\obj\Debug\QA_export_bat.exe
+C:\Users\nprem\Desktop\nMVAR\QA_export_bat\obj\Debug\QA_export_bat.xml
+C:\Users\nprem\Desktop\nMVAR\QA_export_bat\obj\Debug\QA_export_bat.pdb
+C:\Users\nprem\Desktop\nMVAR\QA_export_bat\obj\Debug\QA_export_bat.vbprojAssemblyReference.cache
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_export_bat\bin\QA_export_bat.exe.config
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_export_bat\bin\QA_export_bat.exe
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_export_bat\bin\QA_export_bat.pdb
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_export_bat\bin\QA_export_bat.xml
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_export_bat\obj\Debug\QA_export_bat.Form1.resources
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_export_bat\obj\Debug\QA_export_bat.vbproj.GenerateResource.cache
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_export_bat\obj\Debug\QA_export_bat.vbproj.CoreCompileInputs.cache
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_export_bat\obj\Debug\QA_export_bat.exe
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_export_bat\obj\Debug\QA_export_bat.xml
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_export_bat\obj\Debug\QA_export_bat.pdb
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_export_bat\bin\QA_export_bat.exe.config
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_export_bat\bin\QA_export_bat.exe
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_export_bat\bin\QA_export_bat.pdb
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_export_bat\bin\QA_export_bat.xml
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_export_bat\obj\Debug\QA_export_bat.Form1.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_export_bat\obj\Debug\QA_export_bat.vbproj.GenerateResource.cache
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_export_bat\obj\Debug\QA_export_bat.vbproj.CoreCompileInputs.cache
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_export_bat\obj\Debug\QA_export_bat.exe
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_export_bat\obj\Debug\QA_export_bat.xml
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_export_bat\obj\Debug\QA_export_bat.pdb
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_export_bat\bin\QA_export_bat.exe.config
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_export_bat\bin\QA_export_bat.exe
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_export_bat\bin\QA_export_bat.pdb
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_export_bat\bin\QA_export_bat.xml
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_export_bat\obj\Debug\QA_export_bat.vbproj.AssemblyReference.cache
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_export_bat\obj\Debug\QA_export_bat.Form1.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_export_bat\obj\Debug\QA_export_bat.vbproj.GenerateResource.cache
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_export_bat\obj\Debug\QA_export_bat.vbproj.CoreCompileInputs.cache
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_export_bat\obj\Debug\QA_export_bat.exe
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_export_bat\obj\Debug\QA_export_bat.xml
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_export_bat\obj\Debug\QA_export_bat.pdb
