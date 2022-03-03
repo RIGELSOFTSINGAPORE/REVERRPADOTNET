@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "nMVAR_Report", "nMVAR_Report.vbproj", "{C4B1B2D9-EDBC-434F-B72A-5C794B807A45}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{C4B1B2D9-EDBC-434F-B72A-5C794B807A45}.Debug.ActiveCfg = Debug|.NET
+		{C4B1B2D9-EDBC-434F-B72A-5C794B807A45}.Debug.Build.0 = Debug|.NET
+		{C4B1B2D9-EDBC-434F-B72A-5C794B807A45}.Release.ActiveCfg = Release|.NET
+		{C4B1B2D9-EDBC-434F-B72A-5C794B807A45}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

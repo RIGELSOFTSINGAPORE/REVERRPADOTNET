@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "nMVAR_Report", "nMVAR_Report.vbproj", "{C4B1B2D9-EDBC-434F-B72A-5C794B807A45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4B1B2D9-EDBC-434F-B72A-5C794B807A45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4B1B2D9-EDBC-434F-B72A-5C794B807A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4B1B2D9-EDBC-434F-B72A-5C794B807A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4B1B2D9-EDBC-434F-B72A-5C794B807A45}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {687FFAAE-C5D1-460E-AD7B-9DCBF34C0A5E}
+	EndGlobalSection
+EndGlobal
