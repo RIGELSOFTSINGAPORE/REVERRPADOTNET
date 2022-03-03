@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>7.10.3077</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CEE3504E-340B-47C8-AE6C-D53C204E0177}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>earth.ico</ApplicationIcon>
+    <AssemblyKeyContainerName />
+    <AssemblyName>nMVAR_Mtr</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>nMVAR</RootNamespace>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>nMVAR_Mtr.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>nMVAR_Mtr.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <COMReference Include="Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+    <Reference Include="ActiveReports">
+      <Name>ActiveReports</Name>
+      <HintPath>C:\PROGRA~1\ACTIVE~1\Bin\ActiveReports.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveReports.HtmlExport">
+      <HintPath>..\..\..\..\..\..\Users\Rever\Desktop\best_ivc_err_mnt\best_ivc_err_mnt\bin\ActiveReports.HtmlExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.Interop, Version=4.1.0.1188, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Users\Rever\Desktop\best_ivc_err_mnt\best_ivc_err_mnt\bin\ActiveReports.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.RtfExport, Version=4.1.0.1188, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Users\Rever\Desktop\best_ivc_err_mnt\best_ivc_err_mnt\bin\ActiveReports.RtfExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.TiffExport, Version=4.1.0.1188, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Users\Rever\Desktop\best_ivc_err_mnt\best_ivc_err_mnt\bin\ActiveReports.TiffExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.Viewer">
+      <HintPath>..\..\..\..\..\..\Users\Rever\Desktop\best_ivc_err_mnt\best_ivc_err_mnt\bin\ActiveReports.Viewer.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.Web">
+      <HintPath>..\..\..\..\..\..\Users\Rever\Desktop\best_ivc_err_mnt\best_ivc_err_mnt\bin\ActiveReports.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.XlsExport, Version=4.1.0.1188, Culture=neutral, PublicKeyToken=cc4967777c49a3ff">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Users\Rever\Desktop\best_ivc_err_mnt\best_ivc_err_mnt\bin\ActiveReports.XlsExport.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Excel.Page, Version=1.8.12.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Core.Export.Excel.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Image.Page, Version=1.8.12.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Core.Export.Image.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Pdf.Page, Version=1.8.12.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Core.Export.Pdf.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Word.Page, Version=1.8.12.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Core.Export.Word.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Excel, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Export.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Image, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Export.Image.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Pdf, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Export.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Rdf, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Export.Rdf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Excel, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Imports.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Rpx, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Imports.Rpx.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Framework.InputMan.v24, Version=2.4.4006.2012, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.Framework.InputMan.v24.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Editors.Design.v100, Version=10.0.4006.2012, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.Win.Editors.Design.v100.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Editors.v100, Version=10.0.4006.2012, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.Win.Editors.v100.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Input.Design.v20, Version=2.0.2003.1128, Culture=neutral, PublicKeyToken=c3bd7c1dccef5128">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.Win.Input.Design.v20.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Input.Interop.v100, Version=10.0.4006.2012, Culture=neutral, PublicKeyToken=40ae1c5c604f43d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.Win.Input.Interop.v100.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Input.v20, Version=2.0.2003.1128, Culture=neutral, PublicKeyToken=c3bd7c1dccef5128">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.Win.Input.v20.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Interop.Excel, Version=1.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\nMVAR\bin\Interop.Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Office">
+      <HintPath>..\nMVAR\bin\Interop.Office.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.VBIDE">
+      <HintPath>..\nMVAR\bin\Interop.VBIDE.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\nMVAR\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataGridEx.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="F00_Form02.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form15.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form01_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form02.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form02_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form03.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form04.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form04_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form05.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form05_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form06_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form07.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form07_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form08.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form08_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form09.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form09_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form10.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form10_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form11.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form11_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form12.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form13.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form14.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form14_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form15.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form15_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form16.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form16_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form17.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form18.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form18_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form18_3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form50.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form51.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F50_Form51_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F80_Form01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu50.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_DB.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module_Dim.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module_Start.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module_Sub.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WaitDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Content Include="earth.ico" />
+    <EmbeddedResource Include="Class1.resx">
+      <DependentUpon>Class1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataGridEx.resx">
+      <DependentUpon>DataGridEx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form02.resx">
+      <DependentUpon>F00_Form02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form15.resx">
+      <DependentUpon>F00_Form15.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form01.resx">
+      <DependentUpon>F50_Form01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form01_2.resx">
+      <DependentUpon>F50_Form01_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form02.resx">
+      <DependentUpon>F50_Form02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form02_2.resx">
+      <DependentUpon>F50_Form02_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form03.resx">
+      <DependentUpon>F50_Form03.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form04.resx">
+      <DependentUpon>F50_Form04.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form04_2.resx">
+      <DependentUpon>F50_Form04_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form05.resx">
+      <DependentUpon>F50_Form05.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form05_2.resx">
+      <DependentUpon>F50_Form05_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form06.resx">
+      <DependentUpon>F50_Form06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form06_2.resx">
+      <DependentUpon>F50_Form06_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form07.resx">
+      <DependentUpon>F50_Form07.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form07_2.resx">
+      <DependentUpon>F50_Form07_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form08.resx">
+      <DependentUpon>F50_Form08.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form08_2.resx">
+      <DependentUpon>F50_Form08_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form09.resx">
+      <DependentUpon>F50_Form09.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form09_2.resx">
+      <DependentUpon>F50_Form09_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form10.resx">
+      <DependentUpon>F50_Form10.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form10_2.resx">
+      <DependentUpon>F50_Form10_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form11.resx">
+      <DependentUpon>F50_Form11.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form11_2.resx">
+      <DependentUpon>F50_Form11_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form12.resx">
+      <DependentUpon>F50_Form12.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form13.resx">
+      <DependentUpon>F50_Form13.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form14.resx">
+      <DependentUpon>F50_Form14.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form14_2.resx">
+      <DependentUpon>F50_Form14_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form15.resx">
+      <DependentUpon>F50_Form15.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form15_2.resx">
+      <DependentUpon>F50_Form15_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form16.resx">
+      <DependentUpon>F50_Form16.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form16_2.resx">
+      <DependentUpon>F50_Form16_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form17.resx">
+      <DependentUpon>F50_Form17.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form18.resx">
+      <DependentUpon>F50_Form18.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form18_2.resx">
+      <DependentUpon>F50_Form18_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form18_3.resx">
+      <DependentUpon>F50_Form18_3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form50.resx">
+      <DependentUpon>F50_Form50.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form51.resx">
+      <DependentUpon>F50_Form51.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F50_Form51_2.resx">
+      <DependentUpon>F50_Form51_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F80_Form01.resx">
+      <DependentUpon>F80_Form01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="Menu50.resx">
+      <DependentUpon>Menu50.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitDialog.resx">
+      <DependentUpon>WaitDialog.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>
