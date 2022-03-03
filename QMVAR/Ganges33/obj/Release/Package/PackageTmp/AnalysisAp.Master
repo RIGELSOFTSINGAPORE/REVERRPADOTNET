@@ -1,0 +1,320 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/Analysis.Master" AutoEventWireup="false" CodeBehind="AnalysisAp.master.vb" Inherits="Ganges33.AnalysisAp" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
+<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <%--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/start/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>--%>
+    <script type="text/javascript" src="ExternalStyles/Jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="ExternalStyles/Jquery/jquery-ui.min.js"></script>
+    
+<script src="ExternalStyles/Jquery/a076d05399.js"></script>
+
+
+    <link href="ExternalStyles/Css/css.css" rel="stylesheet" />  
+    <link href="ExternalStyles/Css/font-awesome.min.css" rel="stylesheet" />  
+    <link href="ExternalStyles/Css/jquery-ui.css" rel="stylesheet" />  
+  <!--     Fonts and icons     -->
+  <%--<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">--%>
+  <!-- CSS Files -->
+ <link href="assets/css/material-dashboard-rtl.css" rel="stylesheet" />
+<link href="assets/css/material-dashboard.css" rel="stylesheet" />
+<link href="assets/css/material-dashboard.min.css" rel="stylesheet" />
+  <%--<script src='https://kit.fontawesome.com/a076d05399.js'></script>--%>
+  <link href="assets/demo/demo.css" rel="stylesheet" />
+   <%--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/start/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>--%>
+	 <link href="Styles/bootstrap.min.css"  rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <link href="Styles/bootstrap-multiselect.css" rel="stylesheet" type="text/css"/>
+    <script src="Scripts/bootstrap-multiselect.js" type="text/javascript"></script>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+     
+<script type="text/javascript">
+
+
+    $(function () {
+        $('[class*=date]').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            format: "yyyy/mm/dd",
+            yearRange: "0000:9999"
+
+        });
+    });
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
+   <style>
+       .ie11.tablet input[type='radio'] {
+visibility: visible;
+}
+        
+p:hover {
+  color: black;
+}
+   .container{
+    -ms-overflow-style: none;
+    overflow: auto;
+
+}
+
+ html, body { overflow: hidden; }
+       
+.nav-link[data-toggle].collapsed:before {
+    content: " ▾";
+    float:right;
+    font-size:30px;
+    margin-top:10px;
+    color:red;
+}
+
+.nav-link[data-toggle]:not(.collapsed):before {
+    content: " ▴";
+    float:right;
+    font-size:30px;
+    margin-top:5px;
+    color:red;
+}
+
+/* Closed submenu icon */
+#sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
+  content: " \f0d7";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 10px;
+}
+/* Opened submenu icon */
+#sidebar-container .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
+  content: " \f0da";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 10px;
+}
+
+.liactive
+{
+    background:#9c27b0;
+    color:white;
+}
+
+.btn_active {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    padding-left: 0px;
+    color: black;
+    cursor: pointer;
+}
+p.btn_active:hover
+{
+    color:black
+}
+.ui-dialog {
+	overflow: hidden;
+	position: absolute;
+	top: 300px;
+	left: 550px;
+	padding: .2em;
+	outline: 0;
+}
+
+        .asc:after {
+    content: ' \25BC';
+}
+       .dec:after {
+    content: ' \25B2';
+}
+       .sort:after {
+    content: ' \21C5';
+    margin-left:10px;
+}
+    </style>
+
+</head>
+<body  >
+    <form id="form1" runat="server">
+
+                   <asp:Panel ID="Panel1" runat="server" Height="47px" HorizontalAlign ="Center">  
+
+      <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div >
+            <a class="navbar-brand" style="font-size:24px">QMVAR</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <div class="navbar-wrapper">
+              <a class="navbar-brand"><span class="navbar-icon"><i class="material-icons">place</i></span>
+                  <asp:Label ID="LblShipName" runat="server"></asp:Label>
+              </a>
+            </div>
+            <div class="navbar-wrapper">
+               <a class="navbar-brand"   href="./Changepassword.aspx"  ><span class="navbar-icon"><i class="material-icons">person</i></span>
+                 <asp:Label ID="lblUser" data-toggle="tooltip" data-bs-placement="bottom"  title="Change password" runat="server"></asp:Label>
+              </a>
+            </div>
+            <div class="navbar-wrapper" >
+             &nbsp;&nbsp;&nbsp;&nbsp;<span class="navbar-icon"><i class="material-icons">logout</i></span> <asp:button runat="server" CausesValidation="false"   ID="BtnLogof"  text="Logout" class="navbar-brand pull-right btntransprant"></asp:button>
+            </div>
+                
+             </div>
+          </div>
+            </nav>
+        </div>
+                       <div class="wrapper  ">
+
+         
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="assets/img/sidebar-1.jpg">
+      
+      <div class="logo"><a  class="simple-text logo-normal">
+        <asp:ImageButton ID="BtnHome" runat="server" src="assets/img/gss-logo.png" alt="responsive" style="height: 53px;width: 222px;" />
+        </a></div>
+      <div class="sidebar-wrapper scrollbar " id="style-10"">
+
+        <ul class="nav">
+
+         
+
+
+
+
+                <li class="nav-item"  >
+                    <a class="nav-link collapsed text-truncate" href="#submenu6" id="drp3" runat="server" data-toggle="collapse" data-target="#submenu6">
+           <i class="material-icons">person</i>
+          <p runat="server" id="admin">Admin</p></a>
+                    <div class="collapse" id="submenu6" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav">
+               
+                            <li class="nav-item" style="margin-left: -5px;" ><a class="nav-link py-0" id="btnservicecenter" CausesValidation="false"  runat="server" href="#"><i  style="margin-top:7px; " class="fas fa-angle-double-right"></i><p>Service Center</p></a></li>
+                              <li class="nav-item"><a class="nav-link py-0" id="btnuser"  CausesValidation="false" runat="server" href="#"><i  style="margin-top:7px;"  class="fas fa-angle-double-right"></i><p>User Management</p></a></li>
+                           
+                        </ul>
+                    </div>
+                </li>
+
+
+
+
+
+
+          <li class="nav-item " id="dashboard" runat="server">
+            <a class="nav-link" ID="btnDashboard" runat="server"  CausesValidation="false" href="#">
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+                
+            </a>
+          </li>
+
+       
+          <li class="nav-item " id="fileupload" runat="server">
+            <a class="nav-link" ID="btnFileUpload"  CausesValidation="false" runat="server" href="#">
+              <i class="material-icons">file_upload</i>
+              <p>File Upload</p>
+                
+            </a>
+          </li>
+
+            
+        <%--i class="material-icons"></i>--%> 
+           
+    
+          <li class="nav-item" id="Analysis_Export" runat="server">
+            <a class="nav-link" ID="btnExportData"  CausesValidation="false" runat="server"  href="#">
+              <i class="material-icons">import_export</i>
+             <p>Export Data</p>
+            </a>
+          </li>
+               <li class="nav-item " id="Analysis_Refresh"  CausesValidation="false" runat="server">
+            <a class="nav-link" ID="btnReport" runat="server" href="#">
+              <i class="material-icons">library_books</i>
+              <p>Activity Report</p>
+            </a>
+          </li>
+          <li class="nav-item " id="Analysis_Recovery"  CausesValidation="false" runat="server">
+            <a class="nav-link" ID="btnRecovery" runat="server" href="#">
+              <i class="material-icons">bubble_chart</i>
+              <p>Recovery</p>
+            </a>
+          </li>
+
+          
+            
+
+
+            <li class="nav-item">
+                    <a class="nav-link collapsed text-truncate" href="#submenu3" id="drp1" runat="server" data-toggle="collapse" data-target="#submenu3">
+                        <i class="material-icons">analytics</i>
+          <p runat="server" class="btntransprant" id="analyis">Analysis Data</p></a>
+                    <div class="collapse" id="submenu3" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav">
+                            <li class="nav-item" style="margin-left: -5px;"><a class="nav-link py-0"  CausesValidation="false"  ID="btnUploadSummary" runat="server"  href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Upload Summary</p></a></li>                            
+                            <li class="nav-item"><a class="nav-link py-0" ID="btnUploadVerification"  CausesValidation="false" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Upload Verification</p> </a></li>
+                            <li class="nav-item"><a class="nav-link py-0" id="btnPartsCompare"  CausesValidation="false" runat="server"  href="#"> <i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Parts Compare</p></a></li>
+                            <li class="nav-item"><a class="nav-link py-0" id="storemanagement"  CausesValidation="false" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Store Management</p></a></li>
+                           
+                        </ul>
+                    </div>
+                </li>
+
+
+              <li class="nav-item" style="margin-bottom:40px;">
+                    <a class="nav-link collapsed text-truncate" href="#submenu4" id="drp2" runat="server" data-toggle="collapse" data-target="#submenu4">
+           <i class="material-icons">psychology</i>
+          <p runat="server" id="rpa">RPA</p></a>
+                    <div class="collapse" id="submenu4" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav">
+                             <li class="nav-item" style="margin-left: -5px;"><a class="nav-link py-0"  CausesValidation="false" id="CreateRPA" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Create RPA Task</p></a></li>
+                           
+                              <li class="nav-item"><a class="nav-link py-0" ID="btnscheduler"  CausesValidation="false" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Scheduler</p></a></li>
+                              <li class="nav-item"><a class="nav-link py-0" ID="btnRpaLog"  CausesValidation="false" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Rpa Log</p></a></li>
+                              <li class="nav-item"><a class="nav-link py-0" id="btnRpaTaskApp"  CausesValidation="false" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Rpa TaskApp</p></a></li>
+                              <li class="nav-item"><a class="nav-link py-0" id="btnRpaOnOff"  CausesValidation="false" runat="server" href="#"><i  style="margin-top:7px;" class="fas fa-angle-double-right"></i><p>Rpa On/Off</p></a></li>
+                            
+                        </ul>
+                    </div>
+                </li>
+
+
+          
+        </ul>
+      </div>
+             
+    </div>
+          </div> 
+         
+          
+     </asp:Panel>
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+    </form>
+
+    
+
+
+
+
+</body>  
+</html>

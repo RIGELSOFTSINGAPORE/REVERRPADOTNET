@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+このファイルは、Web プロジェクトの発行 / パッケージ処理で使用されます。この MSBuild ファイルを編集すると、
+この処理の動作をカスタマイズできます。詳細については、https://go.microsoft.com/fwlink/?LinkID=208121 を参照してください。 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\test\Ganses33</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>01/26/2018 10:46:10</publishTime>
+    </File>
+    <File Include="bin/Ganges33.dll">
+      <publishTime>05/18/2018 13:35:45</publishTime>
+    </File>
+    <File Include="bin/Ganges33.pdb">
+      <publishTime>05/18/2018 13:35:45</publishTime>
+    </File>
+    <File Include="bin/Ganges33.xml">
+      <publishTime>05/18/2018 13:35:44</publishTime>
+    </File>
+    <File Include="bin/iText.dll">
+      <publishTime>01/30/2018 16:59:39</publishTime>
+    </File>
+    <File Include="bin/iTextAsian.dll">
+      <publishTime>01/30/2018 16:59:39</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>10/07/2016 15:33:44</publishTime>
+    </File>
+    <File Include="bin/JSharpLib.dll">
+      <publishTime>01/30/2018 16:59:39</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>08/15/2017 13:12:32</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>04/13/2017 15:47:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>04/13/2017 15:47:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>04/13/2017 15:47:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>04/13/2017 15:47:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>04/13/2017 15:47:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>04/13/2017 15:47:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>04/13/2017 15:47:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Console.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.Process.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.DriveInfo.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Pipes.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.AccessControl.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Claims.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Principal.Windows.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Threading.Thread.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.ValueTuple.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>04/13/2017 15:47:48</publishTime>
+    </File>
+    <File Include="icon/analysis.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/back.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/close.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/create.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/daylyreport.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/differnce.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/download.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/exit-1.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/folder-13.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/home.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/icon/analysis.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/back.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/close.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/create.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/daylyreport.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/differnce.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/download.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/exit-1.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/folder-13.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/home.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/import.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/inventory.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/inventory_report.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/login.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/menu_bar_stock.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/mneu_arrival/arrival.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/mneu_arrival/menu_bar_Arrival.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/mneu_arrival/report.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/mneu_arrival/return.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/mneu_arrival/search.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/mneu_arrival/used.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/mneu_money/blank.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/mneu_money/confirm.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/mneu_money/day_agg.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/mneu_money/open_close.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/mneu_money/sales.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/mneu_repair/blank.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/mneu_repair/reapir_input.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/mneu_repair/repair_search.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/money.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/M_changereserve.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/M_control.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/M_inspection.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/m_record.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/nmvar.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/OK_icon.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/open.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/person.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/placeholder-2.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/repair.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/report_send.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/samsung-logo.jpg">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/save_temporary.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/search.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/send.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/start.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/stock_out.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/submit.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/system.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/user-3.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/クイックガレージlogo.jpg">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/営業中.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/icon/閉店中.png">
+      <publishTime>04/25/2018 13:58:29</publishTime>
+    </File>
+    <File Include="icon/import.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/inventory.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/inventory_report.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/login.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/menu_bar_stock.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/mneu_arrival/arrival.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/mneu_arrival/menu_bar_Arrival.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/mneu_arrival/report.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/mneu_arrival/return.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/mneu_arrival/search.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/mneu_arrival/used.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/mneu_money/blank.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/mneu_money/confirm.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/mneu_money/day_agg.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/mneu_money/for_gspn.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/mneu_money/menu_bar_money.png">
+      <publishTime>02/22/2018 14:16:08</publishTime>
+    </File>
+    <File Include="icon/mneu_money/not_gspn.png">
+      <publishTime>04/26/2018 10:58:09</publishTime>
+    </File>
+    <File Include="icon/mneu_money/open_close.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/mneu_money/sales.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/mneu_repair/blank.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/mneu_repair/reapir_input.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/mneu_repair/repair_search.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/money.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/M_changereserve.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/M_control.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/M_inspection.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/m_record.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/nmvar.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/OK_icon.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/open.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/person.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/repair.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/report_send.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/samsung-logo.jpg">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/save_temporary.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/search.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/send.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/start.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/stock_out.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/submit.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/system.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/クイックガレージlogo.jpg">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/営業中.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon/閉店中.png">
+      <publishTime>04/26/2018 10:58:10</publishTime>
+    </File>
+    <File Include="icon2/placeholder-2.png">
+      <publishTime>03/15/2018 11:29:36</publishTime>
+    </File>
+    <File Include="icon2/user-3.png">
+      <publishTime>03/15/2018 11:29:36</publishTime>
+    </File>
+    <File Include="image/home.png">
+      <publishTime>12/04/2017 12:26:10</publishTime>
+    </File>
+    <File Include="image/login-gss-logo.png">
+      <publishTime>12/04/2017 12:26:10</publishTime>
+    </File>
+    <File Include="image/login.png">
+      <publishTime>12/04/2017 12:26:10</publishTime>
+    </File>
+    <File Include="image/repair.png">
+      <publishTime>12/04/2017 12:26:10</publishTime>
+    </File>
+    <File Include="inv_Arrival.aspx">
+      <publishTime>04/13/2018 15:22:06</publishTime>
+    </File>
+    <File Include="inv_Report.aspx">
+      <publishTime>04/13/2018 15:56:10</publishTime>
+    </File>
+    <File Include="inv_Return.aspx">
+      <publishTime>04/13/2018 15:46:55</publishTime>
+    </File>
+    <File Include="inv_Search.aspx">
+      <publishTime>04/13/2018 15:52:11</publishTime>
+    </File>
+    <File Include="inv_Use.aspx">
+      <publishTime>04/24/2018 13:44:12</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>03/30/2018 14:28:57</publishTime>
+    </File>
+    <File Include="Menu.aspx">
+      <publishTime>04/16/2018 15:24:45</publishTime>
+    </File>
+    <File Include="MessageForm.aspx">
+      <publishTime>02/16/2018 12:42:57</publishTime>
+    </File>
+    <File Include="Money_Aggregation.aspx">
+      <publishTime>04/26/2018 13:23:34</publishTime>
+    </File>
+    <File Include="Money_Menu.aspx">
+      <publishTime>04/26/2018 10:21:29</publishTime>
+    </File>
+    <File Include="Money_Record_1.aspx">
+      <publishTime>05/08/2018 13:34:44</publishTime>
+    </File>
+    <File Include="Money_Record_3.aspx">
+      <publishTime>05/09/2018 10:09:30</publishTime>
+    </File>
+    <File Include="Money_Record_4.aspx">
+      <publishTime>05/17/2018 15:36:09</publishTime>
+    </File>
+    <File Include="Money_Report.aspx">
+      <publishTime>04/26/2018 13:23:34</publishTime>
+    </File>
+    <File Include="Money_Reserve.aspx">
+      <publishTime>04/26/2018 13:23:34</publishTime>
+    </File>
+    <File Include="Msg.aspx">
+      <publishTime>12/05/2017 15:48:11</publishTime>
+    </File>
+    <File Include="Msg_inv_Arrival.aspx">
+      <publishTime>03/19/2018 11:13:30</publishTime>
+    </File>
+    <File Include="Msg_inv_Return.aspx">
+      <publishTime>03/13/2018 11:53:15</publishTime>
+    </File>
+    <File Include="pagewall/wall_analysis.png">
+      <publishTime>03/12/2018 16:01:53</publishTime>
+    </File>
+    <File Include="pagewall/wall_dailyreport.png">
+      <publishTime>03/12/2018 16:01:53</publishTime>
+    </File>
+    <File Include="pagewall/wall_inventry.png">
+      <publishTime>03/12/2018 16:01:53</publishTime>
+    </File>
+    <File Include="pagewall/wall_menu.png">
+      <publishTime>03/12/2018 16:01:53</publishTime>
+    </File>
+    <File Include="pagewall/wall_money.png">
+      <publishTime>03/12/2018 16:01:53</publishTime>
+    </File>
+    <File Include="pagewall/wall_nMVAR.png">
+      <publishTime>03/12/2018 16:01:53</publishTime>
+    </File>
+    <File Include="pagewall/wall_person.png">
+      <publishTime>03/12/2018 16:01:53</publishTime>
+    </File>
+    <File Include="pagewall/wall_repair.png">
+      <publishTime>03/12/2018 16:01:53</publishTime>
+    </File>
+    <File Include="pagewall/wall_stock.png">
+      <publishTime>03/12/2018 10:44:38</publishTime>
+    </File>
+    <File Include="pagewall/wall_system.png">
+      <publishTime>03/12/2018 16:01:53</publishTime>
+    </File>
+    <File Include="pagewall/wall_web_create.psd">
+      <publishTime>03/12/2018 10:44:38</publishTime>
+    </File>
+    <File Include="pagewall_2/wall_analysis-2.png">
+      <publishTime>03/12/2018 17:01:51</publishTime>
+    </File>
+    <File Include="pagewall_2/wall_dailyreport-2.png">
+      <publishTime>03/12/2018 17:01:51</publishTime>
+    </File>
+    <File Include="pagewall_2/wall_inventry-2.png">
+      <publishTime>03/12/2018 17:01:51</publishTime>
+    </File>
+    <File Include="pagewall_2/wall_menu-2.png">
+      <publishTime>03/12/2018 17:01:51</publishTime>
+    </File>
+    <File Include="pagewall_2/wall_money-2.png">
+      <publishTime>03/12/2018 17:01:51</publishTime>
+    </File>
+    <File Include="pagewall_2/wall_nMVAR-2.png">
+      <publishTime>03/12/2018 17:01:51</publishTime>
+    </File>
+    <File Include="pagewall_2/wall_person-2.png">
+      <publishTime>03/12/2018 17:01:51</publishTime>
+    </File>
+    <File Include="pagewall_2/wall_repair-2.png">
+      <publishTime>03/12/2018 17:01:51</publishTime>
+    </File>
+    <File Include="pagewall_2/wall_system-2.png">
+      <publishTime>03/12/2018 17:01:51</publishTime>
+    </File>
+    <File Include="pagewall_2/__MACOSX/._wall_analysis-2.png">
+      <publishTime>03/12/2018 17:01:51</publishTime>
+    </File>
+    <File Include="pagewall_2/__MACOSX/._wall_dailyreport-2.png">
+      <publishTime>03/12/2018 17:01:51</publishTime>
+    </File>
+    <File Include="pagewall_2/__MACOSX/._wall_inventry-2.png">
+      <publishTime>03/12/2018 17:01:51</publishTime>
+    </File>
+    <File Include="pagewall_2/__MACOSX/._wall_menu-2.png">
+      <publishTime>03/12/2018 17:01:51</publishTime>
+    </File>
+    <File Include="pagewall_2/__MACOSX/._wall_money-2.png">
+      <publishTime>03/12/2018 17:01:51</publishTime>
+    </File>
+    <File Include="pagewall_2/__MACOSX/._wall_nMVAR-2.png">
+      <publishTime>03/12/2018 17:01:51</publishTime>
+    </File>
+    <File Include="pagewall_2/__MACOSX/._wall_person-2.png">
+      <publishTime>03/12/2018 17:01:51</publishTime>
+    </File>
+    <File Include="pagewall_2/__MACOSX/._wall_repair-2.png">
+      <publishTime>03/12/2018 17:01:51</publishTime>
+    </File>
+    <File Include="pagewall_2/__MACOSX/._wall_system-2.png">
+      <publishTime>03/12/2018 17:01:51</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>05/18/2018 13:36:19</publishTime>
+    </File>
+    <File Include="Repair_1.aspx">
+      <publishTime>04/13/2018 15:59:20</publishTime>
+    </File>
+    <File Include="Repair_1_Detail.aspx">
+      <publishTime>04/26/2018 10:21:29</publishTime>
+    </File>
+    <File Include="Site1.Master">
+      <publishTime>12/04/2017 12:25:21</publishTime>
+    </File>
+    <File Include="Site2.Master">
+      <publishTime>04/16/2018 15:27:29</publishTime>
+    </File>
+    <File Include="Site3.Master">
+      <publishTime>03/19/2018 09:31:07</publishTime>
+    </File>
+    <File Include="Site3msg.Master">
+      <publishTime>03/19/2018 09:31:06</publishTime>
+    </File>
+    <File Include="Site4.Master">
+      <publishTime>04/26/2018 11:01:00</publishTime>
+    </File>
+    <File Include="Site5.Master">
+      <publishTime>04/25/2018 14:08:43</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/18/2018 13:35:46</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

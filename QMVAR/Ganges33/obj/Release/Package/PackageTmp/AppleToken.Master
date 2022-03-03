@@ -1,0 +1,295 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="AppleToken.master.vb" Inherits="Ganges33.AppleToken" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
+<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <%--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/start/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>--%>
+   <script type="text/javascript" src="ExternalStyles/Jquery/jquery.min.js"></script>
+     <script type="text/javascript" src="ExternalStyles/Jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="ExternalStyles/Jquery/a076d05399.js"></script>
+
+    <link href="ExternalStyles/Css/css.css" rel="stylesheet" />  
+    <link href="ExternalStyles/Css/font-awesome.min.css" rel="stylesheet" />  
+    <link href="ExternalStyles/Css/jquery-ui.css" rel="stylesheet" />
+
+  <!--     Fonts and icons     -->
+  <%--<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">--%>
+  <!-- CSS Files -->
+ <link href="assets/css/material-dashboard-rtl.css" rel="stylesheet" />
+<link href="assets/css/material-dashboard.css" rel="stylesheet" />
+<link href="assets/css/material-dashboard.min.css" rel="stylesheet" />
+  <%--<script src='https://kit.fontawesome.com/a076d05399.js'></script>--%>
+  <link href="assets/demo/demo.css" rel="stylesheet" />
+   <%--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/start/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>--%>
+	 <link href="Styles/bootstrap.min.css"  rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <link href="Styles/bootstrap-multiselect.css" rel="stylesheet" type="text/css"/>
+    <script src="Scripts/bootstrap-multiselect.js" type="text/javascript"></script>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+     
+<script type="text/javascript">
+
+
+    $(function () {
+        $('[class*=date]').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "0000:9999",
+            maxDate: new Date(),
+            dateFormat: 'yy/mm/dd'
+
+        });
+    });
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
+   <style>
+       .ie11.tablet input[type='radio'] {
+visibility: visible;
+}
+        
+p:hover {
+  color: black;
+}
+   .container{
+    -ms-overflow-style: none;
+    overflow: auto;
+
+}
+
+ html, body { overflow: hidden; }
+       
+.nav-link[data-toggle].collapsed:before {
+    content: " ▾";
+    float:right;
+    font-size:30px;
+    margin-top:10px;
+    color:red;
+}
+
+.nav-link[data-toggle]:not(.collapsed):before {
+    content: " ▴";
+    float:right;
+    font-size:30px;
+    margin-top:5px;
+    color:red;
+}
+
+/* Closed submenu icon */
+#sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
+  content: " \f0d7";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 10px;
+}
+/* Opened submenu icon */
+#sidebar-container .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
+  content: " \f0da";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 10px;
+}
+
+.liactive
+{
+    background:#9c27b0;
+    color:white;
+}
+
+.btn_active {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    padding-left: 0px;
+    color: black;
+    cursor: pointer;
+}
+p.btn_active:hover
+{
+    color:black
+}
+.ui-dialog {
+	overflow: hidden;
+	position: absolute;
+	top: 300px;
+	left: 550px;
+	padding: .2em;
+	outline: 0;
+}
+
+        .asc:after {
+    content: ' \25BC';
+}
+       .dec:after {
+    content: ' \25B2';
+}
+       .sort:after {
+    content: ' \21C5';
+    margin-left:10px;
+}
+       .auto-style1 {
+           width: 100%;
+           height: 113px;
+       }
+       
+        td {
+      font-size: 17px;
+    line-height: 1.42857;
+    color: #171717;
+    font-weight: 500;
+}
+        .button {
+    // Remove focus around button
+    outline:none;  
+}
+    </style>
+    <script>
+       
+    </script>
+</head>
+<body  >
+    <form id="form1" runat="server">
+        <asp:Button ID="btnDisableEnter" runat="server" Text=""   OnClientClick="return false;" style="display: none;" />
+                   <asp:Panel ID="Panel1" runat="server" Height="47px" DefaultButton="btnDisableEnter"  HorizontalAlign ="Center">  
+
+      <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div >
+            <a class="navbar-brand" style="font-size:24px">QMVAR Apple ASP</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <div class="navbar-wrapper">
+              <a class="navbar-brand"><span class="navbar-icon"><i class="material-icons">place</i></span>
+                  <asp:Label ID="LblShipName" runat="server"></asp:Label>
+              </a>
+            </div>
+            <div class="navbar-wrapper">
+               <a class="navbar-brand"   href="#"  ><span class="navbar-icon"><i class="material-icons">person</i></span>
+                 <asp:Label ID="lblUser" data-toggle="tooltip" data-bs-placement="bottom"  title="" runat="server"></asp:Label>
+              </a>
+            </div>
+            <div class="navbar-wrapper" >
+             &nbsp;&nbsp;&nbsp;&nbsp;<span class="navbar-icon"><i class="material-icons">logout</i></span> <asp:button runat="server" OnClick="BtnLogof_Click"  ID="BtnLogof"  text="Logout"   class="navbar-brand pull-right btntransprant"></asp:button>
+            </div>
+                
+             </div>
+          </div>
+            </nav>
+        </div>
+                       <div class="wrapper  ">
+
+         
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="assets/img/sidebar-1.jpg">
+      
+      <div class="logo"><a  class="simple-text logo-normal">
+        <asp:ImageButton ID="BtnHome" runat="server" src="assets/img/gss-logo.png" alt="responsive" style="height: 53px;width: 222px;" />
+        </a></div>
+      <div class="sidebar-wrapper menu scrollbar " id="style-10"">
+    
+
+        <ul class="nav">
+       
+           
+
+
+
+         
+
+
+
+            
+
+          <li class="nav-item " id="dashboard" runat="server">
+            <a class="nav-link" ID="btnTicket" runat="server"  CausesValidation="false" href="#">
+              <i class="material-icons">update</i>
+              <p>Ticketing</p>
+                
+            </a>
+          </li>
+
+             <li class="nav-item " id="Li1" runat="server">
+                   
+            <a class="nav-link" ID="btnWaiting" runat="server"  CausesValidation="false" href="#">
+            <i> <img src="icon/waiting.png" style="width:24px"/></i>
+              <p style="text-align:left;">
+                 Waiting List
+                 </p>
+                
+            </a>
+          </li>   
+       
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+          <%--  --%>
+                 
+        
+                  
+
+          
+            
+        </ul>
+            
+      </div>
+             
+    </div>
+          </div> 
+         
+          
+     </asp:Panel>
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+    </form>
+
+    
+
+
+
+
+</body>  
+</html>

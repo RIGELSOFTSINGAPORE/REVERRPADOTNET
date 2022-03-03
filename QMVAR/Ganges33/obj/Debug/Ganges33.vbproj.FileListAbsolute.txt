@@ -1,0 +1,419 @@
+C:\QG\vksource\Source Code\20200428_1\Ganges33\bin\Ganges33.dll.config
+C:\QG\vksource\Source Code\20200428_1\Ganges33\bin\Ganges33.dll
+C:\QG\vksource\Source Code\20200428_1\Ganges33\bin\Ganges33.pdb
+C:\QG\vksource\Source Code\20200428_1\Ganges33\bin\Ganges33.xml
+C:\QG\vksource\Source Code\20200428_1\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\QG\vksource\Source Code\20200428_1\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\QG\vksource\Source Code\20200428_1\Ganges33\obj\Debug\Ganges33.Resources.resources
+C:\QG\vksource\Source Code\20200428_1\Ganges33\obj\Debug\Ganges33.vbproj.GenerateResource.cache
+C:\QG\vksource\Source Code\20200428_1\Ganges33\obj\Debug\Ganges33.vbproj.CoreCompileInputs.cache
+C:\QG\vksource\Source Code\20200428_1\Ganges33\obj\Debug\Ganges33.vbproj.CopyComplete
+C:\QG\vksource\Source Code\20200428_1\Ganges33\obj\Debug\Ganges33.dll
+C:\QG\vksource\Source Code\20200428_1\Ganges33\obj\Debug\Ganges33.xml
+C:\QG\vksource\Source Code\20200428_1\Ganges33\obj\Debug\Ganges33.pdb
+C:\QG\vksource\Source Code\20200428_1\Ganges33\obj\Debug\Ganges33.vbprojAssemblyReference.cache
+C:\QG\vksource\rpa\Ganges33\bin\Ganges33.dll.config
+C:\QG\vksource\rpa\Ganges33\bin\Ganges33.dll
+C:\QG\vksource\rpa\Ganges33\bin\Ganges33.pdb
+C:\QG\vksource\rpa\Ganges33\bin\Ganges33.xml
+C:\QG\vksource\rpa\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\QG\vksource\rpa\Ganges33\bin\System.Security.Cryptography.Primitives.dll
+C:\QG\vksource\rpa\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\QG\vksource\rpa\Ganges33\obj\Debug\Ganges33.Resources.resources
+C:\QG\vksource\rpa\Ganges33\obj\Debug\Ganges33.vbproj.GenerateResource.cache
+C:\QG\vksource\rpa\Ganges33\obj\Debug\Ganges33.vbproj.CoreCompileInputs.cache
+C:\QG\vksource\rpa\Ganges33\obj\Debug\Ganges33.vbproj.CopyComplete
+C:\QG\vksource\rpa\Ganges33\obj\Debug\Ganges33.dll
+C:\QG\vksource\rpa\Ganges33\obj\Debug\Ganges33.xml
+C:\QG\vksource\rpa\Ganges33\obj\Debug\Ganges33.pdb
+C:\QG\vksource\rpa\Ganges33\obj\Debug\Ganges33.vbprojAssemblyReference.cache
+C:\qmvr\QMVAR_application\QmvarSource20201015_1\Ganges33\bin\Ganges33.dll.config
+C:\qmvr\QMVAR_application\QmvarSource20201015_1\Ganges33\bin\Ganges33.dll
+C:\qmvr\QMVAR_application\QmvarSource20201015_1\Ganges33\bin\Ganges33.pdb
+C:\qmvr\QMVAR_application\QmvarSource20201015_1\Ganges33\bin\Ganges33.xml
+C:\qmvr\QMVAR_application\QmvarSource20201015_1\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\qmvr\QMVAR_application\QmvarSource20201015_1\Ganges33\bin\System.Security.Cryptography.Primitives.dll
+C:\qmvr\QMVAR_application\QmvarSource20201015_1\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\qmvr\QMVAR_application\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.vbprojAssemblyReference.cache
+C:\qmvr\QMVAR_application\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.Resources.resources
+C:\qmvr\QMVAR_application\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.vbproj.GenerateResource.cache
+C:\qmvr\QMVAR_application\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.vbproj.CoreCompileInputs.cache
+C:\qmvr\QMVAR_application\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.vbproj.CopyComplete
+C:\qmvr\QMVAR_application\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.dll
+C:\qmvr\QMVAR_application\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.xml
+C:\qmvr\QMVAR_application\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.pdb
+D:\QMVAR_Design\QmvarSource20201015_1\Ganges33\bin\Ganges33.dll.config
+D:\QMVAR_Design\QmvarSource20201015_1\Ganges33\bin\Ganges33.dll
+D:\QMVAR_Design\QmvarSource20201015_1\Ganges33\bin\Ganges33.pdb
+D:\QMVAR_Design\QmvarSource20201015_1\Ganges33\bin\Ganges33.xml
+D:\QMVAR_Design\QmvarSource20201015_1\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\QMVAR_Design\QmvarSource20201015_1\Ganges33\bin\System.Security.Cryptography.Primitives.dll
+D:\QMVAR_Design\QmvarSource20201015_1\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\QMVAR_Design\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.vbprojAssemblyReference.cache
+D:\QMVAR_Design\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.Resources.resources
+D:\QMVAR_Design\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.vbproj.GenerateResource.cache
+D:\QMVAR_Design\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.vbproj.CoreCompileInputs.cache
+D:\QMVAR_Design\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.vbproj.CopyComplete
+D:\QMVAR_Design\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.dll
+D:\QMVAR_Design\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.xml
+D:\QMVAR_Design\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.pdb
+C:\qmvr\QMVAR_application\New folder\QmvarSource20201015_1\Ganges33\bin\Ganges33.dll.config
+C:\qmvr\QMVAR_application\New folder\QmvarSource20201015_1\Ganges33\bin\Ganges33.dll
+C:\qmvr\QMVAR_application\New folder\QmvarSource20201015_1\Ganges33\bin\Ganges33.pdb
+C:\qmvr\QMVAR_application\New folder\QmvarSource20201015_1\Ganges33\bin\Ganges33.xml
+C:\qmvr\QMVAR_application\New folder\QmvarSource20201015_1\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\qmvr\QMVAR_application\New folder\QmvarSource20201015_1\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\qmvr\QMVAR_application\New folder\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.Resources.resources
+C:\qmvr\QMVAR_application\New folder\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.vbproj.GenerateResource.cache
+C:\qmvr\QMVAR_application\New folder\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.vbproj.CoreCompileInputs.cache
+C:\qmvr\QMVAR_application\New folder\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.vbproj.CopyComplete
+C:\qmvr\QMVAR_application\New folder\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.dll
+C:\qmvr\QMVAR_application\New folder\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.xml
+C:\qmvr\QMVAR_application\New folder\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.pdb
+C:\qmvr\QMVAR_application\New folder\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.vbprojAssemblyReference.cache
+C:\Users\LENOVO\Downloads\QmvarSource20201015_1\Ganges33\bin\Ganges33.dll.config
+C:\Users\LENOVO\Downloads\QmvarSource20201015_1\Ganges33\bin\Ganges33.dll
+C:\Users\LENOVO\Downloads\QmvarSource20201015_1\Ganges33\bin\Ganges33.pdb
+C:\Users\LENOVO\Downloads\QmvarSource20201015_1\Ganges33\bin\Ganges33.xml
+C:\Users\LENOVO\Downloads\QmvarSource20201015_1\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\LENOVO\Downloads\QmvarSource20201015_1\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\LENOVO\Downloads\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.vbprojAssemblyReference.cache
+C:\Users\LENOVO\Downloads\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.Resources.resources
+C:\Users\LENOVO\Downloads\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.vbproj.GenerateResource.cache
+C:\Users\LENOVO\Downloads\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.vbproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Downloads\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.vbproj.CopyComplete
+C:\Users\LENOVO\Downloads\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.dll
+C:\Users\LENOVO\Downloads\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.xml
+C:\Users\LENOVO\Downloads\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.pdb
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource20201015_1\Ganges33\bin\Ganges33.dll.config
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource20201015_1\Ganges33\bin\Ganges33.dll
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource20201015_1\Ganges33\bin\Ganges33.pdb
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource20201015_1\Ganges33\bin\Ganges33.xml
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource20201015_1\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource20201015_1\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.vbprojAssemblyReference.cache
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.Resources.resources
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.vbproj.GenerateResource.cache
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.vbproj.CoreCompileInputs.cache
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.vbproj.CopyComplete
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.dll
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.xml
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource20201015_1\Ganges33\obj\Debug\Ganges33.pdb
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource\Ganges33\bin\Ganges33.dll.config
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource\Ganges33\bin\Ganges33.dll
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource\Ganges33\bin\Ganges33.pdb
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource\Ganges33\bin\Ganges33.xml
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource\Ganges33\obj\Debug\Ganges33.Resources.resources
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource\Ganges33\obj\Debug\Ganges33.vbproj.GenerateResource.cache
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource\Ganges33\obj\Debug\Ganges33.vbproj.CoreCompileInputs.cache
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource\Ganges33\obj\Debug\Ganges33.vbproj.CopyComplete
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource\Ganges33\obj\Debug\Ganges33.dll
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource\Ganges33\obj\Debug\Ganges33.xml
+C:\qmvr\QMVAR_application\New folder\dashboard\QmvarSource\Ganges33\obj\Debug\Ganges33.pdb
+C:\qmvr\QMVAR_application\New folder\QmvarSource\Ganges33\bin\Ganges33.dll.config
+C:\qmvr\QMVAR_application\New folder\QmvarSource\Ganges33\bin\Ganges33.dll
+C:\qmvr\QMVAR_application\New folder\QmvarSource\Ganges33\bin\Ganges33.pdb
+C:\qmvr\QMVAR_application\New folder\QmvarSource\Ganges33\bin\Ganges33.xml
+C:\qmvr\QMVAR_application\New folder\QmvarSource\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\qmvr\QMVAR_application\New folder\QmvarSource\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\qmvr\QMVAR_application\New folder\QmvarSource\Ganges33\obj\Debug\Ganges33.vbprojAssemblyReference.cache
+C:\qmvr\QMVAR_application\New folder\QmvarSource\Ganges33\obj\Debug\Ganges33.Resources.resources
+C:\qmvr\QMVAR_application\New folder\QmvarSource\Ganges33\obj\Debug\Ganges33.vbproj.GenerateResource.cache
+C:\qmvr\QMVAR_application\New folder\QmvarSource\Ganges33\obj\Debug\Ganges33.vbproj.CoreCompileInputs.cache
+C:\qmvr\QMVAR_application\New folder\QmvarSource\Ganges33\obj\Debug\Ganges33.vbproj.CopyComplete
+C:\qmvr\QMVAR_application\New folder\QmvarSource\Ganges33\obj\Debug\Ganges33.dll
+C:\qmvr\QMVAR_application\New folder\QmvarSource\Ganges33\obj\Debug\Ganges33.xml
+C:\qmvr\QMVAR_application\New folder\QmvarSource\Ganges33\obj\Debug\Ganges33.pdb
+C:\qmvr\QMVAR_application\New folder\QmvarSource\Ganges33\bin\System.Security.Cryptography.Primitives.dll
+D:\QMVAR V 2.O\QMVAR\Ganges33\obj\Debug\Ganges33.vbprojAssemblyReference.cache
+D:\QMVAR V 2.O\QMVAR\Ganges33\obj\Debug\Ganges33.Resources.resources
+D:\QMVAR V 2.O\QMVAR\Ganges33\obj\Debug\Ganges33.vbproj.GenerateResource.cache
+D:\QMVAR V 2.O\QMVAR\Ganges33\obj\Debug\Ganges33.vbproj.CoreCompileInputs.cache
+D:\QMVAR V 2.O\QMVAR\Ganges33\bin\Ganges33.dll.config
+D:\QMVAR V 2.O\QMVAR\Ganges33\bin\Ganges33.dll
+D:\QMVAR V 2.O\QMVAR\Ganges33\bin\Ganges33.pdb
+D:\QMVAR V 2.O\QMVAR\Ganges33\bin\Ganges33.xml
+D:\QMVAR V 2.O\QMVAR\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\QMVAR V 2.O\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.dll
+D:\QMVAR V 2.O\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.dll
+D:\QMVAR V 2.O\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+D:\QMVAR V 2.O\QMVAR\Ganges33\bin\System.Security.Cryptography.Primitives.dll
+D:\QMVAR V 2.O\QMVAR\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\QMVAR V 2.O\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.pdb
+D:\QMVAR V 2.O\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.xml
+D:\QMVAR V 2.O\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.pdb
+D:\QMVAR V 2.O\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.xml
+D:\QMVAR V 2.O\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.pdb
+D:\QMVAR V 2.O\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.xml
+D:\QMVAR V 2.O\QMVAR\Ganges33\obj\Debug\Ganges33.vbproj.CopyComplete
+D:\QMVAR V 2.O\QMVAR\Ganges33\obj\Debug\Ganges33.dll
+D:\QMVAR V 2.O\QMVAR\Ganges33\obj\Debug\Ganges33.xml
+D:\QMVAR V 2.O\QMVAR\Ganges33\obj\Debug\Ganges33.pdb
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\bin\Ganges33.dll.config
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\bin\Ganges33.dll
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\bin\Ganges33.pdb
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\bin\Ganges33.xml
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.dll
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.dll
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\bin\System.Security.Cryptography.Primitives.dll
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.pdb
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.xml
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.pdb
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.xml
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.pdb
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.xml
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\obj\Debug\Ganges33.Resources.resources
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\obj\Debug\Ganges33.vbproj.GenerateResource.cache
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\obj\Debug\Ganges33.vbproj.CoreCompileInputs.cache
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\obj\Debug\Ganges33.vbproj.CopyComplete
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\obj\Debug\Ganges33.dll
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\obj\Debug\Ganges33.xml
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\obj\Debug\Ganges33.pdb
+C:\QG\vksource\rpa\BackupSource\Ram\20210323\2\QMVAR V2.0 2021_03_23\QMVAR\Ganges33\obj\Debug\Ganges33.vbprojAssemblyReference.cache
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\bin\Ganges33.dll.config
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\bin\Ganges33.dll
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\bin\Ganges33.pdb
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\bin\Ganges33.xml
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.dll
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.dll
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\bin\System.Security.Cryptography.Primitives.dll
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.pdb
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.xml
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.pdb
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.xml
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.pdb
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.xml
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\obj\Debug\Ganges33.Resources.resources
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\obj\Debug\Ganges33.vbproj.GenerateResource.cache
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\obj\Debug\Ganges33.vbproj.CoreCompileInputs.cache
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\obj\Debug\Ganges33.vbproj.CopyComplete
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\obj\Debug\Ganges33.dll
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\obj\Debug\Ganges33.xml
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\obj\Debug\Ganges33.pdb
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\obj\Debug\Ganges33.vbprojAssemblyReference.cache
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\bin\BouncyCastle.Crypto.dll
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\bin\GemBox.Spreadsheet.dll
+C:\QG\vksource\rpa\BackupSource\Ram\FinalSource\QMVAR\Ganges33\bin\GemBox.Spreadsheet.xml
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\bin\Ganges33.dll.config
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\bin\Ganges33.dll
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\bin\Ganges33.pdb
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\bin\Ganges33.xml
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\bin\BouncyCastle.Crypto.dll
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\bin\GemBox.Spreadsheet.dll
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.dll
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.dll
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\bin\System.Security.Cryptography.Primitives.dll
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\bin\GemBox.Spreadsheet.xml
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.pdb
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.xml
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.pdb
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.xml
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.pdb
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.xml
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\obj\Debug\Ganges33.vbprojAssemblyReference.cache
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\obj\Debug\Ganges33.Resources.resources
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\obj\Debug\Ganges33.vbproj.GenerateResource.cache
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\obj\Debug\Ganges33.vbproj.CoreCompileInputs.cache
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\obj\Debug\Ganges33.vbproj.CopyComplete
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\obj\Debug\Ganges33.dll
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\obj\Debug\Ganges33.xml
+D:\OldHarddrive\QMVAR\QMVAR2.0_LIVE_CODE_2021-06-09\QMVAR_20210609\QMVAR_20210609\QMVAR\Ganges33\obj\Debug\Ganges33.pdb
+C:\QMVAR2.0\LiveSource\Ganges33\bin\Ganges33.dll.config
+C:\QMVAR2.0\LiveSource\Ganges33\bin\Ganges33.dll
+C:\QMVAR2.0\LiveSource\Ganges33\bin\Ganges33.pdb
+C:\QMVAR2.0\LiveSource\Ganges33\bin\Ganges33.xml
+C:\QMVAR2.0\LiveSource\Ganges33\bin\BouncyCastle.Crypto.dll
+C:\QMVAR2.0\LiveSource\Ganges33\bin\GemBox.Spreadsheet.dll
+C:\QMVAR2.0\LiveSource\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\QMVAR2.0\LiveSource\Ganges33\bin\Microsoft.WindowsAPICodePack.dll
+C:\QMVAR2.0\LiveSource\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.dll
+C:\QMVAR2.0\LiveSource\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+C:\QMVAR2.0\LiveSource\Ganges33\bin\System.Security.Cryptography.Primitives.dll
+C:\QMVAR2.0\LiveSource\Ganges33\bin\GemBox.Spreadsheet.xml
+C:\QMVAR2.0\LiveSource\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\QMVAR2.0\LiveSource\Ganges33\bin\Microsoft.WindowsAPICodePack.pdb
+C:\QMVAR2.0\LiveSource\Ganges33\bin\Microsoft.WindowsAPICodePack.xml
+C:\QMVAR2.0\LiveSource\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.pdb
+C:\QMVAR2.0\LiveSource\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.xml
+C:\QMVAR2.0\LiveSource\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.pdb
+C:\QMVAR2.0\LiveSource\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.xml
+C:\QMVAR2.0\LiveSource\Ganges33\obj\Debug\Ganges33.vbprojAssemblyReference.cache
+C:\QMVAR2.0\LiveSource\Ganges33\obj\Debug\Ganges33.Resources.resources
+C:\QMVAR2.0\LiveSource\Ganges33\obj\Debug\Ganges33.vbproj.GenerateResource.cache
+C:\QMVAR2.0\LiveSource\Ganges33\obj\Debug\Ganges33.vbproj.CoreCompileInputs.cache
+C:\QMVAR2.0\LiveSource\Ganges33\obj\Debug\Ganges33.vbproj.CopyComplete
+C:\QMVAR2.0\LiveSource\Ganges33\obj\Debug\Ganges33.dll
+C:\QMVAR2.0\LiveSource\Ganges33\obj\Debug\Ganges33.xml
+C:\QMVAR2.0\LiveSource\Ganges33\obj\Debug\Ganges33.pdb
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\bin\Ganges33.dll.config
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\bin\Ganges33.dll
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\bin\Ganges33.pdb
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\bin\Ganges33.xml
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\bin\BouncyCastle.Crypto.dll
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\bin\GemBox.Spreadsheet.dll
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\bin\Microsoft.WindowsAPICodePack.dll
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.dll
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\bin\System.Security.Cryptography.Primitives.dll
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\bin\GemBox.Spreadsheet.xml
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\bin\Microsoft.WindowsAPICodePack.pdb
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\bin\Microsoft.WindowsAPICodePack.xml
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.pdb
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.xml
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.pdb
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.xml
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\obj\Debug\Ganges33.vbprojAssemblyReference.cache
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\obj\Debug\Ganges33.Resources.resources
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\obj\Debug\Ganges33.vbproj.GenerateResource.cache
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\obj\Debug\Ganges33.vbproj.CoreCompileInputs.cache
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\obj\Debug\Ganges33.vbproj.CopyComplete
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\obj\Debug\Ganges33.dll
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\obj\Debug\Ganges33.xml
+D:\Users\Prabhu\Downloads\QMVAR2.0_20210621\QMVAR2.0_20210621\Ganges33\obj\Debug\Ganges33.pdb
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\bin\Ganges33.dll.config
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\bin\Ganges33.dll
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\bin\Ganges33.pdb
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\bin\Ganges33.xml
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\bin\BouncyCastle.Crypto.dll
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\bin\GemBox.Spreadsheet.dll
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\bin\Microsoft.WindowsAPICodePack.dll
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.dll
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\bin\System.Security.Cryptography.Primitives.dll
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\bin\GemBox.Spreadsheet.xml
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\bin\Microsoft.WindowsAPICodePack.pdb
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\bin\Microsoft.WindowsAPICodePack.xml
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.pdb
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.xml
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.pdb
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.xml
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\obj\Debug\Ganges33.vbprojAssemblyReference.cache
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\obj\Debug\Ganges33.Resources.resources
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\obj\Debug\Ganges33.vbproj.GenerateResource.cache
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\obj\Debug\Ganges33.vbproj.CoreCompileInputs.cache
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\obj\Debug\Ganges33.vbproj.CopyComplete
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\obj\Debug\Ganges33.dll
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\obj\Debug\Ganges33.xml
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\20210914\Ganges33\obj\Debug\Ganges33.pdb
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\bin\Ganges33.dll.config
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\bin\Ganges33.dll
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\bin\Ganges33.pdb
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\bin\Ganges33.xml
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\bin\BouncyCastle.Crypto.dll
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\bin\GemBox.Spreadsheet.dll
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\bin\Microsoft.WindowsAPICodePack.dll
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.dll
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\bin\System.Security.Cryptography.Primitives.dll
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\bin\GemBox.Spreadsheet.xml
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\bin\Microsoft.WindowsAPICodePack.pdb
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\bin\Microsoft.WindowsAPICodePack.xml
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.pdb
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.xml
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.pdb
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.xml
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\obj\Debug\Ganges33.vbprojAssemblyReference.cache
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\obj\Debug\Ganges33.Resources.resources
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\obj\Debug\Ganges33.vbproj.GenerateResource.cache
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\obj\Debug\Ganges33.vbproj.CoreCompileInputs.cache
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\obj\Debug\Ganges33.vbproj.CopyComplete
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\obj\Debug\Ganges33.dll
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\obj\Debug\Ganges33.xml
+D:\OldHarddrive\QMVAR\2021-09-14\QMVAR-Live\20210914\QMVAR-20210915\20210915\Ganges33\obj\Debug\Ganges33.pdb
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Ganges33.dll.config
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Ganges33.dll
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Ganges33.pdb
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Ganges33.xml
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\BouncyCastle.Crypto.dll
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\GemBox.Spreadsheet.dll
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.WindowsAPICodePack.dll
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.dll
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\System.Security.Cryptography.Primitives.dll
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\GemBox.Spreadsheet.xml
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.WindowsAPICodePack.pdb
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.WindowsAPICodePack.xml
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.pdb
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.xml
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.pdb
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.xml
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\obj\Debug\Ganges33.vbprojAssemblyReference.cache
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\obj\Debug\Ganges33.Resources.resources
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\obj\Debug\Ganges33.vbproj.GenerateResource.cache
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\obj\Debug\Ganges33.vbproj.CoreCompileInputs.cache
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\obj\Debug\Ganges33.vbproj.CopyComplete
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\obj\Debug\Ganges33.dll
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\obj\Debug\Ganges33.xml
+C:\QMVAR2.0\LiveSourceMobile\Ganges33\obj\Debug\Ganges33.pdb
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Ganges33.dll.config
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Ganges33.dll
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Ganges33.pdb
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Ganges33.xml
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\BouncyCastle.Crypto.dll
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\GemBox.Spreadsheet.dll
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.WindowsAPICodePack.dll
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.dll
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\System.Security.Cryptography.Primitives.dll
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\GemBox.Spreadsheet.xml
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.WindowsAPICodePack.pdb
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.WindowsAPICodePack.xml
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.pdb
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.xml
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.pdb
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.xml
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\obj\Debug\Ganges33.Resources.resources
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\obj\Debug\Ganges33.vbproj.GenerateResource.cache
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\obj\Debug\Ganges33.vbproj.CoreCompileInputs.cache
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\obj\Debug\Ganges33.dll
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\obj\Debug\Ganges33.xml
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\obj\Debug\Ganges33.pdb
+E:\QMVAR2.0\LiveSourceMobile\Ganges33\obj\Debug\Ganges33.vbproj.AssemblyReference.cache
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\bin\Ganges33.dll.config
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\bin\Ganges33.dll
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\bin\Ganges33.pdb
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\bin\Ganges33.xml
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\bin\BouncyCastle.Crypto.dll
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\bin\GemBox.Spreadsheet.dll
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\bin\Microsoft.WindowsAPICodePack.dll
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.dll
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\bin\System.Security.Cryptography.Primitives.dll
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\bin\GemBox.Spreadsheet.xml
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\bin\Microsoft.WindowsAPICodePack.pdb
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\bin\Microsoft.WindowsAPICodePack.xml
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.pdb
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\bin\Microsoft.WindowsAPICodePack.Shell.xml
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.pdb
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\bin\Microsoft.WindowsAPICodePack.ShellExtensions.xml
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\obj\Debug\Ganges33.vbproj.AssemblyReference.cache
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\obj\Debug\Ganges33.Resources.resources
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\obj\Debug\Ganges33.vbproj.GenerateResource.cache
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\obj\Debug\Ganges33.vbproj.CoreCompileInputs.cache
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\obj\Debug\Ganges33.vbproj.CopyComplete
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\obj\Debug\Ganges33.dll
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\obj\Debug\Ganges33.xml
+D:\OldHarddrive\QMVAR\20220106\QMVAR2.0_20220106\QMVAR2.0_20220106\SOURCE\Ganges33\obj\Debug\Ganges33.pdb

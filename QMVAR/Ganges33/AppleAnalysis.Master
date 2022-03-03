@@ -1,0 +1,453 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="AppleAnalysis.master.vb" Inherits="Ganges33.AppleAnalysis" %>
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
+<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <%--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/start/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>--%>
+   
+
+<script type="text/javascript" src="ExternalStyles/Jquery/jquery.min.js"></script>
+     <script type="text/javascript" src="ExternalStyles/Jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="ExternalStyles/Jquery/a076d05399.js"></script>
+
+    <link href="ExternalStyles/Css/css.css" rel="stylesheet" />  
+    <link href="ExternalStyles/Css/font-awesome.min.css" rel="stylesheet" />  
+    <link href="ExternalStyles/Css/jquery-ui.css" rel="stylesheet" />
+
+  <!--     Fonts and icons     -->
+  <%--<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">--%>
+  <!-- CSS Files -->
+ <link href="assets/css/material-dashboard-rtl.css" rel="stylesheet" />
+<link href="assets/css/material-dashboard.css" rel="stylesheet" />
+<link href="assets/css/material-dashboard.min.css" rel="stylesheet" />
+  <%--<script src='https://kit.fontawesome.com/a076d05399.js'></script>--%>
+  <link href="assets/demo/demo.css" rel="stylesheet" />
+   <%--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/start/jquery-ui.css" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>--%>
+	 <link href="Styles/bootstrap.min.css"  rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <link href="Styles/bootstrap-multiselect.css" rel="stylesheet" type="text/css"/>
+    <script src="Scripts/bootstrap-multiselect.js" type="text/javascript"></script>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+     
+<script type="text/javascript">
+
+
+    $(function () {
+        $('[class*=date]').datepicker({
+            changeMonth: true,
+            changeYear: true,
+            yearRange: "0000:9999",
+            maxDate: new Date(),
+            dateFormat: 'yy/mm/dd'
+
+        });
+    });
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
+   <style>
+       .ie11.tablet input[type='radio'] {
+visibility: visible;
+}
+        
+p:hover {
+  color: black;
+}
+   .container{
+    -ms-overflow-style: none;
+    overflow: auto;
+
+}
+     .text{
+           text-transform:capitalize;
+       }
+
+ html, body { overflow: hidden; }
+       
+.nav-link[data-toggle].collapsed:before {
+    content: " ▾";
+    float:right;
+    font-size:30px;
+    margin-top:10px;
+    color:red;
+}
+
+.nav-link[data-toggle]:not(.collapsed):before {
+    content: " ▴";
+    float:right;
+    font-size:30px;
+    margin-top:5px;
+    color:red;
+}
+
+/* Closed submenu icon */
+#sidebar-container .list-group .list-group-item[aria-expanded="false"] .submenu-icon::after {
+  content: " \f0d7";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 10px;
+}
+/* Opened submenu icon */
+#sidebar-container .list-group .list-group-item[aria-expanded="true"] .submenu-icon::after {
+  content: " \f0da";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 10px;
+}
+
+.liactive
+{
+    background:#9c27b0;
+    color:white;
+}
+
+.btn_active {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    padding-left: 0px;
+    color: black;
+    cursor: pointer;
+}
+p.btn_active:hover
+{
+    color:black
+}
+.ui-dialog {
+	overflow: hidden;
+	position: absolute;
+	top: 300px;
+	left: 550px;
+	padding: .2em;
+	outline: 0;
+}
+
+        .asc:after {
+    content: ' \25BC';
+}
+       .dec:after {
+    content: ' \25B2';
+}
+       .sort:after {
+    content: ' \21C5';
+    margin-left:10px;
+}
+       .auto-style1 {
+           width: 100%;
+           height: 113px;
+       }
+       
+        td {
+      font-size: 17px;
+    line-height: 1.42857;
+    color: #171717;
+    font-weight: 500;
+}
+        .button {
+    // Remove focus around button
+    outline:none;  
+}
+    </style>
+    <script>
+       
+    </script>
+</head>
+<body  >
+    <form id="form1" runat="server">
+        <asp:Button ID="btnDisableEnter" runat="server" Text=""   OnClientClick="return false;" style="display: none;" />
+                   <asp:Panel ID="Panel1" runat="server" Height="47px" DefaultButton="btnDisableEnter"  HorizontalAlign ="Center">  
+
+      <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div style="margin-left:-24%">
+            <a class="navbar-brand" style="font-size:24px">QMVAR Apple ASP</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <div class="navbar-wrapper">
+              <a class="navbar-brand"><span class="navbar-icon"><i class="material-icons">place</i></span>
+                  <asp:Label ID="LblShipName" runat="server"></asp:Label>
+              </a>
+            </div>
+            <div class="navbar-wrapper">
+               <a class="navbar-brand"   href="#"  ><span class="navbar-icon"><i class="material-icons">person</i></span>
+                 <asp:Label ID="lblUser" data-toggle="tooltip" data-bs-placement="bottom"  title="" runat="server"></asp:Label>
+              </a>
+            </div>
+            <div class="navbar-wrapper" >
+             &nbsp;&nbsp;&nbsp;&nbsp;<span class="navbar-icon"><i class="material-icons">logout</i></span> <asp:button runat="server" CausesValidation="false" OnClick="BtnLogof_Click"  ID="BtnLogof"  text="Logout"   class="navbar-brand pull-right btntransprant"></asp:button>
+            </div>
+                
+             </div>
+          </div>
+            </nav>
+        </div>
+                       <div class="wrapper  ">
+
+         
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="assets/img/sidebar-1.jpg">
+      
+      <div class="logo"><a  class="simple-text logo-normal">
+        <asp:ImageButton ID="BtnHome" runat="server" src="assets/img/gss-logo.png" alt="responsive" style="height: 53px;width: 222px;" />
+        </a></div>
+      <div class="sidebar-wrapper menu scrollbar " id="style-10"">
+    
+
+        <ul class="nav">
+       
+            <li class="nav-item " id="Li3" runat="server">
+            
+                    
+                     <table class="auto-style1" style="width:250px;margin-left:20px" >
+                         <tr>
+                             <td>Po. No</td>
+                             <td>
+                                 <asp:TextBox ID="txtPoNo" runat="server" CssClass="form-file-upload serverlbl" Height="30px" Width="150px"></asp:TextBox>
+                             </td>
+                         </tr>
+                      <tr>
+                          <td style="height:10px"></td>
+                      </tr>
+                         <tr>
+                             <td>G. No</td>
+                             <td>
+                                 <asp:TextBox ID="txtGNo" runat="server" CssClass="form-file-upload serverlbl"  Height="30px"  Width="150px"></asp:TextBox>
+                             </td>
+                         </tr>
+
+                         <tr>
+                             <td>
+
+                             </td>
+                             <td>
+                                 <asp:CheckBox ID="chkTemp" runat="server" Text="Editable" Font-Size="XX-Small" />
+                             </td>
+                             <td></td>
+                         </tr>
+                         <tr>
+                             <td></td>
+                             <td>
+                                 <asp:Button ID="btnSearch" runat="server" CssClass="btn btn-primary text" style="width: 82px;height: 32px; font-size: 14px;" Text="Search" />
+                             </td>
+                             <td>&nbsp;</td>
+                         </tr>
+
+                          <tr>
+                          <td style="height:10px"></td>
+                      </tr>
+                         <tr>
+                             <td colspan="2">
+                                 <asp:Label ID="lblInfo" runat="server"></asp:Label>
+                             </td>
+                             
+                         </tr>
+                     </table>
+            
+                    
+          </li>   
+
+
+
+         
+
+
+
+            
+
+          <li class="nav-item " id="dashboard" runat="server">
+            <a class="nav-link" ID="btnPoGenerate" runat="server"  CausesValidation="false" href="#">
+              <i class="material-icons">update</i>
+              <p>Generate PO</p>
+                
+            </a>
+          </li>
+
+             <li class="nav-item " id="Li1" runat="server">
+                   
+            <a class="nav-link" ID="btnPoSearch" runat="server"  CausesValidation="false" href="#">
+            <i class="material-icons">search</i>
+              <p>
+                  PO/G NO Search
+                 </p>
+                
+            </a>
+          </li>   
+       
+             <li class="nav-item " id="Li2" runat="server">
+                   
+            <a ID="btnWaiting" runat="server"  CausesValidation="false" href="#">
+            <i >
+                <img src="icon/waiting.png" style="width:24px"/></i>
+             <p style="text-align:left;">
+                 Waiting List
+                 </p>
+                
+            </a>
+          </li>   
+             <li class="nav-item " id="Li4" runat="server">
+                   
+            <a ID="btnTokenLst" runat="server"  CausesValidation="false" href="#">
+            <i >
+                <img src="icon/token_list.jpg" style="width:24px"/></i>
+             <p style="text-align:left;">
+                 Token List
+                 </p>
+                
+            </a>
+          </li>   
+
+
+
+
+
+          
+      
+
+          <%-- <li class="nav-item " id="Li5" runat="server">
+                   
+            <a ID="btnDailySales" runat="server"  CausesValidation="false" href="#">
+            <i>             
+                <img src="icon/image1.png" style="width:24px"/></i>
+             <p style="text-align:left;">
+                 Daily Sales
+                 </p>
+                
+            </a>
+          </li>   
+
+
+          <li class="nav-item" >
+                    <a class="nav-link collapsed text-truncate" href="#submenu6" id="drp3" runat="server" data-toggle="collapse" data-target="#submenu6">
+           <i class="material-icons">person</i>
+          <p runat="server" id="admin">Master</p></a>
+                    <div class="collapse" id="submenu6" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav">
+               
+                            <li class="nav-item" style="margin-left: -5px;" ><a class="nav-link py-0" id="btnParts" CausesValidation="false"  runat="server" href="Apple_Parts_search.aspx"><i style="margin-top:7px;"><img src="icon/icons8-double-right-26.png" style="width:20px;"/></i><p>Parts</p></a></li>
+                                      <li class="nav-item" style="margin-left: -5px;" ><a class="nav-link py-0" id="A1" CausesValidation="false"  runat="server" href="Apple_Reword.aspx"><i style="margin-top:7px;"><img src="icon/icons8-double-right-26.png" style="width:20px;"/></i><p>Reward</p></a></li>
+                                      <li class="nav-item" style="margin-left: -5px;" ><a class="nav-link py-0" id="A2" CausesValidation="false"  runat="server" href="Apple_Model.aspx"><i style="margin-top:7px;"><img src="icon/icons8-double-right-26.png" style="width:20px;"/></i><p>Model</p></a></li>
+                                      
+
+                           
+                        </ul>
+                    </div>
+                </li>--%>
+
+    
+          <%--  --%>
+                 
+           <li class="nav-item " id="Li6" runat="server" style="margin-left:-4px;">
+                   
+            <a ID="btnAccInventory" runat="server"  CausesValidation="false" href="#">
+            <i>             
+                <img src="icon/inventry_01.jpeg" style="width:24px"/></i>
+             <p style="text-align:left;">
+                 ACC Inventory
+                 </p>
+                
+            </a>
+          </li>   
+                <%--<li class="nav-item" style="margin-left: -5px;" ><a class="nav-link py-0" id="A5" CausesValidation="false"  
+                    runat="server" ><i style="margin-top:7px;">
+                    <img src="icon/icons8-double-right-26.png" style="width:20px;"/></i><p>APP Inventory</p></a></li> --%>
+            <li class="nav-item " id="Li7" runat="server" style="margin-left:-4px;">
+                   
+            <a ID="btnAppInventory" runat="server" href="Apple_App_Inventory_Grid.aspx"  CausesValidation="false">
+            <i>             
+                <img src="icon/icons8-file-30.png" style="width:24px"/></i>
+             <p style="text-align:left;">
+                 APP Inventory
+                 </p>
+                
+            </a>
+          </li>  
+
+          
+            
+        </ul>
+          <div id="divAdmin" runat="server">
+          <ul class="nav">
+           <li class="nav-item " id="Li5" runat="server" style="margin-left:-4px;">
+                   
+            <a ID="btnDailySales" runat="server"  CausesValidation="false" href="#">
+            <i>             
+                <img src="icon/image1.png" style="width:24px"/></i>
+             <p style="text-align:left;">
+                 Daily Sales
+                 </p>
+                
+            </a>
+          </li>   
+
+
+       
+       
+
+
+
+
+
+
+          <li class="nav-item" >
+                    <a class="nav-link collapsed text-truncate" href="#submenu6" id="drp3" runat="server" data-toggle="collapse" data-target="#submenu6">
+           <i class="material-icons">person</i>
+          <p runat="server" id="admin">Master</p></a>
+                    <div class="collapse" id="submenu6" aria-expanded="false">
+                        <ul class="flex-column pl-2 nav">
+               
+                            <li class="nav-item" style="margin-left: -5px;" ><a class="nav-link py-0" id="btnParts" CausesValidation="false"  runat="server" href="Apple_Parts_search.aspx"><i style="margin-top:7px;"><img src="icon/icons8-double-right-26.png" style="width:20px;"/></i><p>Parts</p></a></li>
+                                      <li class="nav-item" style="margin-left: -5px;" ><a class="nav-link py-0" id="A1" CausesValidation="false"  runat="server" href="Apple_Reword.aspx"><i style="margin-top:7px;"><img src="icon/icons8-double-right-26.png" style="width:20px;"/></i><p>Reward</p></a></li>
+                                      <li class="nav-item" style="margin-left: -5px;" ><a class="nav-link py-0" id="A2" CausesValidation="false"  runat="server" href="Apple_Model.aspx"><i style="margin-top:7px;"><img src="icon/icons8-double-right-26.png" style="width:20px;"/></i><p>Model</p></a></li>
+                                      <li class="nav-item" style="margin-left: -5px;" ><a class="nav-link py-0" id="A3" CausesValidation="false"  runat="server" href="Apple_Analysis_Export.aspx"><i style="margin-top:7px;"><img src="icon/icons8-double-right-26.png" style="width:20px;"/></i><p>Export</p></a></li>
+                            <li class="nav-item" style="margin-left: -5px;" ><a class="nav-link py-0" id="A4" CausesValidation="false"  runat="server" href="Apple_Analysis_Upload.aspx"><i style="margin-top:7px;"><img src="icon/icons8-double-right-26.png" style="width:20px;"/></i><p>Upload</p></a></li>
+
+                           
+                           
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+              </div>
+      </div>
+             
+    </div>
+          </div> 
+         
+          
+     </asp:Panel>
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+    </form>
+
+    
+
+
+
+
+</body>  
+</html>

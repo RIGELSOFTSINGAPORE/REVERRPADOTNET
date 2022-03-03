@@ -1,0 +1,1 @@
+"C:\Python373\python.exe" C:\QMVAR2.0\LiveSource\Ganges33\Rpa\Tasks\V4.py 
