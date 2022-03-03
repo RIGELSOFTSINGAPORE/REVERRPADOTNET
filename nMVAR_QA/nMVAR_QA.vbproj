@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>7.10.3077</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1BD9EFC-F827-46EC-9ACF-692F94FD5F0D}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>earth.ico</ApplicationIcon>
+    <AssemblyKeyContainerName />
+    <AssemblyName>nMVAR_QA</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>nMVAR_QA</RootNamespace>
+    <StartupObject>nMVAR_QA.Menu</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>nMVAR_QA.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>nMVAR_QA.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveReports">
+      <HintPath>..\Sabeenasan_TSS\nMVAR_RAM2020-12-01\nMVAR\nMVAR\bin\ActiveReports.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.Interop">
+      <HintPath>..\Sabeenasan_TSS\nMVAR_RAM2020-12-01\nMVAR\nMVAR\bin\ActiveReports.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.PdfExport">
+      <HintPath>..\Sabeenasan_TSS\nMVAR_RAM2020-12-01\nMVAR\nMVAR\bin\ActiveReports.PdfExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.Viewer">
+      <HintPath>..\Sabeenasan_TSS\nMVAR_RAM2020-12-01\nMVAR\nMVAR\bin\ActiveReports.Viewer.dll</HintPath>
+    </Reference>
+    <Reference Include="Gcef.Data.DataEngine, Version=2.0.186.0, Culture=neutral, PublicKeyToken=0b5e1563d2869208, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Gcef.Data.DataEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Gcef.Data.ExpressionInfo, Version=2.0.186.0, Culture=neutral, PublicKeyToken=0b5e1563d2869208, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Gcef.Data.ExpressionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Gcef.Data.VBFunctionLib, Version=2.0.186.0, Culture=neutral, PublicKeyToken=0b5e1563d2869208, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Gcef.Data.VBFunctionLib.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Chart, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.DataProviders, Version=1.7.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Core.DataProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Drawing.Gc, Version=1.8.12.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Core.Drawing.Gc.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Drawing.Gdi, Version=1.8.12.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Core.Drawing.Gdi.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Excel.Page, Version=1.8.12.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Core.Export.Excel.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Html.Page, Version=1.8.12.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Core.Export.Html.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Image.Page, Version=1.8.12.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Core.Export.Image.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Pdf.Page, Version=1.8.12.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Core.Export.Pdf.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Svg.Page, Version=1.8.12.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Core.Export.Svg.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Text.Page, Version=1.8.12.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Core.Export.Text.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Word.Page, Version=1.8.12.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Core.Export.Word.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rdl, Version=1.8.12.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Core.Rdl.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rendering, Version=1.8.12.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Core.Rendering.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Design.Win, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Design.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.DesignerClassic, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.DesignerClassic.exe</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Document, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Document.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Excel, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Export.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Html, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Export.Html.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Image, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Export.Image.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Pdf, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Export.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Rdf, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Export.Rdf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Word, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Export.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Xml, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Export.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Imports.exe</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Access, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Imports.Access.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Crystal, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Imports.Crystal.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Excel, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Imports.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Rpx, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Imports.Rpx.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Win, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Imports.Win.exe</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Interop, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.ThemeEditor, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.ThemeEditor.exe</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Viewer, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Viewer.exe</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Viewer.Win, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Viewer.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Viewer.Wpf, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.Viewer.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.WpfViewer, Version=14.3.21004.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.ActiveReports.WpfViewer.exe</HintPath>
+    </Reference>
+    <Reference Include="Grapecity.DataVisualization, Version=0.1.248.0, Culture=neutral, PublicKeyToken=171ec59c7733b360, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Grapecity.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Common, Version=3.2.0.560, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.Documents.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Common.Windows, Version=3.2.0.560, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.Documents.Common.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.DX.Windows, Version=3.2.0.560, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.Documents.DX.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Imaging, Version=3.2.0.560, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.Documents.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Pdf, Version=3.2.0.560, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.Documents.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Framework.InputMan.v24, Version=2.4.4006.2012, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.Framework.InputMan.v24.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Editors.Design.v100, Version=10.0.4006.2012, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.Win.Editors.Design.v100.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Editors.v100, Version=10.0.4006.2012, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.Win.Editors.v100.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Input.Interop.v100, Version=10.0.4006.2012, Culture=neutral, PublicKeyToken=40ae1c5c604f43d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.Win.Input.Interop.v100.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Input.v20, Version=2.0.2003.1128, Culture=neutral, PublicKeyToken=c3bd7c1dccef5128">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\GrapeCity.Win.Input.v20.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.Microsoft.Office.Interop.Excel">
+      <HintPath>..\nMVAR\bin\Interop.Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.Office">
+      <HintPath>..\nMVAR\bin\Interop.Office.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.VBIDE">
+      <HintPath>..\nMVAR\bin\Interop.VBIDE.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\nMVAR\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataGridEx.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="F00_Form02.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form05.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form05_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form15.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form17.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F01_Form12.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F01_Form13.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F01_Form14.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F01_Form14_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F01_Form15.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F01_Form15_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F01_Form16.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F10_Form01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F70_Form01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F80_Form01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_DB.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module_Dim.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module_Start.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module_Sub.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="R_Azukari_Sheet1.vb">
+      <DependentUpon>R_Azukari_Sheet.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="SectionReport_R_Azukari_Sheet.Designer.vb">
+      <DependentUpon>SectionReport_R_Azukari_Sheet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Azukari_Sheet.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Fujitsu_Parts_Inq.Designer.vb">
+      <DependentUpon>SectionReport_R_Fujitsu_Parts_Inq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Fujitsu_Parts_Inq.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WaitDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Content Include="earth.ico" />
+    <EmbeddedResource Include="DataGridEx.resx">
+      <DependentUpon>DataGridEx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form02.resx">
+      <DependentUpon>F00_Form02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form05.resx">
+      <DependentUpon>F00_Form05.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form05_2.resx">
+      <DependentUpon>F00_Form05_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form06.resx">
+      <DependentUpon>F00_Form06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form15.resx">
+      <DependentUpon>F00_Form15.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form17.resx">
+      <DependentUpon>F00_Form17.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F01_Form12.resx">
+      <DependentUpon>F01_Form12.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F01_Form13.resx">
+      <DependentUpon>F01_Form13.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F01_Form14.resx">
+      <DependentUpon>F01_Form14.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F01_Form14_2.resx">
+      <DependentUpon>F01_Form14_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F01_Form15.resx">
+      <DependentUpon>F01_Form15.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F01_Form15_2.resx">
+      <DependentUpon>F01_Form15_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F01_Form16.resx">
+      <DependentUpon>F01_Form16.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F10_Form01.resx">
+      <DependentUpon>F10_Form01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F70_Form01.resx">
+      <DependentUpon>F70_Form01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F80_Form01.resx">
+      <DependentUpon>F80_Form01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Azukari_Sheet.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Azukari_Sheet1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Azukari_Sheet.resx">
+      <DependentUpon>SectionReport_R_Azukari_Sheet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Fujitsu_Parts_Inq.resx">
+      <DependentUpon>SectionReport_R_Fujitsu_Parts_Inq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitDialog.resx">
+      <DependentUpon>WaitDialog.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>
