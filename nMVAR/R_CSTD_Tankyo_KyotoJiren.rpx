@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ActiveReportsLayout Version="3.3" PrintWidth="13905" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: MS UI Gothic; font-style: normal; font-variant: inherit; font-weight: normal; font-size: 10pt; font-size-adjust: inherit; font-stretch: inherit; color: rgb(0,0,0); background-repeat: inherit; background-attachment: inherit; opacity: inherit; word-spacing: inherit; letter-spacing: inherit; text-decoration: none; vertical-align: inherit; text-transform: inherit; text-align: inherit; text-indent: inherit; unicode-bidi: inherit; line-height: inherit; white-space: inherit; ddo-char-set: 128" />
+    <Style Name="Heading1" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 16pt; font-size-adjust: inherit; font-stretch: inherit" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-style: italic; font-variant: inherit; font-weight: bold; font-size: 14pt; font-size-adjust: inherit; font-stretch: inherit" />
+    <Style Name="Heading3" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 13pt; font-size-adjust: inherit; font-stretch: inherit" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="Detail" Name="Detail" Height="6150" BackColor="16777215" NewPage="2">
+      <Control Type="AR.Field" Name="TextBox21" DataField="Expr21" Left="388.8" Top="2495.52" Width="2761.2" Height="316.8" Text="メーカー名" Multiline="0" CanGrow="0" Style="font-family: ＭＳ ゴシック; font-size: 9.75pt; text-align: left; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox31" DataField="Expr31" Left="6802.56" Top="2520" Width="1189.44" Height="362.8798" Text="単価" Multiline="0" CanGrow="0" Style="font-family: ＭＳ ゴシック; font-size: 14pt; text-align: right; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox04" DataField="Expr04" Left="8460" Top="1620" Width="1296" Height="336.96" Text="取引先ｺｰﾄﾞ" Multiline="0" CanGrow="0" Style="font-family: ＭＳ ゴシック; font-size: 10pt; text-align: center; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox06" DataField="Expr06" Left="11056.32" Top="1360.8" Width="2606.4" Height="302.4" Text="ｸﾞﾛｰﾊﾞﾙｿﾘｭｰｼｮﾝｻｰﾋﾞｽ㈱" CanGrow="0" Style="font-family: ＭＳ ゴシック; font-size: 9pt; font-weight: normal; text-align: left; vertical-align: top; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox25" DataField="Expr25" Left="630" Top="4230" Width="1801.44" Height="316.8" Text="管理番号" Multiline="0" CanGrow="0" Style="font-family: ＭＳ ゴシック; font-size: 9.75pt; text-align: left; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox02" DataField="Expr02" Left="388.8" Top="1425.6" Width="2534.4" Height="518.4" Text="店舗名" CanGrow="0" Style="font-family: ＭＳ ゴシック; font-size: 10pt; text-align: left; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox07" DataField="Expr07" Left="11056.32" Top="1663.2" Width="2606.4" Height="302.4" Text="クイックガレージ○○○" CanGrow="0" Style="font-family: ＭＳ ゴシック; font-size: 9pt; font-weight: normal; text-align: left; vertical-align: top; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox12" DataField="Expr12" Left="6750" Top="1586.88" Width="1518.48" Height="336.96" Text="yy/mm/dd" CanGrow="0" Style="font-family: ＭＳ ゴシック; font-size: 14pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox22" DataField="Expr22" Left="360" Top="2952" Width="2790" Height="316.8" Text="お客様名" Multiline="0" CanGrow="0" Style="font-family: ＭＳ ゴシック; font-size: 9.75pt; text-align: left; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox23" DataField="Expr23" Left="630.72" Top="3402.72" Width="1709.28" Height="316.8" Text="機種" Multiline="0" CanGrow="0" Style="font-family: ＭＳ ゴシック; font-size: 9.75pt; text-align: left; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label6" Left="5669.28" Top="2551.68" Width="432" Height="316.8" Caption="１" Style="background-color: White; font-family: ＭＳ ゴシック; font-size: 8.25pt; text-align: center; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox32" DataField="Expr31" Left="8568" Top="2520" Width="1189.44" Height="362.8798" Text="原価" Multiline="0" CanGrow="0" Style="font-family: ＭＳ ゴシック; font-size: 14pt; text-align: right; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox33" DataField="Expr31" Left="8568" Top="5580" Width="1189.44" Height="367.2002" Text="原価合計" Multiline="0" CanGrow="0" Style="font-family: ＭＳ ゴシック; font-size: 14pt; text-align: right; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label8" Left="90" Top="630" Width="3096" Height="576" Caption="大学生協京都事業連合" Style="background-color: White; font-family: ＭＳ ゴシック; font-size: 11.25pt; text-align: center; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox24" DataField="Expr24" Left="630" Top="3780" Width="1709.28" Height="316.8" Text="S/N" Multiline="0" CanGrow="0" Style="font-family: ＭＳ ゴシック; font-size: 9.75pt; text-align: left; vertical-align: middle; ddo-char-set: 1" />
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <PageSettings LeftMargin="288" RightMargin="0" TopMargin="432" BottomMargin="0" PaperSize="9" PaperWidth="11906" PaperHeight="16838" PaperName="" Orientation="2" />
+  <Parameters />
+</ActiveReportsLayout>

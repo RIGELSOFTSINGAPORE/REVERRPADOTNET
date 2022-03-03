@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3" PrintWidth="12120" DocumentName="ActiveReports Document" ScriptLang="C#" CodeFile="R_Haiso_Meitetu_Ren_EU_QGX.vb">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: MS UI Gothic; font-style: normal; font-variant: inherit; font-weight: normal; font-size: 10pt; font-size-adjust: inherit; font-stretch: inherit; color: rgb(0,0,0); background-repeat: inherit; background-attachment: inherit; opacity: inherit; word-spacing: inherit; letter-spacing: inherit; text-decoration: none; vertical-align: inherit; text-transform: inherit; text-align: inherit; text-indent: inherit; unicode-bidi: inherit; line-height: inherit; white-space: inherit; ddo-char-set: 128; " />
+    <Style Name="Heading1" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 16pt; font-size-adjust: inherit; font-stretch: inherit; " />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-style: italic; font-variant: inherit; font-weight: bold; font-size: 14pt; font-size-adjust: inherit; font-stretch: inherit; " />
+    <Style Name="Heading3" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 13pt; font-size-adjust: inherit; font-stretch: inherit; " />
+  </StyleSheet>
+  <Sections>
+    <Section Type="Detail" Name="Detail" Height="5730" BackColor="16777215" NewPage="2" CanShrink="0">
+      <Control Type="AR.Field" Name="TextBox01" MOD="4" Left="1324.8" Top="460.8" Width="432" Height="432" Text="yy" CanGrow="0" Style="ddo-char-set: 1; text-align: center; font-size: 11.25pt; font-family: ＭＳ ゴシック; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox02" MOD="4" Left="1900.8" Top="460.8" Width="432" Height="432" Text="mm" CanGrow="0" Style="ddo-char-set: 1; text-align: center; font-size: 11.25pt; font-family: ＭＳ ゴシック; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox03" MOD="4" Left="2476.8" Top="460.8" Width="432" Height="432" Text="dd" CanGrow="0" Style="ddo-char-set: 1; text-align: center; font-size: 11.25pt; font-family: ＭＳ ゴシック; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox3" DataField="tel1" MOD="4" Left="1656" Top="2476.8" Width="3024" Height="432" Text="お客様TEL" Multiline="0" CanGrow="0" Style="ddo-char-set: 1; text-align: left; font-size: 11.25pt; font-family: ＭＳ ゴシック; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox4" DataField="adrs1" MOD="4" Left="1656" Top="1152" Width="4176" Height="432" Text="お客様住所1" Multiline="0" CanGrow="0" Style="ddo-char-set: 1; text-align: left; font-size: 11.25pt; font-family: ＭＳ Ｐゴシック; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox5" DataField="adrs2" MOD="4" Left="1656" Top="1584" Width="4176" Height="432" Text="お客様住所2" Multiline="0" CanGrow="0" Style="ddo-char-set: 1; text-align: left; font-size: 11.25pt; font-family: ＭＳ Ｐゴシック; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox6" DataField="user_name" MOD="4" Left="1656" Top="2044.8" Width="3600" Height="432" Text="お客様名" Multiline="0" CanGrow="0" Style="ddo-char-set: 1; text-align: left; font-size: 11.25pt; font-family: ＭＳ Ｐゴシック; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox12" DataField="rcpt_no" MOD="4" Left="6120" Top="1152" Width="2754" Height="360" Text="管理番号" Multiline="0" CanGrow="0" Style="ddo-char-set: 1; text-align: left; font-size: 8.25pt; font-family: ＭＳ ゴシック; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label" MOD="4" Left="6192" Top="2520" Width="432" Height="450.72" Caption="１" Style="text-align: center; background-color: window; font-size: 18pt; vertical-align: middle; " />
+    </Section>
+  </Sections>
+  <PageSettings LeftMargin="720" RightMargin="0" TopMargin="144" BottomMargin="0" PaperSize="9" PaperWidth="11906" PaperHeight="16838" PaperName="5x11 ｲﾝﾁ" Orientation="2" />
+</ActiveReportsLayout>

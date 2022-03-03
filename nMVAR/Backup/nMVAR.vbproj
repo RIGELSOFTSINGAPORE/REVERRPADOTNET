@@ -1,0 +1,1977 @@
+<VisualStudioProject>
+    <VisualBasic
+        ProjectType = "Local"
+        ProductVersion = "7.10.3077"
+        SchemaVersion = "2.0"
+        ProjectGuid = "{3F4F7912-D852-40F3-8FEA-BA5D0BAF3499}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = "earth.ico"
+                AssemblyKeyContainerName = ""
+                AssemblyName = "nMVAR"
+                AssemblyOriginatorKeyFile = ""
+                AssemblyOriginatorKeyMode = "None"
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "WinExe"
+                OptionCompare = "Binary"
+                OptionExplicit = "On"
+                OptionStrict = "Off"
+                RootNamespace = "nMVAR"
+                StartupObject = "nMVAR.Menu00"
+            >
+                <Config
+                    Name = "Debug"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "true"
+                    DefineTrace = "true"
+                    DebugSymbols = "true"
+                    IncrementalBuild = "true"
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+                <Config
+                    Name = "Release"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "false"
+                    DefineTrace = "true"
+                    DebugSymbols = "false"
+                    IncrementalBuild = "false"
+                    Optimize = "true"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                />
+                <Reference
+                    Name = "System.Windows.Forms"
+                    AssemblyName = "System.Windows.Forms"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+                <Reference
+                    Name = "GrapeCity.Win.Input.v20"
+                    AssemblyName = "GrapeCity.Win.Input.v20"
+                    HintPath = "C:\Program Files\InputManNETwin2\Bin\GrapeCity.Win.Input.v20.dll"
+                    AssemblyFolderKey = "hklm\inputmannet2"
+                />
+                <Reference
+                    Name = "System.Design"
+                    AssemblyName = "System.Design"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.Design.dll"
+                />
+                <Reference
+                    Name = "Microsoft.VisualBasic"
+                    AssemblyName = "Microsoft.VisualBasic"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\Microsoft.VisualBasic.dll"
+                />
+                <Reference
+                    Name = "ActiveReports"
+                    AssemblyName = "ActiveReports"
+                    HintPath = "C:\PROGRA~1\ACTIVE~1\Bin\ActiveReports.dll"
+                    Private = "True"
+                />
+                <Reference
+                    Name = "ActiveReports.Viewer"
+                    AssemblyName = "ActiveReports.Viewer"
+                    HintPath = "C:\PROGRA~1\ACTIVE~1\Bin\ActiveReports.Viewer.dll"
+                    Private = "False"
+                />
+                <Reference
+                    Name = "GrapeCity.Win.Input.Design.v20"
+                    AssemblyName = "GrapeCity.Win.Input.Design.v20"
+                    HintPath = "C:\Program Files\InputManNETwin2\Bin\GrapeCity.Win.Input.Design.v20.dll"
+                    AssemblyFolderKey = "hklm\inputmannet2"
+                />
+                <Reference
+                    Name = "Excel"
+                    Guid = "{00020813-0000-0000-C000-000000000046}"
+                    VersionMajor = "1"
+                    VersionMinor = "5"
+                    Lcid = "0"
+                    WrapperTool = "tlbimp"
+                />
+                <Reference
+                    Name = "ActiveReports.PdfExport"
+                    AssemblyName = "ActiveReports.PdfExport"
+                    HintPath = "C:\PROGRA~1\ACTIVE~1\Bin\ActiveReports.PdfExport.dll"
+                />
+                <Reference
+                    Name = "System.DirectoryServices"
+                    AssemblyName = "System.DirectoryServices"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.1.4322\System.DirectoryServices.dll"
+                />
+                <Reference
+                    Name = "ActiveDs"
+                    Guid = "{97D25DB0-0363-11CF-ABC4-02608C9E7553}"
+                    VersionMajor = "1"
+                    VersionMinor = "0"
+                    Lcid = "0"
+                    WrapperTool = "tlbimp"
+                />
+                <Reference
+                    Name = "Office"
+                    Guid = "{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}"
+                    VersionMajor = "2"
+                    VersionMinor = "1"
+                    Lcid = "0"
+                    WrapperTool = "tlbimp"
+                />
+                <Reference
+                    Name = "Microsoft.Office.Interop.Excel"
+                    Guid = "{00020813-0000-0000-C000-000000000046}"
+                    VersionMajor = "1"
+                    VersionMinor = "7"
+                    Lcid = "0"
+                    WrapperTool = "tlbimp"
+                />
+                <Reference
+                    Name = "VBIDE"
+                    Guid = "{0002E157-0000-0000-C000-000000000046}"
+                    VersionMajor = "5"
+                    VersionMinor = "3"
+                    Lcid = "0"
+                    WrapperTool = "tlbimp"
+                />
+            </References>
+            <Imports>
+                <Import Namespace = "Microsoft.VisualBasic" />
+                <Import Namespace = "System" />
+                <Import Namespace = "System.Collections" />
+                <Import Namespace = "System.Data" />
+                <Import Namespace = "System.Drawing" />
+                <Import Namespace = "System.Diagnostics" />
+                <Import Namespace = "System.Windows.Forms" />
+            </Imports>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Class1.vb"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Class1.resx"
+                    DependentUpon = "Class1.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "DataGridEx.vb"
+                    SubType = "Component"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "DataGridEx.resx"
+                    DependentUpon = "DataGridEx.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "earth.ico"
+                    BuildAction = "Content"
+                />
+                <File
+                    RelPath = "F00_Form01.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form01.resx"
+                    DependentUpon = "F00_Form01.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form02.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form02.resx"
+                    DependentUpon = "F00_Form02.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form03.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form03.resx"
+                    DependentUpon = "F00_Form03.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form03_2.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form03_2.resx"
+                    DependentUpon = "F00_Form03_2.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form04.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form04.resx"
+                    DependentUpon = "F00_Form04.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form05.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form05.resx"
+                    DependentUpon = "F00_Form05.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form05_2.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form05_2.resx"
+                    DependentUpon = "F00_Form05_2.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form06.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form06.resx"
+                    DependentUpon = "F00_Form06.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form07.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form07.resx"
+                    DependentUpon = "F00_Form07.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form07_2.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form07_2.resx"
+                    DependentUpon = "F00_Form07_2.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form09.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form09.resx"
+                    DependentUpon = "F00_Form09.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form10.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form10.resx"
+                    DependentUpon = "F00_Form10.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form10_2.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form10_2.resx"
+                    DependentUpon = "F00_Form10_2.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form11.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form11.resx"
+                    DependentUpon = "F00_Form11.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form12.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form12.resx"
+                    DependentUpon = "F00_Form12.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form13.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form13.resx"
+                    DependentUpon = "F00_Form13.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form14.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form14.resx"
+                    DependentUpon = "F00_Form14.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form15.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form15.resx"
+                    DependentUpon = "F00_Form15.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form16.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form16.resx"
+                    DependentUpon = "F00_Form16.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form17.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form17.resx"
+                    DependentUpon = "F00_Form17.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F00_Form18.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F00_Form18.resx"
+                    DependentUpon = "F00_Form18.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F10_Form01.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F10_Form01.resx"
+                    DependentUpon = "F10_Form01.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F10_Form02.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F10_Form02.resx"
+                    DependentUpon = "F10_Form02.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F10_Form11.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F10_Form11.resx"
+                    DependentUpon = "F10_Form11.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F10_Form12.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F10_Form12.resx"
+                    DependentUpon = "F10_Form12.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F10_Form13.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F10_Form13.resx"
+                    DependentUpon = "F10_Form13.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F10_Form21.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F10_Form21.resx"
+                    DependentUpon = "F10_Form21.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F10_Form22.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F10_Form22.resx"
+                    DependentUpon = "F10_Form22.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F10_Form51.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F10_Form51.resx"
+                    DependentUpon = "F10_Form51.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F10_Form52.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F10_Form52.resx"
+                    DependentUpon = "F10_Form52.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F10_Form84.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F10_Form84.resx"
+                    DependentUpon = "F10_Form84.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F70_Form01.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F70_Form01.resx"
+                    DependentUpon = "F70_Form01.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F70_Form02.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F70_Form02.resx"
+                    DependentUpon = "F70_Form02.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F80_Form01.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F80_Form01.resx"
+                    DependentUpon = "F80_Form01.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "F99_WK.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "F99_WK.resx"
+                    DependentUpon = "F99_WK.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "licenses.licx"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Menu00.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Menu00.resx"
+                    DependentUpon = "Menu00.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Menu10.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Menu10.resx"
+                    DependentUpon = "Menu10.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "Module_DB.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Module_Dim.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Module_Sub.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Print_View.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Print_View.resx"
+                    DependentUpon = "Print_View.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "R_Azukari_Sheet.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Azukari_Sheet.vb"
+                />
+                <File
+                    RelPath = "R_Azukari_Sheet.vb"
+                    DependentUpon = "R_Azukari_Sheet.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_CSTD_Normal.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_CSTD_Normal.vb"
+                />
+                <File
+                    RelPath = "R_CSTD_Normal.vb"
+                    DependentUpon = "R_CSTD_Normal.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_CSTD_Tankyo_KyotoJiren.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_CSTD_Tankyo_KyotoJiren.vb"
+                />
+                <File
+                    RelPath = "R_CSTD_Tankyo_KyotoJiren.vb"
+                    DependentUpon = "R_CSTD_Tankyo_KyotoJiren.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Fujitsu_Parts_Inq.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Fujitsu_Parts_Inq.vb"
+                />
+                <File
+                    RelPath = "R_Fujitsu_Parts_Inq.vb"
+                    DependentUpon = "R_Fujitsu_Parts_Inq.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Fukuyama_Ren_EU_QG.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Fukuyama_Ren_EU_QG.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Fukuyama_Ren_EU_QG.vb"
+                    DependentUpon = "R_Haiso_Fukuyama_Ren_EU_QG.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Fukuyama_Ren_EU_QGX.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Fukuyama_Ren_EU_QGX.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Fukuyama_Ren_EU_QGX.vb"
+                    DependentUpon = "R_Haiso_Fukuyama_Ren_EU_QGX.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Fukuyama_Ren_Hansya_QG.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Fukuyama_Ren_Hansya_QG.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Fukuyama_Ren_Hansya_QG.vb"
+                    DependentUpon = "R_Haiso_Fukuyama_Ren_Hansya_QG.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Fukuyama_Ren_Hansya_QGX.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Fukuyama_Ren_Hansya_QGX.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Fukuyama_Ren_Hansya_QGX.vb"
+                    DependentUpon = "R_Haiso_Fukuyama_Ren_Hansya_QGX.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Meitetu_Ren_EU_QG.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Meitetu_Ren_EU_QG.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Meitetu_Ren_EU_QG.vb"
+                    DependentUpon = "R_Haiso_Meitetu_Ren_EU_QG.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Meitetu_Ren_EU_QGX.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Meitetu_Ren_EU_QGX.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Meitetu_Ren_EU_QGX.vb"
+                    DependentUpon = "R_Haiso_Meitetu_Ren_EU_QGX.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Meitetu_Ren_Hansya_QG.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Meitetu_Ren_Hansya_QG.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Meitetu_Ren_Hansya_QG.vb"
+                    DependentUpon = "R_Haiso_Meitetu_Ren_Hansya_QG.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Meitetu_Ren_Hansya_QGX.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Meitetu_Ren_Hansya_QGX.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Meitetu_Ren_Hansya_QGX.vb"
+                    DependentUpon = "R_Haiso_Meitetu_Ren_Hansya_QGX.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Nittsu_Ren_EU_QG.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Nittsu_Ren_EU_QG.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Nittsu_Ren_EU_QG.vb"
+                    DependentUpon = "R_Haiso_Nittsu_Ren_EU_QG.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Nittsu_Ren_EU_QGX.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Nittsu_Ren_EU_QGX.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Nittsu_Ren_EU_QGX.vb"
+                    DependentUpon = "R_Haiso_Nittsu_Ren_EU_QGX.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Nittsu_Ren_Hansya_QG.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Nittsu_Ren_Hansya_QG.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Nittsu_Ren_Hansya_QG.vb"
+                    DependentUpon = "R_Haiso_Nittsu_Ren_Hansya_QG.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Nittsu_Ren_Hansya_QGX.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Nittsu_Ren_Hansya_QGX.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Nittsu_Ren_Hansya_QGX.vb"
+                    DependentUpon = "R_Haiso_Nittsu_Ren_Hansya_QGX.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Sagawa_GwNote.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Sagawa_GwNote.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Sagawa_GwNote.vb"
+                    DependentUpon = "R_Haiso_Sagawa_GwNote.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Seibu_Tan_EU_QG.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Seibu_Tan_EU_QG.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Seibu_Tan_EU_QG.vb"
+                    DependentUpon = "R_Haiso_Seibu_Tan_EU_QG.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Seibu_Tan_EU_QGX.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Seibu_Tan_EU_QGX.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Seibu_Tan_EU_QGX.vb"
+                    DependentUpon = "R_Haiso_Seibu_Tan_EU_QGX.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Seibu_Tan_Hansya_QG.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Seibu_Tan_Hansya_QG.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Seibu_Tan_Hansya_QG.vb"
+                    DependentUpon = "R_Haiso_Seibu_Tan_Hansya_QG.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Seibu_Tan_Hansya_QGX.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Seibu_Tan_Hansya_QGX.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Seibu_Tan_Hansya_QGX.vb"
+                    DependentUpon = "R_Haiso_Seibu_Tan_Hansya_QGX.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_SuperPerikan_Ren_EU_QG.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_SuperPerikan_Ren_EU_QG.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_SuperPerikan_Ren_EU_QG.vb"
+                    DependentUpon = "R_Haiso_SuperPerikan_Ren_EU_QG.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_SuperPerikan_Ren_EU_QGX.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_SuperPerikan_Ren_EU_QGX.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_SuperPerikan_Ren_EU_QGX.vb"
+                    DependentUpon = "R_Haiso_SuperPerikan_Ren_EU_QGX.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_SuperPerikan_Ren_Hansya_QG.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_SuperPerikan_Ren_Hansya_QG.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_SuperPerikan_Ren_Hansya_QG.vb"
+                    DependentUpon = "R_Haiso_SuperPerikan_Ren_Hansya_QG.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_SuperPerikan_Ren_Hansya_QGX.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_SuperPerikan_Ren_Hansya_QGX.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_SuperPerikan_Ren_Hansya_QGX.vb"
+                    DependentUpon = "R_Haiso_SuperPerikan_Ren_Hansya_QGX.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_SuperPerikan_Tan_EU_QG.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_SuperPerikan_Tan_EU_QG.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_SuperPerikan_Tan_EU_QG.vb"
+                    DependentUpon = "R_Haiso_SuperPerikan_Tan_EU_QG.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_SuperPerikan_Tan_EU_QGX.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_SuperPerikan_Tan_EU_QGX.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_SuperPerikan_Tan_EU_QGX.vb"
+                    DependentUpon = "R_Haiso_SuperPerikan_Tan_EU_QGX.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_SuperPerikan_Tan_Hansya_QG.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_SuperPerikan_Tan_Hansya_QG.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_SuperPerikan_Tan_Hansya_QG.vb"
+                    DependentUpon = "R_Haiso_SuperPerikan_Tan_Hansya_QG.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_SuperPerikan_Tan_Hansya_QGX.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_SuperPerikan_Tan_Hansya_QGX.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_SuperPerikan_Tan_Hansya_QGX.vb"
+                    DependentUpon = "R_Haiso_SuperPerikan_Tan_Hansya_QGX.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_ToToshiba_Seibu_Ren.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_ToToshiba_Seibu_Ren.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_ToToshiba_Seibu_Ren.vb"
+                    DependentUpon = "R_Haiso_ToToshiba_Seibu_Ren.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Yamato_DOS_EU_QGX.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Yamato_DOS_EU_QGX.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Yamato_DOS_EU_QGX.vb"
+                    DependentUpon = "R_Haiso_Yamato_DOS_EU_QGX.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Yamato_Ren_EU_QG.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Yamato_Ren_EU_QG.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Yamato_Ren_EU_QG.vb"
+                    DependentUpon = "R_Haiso_Yamato_Ren_EU_QG.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Yamato_Ren_EU_QGX.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Yamato_Ren_EU_QGX.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Yamato_Ren_EU_QGX.vb"
+                    DependentUpon = "R_Haiso_Yamato_Ren_EU_QGX.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Yamato_Ren_Hansya_QG.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Yamato_Ren_Hansya_QG.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Yamato_Ren_Hansya_QG.vb"
+                    DependentUpon = "R_Haiso_Yamato_Ren_Hansya_QG.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Haiso_Yamato_Ren_Hansya_QGX.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Haiso_Yamato_Ren_Hansya_QGX.vb"
+                />
+                <File
+                    RelPath = "R_Haiso_Yamato_Ren_Hansya_QGX.vb"
+                    DependentUpon = "R_Haiso_Yamato_Ren_Hansya_QGX.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_HP_Exc_TAG.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_HP_Exc_TAG.vb"
+                />
+                <File
+                    RelPath = "R_HP_Exc_TAG.vb"
+                    DependentUpon = "R_HP_Exc_TAG.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_HP_Parts_Order.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_HP_Parts_Order.vb"
+                />
+                <File
+                    RelPath = "R_HP_Parts_Order.vb"
+                    DependentUpon = "R_HP_Parts_Order.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_IBM_IW_Report.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_IBM_IW_Report.vb"
+                />
+                <File
+                    RelPath = "R_IBM_IW_Report.vb"
+                    DependentUpon = "R_IBM_IW_Report.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Inquiry_Apple_teigaku_Inq.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Inquiry_Apple_teigaku_Inq.vb"
+                />
+                <File
+                    RelPath = "R_Inquiry_Apple_teigaku_Inq.vb"
+                    DependentUpon = "R_Inquiry_Apple_teigaku_Inq.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Inquiry_Data.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Inquiry_Data.vb"
+                />
+                <File
+                    RelPath = "R_Inquiry_Data.vb"
+                    DependentUpon = "R_Inquiry_Data.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Inquiry_DataRcvy1.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Inquiry_DataRcvy1.vb"
+                />
+                <File
+                    RelPath = "R_Inquiry_DataRcvy1.vb"
+                    DependentUpon = "R_Inquiry_DataRcvy1.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Inquiry_Doukonbutu_Inq.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Inquiry_Doukonbutu_Inq.vb"
+                />
+                <File
+                    RelPath = "R_Inquiry_Doukonbutu_Inq.vb"
+                    DependentUpon = "R_Inquiry_Doukonbutu_Inq.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Inquiry_EOS_Inq.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Inquiry_EOS_Inq.vb"
+                />
+                <File
+                    RelPath = "R_Inquiry_EOS_Inq.vb"
+                    DependentUpon = "R_Inquiry_EOS_Inq.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Inquiry_Free_Inq.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Inquiry_Free_Inq.vb"
+                />
+                <File
+                    RelPath = "R_Inquiry_Free_Inq.vb"
+                    DependentUpon = "R_Inquiry_Free_Inq.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Inquiry_Hosyomore_Inq.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Inquiry_Hosyomore_Inq.vb"
+                />
+                <File
+                    RelPath = "R_Inquiry_Hosyomore_Inq.vb"
+                    DependentUpon = "R_Inquiry_Hosyomore_Inq.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Inquiry_NTF.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Inquiry_NTF.vb"
+                />
+                <File
+                    RelPath = "R_Inquiry_NTF.vb"
+                    DependentUpon = "R_Inquiry_NTF.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Inquiry_Password.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Inquiry_Password.vb"
+                />
+                <File
+                    RelPath = "R_Inquiry_Password.vb"
+                    DependentUpon = "R_Inquiry_Password.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Inquiry_Siriaru_Inq.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Inquiry_Siriaru_Inq.vb"
+                />
+                <File
+                    RelPath = "R_Inquiry_Siriaru_Inq.vb"
+                    DependentUpon = "R_Inquiry_Siriaru_Inq.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Inquiry_Tenjiki_Inq.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Inquiry_Tenjiki_Inq.vb"
+                />
+                <File
+                    RelPath = "R_Inquiry_Tenjiki_Inq.vb"
+                    DependentUpon = "R_Inquiry_Tenjiki_Inq.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Inquiry_Tenpusyo_Inq.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Inquiry_Tenpusyo_Inq.vb"
+                />
+                <File
+                    RelPath = "R_Inquiry_Tenpusyo_Inq.vb"
+                    DependentUpon = "R_Inquiry_Tenpusyo_Inq.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Apple.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Mitsumori_Apple.vb"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Apple.vb"
+                    DependentUpon = "R_Mitsumori_Apple.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Bic_EU_NU.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Mitsumori_Bic_EU_NU.vb"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Bic_EU_NU.vb"
+                    DependentUpon = "R_Mitsumori_Bic_EU_NU.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Mitsumori_BICCamera.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Mitsumori_BICCamera.vb"
+                />
+                <File
+                    RelPath = "R_Mitsumori_BICCamera.vb"
+                    DependentUpon = "R_Mitsumori_BICCamera.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Mitsumori_BicEU.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Mitsumori_BicEU.vb"
+                />
+                <File
+                    RelPath = "R_Mitsumori_BicEU.vb"
+                    DependentUpon = "R_Mitsumori_BicEU.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Mitsumori_BICMK.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Mitsumori_BICMK.vb"
+                />
+                <File
+                    RelPath = "R_Mitsumori_BICMK.vb"
+                    DependentUpon = "R_Mitsumori_BICMK.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Eiden.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Mitsumori_Eiden.vb"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Eiden.vb"
+                    DependentUpon = "R_Mitsumori_Eiden.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Joshin.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Mitsumori_Joshin.vb"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Joshin.vb"
+                    DependentUpon = "R_Mitsumori_Joshin.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Mitsumori_kojima.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Mitsumori_kojima.vb"
+                />
+                <File
+                    RelPath = "R_Mitsumori_kojima.vb"
+                    DependentUpon = "R_Mitsumori_kojima.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Mitsumori_kyotorengo.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Mitsumori_kyotorengo.vb"
+                />
+                <File
+                    RelPath = "R_Mitsumori_kyotorengo.vb"
+                    DependentUpon = "R_Mitsumori_kyotorengo.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Normal.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Mitsumori_Normal1.vb"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Normal1.vb"
+                    DependentUpon = "R_Mitsumori_Normal.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Normal_Hansya.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Mitsumori_Normal_Hansya.vb"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Normal_Hansya.vb"
+                    DependentUpon = "R_Mitsumori_Normal_Hansya.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Normal_Teigaku.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Mitsumori_Normal_Teigaku.vb"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Normal_Teigaku.vb"
+                    DependentUpon = "R_Mitsumori_Normal_Teigaku.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Seikyo_Menseki5k.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Mitsumori_Seikyo_Menseki5k.vb"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Seikyo_Menseki5k.vb"
+                    DependentUpon = "R_Mitsumori_Seikyo_Menseki5k.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Seikyo_Normal.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Mitsumori_Seikyo_Normal1.vb"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Seikyo_Normal1.vb"
+                    DependentUpon = "R_Mitsumori_Seikyo_Normal.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Seikyo_QGCARE.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Mitsumori_Seikyo_QGCARE.vb"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Seikyo_QGCARE.vb"
+                    DependentUpon = "R_Mitsumori_Seikyo_QGCARE.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Mitsumori_SOFMAP.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Mitsumori_SOFMAP.vb"
+                />
+                <File
+                    RelPath = "R_Mitsumori_SOFMAP.vb"
+                    DependentUpon = "R_Mitsumori_SOFMAP.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Mitsumori_SOFMAP_OLC.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Mitsumori_SOFMAP_OLC.vb"
+                />
+                <File
+                    RelPath = "R_Mitsumori_SOFMAP_OLC.vb"
+                    DependentUpon = "R_Mitsumori_SOFMAP_OLC.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Mitsumori_softbank.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Mitsumori_softbank.vb"
+                />
+                <File
+                    RelPath = "R_Mitsumori_softbank.vb"
+                    DependentUpon = "R_Mitsumori_softbank.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Yodobashi.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Mitsumori_Yodobashi.vb"
+                />
+                <File
+                    RelPath = "R_Mitsumori_Yodobashi.vb"
+                    DependentUpon = "R_Mitsumori_Yodobashi.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_NCR_CCAR.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_NCR_CCAR.vb"
+                />
+                <File
+                    RelPath = "R_NCR_CCAR.vb"
+                    DependentUpon = "R_NCR_CCAR.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_NEC_Parts_Inq.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_NEC_Parts_Inq.vb"
+                />
+                <File
+                    RelPath = "R_NEC_Parts_Inq.vb"
+                    DependentUpon = "R_NEC_Parts_Inq.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_NEVA.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_NEVA1.vb"
+                />
+                <File
+                    RelPath = "R_NEVA1.vb"
+                    DependentUpon = "R_NEVA.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_NEVA_DEODEO.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_NEVA_DEODEO.vb"
+                />
+                <File
+                    RelPath = "R_NEVA_DEODEO.vb"
+                    DependentUpon = "R_NEVA_DEODEO.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_NEVA_Kojima.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_NEVA_Kojima.vb"
+                />
+                <File
+                    RelPath = "R_NEVA_Kojima.vb"
+                    DependentUpon = "R_NEVA_Kojima.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_NEVA_New_kojima.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_NEVA_New_kojima.vb"
+                />
+                <File
+                    RelPath = "R_NEVA_New_kojima.vb"
+                    DependentUpon = "R_NEVA_New_kojima.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_QGCare.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_QGCare.vb"
+                />
+                <File
+                    RelPath = "R_QGCare.vb"
+                    DependentUpon = "R_QGCare.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_Apple.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_Apple.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_Apple.vb"
+                    DependentUpon = "R_Sagyou_Report_Apple.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_Bic_EU.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_Bic_EU.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_Bic_EU.vb"
+                    DependentUpon = "R_Sagyou_Report_Bic_EU.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_BIC_EU_NMK.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_BIC_EU_NMK.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_BIC_EU_NMK.vb"
+                    DependentUpon = "R_Sagyou_Report_BIC_EU_NMK.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_BIC_EU_NU.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_BIC_EU_NU.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_BIC_EU_NU.vb"
+                    DependentUpon = "R_Sagyou_Report_BIC_EU_NU.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_BIC_NMK.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_BIC_NMK.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_BIC_NMK.vb"
+                    DependentUpon = "R_Sagyou_Report_BIC_NMK.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_BicGSS.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_BicGSS.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_BicGSS.vb"
+                    DependentUpon = "R_Sagyou_Report_BicGSS.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_DosPara.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_DosPara.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_DosPara.vb"
+                    DependentUpon = "R_Sagyou_Report_DosPara.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_EU_syanasi.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_EU_syanasi.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_EU_syanasi.vb"
+                    DependentUpon = "R_Sagyou_Report_EU_syanasi.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_jyoshin_apple_EU.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_jyoshin_apple_EU.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_jyoshin_apple_EU.vb"
+                    DependentUpon = "R_Sagyou_Report_jyoshin_apple_EU.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_Kojima.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_Kojima.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_Kojima.vb"
+                    DependentUpon = "R_Sagyou_Report_Kojima.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_Kojima_0.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_Kojima_0.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_Kojima_0.vb"
+                    DependentUpon = "R_Sagyou_Report_Kojima_0.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_KS_EU.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_KS_EU.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_KS_EU.vb"
+                    DependentUpon = "R_Sagyou_Report_KS_EU.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_kyotoseikyo.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_kyotoseikyo.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_kyotoseikyo.vb"
+                    DependentUpon = "R_Sagyou_Report_kyotoseikyo.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_Normal.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_Normal.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_Normal.vb"
+                    DependentUpon = "R_Sagyou_Report_Normal.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_Normal_Teigaku.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_Normal_Teigaku.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_Normal_Teigaku.vb"
+                    DependentUpon = "R_Sagyou_Report_Normal_Teigaku.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_QAC.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_QAC.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_QAC.vb"
+                    DependentUpon = "R_Sagyou_Report_QAC.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_Seikyo_EU.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_Seikyo_EU.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_Seikyo_EU.vb"
+                    DependentUpon = "R_Sagyou_Report_Seikyo_EU.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_SofmapOLC.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_SofmapOLC.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_SofmapOLC.vb"
+                    DependentUpon = "R_Sagyou_Report_SofmapOLC.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_SofmapStore.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_SofmapStore.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_SofmapStore.vb"
+                    DependentUpon = "R_Sagyou_Report_SofmapStore.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_softbank.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_softbank.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_softbank.vb"
+                    DependentUpon = "R_Sagyou_Report_softbank.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_Yodobashi_EU.rpx"
+                    BuildAction = "EmbeddedResource"
+                    Generator = "ARVSPackage.VBCodeGenerator"
+                    LastGenOutput = "R_Sagyou_Report_Yodobashi_EU.vb"
+                />
+                <File
+                    RelPath = "R_Sagyou_Report_Yodobashi_EU.vb"
+                    DependentUpon = "R_Sagyou_Report_Yodobashi_EU.rpx"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "WaitDialog.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "WaitDialog.resx"
+                    DependentUpon = "WaitDialog.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+            </Include>
+        </Files>
+    </VisualBasic>
+</VisualStudioProject>
+

@@ -1,0 +1,2483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>7.10.3077</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3F4F7912-D852-40F3-8FEA-BA5D0BAF3499}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>earth.ico</ApplicationIcon>
+    <AssemblyKeyContainerName />
+    <AssemblyName>nMVAR</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>nMVAR</RootNamespace>
+    <StartupObject>nMVAR.Menu00</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>nMVAR.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>nMVAR.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <COMReference Include="ActiveDs">
+      <Guid>{97D25DB0-0363-11CF-ABC4-02608C9E7553}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="Office">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <Reference Include="ActiveReports">
+      <Name>ActiveReports</Name>
+      <HintPath>C:\PROGRA~1\ACTIVE~1\Bin\ActiveReports.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActiveReports.Interop">
+      <HintPath>..\..\..\2020-11-04\20201104nQGCarevsup\nQGCare\bin\ActiveReports.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.PdfExport">
+      <Name>ActiveReports.PdfExport</Name>
+      <HintPath>..\..\..\2020-11-04\20201104nQGCarevsup\nQGCare\bin\ActiveReports.PdfExport.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveReports.Viewer">
+      <HintPath>..\..\..\..\..\..\..\Prabu\QMVAR\nMVAR\nMVAR\nMVAR program source\Sabeenasan_TSS\nMVAR_RAM2020-12-01\nMVAR\nMVAR\bin\ActiveReports.Viewer.dll</HintPath>
+    </Reference>
+    <Reference Include="Gcef.Data.DataEngine, Version=2.0.184.0, Culture=neutral, PublicKeyToken=0b5e1563d2869208, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\Gcef.Data.DataEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Gcef.Data.ExpressionInfo, Version=2.0.184.0, Culture=neutral, PublicKeyToken=0b5e1563d2869208, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\Gcef.Data.ExpressionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Gcef.Data.VBFunctionLib, Version=2.0.184.0, Culture=neutral, PublicKeyToken=0b5e1563d2869208, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\Gcef.Data.VBFunctionLib.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Chart, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.DataProviders, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.DataProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Drawing.Gc, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Drawing.Gc.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Drawing.Gdi, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Drawing.Gdi.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Excel.Page, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Excel.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Html.Page, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Html.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Image.Page, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Image.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Pdf.Page, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Pdf.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Svg.Page, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Svg.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Text.Page, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Text.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Export.Word.Page, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Export.Word.Page.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rdl, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Rdl.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Core.Rendering, Version=1.6.1.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Core.Rendering.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Design.Win, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Design.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.DesignerClassic, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.DesignerClassic.exe</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Document, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Document.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Excel, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Html, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Html.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Image, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Image.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Pdf, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Rdf, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Rdf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Word, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Export.Xml, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Export.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Imports.exe</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Access, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Imports.Access.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Crystal, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Imports.Crystal.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Excel, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Imports.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Rpx, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Imports.Rpx.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Imports.Win">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Imports.Win.exe</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Interop, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.ThemeEditor">
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.ThemeEditor.exe</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Viewer, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Viewer.exe</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Viewer.Win, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Viewer.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.Viewer.Wpf, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.Viewer.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.ActiveReports.WpfViewer, Version=14.0.19813.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.ActiveReports.WpfViewer.exe</HintPath>
+    </Reference>
+    <Reference Include="Grapecity.DataVisualization, Version=0.1.239.0, Culture=neutral, PublicKeyToken=171ec59c7733b360, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\Grapecity.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Common, Version=3.1.0.508, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.Documents.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Common.Windows, Version=3.1.0.508, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.Documents.Common.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.DX.Windows, Version=3.1.0.508, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.Documents.DX.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Imaging, Version=3.1.0.508, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.Documents.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Documents.Pdf, Version=3.1.0.508, Culture=neutral, PublicKeyToken=d55d733d2bfd5065, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\ActiveReportsNET14\Tools\GrapeCity.Documents.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Framework.InputMan.v24, Version=2.4.4006.2012, Culture=neutral, PublicKeyToken=fdd90f5c44b73170, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\InputManWin10\Bin\v10.0.4006.2012\GrapeCity.Framework.InputMan.v24.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Editors.Design.v100, Version=10.0.4006.2012, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\InputManWin10\Bin\v10.0.4006.2012\GrapeCity.Win.Editors.Design.v100.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Editors.v100, Version=10.0.4006.2012, Culture=neutral, PublicKeyToken=0ce01a33ce55ca12, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\InputManWin10\Bin\v10.0.4006.2012\GrapeCity.Win.Editors.v100.dll</HintPath>
+    </Reference>
+    <Reference Include="GrapeCity.Win.Input.Interop.v100, Version=10.0.4006.2012, Culture=neutral, PublicKeyToken=40ae1c5c604f43d6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\InputManWin10\Bin\v10.0.4006.2012\GrapeCity.Win.Input.Interop.v100.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.DirectoryServices">
+      <Name>System.DirectoryServices</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Class1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataGridEx.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="F00_Form01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form02.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form03.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form03_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form04.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form05.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form05_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form07.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form07_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form09.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form10.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form10_2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form11.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form12.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form13.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form14.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form15.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form16.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form17.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F00_Form18.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F10_Form01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F10_Form02.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F10_Form11.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F10_Form12.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F10_Form13.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F10_Form21.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F10_Form22.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F10_Form51.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F10_Form52.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F10_Form84.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F70_Form01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F70_Form02.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F80_Form01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F99_WK.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu00.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu10.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module_DB.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module_Dim.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module_Sub.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Print_View.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="R_Azukari_Sheet.vb">
+      <DependentUpon>R_Azukari_Sheet.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_CSTD_Normal.vb">
+      <DependentUpon>R_CSTD_Normal.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_CSTD_Tankyo_KyotoJiren.vb">
+      <DependentUpon>R_CSTD_Tankyo_KyotoJiren.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Fujitsu_Parts_Inq.vb">
+      <DependentUpon>R_Fujitsu_Parts_Inq.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Fukuyama_Ren_EU_QG.vb">
+      <DependentUpon>R_Haiso_Fukuyama_Ren_EU_QG.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Fukuyama_Ren_EU_QGX.vb">
+      <DependentUpon>R_Haiso_Fukuyama_Ren_EU_QGX.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Fukuyama_Ren_Hansya_QG.vb">
+      <DependentUpon>R_Haiso_Fukuyama_Ren_Hansya_QG.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Fukuyama_Ren_Hansya_QGX.vb">
+      <DependentUpon>R_Haiso_Fukuyama_Ren_Hansya_QGX.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Meitetu_Ren_EU_QG.vb">
+      <DependentUpon>R_Haiso_Meitetu_Ren_EU_QG.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Meitetu_Ren_EU_QGX.vb">
+      <DependentUpon>R_Haiso_Meitetu_Ren_EU_QGX.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Meitetu_Ren_Hansya_QG.vb">
+      <DependentUpon>R_Haiso_Meitetu_Ren_Hansya_QG.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Meitetu_Ren_Hansya_QGX.vb">
+      <DependentUpon>R_Haiso_Meitetu_Ren_Hansya_QGX.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Nittsu_Ren_EU_QG.vb">
+      <DependentUpon>R_Haiso_Nittsu_Ren_EU_QG.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Nittsu_Ren_EU_QGX.vb">
+      <DependentUpon>R_Haiso_Nittsu_Ren_EU_QGX.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Nittsu_Ren_Hansya_QG.vb">
+      <DependentUpon>R_Haiso_Nittsu_Ren_Hansya_QG.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Nittsu_Ren_Hansya_QGX.vb">
+      <DependentUpon>R_Haiso_Nittsu_Ren_Hansya_QGX.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Sagawa_GwNote.vb">
+      <DependentUpon>R_Haiso_Sagawa_GwNote.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Seibu_Tan_EU_QG.vb">
+      <DependentUpon>R_Haiso_Seibu_Tan_EU_QG.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Seibu_Tan_EU_QGX.vb">
+      <DependentUpon>R_Haiso_Seibu_Tan_EU_QGX.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Seibu_Tan_Hansya_QG.vb">
+      <DependentUpon>R_Haiso_Seibu_Tan_Hansya_QG.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Seibu_Tan_Hansya_QGX.vb">
+      <DependentUpon>R_Haiso_Seibu_Tan_Hansya_QGX.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_SuperPerikan_Ren_EU_QG.vb">
+      <DependentUpon>R_Haiso_SuperPerikan_Ren_EU_QG.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_SuperPerikan_Ren_EU_QGX.vb">
+      <DependentUpon>R_Haiso_SuperPerikan_Ren_EU_QGX.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_SuperPerikan_Ren_Hansya_QG.vb">
+      <DependentUpon>R_Haiso_SuperPerikan_Ren_Hansya_QG.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_SuperPerikan_Ren_Hansya_QGX.vb">
+      <DependentUpon>R_Haiso_SuperPerikan_Ren_Hansya_QGX.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_SuperPerikan_Tan_EU_QG.vb">
+      <DependentUpon>R_Haiso_SuperPerikan_Tan_EU_QG.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_SuperPerikan_Tan_EU_QGX.vb">
+      <DependentUpon>R_Haiso_SuperPerikan_Tan_EU_QGX.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_SuperPerikan_Tan_Hansya_QG.vb">
+      <DependentUpon>R_Haiso_SuperPerikan_Tan_Hansya_QG.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_SuperPerikan_Tan_Hansya_QGX.vb">
+      <DependentUpon>R_Haiso_SuperPerikan_Tan_Hansya_QGX.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_ToToshiba_Seibu_Ren.vb">
+      <DependentUpon>R_Haiso_ToToshiba_Seibu_Ren.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Yamato_DOS_EU_QGX.vb">
+      <DependentUpon>R_Haiso_Yamato_DOS_EU_QGX.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Yamato_Ren_EU_QG.vb">
+      <DependentUpon>R_Haiso_Yamato_Ren_EU_QG.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Yamato_Ren_EU_QGX.vb">
+      <DependentUpon>R_Haiso_Yamato_Ren_EU_QGX.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Yamato_Ren_Hansya_QG.vb">
+      <DependentUpon>R_Haiso_Yamato_Ren_Hansya_QG.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Haiso_Yamato_Ren_Hansya_QGX.vb">
+      <DependentUpon>R_Haiso_Yamato_Ren_Hansya_QGX.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_HP_Exc_TAG.vb">
+      <DependentUpon>R_HP_Exc_TAG.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_HP_Parts_Order.vb">
+      <DependentUpon>R_HP_Parts_Order.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_IBM_IW_Report.vb">
+      <DependentUpon>R_IBM_IW_Report.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Inquiry_Apple_teigaku_Inq.vb">
+      <DependentUpon>R_Inquiry_Apple_teigaku_Inq.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Inquiry_Data.vb">
+      <DependentUpon>R_Inquiry_Data.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Inquiry_DataRcvy1.vb">
+      <DependentUpon>R_Inquiry_DataRcvy1.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Inquiry_Doukonbutu_Inq.vb">
+      <DependentUpon>R_Inquiry_Doukonbutu_Inq.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Inquiry_EOS_Inq.vb">
+      <DependentUpon>R_Inquiry_EOS_Inq.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Inquiry_Free_Inq.vb">
+      <DependentUpon>R_Inquiry_Free_Inq.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Inquiry_Hosyomore_Inq.vb">
+      <DependentUpon>R_Inquiry_Hosyomore_Inq.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Inquiry_NTF.vb">
+      <DependentUpon>R_Inquiry_NTF.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Inquiry_Password.vb">
+      <DependentUpon>R_Inquiry_Password.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Inquiry_Siriaru_Inq.vb">
+      <DependentUpon>R_Inquiry_Siriaru_Inq.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Inquiry_Tenjiki_Inq.vb">
+      <DependentUpon>R_Inquiry_Tenjiki_Inq.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Inquiry_Tenpusyo_Inq.vb">
+      <DependentUpon>R_Inquiry_Tenpusyo_Inq.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Mitsumori_Apple.vb">
+      <DependentUpon>R_Mitsumori_Apple.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Mitsumori_BICCamera.vb">
+      <DependentUpon>R_Mitsumori_BICCamera.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Mitsumori_BicEU.vb">
+      <DependentUpon>R_Mitsumori_BicEU.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Mitsumori_BICMK.vb">
+      <DependentUpon>R_Mitsumori_BICMK.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Mitsumori_Bic_EU_NU.vb">
+      <DependentUpon>R_Mitsumori_Bic_EU_NU.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Mitsumori_Eiden.vb">
+      <DependentUpon>R_Mitsumori_Eiden.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Mitsumori_Joshin.vb">
+      <DependentUpon>R_Mitsumori_Joshin.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Mitsumori_kojima.vb">
+      <DependentUpon>R_Mitsumori_kojima.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Mitsumori_kyotorengo.vb">
+      <DependentUpon>R_Mitsumori_kyotorengo.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Mitsumori_Normal1.vb">
+      <DependentUpon>R_Mitsumori_Normal.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Mitsumori_Normal_Hansya.vb">
+      <DependentUpon>R_Mitsumori_Normal_Hansya.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Mitsumori_Normal_Teigaku.vb">
+      <DependentUpon>R_Mitsumori_Normal_Teigaku.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Mitsumori_Seikyo_Menseki5k.vb">
+      <DependentUpon>R_Mitsumori_Seikyo_Menseki5k.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Mitsumori_Seikyo_Normal1.vb">
+      <DependentUpon>R_Mitsumori_Seikyo_Normal.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Mitsumori_Seikyo_QGCARE.vb">
+      <DependentUpon>R_Mitsumori_Seikyo_QGCARE.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Mitsumori_SOFMAP.vb">
+      <DependentUpon>R_Mitsumori_SOFMAP.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Mitsumori_SOFMAP_OLC.vb">
+      <DependentUpon>R_Mitsumori_SOFMAP_OLC.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Mitsumori_softbank.vb">
+      <DependentUpon>R_Mitsumori_softbank.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Mitsumori_Yodobashi.vb">
+      <DependentUpon>R_Mitsumori_Yodobashi.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_NCR_CCAR.vb">
+      <DependentUpon>R_NCR_CCAR.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_NEC_Parts_Inq.vb">
+      <DependentUpon>R_NEC_Parts_Inq.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_NEVA1.vb">
+      <DependentUpon>R_NEVA.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_NEVA_DEODEO.vb">
+      <DependentUpon>R_NEVA_DEODEO.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_NEVA_Kojima.vb">
+      <DependentUpon>R_NEVA_Kojima.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_NEVA_New_kojima.vb">
+      <DependentUpon>R_NEVA_New_kojima.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_QGCare.vb">
+      <DependentUpon>R_QGCare.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_Apple.vb">
+      <DependentUpon>R_Sagyou_Report_Apple.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_BicGSS.vb">
+      <DependentUpon>R_Sagyou_Report_BicGSS.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_Bic_EU.vb">
+      <DependentUpon>R_Sagyou_Report_Bic_EU.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_BIC_EU_NMK.vb">
+      <DependentUpon>R_Sagyou_Report_BIC_EU_NMK.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_BIC_EU_NU.vb">
+      <DependentUpon>R_Sagyou_Report_BIC_EU_NU.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_BIC_NMK.vb">
+      <DependentUpon>R_Sagyou_Report_BIC_NMK.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_DosPara.vb">
+      <DependentUpon>R_Sagyou_Report_DosPara.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_EU_syanasi.vb">
+      <DependentUpon>R_Sagyou_Report_EU_syanasi.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_jyoshin_apple_EU.vb">
+      <DependentUpon>R_Sagyou_Report_jyoshin_apple_EU.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_Kojima.vb">
+      <DependentUpon>R_Sagyou_Report_Kojima.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_Kojima_0.vb">
+      <DependentUpon>R_Sagyou_Report_Kojima_0.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_KS_EU.vb">
+      <DependentUpon>R_Sagyou_Report_KS_EU.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_kyotoseikyo.vb">
+      <DependentUpon>R_Sagyou_Report_kyotoseikyo.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_Normal.vb">
+      <DependentUpon>R_Sagyou_Report_Normal.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_Normal_Teigaku.vb">
+      <DependentUpon>R_Sagyou_Report_Normal_Teigaku.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_QAC.vb">
+      <DependentUpon>R_Sagyou_Report_QAC.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_Seikyo_EU.vb">
+      <DependentUpon>R_Sagyou_Report_Seikyo_EU.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_SofmapOLC.vb">
+      <DependentUpon>R_Sagyou_Report_SofmapOLC.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_SofmapStore.vb">
+      <DependentUpon>R_Sagyou_Report_SofmapStore.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_softbank.vb">
+      <DependentUpon>R_Sagyou_Report_softbank.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="R_Sagyou_Report_Yodobashi_EU.vb">
+      <DependentUpon>R_Sagyou_Report_Yodobashi_EU.rpx</DependentUpon>
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_DataRcvy1.Designer.vb">
+      <DependentUpon>SectionReport_R_Inquiry_DataRcvy1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_DataRcvy1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_Doukonbutu_Inq.Designer.vb">
+      <DependentUpon>SectionReport_R_Inquiry_Doukonbutu_Inq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_Doukonbutu_Inq.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_EOS_Inq.Designer.vb">
+      <DependentUpon>SectionReport_R_Inquiry_EOS_Inq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_EOS_Inq.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_Free_Inq.Designer.vb">
+      <DependentUpon>SectionReport_R_Inquiry_Free_Inq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_Free_Inq.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_Hosyomore_Inq.Designer.vb">
+      <DependentUpon>SectionReport_R_Inquiry_Hosyomore_Inq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_Hosyomore_Inq.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_NTF.Designer.vb">
+      <DependentUpon>SectionReport_R_Inquiry_NTF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_NTF.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_Password.Designer.vb">
+      <DependentUpon>SectionReport_R_Inquiry_Password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_Password.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_Siriaru_Inq.Designer.vb">
+      <DependentUpon>SectionReport_R_Inquiry_Siriaru_Inq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_Siriaru_Inq.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_Tenjiki_Inq.Designer.vb">
+      <DependentUpon>SectionReport_R_Inquiry_Tenjiki_Inq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_Tenjiki_Inq.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_Tenpusyo_Inq.Designer.vb">
+      <DependentUpon>SectionReport_R_Inquiry_Tenpusyo_Inq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_Tenpusyo_Inq.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Apple.Designer.vb">
+      <DependentUpon>SectionReport_R_Mitsumori_Apple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Apple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_softbank.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_softbank.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_softbank.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_BIC_EU_NU.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_BIC_EU_NU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_BIC_EU_NU.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_BIC_EU_NMK.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_BIC_EU_NMK.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_BIC_EU_NMK.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_Yodobashi_EU.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_Yodobashi_EU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_Yodobashi_EU.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Bic_EU_NU.Designer.vb">
+      <DependentUpon>SectionReport_R_Mitsumori_Bic_EU_NU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Bic_EU_NU.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_BICCamera.Designer.vb">
+      <DependentUpon>SectionReport_R_Mitsumori_BICCamera.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_BICCamera.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_BicEU.Designer.vb">
+      <DependentUpon>SectionReport_R_Mitsumori_BicEU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_BicEU.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_BICMK.Designer.vb">
+      <DependentUpon>SectionReport_R_Mitsumori_BICMK.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_BICMK.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Eiden.Designer.vb">
+      <DependentUpon>SectionReport_R_Mitsumori_Eiden.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Eiden.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Joshin.Designer.vb">
+      <DependentUpon>SectionReport_R_Mitsumori_Joshin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Joshin.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_kojima.Designer.vb">
+      <DependentUpon>SectionReport_R_Mitsumori_kojima.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_kojima.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_kyotorengo.Designer.vb">
+      <DependentUpon>SectionReport_R_Mitsumori_kyotorengo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_kyotorengo.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Normal.Designer.vb">
+      <DependentUpon>SectionReport_R_Mitsumori_Normal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Normal.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Normal_Hansya.Designer.vb">
+      <DependentUpon>SectionReport_R_Mitsumori_Normal_Hansya.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Normal_Hansya.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Normal_Teigaku.Designer.vb">
+      <DependentUpon>SectionReport_R_Mitsumori_Normal_Teigaku.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Normal_Teigaku.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Seikyo_Menseki5k.Designer.vb">
+      <DependentUpon>SectionReport_R_Mitsumori_Seikyo_Menseki5k.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Seikyo_Menseki5k.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Seikyo_Normal.Designer.vb">
+      <DependentUpon>SectionReport_R_Mitsumori_Seikyo_Normal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Seikyo_Normal.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Seikyo_QGCARE.Designer.vb">
+      <DependentUpon>SectionReport_R_Mitsumori_Seikyo_QGCARE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Seikyo_QGCARE.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_SOFMAP.Designer.vb">
+      <DependentUpon>SectionReport_R_Mitsumori_SOFMAP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_SOFMAP.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_SOFMAP_OLC.Designer.vb">
+      <DependentUpon>SectionReport_R_Mitsumori_SOFMAP_OLC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_SOFMAP_OLC.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_softbank.Designer.vb">
+      <DependentUpon>SectionReport_R_Mitsumori_softbank.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_softbank.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Yodobashi.Designer.vb">
+      <DependentUpon>SectionReport_R_Mitsumori_Yodobashi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Mitsumori_Yodobashi.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_NCR_CCAR.Designer.vb">
+      <DependentUpon>SectionReport_R_NCR_CCAR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_NCR_CCAR.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_NEC_Parts_Inq.Designer.vb">
+      <DependentUpon>SectionReport_R_NEC_Parts_Inq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_NEC_Parts_Inq.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_NEVA.Designer.vb">
+      <DependentUpon>SectionReport_R_NEVA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_NEVA.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_NEVA_DEODEO.Designer.vb">
+      <DependentUpon>SectionReport_R_NEVA_DEODEO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_NEVA_DEODEO.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_NEVA_Kojima.Designer.vb">
+      <DependentUpon>SectionReport_R_NEVA_Kojima.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_NEVA_Kojima.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_NEVA_New_kojima.Designer.vb">
+      <DependentUpon>SectionReport_R_NEVA_New_kojima.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_NEVA_New_kojima.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_Apple.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_Apple.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_Apple.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_Bic_EU.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_Bic_EU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_Bic_EU.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_BIC_NMK.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_BIC_NMK.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_BIC_NMK.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_BicGSS.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_BicGSS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_BicGSS.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_DosPara.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_DosPara.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_DosPara.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_EU_syanasi.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_EU_syanasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_EU_syanasi.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Azukari_Sheet.Designer.vb">
+      <DependentUpon>SectionReport_R_Azukari_Sheet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Azukari_Sheet.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_CSTD_Normal.Designer.vb">
+      <DependentUpon>SectionReport_R_CSTD_Normal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_CSTD_Normal.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_CSTD_Tankyo_KyotoJiren.Designer.vb">
+      <DependentUpon>SectionReport_R_CSTD_Tankyo_KyotoJiren.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_CSTD_Tankyo_KyotoJiren.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Fujitsu_Parts_Inq.Designer.vb">
+      <DependentUpon>SectionReport_R_Fujitsu_Parts_Inq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Fujitsu_Parts_Inq.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Fukuyama_Ren_EU_QG.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Fukuyama_Ren_EU_QG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Fukuyama_Ren_EU_QG.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Fukuyama_Ren_EU_QGX.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Fukuyama_Ren_EU_QGX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Fukuyama_Ren_EU_QGX.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Fukuyama_Ren_Hansya_QG.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Fukuyama_Ren_Hansya_QG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Fukuyama_Ren_Hansya_QG.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Fukuyama_Ren_Hansya_QGX.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Fukuyama_Ren_Hansya_QGX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Fukuyama_Ren_Hansya_QGX.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Meitetu_Ren_EU_QG.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Meitetu_Ren_EU_QG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Meitetu_Ren_EU_QG.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Meitetu_Ren_EU_QGX.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Meitetu_Ren_EU_QGX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Meitetu_Ren_EU_QGX.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Meitetu_Ren_Hansya_QG.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Meitetu_Ren_Hansya_QG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Meitetu_Ren_Hansya_QG.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Meitetu_Ren_Hansya_QGX.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Meitetu_Ren_Hansya_QGX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Meitetu_Ren_Hansya_QGX.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Nittsu_Ren_EU_QG.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Nittsu_Ren_EU_QG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Nittsu_Ren_EU_QG.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Nittsu_Ren_EU_QGX.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Nittsu_Ren_EU_QGX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Nittsu_Ren_EU_QGX.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Nittsu_Ren_Hansya_QG.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Nittsu_Ren_Hansya_QG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Nittsu_Ren_Hansya_QG.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Nittsu_Ren_Hansya_QGX.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Nittsu_Ren_Hansya_QGX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Nittsu_Ren_Hansya_QGX.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Sagawa_GwNote.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Sagawa_GwNote.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Sagawa_GwNote.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Seibu_Tan_EU_QG.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Seibu_Tan_EU_QG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Seibu_Tan_EU_QG.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Seibu_Tan_EU_QGX.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Seibu_Tan_EU_QGX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Seibu_Tan_EU_QGX.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Seibu_Tan_Hansya_QG.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Seibu_Tan_Hansya_QG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Seibu_Tan_Hansya_QG.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Seibu_Tan_Hansya_QGX.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Seibu_Tan_Hansya_QGX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Seibu_Tan_Hansya_QGX.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_SuperPerikan_Ren_EU_QG.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_SuperPerikan_Ren_EU_QG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_SuperPerikan_Ren_EU_QG.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_SuperPerikan_Ren_EU_QGX.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_SuperPerikan_Ren_EU_QGX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_SuperPerikan_Ren_EU_QGX.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_SuperPerikan_Ren_Hansya_QG.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_SuperPerikan_Ren_Hansya_QG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_SuperPerikan_Ren_Hansya_QG.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_SuperPerikan_Ren_Hansya_QGX.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_SuperPerikan_Ren_Hansya_QGX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_SuperPerikan_Ren_Hansya_QGX.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_SuperPerikan_Tan_EU_QG.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_SuperPerikan_Tan_EU_QG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_SuperPerikan_Tan_EU_QG.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_SuperPerikan_Tan_EU_QGX.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_SuperPerikan_Tan_EU_QGX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_SuperPerikan_Tan_EU_QGX.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_SuperPerikan_Tan_Hansya_QG.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_SuperPerikan_Tan_Hansya_QG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_SuperPerikan_Tan_Hansya_QG.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_SuperPerikan_Tan_Hansya_QGX.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_SuperPerikan_Tan_Hansya_QGX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_SuperPerikan_Tan_Hansya_QGX.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_ToToshiba_Seibu_Ren.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_ToToshiba_Seibu_Ren.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_ToToshiba_Seibu_Ren.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Yamato_DOS_EU_QGX.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Yamato_DOS_EU_QGX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Yamato_DOS_EU_QGX.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Yamato_Ren_EU_QG.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Yamato_Ren_EU_QG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Yamato_Ren_EU_QG.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Yamato_Ren_EU_QGX.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Yamato_Ren_EU_QGX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Yamato_Ren_EU_QGX.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Yamato_Ren_Hansya_QG.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Yamato_Ren_Hansya_QG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Yamato_Ren_Hansya_QG.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Yamato_Ren_Hansya_QGX.Designer.vb">
+      <DependentUpon>SectionReport_R_Haiso_Yamato_Ren_Hansya_QGX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Haiso_Yamato_Ren_Hansya_QGX.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_HP_Exc_TAG.Designer.vb">
+      <DependentUpon>SectionReport_R_HP_Exc_TAG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_HP_Exc_TAG.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_HP_Parts_Order.Designer.vb">
+      <DependentUpon>SectionReport_R_HP_Parts_Order.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_HP_Parts_Order.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_IBM_IW_Report.Designer.vb">
+      <DependentUpon>SectionReport_R_IBM_IW_Report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_IBM_IW_Report.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_Apple_teigaku_Inq.Designer.vb">
+      <DependentUpon>SectionReport_R_Inquiry_Apple_teigaku_Inq.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_Apple_teigaku_Inq.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_Data.Designer.vb">
+      <DependentUpon>SectionReport_R_Inquiry_Data.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Inquiry_Data.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_QGCare.Designer.vb">
+      <DependentUpon>SectionReport_R_QGCare.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_QGCare.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_jyoshin_apple_EU.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_jyoshin_apple_EU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_jyoshin_apple_EU.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_Kojima.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_Kojima.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_Kojima.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_Kojima_0.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_Kojima_0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_Kojima_0.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_KS_EU.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_KS_EU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_KS_EU.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_kyotoseikyo.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_kyotoseikyo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_kyotoseikyo.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_Normal.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_Normal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_Normal.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_Normal_Teigaku.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_Normal_Teigaku.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_Normal_Teigaku.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_QAC.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_QAC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_QAC.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_Seikyo_EU.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_Seikyo_EU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_Seikyo_EU.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_SofmapOLC.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_SofmapOLC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_SofmapOLC.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_SofmapStore.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagyou_Report_SofmapStore.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagyou_Report_SofmapStore.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagayou_Report_softbank.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagayou_Report_softbank.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagayou_Report_softbank.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagayou_Report_Yodobashi_EU.Designer.vb">
+      <DependentUpon>SectionReport_R_Sagayou_Report_Yodobashi_EU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SectionReport_R_Sagayou_Report_Yodobashi_EU.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WaitDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Content Include="earth.ico" />
+    <EmbeddedResource Include="Class1.resx">
+      <DependentUpon>Class1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataGridEx.resx">
+      <DependentUpon>DataGridEx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form01.resx">
+      <DependentUpon>F00_Form01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form02.resx">
+      <DependentUpon>F00_Form02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form03.resx">
+      <DependentUpon>F00_Form03.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form03_2.resx">
+      <DependentUpon>F00_Form03_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form04.resx">
+      <DependentUpon>F00_Form04.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form05.resx">
+      <DependentUpon>F00_Form05.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form05_2.resx">
+      <DependentUpon>F00_Form05_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form06.resx">
+      <DependentUpon>F00_Form06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form07.resx">
+      <DependentUpon>F00_Form07.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form07_2.resx">
+      <DependentUpon>F00_Form07_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form09.resx">
+      <DependentUpon>F00_Form09.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form10.resx">
+      <DependentUpon>F00_Form10.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form10_2.resx">
+      <DependentUpon>F00_Form10_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form11.resx">
+      <DependentUpon>F00_Form11.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form12.resx">
+      <DependentUpon>F00_Form12.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form13.resx">
+      <DependentUpon>F00_Form13.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form14.resx">
+      <DependentUpon>F00_Form14.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form15.resx">
+      <DependentUpon>F00_Form15.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form16.resx">
+      <DependentUpon>F00_Form16.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form17.resx">
+      <DependentUpon>F00_Form17.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F00_Form18.resx">
+      <DependentUpon>F00_Form18.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F10_Form01.resx">
+      <DependentUpon>F10_Form01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F10_Form02.resx">
+      <DependentUpon>F10_Form02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F10_Form11.resx">
+      <DependentUpon>F10_Form11.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F10_Form12.resx">
+      <DependentUpon>F10_Form12.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F10_Form13.resx">
+      <DependentUpon>F10_Form13.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F10_Form21.resx">
+      <DependentUpon>F10_Form21.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F10_Form22.resx">
+      <DependentUpon>F10_Form22.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F10_Form51.resx">
+      <DependentUpon>F10_Form51.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F10_Form52.resx">
+      <DependentUpon>F10_Form52.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F10_Form84.resx">
+      <DependentUpon>F10_Form84.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F70_Form01.resx">
+      <DependentUpon>F70_Form01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F70_Form02.resx">
+      <DependentUpon>F70_Form02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F80_Form01.resx">
+      <DependentUpon>F80_Form01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F99_WK.resx">
+      <DependentUpon>F99_WK.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="Menu00.resx">
+      <DependentUpon>Menu00.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu10.resx">
+      <DependentUpon>Menu10.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Print_View.resx">
+      <DependentUpon>Print_View.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Azukari_Sheet.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Azukari_Sheet.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_CSTD_Normal.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_CSTD_Normal.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_CSTD_Tankyo_KyotoJiren.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_CSTD_Tankyo_KyotoJiren.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Fujitsu_Parts_Inq.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Fujitsu_Parts_Inq.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Fukuyama_Ren_EU_QG.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Fukuyama_Ren_EU_QG.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Fukuyama_Ren_EU_QGX.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Fukuyama_Ren_EU_QGX.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Fukuyama_Ren_Hansya_QG.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Fukuyama_Ren_Hansya_QG.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Fukuyama_Ren_Hansya_QGX.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Fukuyama_Ren_Hansya_QGX.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Meitetu_Ren_EU_QG.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Meitetu_Ren_EU_QG.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Meitetu_Ren_EU_QGX.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Meitetu_Ren_EU_QGX.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Meitetu_Ren_Hansya_QG.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Meitetu_Ren_Hansya_QG.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Meitetu_Ren_Hansya_QGX.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Meitetu_Ren_Hansya_QGX.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Nittsu_Ren_EU_QG.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Nittsu_Ren_EU_QG.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Nittsu_Ren_EU_QGX.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Nittsu_Ren_EU_QGX.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Nittsu_Ren_Hansya_QG.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Nittsu_Ren_Hansya_QG.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Nittsu_Ren_Hansya_QGX.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Nittsu_Ren_Hansya_QGX.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Sagawa_GwNote.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Sagawa_GwNote.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Seibu_Tan_EU_QG.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Seibu_Tan_EU_QG.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Seibu_Tan_EU_QGX.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Seibu_Tan_EU_QGX.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Seibu_Tan_Hansya_QG.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Seibu_Tan_Hansya_QG.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Seibu_Tan_Hansya_QGX.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Seibu_Tan_Hansya_QGX.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_SuperPerikan_Ren_EU_QG.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_SuperPerikan_Ren_EU_QG.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_SuperPerikan_Ren_EU_QGX.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_SuperPerikan_Ren_EU_QGX.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_SuperPerikan_Ren_Hansya_QG.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_SuperPerikan_Ren_Hansya_QG.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_SuperPerikan_Ren_Hansya_QGX.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_SuperPerikan_Ren_Hansya_QGX.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_SuperPerikan_Tan_EU_QG.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_SuperPerikan_Tan_EU_QG.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_SuperPerikan_Tan_EU_QGX.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_SuperPerikan_Tan_EU_QGX.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_SuperPerikan_Tan_Hansya_QG.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_SuperPerikan_Tan_Hansya_QG.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_SuperPerikan_Tan_Hansya_QGX.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_SuperPerikan_Tan_Hansya_QGX.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_ToToshiba_Seibu_Ren.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_ToToshiba_Seibu_Ren.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Yamato_DOS_EU_QGX.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Yamato_DOS_EU_QGX.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Yamato_Ren_EU_QG.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Yamato_Ren_EU_QG.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Yamato_Ren_EU_QGX.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Yamato_Ren_EU_QGX.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Yamato_Ren_Hansya_QG.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Yamato_Ren_Hansya_QG.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Haiso_Yamato_Ren_Hansya_QGX.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Haiso_Yamato_Ren_Hansya_QGX.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_HP_Exc_TAG.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_HP_Exc_TAG.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_HP_Parts_Order.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_HP_Parts_Order.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_IBM_IW_Report.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_IBM_IW_Report.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Inquiry_Apple_teigaku_Inq.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Inquiry_Apple_teigaku_Inq.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Inquiry_Data.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Inquiry_Data.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Inquiry_DataRcvy1.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Inquiry_DataRcvy1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Inquiry_Doukonbutu_Inq.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Inquiry_Doukonbutu_Inq.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Inquiry_EOS_Inq.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Inquiry_EOS_Inq.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Inquiry_Free_Inq.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Inquiry_Free_Inq.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Inquiry_Hosyomore_Inq.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Inquiry_Hosyomore_Inq.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Inquiry_NTF.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Inquiry_NTF.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Inquiry_Password.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Inquiry_Password.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Inquiry_Siriaru_Inq.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Inquiry_Siriaru_Inq.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Inquiry_Tenjiki_Inq.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Inquiry_Tenjiki_Inq.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Inquiry_Tenpusyo_Inq.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Inquiry_Tenpusyo_Inq.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Mitsumori_Apple.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Mitsumori_Apple.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Mitsumori_BICCamera.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Mitsumori_BICCamera.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Mitsumori_BicEU.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Mitsumori_BicEU.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Mitsumori_BICMK.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Mitsumori_BICMK.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Mitsumori_Bic_EU_NU.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Mitsumori_Bic_EU_NU.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Mitsumori_Eiden.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Mitsumori_Eiden.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Mitsumori_Joshin.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Mitsumori_Joshin.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Mitsumori_kojima.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Mitsumori_kojima.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Mitsumori_kyotorengo.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Mitsumori_kyotorengo.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Mitsumori_Normal.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Mitsumori_Normal1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Mitsumori_Normal_Hansya.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Mitsumori_Normal_Hansya.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Mitsumori_Normal_Teigaku.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Mitsumori_Normal_Teigaku.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Mitsumori_Seikyo_Menseki5k.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Mitsumori_Seikyo_Menseki5k.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Mitsumori_Seikyo_Normal.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Mitsumori_Seikyo_Normal1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Mitsumori_Seikyo_QGCARE.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Mitsumori_Seikyo_QGCARE.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Mitsumori_SOFMAP.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Mitsumori_SOFMAP.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Mitsumori_SOFMAP_OLC.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Mitsumori_SOFMAP_OLC.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Mitsumori_softbank.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Mitsumori_softbank.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Mitsumori_Yodobashi.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Mitsumori_Yodobashi.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_NCR_CCAR.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_NCR_CCAR.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_NEC_Parts_Inq.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_NEC_Parts_Inq.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_NEVA.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_NEVA1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_NEVA_DEODEO.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_NEVA_DEODEO.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_NEVA_Kojima.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_NEVA_Kojima.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_NEVA_New_kojima.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_NEVA_New_kojima.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_QGCare.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_QGCare.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_Apple.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_Apple.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_BicGSS.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_BicGSS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_Bic_EU.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_Bic_EU.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_BIC_EU_NMK.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_BIC_EU_NMK.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_BIC_EU_NU.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_BIC_EU_NU.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_BIC_NMK.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_BIC_NMK.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_DosPara.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_DosPara.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_EU_syanasi.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_EU_syanasi.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_jyoshin_apple_EU.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_jyoshin_apple_EU.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_Kojima.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_Kojima.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_Kojima_0.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_Kojima_0.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_KS_EU.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_KS_EU.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_kyotoseikyo.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_kyotoseikyo.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_Normal.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_Normal.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_Normal_Teigaku.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_Normal_Teigaku.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_QAC.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_QAC.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_Seikyo_EU.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_Seikyo_EU.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_SofmapOLC.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_SofmapOLC.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_SofmapStore.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_SofmapStore.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_softbank.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_softbank.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="R_Sagyou_Report_Yodobashi_EU.rpx">
+      <Generator>ARVSPackage.VBCodeGenerator</Generator>
+      <LastGenOutput>R_Sagyou_Report_Yodobashi_EU.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Inquiry_DataRcvy1.resx">
+      <DependentUpon>SectionReport_R_Inquiry_DataRcvy1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Inquiry_Doukonbutu_Inq.resx">
+      <DependentUpon>SectionReport_R_Inquiry_Doukonbutu_Inq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Inquiry_EOS_Inq.resx">
+      <DependentUpon>SectionReport_R_Inquiry_EOS_Inq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Inquiry_Free_Inq.resx">
+      <DependentUpon>SectionReport_R_Inquiry_Free_Inq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Inquiry_Hosyomore_Inq.resx">
+      <DependentUpon>SectionReport_R_Inquiry_Hosyomore_Inq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Inquiry_NTF.resx">
+      <DependentUpon>SectionReport_R_Inquiry_NTF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Inquiry_Password.resx">
+      <DependentUpon>SectionReport_R_Inquiry_Password.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Inquiry_Siriaru_Inq.resx">
+      <DependentUpon>SectionReport_R_Inquiry_Siriaru_Inq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Inquiry_Tenjiki_Inq.resx">
+      <DependentUpon>SectionReport_R_Inquiry_Tenjiki_Inq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Inquiry_Tenpusyo_Inq.resx">
+      <DependentUpon>SectionReport_R_Inquiry_Tenpusyo_Inq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Mitsumori_Apple.resx">
+      <DependentUpon>SectionReport_R_Mitsumori_Apple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_softbank.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_softbank.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_BIC_EU_NU.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_BIC_EU_NU.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_BIC_EU_NMK.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_BIC_EU_NMK.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_Yodobashi_EU.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_Yodobashi_EU.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Mitsumori_Bic_EU_NU.resx">
+      <DependentUpon>SectionReport_R_Mitsumori_Bic_EU_NU.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Mitsumori_BICCamera.resx">
+      <DependentUpon>SectionReport_R_Mitsumori_BICCamera.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Mitsumori_BicEU.resx">
+      <DependentUpon>SectionReport_R_Mitsumori_BicEU.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Mitsumori_BICMK.resx">
+      <DependentUpon>SectionReport_R_Mitsumori_BICMK.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Mitsumori_Eiden.resx">
+      <DependentUpon>SectionReport_R_Mitsumori_Eiden.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Mitsumori_Joshin.resx">
+      <DependentUpon>SectionReport_R_Mitsumori_Joshin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Mitsumori_kojima.resx">
+      <DependentUpon>SectionReport_R_Mitsumori_kojima.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Mitsumori_kyotorengo.resx">
+      <DependentUpon>SectionReport_R_Mitsumori_kyotorengo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Mitsumori_Normal.resx">
+      <DependentUpon>SectionReport_R_Mitsumori_Normal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Mitsumori_Normal_Hansya.resx">
+      <DependentUpon>SectionReport_R_Mitsumori_Normal_Hansya.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Mitsumori_Normal_Teigaku.resx">
+      <DependentUpon>SectionReport_R_Mitsumori_Normal_Teigaku.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Mitsumori_Seikyo_Menseki5k.resx">
+      <DependentUpon>SectionReport_R_Mitsumori_Seikyo_Menseki5k.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Mitsumori_Seikyo_Normal.resx">
+      <DependentUpon>SectionReport_R_Mitsumori_Seikyo_Normal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Mitsumori_Seikyo_QGCARE.resx">
+      <DependentUpon>SectionReport_R_Mitsumori_Seikyo_QGCARE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Mitsumori_SOFMAP.resx">
+      <DependentUpon>SectionReport_R_Mitsumori_SOFMAP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Mitsumori_SOFMAP_OLC.resx">
+      <DependentUpon>SectionReport_R_Mitsumori_SOFMAP_OLC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Mitsumori_softbank.resx">
+      <DependentUpon>SectionReport_R_Mitsumori_softbank.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Mitsumori_Yodobashi.resx">
+      <DependentUpon>SectionReport_R_Mitsumori_Yodobashi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_NCR_CCAR.resx">
+      <DependentUpon>SectionReport_R_NCR_CCAR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_NEC_Parts_Inq.resx">
+      <DependentUpon>SectionReport_R_NEC_Parts_Inq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_NEVA.resx">
+      <DependentUpon>SectionReport_R_NEVA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_NEVA_DEODEO.resx">
+      <DependentUpon>SectionReport_R_NEVA_DEODEO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_NEVA_Kojima.resx">
+      <DependentUpon>SectionReport_R_NEVA_Kojima.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_NEVA_New_kojima.resx">
+      <DependentUpon>SectionReport_R_NEVA_New_kojima.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_Apple.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_Apple.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_Bic_EU.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_Bic_EU.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_BIC_NMK.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_BIC_NMK.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_BicGSS.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_BicGSS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_DosPara.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_DosPara.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_EU_syanasi.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_EU_syanasi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Azukari_Sheet.resx">
+      <DependentUpon>SectionReport_R_Azukari_Sheet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_CSTD_Normal.resx">
+      <DependentUpon>SectionReport_R_CSTD_Normal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_CSTD_Tankyo_KyotoJiren.resx">
+      <DependentUpon>SectionReport_R_CSTD_Tankyo_KyotoJiren.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Fujitsu_Parts_Inq.resx">
+      <DependentUpon>SectionReport_R_Fujitsu_Parts_Inq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Fukuyama_Ren_EU_QG.resx">
+      <DependentUpon>SectionReport_R_Haiso_Fukuyama_Ren_EU_QG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Fukuyama_Ren_EU_QGX.resx">
+      <DependentUpon>SectionReport_R_Haiso_Fukuyama_Ren_EU_QGX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Fukuyama_Ren_Hansya_QG.resx">
+      <DependentUpon>SectionReport_R_Haiso_Fukuyama_Ren_Hansya_QG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Fukuyama_Ren_Hansya_QGX.resx">
+      <DependentUpon>SectionReport_R_Haiso_Fukuyama_Ren_Hansya_QGX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Meitetu_Ren_EU_QG.resx">
+      <DependentUpon>SectionReport_R_Haiso_Meitetu_Ren_EU_QG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Meitetu_Ren_EU_QGX.resx">
+      <DependentUpon>SectionReport_R_Haiso_Meitetu_Ren_EU_QGX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Meitetu_Ren_Hansya_QG.resx">
+      <DependentUpon>SectionReport_R_Haiso_Meitetu_Ren_Hansya_QG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Meitetu_Ren_Hansya_QGX.resx">
+      <DependentUpon>SectionReport_R_Haiso_Meitetu_Ren_Hansya_QGX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Nittsu_Ren_EU_QG.resx">
+      <DependentUpon>SectionReport_R_Haiso_Nittsu_Ren_EU_QG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Nittsu_Ren_EU_QGX.resx">
+      <DependentUpon>SectionReport_R_Haiso_Nittsu_Ren_EU_QGX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Nittsu_Ren_Hansya_QG.resx">
+      <DependentUpon>SectionReport_R_Haiso_Nittsu_Ren_Hansya_QG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Nittsu_Ren_Hansya_QGX.resx">
+      <DependentUpon>SectionReport_R_Haiso_Nittsu_Ren_Hansya_QGX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Sagawa_GwNote.resx">
+      <DependentUpon>SectionReport_R_Haiso_Sagawa_GwNote.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Seibu_Tan_EU_QG.resx">
+      <DependentUpon>SectionReport_R_Haiso_Seibu_Tan_EU_QG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Seibu_Tan_EU_QGX.resx">
+      <DependentUpon>SectionReport_R_Haiso_Seibu_Tan_EU_QGX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Seibu_Tan_Hansya_QG.resx">
+      <DependentUpon>SectionReport_R_Haiso_Seibu_Tan_Hansya_QG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Seibu_Tan_Hansya_QGX.resx">
+      <DependentUpon>SectionReport_R_Haiso_Seibu_Tan_Hansya_QGX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_SuperPerikan_Ren_EU_QG.resx">
+      <DependentUpon>SectionReport_R_Haiso_SuperPerikan_Ren_EU_QG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_SuperPerikan_Ren_EU_QGX.resx">
+      <DependentUpon>SectionReport_R_Haiso_SuperPerikan_Ren_EU_QGX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_SuperPerikan_Ren_Hansya_QG.resx">
+      <DependentUpon>SectionReport_R_Haiso_SuperPerikan_Ren_Hansya_QG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_SuperPerikan_Ren_Hansya_QGX.resx">
+      <DependentUpon>SectionReport_R_Haiso_SuperPerikan_Ren_Hansya_QGX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_SuperPerikan_Tan_EU_QG.resx">
+      <DependentUpon>SectionReport_R_Haiso_SuperPerikan_Tan_EU_QG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_SuperPerikan_Tan_EU_QGX.resx">
+      <DependentUpon>SectionReport_R_Haiso_SuperPerikan_Tan_EU_QGX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_SuperPerikan_Tan_Hansya_QG.resx">
+      <DependentUpon>SectionReport_R_Haiso_SuperPerikan_Tan_Hansya_QG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_SuperPerikan_Tan_Hansya_QGX.resx">
+      <DependentUpon>SectionReport_R_Haiso_SuperPerikan_Tan_Hansya_QGX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_ToToshiba_Seibu_Ren.resx">
+      <DependentUpon>SectionReport_R_Haiso_ToToshiba_Seibu_Ren.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Yamato_DOS_EU_QGX.resx">
+      <DependentUpon>SectionReport_R_Haiso_Yamato_DOS_EU_QGX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Yamato_Ren_EU_QG.resx">
+      <DependentUpon>SectionReport_R_Haiso_Yamato_Ren_EU_QG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Yamato_Ren_EU_QGX.resx">
+      <DependentUpon>SectionReport_R_Haiso_Yamato_Ren_EU_QGX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Yamato_Ren_Hansya_QG.resx">
+      <DependentUpon>SectionReport_R_Haiso_Yamato_Ren_Hansya_QG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Haiso_Yamato_Ren_Hansya_QGX.resx">
+      <DependentUpon>SectionReport_R_Haiso_Yamato_Ren_Hansya_QGX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_HP_Exc_TAG.resx">
+      <DependentUpon>SectionReport_R_HP_Exc_TAG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_HP_Parts_Order.resx">
+      <DependentUpon>SectionReport_R_HP_Parts_Order.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_IBM_IW_Report.resx">
+      <DependentUpon>SectionReport_R_IBM_IW_Report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Inquiry_Apple_teigaku_Inq.resx">
+      <DependentUpon>SectionReport_R_Inquiry_Apple_teigaku_Inq.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Inquiry_Data.resx">
+      <DependentUpon>SectionReport_R_Inquiry_Data.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_QGCare.resx">
+      <DependentUpon>SectionReport_R_QGCare.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_jyoshin_apple_EU.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_jyoshin_apple_EU.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_Kojima.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_Kojima.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_Kojima_0.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_Kojima_0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_KS_EU.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_KS_EU.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_kyotoseikyo.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_kyotoseikyo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_Normal.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_Normal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_Normal_Teigaku.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_Normal_Teigaku.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_QAC.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_QAC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_Seikyo_EU.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_Seikyo_EU.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_SofmapOLC.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_SofmapOLC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagyou_Report_SofmapStore.resx">
+      <DependentUpon>SectionReport_R_Sagyou_Report_SofmapStore.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagayou_Report_softbank.resx">
+      <DependentUpon>SectionReport_R_Sagayou_Report_softbank.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SectionReport_R_Sagayou_Report_Yodobashi_EU.resx">
+      <DependentUpon>SectionReport_R_Sagayou_Report_Yodobashi_EU.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitDialog.resx">
+      <DependentUpon>WaitDialog.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

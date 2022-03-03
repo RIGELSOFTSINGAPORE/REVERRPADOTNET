@@ -1,0 +1,15 @@
+option batch on
+
+option confirm off
+
+open Homac
+
+option transfer binary
+
+get *.dat C:\Homac\
+
+rm *.dat
+
+close
+
+exit

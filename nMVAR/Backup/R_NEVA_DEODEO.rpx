@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3" PrintWidth="13950" DocumentName="ActiveReports Document" ScriptLang="C#" CodeFile="R_NEVA_DEODEO.vb">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: MS UI Gothic; font-style: normal; font-variant: inherit; font-weight: normal; font-size: 10pt; font-size-adjust: inherit; font-stretch: inherit; color: rgb(0,0,0); background-repeat: inherit; background-attachment: inherit; opacity: inherit; word-spacing: inherit; letter-spacing: inherit; text-decoration: none; vertical-align: inherit; text-transform: inherit; text-align: inherit; text-indent: inherit; unicode-bidi: inherit; line-height: inherit; white-space: inherit; ddo-char-set: 128; " />
+    <Style Name="Heading1" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 16pt; font-size-adjust: inherit; font-stretch: inherit; " />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-style: italic; font-variant: inherit; font-weight: bold; font-size: 14pt; font-size-adjust: inherit; font-stretch: inherit; " />
+    <Style Name="Heading3" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 13pt; font-size-adjust: inherit; font-stretch: inherit; " />
+  </StyleSheet>
+  <Sections>
+    <Section Type="Detail" Name="Detail" Height="5550" BackColor="16777215" NewPage="2" CanShrink="0">
+      <Control Type="AR.Field" Name="TextBox5_1" DataField="Expr06" MOD="4" Left="1929.6" Top="2016" Width="935.9999" Height="475.2" Text="メーカー名" Multiline="0" CanGrow="0" Style="ddo-char-set: 1; text-align: left; font-size: 9pt; font-family: ＭＳ Ｐゴシック; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox9_1" DataField="Expr07" MOD="4" Left="6376.32" Top="2016" Width="2275.2" Height="475.2" Text="機種" Multiline="0" CanGrow="0" Style="ddo-char-set: 1; text-align: left; font-size: 9.75pt; font-family: ＭＳ Ｐゴシック; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox" MOD="4" Left="11678.4" Top="0" Width="460.8" Height="450.72" Text="yy" Multiline="0" CanGrow="0" Style="ddo-char-set: 1; text-align: center; font-size: 13pt; font-family: ＭＳ ゴシック; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox2" MOD="4" Left="12441.6" Top="0" Width="460.8" Height="450.72" Text="mm" Multiline="0" CanGrow="0" Style="ddo-char-set: 1; text-align: center; font-size: 13pt; font-family: ＭＳ ゴシック; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox4" MOD="4" Left="13161.6" Top="0" Width="460.8" Height="450.72" Text="dd" Multiline="0" CanGrow="0" Style="ddo-char-set: 1; text-align: center; font-size: 13pt; font-family: ＭＳ ゴシック; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox13_1" DataField="Expr05" MOD="4" Left="0" Top="2016" Width="1699.2" Height="475.2" Text="販社伝番" Multiline="0" CanGrow="0" Style="ddo-char-set: 1; text-align: left; font-size: 9pt; font-family: ＭＳ Ｐゴシック; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox52" DataField="Expr02" MOD="4" Left="3495.6" Top="1296" Width="1890" Height="360" Text="クイックガレージ○○○" CanGrow="0" Style="ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 9.75pt; font-family: ＭＳ Ｐゴシック; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox9" DataField="Expr01" MOD="4" Left="0" Top="1296" Width="1224" Height="360" Text="取引先コード" Multiline="0" CanGrow="0" Style="ddo-char-set: 1; text-align: center; font-size: 10pt; font-family: ＭＳ ゴシック; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox1" DataField="Expr03" MOD="4" Left="9201.6" Top="1296" Width="648" Height="360" Text="店コード" CanGrow="0" Style="ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 9pt; font-family: ＭＳ ゴシック; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox3" DataField="Expr04" MOD="4" Left="9849.6" Top="1296" Width="2448" Height="360" Text="店舗名" CanGrow="0" Style="ddo-char-set: 1; text-align: left; font-weight: normal; font-size: 9pt; font-family: ＭＳ Ｐゴシック; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label" MOD="4" Left="1425.6" Top="1296" Width="2070" Height="360" Caption="日本ＮＣＲサービス㈱" Style="ddo-char-set: 1; text-align: left; font-size: 9.75pt; font-family: ＭＳ Ｐゴシック; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label1" MOD="4" Left="2937.6" Top="2016" Width="1512" Height="475.2" Caption="メーカー修理" Style="ddo-char-set: 1; text-align: center; font-size: 10pt; font-family: ＭＳ 明朝; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label2" MOD="4" Left="4521.6" Top="2016" Width="979.2" Height="475.2" Caption="916400" Style="text-align: center; font-size: 11.25pt; font-family: ＭＳ 明朝; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label3" MOD="4" Left="6177.6" Top="2034.72" Width="172.8" Height="475.2" Caption="5" Style="text-align: center; font-size: 11.25pt; font-family: ＭＳ 明朝; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label4" MOD="4" Left="9795.6" Top="2034" Width="576" Height="475.2" Caption="1" Style="text-align: center; font-size: 11.25pt; font-family: ＭＳ 明朝; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox10" DataField="Expr09" MOD="4" Left="12033.9" Top="2016" Width="1699.2" Height="475.2" Text="税別価格" Multiline="0" CanGrow="0" Style="ddo-char-set: 1; text-align: right; font-size: 13pt; font-family: ＭＳ ゴシック; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox13" DataField="Expr09" MOD="4" Left="12033.9" Top="4939.2" Width="1699.2" Height="475.2" Text="税別価格" Multiline="0" CanGrow="0" Style="ddo-char-set: 1; text-align: right; font-size: 13pt; font-family: ＭＳ ゴシック; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label8" MOD="4" Left="9796.32" Top="4939.2" Width="576" Height="475.2" Caption="1" Style="text-align: center; font-size: 11.25pt; font-family: ＭＳ 明朝; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox5" DataField="Expr08" MOD="4" Left="6736.32" Top="2541.6" Width="1710" Height="262.8002" Text="製造番号" Multiline="0" CanGrow="0" Style="ddo-char-set: 1; text-align: left; font-size: 9pt; font-family: ＭＳ ゴシック; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label6" MOD="4" Left="6556.32" Top="2541.6" Width="180" Height="270" Caption="(" Style="text-align: center; font-size: 11.25pt; font-family: ＭＳ 明朝; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label7" MOD="4" Left="8445.6" Top="2541.6" Width="180" Height="270" Caption=")" Style="text-align: center; font-size: 11.25pt; font-family: ＭＳ 明朝; vertical-align: middle; " />
+    </Section>
+  </Sections>
+  <PageSettings LeftMargin="0" RightMargin="0" TopMargin="0" BottomMargin="0" PaperSize="9" PaperWidth="11906" PaperHeight="16838" PaperName="ユーザー定義のサイズ" Orientation="2" />
+</ActiveReportsLayout>

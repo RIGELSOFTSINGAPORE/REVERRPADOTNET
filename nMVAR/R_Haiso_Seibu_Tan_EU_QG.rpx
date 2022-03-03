@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ActiveReportsLayout Version="3.3" PrintWidth="12120" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: MS UI Gothic; font-style: normal; font-variant: inherit; font-weight: normal; font-size: 10pt; font-size-adjust: inherit; font-stretch: inherit; color: rgb(0,0,0); background-repeat: inherit; background-attachment: inherit; opacity: inherit; word-spacing: inherit; letter-spacing: inherit; text-decoration: none; vertical-align: inherit; text-transform: inherit; text-align: inherit; text-indent: inherit; unicode-bidi: inherit; line-height: inherit; white-space: inherit; ddo-char-set: 128" />
+    <Style Name="Heading1" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 16pt; font-size-adjust: inherit; font-stretch: inherit" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-style: italic; font-variant: inherit; font-weight: bold; font-size: 14pt; font-size-adjust: inherit; font-stretch: inherit" />
+    <Style Name="Heading3" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 13pt; font-size-adjust: inherit; font-stretch: inherit" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="Detail" Name="Detail" Height="5730" BackColor="16777215" NewPage="2">
+      <Control Type="AR.Field" Name="TextBox01" Left="5346" Top="460.8" Width="403.2" Height="259.2" Text="yy" CanGrow="0" Style="font-family: ＭＳ ゴシック; font-size: 9.75pt; text-align: center; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox02" Left="5965.2" Top="460.8" Width="403.2" Height="259.2" Text="mm" CanGrow="0" Style="font-family: ＭＳ ゴシック; font-size: 9.75pt; text-align: center; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox03" Left="6642" Top="460.8" Width="403.2" Height="259.2" Text="dd" CanGrow="0" Style="font-family: ＭＳ ゴシック; font-size: 9.75pt; text-align: center; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox3" DataField="tel1" Left="2250" Top="2520" Width="3682.8" Height="288" Text="お客様TEL" Multiline="0" CanGrow="0" Style="background-color: window; font-family: ＭＳ ゴシック; font-size: 11.25pt; text-align: left; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox4" DataField="adrs1" Left="1468.8" Top="1296" Width="5616" Height="360" Text="お客様住所1" Multiline="0" CanGrow="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 11.25pt; text-align: left; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox5" DataField="adrs2" Left="1468.8" Top="1656" Width="5616" Height="360" Text="お客様住所2" Multiline="0" CanGrow="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 11.25pt; text-align: left; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox6" DataField="user_name" Left="1468.8" Top="2016" Width="4608" Height="360" Text="お客様名" Multiline="0" CanGrow="0" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 11.25pt; text-align: left; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox7" DataField="brch_zip" Left="5580" Top="2880" Width="1800" Height="230.4" Text="QG 郵便番号" Multiline="0" CanGrow="0" Style="background-color: window; font-family: ＭＳ ゴシック; font-size: 8.25pt; text-align: left; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox8" DataField="brch_adrs1" Left="1584" Top="2880" Width="3600" Height="230.4" Text="QG住所1" Multiline="0" CanGrow="0" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; text-align: left; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox9" DataField="brch_adrs2" Left="1584" Top="3110.4" Width="3600" Height="230.4" Text="QG住所2" Multiline="0" CanGrow="0" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; text-align: left; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox10" DataField="comp_name" Left="1584" Top="3340.8" Width="3600" Height="230.4" Text="グローバルソリューションサービス㈱" Multiline="0" CanGrow="0" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; text-align: left; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox11" DataField="brch_name" Left="1584" Top="3571.2" Width="3600" Height="230.4" Text="QG名" Multiline="0" CanGrow="0" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; text-align: left; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox12" DataField="rcpt_no" Left="1180.8" Top="4248" Width="1728" Height="360" Text="管理番号" Multiline="0" CanGrow="0" Style="background-color: window; font-family: ＭＳ ゴシック; font-size: 8.25pt; text-align: left; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox13" DataField="zip" Left="1468.8" Top="935.9999" Width="2160" Height="360" Text="お客様〒" Multiline="0" CanGrow="0" Style="font-family: ＭＳ ゴシック; font-size: 11.25pt; text-align: left; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label" Left="1530" Top="2520" Width="630" Height="270" Caption="Tel：" Style="background-color: window" Multiline="0" />
+      <Control Type="AR.Field" Name="TextBox14" DataField="brch_tel" Left="5670" Top="3150" Width="1728" Height="230.4" Text="QG TEL" Multiline="0" CanGrow="0" Style="background-color: window; font-family: ＭＳ ゴシック; font-size: 8.25pt; text-align: left; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label1" Left="5310" Top="2880" Width="270.72" Height="230.4" Caption="〒" Style="background-color: window" Multiline="0" />
+      <Control Type="AR.Label" Name="Label2" Left="5256" Top="3150.72" Width="413.9999" Height="270" Caption="Tel：" Style="background-color: window" Multiline="0" />
+      <Control Type="AR.Label" Name="Label3" Left="1170" Top="3960" Width="990" Height="270" Caption="管理番号" Style="background-color: window; vertical-align: middle" Multiline="0" />
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <PageSettings LeftMargin="720" RightMargin="0" TopMargin="144" BottomMargin="0" PaperSize="9" PaperWidth="11906" PaperHeight="16838" PaperName="" Orientation="2" />
+  <Parameters />
+</ActiveReportsLayout>

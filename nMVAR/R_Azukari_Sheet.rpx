@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ActiveReportsLayout Version="3.3" PrintWidth="10275" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: MS UI Gothic; font-style: normal; font-variant: inherit; font-weight: normal; font-size: 10pt; font-size-adjust: inherit; font-stretch: inherit; color: rgb(0,0,0); background-repeat: inherit; background-attachment: inherit; opacity: inherit; word-spacing: inherit; letter-spacing: inherit; text-decoration: none; vertical-align: inherit; text-transform: inherit; text-align: inherit; text-indent: inherit; unicode-bidi: inherit; line-height: inherit; white-space: inherit; ddo-char-set: 128" />
+    <Style Name="Heading1" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 16pt; font-size-adjust: inherit; font-stretch: inherit" />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-style: italic; font-variant: inherit; font-weight: bold; font-size: 14pt; font-size-adjust: inherit; font-stretch: inherit" />
+    <Style Name="Heading3" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 13pt; font-size-adjust: inherit; font-stretch: inherit" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="0" BackColor="16777215" />
+    <Section Type="Detail" Name="Detail" Height="16363" ColumnDirection="1" BackColor="16777215">
+      <Control Type="AR.Field" Name="TextBox64" DataField="sb_imei_old" Left="8100" Top="4710" Width="1980" Height="360" Text="123456789012345" OutputFormat="" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 11.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label26" Left="7200" Top="4710" Width="900" Height="360" Caption="IMEI番号" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox63" DataField="store_wrn_info" Left="0" Top="9075" Width="10080" Height="450" Text="自由入力欄（販社保険　限度額\○○、○○○-など）" Style="font-family: ＭＳ ゴシック; font-size: 15.75pt; font-weight: bold" />
+      <Control Type="AR.Label" Name="Label66" Left="0" Top="9570" Width="10080" Height="270" Caption="作業日　　作業者　　　　　　　　　　　　　　　　　　　作業内容・作業経過・使用備品等　Ｌｏｇ" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label25" Left="4680" Top="1650" Width="2700" Height="270" Caption="販　社　受 　付　 日" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox62" DataField="store_accp_date2" Left="4680" Top="2010" Width="2700" Height="810" Text="○○月○○日" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 21.75pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox22" DataField="rcpt_no" Left="0" Top="1920" Width="4680" Height="900" Text="AS1234567" Multiline="0" Style="font-family: Arial; font-size: 33.75pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 0" />
+      <Control Type="AR.Field" Name="TextBox33" DataField="model_1" Left="720" Top="3990" Width="3060" Height="360" Text="TP x40" Multiline="0" CanGrow="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 14.25pt; font-weight: normal; text-align: left; vertical-align: middle; white-space: nowrap; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox46" Left="0" Top="14160" Width="2520" Height="450" Text="見積回答受領日" Multiline="0" Style="font-family: MS UI Gothic; font-size: 12.75pt; font-weight: bold; text-align: center; vertical-align: top; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox53" DataField="user_name" Left="8910" Top="16050" Width="1170" Height="270" Text="お客様名" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 9pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox52" DataField="vndr_name" Left="7650" Top="16050" Width="1350" Height="270" Text="メーカー" Multiline="0" Style="font-family: ＭＳ Ｐ明朝; font-size: 8.25pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox50" DataField="vndr_name" Left="5130" Top="16050" Width="1350" Height="270" Text="メーカー" Multiline="0" Style="font-family: ＭＳ Ｐ明朝; font-size: 8.25pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox51" DataField="user_name" Left="6390" Top="16050" Width="1170" Height="270" Text="お客様名" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 9pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox21" DataField="user_name" Left="3870" Top="16050" Width="1170" Height="270" Text="お客様名" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 9pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox19" DataField="vndr_name" Left="2610" Top="16050" Width="1350" Height="270" Text="メーカー" Multiline="0" Style="font-family: ＭＳ Ｐ明朝; font-size: 8.25pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox14" DataField="vndr_name" Left="90" Top="16050" Width="1350" Height="270" Text="メーカー" Multiline="0" Style="font-family: ＭＳ Ｐ明朝; font-size: 8.25pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox17" DataField="user_name" Left="1350" Top="16050" Width="1170" Height="270" Text="お客様名" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 9pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox12" Left="0" Top="13890" Width="2520" Height="270" Text="　　月　　　　　日" Multiline="0" Style="font-family: ＭＳ Ｐ明朝; font-size: 8.25pt; font-weight: bold; text-align: center; vertical-align: bottom; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox49" DataField="user_name" Left="8910" Top="15240" Width="1170" Height="270" Text="お客様名" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 9pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox40" DataField="vndr_name" Left="7650" Top="15240" Width="1350" Height="270" Text="メーカー" Multiline="0" Style="font-family: ＭＳ Ｐ明朝; font-size: 8.25pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox38" DataField="user_name" Left="6390" Top="15240" Width="1170" Height="270" Text="お客様名" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 9pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox18" DataField="vndr_name" Left="5130" Top="15240" Width="1350" Height="270" Text="メーカー" Multiline="0" Style="font-family: ＭＳ Ｐ明朝; font-size: 8.25pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox13" DataField="vndr_name" Left="2610" Top="15240" Width="1350" Height="270" Text="メーカー" Multiline="0" Style="font-family: ＭＳ Ｐ明朝; font-size: 8.25pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox16" DataField="user_name" Left="3870" Top="15240" Width="1170" Height="270" Text="お客様名" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 9pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox30" DataField="acdt_date" Left="5040" Top="4710" Width="2160" Height="360" Text="yyyy/mm/dd" OutputFormat="yyyy/MM/dd" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 14.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label20" Left="3780" Top="4710" Width="1260" Height="360" Caption="QG-Care事故日" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox6" DataField="vndr_name" Left="90" Top="15240" Width="1260" Height="270" Text="メーカー" Multiline="0" Style="font-family: ＭＳ Ｐ明朝; font-size: 8.25pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox28" DataField="vndr_wrn_date" Left="720" Top="3270" Width="3060" Height="360" Text="yyyy/mm/dd" OutputFormat="yyyy/MM/dd" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 14.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label19" Left="0" Top="3270" Width="720" Height="360" Caption="保証開始" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label030" Left="8190" Top="5902.5" Width="1890" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label029" Left="8190" Top="5632.5" Width="1890" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label028" Left="8190" Top="5362.5" Width="1890" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label027" Left="8190" Top="5092.5" Width="1890" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label024" Left="6300" Top="5902.5" Width="1890" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label023" Left="6300" Top="5632.5" Width="1890" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label022" Left="6300" Top="5362.5" Width="1890" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label021" Left="6300" Top="5092.5" Width="1890" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label018" Left="4410" Top="5902.5" Width="1890" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label017" Left="4410" Top="5632.5" Width="1890" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label016" Left="4410" Top="5362.5" Width="1890" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label015" Left="4410" Top="5092.5" Width="1890" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label012" Left="2700" Top="5902.5" Width="1710" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label011" Left="2700" Top="5632.5" Width="1710" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label010" Left="2700" Top="5362.5" Width="1710" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label009" Left="2700" Top="5092.5" Width="1710" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label006" Left="720" Top="5902.5" Width="1980" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label005" Left="720" Top="5632.5" Width="1980" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label004" Left="720" Top="5362.5" Width="1980" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label003" Left="720" Top="5092.5" Width="1980" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Field" Name="TextBox1" DataField="accp_date2" Left="7380" Top="2010" Width="2700" Height="810" Text="○○月○○日" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 21.75pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label4" Left="7380" Top="1650" Width="2700" Height="270" Caption="G　S　S　受 　付　 日" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label1" Left="0" Top="1650" Width="4680" Height="270" Caption="受付番号" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label9" Left="5400" Top="660" Width="4680" Height="270" Caption="販　社　伝　票　番　号" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox10" DataField="store_repr_no" Left="5400" Top="930.0001" Width="4680" Height="720" Text="987654-123456" Multiline="0" Style="font-family: Arial; font-size: 26.25pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 0" />
+      <Control Type="AR.Field" Name="TextBox15" Left="787.5" Top="6240" Width="9270" Height="1710" Text="" CanGrow="0" Style="font-family: ＭＳ ゴシック; font-size: 8.5pt; text-align: left; vertical-align: top; ddo-char-set: 1" />
+      <Control Type="AR.Line" Name="Line11" X1="4500" Y1="3270" X2="4500" Y2="4710" LineWeight="2" />
+      <Control Type="AR.Line" Name="Line16" X1="0" Y1="3270" X2="9900" Y2="3270" LineWeight="2" />
+      <Control Type="AR.Label" Name="Label" Left="450" Top="570" Width="2610" Height="360" Caption="お預かりシート" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 14.25pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox4" DataField="vndr_name" Left="0" Top="930.0001" Width="5400" Height="720" Text="メーカー名" Multiline="0" Style="font-family: ＭＳ Ｐ明朝; font-size: 32.25pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox23" DataField="cls_code_name" Left="0" Top="2820" Width="3600" Height="450" Text="TextBox(IW/OW)" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 21.75pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox25" DataField="arvl_cls_name" Left="4320" Top="2820" Width="1440" Height="450" Text="宅配" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 12pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox27" DataField="arvl_empl_name" Left="6480" Top="2820" Width="1350" Height="450" Text="大阪 太郎" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 12pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox29" DataField="rcpt_cls_name" Left="720" Top="3630" Width="3060" Height="360" Text="QG-CARE" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 14.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox31" DataField="rpar_comp_name" Left="8550" Top="2820" Width="1530" Height="450" Text="渋谷 次郎" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 12pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox34" DataField="model_2" Left="720" Top="4350" Width="3060" Height="360" Text="26554aj" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 14.25pt; font-weight: normal; text-align: left; vertical-align: middle; white-space: nowrap; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox41" DataField="s_n" Left="720" Top="4710" Width="3060" Height="360" Text="UV12345HN4Q" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 12pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox43" DataField="store_name" Left="4500" Top="3270" Width="5580" Height="540" Text="ｹｰｽﾞ ○○本店" Multiline="0" Style="background-color: White; font-family: ＭＳ Ｐゴシック; font-size: 18pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox45" DataField="user_name" Left="4500" Top="4080" Width="3600" Height="630" Text="青島　幸雄" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 20.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox47" DataField="tel" Left="4500" Top="3810" Width="2340" Height="270" Text="03-4567-8910" Multiline="0" Style="background-color: White; font-family: ＭＳ Ｐゴシック; font-size: 11.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox48" DataField="fax" Left="7560" Top="3810" Width="2520" Height="270" Text="03-4567-8920" Multiline="0" Style="background-color: White; font-family: ＭＳ Ｐゴシック; font-size: 11.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox56" DataField="tel1" Left="8100" Top="4260" Width="1980" Height="450" Text="090-1234-5678" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 11.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Line" Name="Line19" X1="10080" Y1="1650" X2="0" Y2="1650" LineWeight="2" />
+      <Control Type="AR.Line" Name="Line20" X1="10080" Y1="930.0001" X2="0" Y2="930.0001" LineWeight="2" />
+      <Control Type="AR.Line" Name="Line33" X1="5400" Y1="930.0001" X2="5400" Y2="1650" />
+      <Control Type="AR.Line" Name="Line39" X1="3780" Y1="3270" X2="3780" Y2="4710" />
+      <Control Type="AR.Line" Name="Line41" X1="6840" Y1="3810" X2="6840" Y2="4080" />
+      <Control Type="AR.Line" Name="Line42" X1="7830" Y1="2820" X2="7830" Y2="3270" />
+      <Control Type="AR.Line" Name="Line43" X1="5760" Y1="2820" X2="5760" Y2="3270" />
+      <Control Type="AR.Line" Name="Line44" X1="3600" Y1="2820" X2="3600" Y2="3270" />
+      <Control Type="AR.Field" Name="TextBox104" Left="7200" Top="8220" Width="2880" Height="540" Text="　　　月　　　日" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 21.75pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox" DataField="rcpt_no" Left="0" Top="15510" Width="2520" Height="540" Text="AS1234567" Multiline="0" Style="font-family: Arial; font-size: 21.75pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 0" />
+      <Control Type="AR.Field" Name="TextBox2" DataField="rcpt_no" Left="0" Top="14700" Width="2520" Height="540" Text="AS1234567" Multiline="0" Style="font-family: Arial; font-size: 21.75pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 0" />
+      <Control Type="AR.Field" Name="TextBox3" DataField="rcpt_no" Left="7560" Top="15510" Width="2520" Height="540" Text="AS1234567" Multiline="0" Style="font-family: Arial; font-size: 21.75pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 0" />
+      <Control Type="AR.Field" Name="TextBox5" DataField="rcpt_no" Left="2520" Top="14700" Width="2520" Height="540" Text="AS1234567" Multiline="0" Style="font-family: Arial; font-size: 21.75pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 0" />
+      <Control Type="AR.Field" Name="TextBox7" DataField="rcpt_no" Left="2520" Top="15510" Width="2520" Height="540" Text="AS1234567" Multiline="0" Style="font-family: Arial; font-size: 21.75pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 0" />
+      <Control Type="AR.Field" Name="TextBox8" DataField="rcpt_no" Left="7560" Top="14700" Width="2520" Height="540" Text="AS1234567" Multiline="0" Style="font-family: Arial; font-size: 21.75pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 0" />
+      <Control Type="AR.Field" Name="TextBox11" DataField="rcpt_no" Left="5040" Top="15510" Width="2520" Height="540" Text="AS1234567" Multiline="0" Style="font-family: Arial; font-size: 21.75pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 0" />
+      <Control Type="AR.Field" Name="TextBox20" DataField="user_name" Left="1440" Top="15240" Width="1170" Height="270" Text="お客様名" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 9pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Line" Name="Line5" X1="0" Y1="1920" X2="10080" Y2="1920" LineStyle="2" />
+      <Control Type="AR.Line" Name="Line7" X1="8550" Y1="2820" X2="8550" Y2="3270" LineStyle="2" />
+      <Control Type="AR.Line" Name="Line8" X1="6480" Y1="2820" X2="6480" Y2="3270" LineStyle="2" />
+      <Control Type="AR.Line" Name="Line9" X1="4320" Y1="2820" X2="4320" Y2="3270" LineStyle="2" />
+      <Control Type="AR.Line" Name="Line10" X1="4500" Y1="3270" X2="4500" Y2="4710" LineStyle="2" />
+      <Control Type="AR.Line" Name="Line12" X1="7560" Y1="3810" X2="7560" Y2="4080" LineStyle="2" />
+      <Control Type="AR.Line" Name="Line13" X1="10080" Y1="4260" X2="8100" Y2="4260" LineStyle="2" LineWeight="2" />
+      <Control Type="AR.Line" Name="Line75" X1="0" Y1="15510" X2="10080" Y2="15510" />
+      <Control Type="AR.Line" Name="Line82" X1="720" Y1="3630" X2="720" Y2="4710" LineStyle="2" />
+      <Control Type="AR.Label" Name="Label2" Left="3600" Top="2820" Width="720" Height="450" Caption="入荷区分" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label3" Left="5760" Top="2820" Width="720" Height="450" Caption="入荷担当" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label5" Left="7830" Top="2820" Width="720" Height="450" Caption="修理部署" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label6" Left="3780" Top="3270" Width="720" Height="540" Caption="販社名" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label7" Left="3780" Top="3810" Width="720" Height="270" Caption="販社電話" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label8" Left="6840" Top="3810" Width="720" Height="270" Caption="販社Fax" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label10" Left="0" Top="3630" Width="720" Height="360" Caption="有償情報" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label11" Left="0" Top="3990" Width="720" Height="360" Caption="機種" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label12" Left="0" Top="4350" Width="720" Height="360" Caption="モデル" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label13" Left="0" Top="4710" Width="720" Height="360" Caption="製造番号" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label14" Left="3780" Top="4080" Width="720" Height="630" Caption="お客様名" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label15" Left="8100" Top="4080" Width="1980" Height="180" Caption="お客様連絡先" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 6pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label16" Left="0" Top="5182.5" Width="720" Height="900" Caption="付属品" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label47" Left="0" Top="6240" Width="720" Height="1980" Caption="故障内容" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label48" Left="720" Top="7950" Width="1980" Height="270" Caption="□ﾃﾞｰﾀ消去 OK / NG" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label49" Left="2700" Top="7950" Width="1620" Height="270" Caption="□LAN 無線/有線" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label50" Left="4320" Top="7950" Width="1260" Height="270" Caption="□Bluetooth" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label51" Left="5580" Top="7950" Width="1170" Height="270" Caption="□モデム" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label52" Left="6750" Top="7950" Width="1350" Height="270" Caption="□ビデオボード" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label53" Left="8100" Top="7950" Width="1980" Height="270" Caption="□その他" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label54" Left="0" Top="8235" Width="720" Height="524.9995" Caption="レビュー" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox9" DataField="rcpt_no" Left="5040" Top="14700" Width="2520" Height="540" Text="AS1234567" Multiline="0" Style="font-family: Arial; font-size: 21.75pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 0" />
+      <Control Type="AR.Label" Name="Label56" Left="720" Top="8220" Width="2880" Height="270" Caption="□故障情報確認済" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label57" Left="720" Top="8490" Width="2880" Height="270" Caption="□申告症状以外(下記に詳細記入)" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label58" Left="3600" Top="8220" Width="2970" Height="270" Caption="□申告症状確認後、再検証依頼有" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label59" Left="3600" Top="8490" Width="2970" Height="270" Caption="□" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label60" Left="6570" Top="8220" Width="630" Height="270" Caption="完了" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label61" Left="6570" Top="8490" Width="630" Height="270" Caption="予定日" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label62" Left="0" Top="8760" Width="2610" Height="270" Caption="データ消去修理前確認　担当者" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: bold; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label63" Left="2610" Top="8760" Width="1080" Height="270" Caption="CE：" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label64" Left="3690" Top="8760" Width="1890" Height="270" Caption="確認日　　　　月　　　　日" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Label" Name="Label65" Left="5580" Top="8760" Width="4500" Height="270" Caption="　データ消去の承認が取れていることを確認しました" Style="background-color: window; font-family: ＭＳ Ｐゴシック; font-size: 8.25pt; font-weight: normal; text-align: left; vertical-align: middle; ddo-char-set: 128" />
+      <Control Type="AR.Line" Name="Line14" X1="0" Y1="10635" X2="10080" Y2="10635" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line15" X1="0" Y1="10365" X2="10080" Y2="10365" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line17" X1="0" Y1="10095" X2="10080" Y2="10095" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line18" X1="0" Y1="9825" X2="10080" Y2="9825" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line21" X1="0" Y1="11715" X2="10080" Y2="11715" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line22" X1="0" Y1="11445" X2="10080" Y2="11445" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line23" X1="0" Y1="11175" X2="10080" Y2="11175" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line24" X1="0" Y1="10905" X2="10080" Y2="10905" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line25" X1="0" Y1="12795" X2="10080" Y2="12795" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line26" X1="0" Y1="12525" X2="10080" Y2="12525" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line27" X1="0" Y1="12255" X2="10080" Y2="12255" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line28" X1="0" Y1="11985" X2="10080" Y2="11985" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line30" X1="0" Y1="13605" X2="10080" Y2="13605" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line31" X1="0" Y1="13335" X2="10080" Y2="13335" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line32" X1="0" Y1="13065" X2="10080" Y2="13065" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line35" X1="0" Y1="8745" X2="10080" Y2="8745" />
+      <Control Type="AR.Line" Name="Line36" X1="720" Y1="8490" X2="6570" Y2="8490" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line37" X1="720" Y1="7950" X2="10080" Y2="7950" />
+      <Control Type="AR.Line" Name="Line38" X1="0" Y1="8205" X2="10080" Y2="8205" />
+      <Control Type="AR.Line" Name="Line40" X1="720" Y1="3270" X2="720" Y2="8760" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line45" X1="3600" Y1="8220" X2="3600" Y2="8760" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line46" X1="7200" Y1="8220" X2="7200" Y2="8760" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line47" X1="6570" Y1="8220" X2="6570" Y2="8760" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line48" X1="6750" Y1="7950" X2="6750" Y2="8220" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line49" X1="8100" Y1="7950" X2="8100" Y2="8220" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line50" X1="5580" Y1="7950" X2="5580" Y2="8220" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line51" X1="4320" Y1="7950" X2="4320" Y2="8220" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line52" X1="2700" Y1="7950" X2="2700" Y2="8220" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line53" X1="630" Y1="9480" X2="630" Y2="13612.8" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line55" X1="1260" Y1="9480" X2="1260" Y2="13569.6" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line56" X1="2700" Y1="5092.5" X2="2700" Y2="6172.5" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line57" X1="10080" Y1="2820" X2="0" Y2="2820" LineWeight="2" />
+      <Control Type="AR.Line" Name="Line58" X1="10080" Y1="3270" X2="0" Y2="3270" LineWeight="2" />
+      <Control Type="AR.Line" Name="Line59" X1="4410" Y1="5070" X2="4410" Y2="6172.5" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line60" X1="6300" Y1="5070" X2="6300" Y2="6172.5" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line61" X1="8190" Y1="5070" X2="8190" Y2="6172.5" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line68" X1="0" Y1="4350" X2="3780" Y2="4350" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line69" X1="0" Y1="3990" X2="3780" Y2="3990" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line70" X1="0" Y1="3630" X2="3780" Y2="3630" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line71" X1="3780" Y1="3270" X2="3780" Y2="5070" />
+      <Control Type="AR.Line" Name="Line72" X1="4500" Y1="3270" X2="4500" Y2="4710" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line73" X1="3780" Y1="3810" X2="10080" Y2="3810" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line74" X1="3780" Y1="4080" X2="10080" Y2="4080" />
+      <Control Type="AR.Line" Name="Line79" X1="6840" Y1="3810" X2="6840" Y2="4080" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line80" X1="7560" Y1="3810" X2="7560" Y2="4080" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line81" X1="8100" Y1="4080" X2="8100" Y2="5070" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line83" X1="8100" Y1="4260" X2="10080" Y2="4260" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line84" X1="8550" Y1="2820" X2="8550" Y2="3270" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line85" X1="6480" Y1="2820" X2="6480" Y2="3270" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line86" X1="4320" Y1="2820" X2="4320" Y2="3270" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line87" X1="3600" Y1="2820" X2="3600" Y2="3270" />
+      <Control Type="AR.Line" Name="Line88" X1="5760" Y1="2820" X2="5760" Y2="3270" />
+      <Control Type="AR.Line" Name="Line89" X1="7830" Y1="2820" X2="7830" Y2="3270" />
+      <Control Type="AR.Line" Name="Line92" X1="0" Y1="16320" X2="10080" Y2="16320" />
+      <Control Type="AR.Field" Name="TextBox24" DataField="user_trbl" Visible="0" Left="8820" Top="6960" Width="1170" Height="270" Text="TextBox24" CanGrow="0" Style="background-color: #C0FFC0; font-family: ＭＳ ゴシック; font-size: 8.5pt; text-align: left; vertical-align: top; ddo-char-set: 1" />
+      <Control Type="AR.Field" Name="TextBox26" DataField="rcpt_comn" Visible="0" Left="8820" Top="7320" Width="1170" Height="270" Text="TextBox26" CanGrow="0" Style="background-color: #C0FFC0; font-family: ＭＳ ゴシック; font-size: 8.5pt; text-align: left; vertical-align: top; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="Label103" Left="1980" Top="5070" Width="630" Height="270" Caption="" Style="font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: right; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label104" Left="1980" Top="5362.5" Width="630" Height="270" Caption="" Style="font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: right; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label105" Left="1980" Top="5632.5" Width="630" Height="270" Caption="" Style="font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: right; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label106" Left="1980" Top="5902.5" Width="630" Height="270" Caption="" Style="font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: right; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label112" Left="3690" Top="5902.5" Width="630" Height="270" Caption="" Style="font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: right; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label111" Left="3690" Top="5632.5" Width="630" Height="270" Caption="" Style="font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: right; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label110" Left="3690" Top="5362.5" Width="630" Height="270" Caption="" Style="font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: right; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label109" Left="3690" Top="5070" Width="630" Height="270" Caption="" Style="font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: right; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label115" Left="5580" Top="5070" Width="630" Height="270" Caption="" Style="font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: right; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label116" Left="5580" Top="5362.5" Width="630" Height="270" Caption="" Style="font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: right; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label117" Left="5580" Top="5632.5" Width="630" Height="270" Caption="" Style="font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: right; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label118" Left="5580" Top="5902.5" Width="630" Height="270" Caption="" Style="font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: right; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label121" Left="7470" Top="5070" Width="630" Height="270" Caption="" Style="font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: right; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label122" Left="7470" Top="5362.5" Width="630" Height="270" Caption="" Style="font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: right; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label123" Left="7470" Top="5632.5" Width="630" Height="270" Caption="" Style="font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: right; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label124" Left="7470" Top="5902.5" Width="630" Height="270" Caption="" Style="font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: right; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label127" Left="9360" Top="5070" Width="630" Height="270" Caption="" Style="font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: right; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label128" Left="9360" Top="5362.5" Width="630" Height="270" Caption="" Style="font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: right; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label129" Left="9360" Top="5632.5" Width="630" Height="270" Caption="" Style="font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: right; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Label" Name="Label130" Left="9360" Top="5902.5" Width="630" Height="270" Caption="" Style="font-family: ＭＳ Ｐゴシック; font-size: 9.75pt; font-weight: normal; text-align: right; vertical-align: middle; ddo-char-set: 128" Multiline="0" />
+      <Control Type="AR.Line" Name="Line54" X1="0" Y1="6172.5" X2="10080" Y2="6172.5" />
+      <Control Type="AR.Line" Name="Line62" X1="720" Y1="5902.5" X2="10080" Y2="5902.5" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line63" X1="720" Y1="5632.5" X2="10080" Y2="5632.5" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line65" X1="720" Y1="5362.5" X2="10080" Y2="5362.5" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line64" X1="0" Y1="5070" X2="10080" Y2="5070" />
+      <Control Type="AR.Line" Name="Line66" X1="3780" Y1="4710" X2="10080" Y2="4710" />
+      <Control Type="AR.Line" Name="Line34" X1="0" Y1="4710" X2="3780" Y2="4710" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line67" X1="5040" Y1="4710" X2="5040" Y2="5070" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line2" X1="0" Y1="13605" X2="10080" Y2="13605" />
+      <Control Type="AR.Field" Name="TextBox36" Left="2520" Top="13890" Width="2520" Height="270" Text="　　月　　　　　日" Multiline="0" Style="font-family: ＭＳ Ｐ明朝; font-size: 8.25pt; font-weight: bold; text-align: center; vertical-align: bottom; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox39" Left="5040" Top="13890" Width="2520" Height="270" Text="　　月　　　　　日" Multiline="0" Style="font-family: ＭＳ Ｐ明朝; font-size: 8.25pt; font-weight: bold; text-align: center; vertical-align: bottom; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox44" Left="7560" Top="13890" Width="2520" Height="270" Text="　　月　　　　　日" Multiline="0" Style="font-family: ＭＳ Ｐ明朝; font-size: 8.25pt; font-weight: bold; text-align: center; vertical-align: bottom; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox57" Left="2520" Top="14430" Width="2520" Height="270" Text="　　月　　　　　日" Multiline="0" Style="font-family: ＭＳ Ｐ明朝; font-size: 8.25pt; font-weight: bold; text-align: center; vertical-align: bottom; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox59" Left="5040" Top="14430" Width="2520" Height="270" Text="　　月　　　　　日" Multiline="0" Style="font-family: ＭＳ Ｐ明朝; font-size: 8.25pt; font-weight: bold; text-align: center; vertical-align: bottom; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox61" Left="7560" Top="14430" Width="2520" Height="270" Text="　　月　　　　　日" Multiline="0" Style="font-family: ＭＳ Ｐ明朝; font-size: 8.25pt; font-weight: bold; text-align: center; vertical-align: bottom; ddo-char-set: 128" />
+      <Control Type="AR.Line" Name="Line93" X1="4680" Y1="1650" X2="4680" Y2="2820" />
+      <Control Type="AR.Line" Name="Line94" X1="7380" Y1="1650" X2="7380" Y2="2820" />
+      <Control Type="AR.Line" Name="Line1" X1="0" Y1="9510" X2="10080" Y2="9510" />
+      <Control Type="AR.Line" Name="Line3" X1="0" Y1="9030" X2="10080" Y2="9030" />
+      <Control Type="AR.Field" Name="TextBox42" Left="7560" Top="13620" Width="2520" Height="360" Text="見積日" Multiline="0" Style="font-family: MS UI Gothic; font-size: 12.75pt; font-weight: bold; text-align: center; vertical-align: top; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox60" Left="7560" Top="14160" Width="2520" Height="450" Text="その他確認依頼" Multiline="0" Style="font-family: MS UI Gothic; font-size: 12.75pt; font-weight: bold; text-align: center; vertical-align: top; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox58" Left="5040" Top="14160" Width="2520" Height="450" Text="部品受領日" Multiline="0" Style="font-family: MS UI Gothic; font-size: 12.75pt; font-weight: bold; text-align: center; vertical-align: top; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox37" Left="5040" Top="13620" Width="2520" Height="360" Text="同梱物確認" Multiline="0" Style="font-family: MS UI Gothic; font-size: 12.75pt; font-weight: bold; text-align: center; vertical-align: top; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox55" Left="2520" Top="14160" Width="2520" Height="450" Text="部品発注日" Multiline="0" Style="font-family: MS UI Gothic; font-size: 12.75pt; font-weight: bold; text-align: center; vertical-align: top; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox35" Left="2520" Top="13620" Width="2520" Height="360" Text="パスワード確認" Multiline="0" Style="font-family: MS UI Gothic; font-size: 12.75pt; font-weight: bold; text-align: center; vertical-align: top; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox54" Left="0" Top="14430" Width="2520" Height="270" Text="　　月　　　　　日" Multiline="0" Style="font-family: ＭＳ Ｐ明朝; font-size: 8.25pt; font-weight: bold; text-align: center; vertical-align: bottom; ddo-char-set: 128" />
+      <Control Type="AR.Field" Name="TextBox32" Left="0" Top="13620" Width="2520" Height="360" Text="データ消去確認" Multiline="0" Style="font-family: MS UI Gothic; font-size: 12.75pt; font-weight: bold; text-align: center; vertical-align: top; ddo-char-set: 128" />
+      <Control Type="AR.Line" Name="Line90" X1="0" Y1="930.0001" X2="0" Y2="16320" />
+      <Control Type="AR.Line" Name="Line91" X1="10080" Y1="16320" X2="10080" Y2="930.0001" />
+      <Control Type="AR.Line" Name="Line77" X1="2520" Y1="13620" X2="2520" Y2="16320" LineStyle="2" />
+      <Control Type="AR.Line" Name="Line78" X1="5040" Y1="13620" X2="5040" Y2="16320" LineStyle="2" />
+      <Control Type="AR.Line" Name="Line76" X1="7560" Y1="13620" X2="7560" Y2="16320" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line" X1="0" Y1="14700" X2="10080" Y2="14700" />
+      <Control Type="AR.Line" Name="Line29" X1="0" Y1="14160" X2="10080" Y2="14160" />
+      <Control Type="AR.Line" Name="Line4" X1="7200" Y1="4710" X2="7200" Y2="5070" LineStyle="3" />
+      <Control Type="AR.Line" Name="Line6" X1="8100" Y1="4710" X2="8100" Y2="5070" LineStyle="3" />
+      <Control Type="AR.Barcode" Name="Barcode1" DataField="rcpt_no" Left="90" Top="15600" Width="2340" Height="450" BarStyle="12" Text="IP2764924" CODE128="" />
+      <Control Type="AR.Barcode" Name="Barcode2" DataField="rcpt_no" Left="2610" Top="15600" Width="2340" Height="450" BarStyle="12" Text="IP2764924" CODE128="" />
+      <Control Type="AR.Barcode" Name="Barcode3" DataField="rcpt_no" Left="5130" Top="15600" Width="2340" Height="450" BarStyle="12" Text="IP2764924" CODE128="" />
+      <Control Type="AR.Barcode" Name="Barcode4" DataField="rcpt_no" Left="7650" Top="15600" Width="2340" Height="450" BarStyle="12" Text="IP2764924" CODE128="" />
+      <Control Type="AR.Field" Name="TextBox65" DataField="store_code" Visible="0" Left="8820" Top="6510" Width="1170" Height="270" Text="TextBox65" CanGrow="0" Style="background-color: #C0FFC0; font-family: ＭＳ ゴシック; font-size: 8.5pt; text-align: left; vertical-align: top; ddo-char-set: 1" />
+      <Control Type="AR.Barcode" Name="Barcode5" DataField="s_n" Left="3870" Top="4732.5" Width="3240" Height="270" BarStyle="12" Text="013631001515136" CODE128="" />
+      <Control Type="AR.Barcode" Name="Barcode6" DataField="rcpt_no" Left="5490" Top="1020" Width="4500" Height="540" BarStyle="12" Text="IP2764924" CODE128="" />
+      <Control Type="AR.Barcode" Name="Barcode" DataField="rcpt_no" Left="2970" Top="0" Width="3330" Height="450" BarStyle="12" Text="IP2764924" Font="Courier New" FontSize="8" CODE128="" />
+      <Control Type="AR.Barcode" Name="Barcode7" DataField="s_n" Left="6840" Top="0" Width="3330" Height="450" BarStyle="12" Text="IP2764924" CODE128="" />
+      <Control Type="AR.Field" Name="TextBox66" DataField="rcpt_no" Left="2970" Top="450" Width="3240" Height="270" Text="AS1234567" Multiline="0" Style="font-family: Arial; font-size: 10pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 0" />
+      <Control Type="AR.Field" Name="TextBox67" DataField="s_n" Left="6840" Top="450" Width="3330" Height="270" Text="UV12345HN4Q" Multiline="0" Style="font-family: ＭＳ Ｐゴシック; font-size: 10pt; font-weight: normal; text-align: center; vertical-align: middle; ddo-char-set: 128" />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter" Height="0" BackColor="16777215" />
+  </Sections>
+  <ReportComponentTray />
+  <PageSettings LeftMargin="864" RightMargin="0" TopMargin="144" BottomMargin="0" PaperSize="9" PaperWidth="11906" PaperHeight="16838" PaperName="" Orientation="1" />
+  <Parameters />
+</ActiveReportsLayout>

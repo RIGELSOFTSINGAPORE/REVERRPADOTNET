@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3" PrintWidth="7620" DocumentName="ActiveReports Document" ScriptLang="C#" CodeFile="R_NCR_CCAR.vb">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-family: MS UI Gothic; font-style: normal; font-variant: inherit; font-weight: normal; font-size: 10pt; font-size-adjust: inherit; font-stretch: inherit; color: rgb(0,0,0); background-repeat: inherit; background-attachment: inherit; opacity: inherit; word-spacing: inherit; letter-spacing: inherit; text-decoration: none; vertical-align: inherit; text-transform: inherit; text-align: inherit; text-indent: inherit; unicode-bidi: inherit; line-height: inherit; white-space: inherit; ddo-char-set: 128; " />
+    <Style Name="Heading1" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 16pt; font-size-adjust: inherit; font-stretch: inherit; " />
+    <Style Name="Heading2" Value="font-family: Times New Roman; font-style: italic; font-variant: inherit; font-weight: bold; font-size: 14pt; font-size-adjust: inherit; font-stretch: inherit; " />
+    <Style Name="Heading3" Value="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: bold; font-size: 13pt; font-size-adjust: inherit; font-stretch: inherit; " />
+  </StyleSheet>
+  <Sections>
+    <Section Type="PageHeader" Name="PageHeader" Height="0" BackColor="16777215" CanShrink="0" />
+    <Section Type="Detail" Name="Detail" Height="9689" BackColor="16777215" NewPage="2" CanShrink="0">
+      <Control Type="AR.Field" Name="TextBox05" DataField="adrs1" MOD="4" Left="1440" Top="431.9998" Width="3312" Height="288" Text="販社住所" Style="font-size: 8.25pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox06" DataField="store_name" MOD="4" Left="504" Top="791.9998" Width="4032" Height="288" Text="販社名" Style="font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox04" DataField="rcpt_no" MOD="4" Left="5112" Top="0" Width="2304" Height="288" Text="Ref#" Style="font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox02" MOD="4" Left="6048" Top="489.5999" Width="504" Height="244.8" Text="mm" Style="text-align: center; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox01" MOD="4" Left="5112" Top="489.5999" Width="576" Height="244.8" Text="yyyy" Style="text-align: center; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox03" MOD="4" Left="6840" Top="489.5999" Width="504" Height="244.8" Text="dd" Style="text-align: center; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Line" Name="Line" MOD="4" X1="6048" Y1="1411.2" X2="7416" Y2="1411.2" />
+      <Control Type="AR.Line" Name="Line1" MOD="4" X1="6048" Y1="1569.6" X2="7416" Y2="1569.6" />
+      <Control Type="AR.Field" Name="TextBox07" DataField="brch_name" MOD="4" Left="5112" Top="1879.2" Width="1368" Height="259.2" Text="QG名" Style="text-align: center; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox08" DataField="uca_code" MOD="4" Left="6631.2" Top="1879.2" Width="935.9999" Height="259.2" Text="UCA-Code" Style="text-align: center; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox09" DataField="model_1" MOD="4" Left="216" Top="2779.2" Width="1872" Height="230.4" Text="機種" Style="font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox9" DataField="rcpt_no" MOD="4" Left="2448" Top="2779.2" Width="2304" Height="230.4" Text="管理番号" Style="font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label" MOD="4" Left="5112" Top="2347.2" Width="432" Height="230.4" Caption="22" Style="text-align: center; background-color: window; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label1" MOD="4" Left="5760" Top="2347.2" Width="259.2" Height="230.4" Caption="3" Style="text-align: center; background-color: window; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label2" MOD="4" Left="6076.8" Top="2347.2" Width="259.2" Height="230.4" Caption="8" Style="text-align: center; background-color: window; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label3" MOD="4" Left="7056" Top="2347.2" Width="259.2" Height="230.4" Caption="0" Style="text-align: center; background-color: window; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox10" DataField="user_name" MOD="4" Left="216" Top="3096" Width="4392" Height="230.4" Text="END USER名" Style="font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox11" DataField="model_2" MOD="4" Left="216" Top="3416.4" Width="2088" Height="230.4" Text="モデル" Style="font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox12" DataField="mngr_empl_name" MOD="4" Left="5976" Top="4176" Width="1368" Height="259.2" Text="Mgr名" Style="text-align: center; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox13" DataField="comp_shop_tech_chrg" MOD="4" Left="5976" Top="4622.4" Width="1368" Height="259.2" Text="技術料" OutputFormat="#,##0" Style="text-align: right; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox14" MOD="4" Left="5976" Top="7099.2" Width="1368" Height="259.2" Text="修理代合計" OutputFormat="#,##0" Style="text-align: right; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox59" MOD="4" Left="5976" Top="5040" Width="1368" Height="259.2" Text="部品代1" OutputFormat="#,##0" Style="text-align: right; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox60" MOD="4" Left="5976" Top="5356.799" Width="1368" Height="259.2" Text="部品代2" OutputFormat="#,##0" Style="text-align: right; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox61" MOD="4" Left="5976" Top="5673.6" Width="1368" Height="259.2" Text="部品代3" OutputFormat="#,##0" Style="text-align: right; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox62" MOD="4" Left="5976" Top="6048" Width="1368" Height="259.2" Text="部品代4" OutputFormat="#,##0" Style="text-align: right; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox51" MOD="4" Left="0" Top="5040" Width="2304" Height="259.2" Text="部品名1" Style="text-align: right; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox52" MOD="4" Left="0" Top="5356.799" Width="2304" Height="259.2" Text="部品名2" Style="text-align: right; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox53" MOD="4" Left="0" Top="5673.6" Width="2304" Height="259.2" Text="部品名3" Style="text-align: right; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox54" MOD="4" Left="0" Top="6048" Width="2304" Height="259.2" Text="部品名4" Style="text-align: right; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox55" MOD="4" Left="3715.2" Top="5040" Width="432" Height="259.2" Text="Q1" Style="text-align: right; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox56" MOD="4" Left="3715.2" Top="5356.799" Width="432" Height="259.2" Text="Q2" Style="text-align: right; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox57" MOD="4" Left="3715.2" Top="5673.6" Width="432" Height="259.2" Text="Q3" Style="text-align: right; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox58" MOD="4" Left="3715.2" Top="6048" Width="432" Height="259.2" Text="Q4" Style="text-align: right; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox27" DataField="comp_shop_fee" MOD="4" Left="5976" Top="6480" Width="1368" Height="259.2" Text="その他費" OutputFormat="#,##0" Style="text-align: right; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox28" DataField="comp_shop_pstg" MOD="4" Left="5976" Top="6796.8" Width="1368" Height="259.2" Text="運送費" OutputFormat="#,##0" Style="text-align: right; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox29" DataField="comp_shop_tax" MOD="4" Left="5961.6" Top="7473.6" Width="1368" Height="259.2" Text="消費税" OutputFormat="#,##0" Style="text-align: right; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox30" MOD="4" Left="5961.6" Top="7790.4" Width="1368" Height="259.2" Text="小計" OutputFormat="#,##0" Style="text-align: right; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox31" MOD="4" Left="5961.6" Top="8784" Width="1368" Height="259.2" Text="請求金額" OutputFormat="#,##0" Style="text-align: right; font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Label" Name="Label4" MOD="4" Left="5169.6" Top="9388.8" Width="648" Height="230.4" Caption="804" Style="text-align: center; background-color: window; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox32" DataField="model_1" MOD="4" Left="2394.72" Top="3417.12" Width="2088" Height="230.4" Text="機種" Style="font-size: 9pt; vertical-align: middle; " />
+      <Control Type="AR.Field" Name="TextBox33" DataField="comp_shop_part_chrg" Visible="0" MOD="4" Left="4914" Top="6246" Width="882.0002" Height="259.2" Text="TextBox33" Style="text-align: right; background-color: #C0FFFF; font-size: 9pt; vertical-align: middle; " />
+    </Section>
+    <Section Type="PageFooter" Name="PageFooter" Height="0" BackColor="16777215" CanShrink="0" />
+  </Sections>
+  <PageSettings LeftMargin="0" RightMargin="0" TopMargin="0" BottomMargin="0" PaperSize="9" PaperWidth="11906" PaperHeight="16838" PaperName="" Orientation="1" />
+</ActiveReportsLayout>
