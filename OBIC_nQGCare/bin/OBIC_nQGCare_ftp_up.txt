@@ -1,0 +1,7 @@
+option batch on
+option confirm off
+open obic_nQGCare
+option transfer binary
+mput *.csv *.csv
+bye
+
