@@ -1,0 +1,245 @@
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\QA_import_bat\bin\QA_import_bat.exe
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\QA_import_bat\bin\QA_import_bat.pdb
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\QA_import_bat\bin\QA_import_bat.xml
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\QA_import_bat\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\QA_import_bat\bin\GrapeCity.Win.Editors.v100.dll
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\QA_import_bat\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\QA_import_bat\obj\Debug\QA_import_bat.Form1.resources
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\QA_import_bat\obj\Debug\QA_import_bat.vbproj.GenerateResource.cache
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\QA_import_bat\obj\Debug\QA_import_bat.vbproj.CoreCompileInputs.cache
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\QA_import_bat\obj\Debug\QA_import_bat.vbproj.CopyComplete
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\QA_import_bat\obj\Debug\QA_import_bat.exe
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\QA_import_bat\obj\Debug\QA_import_bat.xml
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\QA_import_bat\obj\Debug\QA_import_bat.pdb
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\QA_import_bat\obj\Debug\QA_import_bat.vbprojAssemblyReference.cache
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\QA_import_bat\bin\QA_import_bat.exe
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\QA_import_bat\bin\QA_import_bat.pdb
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\QA_import_bat\bin\QA_import_bat.xml
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\QA_import_bat\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\QA_import_bat\bin\GrapeCity.Win.Editors.v100.dll
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\QA_import_bat\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\QA_import_bat\bin\GrapeCity.Win.Editors.v100.xml
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\QA_import_bat\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\QA_import_bat\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\QA_import_bat\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\QA_import_bat\obj\Debug\QA_import_bat.Form1.resources
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\QA_import_bat\obj\Debug\QA_import_bat.vbproj.GenerateResource.cache
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\QA_import_bat\obj\Debug\QA_import_bat.vbproj.CoreCompileInputs.cache
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\QA_import_bat\obj\Debug\QA_import_bat.vbproj.CopyComplete
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\QA_import_bat\obj\Debug\QA_import_bat.exe
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\QA_import_bat\obj\Debug\QA_import_bat.xml
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\QA_import_bat\obj\Debug\QA_import_bat.pdb
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\QA_import_bat.exe
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\QA_import_bat.pdb
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\QA_import_bat.xml
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.Win.Editors.v100.dll
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.Win.Editors.v100.xml
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\nMVAR_Monisha\QA_import_bat\obj\Debug\QA_import_bat.Form1.resources
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\nMVAR_Monisha\QA_import_bat\obj\Debug\QA_import_bat.vbproj.GenerateResource.cache
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\nMVAR_Monisha\QA_import_bat\obj\Debug\QA_import_bat.vbproj.CoreCompileInputs.cache
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\nMVAR_Monisha\QA_import_bat\obj\Debug\QA_import_bat.vbproj.CopyComplete
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\nMVAR_Monisha\QA_import_bat\obj\Debug\QA_import_bat.exe
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\nMVAR_Monisha\QA_import_bat\obj\Debug\QA_import_bat.xml
+D:\AsIs_ソース\nMVAR\nMVAR\nMVAR program source\nMVAR-completed\nMVAR_Monisha\QA_import_bat\obj\Debug\QA_import_bat.pdb
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\QA_import_bat.exe
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\QA_import_bat.pdb
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\QA_import_bat.xml
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.Win.Editors.v100.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\obj\Debug\QA_import_bat.Form1.resources
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\obj\Debug\QA_import_bat.vbproj.GenerateResource.cache
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\obj\Debug\QA_import_bat.vbproj.CoreCompileInputs.cache
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\obj\Debug\QA_import_bat.vbproj.CopyComplete
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\obj\Debug\QA_import_bat.exe
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\obj\Debug\QA_import_bat.xml
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\obj\Debug\QA_import_bat.pdb
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\obj\Debug\QA_import_bat.vbprojAssemblyReference.cache
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\QA_import_bat.exe.config
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Document.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Export.Pdf.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Export.Rdf.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Export.Word.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Export.Xml.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Imports.Access.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Imports.Crystal.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Imports.Excel.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Imports.exe
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Imports.Rpx.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Imports.Win.exe
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Viewer.exe
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Viewer.Win.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Viewer.Wpf.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Core.Rendering.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Core.Drawing.Gdi.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Core.Rdl.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\Gcef.Data.ExpressionInfo.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Core.DataProviders.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Chart.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Core.Drawing.Gc.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.Documents.Imaging.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.Documents.Common.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Core.Export.Pdf.Page.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.Documents.Pdf.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\BouncyCastle.Crypto.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Core.Export.Word.Page.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Export.Excel.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Core.Export.Text.Page.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\DocumentFormat.OpenXml.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Export.Image.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\Grapecity.DataVisualization.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\Newtonsoft.Json.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\Gcef.Data.VBFunctionLib.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.Documents.Common.Windows.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.Documents.DX.Windows.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\System.ValueTuple.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\System.Numerics.Vectors.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\System.Memory.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\System.Buffers.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Core.Export.Excel.Page.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Core.Export.Image.Page.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Imports.exe.config
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Imports.Win.exe.config
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\GrapeCity.ActiveReports.Viewer.exe.config
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Export.Word.resources.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Export.Xml.resources.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Imports.resources.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Imports.Access.resources.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Imports.Crystal.resources.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Imports.Excel.resources.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Imports.Rpx.resources.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Imports.Win.resources.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Viewer.resources.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Viewer.Win.resources.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Viewer.Wpf.resources.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Export.Excel.resources.dll
+D:\AsIs_ソース\nMVAR\nMVAR-completed\nMVAR_Monisha\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Export.Image.resources.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\QA_import_bat.exe.config
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\QA_import_bat.exe
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\QA_import_bat.pdb
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\QA_import_bat.xml
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.ActiveReports.Core.Rendering.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.ActiveReports.Core.Drawing.Gdi.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.ActiveReports.Core.Rdl.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\Gcef.Data.ExpressionInfo.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.ActiveReports.Core.DataProviders.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.ActiveReports.Chart.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.ActiveReports.Core.Drawing.Gc.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.Documents.Imaging.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.Documents.Common.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.ActiveReports.Core.Export.Pdf.Page.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.Documents.Pdf.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\BouncyCastle.Crypto.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.ActiveReports.Core.Export.Word.Page.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.ActiveReports.Export.Excel.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.ActiveReports.Core.Export.Text.Page.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\DocumentFormat.OpenXml.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.ActiveReports.Export.Image.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.Win.Editors.v100.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\Grapecity.DataVisualization.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\Newtonsoft.Json.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\Gcef.Data.VBFunctionLib.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.Documents.Common.Windows.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.Documents.DX.Windows.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\System.ValueTuple.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\System.Numerics.Vectors.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\System.Memory.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\System.Buffers.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.ActiveReports.Core.Export.Excel.Page.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.ActiveReports.Core.Export.Image.Page.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.ActiveReports.Imports.exe.config
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.ActiveReports.Imports.Win.exe.config
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.ActiveReports.Viewer.exe.config
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\GrapeCity.Win.Editors.v100.xml
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Export.Word.resources.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Export.Xml.resources.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Imports.resources.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Imports.Access.resources.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Imports.Crystal.resources.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Imports.Excel.resources.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Imports.Rpx.resources.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Imports.Win.resources.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Viewer.resources.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Viewer.Win.resources.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Viewer.Wpf.resources.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Export.Excel.resources.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\ja\GrapeCity.ActiveReports.Export.Image.resources.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\obj\Debug\QA_import_bat.vbprojAssemblyReference.cache
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\obj\Debug\QA_import_bat.Form1.resources
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\obj\Debug\QA_import_bat.vbproj.GenerateResource.cache
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\obj\Debug\QA_import_bat.vbproj.CoreCompileInputs.cache
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\obj\Debug\QA_import_bat.vbproj.CopyComplete
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\obj\Debug\QA_import_bat.exe
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\obj\Debug\QA_import_bat.xml
+C:\Users\nprem\Desktop\nMVAR\QA_import_bat\obj\Debug\QA_import_bat.pdb
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\QA_import_bat.exe.config
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\QA_import_bat.exe
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\QA_import_bat.pdb
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\QA_import_bat.xml
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\GrapeCity.Win.Input.Interop.v100.dll
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\GrapeCity.Win.Editors.v100.dll
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\GrapeCity.Framework.InputMan.v24.dll
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\GrapeCity.Win.Editors.v100.xml
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\obj\Debug\QA_import_bat.vbprojAssemblyReference.cache
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\obj\Debug\QA_import_bat.Form1.resources
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\obj\Debug\QA_import_bat.vbproj.GenerateResource.cache
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\obj\Debug\QA_import_bat.vbproj.CoreCompileInputs.cache
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\obj\Debug\QA_import_bat.vbproj.CopyComplete
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\obj\Debug\QA_import_bat.exe
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\obj\Debug\QA_import_bat.xml
+C:\Prabu\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\obj\Debug\QA_import_bat.pdb
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\QA_import_bat.exe.config
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\QA_import_bat.exe
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\QA_import_bat.pdb
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\QA_import_bat.xml
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\GrapeCity.Win.Input.Interop.v100.dll
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\GrapeCity.Win.Editors.v100.dll
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\GrapeCity.Framework.InputMan.v24.dll
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\GrapeCity.Win.Editors.v100.xml
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\obj\Debug\QA_import_bat.Form1.resources
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\obj\Debug\QA_import_bat.vbproj.GenerateResource.cache
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\obj\Debug\QA_import_bat.vbproj.CoreCompileInputs.cache
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\obj\Debug\QA_import_bat.vbproj.CopyComplete
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\obj\Debug\QA_import_bat.exe
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\obj\Debug\QA_import_bat.xml
+D:\OldHarddrive\nMVARFinalSourceCode\nMVAR_Latest_Ram\nMVAR_Latest\QA_import_bat\obj\Debug\QA_import_bat.pdb
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\bin\QA_import_bat.exe.config
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\bin\QA_import_bat.exe
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\bin\QA_import_bat.pdb
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\bin\QA_import_bat.xml
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\bin\System.ValueTuple.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\bin\GrapeCity.ActiveReports.Imports.exe.config
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\bin\GrapeCity.ActiveReports.Imports.Win.exe.config
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\bin\GrapeCity.ActiveReports.ThemeEditor.exe.config
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\bin\GrapeCity.ActiveReports.Viewer.exe.config
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\bin\GrapeCity.Win.Editors.v100.xml
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\bin\ja\GrapeCity.Framework.InputMan.v24.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\bin\ja\GrapeCity.Win.Editors.v100.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\bin\ja\GrapeCity.Win.Input.Interop.v100.resources.dll
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\obj\Debug\QA_import_bat.vbproj.AssemblyReference.cache
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\obj\Debug\QA_import_bat.Form1.resources
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\obj\Debug\QA_import_bat.vbproj.GenerateResource.cache
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\obj\Debug\QA_import_bat.vbproj.CoreCompileInputs.cache
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\obj\Debug\QA_import_bat.vbproj.CopyComplete
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\obj\Debug\QA_import_bat.exe
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\obj\Debug\QA_import_bat.xml
+D:\OldHarddrive\nMVARnQGCARE_SOURCE_CODE_FINAL_20220216\nMVAR_Project\QA_import_bat\obj\Debug\QA_import_bat.pdb

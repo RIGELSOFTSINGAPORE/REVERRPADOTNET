@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "QA_import_bat", "QA_import_bat.vbproj", "{CF384708-2C3B-4EC9-876C-B6ED1E489794}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{CF384708-2C3B-4EC9-876C-B6ED1E489794}.Debug.ActiveCfg = Debug|.NET
+		{CF384708-2C3B-4EC9-876C-B6ED1E489794}.Debug.Build.0 = Debug|.NET
+		{CF384708-2C3B-4EC9-876C-B6ED1E489794}.Release.ActiveCfg = Release|.NET
+		{CF384708-2C3B-4EC9-876C-B6ED1E489794}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

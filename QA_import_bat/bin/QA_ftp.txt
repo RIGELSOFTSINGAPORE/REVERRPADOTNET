@@ -1,0 +1,6 @@
+option batch on
+option confirm off
+open QA_DL
+option transfer binary
+get -delete *.csv C:\QA_DATA\RCV_data\
+bye
