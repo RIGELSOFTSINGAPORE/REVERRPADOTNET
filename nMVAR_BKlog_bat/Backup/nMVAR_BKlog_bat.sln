@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "nMVAR_BKlog_bat", "nMVAR_BKlog_bat.vbproj", "{135C1B17-D6F8-4362-9B8A-12F3CCBEC076}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{135C1B17-D6F8-4362-9B8A-12F3CCBEC076}.Debug.ActiveCfg = Debug|.NET
+		{135C1B17-D6F8-4362-9B8A-12F3CCBEC076}.Debug.Build.0 = Debug|.NET
+		{135C1B17-D6F8-4362-9B8A-12F3CCBEC076}.Release.ActiveCfg = Release|.NET
+		{135C1B17-D6F8-4362-9B8A-12F3CCBEC076}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
