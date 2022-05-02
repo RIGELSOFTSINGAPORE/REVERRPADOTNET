@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="xsdR30_終了予定契約_日付指定" targetNamespace="http://tempuri.org/xsdR30_終了予定契約_日付指定.xsd" xmlns:mstns="http://tempuri.org/xsdR30_終了予定契約_日付指定.xsd" xmlns="http://tempuri.org/xsdR30_終了予定契約_日付指定.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="xsdR30_終了予定契約_日付指定" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="xsdR30_終了予定契約_日付指定" msprop:Generator_UserDSName="xsdR30_終了予定契約_日付指定">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtR30_3" msprop:Generator_TableClassName="dtR30_3DataTable" msprop:Generator_TableVarName="tabledtR30_3" msprop:Generator_TablePropName="dtR30_3" msprop:Generator_RowDeletingName="dtR30_3RowDeleting" msprop:Generator_RowChangingName="dtR30_3RowChanging" msprop:Generator_RowEvHandlerName="dtR30_3RowChangeEventHandler" msprop:Generator_RowDeletedName="dtR30_3RowDeleted" msprop:Generator_UserTableName="dtR30_3" msprop:Generator_RowChangedName="dtR30_3RowChanged" msprop:Generator_RowEvArgName="dtR30_3RowChangeEvent" msprop:Generator_RowClassName="dtR30_3Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Control_number" msprop:Generator_ColumnVarNameInTable="columnControl_number" msprop:Generator_ColumnPropNameInRow="Control_number" msprop:Generator_ColumnPropNameInTable="Control_numberColumn" msprop:Generator_UserColumnName="Control_number" type="xs:string" minOccurs="0" />
+              <xs:element name="Old_number" msprop:Generator_ColumnVarNameInTable="columnOld_number" msprop:Generator_ColumnPropNameInRow="Old_number" msprop:Generator_ColumnPropNameInTable="Old_numberColumn" msprop:Generator_UserColumnName="Old_number" type="xs:string" minOccurs="0" />
+              <xs:element name="Contract_date" msprop:Generator_ColumnVarNameInTable="columnContract_date" msprop:Generator_ColumnPropNameInRow="Contract_date" msprop:Generator_ColumnPropNameInTable="Contract_dateColumn" msprop:Generator_UserColumnName="Contract_date" type="xs:string" minOccurs="0" />
+              <xs:element name="Contract_period_starts" msprop:Generator_ColumnVarNameInTable="columnContract_period_starts" msprop:Generator_ColumnPropNameInRow="Contract_period_starts" msprop:Generator_ColumnPropNameInTable="Contract_period_startsColumn" msprop:Generator_UserColumnName="Contract_period_starts" type="xs:string" minOccurs="0" />
+              <xs:element name="Scheduled_end_date_of_contract_period" msprop:Generator_ColumnVarNameInTable="columnScheduled_end_date_of_contract_period" msprop:Generator_ColumnPropNameInRow="Scheduled_end_date_of_contract_period" msprop:Generator_ColumnPropNameInTable="Scheduled_end_date_of_contract_periodColumn" msprop:Generator_UserColumnName="Scheduled_end_date_of_contract_period" type="xs:string" minOccurs="0" />
+              <xs:element name="End_date" msprop:Generator_ColumnVarNameInTable="columnEnd_date" msprop:Generator_ColumnPropNameInRow="End_date" msprop:Generator_ColumnPropNameInTable="End_dateColumn" msprop:Generator_UserColumnName="End_date" type="xs:string" minOccurs="0" />
+              <xs:element name="Update_code" msprop:Generator_ColumnVarNameInTable="columnUpdate_code" msprop:Generator_ColumnPropNameInRow="Update_code" msprop:Generator_ColumnPropNameInTable="Update_codeColumn" msprop:Generator_UserColumnName="Update_code" type="xs:string" minOccurs="0" />
+              <xs:element name="Automatic_update_interval" msprop:Generator_ColumnVarNameInTable="columnAutomatic_update_interval" msprop:Generator_ColumnPropNameInRow="Automatic_update_interval" msprop:Generator_ColumnPropNameInTable="Automatic_update_intervalColumn" msprop:Generator_UserColumnName="Automatic_update_interval" type="xs:string" minOccurs="0" />
+              <xs:element name="Account_name_all" msprop:Generator_ColumnVarNameInTable="columnAccount_name_all" msprop:Generator_ColumnPropNameInRow="Account_name_all" msprop:Generator_ColumnPropNameInTable="Account_name_allColumn" msprop:Generator_UserColumnName="Account_name_all" type="xs:string" minOccurs="0" />
+              <xs:element name="Contract_name" msprop:Generator_ColumnVarNameInTable="columnContract_name" msprop:Generator_ColumnPropNameInRow="Contract_name" msprop:Generator_ColumnPropNameInTable="Contract_nameColumn" msprop:Generator_UserColumnName="Contract_name" type="xs:string" minOccurs="0" />
+              <xs:element name="Management_department" msprop:Generator_ColumnVarNameInTable="columnManagement_department" msprop:Generator_ColumnPropNameInRow="Management_department" msprop:Generator_ColumnPropNameInTable="Management_departmentColumn" msprop:Generator_UserColumnName="Management_department" type="xs:string" minOccurs="0" />
+              <xs:element name="Contractor" msprop:Generator_ColumnVarNameInTable="columnContractor" msprop:Generator_ColumnPropNameInRow="Contractor" msprop:Generator_ColumnPropNameInTable="ContractorColumn" msprop:Generator_UserColumnName="Contractor" type="xs:string" minOccurs="0" />
+              <xs:element name="remarks" msprop:Generator_ColumnVarNameInTable="columnremarks" msprop:Generator_ColumnPropNameInRow="remarks" msprop:Generator_ColumnPropNameInTable="remarksColumn" msprop:Generator_UserColumnName="remarks" type="xs:string" minOccurs="0" />
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
