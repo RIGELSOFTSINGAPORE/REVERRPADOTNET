@@ -1,0 +1,559 @@
+﻿@model IEnumerable<PennaMiddleWare.Models.ZSD_REAL_DATA_SRV_REAL>
+@using PagedList.Mvc;
+@{
+    var realizationDtl = ViewData["RealizationList"] as PagedList.PagedList<PennaMiddleWare.Models.ZSD_REAL_DATA_SRV_REAL>;
+    ViewBag.Title = "Realization Report";
+}
+
+<h2>RealizationReport</h2>
+
+@using (Html.BeginForm("RealizationReport", "Home", FormMethod.Post))
+{
+    <div class="border-style form-group">
+
+
+
+
+        <div class="col-sm-3 form-group">
+            <div class="col-sm-4" style="margin-top:7px;">
+                From Date :
+            </div>
+
+            @*Datepicker changed by sabeena*@
+            @Html.TextBox("SearchFromCRTDT", String.Format("{0:d}", ViewBag.CdStDate as string),
+new { @class = "form-control1 form", placeholder = "yyyy/mm/dd" })
+        </div>
+        <div class="col-sm-3 form-group">
+            <div class="col-sm-2" style="margin-top:7px;">
+                To Date :
+            </div>
+            @Html.TextBox("SearchToCRTDT", String.Format("{0:d}", ViewBag.CdEdDate as string),
+ new { @class = "form-control1 form", placeholder = "yyyy/mm/dd" })
+
+        </div>
+
+
+        <div class="col-sm-2" style="margin-top:5px">
+            <a href=@Url.Action("Index","VideoDemo") style="margin-left: 10px; width:80px;padding-left: 19px;padding-right: 15px;" class="clearright">
+                Clear
+            </a>
+            <input type="submit" value=Search class="btn btn-default" style="margin-bottom:6px; width: 80px; height:32px;float:right;" />
+
+
+        </div>
+        <br /> <br />
+    </div>
+    <br />
+    <p style="margin-top:-36px;">
+        <br />
+        <br />
+
+
+
+
+
+    </p>
+    <div class="table-responsive">
+        @if (realizationDtl.Count < 1)
+        {
+            <table class="table" style="background-color:#ffffff; ">
+                <tr style="background-color:#EEE;">
+                    <td colspan="7" style="text-align:center">
+                        No Records Found.
+                    </td>
+                </tr>
+            </table>
+        }
+        else
+        {
+            <table class="table " style="background-color:#ffffff; ">
+                <tr class="thcolor">
+
+                    <th class="ID">
+                        Billing Document
+                        <span class="fa1 fa-sort fa-unsorted:before, .fa-sort:before"></span>
+                    </th>
+
+                    <th class="" style="">
+                        Reference Document
+                        <span class="fa1 fa-sort fa-unsorted:before, .fa-sort:before"></span>
+
+                    </th>
+                    <th class="">
+                        Reference Document
+                        <span class="fa1 fa-sort fa-unsorted:before, .fa-sort:before"></span>
+                    </th>
+
+                    <th class="">
+                        Creation Date
+                    </th>
+                    <th class="">
+                        Billing Type
+                    </th>
+
+
+                    <th class="converter">
+                        State code
+                        <span class="fa1 fa-sort fa-unsorted:before, .fa-sort:before"></span>
+                    </th>
+                    <th class="">
+                        Sales Group code
+                        <span class="fa1 fa-sort fa-unsorted:before, .fa-sort:before"></span>
+
+                    </th>
+                    <th>Manfuacture Plant</th>
+                    <th>Plant</th>
+                    <th>Material Pricing Group</th>
+                    <th>Material Group</th>
+                    <th>Pricing procedure</th>
+                    <th>Customer group</th>
+                    <th>Billing Date</th>
+                    <th>Material Number</th>
+                    <th>Customer Code</th>
+                    <th>Customer Name</th>
+                    <th>Sales Rep code</th>
+                    <th>Sales Rep Name</th>
+                    <th>Consignee Code</th>
+                    <th>Consignee Name</th>
+                    <th>Commission Agent code</th>
+                    <th>Commission Agenet Name</th>
+                    <th>Transporter Code</th>
+                    <th>Transporter Name</th>
+                    <th>Storage Location</th>
+                    <th>Description of Storage Location</th>
+                    <th>Billed quantity</th>
+                    <th>Gross Turnover</th>
+                    <th>Incoterms1</th>
+                    <th>Incoterms2</th>
+                    <th>Standard price</th>
+                    <th>Primary Freight</th>
+                    <th>Secondary freight</th>
+                    <th>Ex-Works Primary Freight</th>
+                    <th>Ex-Works Secondary Freight</th>
+                    <th>Sales Tax</th>
+                    <th>Commission</th>
+                    <th>Excise Duty</th>
+                    <th>Price Discount</th>
+                    <th>Other Discount</th>
+                    <th>CFA charges</th>
+                    <th>Cash Discount</th>
+                    <th>Packing Charges</th>
+                    <th>Unloading Charges</th>
+                    <th>Octrai</th>
+                    <th>VAT</th>
+                    <th>IGST</th>
+                    <th>CGST</th>
+                    <th>SGST</th>
+                    <th>UGST</th>
+                    <th>Export Handling chgs</th>
+                    <th>Transport Incentive</th>
+                    <th>Demurrage Wharfage</th>
+                    <th>Plant freight</th>
+                    <th>Net Turnrover</th>
+                    <th>Realisation</th>
+                    <th>State Name</th>
+                    <th>Branch</th>
+                    <th>Distrct Name</th>
+                    <th>Grade</th>
+                    <th>Manfacture Plant name</th>
+                    <th>Plant Name</th>
+                    <th>Customer Group Name</th>
+                    <th>System Date</th>
+                    <th>System Time</th>
+                    <th>User Name</th>
+                    <th>Block Category</th>
+                    <th>Description of Route</th>
+                    <th>Date on Which Record Was Created</th>
+                    <th>Single-Character Flag</th>
+                    <th>Moving Storage loc</th>
+                    <th>Sales district</th>
+                    <th>Sales Office</th>
+                    <th>Transport Zone</th>
+                    <th>Branch Office</th>
+                    <th>Sales Officer Emp.No.</th>
+                    <th>Sales Officer Emp.Name</th>
+                    <th>RM1</th>
+                    <th>RM1 Name</th>
+                    <th>RM2</th>
+                    <th>RM2 Name</th>
+                    <th>RM3</th>
+                    <th>RM3 Name</th>
+                    <th>RM4</th>
+                    <th>RM4 Name</th>
+                    <th>RM5</th>
+                    <th>RM5 Name</th>
+                    <th>RM6</th>
+                    <th>RM6 Name</th>
+                    <th>RM7</th>
+                    <th>RM7 Name</th>
+                    <th>RM8</th>
+                    <th>RM8 Name</th>
+                    <th>Upfront Discount Amount</th>
+                    <th>Indirect Primary Freight</th>
+                    <th>Ship Freight</th>
+                    <th>Ship Handling Charges</th>
+                    <th>Customer group_1</th>
+                    <th>Customer Group Desc.</th>
+                    <th>Varible Cost</th>
+                    <th>ZsalePromValue</th>
+                    <th>Waers</th>
+                    <th>Msehi</th>
+                    <th>PayFreight</th>
+                    <th>ExFreight</th>
+                </tr>
+
+
+                <tbody>
+
+
+
+                    @foreach (var item in realizationDtl)
+                    {
+
+
+                        <tr style="background-color:#EEE;">
+                            <td class="ID">
+                                @Html.DisplayFor(modeli => item.Vbeln)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Vgbel)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Aubel)
+                            </td>
+                            <td class="Title">
+                                @Html.DisplayFor(modelItem => item.Erdat)
+                            </td>
+                            <td class="Description1">
+                                @Html.DisplayFor(modelItem => item.Fkart)
+                            </td>
+                            <td class="vid">
+                                @Html.DisplayFor(modelItem => item.Regio)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Vkgrp)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Dstrc)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Mnfplant)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Plant)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Grade)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Matkl)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Kalks)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Kdgrp)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Fkdat)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Matnr)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Custcode1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Cname1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Custcode2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Cname2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Custcode3)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Cname3)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ComAg)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ComName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Trans)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TransName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Lgort)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Lgobe)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Fkimg)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Grossturn)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Inco1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Inco2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Stprs)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Primaryfri)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Secondaryfri)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Exwpf)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Exgsf)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Salestax)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Commission)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Exciseduty)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Pddiscount)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Oddiscount)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Cfcharges)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Cddiscount)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Packing)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Unloading)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Octrai)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Vat)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Igst)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Cgst)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Sgst)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Ugst)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ExpHand)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Transport)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.AmtDwFrt)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PltFrt)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Netturn)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nakedreal)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Statedesc)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Sgrpdesc)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Disdesc)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Graddesc)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Mnfdesc)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Plantdesc)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Pgrpdesc)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Cdate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Time)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Suser)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.BlockCt)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Route)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Canceldate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Cancelflag)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Zzlgort1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Bzirk)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Vkbur)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Zzzone1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Zzbranch)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PernrEr)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EnameEr)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PernrY1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EnameY1)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PernrY2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EnameY2)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PernrY3)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EnameY3)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PernrY4)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EnameY4)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PernrY5)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EnameY5)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PernrY6)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EnameY6)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PernrY7)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EnameY7)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PernrY8)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EnameY8)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UpfrntDiscount)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IndPriFrt)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ShipFrtChrgs)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ShipHandChrgs)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ZcustGrp)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ZcustGrpDesc)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Vc)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ZsalePromValue)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Waers)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Msehi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PayFreight)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ExFreight)
+                            </td>
+                        </tr>
+
+                    }
+
+
+                </tbody>
+
+            </table>
+        }
+    </div>
+    <br />
+    if (realizationDtl.PageSize < realizationDtl.TotalItemCount)
+    {
+        <div>
+
+            Page @(realizationDtl.PageCount < realizationDtl.PageNumber ? 0 : realizationDtl.PageNumber) Of @realizationDtl.PageCount
+
+            @Html.PagedListPager(realizationDtl, page => Url.Action("RealizationReport",
+                 new { page, CdStDate = ViewBag.CdStDate, CdEdDate = ViewBag.CdEdDate }))
+        </div>
+    }
+
+    <br />
+}

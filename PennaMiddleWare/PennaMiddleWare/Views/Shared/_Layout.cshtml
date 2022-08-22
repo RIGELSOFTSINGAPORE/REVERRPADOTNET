@@ -1,13 +1,379 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    @{
+        var ActionName = this.ViewContext.RouteData.Values["action"].ToString();
+        var ContollerName = this.ViewContext.RouteData.Values["controller"].ToString();
+
+        if (ContollerName.ToLower() == "home".ToLower())
+        {
+            if (ActionName.ToLower() == "index")
+            {
+
+                ViewBag.mainmenu = "Realization Report";
+            }
+            else if (ActionName.ToLower() == "logicost")
+            {
+                ViewBag.mainmenu = "Logi Cost Report";
+
+            }
+            else
+            {
+
+                ViewBag.mainmenu = "Menus";
+            }
+
+
+        }
+        else if (ContollerName.ToLower() == "StatewiseODdetails".ToLower())
+        {
+            ViewBag.mainmenu = "State wise OD details";
+        }
+        else
+        {
+            ViewBag.mainmenu = "Menus";
+        }
+    }
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @*@Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")*@
+        @Scripts.Render("~/bundles/modernizr")*@
+    <style type="text/css">
+        .pagination {
+            display: compact;
+            padding-left: 0;
+            margin: 0;
+            border-radius: 4px;
+            float:right
+        }
+
+            .pagination > li {
+                display: inline-grid;
+            }
+
+                .pagination > li > a,
+                .pagination > li > span {
+                    position: relative;
+                    float: left;
+                    padding: 8px;
+                    margin-left: -1px;
+                    line-height: 1.428571429;
+                    text-decoration: none;
+                    background-color: #eee;
+                    border: 1px solid #dddddd;
+                }
+
+                .pagination > li:first-child > a,
+                .pagination > li:first-child > span {
+                    margin-left: 0;
+                    border-bottom-left-radius: 4px;
+                    border-top-left-radius: 4px;
+                    padding: 8px;
+                    font-weight: 700;
+                }
+
+                .pagination > li:last-child > a,
+                .pagination > li:last-child > span {
+                    border-top-right-radius: 4px;
+                    border-bottom-right-radius: 4px;
+                }
+
+                .pagination > li > a:hover,
+                .pagination > li > span:hover,
+                .pagination > li > a:focus,
+                .pagination > li > span:focus {
+                    background-color: #eeeeee;
+                }
+
+            .pagination > .active > a,
+            .pagination > .active > span,
+            .pagination > .active > a:hover,
+            .pagination > .active > span:hover,
+            .pagination > .active > a:focus,
+            .pagination > .active > span:focus {
+                z-index: 2;
+                color: white;
+                cursor: default;
+                background-color: #428bca;
+                border-color: #428bca;
+            }
+
+            .pagination > .disabled > span,
+            .pagination > .disabled > a,
+            .pagination > .disabled > a:hover,
+            .pagination > .disabled > a:focus {
+                color: #999999;
+                cursor: not-allowed;
+                background-color: #eee;
+                border-color: #dddddd;
+            }
+
+        .pagination-lg > li > a,
+        .pagination-lg > li > span {
+            padding: 0;
+            font-size: 18px;
+        }
+
+        .pagination-lg > li:first-child > a,
+        .pagination-lg > li:first-child > span {
+            border-bottom-left-radius: 6px;
+            border-top-left-radius: 6px;
+        }
+
+        .pagination-lg > li:last-child > a,
+        .pagination-lg > li:last-child > span {
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+        }
+
+        .pagination-sm > li > a,
+        .pagination-sm > li > span {
+            padding: 0;
+            font-size: 12px;
+        }
+
+        .pagination-sm > li:first-child > a,
+        .pagination-sm > li:first-child > span {
+            border-bottom-left-radius: 3px;
+            border-top-left-radius: 3px;
+        }
+
+        .pagination-sm > li:last-child > a,
+        .pagination-sm > li:last-child > span {
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+        .modalpopup {
+            position: absolute;
+            top: 130px;
+            height: 137px;
+            margin-left: 35%;
+            width: 30%;
+            box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+        }
+
+        .loader {
+            width: 150px;
+            height: 150px;
+            margin: 40px auto;
+            transform: rotate(-45deg);
+            font-size: 0;
+            line-height: 0;
+            animation: rotate-loader 5s infinite;
+            padding: 25px;
+            border: 1px solid #428bca;
+        }
+.loader .loader-inner{
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+}
+            .loader .loading {
+                position: absolute;
+                background: #428bca;
+            }
+.loader .one{
+    width: 100%;
+    bottom: 0;
+    height: 0;
+    animation: loading-one 1s infinite;
+}
+.loader .two{
+    width: 0;
+    height: 100%;
+    left: 0;
+    animation: loading-two 1s infinite;
+    animation-delay: 0.25s;
+}
+.loader .three{
+    width: 0;
+    height: 100%;
+    right: 0;
+    animation: loading-two 1s infinite;
+    animation-delay: 0.75s;
+}
+.loader .four{
+    width: 100%;
+    top: 0;
+    height: 0;
+    animation: loading-one 1s infinite;
+    animation-delay: 0.5s;
+}
+@ViewBag.keyframes loading-one {
+    0% {
+        height: 0;
+        opacity: 1;
+    }
+    12.5% {
+        height: 100%;
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        height: 100%;
+        opacity: 0;
+    }
+}
+@ViewBag.keyframes loading-two {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+    12.5% {
+        width: 100%;
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        width: 100%;
+        opacity: 0;
+    }
+}
+@ViewBag.keyframes rotate-loader {
+    0% {
+        transform: rotate(-45deg);
+    }
+    20% {
+        transform: rotate(-45deg);
+    }
+    25% {
+        transform: rotate(-135deg);
+    }
+    45% {
+        transform: rotate(-135deg);
+    }
+    50% {
+        transform: rotate(-225deg);
+    }
+    70% {
+        transform: rotate(-225deg);
+    }
+    75% {
+        transform: rotate(-315deg);
+    }
+    95% {
+        transform: rotate(-315deg);
+    }
+    100% {
+        transform: rotate(-405deg);
+    }
+}
+        .loaders{
+            position:absolute;
+            margin-left:10%;
+            top:300px;
+        }
+        body {
+            font-family: Arial;
+            font-size: 10pt;
+        }
+
+        .table {
+            overflow-x: scroll;
+        }
+
+        .Grid {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+            .Grid th {
+                background-color: #F7F7F7;
+                font-weight: bold;
+            }
+
+            .Grid th, .Grid td {
+                padding: 5px;
+                border: 1px solid #ccc;
+            }
+
+            .Grid, .Grid table td {
+                border: 0px solid #ccc;
+            }
+
+                .Grida, .Grid a:visited {
+                    color: blue;
+                }
+
+
+        .dropbtn {
+            background-color: white;
+            color: black;
+            padding: 5px 16px;
+            font-size: 16px;
+            border: none;
+            border: 2px solid;
+            border-radius: 6px;
+            margin-top: 20px;
+            cursor: pointer;
+            width:225px;
+        }
+
+           /* .dropbtn:hover, .dropbtn:focus {
+                background-color: #2980B9;
+            }*/
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 225px;
+            overflow: auto;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 6px;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+
+        .show {
+            display: block;
+        }
+        .arrow {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            float: right;
+            margin-top: 8px;
+        }
+        .down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+        .loaderstyle {
+            top: 0;
+            padding-top: 275px;
+            z-index: 100;
+            width: 100%;
+            /* padding-left: 29%; */
+            text-align: center;
+            margin: 0px !important;
+            height: 100%;
+        }
+    </style>
+
 </head>
 <body>
+
     @*<div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -27,7 +393,89 @@
                 </div>
             </div>
         </div>*@
-    <div class="container body-content">
+    <div>
+        @if (TempData["ErrMsg"] != null)
+        {
+
+            <div class="modal" id="myModal" role="dialog">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header" style="border:none">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                            <p style="text-align:center;font-weight:800;">  </p>
+                        </div>
+                        <div class="modal-body" style="color: black; word-break: break-all; text-align: justify;">
+                            <p style="text-align:center;font-weight:800;font-style:italic"> @TempData["ErrMsg"].ToString()  </p>
+                        </div>
+                        <div class="modal-footer" style="border:none">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        @if (TempData["SuccMsg"] != null)
+        {
+
+
+            <div class="modal" id="myModalSucc" role="dialog">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header" style="border:none">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <p style="text-align:center;font-weight:800;"> </p>
+                        </div>
+                        <div class="modal-body" style="color: black; word-break: break-all; text-align: justify;">
+                            <p style="text-align:center;font-weight:800;font-style:italic">@TempData["SuccMsg"].ToString() </p>
+                        </div>
+                        <div class="modal-footer" style="border:none">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <header>
+            <nav class="navigation">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <a class="navbar-brand" href="index-2.html">
+                        <img src="~/assets/img/Logo.png" alt="Logo">
+                    </a>
+                </div>
+                <div class="col-sm-12 row">
+                    <div class="col-sm-7 text-right">
+                        <h1>
+                            MiddleWare
+
+                        </h1>
+                    </div>
+                    <div class="col-sm-5">
+
+                        <div class="dropdown">
+                            <button onclick="myFunction()" class="dropbtn">@ViewBag.mainmenu <i class="arrow down"></i></button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href=@Url.Action("Index","Home")>
+                                    Realization Report
+                                </a>
+
+                                <a href=@Url.Action("LogiCost","Home")>
+                                    Logi Cost Report
+                                </a>
+
+                                <a href=@Url.Action("Index","StatewiseODdetails")>
+                                    State wise OD details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+
+        </header>
         @RenderBody()
         <br />
 
@@ -38,18 +486,55 @@
             </div>
 
         </footer>
+
+        <div class="loaderstyle loaders" id="loader" style="display:none">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="loader">
+                        <div class="loader-inner">
+                            <div class="loading one"></div>
+                        </div>
+                        <div class="loader-inner">
+                            <div class="loading two"></div>
+                        </div>
+                        <div class="loader-inner">
+                            <div class="loading three"></div>
+                        </div>
+                        <div class="loader-inner">
+                            <div class="loading four"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-   
+
 
     <div>
-
-    </div>
 
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script>
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 </html>

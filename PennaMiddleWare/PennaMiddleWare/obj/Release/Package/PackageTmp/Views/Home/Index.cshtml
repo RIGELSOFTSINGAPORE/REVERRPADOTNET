@@ -1,296 +1,1431 @@
 @model List<PennaMiddleWare.Models.ZSD_REAL_DATA_SRV_REAL>
+@using PagedList.Mvc
 @{
-    Layout = null;
+    //Layout = null;
+    var mediaDtl = ViewData["videoList"] as PagedList.PagedList<PennaMiddleWare.Models.ZSD_REAL_DATA_SRV_REAL>;
     WebGrid webGrid = new WebGrid(source: Model, canSort: false, canPage: false);
     //var maxid = ViewData["GroupID"].ToString();
-
+    ViewBag.keyframes = "@keyframes";
+    ViewBag.webkit = "@-webkit-keyframes";
 }
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="~/Scripts/ddmmyyyy-validation.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="~/Scripts/table2excel.js"></script>
-
+   
     <link rel="stylesheet" href="~/assets/css/style.css">
     <title>Penna-MiddleWare</title>
-    <style type="text/css">
-        body {
-            font-family: Arial;
-            font-size: 10pt;
-        }
+  <script>
+        function Exportsubmit() {
 
-        .table {
-            overflow-x: scroll;
-        }
+            document.getElementById("InputID").value = "E";
 
-        .Grid {
-            border: 1px solid #ccc;
-            border-collapse: collapse;
-        }
+            var startDate = document.getElementById("startDate").value
+            var endDate = document.getElementById("endDate").value
+            var chkstartDate = startDate;
+            var chkendDate = endDate;
 
-            .Grid th {
-                background-color: #F7F7F7;
-                font-weight: bold;
+            if (chkstartDate.length == 8) {
+                chkstartDate = chkstartDate.slice(0, 2) + '/' + chkstartDate.slice(2, 4) + '/' + chkstartDate.slice(4);
             }
 
-            .Grid th, .Grid td {
-                padding: 5px;
-                border: 1px solid #ccc;
+            //alert("startDate" + chkstartDate);
+            if (validatedate(chkstartDate) == false) {
+                $('#MSG').text("Please Enter Valid From Date(DDMMYYYY)")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+            if (chkendDate.length == 8) {
+                chkendDate = chkendDate.slice(0, 2) + '/' + chkendDate.slice(2, 4) + '/' + chkendDate.slice(4);
             }
 
-            .Grid, .Grid table td {
-                border: 0px solid #ccc;
+            //alert("endDate" + chkendDate);
+            validatedate(chkendDate);
+
+            if (validatedate(chkendDate) == false) {
+                $('#MSG').text("Please Enter Valid To Date(DDMMYYYY)")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
             }
 
-                .Grida, .Grid a:visited {
-                    color: blue;
-                }
-    </style>
+            if (process(chkstartDate) > process(chkendDate)) {
+                $('#MSG').text("To Date Greathen or Equal to From Date")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+            // var startDate = document.getElementById("startDate").value
+            //var endDate = document.getElementById("endDate").value
+            //var chkstartDate = "";
+            //var chkendDate = "";
+            //var regEx = /(((0|1)[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/((19|20)\d\d))$/;
+
+            //if (startDate.length > 0) {
+            //    chkstartDate = startDate.substring(0, 2) + "/" + startDate.substring(2, startDate.length);
+            //    chkstartDate = chkstartDate.substring(0, 5) + "/" + chkstartDate.substring(5, chkstartDate.length);
+            //}
+            //else {
+
+            //    $('#MSG').text("Please Enter the Date")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+            //    return false;
+            //}
+            //if (endDate.length > 0) {
+            //    var chkendDate = endDate.substring(0, 2) + "/" + endDate.substring(2, endDate.length);
+            //    chkendDate = chkendDate.substring(0, 5) + "/" + chkendDate.substring(5, chkendDate.length);
+            //}
+            //else {
+            //    $('#MSG').text("Please Enter the Date")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+            //    return false;
+            //}
+            //if (!chkstartDate.match(regEx)) {
+            //    $('#MSG').text("Please Check the date format(DDMMYYYY)")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+
+            //    return false;
+            //}
+            //if (!chkendDate.match(regEx)) {
+            //    $('#MSG').text("Please Check the date format(DDMMYYYY)")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+            //    return false;
+            //}
+
+             var startDate = document.getElementById("startDate").value
+             var endDate = document.getElementById("endDate").value
+             var url2 = "?startDate=" + startDate + "&endDate=" + endDate + "&InputID=E&page=1";
+              var url1 = '@Url.Action("Index", "Home")';
+              var url=url1+url2
+              window.location.href = url;
+
+
+        }
+    </script>
 </head>
 
 
 
-<header>
-    <nav class="navigation">
-
-        <!-- Logo -->
-        <div class="logo">
-            <a class="navbar-brand" href="index-2.html">
-                <img src="~/assets/img/Logo.png" alt="Logo">
-            </a>
-        </div>
-        <h1>MiddleWare Demo</h1>
-
-    </nav>
-
-</header>
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
 <body>
-    <script type="text/javascript">
-        //$(function () {
-        //    $("#btnExport").click(function () {
-        //        $("#WebGrid").table2excel({
-        //            filename: "Table.xls"
-        //        });
-        //    });
-        //});
+    <div class="body">
+       
+        
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
-        function Exportsubmit() {
-            //alert("Exportsubmit");
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @id = "WebGridForm" }))
+        {
+            <div class="hero-image">
+                <img src="~/assets/img/API_bg.jpg" alt="Image" style="width: 100%;margin-top: -27px;">
+            </div>
+            <div class="container" style="font-size: 30px;">
 
-            document.getElementById("InputID").value = "E";
-        }
-        function Importsubmit() {
-            //alert("Importsubmit");
-            document.getElementById("InputID").value = "I";
-        }
-        function Searchsubmit() {
-            // alert("Searchsubmit");
-            document.getElementById("InputID").value = "S";
-        }
-    </script>
-    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @id = "WebGridForm" }))
-    {
-        <div class="hero-image">
-            <img src="~/assets/img/API_bg.jpg" alt="Image" style="width: 100%;margin-top: -27px;">
-        </div>
-        <div class="container">
-
-            Realization Report
-            <a href=@Url.Action("LogiCost","Home") class="btn btn-outline-secondary" class="clearright">
-                Logi Cost Report
-            </a>
-        </div>
-        <div class="container">
-            <div>
-                @*@Html.Hidden(ViewData["GroupID"].ToString(), new { @id = "GroupID" })*@
-                @*@Html.TextBox("GroupID", maxid);*@
-                @Html.Hidden("InputID")
-                From Date : @Html.TextBox("startDate", String.Format("{0:d}", ViewBag.startDate as string), new { placeholder = "yyyymmdd" })
+                Realization Report
+                @*<a href=@Url.Action("LogiCost","Home") class="btn btn-secondary clearright" style=" background-color: #117a8b;">
+                    Logi Cost Report
+                </a>*@
+            </div>
+            <div class="container">
+                <div>
+                    @*@Html.Hidden(ViewData["GroupID"].ToString(), new { @id = "GroupID" })*@
+                    @*@Html.TextBox("GroupID", maxid);*@
+                    @Html.Hidden("InputID")
+                    From Date : @Html.TextBox("startDate", String.Format("{0:d}", ViewBag.startDate as string), new { placeholder = "DDMMYYYY" })
 
 
-                @*Datepicker changed by sabeena*@
-
-                To Date : @Html.TextBox("endDate", String.Format("{0:d}", ViewBag.endDate as string), new { placeholder = "yyyymmdd" })
-                <div style="padding-top: 20px;">
-
-                    <input type="submit" value=Import class="btn btn-info" style="margin-left: 10px;" onclick="Importsubmit()" />
-                    <input type="submit" value=Search class="btn btn-info" style="margin-left: 10px;" onclick="Searchsubmit()" />
-                    <input type="submit" id="btnExport" value="Export" class="btn btn-info" style="margin-left: 10px;" onclick="Exportsubmit()" />
-                    <a href=@Url.Action("Index","Home") class="btn btn-outline-secondary" class="clearright">
-                        Clear
-                    </a>
-                    
+                    @*Datepicker changed by sabeena*@
                    
+                    To Date : @Html.TextBox("endDate", String.Format("{0:d}", ViewBag.endDate as string), new { placeholder = "DDMMYYYY" })
+                    <div style="padding-top: 20px;">
+
+                        @* <input type="submit" value=Import class="btn btn-info" onclick="Importsubmit()" />*@
+                        <a class=" btn-info btn clearright" onclick="Importsubmit()" style=" margin-left: 10px; margin-left: 10px; color: #fff;background-color: #17a2b8; border-color: #17a2b8;">
+                            Import
+                        </a>
+                        @*<input type="submit" value=Search class="btn btn-info" style="margin-left: 10px;" onclick="Searchsubmit()" />*@
+                        <a class=".btn-info btn clearright" onclick="Searchsubmit()" style=" margin-left: 10px; margin-left: 10px; color: #fff;background-color: #17a2b8; border-color: #17a2b8;">
+                            Search
+                        </a>
+
+                        @*<input type="submit" id="btnExport" value="Export" class="btn btn-info" style=" margin-left: 10px; margin-left: 10px; color: #fff;background-color: #17a2b8; border-color: #17a2b8;" onclick="Exportsubmit()" />*@
+                        <a class=".btn-info btn clearright" onclick="Exportsubmit()" style=" margin-left: 10px; margin-left: 10px; color: #fff;background-color: #17a2b8; border-color: #17a2b8;">
+                            Export
+                        </a>
+
+                        <a href=@Url.Action("DownloadLogRealization","Home") class="btn btn-secondary clearright"  style=" margin-left: 10px; background-color: #117a8b;">
+                            DownLoad Log
+                        </a>
+                        <a href=@Url.Action("Index","Home") class="btn btn-secondary clearright" style=" margin-left: 10px; background-color: #117a8b;">
+                            Clear
+                        </a>
+
+
+                    </div>
+
                 </div>
 
+
+            </div>
+        }
+    <div class="card " style="padding: 20px;margin-top: 10px;margin-bottom: 5%; ">
+        @if (mediaDtl != null)
+        {
+
+            <div class="" @*style="overflow-x: scroll;"*@>
+
+
+
+                <table id="WebGrid1" class="table Grid table-striped table-responsive table-bordered dt-responsive nowrap" width="100%" cellspacing="0" cellpadding="5">
+                    <thead>
+                        <tr>
+
+                            <th>Billing Document </th>
+                            <th>Reference Document </th>
+                            <th>Reference Document </th>
+                            <th>Creation Date </th>
+                            <th>Billing Type</th>
+                            <th>State code </th>
+                            <th>Sales Group code </th>
+                            <th>District code </th>
+                            <th>Manfuacture Plant </th>
+                            <th>Plant </th>
+                            <th>Material Pricing Group</th>
+                            <th>Material Group </th>
+                            <th>Pricing procedure </th>
+                            <th>Customer group </th>
+                            <th>Billing Date </th>
+                            <th>Material Number </th>
+                            <th>Customer Code </th>
+                            <th>Customer Name </th>
+                            <th>Sales Rep code </th>
+                            <th>Sales Rep Name </th>
+                            <th>Consignee Code </th>
+                            <th>Consignee Name </th>
+                            <th>Commission Agent code </th>
+                            <th>Commission Agenet Name </th>
+                            <th>Transporter Code </th>
+                            <th>Transporter Name </th>
+                            <th>Storage Location </th>
+                            <th>Description of Storage Location </th>
+                            <th>Billed quantity </th>
+                            <th>Gross Turnover </th>
+                            <th>Incoterms1 </th>
+                            <th>Incoterms2 </th>
+                            <th>Standard price </th>
+                            <th>Primary Freight </th>
+                            <th>Secondary freight </th>
+                            <th>Ex-Works Primary Freight </th>
+                            <th>Ex-Works Secondary Freight </th>
+                            <th>Sales Tax </th>
+                            <th>Commission </th>
+                            <th>Excise Duty </th>
+                            <th>Price Discount </th>
+                            <th>Other Discount </th>
+                            <th>CFA charges </th>
+                            <th>Cash Discount </th>
+                            <th>Packing Charges </th>
+                            <th>Unloading Charges </th>
+                            <th>Octrai </th>
+                            <th>VAT </th>
+                            <th>IGST </th>
+                            <th>CGST </th>
+                            <th>SGST </th>
+                            <th>UGST </th>
+                            <th>Export Handling chgs </th>
+                            <th>Transport Incentive </th>
+                            <th>Demurrage Wharfage </th>
+                            <th>Plant freight </th>
+                            <th>Net Turnrover </th>
+                            <th>Realisation </th>
+                            <th>State Name </th>
+                            <th>Branch </th>
+                            <th>Distrct Name </th>
+                            <th>Grade </th>
+                            <th>Manfacture Plant name </th>
+                            <th>Plant Name </th>
+                            <th>Customer Group Name </th>
+                            <th>System Date </th>
+                            <th>System Time </th>
+                            <th>User Name </th>
+                            <th>Block Category </th>
+                            <th>Description of Route </th>
+                            <th>Date on Which Record Was Created </th>
+                            <th>Single-Character Flag </th>
+                            <th>Moving Storage loc </th>
+                            <th>Sales district </th>
+                            <th>Sales Office </th>
+                            <th>Transport Zone </th>
+                            <th>Branch Office </th>
+                            <th>Sales Officer Emp.No. </th>
+                            <th>Sales Officer Emp.Name </th>
+                            <th>RM1 </th>
+                            <th>RM1 Name </th>
+                            <th>RM2 </th>
+                            <th>RM2 Name </th>
+                            <th>RM3 </th>
+                            <th>RM3 Name </th>
+                            <th>RM4 </th>
+                            <th>RM4 Name </th>
+                            <th>RM5 </th>
+                            <th>RM5 Name </th>
+                            <th>RM6 </th>
+                            <th>RM6 Name </th>
+                            <th>RM7 </th>
+                            <th>RM7 Name </th>
+                            <th>RM8 </th>
+                            <th>RM8 Name </th>
+                            <th>Upfront Discount Amount </th>
+                            <th>Indirect Primary Freight </th>
+                            <th>Ship Freight </th>
+                            <th>Ship Handling Charges </th>
+                            <th>Customer group_1 </th>
+                            <th>Customer Group Desc. </th>
+                            <th>Varible Cost </th>
+                            <th>ZsalePromValue </th>
+                            <th>Waers </th>
+                            <th>Msehi </th>
+                            <th>PayFreight </th>
+                            <th>ExFreight </th>
+
+                        </tr>
+                    </thead>
+
+                    @foreach (var item in mediaDtl)
+                    {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Vbeln)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Vgbel)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Aubel)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Erdat)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Fkart)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Regio)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Vkgrp)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Dstrc)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Mnfplant)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Plant)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Grade)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Matkl)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Kalks)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Kdgrp)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Fkdat)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Matnr)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Custcode1)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Cname1)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Custcode2)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Cname2)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Custcode3)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Cname3)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ComAg)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ComName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Trans)</td>
+                        <td>@Html.DisplayFor(modelItem => item.TransName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Lgort)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Lgobe)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Fkimg)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Grossturn)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Inco1)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Inco2)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Stprs)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Primaryfri)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Secondaryfri)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Exwpf)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Exgsf)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Salestax)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Commission)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Exciseduty)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Pddiscount)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Oddiscount)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Cfcharges)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Cddiscount)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Packing)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Unloading)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Octrai)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Vat)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Igst)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Cgst)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Sgst)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Ugst)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ExpHand)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Transport)</td>
+                        <td>@Html.DisplayFor(modelItem => item.AmtDwFrt)</td>
+                        <td>@Html.DisplayFor(modelItem => item.PltFrt)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Netturn)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Nakedreal)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Statedesc)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Sgrpdesc)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Disdesc)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Graddesc)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Mnfdesc)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Plantdesc)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Pgrpdesc)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Cdate)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Time)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Suser)</td>
+                        <td>@Html.DisplayFor(modelItem => item.BlockCt)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Route)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Canceldate)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Cancelflag)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Zzlgort1)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Bzirk)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Vkbur)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Zzzone1)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Zzbranch)</td>
+                        <td>@Html.DisplayFor(modelItem => item.PernrEr)</td>
+                        <td>@Html.DisplayFor(modelItem => item.EnameEr)</td>
+                        <td>@Html.DisplayFor(modelItem => item.PernrY1)</td>
+                        <td>@Html.DisplayFor(modelItem => item.EnameY1)</td>
+                        <td>@Html.DisplayFor(modelItem => item.PernrY2)</td>
+                        <td>@Html.DisplayFor(modelItem => item.EnameY2)</td>
+                        <td>@Html.DisplayFor(modelItem => item.PernrY3)</td>
+                        <td>@Html.DisplayFor(modelItem => item.EnameY3)</td>
+                        <td>@Html.DisplayFor(modelItem => item.PernrY4)</td>
+                        <td>@Html.DisplayFor(modelItem => item.EnameY4)</td>
+                        <td>@Html.DisplayFor(modelItem => item.PernrY5)</td>
+                        <td>@Html.DisplayFor(modelItem => item.EnameY5)</td>
+                        <td>@Html.DisplayFor(modelItem => item.PernrY6)</td>
+                        <td>@Html.DisplayFor(modelItem => item.EnameY6)</td>
+                        <td>@Html.DisplayFor(modelItem => item.PernrY7)</td>
+                        <td>@Html.DisplayFor(modelItem => item.EnameY7)</td>
+                        <td>@Html.DisplayFor(modelItem => item.PernrY8)</td>
+                        <td>@Html.DisplayFor(modelItem => item.EnameY8)</td>
+                        <td>@Html.DisplayFor(modelItem => item.UpfrntDiscount)</td>
+                        <td>@Html.DisplayFor(modelItem => item.IndPriFrt)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ShipFrtChrgs)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ShipHandChrgs)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ZcustGrp)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ZcustGrpDesc)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Vc)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ZsalePromValue)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Waers)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Msehi)</td>
+                        <td>@Html.DisplayFor(modelItem => item.PayFreight)</td>
+                        <td>@Html.DisplayFor(modelItem => item.ExFreight)</td>
+                    </tr>
+
+                    }
+
+                </table>
             </div>
 
 
-        </div>
-    }
-    <div class="card test" style="padding: 20px;margin-top: 10px;margin-bottom: 5%;">
-        <div class="table" @*style="overflow-x: scroll;"*@>
+            if (mediaDtl.PageSize < mediaDtl.TotalItemCount)
+            {
+                <br />
+                <div style="text-align:right;font-size:16px">
 
-            @webGrid.GetHtml(
-            htmlAttributes: new { @id = "WebGrid", @class = "Grid" },
-            columns: webGrid.Columns(
-                        webGrid.Column("Vbeln", "Billing Doc."),
-                        webGrid.Column("Vgbel", "Reference Doc."),
-                        webGrid.Column("Aubel", "Sales Document"),
-                        webGrid.Column("Erdat", "Created On"),
-                        webGrid.Column("Fkart", "Billing Type"),
-                        webGrid.Column("Regio", "Region"),
-                        webGrid.Column("Vkgrp", "Sales Group"),
-                        webGrid.Column("Dstrc", "District"),
-                        webGrid.Column("Mnfplant", "Plant"),
-                        webGrid.Column("Plant", "Plant"),
-                        webGrid.Column("Grade", "Mat.pricing grp"),
-                        webGrid.Column("Matkl", "Material Group"),
-                        webGrid.Column("Kalks", "Cust.pric.proc."),
-                        webGrid.Column("Kdgrp", "Customer group"),
-                        webGrid.Column("Fkdat", "Billing Date"),
-                        webGrid.Column("Matnr", "Material"),
-                        webGrid.Column("Custcode1", "Customer"),
-                        webGrid.Column("Cname1", "Name"),
-                        webGrid.Column("Custcode2", "Customer"),
-                        webGrid.Column("Cname2", "Name"),
-                        webGrid.Column("Custcode3", "Customer"),
-                        webGrid.Column("Cname3", "Name"),
-                        webGrid.Column("ComAg", "Customer"),
-                        webGrid.Column("ComName", "Name"),
-                        webGrid.Column("Trans", "Customer"),
-                        webGrid.Column("TransName", "Name"),
-                        webGrid.Column("Lgort", "Storage Loc."),
-                        webGrid.Column("Lgobe", "Description"),
-                        webGrid.Column("Fkimg", "Billed qty"),
-                        webGrid.Column("Grossturn", "Net Value"),
-                        webGrid.Column("Inco1", "Incoterms"),
-                        webGrid.Column("Inco2", "Incoterms 2"),
-                        webGrid.Column("Stprs", "Standard price"),
-                        webGrid.Column("Primaryfri", "Net Value"),
-                        webGrid.Column("Secondaryfri", "Net Value"),
-                        webGrid.Column("Exwpf", "Net Value"),
-                        webGrid.Column("Exgsf", "Net Value"),
-                        webGrid.Column("Salestax", "Net Value"),
-                        webGrid.Column("Commission", "Net Value"),
-                        webGrid.Column("Exciseduty", "Net Value"),
-                        webGrid.Column("Pddiscount", "Net Value"),
-                        webGrid.Column("Oddiscount", "Net Value"),
-                        webGrid.Column("Cfcharges", "Net Value"),
-                        webGrid.Column("Cddiscount", "Net Value"),
-                        webGrid.Column("Packing", "Net Value"),
-                        webGrid.Column("Unloading", "Net Value"),
-                        webGrid.Column("Octrai", "Net Value"),
-                        webGrid.Column("Vat", "Net Value"),
-                        webGrid.Column("Igst", "Net Value"),
-                        webGrid.Column("Cgst", "Net Value"),
-                        webGrid.Column("Sgst", "Net Value"),
-                        webGrid.Column("Ugst", "Net Value"),
-                        webGrid.Column("ExpHand", "Net Value"),
-                        webGrid.Column("Transport", "Net Value"),
-                        webGrid.Column("AmtDwFrt", "Net Value"),
-                        webGrid.Column("PltFrt", "Net Value"),
-                        webGrid.Column("Netturn", "Net Value"),
-                        webGrid.Column("Nakedreal", "Net Value"),
-                        webGrid.Column("Statedesc", "Description"),
-                        webGrid.Column("Sgrpdesc", "Description"),
-                        webGrid.Column("Disdesc", "Description"),
-                        webGrid.Column("Graddesc", "Description"),
-                        webGrid.Column("Mnfdesc", "Name 1"),
-                        webGrid.Column("Plantdesc", "Name 1"),
-                        webGrid.Column("Pgrpdesc", "Name"),
-                        webGrid.Column("Cdate", "Current Date"),
-                        webGrid.Column("Time", "Time"),
-                        webGrid.Column("Suser", "User Name"),
-                        webGrid.Column("BlockCt", "Block Ctgry"),
-                        webGrid.Column("Route", "Description"),
-                        webGrid.Column("Canceldate", "Created On"),
-                        webGrid.Column("Cancelflag", "Single-Character Flag"),
-                        webGrid.Column("Zzlgort1", "Storage location"),
-                        webGrid.Column("Bzirk", "Sales district"),
-                        webGrid.Column("Vkbur", "Sales Office"),
-                        webGrid.Column("Zzzone1", "Transport Zone"),
-                        webGrid.Column("Zzbranch", "Branch Office"),
-                        webGrid.Column("PernrEr", "Personnel No."),
-                        webGrid.Column("EnameEr", "Empl./appl.name"),
-                        webGrid.Column("PernrY1", "Personnel No."),
-                        webGrid.Column("EnameY1", "Empl./appl.name"),
-                        webGrid.Column("PernrY2", "Personnel No."),
-                        webGrid.Column("EnameY2", "Empl./appl.name"),
-                        webGrid.Column("PernrY3", "Personnel No."),
-                        webGrid.Column("EnameY3", "Empl./appl.name"),
-                        webGrid.Column("PernrY4", "Personnel No."),
-                        webGrid.Column("EnameY4", "Empl./appl.name"),
-                        webGrid.Column("PernrY5", "Personnel No."),
-                        webGrid.Column("EnameY5", "Empl./appl.name"),
-                        webGrid.Column("PernrY6", "Personnel No."),
-                        webGrid.Column("EnameY6", "Empl./appl.name"),
-                        webGrid.Column("PernrY7", "Personnel No."),
-                        webGrid.Column("EnameY7", "Empl./appl.name"),
-                        webGrid.Column("PernrY8", "Personnel No."),
-                        webGrid.Column("EnameY8", "Empl./appl.name"),
-                        webGrid.Column("UpfrntDiscount", "Upfront Discount"),
-                        webGrid.Column("IndPriFrt", "Indirect Primary Fre"),
-                        webGrid.Column("ShipFrtChrgs", "Ship Freight"),
-                        webGrid.Column("ShipHandChrgs", "Ship Handling Charge"),
-                        webGrid.Column("ZcustGrp", "Customer group"),
-                        webGrid.Column("ZcustGrpDesc", "Name"),
-                        webGrid.Column("Vc", "Varible Cost"),
-                        webGrid.Column("ZsalePromValue", "Sale Promotion Value"),
-                        webGrid.Column("Waers", "Currency"),
-                        webGrid.Column("Msehi", "Int. Meas. Unit"),
-                        webGrid.Column("PayFreight", "To Pay Frieght"),
-                        webGrid.Column("ExFreight", "Ex.Freight")
+                    page @(mediaDtl.PageCount < mediaDtl.PageNumber ? 0 : mediaDtl.PageNumber) to @mediaDtl.PageCount
 
-            ))
-        </div>
+                    @Html.PagedListPager(mediaDtl, page => Url.Action("Index", new { startDate = ViewBag.startDate, endDate = ViewBag.endDate, InputID = "S", page }),new PagedListRenderOptions(){LiElementClasses = new List<string> { "myClass", "aff" }})
+                    
+                </div>
+            }
+        }
     </div>
+        @*<div class="card test" style="padding: 20px;margin-top: 10px;margin-bottom: 5%;">
+                <div class="table" style="overflow-x: scroll;">
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    @*<script type="text/javascript">
-            $("body").on("click", ".Grid tfoot a", function () {
-                $('#WebGridForm').attr('action', $(this).attr('href')).submit();
-                return false;
-            });
-        </script>*@
-    @*@if (Model.Count == 0)
+                    @webGrid.GetHtml(
+                        htmlAttributes: new { @id = "WebGrid", @class = "Grid" },
+                        columns: webGrid.Columns(
+                                    webGrid.Column("Vbeln", "Billing Document"),
+                                    webGrid.Column("Vgbel", "Reference Document"),
+                                    webGrid.Column("Aubel", "Sales Document"),
+                                    webGrid.Column("Erdat", "Creation Date"),
+                                    webGrid.Column("Fkart", "Billing Type"),
+                                    webGrid.Column("Regio", "State code"),
+                                    webGrid.Column("Vkgrp", "Sales Group code"),
+                                    webGrid.Column("Dstrc", "District code"),
+                                    webGrid.Column("Mnfplant", "Manfuacture Plant"),
+                                    webGrid.Column("Plant", "Plant"),
+                                    webGrid.Column("Grade", "Material Pricing Group"),
+                                    webGrid.Column("Matkl", "Material Group"),
+                                    webGrid.Column("Kalks", "Pricing procedure"),
+                                    webGrid.Column("Kdgrp", "Customer group"),
+                                    webGrid.Column("Fkdat", "Billing Date"),
+                                    webGrid.Column("Matnr", "Material Number"),
+                                    webGrid.Column("Custcode1", "Customer Code"),
+                                    webGrid.Column("Cname1", "Customer Name"),
+                                    webGrid.Column("Custcode2", "Sales Rep code"),
+                                    webGrid.Column("Cname2", "Sales Rep Name"),
+                                    webGrid.Column("Custcode3", "Consignee Code"),
+                                    webGrid.Column("Cname3", "Consignee Name"),
+                                    webGrid.Column("ComAg", "Commission Agent code"),
+                                    webGrid.Column("ComName", "Commission Agenet Name"),
+                                    webGrid.Column("Trans", "Transporter Code"),
+                                    webGrid.Column("TransName", "Transporter Name"),
+                                    webGrid.Column("Lgort", "Storage Location"),
+                                    webGrid.Column("Lgobe", "Description of Storage Location"),
+                                    webGrid.Column("Fkimg", "Billed quantity"),
+                                    webGrid.Column("Grossturn", "Gross Turnover"),
+                                    webGrid.Column("Inco1", "Incoterms1"),
+                                    webGrid.Column("Inco2", "Incoterms2"),
+                                    webGrid.Column("Stprs", "Standard price"),
+                                    webGrid.Column("Primaryfri", "Primary Freight"),
+                                    webGrid.Column("Secondaryfri", "Secondary freight"),
+                                    webGrid.Column("Exwpf", "Ex-Works Primary Freight"),
+                                    webGrid.Column("Exgsf", "Ex-Works Secondary Freight"),
+                                    webGrid.Column("Salestax", "Sales Tax"),
+                                    webGrid.Column("Commission", "Commission"),
+                                    webGrid.Column("Exciseduty", "Excise Duty"),
+                                    webGrid.Column("Pddiscount", "Price Discount"),
+                                    webGrid.Column("Oddiscount", "Other Discount"),
+                                    webGrid.Column("Cfcharges", "CFA charges"),
+                                    webGrid.Column("Cddiscount", "Cash Discount"),
+                                    webGrid.Column("Packing", "Packing Charges"),
+                                    webGrid.Column("Unloading", "Unloading Charges"),
+                                    webGrid.Column("Octrai", "Octrai"),
+                                    webGrid.Column("Vat", "VAT"),
+                                    webGrid.Column("Igst", "IGST"),
+                                    webGrid.Column("Cgst", "CGST"),
+                                    webGrid.Column("Sgst", "SGST"),
+                                    webGrid.Column("Ugst", "UGST"),
+                                    webGrid.Column("ExpHand", "Export Handling chgs"),
+                                    webGrid.Column("Transport", "Transport Incentive"),
+                                    webGrid.Column("AmtDwFrt", "Demurrage Wharfage"),
+                                    webGrid.Column("PltFrt", "Plant freight"),
+                                    webGrid.Column("Netturn", "Net Turnrover"),
+                                    webGrid.Column("Nakedreal", "Realisation"),
+                                    webGrid.Column("Statedesc", "State Name"),
+                                    webGrid.Column("Sgrpdesc", "Branch"),
+                                    webGrid.Column("Disdesc", "Distrct Name"),
+                                    webGrid.Column("Graddesc", "Grade"),
+                                    webGrid.Column("Mnfdesc", "Manfacture Plant name"),
+                                    webGrid.Column("Plantdesc", "Plant Name"),
+                                    webGrid.Column("Pgrpdesc", "Customer Group Name"),
+                                    webGrid.Column("Cdate", "System Date"),
+                                    webGrid.Column("Time", "System Time"),
+                                    webGrid.Column("Suser", "User Name"),
+                                    webGrid.Column("BlockCt", "Block Category"),
+                                    webGrid.Column("Route", "Description of Route"),
+                                    webGrid.Column("Canceldate", "Date on Which Record Was Created"),
+                                    webGrid.Column("Cancelflag", "Single-Character Flag"),
+                                    webGrid.Column("Zzlgort1", "Moving Storage loc"),
+                                    webGrid.Column("Bzirk", "Sales district"),
+                                    webGrid.Column("Vkbur", "Sales Office"),
+                                    webGrid.Column("Zzzone1", "Transport Zone"),
+                                    webGrid.Column("Zzbranch", "Branch Office"),
+                                    webGrid.Column("PernrEr", "Sales Officer Emp.No."),
+                                    webGrid.Column("EnameEr", "Sales Officer Emp.Name"),
+                                    webGrid.Column("PernrY1", "RM1"),
+                                    webGrid.Column("EnameY1", "RM1 Name"),
+                                    webGrid.Column("PernrY2", "RM2"),
+                                    webGrid.Column("EnameY2", "RM2 Name"),
+                                    webGrid.Column("PernrY3", "RM3"),
+                                    webGrid.Column("EnameY3", "RM3 Name"),
+                                    webGrid.Column("PernrY4", "RM4"),
+                                    webGrid.Column("EnameY4", "RM4 Name"),
+                                    webGrid.Column("PernrY5", "RM5"),
+                                    webGrid.Column("EnameY5", "RM5 Name"),
+                                    webGrid.Column("PernrY6", "RM6"),
+                                    webGrid.Column("EnameY6", "RM6 Name"),
+                                    webGrid.Column("PernrY7", "RM7"),
+                                    webGrid.Column("EnameY7", "RM7 Name"),
+                                    webGrid.Column("PernrY8", "RM8"),
+                                    webGrid.Column("EnameY8", "RM8 Name"),
+                                    webGrid.Column("UpfrntDiscount", "Upfront Discount Amount"),
+                                    webGrid.Column("IndPriFrt", "Indirect Primary Freight"),
+                                    webGrid.Column("ShipFrtChrgs", "Ship Freight"),
+                                    webGrid.Column("ShipHandChrgs", "Ship Handling Charges"),
+                                    webGrid.Column("ZcustGrp", "Customer group_1"),
+                                    webGrid.Column("ZcustGrpDesc", "Customer Group Desc."),
+                                    webGrid.Column("Vc", "Varible Cost"),
+                                    webGrid.Column("ZsalePromValue", "ZsalePromValue"),
+                                    webGrid.Column("Waers", "Waers"),
+                                    webGrid.Column("Msehi", "Msehi"),
+                                    webGrid.Column("PayFreight", "PayFreight"),
+                                    webGrid.Column("ExFreight", "ExFreight")
+
+                        ))
+                </div>
+            </div>*@
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        @*<script type="text/javascript">
+                $("body").on("click", ".Grid tfoot a", function () {
+                    $('#WebGridForm').attr('action', $(this).attr('href')).submit();
+                    return false;
+                });
+            </script>*@
+        @*@if (Model.Count == 0)
+            {
+                <script type="text/javascript">
+                        $(function () {
+                            var row = $("#WebGrid")[0].insertRow(-1);
+                            var cell = $(row.insertCell(-1));
+                            cell.html("No records found.");
+                            cell.attr("colspan", "107").attr("align", "center");
+                        });
+                    </script>
+            }*@
+        @*<div class="modal fade" id="SucMSG" role="dialog" ara-labelledby="" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+                        <div class="modal-body ">
+                            <label id="MSG"></label>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+        <div id="SucMSG" role="dialog" class="modalpopup SucMSG" style=" display:none">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <h1 style="padding:20px 10px;font-size:18px">
+                        <label id="MSG"></label>
+                    </h1>
+
+                    <div style="padding: 5px 20px">
+
+                        <button style="width:15%;float: right" onclick="modalDismiss()" type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @if (ViewBag.export == "success")
         {
-            <script type="text/javascript">
-                    $(function () {
-                        var row = $("#WebGrid")[0].insertRow(-1);
-                        var cell = $(row.insertCell(-1));
-                        cell.html("No records found.");
-                        cell.attr("colspan", "107").attr("align", "center");
-                    });
-                </script>
-        }*@
+            <div id="SucMSG" role="dialog" class="modalpopup SucMSG" style=" display:block">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <h1 style="padding:20px 10px;font-size:18px">
+                            <label id="MSG">Data Export Successfully</label>
+                        </h1>
 
-    <script type="text/javascript" src="~/Scripts/ScrollableTablePlugin_1.0_min.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $('#WebGrid').Scrollable({
-                ScrollHeight: 280
+                        <div style="padding: 5px 20px">
+
+                            <button style="width:15%;float: right" onclick="modalDismiss()" type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <script type="text/javascript" src="~/Scripts/ScrollableTablePlugin_1.0_min.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                //$('#WebGrid').Scrollable({
+                //    ScrollHeight: 280
+                //});
             });
-        });
+        </script>
+
+        @*<footer id="footer">
+
+            <div>
+                2021 Copyright: Develop by REVERPRO
+            </div>
+
+
+        </footer>*@
+    </div>
+    @*<div class="container loaders" id="loader" style="display:none">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="loader">
+                    <div class="loader-inner">
+                        <div class="loading one"></div>
+                    </div>
+                    <div class="loader-inner">
+                        <div class="loading two"></div>
+                    </div>
+                    <div class="loader-inner">
+                        <div class="loading three"></div>
+                    </div>
+                    <div class="loader-inner">
+                        <div class="loading four"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+
+
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+    <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <style>
+      @*#loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  margin-left:250px;
+  margin-top:250px;
+}
+
+
+@ViewBag.webkit spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@ViewBag.keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}*@
+
+    </style>
+    <script>
+        
+        var els = document.getElementsByClassName("aff");
+        // loops els
+        for (var i = 0, x = els.length; i < x; i++) {
+
+            els[i].onclick = function () {
+
+                var body = document.getElementsByClassName('body')[0];
+                body.style.opacity = "0.5";
+                document.querySelector("#loader").style.display = "block";
+
+
+            }
+        }
+        function modalDismiss() {
+            $('#MSG').text("")
+            var element = document.getElementsByClassName('SucMSG')[0];
+            element.style.display = "none";
+        }
+
+
+        function Importsubmit() {
+            //alert("Importsubmit");
+            
+            
+            var startDate = document.getElementById("startDate").value
+            var endDate = document.getElementById("endDate").value
+            var chkstartDate = startDate;
+            var chkendDate = endDate;
+            
+            if (chkstartDate.length == 8) {
+                chkstartDate = chkstartDate.slice(0, 2) + '/' + chkstartDate.slice(2, 4) + '/' + chkstartDate.slice(4);
+            }
+            
+            //alert("startDate" + chkstartDate);
+            if (validatedate(chkstartDate) == false) {
+                $('#MSG').text("Please Enter Valid From Date(DDMMYYYY)")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+            if (chkendDate.length == 8) {
+                chkendDate = chkendDate.slice(0, 2) + '/' + chkendDate.slice(2, 4) + '/' + chkendDate.slice(4);
+            }
+            
+            //alert("endDate" + chkendDate);
+            validatedate(chkendDate);
+
+            if (validatedate(chkendDate) == false) {
+                $('#MSG').text("Please Enter Valid To Date(DDMMYYYY)")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+            
+            if (process(chkstartDate) > process(chkendDate)) {
+                $('#MSG').text("To Date Greathen or Equal to From Date")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+
+            //if (Date.parse(chkstartDate) <= Date.parse(chkendDate)) {
+            //    //start is less than End
+            //} else {
+            //    $('#MSG').text("To Date Greathen or Equal to From Date")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+            //    return false;
+            //}
+            
+            //var chkstartDate = "";
+            //var chkendDate = "";
+            //var regEx = /(((0|1)[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/((19|20)\d\d))$/;
+
+            //if (startDate.length > 0) {
+            //    chkstartDate = startDate.substring(0, 2) + "/" + startDate.substring(2, startDate.length);
+            //    chkstartDate = chkstartDate.substring(0, 5) + "/" + chkstartDate.substring(5, chkstartDate.length);
+            //}
+            //else {
+
+            //    $('#MSG').text("Please Enter the Date")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+            //    return false;
+            //}
+            //if (endDate.length > 0) {
+            //    var chkendDate = endDate.substring(0, 2) + "/" + endDate.substring(2, endDate.length);
+            //    chkendDate = chkendDate.substring(0, 5) + "/" + chkendDate.substring(5, chkendDate.length);
+            //}
+            //else {
+            //    $('#MSG').text("Please Enter the Date")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+            //    return false;
+            //}
+            //if (!chkstartDate.match(regEx)) {
+            //    $('#MSG').text("Please Check the date format(DDMMYYYY)")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+
+            //    return false;
+            //}
+            //if (!chkendDate.match(regEx)) {
+            //    $('#MSG').text("Please Check the date format(DDMMYYYY)")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+            //    return false;
+            //}
+            document.getElementById("InputID").value = "I";
+            var body = document.getElementsByClassName('body')[0];
+            body.style.opacity = "0.5";
+            document.querySelector("#loader").style.display = "block";
+            
+            $.ajax({
+                url: '@Url.Action("Importdata", "Home")',
+                type: 'POST',
+                data: { 'startDate': startDate, 'endDate': endDate, 'InputID': "I" },
+                success: function (result) {
+                    
+                    if (result.errorcode == 0) {
+                        //$('#MSG').text("Data Imported successfully")
+                        //$("#SucMSG").modal('show');
+                       
+                        var startDate = document.getElementById("startDate").value
+                        var endDate = document.getElementById("endDate").value
+                        var url2 = "?startDate=" + startDate + "&endDate=" + endDate + "&InputID=S&page=1";
+                        var url1 = '@Url.Action("Index", "Home")';
+                        var url=url1+url2
+                        window.location.href = url;
+                                } else {
+                       
+                    }
+
+
+
+                        },
+                error: function (error) {
+                            //$('#MSG').text("Data Imported Failed")
+                            //$("#SucMSG").modal('show');
+                            element.style.display = "none";
+                            body.style.opacity = "1";
+                            console.log(error);
+                            document.body.style.overflow = "auto";
+                            body.style.overflow = "auto";
+                        }
+
+            });
+
+        }
+        function pageonclick() {
+
+            var body = document.getElementsByClassName('body')[0];
+            body.style.opacity = "0.5";
+            document.querySelector("#loader").style.display = "block";
+        }
+
+         function Searchsubmit() {
+             
+             var startDate = document.getElementById("startDate").value
+             var endDate = document.getElementById("endDate").value
+             var chkstartDate = startDate;
+             var chkendDate = endDate;
+
+             if (chkstartDate.length == 8) {
+                 chkstartDate = chkstartDate.slice(0, 2) + '/' + chkstartDate.slice(2, 4) + '/' + chkstartDate.slice(4);
+             }
+
+             //alert("startDate" + chkstartDate);
+             if (validatedate(chkstartDate) == false) {
+                 $('#MSG').text("Please Enter Valid From Date(DDMMYYYY)")
+                 var element = document.getElementsByClassName('SucMSG')[0];
+                 element.style.display = "block";
+                 return false;
+             }
+             if (chkendDate.length == 8) {
+                 chkendDate = chkendDate.slice(0, 2) + '/' + chkendDate.slice(2, 4) + '/' + chkendDate.slice(4);
+             }
+
+             //alert("endDate" + chkendDate);
+             validatedate(chkendDate);
+
+             if (validatedate(chkendDate) == false) {
+                 $('#MSG').text("Please Enter Valid To Date(DDMMYYYY)")
+                 var element = document.getElementsByClassName('SucMSG')[0];
+                 element.style.display = "block";
+                 return false;
+             }
+
+             if (process(chkstartDate) > process(chkendDate)) {
+                 $('#MSG').text("To Date Greathen or Equal to From Date")
+                 var element = document.getElementsByClassName('SucMSG')[0];
+                 element.style.display = "block";
+                 return false;
+             }
+             //var startDate = document.getElementById("startDate").value
+             //var endDate = document.getElementById("endDate").value
+             //var chkstartDate = "";
+             //var chkendDate = "";
+             //var regEx = /(((0|1)[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/((19|20)\d\d))$/;
+
+             //if (startDate.length > 0) {
+             //    chkstartDate = startDate.substring(0, 2) + "/" + startDate.substring(2, startDate.length);
+             //    chkstartDate = chkstartDate.substring(0, 5) + "/" + chkstartDate.substring(5, chkstartDate.length);
+             //}
+             //else {
+
+             //    $('#MSG').text("Please Enter the Date")
+             //    var element = document.getElementsByClassName('SucMSG')[0];
+             //    element.style.display = "block";
+             //    return false;
+             //}
+             //if (endDate.length > 0) {
+             //    var chkendDate = endDate.substring(0, 2) + "/" + endDate.substring(2, endDate.length);
+             //    chkendDate = chkendDate.substring(0, 5) + "/" + chkendDate.substring(5, chkendDate.length);
+             //}
+             //else {
+             //    $('#MSG').text("Please Enter the Date")
+             //    var element = document.getElementsByClassName('SucMSG')[0];
+             //    element.style.display = "block";
+             //    return false;
+             //}
+             //if (!chkstartDate.match(regEx)) {
+             //    $('#MSG').text("Please Check the date format(DDMMYYYY)")
+             //    var element = document.getElementsByClassName('SucMSG')[0];
+             //    element.style.display = "block";
+
+             //    return false;
+             //}
+             //if (!chkendDate.match(regEx)) {
+             //    $('#MSG').text("Please Check the date format(DDMMYYYY)")
+             //    var element = document.getElementsByClassName('SucMSG')[0];
+             //    element.style.display = "block";
+             //    return false;
+             //}
+          
+             document.getElementById("InputID").value = "S";
+             var body = document.getElementsByClassName('body')[0];
+             body.style.opacity = "0.5";
+             document.querySelector("#loader").style.display = "block";
+
+             //startDate = chkstartDate.toString().split("/").reverse().join("/");
+                      
+                        var url2 = "?startDate=" + startDate + "&endDate=" + endDate + "&InputID=S&page=1";
+                        var url1 = '@Url.Action("Index", "Home")';
+                        var url=url1+url2
+                        window.location.href = url;
+
+
+             //$('#WebGrid').DataTable().ajax.reload(null, false);
+             //$("#WebGrid").DataTable().page('first').draw('page');
+            // var table = $('#WebGrid').DataTable();
+
+             //if (!($('#WebGrid').DataTable()).data().any()) {
+             //    alert('Empty table');
+             //}
+             //var rowCount = $('#WebGrid tr').length;
+             //if (rowCount!=0)
+             //{
+             //    //$('#WebGrid').dataTable().clear().draw();
+             //    $('#WebGrid tbody > tr').remove();
+             //    $('#WebGrid').DataTable().ajax.reload(null, false);
+             //}
+
+
+
+            //var startDate = document.getElementById("startDate").value
+            // var endDate = document.getElementById("endDate").value
+            // var chkstartDate = "";
+            // var chkendDate = "";
+            // var regEx = /^\d{4}-\d{2}-\d{2}$/;
+
+             //if (!dateString.match(regEx)) return false;  // Invalid format
+             //var d = new Date(dateString);
+             //var dNum = d.getTime();
+             //if (!dNum && dNum !== 0) return false; // NaN value, Invalid date
+             //return d.toISOString().slice(0, 10) === dateString;
+
+            // if (startDate.length > 0) {
+            //      chkstartDate = startDate.substring(0, 4) + "-" + startDate.substring(4, startDate.length);
+            //     chkstartDate = chkstartDate.substring(0, 7) + "-" + chkstartDate.substring(7, chkstartDate.length);
+            // }
+            // else {
+            //     //debugger;
+
+            //     $('#MSG').text("Please Enter the Date")
+            //     var element = document.getElementsByClassName('SucMSG')[0];
+            //     element.style.display = "block";
+            //     return false;
+            // }
+            // if (endDate.length > 0) {
+            //     var chkendDate = startDate.substring(0, 4) + "-" + startDate.substring(4, startDate.length);
+            //     chkendDate = chkendDate.substring(0, 7) + "-" + chkendDate.substring(7, chkendDate.length);
+            // }
+            // else {
+            //     $('#MSG').text("Please Enter the Date")
+            //     var element = document.getElementsByClassName('SucMSG')[0];
+            //     element.style.display = "block";
+            //     return false;
+            // }
+            // if (!chkstartDate.match(regEx))  {
+
+
+            //     $('#MSG').text("Please Check the date format(YYYYMMDD)")
+            //     var element = document.getElementsByClassName('SucMSG')[0];
+            //     element.style.display = "block";
+            //     return false;
+            // }
+            // if(!chkendDate.match(regEx)) {
+
+            //     $('#MSG').text("Please Check the date format(YYYYMMDD)")
+            //     var element = document.getElementsByClassName('SucMSG')[0];
+            //     element.style.display = "block";
+            //     return false;
+            // }
+            //element.style.display = "block";
+            //body.style.opacity = "0.5";
+            //body.style.overflow = "hidden";
+            // document.body.style.overflow = "hidden";
+            // showdata()
+
+            // element.style.display = "none";
+            // body.style.opacity = "1";
+            // body.style.overflow = "auto";
+            // var element = document.getElementsByClassName('card')[0];
+
+            // element.style.display = "block";
+             @*$.ajax({
+                url: '@Url.Action("getdata", "Home")',
+                type: 'POST',
+                data: { 'startDate': startDate, 'endDate': endDate },
+                success: function (result) {
+                    debugger;
+                    var obj = jQuery.parseJSON(result);
+                    showdata(result.Data)
+                    element.style.display = "none";
+                    body.style.opacity = "1";
+                    body.style.overflow = "auto";
+                },
+                error: function (error) {
+                    element.style.display = "none";
+                    body.style.opacity = "1";
+                    console.log(error);
+                    document.body.style.overflow = "auto";
+                    body.style.overflow = "auto";
+                }
+
+            });*@
+        }
+
+
+
+      //  function Exportsubmit() {
+      //      //alert("Exportsubmit");
+      //      //var startDate = document.getElementById("startDate").value
+      //      //var endDate = document.getElementById("endDate").value
+      //      document.getElementById("InputID").value = "E";
+      //      //document.getElementById("startDate").value = startDate;
+      //      //document.getElementById("endDate").value = endDate;
+      //
+      //      var body = document.getElementsByClassName('body')[0];
+      //      body.style.opacity = "0.5";
+      //      document.querySelector("#loader").style.display = "block";
+
+
+
+
+
+            @*debugger;
+            var body = document.getElementsByClassName('body')[0];
+
+            var element = document.getElementsByClassName('loaders')[0];
+
+            var startDate = document.getElementById("startDate").value
+            var endDate = document.getElementById("endDate").value
+            var chkstartDate = "";
+            var chkendDate = "";
+            var regEx = /^\d{4}-\d{2}-\d{2}$/;
+
+            if (startDate.length > 0) {
+                chkstartDate = startDate.substring(0, 4) + "-" + startDate.substring(4, startDate.length);
+                chkstartDate = chkstartDate.substring(0, 7) + "-" + chkstartDate.substring(7, chkstartDate.length);
+            }
+            else {
+                alert("Please Enter the Date")
+
+                $('#MSG').text("Please Enter the Date")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+            if (endDate.length > 0) {
+                var chkendDate = startDate.substring(0, 4) + "-" + startDate.substring(4, startDate.length);
+                chkendDate = chkendDate.substring(0, 7) + "-" + chkendDate.substring(7, chkendDate.length);
+            }
+            else {
+                $('#MSG').text("Please Enter the Date")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+            if (!chkstartDate.match(regEx)) {
+                $('#MSG').text("Please Check the date format(YYYYMMDD)")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+
+                return false;
+            }
+            if (!chkendDate.match(regEx)) {
+                $('#MSG').text("Please Check the date format(YYYYMMDD)")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+
+                return false;
+            }
+            element.style.display = "block";
+            body.style.opacity = "0.5";
+            body.style.overflow = "hidden";
+            document.body.style.overflow = "hidden";
+            $.ajax({
+                url: '@Url.Action("Exportdata", "Home")',
+                type: 'POST',
+                data: { 'startDate': startDate, 'endDate': endDate, 'InputID': "E" },
+                success: function (result) {
+                    debugger;
+                    if (result.errorcode == 0) {
+                        $('#MSG').text("Data Imported Successfully")
+                        var element = document.getElementsByClassName('SucMSG')[0];
+                        element.style.display = "block";
+                        download(result.filename, result.Name, result.stream)
+                        showdata();
+                        element.style.display = "none";
+                        body.style.opacity = "1";
+                        body.style.overflow = "auto";
+                    } else {
+                        $('#MSG').text("Data Imported Failed")
+                        var element = document.getElementsByClassName('SucMSG')[0];
+                        element.style.display = "block";
+                        element.style.display = "none";
+                        body.style.opacity = "1";
+                        body.style.overflow = "auto";                  }
+
+
+
+                },
+                error: function (error) {
+                    //$('#MSG').text("Data Imported Failed")
+                    //$("#SucMSG").modal('show');
+                    $('#MSG').text("Data Imported Failed")
+                    var element = document.getElementsByClassName('SucMSG')[0];
+                    element.style.display = "block";
+
+                    element.style.display = "none";
+                    body.style.opacity = "1";
+                    console.log(error);
+                    document.body.style.overflow = "auto";
+                    body.style.overflow = "auto";
+                }
+
+            });*@
+
+        function download(filename, Name,stream) {
+
+            var element = document.createElement('a');
+            element.setAttribute('href', Name + encodeURIComponent(filename));
+            element.setAttribute('download', filename);
+            document.body.appendChild(element);
+            element.click();
+            //document.body.removeChild(element);
+        }
+
+        function showdata() {
+           // debugger;
+
+            $("#WebGrid").DataTable({
+               // "processing": true, // for show progress bar
+                //"serverSide": true, // for process server side
+                //"filter": true, // this is for disable filter (search box)
+                //"orderMulti": false, // for disable multiple column at once
+                "orderMulti": false,
+                "serverSide": true,
+                "destroy": true,
+                "pageLength": 10,
+                "searching": false,
+                "ordering": false,
+                'processing': true,
+                'language': {
+                    'loadingRecords': '&nbsp;',
+                    'processing': '<div class="container loaders" id="loader" style="display:none"> <div class= "row" ><div class="col-md-12"><div class="loader"><div class="loader-inner"><div class="loading one"></div></div><div class="loader-inner"><div class="loading two"></div></div><div class="loader-inner"><div class="loading three"></div></div><div class="loader-inner"><div class="loading four"></div></div></div></div></div></div>'
+                }  ,
+
+
+                 "ajax": {
+
+                      "url": "@Url.Action("getdata", "Home")",
+                     "type": 'POST',
+                     "data": { 'startDate': document.getElementById("startDate").value, 'endDate': document.getElementById("endDate").value },
+                      "datatype": "json"
+                  },
+
+                  //"columnDefs":
+                  //    [
+
+                  //        { "targets": [0], },
+                  //        { "targets": [1], },
+                  //        { "targets": [2], },
+                  //        { "targets": [3], },
+                  //        { "targets": [4], },
+                  //        { "targets": [5], },
+                  //        { "targets": [6], },
+                  //        { "targets": [7], },
+                  //        { "targets": [8], },
+                  //        { "targets": [9], },
+                  //        { "targets": [10], },
+                  //        { "targets": [11], },
+                  //        { "targets": [12], },
+                  //        { "targets": [13], },
+                  //        { "targets": [14], },
+                  //        { "targets": [15], },
+                  //        { "targets": [16], },
+                  //        { "targets": [17], },
+                  //        { "targets": [18], },
+                  //        { "targets": [19], },
+                  //        { "targets": [20], },
+                  //        { "targets": [21], },
+                  //        { "targets": [22], },
+                  //        { "targets": [23], },
+                  //        { "targets": [24], },
+                  //        { "targets": [25], },
+                  //        { "targets": [26], },
+                  //        { "targets": [27], },
+                  //        { "targets": [28], },
+                  //        { "targets": [29], },
+                  //        { "targets": [30], },
+                  //        { "targets": [31], },
+                  //        { "targets": [32], },
+                  //        { "targets": [33], },
+                  //        { "targets": [34], },
+                  //        { "targets": [35], },
+                  //        { "targets": [36], },
+                  //        { "targets": [37], },
+                  //        { "targets": [38], },
+                  //        { "targets": [39], },
+                  //        { "targets": [40], },
+                  //        { "targets": [41], },
+                  //        { "targets": [42], },
+                  //        { "targets": [43], },
+                  //        { "targets": [44], },
+                  //        { "targets": [45], },
+                  //        { "targets": [46], },
+                  //        { "targets": [47], },
+                  //        { "targets": [48], },
+                  //        { "targets": [49], },
+                  //        { "targets": [50], },
+                  //        { "targets": [51], },
+                  //        { "targets": [52], },
+                  //        { "targets": [53], },
+                  //        { "targets": [54], },
+                  //        { "targets": [55], },
+                  //        { "targets": [56], },
+                  //        { "targets": [57], },
+                  //        { "targets": [58], },
+                  //        { "targets": [59], },
+                  //        { "targets": [60], },
+                  //        { "targets": [61], },
+                  //        { "targets": [62], },
+                  //        { "targets": [63], },
+                  //        { "targets": [64], },
+                  //        { "targets": [65], },
+                  //        { "targets": [66], },
+                  //        { "targets": [67], },
+                  //        { "targets": [68], },
+                  //        { "targets": [69], },
+                  //        { "targets": [70], },
+                  //        { "targets": [71], },
+                  //        { "targets": [72], },
+                  //        { "targets": [73], },
+                  //        { "targets": [74], },
+                  //        { "targets": [75], },
+                  //        { "targets": [76], },
+                  //        { "targets": [77], },
+                  //        { "targets": [78], },
+                  //        { "targets": [79], },
+                  //        { "targets": [80], },
+                  //        { "targets": [81], },
+                  //        { "targets": [82], },
+                  //        { "targets": [83], },
+                  //        { "targets": [84], },
+                  //        { "targets": [85], },
+                  //        { "targets": [86], },
+                  //        { "targets": [87], },
+                  //        { "targets": [88], },
+                  //        { "targets": [89], },
+                  //        { "targets": [90], },
+                  //        { "targets": [91], },
+                  //        { "targets": [92], },
+                  //        { "targets": [93], },
+                  //        { "targets": [94], },
+                  //        { "targets": [95], },
+                  //        { "targets": [96], },
+                  //        { "targets": [97], },
+                  //        { "targets": [98], },
+                  //        { "targets": [99], },
+                  //        { "targets": [100], },
+                  //        { "targets": [101], },
+                  //        { "targets": [102], },
+                  //        { "targets": [103], },
+                  //        { "targets": [104], },
+                  //        { "targets": [105], },
+                  //        { "targets": [106], },
+
+
+                  //  ],
+
+                  "columns": [
+
+
+                      { "data": "Vbeln", "title": "Billing Document"},
+                      { "data": "Vgbel", "title": "Reference Document" },
+                      { "data": "Aubel", "title": "Reference Document" },
+                      { "data": "Erdat", "title": "Creation Date " },
+                      { "data": "Fkart", "title": "Billing Type" },
+                      { "data": "Regio", "title": "State code" },
+                      { "data": "Vkgrp", "title": "Sales Group code" },
+                      { "data": "Dstrc", "title": "District code" },
+                      { "data": "Mnfplant", "title": "Manfuacture Plant" },
+                      { "data": "Plant", "title": "Plant" },
+                      { "data": "Grade", "title": "Material Pricing Group" },
+                      { "data": "Matkl", "title": "Material Group" },
+                      { "data": "Kalks", "title": "Pricing procedure" },
+                      { "data": "Kdgrp", "title": "Customer group" },
+                      { "data": "Fkdat", "title": "Billing Date" },
+                      { "data": "Matnr", "title": "Material Number" },
+                      { "data": "Custcode1", "title": "Customer Code" },
+                      { "data": "Cname1", "title": "Customer Name" },
+                      { "data": "Custcode2", "title": "Sales Rep code" },
+                      { "data": "Cname2", "title": "Sales Rep Name" },
+                      { "data": "Custcode3", "title": "Consignee Code" },
+                      { "data": "Cname3", "title": "Consignee Name" },
+                      { "data": "ComAg", "title": "Commission Agent code" },
+                      { "data": "ComName", "title": "Commission Agenet Name" },
+                      { "data": "Trans", "title": "Transporter Code" },
+                      { "data": "TransName", "title": "Transporter Name" },
+                      { "data": "Lgort", "title": "Storage Location" },
+                      { "data": "Lgobe", "title": "Description of Storage Location" },
+                      { "data": "Fkimg", "title": "Billed quantity" },
+                      { "data": "Grossturn", "title": "Gross Turnover" },
+                      { "data": "Inco1", "title": "Incoterms1" },
+                      { "data": "Inco2", "title": "Incoterms2" },
+                      { "data": "Stprs", "title": "Standard price" },
+                      { "data": "Primaryfri", "title": "Primary Freight" },
+                      { "data": "Secondaryfri", "title": "Secondary freight" },
+                      { "data": "Exwpf", "title": "Ex-Works Primary Freight" },
+                      { "data": "Exgsf", "title": "Ex-Works Secondary Freight" },
+                      { "data": "Salestax", "title": "Sales Tax" },
+                      { "data": "Commission", "title": "Commission" },
+                      { "data": "Exciseduty", "title": "Excise Duty" },
+                      { "data": "Pddiscount", "title": "Price Discount" },
+                      { "data": "Oddiscount", "title": "Other Discount" },
+                      { "data": "Cfcharges", "title": "CFA charges" },
+                      { "data": "Cddiscount", "title": "Cash Discount" },
+                      { "data": "Packing", "title": "Packing Charges" },
+                      { "data": "Unloading", "title": "Unloading Charges" },
+                      { "data": "Octrai", "title": "Octrai" },
+                      { "data": "Vat", "title": "VAT" },
+                      { "data": "Igst", "title": "IGST" },
+                      { "data": "Cgst", "title": "CGST" },
+                      { "data": "Sgst", "title": "SGST" },
+                      { "data": "Ugst", "title": "UGST" },
+                      { "data": "ExpHand", "title": "Export Handling chgs" },
+                      { "data": "Transport", "title": "Transport Incentive" },
+                      { "data": "AmtDwFrt", "title": "Demurrage Wharfage" },
+                      { "data": "PltFrt", "title": "Plant freight" },
+                      { "data": "Netturn", "title": "Net Turnrover" },
+                      { "data": "Nakedreal", "title": "Realisation" },
+                      { "data": "Statedesc", "title": "State Name" },
+                      { "data": "Sgrpdesc", "title": "Branch" },
+                      { "data": "Disdesc", "title": "Distrct Name" },
+                      { "data": "Graddesc", "title": "Grade" },
+                      { "data": "Mnfdesc", "title": "Manfacture Plant name" },
+                      { "data": "Plantdesc", "title": "Plant Name" },
+                      { "data": "Pgrpdesc", "title": "Customer Group Name" },
+                      { "data": "Cdate", "title": "System Date" },
+                      { "data": "Time", "title": "System Time" },
+                      { "data": "Suser", "title": "User Name" },
+                      { "data": "BlockCt", "title": "Block Category" },
+                      { "data": "Route", "title": "Description of Route" },
+                      { "data": "Canceldate", "title": "Date on Which Record Was Created" },
+                      { "data": "Cancelflag", "title": "Single-Character Flag" },
+                      { "data": "Zzlgort1", "title": "Moving Storage loc" },
+                      { "data": "Bzirk", "title": "Sales district" },
+                      { "data": "Vkbur", "title": "Sales Office" },
+                      { "data": "Zzzone1", "title": "Transport Zone" },
+                      { "data": "Zzbranch", "title": "Branch Office" },
+                      { "data": "PernrEr", "title": "Sales Officer Emp.No." },
+                      { "data": "EnameEr", "title": "Sales Officer Emp.Name" },
+                      { "data": "PernrY1", "title": "RM1" },
+                      { "data": "EnameY1", "title": "RM1 Name" },
+                      { "data": "PernrY2", "title": "RM2" },
+                      { "data": "EnameY2", "title": "RM2 Name" },
+                      { "data": "PernrY3", "title": "RM3" },
+                      { "data": "EnameY3", "title": "RM3 Name" },
+                      { "data": "PernrY4", "title": "RM4" },
+                      { "data": "EnameY4", "title": "RM4 Name" },
+                      { "data": "PernrY5", "title": "RM5" },
+                      { "data": "EnameY5", "title": "RM5 Name" },
+                      { "data": "PernrY6", "title": "RM6" },
+                      { "data": "EnameY6", "title": "RM6 Name" },
+                      { "data": "PernrY7", "title": "RM7" },
+                      { "data": "EnameY7", "title": "RM7 Name" },
+                      { "data": "PernrY8", "title": "RM8" },
+                      { "data": "EnameY8", "title": "RM8 Name" },
+                      { "data": "UpfrntDiscount", "title": "Upfront Discount Amount" },
+                      { "data": "IndPriFrt", "title": "Indirect Primary Freight" },
+                      { "data": "ShipFrtChrgs", "title": "Ship Freight" },
+                      { "data": "ShipHandChrgs", "title": "Ship Handling Charges" },
+                      { "data": "ZcustGrp", "title": "Customer group_1" },
+                      { "data": "ZcustGrpDesc", "title": "Customer Group Desc." },
+                      { "data": "Vc", "title": "Varible Cost" },
+                      { "data": "ZsalePromValue", "title": "ZsalePromValue" },
+                      { "data": "Waers", "title": "Waers" },
+                      { "data": "Msehi", "title": "Msehi" },
+                      { "data": "PayFreight", "title": "PayFreight" },
+                      { "data": "ExFreight", "title": "ExFreight" },
+               ]
+
+
+            });
+        }
+        document.onreadystatechange = function () {
+            var body = document.getElementsByClassName('body')[0];
+            if (document.readyState !== "complete") {
+
+                body.style.opacity = "0.5";
+                document.querySelector("#loader").style.display = "block";
+            } else {
+                document.querySelector("#loader").style.display = "none";
+                body.style.opacity = "1";
+            }
+        };
     </script>
 </body>
-
-<footer id="footer">
-
-    <div>
-        2021 Copyright: Develop by REVERPRO
-    </div>
-
-    
-</footer>
-
 </html>  

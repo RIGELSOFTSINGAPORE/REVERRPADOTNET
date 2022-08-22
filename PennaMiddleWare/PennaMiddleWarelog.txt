@@ -1,0 +1,417 @@
+===========================================
+Scheduler From Date  20211118
+Scheduler To Date  20211118
+Executed on : 2021/11/19 10:32:14
+Insert Tabel : YREALIZATION
+No Records found in API
+Executed on : 2021/11/19 10:32:32
+Insert Tabel : ZSD_LCOST_DATA_SRV
+No Records found in API
+===========================================
+===========================================
+Scheduler From Date  20211123
+Scheduler To Date  20211123
+===========================================
+Scheduler From Date  20211123
+Scheduler To Date  20211123
+===========================================
+Scheduler From Date  20211125
+Scheduler To Date  20211125
+===========================================
+Scheduler From Date  20211125
+Scheduler To Date  20211125
+Executed on : 2021/11/26 10:44:25
+Insert Tabel : YREALIZATION
+Web API Response Status Code: 401, Status : Unauthorized
+Executed on : 2021/11/26 10:44:57
+Insert Tabel : ZSD_LCOST_DATA_SRV
+Web API Response Status Code: 401, Status : Unauthorized
+===========================================
+===========================================
+Scheduler From Date  20211125
+Scheduler To Date  20211125
+Executed on : 2021/11/26 13:23:47
+Insert Tabel : YREALIZATION
+Web API Response Status Code: 401, Status : Unauthorized
+===========================================
+Scheduler From Date  20211125
+Scheduler To Date  20211125
+===========================================
+Scheduler From Date  20211125
+Scheduler To Date  20211125
+Executed on : 2021/11/26 16:45:52
+Insert Tabel : YREALIZATION
+WebApi Record Count : 1106
+Tabel record Count : 1106
+Record Mathing
+Executed on : 2021/11/26 16:46:30
+Insert Tabel : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 1108
+Tabel record Count : 1108
+Record Mathing
+===========================================
+===========================================
+Scheduler From Date  20211125
+Scheduler To Date  20211125
+Executed on : 2021/11/26 16:48:57
+Insert Tabel : YREALIZATION
+WebApi Record Count : 1106
+Tabel record Count : 1106
+Record Mathing
+Executed on : 2021/11/26 16:49:12
+Insert Tabel : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 1108
+Tabel record Count : 1108
+Record Mathing
+===========================================
+===========================================
+Application From Date  20211124
+Application To Date  20211124
+Executed on : 2021/11/26 16:58:47
+Insert Tabel : YREALIZATION
+WebApi Record Count : 1124
+Tabel record Count : 1124
+Record Mathing
+===========================================
+===========================================
+Application From Date  20211124
+Application To Date  20211124
+Executed on : 2021/11/26 17:00:58
+Insert Tabel : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 1125
+Tabel record Count : 1125
+Record Mathing
+===========================================
+===========================================
+Scheduler From Date  20211129
+Scheduler To Date  20211129
+Executed on : 2021/11/30 09:09:37
+Insert Tabel : YREALIZATION
+WebApi Record Count : 1379
+Tabel record Count : 1379
+Record Mathing
+Executed on : 2021/11/30 09:10:01
+Insert Tabel : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 1382
+Tabel record Count : 1382
+Record Mathing
+===========================================
+===========================================
+Application From Date  20211001
+Application To Date  20211031
+Executed on : 2021/11/30 12:01:23
+Insert Tabel : YREALIZATION
+WebApi Record Count : 31439
+Executed End : 2021/11/30 12:06:08
+Tabel record Count : 31439
+Record Mathing
+===========================================
+===========================================
+Application From Date  20210901
+Application To Date  20210901
+Executed on : 2021/11/30 17:28:07
+Insert Tabel : YREALIZATION
+WebApi Record Count : 609
+Executed End : 2021/11/30 17:28:59
+Tabel record Count : 609
+Record Mathing
+===========================================
+YREALIZATION Error Message : Index and length must refer to a location within the string.
+Parameter name: length
+===========================================
+===========================================
+Application From Date  20211001
+Application To Date  20211001
+Executed on : 2021/12/01 16:10:43
+Insert Tabel : YREALIZATION
+WebApi Record Count : 836
+Executed End : 2021/12/01 16:10:47
+Tabel record Count : 836
+Record Mathing
+===========================================
+===========================================
+Application From Date  20211001
+Application To Date  20211031
+Executed on : 2021/12/07 10:50:35
+Insert Tabel : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 31495
+Executed End : 2021/12/07 10:57:21
+Tabel record Count : 31495
+Record Mathing
+===========================================
+===========================================
+Scheduler From Date  20211206
+Scheduler To Date  20211206
+===========================================
+Scheduler From Date  20211206
+Scheduler To Date  20211206
+Executed on : 2021/12/07 11:21:32
+Insert Tabel : YREALIZATION
+WebApi Record Count : 31439
+Tabel record Count : 31439
+Record Mathing
+Executed on : 2021/12/07 11:27:18
+Insert Tabel : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 31495
+Tabel record Count : 31495
+Record Mathing
+===========================================
+===========================================
+Scheduler From Date  20210901
+Scheduler To Date  20210930
+Executed on : 2021/12/07 11:39:02
+Insert Tabel : YREALIZATION
+WebApi Record Count : 34048
+Tabel record Count : 34048
+Record Mathing
+Executed on : 2021/12/07 11:45:14
+Insert Tabel : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 34102
+Tabel record Count : 34102
+Record Mathing
+===========================================
+===========================================
+Scheduler From Date  20210801
+Scheduler To Date  20210831
+Executed on : 2021/12/07 12:13:57
+Insert Tabel : YREALIZATION
+WebApi Record Count : 36624
+Tabel record Count : 36624
+Record Mathing
+Executed on : 2021/12/07 12:20:43
+Insert Tabel : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 36680
+Tabel record Count : 36680
+Record Mathing
+===========================================
+===========================================
+Application From Date  20210601
+Application To Date  20210630
+Executed on : 2021/12/13 09:51:35
+Insert Tabel : YREALIZATION
+WebApi Record Count : 31495
+Executed End : 2021/12/13 09:57:50
+Tabel record Count : 31495
+Record Mathing
+===========================================
+===========================================
+Application From Date  20210101
+Application To Date  20210131
+Executed on : 2021/12/13 11:07:36
+Insert Tabel : YREALIZATION
+WebApi Record Count : 33350
+Executed End : 2021/12/13 11:12:06
+Tabel record Count : 33350
+Record Mathing
+===========================================
+===========================================
+Application From Date  20210901
+Application To Date  20210930
+Executed on : 2021/12/16 15:36:13
+Insert Tabel : YREALIZATION
+WebApi Record Count : 34048
+Executed End : 2021/12/16 15:40:38
+Tabel record Count : 34048
+Record Mathing
+===========================================
+===========================================
+Application From Date  20210901
+Application To Date  20210910
+Executed on : 2021/12/17 12:57:21
+Insert Tabel : YREALIZATION
+WebApi Record Count : 8911
+Executed End : 2021/12/17 13:01:35
+Tabel record Count : 8911
+Record Mathing
+===========================================
+===========================================
+Application From Date  20210901
+Application To Date  20210930
+Executed on : 2021/12/17 14:50:04
+Insert Tabel : YREALIZATION
+WebApi Record Count : 34048
+Executed End : 2021/12/17 14:56:42
+Tabel record Count : 34048
+Record Mathing
+===========================================
+===========================================
+Application From Date  20210201
+Application To Date  20210228
+Executed on : 2021/12/20 12:05:11
+Insert Tabel : YREALIZATION
+WebApi Record Count : 33679
+Executed End : 2021/12/20 12:09:42
+Tabel record Count : 33679
+Record Mathing
+===========================================
+===========================================
+Application From Date  20210101
+Application To Date  20210115
+Executed on : 2021/12/20 17:36:22
+Insert Tabel : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 14173
+Executed End : 2021/12/20 17:37:51
+Tabel record Count : 14173
+Record Mathing
+===========================================
+===========================================
+Application From Date  20210116
+Application To Date  20210131
+Executed on : 2021/12/21 09:16:53
+Insert Tabel : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 19260
+Executed End : 2021/12/21 09:20:25
+Tabel record Count : 19260
+Record Mathing
+===========================================
+===========================================
+Application From Date  20210101
+Application To Date  20210107
+Executed on : 2021/12/21 13:17:32
+Insert Tabel : YREALIZATION
+WebApi Record Count : 6528
+Executed End : 2021/12/21 13:18:45
+Tabel record Count : 6528
+Record Mathing
+===========================================
+===========================================
+Application From Date  20220605
+Application To Date  20220605
+Executed on : 2022/06/13 10:20:45
+Insert Tabel : YREALIZATION
+WebApi Record Count : 580
+Executed End : 2022/06/13 10:21:29
+Tabel record Count : 580
+Record Mathing
+===========================================
+===========================================
+Application From Date  20220605
+Application To Date  20220605
+Executed on : 2022/06/13 10:21:52
+Insert Tabel : YREALIZATION
+WebApi Record Count : 580
+Executed End : 2022/06/13 10:23:01
+Tabel record Count : 580
+Record Mathing
+===========================================
+===========================================
+Application From Date  20220605
+Application To Date  20220605
+Executed on : 2022/06/13 10:24:50
+Insert Tabel : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 580
+Executed End : 2022/06/13 10:25:50
+Tabel record Count : 580
+Record Mathing
+===========================================
+===========================================
+Application From Date  20220605
+Application To Date  20220605
+Executed on : 2022/06/13 10:29:49
+Insert Tabel : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 580
+Executed End : 2022/06/13 10:30:53
+Tabel record Count : 580
+Record Mathing
+===========================================
+===========================================
+Application From Date  20220818
+Application To Date  20220818
+Executed on : 2022/08/19 14:59:26
+Insert Tabel : YREALIZATION
+WebApi Record Count : 978
+Executed End : 2022/08/19 15:00:04
+Tabel record Count : 978
+Record Mathing
+===========================================
+===========================================
+Application From Date  20220810
+Application To Date  20220810
+Executed on : 2022/08/20 07:42:59
+Insert Tabel : YREALIZATION
+Web API Response Status Code: 500, Status : InternalServerError
+===========================================
+===========================================
+Application From Date  20220809
+Application To Date  20220810
+Executed on : 2022/08/20 07:45:22
+Insert Tabel : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 1646
+Executed End : 2022/08/20 07:45:50
+Tabel record Count : 1646
+Record Mathing
+===========================================
+===========================================
+Application From Date  20220808
+Application To Date  20220808
+Executed on : 2022/08/21 08:15:02
+Insert Tabel : YREALIZATION
+WebApi Record Count : 667
+Executed End : 2022/08/21 08:16:03
+Tabel record Count : 667
+Record Mathing
+===========================================
+===========================================
+Application From Date  20220808
+Application To Date  20220808
+Executed on : 2022/08/21 08:18:41
+Insert Tabel : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 667
+Executed End : 2022/08/21 08:18:59
+Tabel record Count : 667
+Record Mathing
+===========================================
+===========================================
+Application From Date  20210626
+Application To Date  20210626
+Executed on : 2022/08/22 12:08:34
+Insert Tabel : YREALIZATION
+WebApi Record Count : 1191
+Executed End : 2022/08/22 12:09:16
+Tabel record Count : 1191
+Record Mathing
+===========================================
+===========================================
+Application From Date  20210626
+Application To Date  20210626
+Executed on : 2022/08/22 12:20:06
+Executed End : 2022/08/22 12:22:05
+Tabel record Count : 6
+Record Mathing
+===========================================
+===========================================
+Application From Date  20210606
+Application To Date  20210606
+Executed on : 2022/08/22 14:35:37
+Insert Table : ZSD_LCOST_DATA_SRV
+WebApi Record Count : 418
+Executed End : 2022/08/22 14:35:55
+Table record Count : 418
+Record Mathing
+===========================================
+===========================================
+Application From Date  20220701
+Application To Date  20220731
+Executed on : 2022/08/22 14:53:23
+Executed End : 2022/08/22 14:54:21
+Table record Count : 5
+Record Mathing
+===========================================
+===========================================
+Application From Date  20220701
+Application To Date  20220731
+Executed on : 2022/08/22 14:55:45
+Executed End : 2022/08/22 14:55:58
+Table record Count : 5
+Record Mathing
+===========================================
+===========================================
+Application From Date  20210101
+Application To Date  20220822
+Executed on : 2022/08/22 15:14:36
+Web API Response Status Code: 500, Status : InternalServerError
+Web API Response Status Code: 500, Status : InternalServerError
+Executed End : 2022/08/22 15:17:38
+Table record Count : 23
+Record Mathing
+===========================================

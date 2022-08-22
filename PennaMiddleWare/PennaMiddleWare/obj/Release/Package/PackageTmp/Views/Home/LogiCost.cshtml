@@ -1,8 +1,13 @@
 @model List<PennaMiddleWare.Models.ZSD_LCOST_DATA_SRV>
+@using PagedList.Mvc
 @{
-    Layout = null;
+    //Layout = null;
+    var lstsrvdeal = ViewData["lstsrvdeal"] as PagedList.PagedList<PennaMiddleWare.Models.ZSD_LCOST_DATA_SRV>;
+
     WebGrid webGrid = new WebGrid(source: Model, canSort: false, canPage: false);
     //var maxid = ViewData["GroupID"].ToString();
+    ViewBag.keyframes = "@keyframes";
+    ViewBag.webkit = "@-webkit-keyframes";
 
 }
 <!DOCTYPE html>
@@ -10,333 +15,1020 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="~/Scripts/ddmmyyyy-validation.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="~/Scripts/table2excel.js"></script>
 
+
+
     <link rel="stylesheet" href="~/assets/css/style.css">
     <title>Penna-MiddleWare</title>
-    <style type="text/css">
-        body {
-            font-family: Arial;
-            font-size: 10pt;
+
+    <script>
+
+        var els = document.getElementsByClassName("aff");
+        // loops els
+        for (var i = 0, x = els.length; i < x; i++) {
+
+            els[i].onclick = function () {
+
+                var body = document.getElementsByClassName('body')[0];
+                body.style.opacity = "0.5";
+                document.querySelector("#loader").style.display = "block";
+
+
+            }
+        }
+        function modalDismiss() {
+            $('#MSG').text("")
+            var element = document.getElementsByClassName('SucMSG')[0];
+            element.style.display = "none";
         }
 
-        .table {
-            overflow-x: scroll;
+         function Exportsubmit() {
+
+            document.getElementById("InputID").value = "E";
+            // var startDate = document.getElementById("startDate").value
+            //var endDate = document.getElementById("endDate").value
+            //var chkstartDate = "";
+            //var chkendDate = "";
+            //var regEx = /(((0|1)[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/((19|20)\d\d))$/;
+
+            //if (startDate.length > 0) {
+            //    chkstartDate = startDate.substring(0, 2) + "/" + startDate.substring(2, startDate.length);
+            //    chkstartDate = chkstartDate.substring(0, 5) + "/" + chkstartDate.substring(5, chkstartDate.length);
+            //}
+            //else {
+
+            //    $('#MSG').text("Please Enter the Date")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+            //    return false;
+            //}
+            //if (endDate.length > 0) {
+            //    var chkendDate = endDate.substring(0, 2) + "/" + endDate.substring(2, endDate.length);
+            //    chkendDate = chkendDate.substring(0, 5) + "/" + chkendDate.substring(5, chkendDate.length);
+            //}
+            //else {
+            //    $('#MSG').text("Please Enter the Date")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+            //    return false;
+            //}
+            //if (!chkstartDate.match(regEx)) {
+            //    $('#MSG').text("Please Check the date format(DDMMYYYY)")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+
+            //    return false;
+            //}
+            //if (!chkendDate.match(regEx)) {
+            //    $('#MSG').text("Please Check the date format(DDMMYYYY)")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+            //    return false;
+            //}
+             var startDate = document.getElementById("startDate").value
+             var endDate = document.getElementById("endDate").value
+             var chkstartDate = startDate;
+             var chkendDate = endDate;
+
+             if (chkstartDate.length == 8) {
+                 chkstartDate = chkstartDate.slice(0, 2) + '/' + chkstartDate.slice(2, 4) + '/' + chkstartDate.slice(4);
+             }
+
+             //alert("startDate" + chkstartDate);
+             if (validatedate(chkstartDate) == false) {
+                 $('#MSG').text("Please Enter Valid From Date(DDMMYYYY)")
+                 var element = document.getElementsByClassName('SucMSG')[0];
+                 element.style.display = "block";
+                 return false;
+             }
+             if (chkendDate.length == 8) {
+                 chkendDate = chkendDate.slice(0, 2) + '/' + chkendDate.slice(2, 4) + '/' + chkendDate.slice(4);
+             }
+
+             //alert("endDate" + chkendDate);
+             validatedate(chkendDate);
+
+             if (validatedate(chkendDate) == false) {
+                 $('#MSG').text("Please Enter Valid To Date(DDMMYYYY)")
+                 var element = document.getElementsByClassName('SucMSG')[0];
+                 element.style.display = "block";
+                 return false;
+             }
+
+             if (process(chkstartDate) > process(chkendDate)) {
+                 $('#MSG').text("To Date Greathen or Equal to From Date")
+                 var element = document.getElementsByClassName('SucMSG')[0];
+                 element.style.display = "block";
+                 return false;
+             }
+
+             var startDate = document.getElementById("startDate").value
+             var endDate = document.getElementById("endDate").value
+             var url2 = "?startDate=" + startDate + "&endDate=" + endDate + "&InputID=E&page=1";
+              var url1 = '@Url.Action("LogiCost", "Home")';
+              var url=url1+url2
+              window.location.href = url;
+
+
+        }
+        function Importsubmit() {
+            //alert("Importsubmit");
+            //debugger;
+
+            //var startDate = document.getElementById("startDate").value
+            //var endDate = document.getElementById("endDate").value
+            //var chkstartDate = "";
+            //var chkendDate = "";
+            //var regEx = /(((0|1)[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/((19|20)\d\d))$/;
+
+            //if (startDate.length > 0) {
+            //    chkstartDate = startDate.substring(0, 2) + "/" + startDate.substring(2, startDate.length);
+            //    chkstartDate = chkstartDate.substring(0, 5) + "/" + chkstartDate.substring(5, chkstartDate.length);
+            //}
+            //else {
+
+            //    $('#MSG').text("Please Enter the Date")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+            //    return false;
+            //}
+            //if (endDate.length > 0) {
+            //    var chkendDate = endDate.substring(0, 2) + "/" + endDate.substring(2, endDate.length);
+            //    chkendDate = chkendDate.substring(0, 5) + "/" + chkendDate.substring(5, chkendDate.length);
+            //}
+            //else {
+            //    $('#MSG').text("Please Enter the Date")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+            //    return false;
+            //}
+            //if (!chkstartDate.match(regEx)) {
+            //    $('#MSG').text("Please Check the date format(DDMMYYYY)")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+
+            //    return false;
+            //}
+            //if (!chkendDate.match(regEx)) {
+            //    $('#MSG').text("Please Check the date format(DDMMYYYY)")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+            //    return false;
+            //}
+            var startDate = document.getElementById("startDate").value
+            var endDate = document.getElementById("endDate").value
+            var chkstartDate = startDate;
+            var chkendDate = endDate;
+
+            if (chkstartDate.length == 8) {
+                chkstartDate = chkstartDate.slice(0, 2) + '/' + chkstartDate.slice(2, 4) + '/' + chkstartDate.slice(4);
+            }
+
+            //alert("startDate" + chkstartDate);
+            if (validatedate(chkstartDate) == false) {
+                $('#MSG').text("Please Enter Valid From Date(DDMMYYYY)")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+            if (chkendDate.length == 8) {
+                chkendDate = chkendDate.slice(0, 2) + '/' + chkendDate.slice(2, 4) + '/' + chkendDate.slice(4);
+            }
+
+            //alert("endDate" + chkendDate);
+            validatedate(chkendDate);
+
+            if (validatedate(chkendDate) == false) {
+                $('#MSG').text("Please Enter Valid To Date(DDMMYYYY)")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+
+            if (process(chkstartDate) > process(chkendDate)) {
+                $('#MSG').text("To Date Greathen or Equal to From Date")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+            document.getElementById("InputID").value = "I";
+            var body = document.getElementsByClassName('body')[0];
+            body.style.opacity = "0.5";
+            document.querySelector("#loader").style.display = "block";
+
+            $.ajax({
+                url: '@Url.Action("LogiCost", "Home")',
+                type: 'POST',
+                data: { 'startDate': startDate, 'endDate': endDate, 'InputID': "I" },
+                success: function (result) {
+
+                     //$('#MSG').text("Data Imported successfully")
+                        //$("#SucMSG").modal('show');
+                        //debugger;
+                        var startDate = document.getElementById("startDate").value
+                        var endDate = document.getElementById("endDate").value
+                        var url2 = "?startDate=" + startDate + "&endDate=" + endDate + "&InputID=S&page=1";
+                        var url1 = '@Url.Action("logiCost", "Home")';
+                        var url = url1 + url2
+
+                        window.location.href = url;
+
+
+                        },
+                error: function (error) {
+                            //$('#MSG').text("Data Imported Failed")
+                            //$("#SucMSG").modal('show');
+                            element.style.display = "none";
+                            body.style.opacity = "1";
+                            console.log(error);
+                            document.body.style.overflow = "auto";
+                            body.style.overflow = "auto";
+                        }
+
+            });
+
+        }
+        function pageonclick() {
+
+            var body = document.getElementsByClassName('body')[0];
+            body.style.opacity = "0.5";
+            document.querySelector("#loader").style.display = "block";
         }
 
-        .Grid {
-            border: 1px solid #ccc;
-            border-collapse: collapse;
+        function Searchsubmit() {
+            //debugger;
+
+            //var startDate = document.getElementById("startDate").value
+            //var endDate = document.getElementById("endDate").value
+            //var chkstartDate = "";
+            //var chkendDate = "";
+            //var regEx = /(((0|1)[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/((19|20)\d\d))$/;
+
+            //if (startDate.length > 0) {
+            //    chkstartDate = startDate.substring(0, 2) + "/" + startDate.substring(2, startDate.length);
+            //    chkstartDate = chkstartDate.substring(0, 5) + "/" + chkstartDate.substring(5, chkstartDate.length);
+            //}
+            //else {
+
+            //    $('#MSG').text("Please Enter the Date")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+            //    return false;
+            //}
+            //if (endDate.length > 0) {
+            //    var chkendDate = endDate.substring(0, 2) + "/" + endDate.substring(2, endDate.length);
+            //    chkendDate = chkendDate.substring(0, 5) + "/" + chkendDate.substring(5, chkendDate.length);
+            //}
+            //else {
+            //    $('#MSG').text("Please Enter the Date")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+            //    return false;
+            //}
+            //if (!chkstartDate.match(regEx)) {
+            //    $('#MSG').text("Please Check the date format(DDMMYYYY)")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+
+            //    return false;
+            //}
+            //if (!chkendDate.match(regEx)) {
+            //    $('#MSG').text("Please Check the date format(DDMMYYYY)")
+            //    var element = document.getElementsByClassName('SucMSG')[0];
+            //    element.style.display = "block";
+            //    return false;
+            //}
+            var startDate = document.getElementById("startDate").value
+            var endDate = document.getElementById("endDate").value
+            var chkstartDate = startDate;
+            var chkendDate = endDate;
+
+            if (chkstartDate.length == 8) {
+                chkstartDate = chkstartDate.slice(0, 2) + '/' + chkstartDate.slice(2, 4) + '/' + chkstartDate.slice(4);
+            }
+
+            //alert("startDate" + chkstartDate);
+            if (validatedate(chkstartDate) == false) {
+                $('#MSG').text("Please Enter Valid From Date(DDMMYYYY)")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+            if (chkendDate.length == 8) {
+                chkendDate = chkendDate.slice(0, 2) + '/' + chkendDate.slice(2, 4) + '/' + chkendDate.slice(4);
+            }
+
+            //alert("endDate" + chkendDate);
+            validatedate(chkendDate);
+
+            if (validatedate(chkendDate) == false) {
+                $('#MSG').text("Please Enter Valid To Date(DDMMYYYY)")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+
+            if (process(chkstartDate) > process(chkendDate)) {
+                $('#MSG').text("To Date Greathen or Equal to From Date")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+
+            document.getElementById("InputID").value = "S";
+            var body = document.getElementsByClassName('body')[0];
+            body.style.opacity = "0.5";
+            document.querySelector("#loader").style.display = "block";
+
+
+            var url2 = "?startDate=" + startDate + "&endDate=" + endDate + "&InputID=S&page=1";
+            var url1 = '@Url.Action("LogiCost", "Home")';
+            var url = url1 + url2
+            window.location.href = url;
+
         }
 
-            .Grid th {
-                background-color: #F7F7F7;
-                font-weight: bold;
-            }
 
-            .Grid th, .Grid td {
-                padding: 5px;
-                border: 1px solid #ccc;
-            }
 
-            .Grid, .Grid table td {
-                border: 0px solid #ccc;
-            }
+        document.onreadystatechange = function () {
+            var body = document.getElementsByClassName('body')[0];
+            if (document.readyState !== "complete") {
 
-                .Grida, .Grid a:visited {
-                    color: blue;
-                }
-    </style>
+                body.style.opacity = "0.5";
+                document.querySelector("#loader").style.display = "block";
+            } else {
+                document.querySelector("#loader").style.display = "none";
+                body.style.opacity = "1";
+            }
+        };
+    </script>
+
 </head>
 
 
 
-<header>
-    <nav class="navigation">
-
-        <!-- Logo -->
-        <div class="logo">
-            <a class="navbar-brand" href="index-2.html">
-                <img src="~/assets/img/Logo.png" alt="Logo">
-            </a>
-        </div>
-        <h1>MiddleWare Demo</h1>
-
-    </nav>
-
-</header>
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
 <body>
-    <script type="text/javascript">
-        //$(function () {
-        //    $("#btnExport").click(function () {
-        //        $("#WebGrid").table2excel({
-        //            filename: "Table.xls"
-        //        });
-        //    });
-        //});
-        function Exportsubmit() {
-            //alert("Exportsubmit");
+    <div id="SucMSG" role="dialog" class="modalpopup SucMSG" style=" display:none">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <h1 style="padding:20px 10px;font-size:18px">
+                    <label id="MSG"></label>
+                </h1>
 
-            document.getElementById("InputID").value = "E";
-        }
-        function Importsubmit() {
-            //alert("Importsubmit");
-            document.getElementById("InputID").value = "I";
-        }
-        function Searchsubmit() {
-            // alert("Searchsubmit");
-            document.getElementById("InputID").value = "S";
-        }
+                <div style="padding: 5px 20px">
 
-    </script>
-    @using (Html.BeginForm("LogiCost", "Home", FormMethod.Post, new { @id = "WebGridForm" }))
-    {
-        <div class="hero-image">
-            <img src="~/assets/img/API_bg.jpg" alt="Image" style="width: 100%;margin-top: -27px;">
+                    <button style="width:15%;float: right" onclick="modalDismiss()" type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
         </div>
-        <div class="container">
+    </div>
+    <!--<header>
+        <nav class="navigation">-->
+    <!-- Logo -->
+    <!--<div class="logo">
+                <a class="navbar-brand" href="index-2.html">
+                    <img src="~/assets/img/Logo.png" alt="Logo">
+                </a>
+            </div>
+            <h1>MiddleWare</h1>
 
-            Logi Cost Report
-            <a href=@Url.Action("Index","Home") class="btn btn-outline-secondary" class="clearright">
-                Realization Report
-            </a>
-        </div>
-        <div class="container">
-            <div>
-                @Html.Hidden("InputID")
-                @*@Html.Hidden(ViewData["GroupID"].ToString(), new { @id = "GroupID" })*@
-                @*@Html.TextBox("GroupID", maxid);*@
-                From Date : @Html.TextBox("startDate", String.Format("{0:d}", ViewBag.startDate as string), new { placeholder = "yyyymmdd" })
+        </nav>
+
+    </header>
+    <br />-->
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="body">
+
+        @using (Html.BeginForm("LogiCost", "Home", FormMethod.Post, new { @id = "WebGridForm" }))
+        {
+            <div class="hero-image">
+                <img src="~/assets/img/API_bg.jpg" alt="Image" style="width: 100%;margin-top: -27px;">
+            </div>
+            <div class="container" style="font-size: 30px;">
+
+                @*Logi Cost Report
+                <a href=@Url.Action("Index","Home") class="btn btn-secondary"  style="float: right; background-color: #117a8b;">
+                    Realization Report
+                </a>*@
+            </div>
+            <div class="container">
+                @*<div>
+                            @Html.Hidden("InputID")
+                            @Html.Hidden(ViewData["GroupID"].ToString(), new { @id = "GroupID" })
+                            @Html.TextBox("GroupID", maxid);
+                            From Date : @Html.TextBox("startDate", String.Format("{0:d}", ViewBag.startDate as string), new { placeholder = "yyyymmdd" })
 
 
-                @*Datepicker changed by sabeena*@
+                            Datepicker changed by sabeena
 
-                To Date : @Html.TextBox("endDate", String.Format("{0:d}", ViewBag.endDate as string), new { placeholder = "yyyymmdd" })
-                <div style="padding-top: 20px;">
+                            To Date : @Html.TextBox("endDate", String.Format("{0:d}", ViewBag.endDate as string), new { placeholder = "yyyymmdd" })
+                            <div style="padding-top: 20px;">
 
-                    <input type="submit" value=Import class="btn btn-info" style="margin-left: 10px;" onclick="Importsubmit()" />
-                    <input type="submit" value=Search class="btn btn-info" style="margin-left: 10px;" onclick="Searchsubmit()" />
-                    <input type="submit" id="btnExport" value="Export" class="btn btn-info" style="margin-left: 10px;" onclick="Exportsubmit()" />
+                                <input type="submit" value=Import class="btn btn-info" onclick="Importsubmit()" />
+                                <input type="submit" value=Search class="btn btn-info" style="margin-left: 10px;" onclick="Searchsubmit()" />
+                                <input type="submit" id="btnExport" value="Export" class="btn btn-info" style="margin-left: 10px;" onclick="Exportsubmit()" />
 
-                    <a href=@Url.Action("LogiCost","Home") class="btn btn-outline-secondary" class="clearright">
-                        Clear
-                    </a>
-                    @*<a href=@Url.Action("Export","Home") class="btn btn-outline-secondary" class="clearright">
+                                <a href=@Url.Action("LogiCost","Home") class="btn btn-secondary" class="clearright" style=" margin-left: 10px; background-color: #117a8b;">
+                                    Clear
+                                </a>
+                                <a href=@Url.Action("Export","Home") class="btn btn-outline-secondary" class="clearright">
+                                        Export
+                                    </a>
+                            </div>
+
+                    </div>*@
+                <div>
+                    @*@Html.Hidden(ViewData["GroupID"].ToString(), new { @id = "GroupID" })*@
+                    @*@Html.TextBox("GroupID", maxid);*@
+                    @Html.Hidden("InputID")
+                    From Date : @Html.TextBox("startDate", String.Format("{0:d}", ViewBag.startDate as string), new { placeholder = "DDMMYYYY" })
+
+
+                    @*Datepicker changed by sabeena*@
+
+                    To Date : @Html.TextBox("endDate", String.Format("{0:d}", ViewBag.endDate as string), new { placeholder = "DDMMYYYY" })
+                    <div style="padding-top: 20px;">
+
+                        @* <input type="submit" value=Import class="btn btn-info" onclick="Importsubmit()" />*@
+                        <a class=" btn-info btn clearright" onclick="Importsubmit()" style=" margin-left: 10px; margin-left: 10px; color: #fff;background-color: #17a2b8; border-color: #17a2b8;">
+                            Import
+                        </a>
+                        <a class=".btn-info btn clearright" onclick="Searchsubmit()" style=" margin-left: 10px; margin-left: 10px; color: #fff;background-color: #17a2b8; border-color: #17a2b8;">
+                            Search
+                        </a>
+
+                        @*<input type="submit" id="btnExport" value="Export" class="btn btn-info" style=" margin-left: 10px; margin-left: 10px; color: #fff;background-color: #17a2b8; border-color: #17a2b8;" onclick="Exportsubmit()" />*@
+                        <a class=".btn-info btn clearright" onclick="Exportsubmit()" style=" margin-left: 10px; margin-left: 10px; color: #fff;background-color: #17a2b8; border-color: #17a2b8;">
                             Export
-                        </a>*@
+                        </a>
+                        <a href=@Url.Action("DownloadLogRealization","Home") class="btn btn-secondary" class="clearright" style=" margin-left: 10px; background-color: #117a8b;">
+                            DownLoad Log
+                        </a>
+                        <a href=@Url.Action("LogiCost","Home") class="btn btn-secondary clearright" style=" margin-left: 10px; background-color: #117a8b;">
+                            Clear
+                        </a>
+
+
+                    </div>
+
                 </div>
 
+
             </div>
+        }
+
+        <div class="card test" style="padding: 20px;margin-top: 10px;margin-bottom: 5%;">
+            @if (Model.Count > 0)
+            {
+                <table id="WebGrid1" class="table Grid table-striped table-responsive table-bordered dt-responsive nowrap" width="100%" cellspacing="0" cellpadding="5">
+                    <thead>
+                        <tr>
+                            <th>Billing Document</th>
+                            <th>Billing Type</th>
+                            <th>Billing Date</th>
+                            <th>Billed quantity </th>
+                            <th>Base Unit of Measure</th>
+                            <th>Plant</th>
+                            <th>Plant Description</th>
+                            <th>Source</th>
+                            <th>Source Description</th>
+                            <th>Movement Type</th>
+                            <th>Movement Description</th>
+                            <th>Ship-To Party</th>
+                            <th>Ship to party Name</th>
+                            <th>Sold-To Party</th>
+                            <th> Sold-To Party Name</th>
+                            <th>ransporter ID</th>
+                            <th>Transporter ID Name</th>
+                            <th>Sales Rep code</th>
+                            <th>Sales Rep Name 1</th>
+                            <th>State</th>
+                            <th> State Description</th>
+                            <th>District</th>
+                            <th> District Description</th>
+                            <th>Block</th>
+                            <th> Block Description</th>
+                            <th>Destination</th>
+                            <th>Destination Description</th>
+                            <th>Customer group Code</th>
+                            <th>Customer group Name</th>
+                            <th>Primary Frieght</th>
+                            <th>Secondary Frieght</th>
+                            <th>Rake No</th>
+                            <th>Rake Point</th>
+                            <th>Material Group</th>
+                            <th>Storage Location</th>
+                            <th>Storage Location Description</th>
+                            <th>Incoterms1</th>
+                            <th>Incoterms 2</th>
+                            <th>Unloading Charges</th>
+                            <th>Transshipment Charges</th>
+                            <th>Depot Unloading charges</th>
+                            <th>Depot Loading charges</th>
+                            <th>BLK CFA Charges</th>
+                            <th>Loading Charges</th>
+                            <th>C&F Agent Service Charges</th>
+                            <th>Railway Service Charge</th>
+                            <th>Party side Unloading Charges</th>
+                            <th>Rake Clearing Charges</th>
+                            <th>Shunting Charges</th>
+                            <th>Rake CFA Charges</th>
+                            <th>Blended A Charges</th>
+                            <th>Blended B Charges</th>
+                            <th>Misc Charges</th>
+                            <th>Transportation zone</th>
+                            <th>Transportation zone description</th>
+                            <th>Sales District</th>
+                            <th>Sales District Description</th>
+                            <th>Region code</th>
+                            <th>Region Description</th>
+                            <th>Sales Office</th>
+                            <th> Sales Office Description</th>
+                            <th>Sales Group</th>
+                            <th>Sales Group Description</th>
+                            <th>Branch Office</th>
+                            <th>Branch Office Description</th>
+                            <th>Primary Distance</th>
+                            <th>Secondary Distance</th>
+                            <th>Block Category</th>
+                            <th>Accounting Document Number</th>
+                            <th>Fiscal Year</th>
+                            <th>Invoice Type</th>
+                            <th>Freight Type</th>
+                            <th>Plant category</th>
+                            <th>Supplying Plant Name</th>
+                            <th>Depot Rake movement</th>
+                            <th>Indirect Primary Frieght</th>
+                            <th>Ship Frieght</th>
+                            <th>Ship Handling Charges</th>
+                            <th>Clinker Plant</th>
+                            <th>Supplying Plant</th>
+                            <th>Clinker Distance</th>
+                            <th>Indirect Primary Distance</th>
+                            <th>Clinker Plant name</th>
+                            <th>Manufacturing Plant Name</th>
+                            <th>Grinding unit plant code</th>
+                            <th>Grinding unit plant Name</th>
+                            <th>Supplying Depot</th>
+                            <th>Supplying Depot Name</th>
+                            <th>SD Document Currency</th>
+                            <th>ent Per MT</th>
+                            <th>Rake Demurage Charges</th>
+                            <th>Lead Distance Without Clinkcer KM</th>
+                            <th>Lead Distance With Clinkcer KM</th>
+                            <th>Material Code</th>
+                            <th>Material Description</th>
+                            <th> Empty bags Material Code</th>
+                            <th>Empty bags Material Description</th>
+                            <th>Incurred Cost</th>
+                            <th>Unincurred Cost</th>
+                            <th>Ship to party Region</th>
+                            <th>Ship to party District</th>
+                            <th>Ship to party Block</th>
+                            <th>Ship to partyDestination</th>
+                            <th>Pricing procedure</th>
+                            <th>Delivery</th>
+                            <th>Shipment Number</th>
+                            <th>Manufacturing Plant</th>
+                            <th>Manufacturing Plant Description</th>
+                            <th>Material group_1</th>
+                            <th>Gross Turnover</th>
+                            <th>Net Turnover</th>
+                            <th>Net Value in Document Currency</th>
+                            <th>Transport Incentive</th>
+                            <th>Net Value in Document Currency_1</th>
+                            <th>Sold to Party Region</th>
+                            <th>Sold to Party District</th>
+                            <th>Sold to Party Block</th>
+                            <th>Sold to Party Destination</th>
+                            <th>Means of Transport ID</th>
+                            <th>Truck Type</th>
+                            <th>E-Waybill Number</th>
+                            <th>E-Waybill date</th>
+                            <th>E-WayBill Valid Till Date</th>
+                            <th>HSN Code</th>
+                            <th>Paid Price</th>
+                            <th>Description</th>
+                            <th>Sold to Party Region Description</th>
+                            <th>Sold to Party District Description</th>
+                            <th>Sold to Party Block Description</th>
+                            <th>Sold to Party Destination Description</th>
+                            <th>Manufacturing Plant Type</th>
+                            <th>TDC Cost</th>
+                            <th>Total Distance</th>
+                            <th>Depot In-direct primary frieght</th>
+                            <th>Total Invoice Frieght</th>
+                            <th>Road Primary frieght Incurred</th>
+                            <th>Road Primary frieght unIncurred</th>
+                            <th>Road Secondary frieght Incurred</th>
+                            <th>Road Secondary frieght unIncurred</th>
+                            <th>Rail Primary Frieght Incurred</th>
+                            <th>Rail Primary Frieght unIncurred</th>
+                            <th>Direct Delivery charges</th>
+                            <th>Double Labour Charges</th>
+                            <th>Invoice cancellation flag</th>
+                            <th>Ship to party Destination Description</th>
+                            <th>Ship Distance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in lstsrvdeal)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.Vbeln)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Fkart)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Fkdat)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Fkimg)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Meins)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Werks)</td>
+                                <td>@Html.DisplayFor(modelItem => item.WName1)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Zsource)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Zsourced)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Ztratyp)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Ztratypd)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Kunnr)</td>
+                                <td>@Html.DisplayFor(modelItem => item.KunnrN)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Kunag)</td>
+                                <td>@Html.DisplayFor(modelItem => item.KunagN)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Ptnr)</td>
+                                <td>@Html.DisplayFor(modelItem => item.PtnrN)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Salsrep)</td>
+                                <td>@Html.DisplayFor(modelItem => item.SalsrepN)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Regio)</td>
+                                <td>@Html.DisplayFor(modelItem => item.RegioN)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Dstrc)</td>
+                                <td>@Html.DisplayFor(modelItem => item.DstrcN)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Block)</td>
+                                <td>@Html.DisplayFor(modelItem => item.BlockN)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Destint)</td>
+                                <td>@Html.DisplayFor(modelItem => item.DestintN)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Kdgrp)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Ktext)</td>
+                                <td>@Html.DisplayFor(modelItem => item.PrimaryFrt)</td>
+                                <td>@Html.DisplayFor(modelItem => item.SecondryFrt)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Rakno)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Rakpt)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Matkl)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Lgort)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Lgobe)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Inco1)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Inco2)</td>
+                                <td>@Html.DisplayFor(modelItem => item.UldgChgs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.TrnsChgs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.DpulChgs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.DpldChgs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.DivrChgs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.LdngChgs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.CfagChgs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.RksrChgs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.PuldChgs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.RkclChgs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ShntChgs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.RkcfChgs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.BlndChgs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.BlnbChgs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.MiscMisc)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Zzzone1)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Zzzone1N)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Zzbzirk)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ZzbzirkN)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Zzregio)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ZzregioN)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Vkbur)</td>
+                                <td>@Html.DisplayFor(modelItem => item.VkburN)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Vkgrp)</td>
+                                <td>@Html.DisplayFor(modelItem => item.VkgrpN)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Zzbranch)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ZzbranchN)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Pdstn)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Sdstn)</td>
+                                <td>@Html.DisplayFor(modelItem => item.BlockCt)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Belnr)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Gjahr)</td>
+                                <td>@Html.DisplayFor(modelItem => item.InvType)</td>
+                                <td>@Html.DisplayFor(modelItem => item.FrtType)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Zzvlfkz)</td>
+                                <td>@Html.DisplayFor(modelItem => item.SuppPlantName)</td>
+                                <td>@Html.DisplayFor(modelItem => item.DepoRkMvt)</td>
+                                <td>@Html.DisplayFor(modelItem => item.IndPriFrt)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ShipFrtChrgs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ShipHandChrgs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Clkmnfplant)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Suppplant)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Distance)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Indpdistance)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ClkPltName)</td>
+                                <td>@Html.DisplayFor(modelItem => item.MnfPltName)</td>
+                                <td>@Html.DisplayFor(modelItem => item.GeindPlt)</td>
+                                <td>@Html.DisplayFor(modelItem => item.GeindPltName)</td>
+                                <td>@Html.DisplayFor(modelItem => item.SupplDepo)</td>
+                                <td>@Html.DisplayFor(modelItem => item.SupplDepoName)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Waerk)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Rent)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Rakedemchrg)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Ldistance)</td>
+                                <td>@Html.DisplayFor(modelItem => item.LdistanceClk)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Matnr)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Vtext)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Matnr1)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Maktx)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Incurredcost)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Unincurredcost)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ShRegio)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ShDstrc)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ShBlock)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ShDestint)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Kalks)</td>
+                                <td>@Html.DisplayFor(modelItem => item.DeliveryNo)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Tknum)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Mnfplant)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Mnfdesc)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Mvgr1)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Grossturn)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Netturn)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Nakedreal)</td>
+                                <td>@Html.DisplayFor(modelItem => item.TransIncentive)</td>
+                                <td>@Html.DisplayFor(modelItem => item.PltFrt)</td>
+                                <td>@Html.DisplayFor(modelItem => item.SpRegio)</td>
+                                <td>@Html.DisplayFor(modelItem => item.SpDstrc)</td>
+                                <td>@Html.DisplayFor(modelItem => item.SpBlock)</td>
+                                <td>@Html.DisplayFor(modelItem => item.SpDestint)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Traid)</td>
+                                <td>@Html.DisplayFor(modelItem => item.TruckType)</td>
+                                <td>@Html.DisplayFor(modelItem => item.EwbNo)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Edate)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Evdate)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Steuc)</td>
+                                <td>@Html.DisplayFor(modelItem => item.PaidPrice)</td>
+                                <td>@Html.DisplayFor(modelItem => item.KalksDesc)</td>
+                                <td>@Html.DisplayFor(modelItem => item.SpRegioDesc)</td>
+                                <td>@Html.DisplayFor(modelItem => item.SpDstrcDesc)</td>
+                                <td>@Html.DisplayFor(modelItem => item.SpBlockDesc)</td>
+                                <td>@Html.DisplayFor(modelItem => item.SpDestintDesc)</td>
+                                <td>@Html.DisplayFor(modelItem => item.MfPlantType)</td>
+                                <td>@Html.DisplayFor(modelItem => item.TotalTdcCost)</td>
+                                <td>@Html.DisplayFor(modelItem => item.TotalDistance)</td>
+                                <td>@Html.DisplayFor(modelItem => item.DepotIndFrieght)</td>
+                                <td>@Html.DisplayFor(modelItem => item.TotalInvoiceFrt)</td>
+                                <td>@Html.DisplayFor(modelItem => item.RoadPfIncurred)</td>
+                                <td>@Html.DisplayFor(modelItem => item.RoadPfUnincurred)</td>
+                                <td>@Html.DisplayFor(modelItem => item.RoadSfIncurred)</td>
+                                <td>@Html.DisplayFor(modelItem => item.RoadSfUnincurred)</td>
+                                <td>@Html.DisplayFor(modelItem => item.RailPfIncurred)</td>
+                                <td>@Html.DisplayFor(modelItem => item.RailPfUnincurred)</td>
+                                <td>@Html.DisplayFor(modelItem => item.DrdlChgs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.DbLabChgs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ZinvCancel)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ShDestintDesc)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ShipDistance)</td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                if (lstsrvdeal.PageSize < lstsrvdeal.TotalItemCount)
+                {
+                    <br />
+                    <div style="text-align:right;font-size:16px">
+
+                        page @(lstsrvdeal.PageCount < lstsrvdeal.PageNumber ? 0 : lstsrvdeal.PageNumber) to @lstsrvdeal.PageCount
+
+                        @Html.PagedListPager(lstsrvdeal, page => Url.Action("logicost", new { startDate = ViewBag.startDate, endDate = ViewBag.endDate, InputID = "S", page }), new PagedListRenderOptions() { LiElementClasses = new List<string> { "myClass", "aff" } })
+
+                    </div>
+                }
+            }
+
+            @*<div class="table" style="overflow-x: scroll;"
+                >
+
+                        @webGrid.GetHtml(
+                        htmlAttributes: new { @id = "WebGrid", @class = "Grid" },
+                        columns: webGrid.Columns(
+                                    webGrid.Column("Vbeln", "Billing Document"),
+                                    webGrid.Column("Fkart", "Billing Type"),
+                                    webGrid.Column("Fkdat", "Billing Date"),
+                                    webGrid.Column("Fkimg", "Billed quantity"),
+                                    webGrid.Column("Meins", "Base Unit of Measure"),
+                                    webGrid.Column("Werks", "Plant"),
+                                    webGrid.Column("WName1", "Plant Description"),
+                                    webGrid.Column("Zsource", "Source"),
+                                    webGrid.Column("Zsourced", "Source Description"),
+                                    webGrid.Column("Ztratyp", "Movement Type"),
+                                    webGrid.Column("Ztratypd", "Movement Description"),
+                                    webGrid.Column("Kunnr", "Ship-To Party"),
+                                    webGrid.Column("KunnrN", "Ship to party Name"),
+                                    webGrid.Column("Kunag", "Sold-To Party"),
+                                    webGrid.Column("KunagN", "Sold-To Party Name"),
+                                    webGrid.Column("Ptnr", "Transporter ID"),
+                                    webGrid.Column("PtnrN", "Transporter ID Name "),
+                                    webGrid.Column("Salsrep", "Sales Rep code"),
+                                    webGrid.Column("SalsrepN", "Sales Rep Name 1"),
+                                    webGrid.Column("Regio", "State"),
+                                    webGrid.Column("RegioN", "State Description"),
+                                    webGrid.Column("Dstrc", "District"),
+                                    webGrid.Column("DstrcN", "District Description"),
+                                    webGrid.Column("Block", "Block"),
+                                    webGrid.Column("BlockN", "Block Description"),
+                                    webGrid.Column("Destint", "Destination"),
+                                    webGrid.Column("DestintN", "Destination Description"),
+                                    webGrid.Column("Kdgrp", "Customer group Code"),
+                                    webGrid.Column("Ktext", "Customer group Name"),
+                                    webGrid.Column("PrimaryFrt", "Primary Frieght"),
+                                    webGrid.Column("SecondryFrt", "Secondary Frieght"),
+                                    webGrid.Column("Rakno", "Rake No"),
+                                    webGrid.Column("Rakpt", "Rake Point"),
+                                    webGrid.Column("Matkl", "Material Group"),
+                                    webGrid.Column("Lgort", "Storage Location"),
+                                    webGrid.Column("Lgobe", "Storage Location Description"),
+                                    webGrid.Column("Inco1", "Incoterms1"),
+                                    webGrid.Column("Inco2", "Incoterms 2"),
+                                    webGrid.Column("UldgChgs", "Unloading Charges"),
+                                    webGrid.Column("TrnsChgs", "Transshipment Charges"),
+                                    webGrid.Column("DpulChgs", "Depot Unloading charges"),
+                                    webGrid.Column("DpldChgs", "Depot Loading charges"),
+                                    webGrid.Column("DivrChgs", "BLK CFA Charges"),
+                                    webGrid.Column("LdngChgs", "Loading Charges"),
+                                    webGrid.Column("CfagChgs", "C&F Agent Service Charges"),
+                                    webGrid.Column("RksrChgs", "Railway Service Charge"),
+                                    webGrid.Column("PuldChgs", "Party side Unloading Charges"),
+                                    webGrid.Column("RkclChgs", "Rake Clearing Charges"),
+                                    webGrid.Column("ShntChgs", "Shunting Charges"),
+                                    webGrid.Column("RkcfChgs", "Rake CFA Charges"),
+                                    webGrid.Column("BlndChgs", "Blended A Charges"),
+                                    webGrid.Column("BlnbChgs", "Blended B Charges"),
+                                    webGrid.Column("MiscMisc", "Misc Charges"),
+                                    webGrid.Column("Zzzone1", "Transportation zone "),
+                                    webGrid.Column("Zzzone1N", "Transportation zone description"),
+                                    webGrid.Column("Zzbzirk", "Sales District"),
+                                    webGrid.Column("ZzbzirkN", "Sales District Description"),
+                                    webGrid.Column("Zzregio", "Region code"),
+                                    webGrid.Column("ZzregioN", "Region Description"),
+                                    webGrid.Column("Vkbur", "Sales Office"),
+                                    webGrid.Column("VkburN", "Sales Office Description"),
+                                    webGrid.Column("Vkgrp", "Sales Group"),
+                                    webGrid.Column("VkgrpN", "Sales Group Description"),
+                                    webGrid.Column("Zzbranch", "Branch Office"),
+                                    webGrid.Column("ZzbranchN", "Branch Office Description"),
+                                    webGrid.Column("Pdstn", "Primary Distance"),
+                                    webGrid.Column("Sdstn", "Secondary Distance"),
+                                    webGrid.Column("BlockCt", "Block Category"),
+                                    webGrid.Column("Belnr", "Accounting Document Number"),
+                                    webGrid.Column("Gjahr", "Fiscal Year"),
+                                    webGrid.Column("InvType", "Invoice Type"),
+                                    webGrid.Column("FrtType", "Freight Type"),
+                                    webGrid.Column("Zzvlfkz", "Plant category"),
+                                    webGrid.Column("SuppPlantName", "Supplying Plant Name"),
+                                    webGrid.Column("DepoRkMvt", "Depot Rake movement"),
+                                    webGrid.Column("IndPriFrt", "Indirect Primary Frieght"),
+                                    webGrid.Column("ShipFrtChrgs", "Ship Frieght"),
+                                    webGrid.Column("ShipHandChrgs", "Ship Handling Charges"),
+                                    webGrid.Column("Clkmnfplant", "Clinker Plant"),
+                                    webGrid.Column("Suppplant", "Supplying Plant"),
+                                    webGrid.Column("Distance", "Clinker Distance"),
+                                    webGrid.Column("Indpdistance", "Indirect Primary Distance"),
+                                    webGrid.Column("ClkPltName", "Clinker Plant name "),
+                                    webGrid.Column("MnfPltName", "Manufacturing Plant Name"),
+                                    webGrid.Column("GeindPlt", "Grinding unit plant code"),
+                                    webGrid.Column("GeindPltName", "Grinding unit plant Name"),
+                                    webGrid.Column("SupplDepo", "Supplying Depot"),
+                                    webGrid.Column("SupplDepoName", "Supplying Depot Name"),
+                                    webGrid.Column("Waerk", "SD Document Currency"),
+                                    webGrid.Column("Rent", "Rent Per MT"),
+                                    webGrid.Column("Rakedemchrg", "Rake Demurage Charges"),
+                                    webGrid.Column("Ldistance", "Lead Distance Without Clinkcer KM"),
+                                    webGrid.Column("LdistanceClk", "Lead Distance With Clinkcer KM"),
+                                    webGrid.Column("Matnr", "Material Code"),
+                                    webGrid.Column("Vtext", "Material Description"),
+                                    webGrid.Column("Matnr1", "Empty bags Material Code"),
+                                    webGrid.Column("Maktx", "Empty bags Material Description"),
+                                    webGrid.Column("Incurredcost", "Incurred Cost"),
+                                    webGrid.Column("Unincurredcost", "Unincurred Cost"),
+                                    webGrid.Column("ShRegio", "Ship to party Region"),
+                                    webGrid.Column("ShDstrc", "Ship to party District"),
+                                    webGrid.Column("ShBlock", "Ship to party Block"),
+                                    webGrid.Column("ShDestint", "Ship to partyDestination"),
+                                    webGrid.Column("Kalks", "Pricing procedure"),
+                                    webGrid.Column("DeliveryNo", "Delivery"),
+                                    webGrid.Column("Tknum", "Shipment Number"),
+                                    webGrid.Column("Mnfplant", "Manufacturing Plant"),
+                                    webGrid.Column("Mnfdesc", "Manufacturing Plant Description"),
+                                    webGrid.Column("Mvgr1", "Material group_1"),
+                                    webGrid.Column("Grossturn", "Gross Turnover"),
+                                    webGrid.Column("Netturn", "Net Turnover"),
+                                    webGrid.Column("Nakedreal", "Net Value in Document Currency"),
+                                    webGrid.Column("TransIncentive", "Transport Incentive"),
+                                    webGrid.Column("PltFrt", "Net Value in Document Currency_1"),
+                                    webGrid.Column("SpRegio", "Sold to Party Region"),
+                                    webGrid.Column("SpDstrc", "Sold to Party District"),
+                                    webGrid.Column("SpBlock", "Sold to Party Block"),
+                                    webGrid.Column("SpDestint", "Sold to Party Destination"),
+                                    webGrid.Column("Traid", "Means of Transport ID"),
+                                    webGrid.Column("TruckType", "Truck Type"),
+                                    webGrid.Column("EwbNo", "E-Waybill Number"),
+                                    webGrid.Column("Edate", "E-Waybill date"),
+                                    webGrid.Column("Evdate", "E-WayBill Valid Till Date"),
+                                    webGrid.Column("Steuc", "HSN Code"),
+                                    webGrid.Column("PaidPrice", "Paid Price"),
+                                    webGrid.Column("KalksDesc", "Description"),
+                                    webGrid.Column("SpRegioDesc", "Sold to Party Region Description"),
+                                    webGrid.Column("SpDstrcDesc", "Sold to Party District Description"),
+                                    webGrid.Column("SpBlockDesc", "Sold to Party Block Description"),
+                                    webGrid.Column("SpDestintDesc", "Sold to Party Destination Description"),
+                                    webGrid.Column("MfPlantType", "Manufacturing Plant Type"),
+                                    webGrid.Column("TotalTdcCost", "TDC Cost"),
+                                    webGrid.Column("TotalDistance", "Total Distance"),
+                                    webGrid.Column("DepotIndFrieght", "Depot In-direct primary frieght"),
+                                    webGrid.Column("TotalInvoiceFrt", "Total Invoice Frieght"),
+                                    webGrid.Column("RoadPfIncurred", "Road Primary frieght Incurred"),
+                                    webGrid.Column("RoadPfUnincurred", "Road Primary frieght unIncurred"),
+                                    webGrid.Column("RoadSfIncurred", "Road Secondary frieght Incurred"),
+                                    webGrid.Column("RoadSfUnincurred", "Road Secondary frieght unIncurred"),
+                                    webGrid.Column("RailPfIncurred", "Rail Primary Frieght Incurred"),
+                                    webGrid.Column("RailPfUnincurred", "Rail Primary Frieght unIncurred"),
+                                    webGrid.Column("DrdlChgs", "Direct Delivery charges"),
+                                    webGrid.Column("DbLabChgs", "Double Labour Charges"),
+                                    webGrid.Column("ZinvCancel", "Invoice cancellation flag"),
+                                    webGrid.Column("ShDestintDesc", "Ship to party Destination Description"),
+                                    webGrid.Column("ShipDistance", "Ship Distance")
+                        ))
 
 
-        </div>
-    }
-    
-<div class="card test" style="padding: 20px;margin-top: 10px;margin-bottom: 5%;">
-    @if (Model.Count > 0)
-    {
-        <div class="table" @*style="overflow-x: scroll;"*@>
+                    </div>*@
 
-            @webGrid.GetHtml(
-            htmlAttributes: new { @id = "WebGrid", @class = "Grid" },
-            columns: webGrid.Columns(
-                        webGrid.Column("Vbeln", "Billing Document"),
-                        webGrid.Column("Fkart", "Billing Type"),
-                        webGrid.Column("Fkdat", "Billing Date"),
-                        webGrid.Column("Fkimg", "Billed quantity"),
-                        webGrid.Column("Meins", "Base Unit of Measure"),
-                        webGrid.Column("Werks", "Plant"),
-                        webGrid.Column("WName1", "Plant Description"),
-                        webGrid.Column("Zsource", "Source"),
-                        webGrid.Column("Zsourced", "Source Description"),
-                        webGrid.Column("Ztratyp", "Movement Type"),
-                        webGrid.Column("Ztratypd", "Movement Description"),
-                        webGrid.Column("Kunnr", "Ship-To Party"),
-                        webGrid.Column("KunnrN", "Ship to party Name"),
-                        webGrid.Column("Kunag", "Sold-To Party"),
-                        webGrid.Column("KunagN", "Sold-To Party Name"),
-                        webGrid.Column("Ptnr", "Transporter ID"),
-                        webGrid.Column("PtnrN", "Transporter ID Name "),
-                        webGrid.Column("Salsrep", "Sales Rep code"),
-                        webGrid.Column("SalsrepN", "Sales Rep Name 1"),
-                        webGrid.Column("Regio", "State"),
-                        webGrid.Column("RegioN", "State Description"),
-                        webGrid.Column("Dstrc", "District"),
-                        webGrid.Column("DstrcN", "District Description"),
-                        webGrid.Column("Block", "Block"),
-                        webGrid.Column("BlockN", "Block Description"),
-                        webGrid.Column("Destint", "Destination"),
-                        webGrid.Column("DestintN", "Destination Description"),
-                        webGrid.Column("Kdgrp", "Customer group Code"),
-                        webGrid.Column("Ktext", "Customer group Name"),
-                        webGrid.Column("PrimaryFrt", "Primary Frieght"),
-                        webGrid.Column("SecondryFrt", "Secondary Frieght"),
-                        webGrid.Column("Rakno", "Rake No"),
-                        webGrid.Column("Rakpt", "Rake Point"),
-                        webGrid.Column("Matkl", "Material Group"),
-                        webGrid.Column("Lgort", "Storage Location"),
-                        webGrid.Column("Lgobe", "Storage Location Description"),
-                        webGrid.Column("Inco1", "Incoterms1"),
-                        webGrid.Column("Inco2", "Incoterms 2"),
-                        webGrid.Column("UldgChgs", "Unloading Charges"),
-                        webGrid.Column("TrnsChgs", "Transshipment Charges"),
-                        webGrid.Column("DpulChgs", "Depot Unloading charges"),
-                        webGrid.Column("DpldChgs", "Depot Loading charges"),
-                        webGrid.Column("DivrChgs", "BLK CFA Charges"),
-                        webGrid.Column("LdngChgs", "Loading Charges"),
-                        webGrid.Column("CfagChgs", "C&F Agent Service Charges"),
-                        webGrid.Column("RksrChgs", "Railway Service Charge"),
-                        webGrid.Column("PuldChgs", "Party side Unloading Charges"),
-                        webGrid.Column("RkclChgs", "Rake Clearing Charges"),
-                        webGrid.Column("ShntChgs", "Shunting Charges"),
-                        webGrid.Column("RkcfChgs", "Rake CFA Charges"),
-                        webGrid.Column("BlndChgs", "Blended A Charges"),
-                        webGrid.Column("BlnbChgs", "Blended B Charges"),
-                        webGrid.Column("MiscMisc", "Misc Charges"),
-                        webGrid.Column("Zzzone1", "Transportation zone "),
-                        webGrid.Column("Zzzone1N", "Transportation zone description"),
-                        webGrid.Column("Zzbzirk", "Sales District"),
-                        webGrid.Column("ZzbzirkN", "Sales District Description"),
-                        webGrid.Column("Zzregio", "Region code"),
-                        webGrid.Column("ZzregioN", "Region Description"),
-                        webGrid.Column("Vkbur", "Sales Office"),
-                        webGrid.Column("VkburN", "Sales Office Description"),
-                        webGrid.Column("Vkgrp", "Sales Group"),
-                        webGrid.Column("VkgrpN", "Sales Group Description"),
-                        webGrid.Column("Zzbranch", "Branch Office"),
-                        webGrid.Column("ZzbranchN", "Branch Office Description"),
-                        webGrid.Column("Pdstn", "Primary Distance"),
-                        webGrid.Column("Sdstn", "Secondary Distance"),
-                        webGrid.Column("BlockCt", "Block Category"),
-                        webGrid.Column("Belnr", "Accounting Document Number"),
-                        webGrid.Column("Gjahr", "Fiscal Year"),
-                        webGrid.Column("InvType", "Invoice Type"),
-                        webGrid.Column("FrtType", "Freight Type"),
-                        webGrid.Column("Zzvlfkz", "Plant category"),
-                        webGrid.Column("SuppPlantName", "Supplying Plant Name"),
-                        webGrid.Column("DepoRkMvt", "Depot Rake movement"),
-                        webGrid.Column("IndPriFrt", "Indirect Primary Frieght"),
-                        webGrid.Column("ShipFrtChrgs", "Ship Frieght"),
-                        webGrid.Column("ShipHandChrgs", "Ship Handling Charges"),
-                        webGrid.Column("Clkmnfplant", "Clinker Plant"),
-                        webGrid.Column("Suppplant", "Supplying Plant"),
-                        webGrid.Column("Distance", "Clinker Distance"),
-                        webGrid.Column("Indpdistance", "Indirect Primary Distance"),
-                        webGrid.Column("ClkPltName", "Clinker Plant name "),
-                        webGrid.Column("MnfPltName", "Manufacturing Plant Name"),
-                        webGrid.Column("GeindPlt", "Grinding unit plant code"),
-                        webGrid.Column("GeindPltName", "Grinding unit plant Name"),
-                        webGrid.Column("SupplDepo", "Supplying Depot"),
-                        webGrid.Column("SupplDepoName", "Supplying Depot Name"),
-                        webGrid.Column("Waerk", "SD Document Currency"),
-                        webGrid.Column("Rent", "Rent Per MT"),
-                        webGrid.Column("Rakedemchrg", "Rake Demurage Charges"),
-                        webGrid.Column("Ldistance", "Lead Distance Without Clinkcer KM"),
-                        webGrid.Column("LdistanceClk", "Lead Distance With Clinkcer KM"),
-                        webGrid.Column("Matnr", "Material Code"),
-                        webGrid.Column("Vtext", "Material Description"),
-                        webGrid.Column("Matnr1", "Empty bags Material Code"),
-                        webGrid.Column("Maktx", "Empty bags Material Description"),
-                        webGrid.Column("Incurredcost", "Incurred Cost"),
-                        webGrid.Column("Unincurredcost", "Unincurred Cost"),
-                        webGrid.Column("ShRegio", "Ship to party Region"),
-                        webGrid.Column("ShDstrc", "Ship to party District"),
-                        webGrid.Column("ShBlock", "Ship to party Block"),
-                        webGrid.Column("ShDestint", "Ship to partyDestination"),
-                        webGrid.Column("Kalks", "Pricing procedure"),
-                        webGrid.Column("DeliveryNo", "Delivery"),
-                        webGrid.Column("Tknum", "Shipment Number"),
-                        webGrid.Column("Mnfplant", "Manufacturing Plant"),
-                        webGrid.Column("Mnfdesc", "Manufacturing Plant Description"),
-                        webGrid.Column("Mvgr1", "Material group_1"),
-                        webGrid.Column("Grossturn", "Gross Turnover"),
-                        webGrid.Column("Netturn", "Net Turnover"),
-                        webGrid.Column("Nakedreal", "Net Value in Document Currency"),
-                        webGrid.Column("TransIncentive", "Transport Incentive"),
-                        webGrid.Column("PltFrt", "Net Value in Document Currency_1"),
-                        webGrid.Column("SpRegio", "Sold to Party Region"),
-                        webGrid.Column("SpDstrc", "Sold to Party District"),
-                        webGrid.Column("SpBlock", "Sold to Party Block"),
-                        webGrid.Column("SpDestint", "Sold to Party Destination"),
-                        webGrid.Column("Traid", "Means of Transport ID"),
-                        webGrid.Column("TruckType", "Truck Type"),
-                        webGrid.Column("EwbNo", "E-Waybill Number"),
-                        webGrid.Column("Edate", "E-Waybill date"),
-                        webGrid.Column("Evdate", "E-WayBill Valid Till Date"),
-                        webGrid.Column("Steuc", "HSN Code"),
-                        webGrid.Column("PaidPrice", "Paid Price"),
-                        webGrid.Column("KalksDesc", "Description"),
-                        webGrid.Column("SpRegioDesc", "Sold to Party Region Description"),
-                        webGrid.Column("SpDstrcDesc", "Sold to Party District Description"),
-                        webGrid.Column("SpBlockDesc", "Sold to Party Block Description"),
-                        webGrid.Column("SpDestintDesc", "Sold to Party Destination Description"),
-                        webGrid.Column("MfPlantType", "Manufacturing Plant Type"),
-                        webGrid.Column("TotalTdcCost", "TDC Cost"),
-                        webGrid.Column("TotalDistance", "Total Distance"),
-                        webGrid.Column("DepotIndFrieght", "Depot In-direct primary frieght"),
-                        webGrid.Column("TotalInvoiceFrt", "Total Invoice Frieght"),
-                        webGrid.Column("RoadPfIncurred", "Road Primary frieght Incurred"),
-                        webGrid.Column("RoadPfUnincurred", "Road Primary frieght unIncurred"),
-                        webGrid.Column("RoadSfIncurred", "Road Secondary frieght Incurred"),
-                        webGrid.Column("RoadSfUnincurred", "Road Secondary frieght unIncurred"),
-                        webGrid.Column("RailPfIncurred", "Rail Primary Frieght Incurred"),
-                        webGrid.Column("RailPfUnincurred", "Rail Primary Frieght unIncurred"),
-                        webGrid.Column("DrdlChgs", "Direct Delivery charges"),
-                        webGrid.Column("DbLabChgs", "Double Labour Charges"),
-                        webGrid.Column("ZinvCancel", "Invoice cancellation flag"),
-                        webGrid.Column("ShDestintDesc", "Ship to party Destination Description"),
-                        webGrid.Column("ShipDistance", "Ship Distance")
-            ))
+            <!--</div>-->
+
+            @*<footer id="footer">
+
+                <div>
+                    2021 Copyright: Develop by REVERPRO
+                </div>
 
 
-        </div>
-    }
-    </div>
-  
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    @*<script type="text/javascript">
-            $("body").on("click", ".Grid tfoot a", function () {
-                $('#WebGridForm').attr('action', $(this).attr('href')).submit();
-                return false;
-            });
-        </script>*@
-    @*@if (Model.Count == 0)
-        {
-            <script type="text/javascript">
-                    $(function () {
-                        var row = $("#WebGrid")[0].insertRow(-1);
-                        var cell = $(row.insertCell(-1));
-                        cell.html("No records found.");
-                        cell.attr("colspan", "107").attr("align", "center");
+            </footer>*@
+
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+            @*<script type="text/javascript">
+                    $("body").on("click", ".Grid tfoot a", function () {
+                        $('#WebGridForm').attr('action', $(this).attr('href')).submit();
+                        return false;
                     });
-                </script>
-        }*@
+                </script>*@
+            @*@if (Model.Count == 0)
+                {
+                    <script type="text/javascript">
+                            $(function () {
+                                var row = $("#WebGrid")[0].insertRow(-1);
+                                var cell = $(row.insertCell(-1));
+                                cell.html("No records found.");
+                                cell.attr("colspan", "107").attr("align", "center");
+                            });
+                        </script>
+                }*@
 
-    <script type="text/javascript" src="~/Scripts/ScrollableTablePlugin_1.0_min.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $('#WebGrid').Scrollable({
-                ScrollHeight: 280
-            });
-        });
-    </script>
-</body>
-
-<footer id="footer">
-
-    <div>
-        2021 Copyright: Develop by REVERPRO
+            <script type="text/javascript" src="~/Scripts/ScrollableTablePlugin_1.0_min.js"></script>
+            <script type="text/javascript">
+                $(function () {
+                    $('#WebGrid').Scrollable({
+                        ScrollHeight: 280
+                    });
+                });
+            </script>
+        </div>
     </div>
+    @*<div class="container loaders" id="loader" style="display:block">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="loader">
+                    <div class="loader-inner">
+                        <div class="loading one"></div>
+                    </div>
+                    <div class="loader-inner">
+                        <div class="loading two"></div>
+                    </div>
+                    <div class="loader-inner">
+                        <div class="loading three"></div>
+                    </div>
+                    <div class="loader-inner">
+                        <div class="loading four"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
 
-    
-</footer>
+</body>
 
 </html>  

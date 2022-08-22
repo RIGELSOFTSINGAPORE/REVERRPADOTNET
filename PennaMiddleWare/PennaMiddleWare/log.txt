@@ -1,0 +1,6 @@
+2021/11/12 18:13:48
+64
+Insert Tabel YREALIZATION
+Record Mathing
+Tabel record Count :64
+--------------------------

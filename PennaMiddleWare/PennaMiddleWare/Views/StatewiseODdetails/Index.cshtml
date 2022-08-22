@@ -1,0 +1,532 @@
+﻿@model List<PennaMiddleWare.Models.ZFI_AGEING_OD_SRV>
+@using PagedList.Mvc
+@{
+    //Layout = null;
+    var srvageing = ViewData["lstsrvageing"] as PagedList.PagedList<PennaMiddleWare.Models.ZFI_AGEING_OD_SRV>;
+    WebGrid webGrid = new WebGrid(source: Model, canSort: false, canPage: false);
+    //var maxid = ViewData["GroupID"].ToString();
+    ViewBag.keyframes = "@keyframes";
+    ViewBag.webkit = "@-webkit-keyframes";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="~/Scripts/ddmmyyyy-validation.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="~/Scripts/table2excel.js"></script>
+
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <title>Penna-MiddleWare</title>
+    <script>
+        function Exportsubmit() {
+
+            document.getElementById("InputID").value = "E";
+
+            var startDate = document.getElementById("startDate").value
+            var endDate = document.getElementById("endDate").value
+            var chkstartDate = startDate;
+            var chkendDate = endDate;
+
+            if (chkstartDate.length == 8) {
+                chkstartDate = chkstartDate.slice(0, 2) + '/' + chkstartDate.slice(2, 4) + '/' + chkstartDate.slice(4);
+            }
+
+            //alert("startDate" + chkstartDate);
+            if (validatedate(chkstartDate) == false) {
+                $('#MSG').text("Please Enter Valid From Date(DDMMYYYY)")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+            if (chkendDate.length == 8) {
+                chkendDate = chkendDate.slice(0, 2) + '/' + chkendDate.slice(2, 4) + '/' + chkendDate.slice(4);
+            }
+
+            //alert("endDate" + chkendDate);
+            validatedate(chkendDate);
+
+            if (validatedate(chkendDate) == false) {
+                $('#MSG').text("Please Enter Valid To Date(DDMMYYYY)")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+
+            if (process(chkstartDate) > process(chkendDate)) {
+                $('#MSG').text("To Date Greathen or Equal to From Date")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+            
+             var startDate = document.getElementById("startDate").value
+             var endDate = document.getElementById("endDate").value
+             var url2 = "?startDate=" + startDate + "&endDate=" + endDate + "&InputID=E&page=1";
+              var url1 = '@Url.Action("Index", "StatewiseODdetails")';
+              var url=url1+url2
+            window.location.href = url;
+
+        }
+    </script>
+</head>
+
+
+
+<body>
+    <div class="body">
+
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @id = "WebGridForm" }))
+        {
+            <div class="hero-image">
+                <img src="~/assets/img/API_bg.jpg" alt="Image" style="width: 100%;margin-top: -27px;">
+            </div>
+            <div class="container" style="font-size: 30px;">
+
+                State wise OD details
+
+            </div>
+            <div class="container">
+                <div>
+               
+                    @Html.Hidden("InputID")
+                    From Date : @Html.TextBox("startDate", String.Format("{0:d}", ViewBag.startDate as string), new { placeholder = "DDMMYYYY" })
+
+
+                    @*Datepicker changed by sabeena*@
+
+                    To Date : @Html.TextBox("endDate", String.Format("{0:d}", ViewBag.endDate as string), new { placeholder = "DDMMYYYY" })
+                    <div style="padding-top: 20px;">
+
+                         <a class=" btn-info btn clearright" onclick="Importsubmit()" style=" margin-left: 10px; margin-left: 10px; color: #fff;background-color: #17a2b8; border-color: #17a2b8;">
+                            Import
+                        </a>
+                        <a class=".btn-info btn clearright" onclick="Searchsubmit()" style=" margin-left: 10px; margin-left: 10px; color: #fff;background-color: #17a2b8; border-color: #17a2b8;">
+                            Search
+                        </a>
+
+                       <a class=".btn-info btn clearright" onclick="Exportsubmit()" style=" margin-left: 10px; margin-left: 10px; color: #fff;background-color: #17a2b8; border-color: #17a2b8;">
+                            Export
+                        </a>
+
+                        <a href=@Url.Action("DownloadLogRealization","StatewiseODdetails") class="btn btn-secondary clearright" style=" margin-left: 10px; background-color: #117a8b;">
+                            DownLoad Log
+                        </a>
+                        <a href=@Url.Action("Index","StatewiseODdetails") class="btn btn-secondary clearright" style=" margin-left: 10px; background-color: #117a8b;">
+                            Clear
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        }
+        <div class="card " style="padding: 20px;margin-top: 10px;margin-bottom: 5%; ">
+            @if (srvageing != null)
+            {
+
+                <div class="" @*style="overflow-x: scroll;"*@>
+
+
+
+                    <table id="WebGrid1" class="table Grid table-striped table-responsive table-bordered dt-responsive nowrap" width="100%" cellspacing="0" cellpadding="5">
+                        <thead>
+                            <tr>
+
+                                <th>Company Code </th>
+                                <th>Budate </th>
+                                <th>Customer </th>
+                                <th>Account group </th>
+                                <th>Customer Name</th>
+                                <th>Sales Representative </th>
+                                <th>Sales Rep Name </th>
+                                <th>Sales Organsier </th>
+                                <th>Sales Organiser Name </th>
+                                <th>Slab1 </th>
+                                <th>Slab2</th>
+                                <th>Slab3 </th>
+                                <th>Slab4 </th>
+                                <th>Slab5 </th>
+                                <th>Slab6 </th>
+                                <th>Slab7 </th>
+                                <th>Slab8 </th>
+                                <th>Slab9 </th>
+                                <th>Currency </th>
+                                <th>Region </th>
+                                <th>District </th>
+                                <th>District Name </th>
+                                <th>Region Text </th>
+                                <th>Transport Zone </th>
+                                <th>Branch Office </th>
+                                <th>Sales Org </th>
+                                <th>Sales Group </th>
+                                <th>Sales Office </th>
+                                <th>Sales district </th>
+                                <th>Credit Limit </th>
+                                <th>Available CI </th>
+                                <th>Credit Period </th>
+                                <th>OS Days </th>
+                                <th>OS Amount </th>
+                                <th>OS OD Amount </th>
+                                <th>OS OD Days </th>
+                                <th>Security Dep </th>
+                                <th>ChqnrAmt </th>
+                                <th>CurrFyOdOs </th>
+                                <th>PreFyOdOs </th>
+                                <th>PreFyClsOdOs </th>
+                                <th>ActualOd </th>
+                            </tr>
+                        </thead>
+
+                        @foreach (var item in srvageing)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.Bukrs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Budat)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Kunnr)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Ktokd)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Name1)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Kunn2)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Name2)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Kunn3)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Name3)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Slab1)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Slab2)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Slab3)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Slab4)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Slab5)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Slab6)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Slab7)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Slab8)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Slab9)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Waers)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Regio)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Dstrc)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Dstxt)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Regtxt)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Zzzone)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Zzbranch)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Vkorg)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Vkgrp)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Vkbur)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Zzbzirk)</td>
+                                <td>@Html.DisplayFor(modelItem => item.CreditLimit)</td>
+                                <td>@Html.DisplayFor(modelItem => item.AvailableCl)</td>
+                                <td>@Html.DisplayFor(modelItem => item.CreditPeriod)</td>
+                                <td>@Html.DisplayFor(modelItem => item.OsDays)</td>
+                                <td>@Html.DisplayFor(modelItem => item.OsAmt)</td>
+                                <td>@Html.DisplayFor(modelItem => item.OsOdAmt)</td>
+                                <td>@Html.DisplayFor(modelItem => item.OsOdDays)</td>
+                                <td>@Html.DisplayFor(modelItem => item.SecurityDep)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ChqnrAmt)</td>
+                                <td>@Html.DisplayFor(modelItem => item.CurrFyOdOs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.PreFyOdOs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.PreFyClsOdOs)</td>
+                                <td>@Html.DisplayFor(modelItem => item.ActualOd)</td>
+                            </tr>
+
+                        }
+
+                    </table>
+                </div>
+
+
+                if (srvageing.PageSize < srvageing.TotalItemCount)
+                {
+                    <br />
+                    <div style="text-align:right;font-size:16px">
+
+                        page @(srvageing.PageCount < srvageing.PageNumber ? 0 : srvageing.PageNumber) to @srvageing.PageCount
+
+                        @Html.PagedListPager(srvageing, page => Url.Action("Index", new { startDate = ViewBag.startDate, endDate = ViewBag.endDate, InputID = "S", page }), new PagedListRenderOptions() { LiElementClasses = new List<string> { "myClass", "aff" } })
+
+                    </div>
+                }
+            }
+        </div>
+      
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+       
+        <div id="SucMSG" role="dialog" class="modalpopup SucMSG" style=" display:none">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <h1 style="padding:20px 10px;font-size:18px">
+                        <label id="MSG"></label>
+                    </h1>
+
+                    <div style="padding: 5px 20px">
+
+                        <button style="width:15%;float: right" onclick="modalDismiss()" type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @if (ViewBag.export == "success")
+        {
+            <div id="SucMSG" role="dialog" class="modalpopup SucMSG" style=" display:block">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <h1 style="padding:20px 10px;font-size:18px">
+                            <label id="MSG">Data Export Successfully</label>
+                        </h1>
+
+                        <div style="padding: 5px 20px">
+
+                            <button style="width:15%;float: right" onclick="modalDismiss()" type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <script type="text/javascript" src="~/Scripts/ScrollableTablePlugin_1.0_min.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                //$('#WebGrid').Scrollable({
+                //    ScrollHeight: 280
+                //});
+            });
+        </script>
+
+     
+    </div>
+    @*<div class="container loaders" id="loader" style="display:none">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="loader">
+                    <div class="loader-inner">
+                        <div class="loading one"></div>
+                    </div>
+                    <div class="loader-inner">
+                        <div class="loading two"></div>
+                    </div>
+                    <div class="loader-inner">
+                        <div class="loading three"></div>
+                    </div>
+                    <div class="loader-inner">
+                        <div class="loading four"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+
+
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+    <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    
+    <script>
+
+        var els = document.getElementsByClassName("aff");
+        // loops els
+        for (var i = 0, x = els.length; i < x; i++) {
+
+            els[i].onclick = function () {
+
+                var body = document.getElementsByClassName('body')[0];
+                body.style.opacity = "0.5";
+                document.querySelector("#loader").style.display = "block";
+
+
+            }
+        }
+        function modalDismiss() {
+            $('#MSG').text("")
+            var element = document.getElementsByClassName('SucMSG')[0];
+            element.style.display = "none";
+        }
+
+
+        function Importsubmit() {
+            //alert("Importsubmit");
+
+
+            var startDate = document.getElementById("startDate").value
+            var endDate = document.getElementById("endDate").value
+            var chkstartDate = startDate;
+            var chkendDate = endDate;
+
+            if (chkstartDate.length == 8) {
+                chkstartDate = chkstartDate.slice(0, 2) + '/' + chkstartDate.slice(2, 4) + '/' + chkstartDate.slice(4);
+            }
+
+            //alert("startDate" + chkstartDate);
+            if (validatedate(chkstartDate) == false) {
+                $('#MSG').text("Please Enter Valid From Date(DDMMYYYY)")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+            if (chkendDate.length == 8) {
+                chkendDate = chkendDate.slice(0, 2) + '/' + chkendDate.slice(2, 4) + '/' + chkendDate.slice(4);
+            }
+
+            //alert("endDate" + chkendDate);
+            validatedate(chkendDate);
+
+            if (validatedate(chkendDate) == false) {
+                $('#MSG').text("Please Enter Valid To Date(DDMMYYYY)")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+
+            if (process(chkstartDate) > process(chkendDate)) {
+                $('#MSG').text("To Date Greathen or Equal to From Date")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+
+            document.getElementById("InputID").value = "I";
+            var body = document.getElementsByClassName('body')[0];
+            body.style.opacity = "0.5";
+            document.querySelector("#loader").style.display = "block";
+            debugger;
+            $.ajax({
+                url: '@Url.Action("Index", "StatewiseODdetails")',
+                type: 'POST',
+                data: { 'startDate': startDate, 'endDate': endDate, 'InputID': "I" },
+                success: function (result) {
+
+                    if (result.errorcode == 0) {
+                        //$('#MSG').text("Data Imported successfully")
+                        //$("#SucMSG").modal('show');
+
+                        var startDate = document.getElementById("startDate").value
+                        var endDate = document.getElementById("endDate").value
+                        var url2 = "?startDate=" + startDate + "&endDate=" + endDate + "&InputID=S&page=1";
+                        var url1 = '@Url.Action("Index", "StatewiseODdetails")';
+                        var url=url1+url2
+                        window.location.href = url;
+                    } else {
+                         var startDate = document.getElementById("startDate").value
+                        var endDate = document.getElementById("endDate").value
+                        var url2 = "?startDate=" + startDate + "&endDate=" + endDate + "&InputID=S&page=1";
+                        var url1 = '@Url.Action("Index", "StatewiseODdetails")';
+                        var url=url1+url2
+                        window.location.href = url;
+
+                    }
+
+
+
+                        },
+                error: function (error) {
+                            //$('#MSG').text("Data Imported Failed")
+                            //$("#SucMSG").modal('show');
+                            element.style.display = "none";
+                            body.style.opacity = "1";
+                            console.log(error);
+                            document.body.style.overflow = "auto";
+                            body.style.overflow = "auto";
+                        }
+
+            });
+
+        }
+        function pageonclick() {
+
+            var body = document.getElementsByClassName('body')[0];
+            body.style.opacity = "0.5";
+            document.querySelector("#loader").style.display = "block";
+        }
+
+         function Searchsubmit() {
+
+             var startDate = document.getElementById("startDate").value
+             var endDate = document.getElementById("endDate").value
+             var chkstartDate = startDate;
+             var chkendDate = endDate;
+
+             if (chkstartDate.length == 8) {
+                 chkstartDate = chkstartDate.slice(0, 2) + '/' + chkstartDate.slice(2, 4) + '/' + chkstartDate.slice(4);
+             }
+
+             //alert("startDate" + chkstartDate);
+             if (validatedate(chkstartDate) == false) {
+                 $('#MSG').text("Please Enter Valid From Date(DDMMYYYY)")
+                 var element = document.getElementsByClassName('SucMSG')[0];
+                 element.style.display = "block";
+                 return false;
+             }
+             if (chkendDate.length == 8) {
+                 chkendDate = chkendDate.slice(0, 2) + '/' + chkendDate.slice(2, 4) + '/' + chkendDate.slice(4);
+             }
+
+             //alert("endDate" + chkendDate);
+             validatedate(chkendDate);
+
+             if (validatedate(chkendDate) == false) {
+                 $('#MSG').text("Please Enter Valid To Date(DDMMYYYY)")
+                 var element = document.getElementsByClassName('SucMSG')[0];
+                 element.style.display = "block";
+                 return false;
+             }
+
+             if (process(chkstartDate) > process(chkendDate)) {
+                 $('#MSG').text("To Date Greathen or Equal to From Date")
+                 var element = document.getElementsByClassName('SucMSG')[0];
+                 element.style.display = "block";
+                 return false;
+             }
+
+
+             document.getElementById("InputID").value = "S";
+             var body = document.getElementsByClassName('body')[0];
+             body.style.opacity = "0.5";
+             document.querySelector("#loader").style.display = "block";
+
+             //startDate = chkstartDate.toString().split("/").reverse().join("/");
+
+                        var url2 = "?startDate=" + startDate + "&endDate=" + endDate + "&InputID=S&page=1";
+                        var url1 = '@Url.Action("Index", "StatewiseODdetails")';
+                        var url=url1+url2
+                        window.location.href = url;
+
+
+        }
+
+
+
+
+        function download(filename, Name,stream) {
+
+            var element = document.createElement('a');
+            element.setAttribute('href', Name + encodeURIComponent(filename));
+            element.setAttribute('download', filename);
+            document.body.appendChild(element);
+            element.click();
+
+        }
+
+         document.onreadystatechange = function () {
+            var body = document.getElementsByClassName('body')[0];
+            if (document.readyState !== "complete") {
+
+                body.style.opacity = "0.5";
+                document.querySelector("#loader").style.display = "block";
+            } else {
+                document.querySelector("#loader").style.display = "none";
+                body.style.opacity = "1";
+            }
+        };
+    </script>
+</body>
+</html>  

@@ -1,0 +1,345 @@
+@model List<PennaMiddleWare.Models.ZSD_LCOST_DATA_SRV>
+@{
+    Layout = null;
+    WebGrid webGrid = new WebGrid(source: Model, canSort: false, canPage: false);
+    //var maxid = ViewData["GroupID"].ToString();
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="~/Scripts/table2excel.js"></script>
+
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <title>Penna-MiddleWare</title>
+    <style type="text/css">
+        body {
+            font-family: Arial;
+            font-size: 10pt;
+        }
+
+        .table {
+            overflow-x: scroll;
+        }
+
+        .Grid {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+            .Grid th {
+                background-color: #F7F7F7;
+                font-weight: bold;
+            }
+
+            .Grid th, .Grid td {
+                padding: 5px;
+                border: 1px solid #ccc;
+            }
+
+            .Grid, .Grid table td {
+                border: 0px solid #ccc;
+            }
+
+                .Grida, .Grid a:visited {
+                    color: blue;
+                }
+    </style>
+</head>
+
+
+
+<header>
+    <nav class="navigation">
+
+        <!-- Logo -->
+        <div class="logo">
+            <a class="navbar-brand" href="index-2.html">
+                <img src="~/assets/img/Logo.png" alt="Logo">
+            </a>
+        </div>
+        <h1>MiddleWare</h1>
+
+    </nav>
+
+</header>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<body>
+    <script type="text/javascript">
+        //$(function () {
+        //    $("#btnExport").click(function () {
+        //        $("#WebGrid").table2excel({
+        //            filename: "Table.xls"
+        //        });
+        //    });
+        //});
+        function Exportsubmit() {
+            //alert("Exportsubmit");
+
+            document.getElementById("InputID").value = "E";
+        }
+        function Importsubmit() {
+            //alert("Importsubmit");
+            document.getElementById("InputID").value = "I";
+        }
+        function Searchsubmit() {
+            // alert("Searchsubmit");
+            document.getElementById("InputID").value = "S";
+        }
+
+    </script>
+    @using (Html.BeginForm("LogiCost", "Home", FormMethod.Post, new { @id = "WebGridForm" }))
+    {
+        <div class="hero-image">
+            <img src="~/assets/img/API_bg.jpg" alt="Image" style="width: 100%;margin-top: -27px;">
+        </div>
+        <div class="container" style="font-size: 30px;">
+
+            Logi Cost Report
+            <a href=@Url.Action("Index","Home") class="btn btn-secondary" class="clearright" style="float: right; background-color: #117a8b;" >
+                Realization Report
+            </a>
+        </div>
+        <div class="container">
+            <div>
+                @Html.Hidden("InputID")
+                @*@Html.Hidden(ViewData["GroupID"].ToString(), new { @id = "GroupID" })*@
+                @*@Html.TextBox("GroupID", maxid);*@
+                From Date : @Html.TextBox("startDate", String.Format("{0:d}", ViewBag.startDate as string), new { placeholder = "ddmmyyyy" })
+
+
+                @*Datepicker changed by sabeena*@
+
+                To Date : @Html.TextBox("endDate", String.Format("{0:d}", ViewBag.endDate as string), new { placeholder = "ddmmyyyy" })
+                <div style="padding-top: 20px;">
+
+                    <input type="submit" value=Import class="btn btn-info" onclick="Importsubmit()" />
+                    <input type="submit" value=Search class="btn btn-info" style="margin-left: 10px;" onclick="Searchsubmit()" />
+                    <input type="submit" id="btnExport" value="Export" class="btn btn-info" style="margin-left: 10px;" onclick="Exportsubmit()" />
+
+                    <a href=@Url.Action("LogiCost","Home") class="btn btn-secondary" class="clearright" style=" margin-left: 10px; background-color: #117a8b;">
+                        Clear
+                    </a>
+                    <a href=@Url.Action("DownloadLog","Home") class="btn btn-secondary" class="clearright" style=" margin-left: 10px; background-color: #117a8b;">
+                        DownLoad Log
+                    </a>
+                    @*<a href=@Url.Action("Export","Home") class="btn btn-outline-secondary" class="clearright">
+            Export
+        </a>*@
+                </div>
+
+            </div>
+
+
+        </div>
+    }
+    
+<div class="card test" style="padding: 20px;margin-top: 10px;margin-bottom: 5%;">
+    @if (Model.Count > 0)
+    {
+        <div class="table" @*style="overflow-x: scroll;"*@>
+
+            @webGrid.GetHtml(
+            htmlAttributes: new { @id = "WebGrid", @class = "Grid" },
+            columns: webGrid.Columns(
+                        webGrid.Column("Vbeln", "Billing Document"),
+                        webGrid.Column("Fkart", "Billing Type"),
+                        webGrid.Column("Fkdat", "Billing Date"),
+                        webGrid.Column("Fkimg", "Billed quantity"),
+                        webGrid.Column("Meins", "Base Unit of Measure"),
+                        webGrid.Column("Werks", "Plant"),
+                        webGrid.Column("WName1", "Plant Description"),
+                        webGrid.Column("Zsource", "Source"),
+                        webGrid.Column("Zsourced", "Source Description"),
+                        webGrid.Column("Ztratyp", "Movement Type"),
+                        webGrid.Column("Ztratypd", "Movement Description"),
+                        webGrid.Column("Kunnr", "Ship-To Party"),
+                        webGrid.Column("KunnrN", "Ship to party Name"),
+                        webGrid.Column("Kunag", "Sold-To Party"),
+                        webGrid.Column("KunagN", "Sold-To Party Name"),
+                        webGrid.Column("Ptnr", "Transporter ID"),
+                        webGrid.Column("PtnrN", "Transporter ID Name "),
+                        webGrid.Column("Salsrep", "Sales Rep code"),
+                        webGrid.Column("SalsrepN", "Sales Rep Name 1"),
+                        webGrid.Column("Regio", "State"),
+                        webGrid.Column("RegioN", "State Description"),
+                        webGrid.Column("Dstrc", "District"),
+                        webGrid.Column("DstrcN", "District Description"),
+                        webGrid.Column("Block", "Block"),
+                        webGrid.Column("BlockN", "Block Description"),
+                        webGrid.Column("Destint", "Destination"),
+                        webGrid.Column("DestintN", "Destination Description"),
+                        webGrid.Column("Kdgrp", "Customer group Code"),
+                        webGrid.Column("Ktext", "Customer group Name"),
+                        webGrid.Column("PrimaryFrt", "Primary Frieght"),
+                        webGrid.Column("SecondryFrt", "Secondary Frieght"),
+                        webGrid.Column("Rakno", "Rake No"),
+                        webGrid.Column("Rakpt", "Rake Point"),
+                        webGrid.Column("Matkl", "Material Group"),
+                        webGrid.Column("Lgort", "Storage Location"),
+                        webGrid.Column("Lgobe", "Storage Location Description"),
+                        webGrid.Column("Inco1", "Incoterms1"),
+                        webGrid.Column("Inco2", "Incoterms 2"),
+                        webGrid.Column("UldgChgs", "Unloading Charges"),
+                        webGrid.Column("TrnsChgs", "Transshipment Charges"),
+                        webGrid.Column("DpulChgs", "Depot Unloading charges"),
+                        webGrid.Column("DpldChgs", "Depot Loading charges"),
+                        webGrid.Column("DivrChgs", "BLK CFA Charges"),
+                        webGrid.Column("LdngChgs", "Loading Charges"),
+                        webGrid.Column("CfagChgs", "C&F Agent Service Charges"),
+                        webGrid.Column("RksrChgs", "Railway Service Charge"),
+                        webGrid.Column("PuldChgs", "Party side Unloading Charges"),
+                        webGrid.Column("RkclChgs", "Rake Clearing Charges"),
+                        webGrid.Column("ShntChgs", "Shunting Charges"),
+                        webGrid.Column("RkcfChgs", "Rake CFA Charges"),
+                        webGrid.Column("BlndChgs", "Blended A Charges"),
+                        webGrid.Column("BlnbChgs", "Blended B Charges"),
+                        webGrid.Column("MiscMisc", "Misc Charges"),
+                        webGrid.Column("Zzzone1", "Transportation zone "),
+                        webGrid.Column("Zzzone1N", "Transportation zone description"),
+                        webGrid.Column("Zzbzirk", "Sales District"),
+                        webGrid.Column("ZzbzirkN", "Sales District Description"),
+                        webGrid.Column("Zzregio", "Region code"),
+                        webGrid.Column("ZzregioN", "Region Description"),
+                        webGrid.Column("Vkbur", "Sales Office"),
+                        webGrid.Column("VkburN", "Sales Office Description"),
+                        webGrid.Column("Vkgrp", "Sales Group"),
+                        webGrid.Column("VkgrpN", "Sales Group Description"),
+                        webGrid.Column("Zzbranch", "Branch Office"),
+                        webGrid.Column("ZzbranchN", "Branch Office Description"),
+                        webGrid.Column("Pdstn", "Primary Distance"),
+                        webGrid.Column("Sdstn", "Secondary Distance"),
+                        webGrid.Column("BlockCt", "Block Category"),
+                        webGrid.Column("Belnr", "Accounting Document Number"),
+                        webGrid.Column("Gjahr", "Fiscal Year"),
+                        webGrid.Column("InvType", "Invoice Type"),
+                        webGrid.Column("FrtType", "Freight Type"),
+                        webGrid.Column("Zzvlfkz", "Plant category"),
+                        webGrid.Column("SuppPlantName", "Supplying Plant Name"),
+                        webGrid.Column("DepoRkMvt", "Depot Rake movement"),
+                        webGrid.Column("IndPriFrt", "Indirect Primary Frieght"),
+                        webGrid.Column("ShipFrtChrgs", "Ship Frieght"),
+                        webGrid.Column("ShipHandChrgs", "Ship Handling Charges"),
+                        webGrid.Column("Clkmnfplant", "Clinker Plant"),
+                        webGrid.Column("Suppplant", "Supplying Plant"),
+                        webGrid.Column("Distance", "Clinker Distance"),
+                        webGrid.Column("Indpdistance", "Indirect Primary Distance"),
+                        webGrid.Column("ClkPltName", "Clinker Plant name "),
+                        webGrid.Column("MnfPltName", "Manufacturing Plant Name"),
+                        webGrid.Column("GeindPlt", "Grinding unit plant code"),
+                        webGrid.Column("GeindPltName", "Grinding unit plant Name"),
+                        webGrid.Column("SupplDepo", "Supplying Depot"),
+                        webGrid.Column("SupplDepoName", "Supplying Depot Name"),
+                        webGrid.Column("Waerk", "SD Document Currency"),
+                        webGrid.Column("Rent", "Rent Per MT"),
+                        webGrid.Column("Rakedemchrg", "Rake Demurage Charges"),
+                        webGrid.Column("Ldistance", "Lead Distance Without Clinkcer KM"),
+                        webGrid.Column("LdistanceClk", "Lead Distance With Clinkcer KM"),
+                        webGrid.Column("Matnr", "Material Code"),
+                        webGrid.Column("Vtext", "Material Description"),
+                        webGrid.Column("Matnr1", "Empty bags Material Code"),
+                        webGrid.Column("Maktx", "Empty bags Material Description"),
+                        webGrid.Column("Incurredcost", "Incurred Cost"),
+                        webGrid.Column("Unincurredcost", "Unincurred Cost"),
+                        webGrid.Column("ShRegio", "Ship to party Region"),
+                        webGrid.Column("ShDstrc", "Ship to party District"),
+                        webGrid.Column("ShBlock", "Ship to party Block"),
+                        webGrid.Column("ShDestint", "Ship to partyDestination"),
+                        webGrid.Column("Kalks", "Pricing procedure"),
+                        webGrid.Column("DeliveryNo", "Delivery"),
+                        webGrid.Column("Tknum", "Shipment Number"),
+                        webGrid.Column("Mnfplant", "Manufacturing Plant"),
+                        webGrid.Column("Mnfdesc", "Manufacturing Plant Description"),
+                        webGrid.Column("Mvgr1", "Material group_1"),
+                        webGrid.Column("Grossturn", "Gross Turnover"),
+                        webGrid.Column("Netturn", "Net Turnover"),
+                        webGrid.Column("Nakedreal", "Net Value in Document Currency"),
+                        webGrid.Column("TransIncentive", "Transport Incentive"),
+                        webGrid.Column("PltFrt", "Net Value in Document Currency_1"),
+                        webGrid.Column("SpRegio", "Sold to Party Region"),
+                        webGrid.Column("SpDstrc", "Sold to Party District"),
+                        webGrid.Column("SpBlock", "Sold to Party Block"),
+                        webGrid.Column("SpDestint", "Sold to Party Destination"),
+                        webGrid.Column("Traid", "Means of Transport ID"),
+                        webGrid.Column("TruckType", "Truck Type"),
+                        webGrid.Column("EwbNo", "E-Waybill Number"),
+                        webGrid.Column("Edate", "E-Waybill date"),
+                        webGrid.Column("Evdate", "E-WayBill Valid Till Date"),
+                        webGrid.Column("Steuc", "HSN Code"),
+                        webGrid.Column("PaidPrice", "Paid Price"),
+                        webGrid.Column("KalksDesc", "Description"),
+                        webGrid.Column("SpRegioDesc", "Sold to Party Region Description"),
+                        webGrid.Column("SpDstrcDesc", "Sold to Party District Description"),
+                        webGrid.Column("SpBlockDesc", "Sold to Party Block Description"),
+                        webGrid.Column("SpDestintDesc", "Sold to Party Destination Description"),
+                        webGrid.Column("MfPlantType", "Manufacturing Plant Type"),
+                        webGrid.Column("TotalTdcCost", "TDC Cost"),
+                        webGrid.Column("TotalDistance", "Total Distance"),
+                        webGrid.Column("DepotIndFrieght", "Depot In-direct primary frieght"),
+                        webGrid.Column("TotalInvoiceFrt", "Total Invoice Frieght"),
+                        webGrid.Column("RoadPfIncurred", "Road Primary frieght Incurred"),
+                        webGrid.Column("RoadPfUnincurred", "Road Primary frieght unIncurred"),
+                        webGrid.Column("RoadSfIncurred", "Road Secondary frieght Incurred"),
+                        webGrid.Column("RoadSfUnincurred", "Road Secondary frieght unIncurred"),
+                        webGrid.Column("RailPfIncurred", "Rail Primary Frieght Incurred"),
+                        webGrid.Column("RailPfUnincurred", "Rail Primary Frieght unIncurred"),
+                        webGrid.Column("DrdlChgs", "Direct Delivery charges"),
+                        webGrid.Column("DbLabChgs", "Double Labour Charges"),
+                        webGrid.Column("ZinvCancel", "Invoice cancellation flag"),
+                        webGrid.Column("ShDestintDesc", "Ship to party Destination Description"),
+                        webGrid.Column("ShipDistance", "Ship Distance")
+            ))
+
+
+        </div>
+    }
+    </div>
+  
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    @*<script type="text/javascript">
+            $("body").on("click", ".Grid tfoot a", function () {
+                $('#WebGridForm').attr('action', $(this).attr('href')).submit();
+                return false;
+            });
+        </script>*@
+    @*@if (Model.Count == 0)
+        {
+            <script type="text/javascript">
+                    $(function () {
+                        var row = $("#WebGrid")[0].insertRow(-1);
+                        var cell = $(row.insertCell(-1));
+                        cell.html("No records found.");
+                        cell.attr("colspan", "107").attr("align", "center");
+                    });
+                </script>
+        }*@
+
+    <script type="text/javascript" src="~/Scripts/ScrollableTablePlugin_1.0_min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#WebGrid').Scrollable({
+                ScrollHeight: 280
+            });
+        });
+    </script>
+</body>
+
+<footer id="footer">
+
+    <div>
+        2021 Copyright: Develop by REVERPRO
+    </div>
+
+    
+</footer>
+
+</html>  
