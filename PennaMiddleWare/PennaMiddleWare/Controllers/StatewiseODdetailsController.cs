@@ -401,9 +401,17 @@ namespace PennaMiddleWare.Controllers
                             sqlCon.Close();
                         }
 
-                        url = "https://netwaver-dev.pennacement.com/sap/opu/odata/sap/ZFI_AGEING_OD_SRV/OD_DETAILSSet?$format=json&$filter=(Budat eq  '" + scdat.startdate.Trim() + "')";
-                        string userName = "NWGW001";
-                        string passwd = "Penna@123";
+                        //url = "https://netwaver-dev.pennacement.com/sap/opu/odata/sap/ZFI_AGEING_OD_SRV/OD_DETAILSSet?$format=json&$filter=(Budat eq  '" + scdat.startdate.Trim() + "')";
+                        //string userName = "NWGW001";
+                        //string passwd = "Penna@123";
+
+
+                        url = "https://netwaver-prd.pennacement.com:443/sap/opu/odata/sap/ZFI_AGEING_OD_SRV/OD_DETAILSSet?$format=json&$filter=(Budat eq  '" + scdat.startdate.Trim() + "')";
+                        string userName = "NWGW037";
+                        string passwd = "Admin@123456";
+                        //string userName = "NWGW001";
+                        //string passwd = "Penna@123";
+
 
                         HttpClient client = new HttpClient();
 

@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Reflection;
 using System.Web;
-using PennaMiddleWare.Models;
+
 namespace PennaMiddleWare.BLL
 {
     public class Common
@@ -55,40 +55,8 @@ namespace PennaMiddleWare.BLL
 
         }
 
-        public static List<Schdates> schdatNew(DateTime stdate, DateTime eddate)
-        {
-            List<Schdates> schdat = new List<Schdates>();
 
-            int i = 0;
-            DateTime StartDate = stdate;
-            DateTime EndDate = eddate;
-            foreach (DateTime day in Common.EachCalendarDay(StartDate, EndDate))
-            {
-                Schdates sch = new Schdates();
-                sch.RowNo = i;
-                sch.startdate = day.ToString("yyyyMMdd");
-
-                if (EndDate < day.AddDays(1))
-                {
-                    sch.enddate = EndDate.ToString("yyyyMMdd");
-                }
-                else
-                {
-                    sch.enddate = day.AddDays(Convert.ToInt16(1) - 1).ToString("yyyyMMdd");
-                }
-                //Console.WriteLine("Date is : " + day.ToString("dd-MM-yyyy"));
-                i += 1;
-                schdat.Add(sch);
-            }
-
-            return schdat;
-        }
-
-        public static IEnumerable<DateTime> EachCalendarDay(DateTime startDate, DateTime endDate)
-        {
-            for (var date = startDate.Date; date.Date <= endDate.Date; date = date.AddDays(1)) yield
-            return date;
-        }
+       
     }
     public class FileInfo
     {
@@ -96,6 +64,4 @@ namespace PennaMiddleWare.BLL
         public string FileName { get; set; }
         public string FilePath { get; set; }
     }
-
-    
 }

@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>D:\Projects\Penna\Deployment\2022-08-22\PennaMiddleware</_PublishTargetUrl>
-    <History>True|2022-08-22T11:16:31.0802444Z;True|2021-11-17T23:16:55.1992008+05:30;True|2021-11-17T14:59:42.6860723+05:30;True|2021-11-17T14:04:57.3513323+05:30;True|2021-11-17T12:42:09.2138298+05:30;True|2021-11-17T11:26:19.6268174+05:30;True|2021-11-16T21:50:23.9955446+05:30;</History>
+    <_PublishTargetUrl>D:\Projects\Penna\Deployment\2021-12-21\PennaMiddleware</_PublishTargetUrl>
+    <History>True|2021-11-17T17:46:55.1992008Z;True|2021-11-17T14:59:42.6860723+05:30;True|2021-11-17T14:04:57.3513323+05:30;True|2021-11-17T12:42:09.2138298+05:30;True|2021-11-17T11:26:19.6268174+05:30;True|2021-11-16T21:50:23.9955446+05:30;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="assets/css/style.css">
@@ -105,10 +105,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/30/2013 18:15:20</publishTime>
     </File>
     <File Include="bin/PennaMiddleWare.dll">
-      <publishTime>08/22/2022 16:46:29</publishTime>
+      <publishTime>12/21/2021 10:56:34</publishTime>
     </File>
     <File Include="bin/PennaMiddleWare.pdb">
-      <publishTime>08/22/2022 16:46:29</publishTime>
+      <publishTime>12/21/2021 10:56:34</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/08/2018 05:38:48</publishTime>
@@ -297,13 +297,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/28/2018 13:04:24</publishTime>
     </File>
     <File Include="bin/Ubiety.Dns.Core.dll">
-      <publishTime>03/30/2022 09:07:38</publishTime>
+      <publishTime>09/28/2021 05:28:30</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>01/23/2014 13:57:34</publishTime>
     </File>
     <File Include="bin/ZstdNet.dll">
-      <publishTime>03/30/2022 09:07:38</publishTime>
+      <publishTime>09/28/2021 05:28:30</publishTime>
     </File>
     <File Include="Content/bootstrap-theme.css">
       <publishTime>10/18/2021 09:33:04</publishTime>
@@ -408,10 +408,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/18/2021 09:33:02</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>08/22/2022 15:43:09</publishTime>
+      <publishTime>12/20/2021 17:28:45</publishTime>
     </File>
     <File Include="Views/Home/LogiCost.cshtml">
-      <publishTime>08/22/2022 15:42:51</publishTime>
+      <publishTime>12/20/2021 17:35:12</publishTime>
     </File>
     <File Include="Views/Home/RealizationReport.cshtml">
       <publishTime>12/14/2021 10:45:54</publishTime>
@@ -420,10 +420,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/18/2021 09:33:02</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>08/22/2022 15:41:18</publishTime>
-    </File>
-    <File Include="Views/StatewiseODdetails/Index.cshtml">
-      <publishTime>08/22/2022 15:43:08</publishTime>
+      <publishTime>12/01/2021 17:22:11</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>10/18/2021 09:33:02</publishTime>
@@ -432,7 +429,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>10/18/2021 09:33:02</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>08/22/2022 16:46:30</publishTime>
+      <publishTime>12/21/2021 10:56:34</publishTime>
     </File>
   </ItemGroup>
 </Project>

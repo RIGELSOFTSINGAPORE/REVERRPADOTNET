@@ -490,8 +490,8 @@
         }
 
         <div class="card test" style="padding: 20px;margin-top: 10px;margin-bottom: 5%;">
-            @if (Model.Count > 0)
-            {
+            @*@if (Model.Count > 0)
+            {*@
                 <table id="WebGrid1" class="table Grid table-striped table-responsive table-bordered dt-responsive nowrap" width="100%" cellspacing="0" cellpadding="5">
                     <thead>
                         <tr>
@@ -796,9 +796,16 @@
 
                             </tr>
                         }
+
+                        @if (lstsrvdeal.Count == 0)
+                        {
+                            <tr style="font-weight: bold; text-align: center;">
+                                <td colspan="146">No Records Found</td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
-                if (lstsrvdeal.PageSize < lstsrvdeal.TotalItemCount)
+                @if (lstsrvdeal.PageSize < lstsrvdeal.TotalItemCount)
                 {
                     <br />
                     <div style="text-align:right;font-size:16px">
@@ -809,7 +816,7 @@
 
                     </div>
                 }
-            }
+                //}
 
             @*<div class="table" style="overflow-x: scroll;"
                 >
