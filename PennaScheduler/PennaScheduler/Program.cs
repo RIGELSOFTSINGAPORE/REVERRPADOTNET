@@ -14,7 +14,11 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using ClosedXML.Excel;
-
+using System.Net;
+using System.Xml.Linq;
+using System.Xml;
+using System.Net.Sockets;
+using System.IO.Ports;
 namespace PennaScheduler
 {
   
@@ -23,14 +27,16 @@ namespace PennaScheduler
         
         static void Main(string[] args)
         {
-           // var yesterday = DateTime.Today.AddDays(-1).ToString("yyyyMMdd");
-            //string noofDays = ConfigurationManager.AppSettings["NoofDays"].ToString();
-            //var yesterday = "20210922" ;
+           
             string filename = System.Configuration.ConfigurationManager.AppSettings["LogFile"].ToString();
 
             //20220128
             StreamWriter log1;
-
+            if (ServicePointManager.SecurityProtocol.HasFlag(SecurityProtocolType.Tls12) == false)
+            {
+                //ServicePointManager.SecurityProtocol = ServicePointManager.SecurityProtocol | SecurityProtocolType.Tls12;
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            }
 
 
             if (!File.Exists(filename))
@@ -46,8 +52,9 @@ namespace PennaScheduler
             //string FromDate = Console.ReadLine();
             //Console.WriteLine("Enter To Date : ");
             //string ToDate = Console.ReadLine();
-            var FromDate = DateTime.Today.AddDays(-31).ToString("yyyyMMdd");
-            var ToDate = DateTime.Today.AddDays(-1).ToString("yyyyMMdd");
+            var FromDate = DateTime.Today.AddDays(Convert.ToInt16(System.Configuration.ConfigurationManager.AppSettings["FromDay"].ToString())).ToString("yyyyMMdd");
+            var ToDate = DateTime.Today.AddDays(Convert.ToInt16(System.Configuration.ConfigurationManager.AppSettings["ToDay"].ToString())).ToString("yyyyMMdd");
+            //var DashFromDate = DateTime.Today.AddDays(Convert.ToInt16(System.Configuration.ConfigurationManager.AppSettings["DashFromDay"].ToString())).ToString("yyyyMMdd");
             log1.WriteLine("===========================================");
             log1.WriteLine("Scheduler From Date  " + FromDate);
             log1.WriteLine("Scheduler To Date  " + ToDate);
@@ -56,23 +63,26 @@ namespace PennaScheduler
             log1.Close();
             Console.WriteLine(FromDate);
             Console.WriteLine(ToDate);
+            //Console.WriteLine($"{filename} is not greater than {FromDate} or smaller than {ToDate}");
             PennaScdlr t = new PennaScdlr();
-            //List<Schdates> schdt = new List<Schdates>();
-            //schdt = PennaScdlr.schdat(FromDate, ToDate);
-            //t.Index(yesterday, yesterday, "I");
-            //t.LogiCost(yesterday, yesterday, "I");
 
-            // t.Index(yesterday, yesterday, "I");
-            //t.LogiCost(yesterday, yesterday, "I");
-             t.Index(FromDate, ToDate, "I");
-             t.LogiCost(FromDate, ToDate, "I");
-             t.Export_Mismatch(FromDate, ToDate);
-            //t.Index("20210901", "20210930", "I");
-            //t.LogiCost("20210901", "20210930", "I");
+            t.Index(FromDate, ToDate, "I");
+            t.LogiCost(FromDate, ToDate, "I");
+            t.Dash_Board_Details(FromDate, ToDate, "I");
+            t.ZSD_MW_SALES_Details(FromDate, ToDate, "I");
+            t.ZSD_MW_SALES_DIS_SRV_Details(FromDate, ToDate, "I");
+            t.ZSD_MW_REALISATION_SRV(FromDate, ToDate, "I");
+            t.StateWise_OD_Details(FromDate, ToDate, "I");
+
+
+            t.Export_Mismatch(FromDate, ToDate);
+
+           
             Console.WriteLine("Execution completed");
             //Console.ReadLine();
         }
     }
+
 
     class PennaScdlr
     {
@@ -82,9 +92,16 @@ namespace PennaScheduler
        // static string daySplit = ConfigurationManager.AppSettings["DaySplit"].ToString();
         public static DataTable dtYREALIZATION;
         public static DataTable dtZSD_LCOST_DATA_SRV;
+        public static DataTable dtZSD_COLLN_SRV;
+        public static DataTable dtZSD_MW_SALES_SRV;
+        public static DataTable dtZSD_MW_SALES_DIS_SRV;
+        public static DataTable dtZSD_MW_REALISATION_SRV;
+        public static DataTable dtZFI_MW_STATEWISE_OD_SRV;
         public void Index(string startDate, string endDate, string InputID)
 
         {
+            string ptstartdate = "";
+            string ptendate = "";
             try
             {
 
@@ -112,7 +129,7 @@ namespace PennaScheduler
                 var formats = new[] { "ddMMyyyy", "yyyyMMdd", "yyyyMMdd" };
 
                 List<Schdates> schdt = new List<Schdates>();
-                //schdt = PennaScdlr.schdat(startDate, endDate);
+             
                 schdt = PennaScdlr.schdatNew();
 
                 log1.WriteLine("Insert / Upddate Table : YREALIZATION");
@@ -139,6 +156,29 @@ namespace PennaScheduler
                 query = "";
                 reccount = 0;
 
+                query = "";
+                query += " Delete from YREALIZATION ";
+                query += " where date_format(cast(ERDAT as date),'%Y%m%d') ";
+                query += " between '" + startDate.Trim() + "' and '" + endDate.Trim() + "'";
+
+                using (MySqlConnection sqlCon = new MySqlConnection(CS))
+                {
+                    sqlCon.Open();
+                    MySqlCommand Cmnd = new MySqlCommand(query, sqlCon);
+
+                    object resultexscalar = Cmnd.ExecuteNonQuery();
+
+                    if (resultexscalar != null)
+                    {
+                        reccount = Convert.ToInt32(resultexscalar);
+                    }
+
+                    sqlCon.Close();
+                }
+
+                query = "";
+                reccount = 0;
+
                 foreach (Schdates scdat in schdt)
                 {
                     if (InputID == "I")
@@ -146,8 +186,10 @@ namespace PennaScheduler
 
                         Console.WriteLine(scdat.startdate);
                         Console.WriteLine(scdat.enddate);
-
-
+                        ptstartdate = scdat.startdate;
+                        ptendate = scdat.enddate;
+                        //System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
+                        //System.Net.ServicePointManager.Expect100Continue = false;
                         //Test Service
                         //url = "https://netwaver-dev.pennacement.com:443/sap/opu/odata/sap/ZSD_REAL_DATA_SRV/REALSet?$format=json&$filter=Erdat ge '" + startDate.Trim() + "' and Erdat le '" + endDate.Trim() + "'";
                         //Production Service 
@@ -177,7 +219,7 @@ namespace PennaScheduler
                             JToken token1 = JToken.Parse(httpResponseResult);
                             JArray men1 = (JArray)token1.SelectToken("['d']['results']");
                             List<ZSD_REAL_DATA_SRV_REAL> varoutput = men1.ToObject<List<ZSD_REAL_DATA_SRV_REAL>>();
-                            //var o = JsonConvert.DeserializeObject<List<ZSD_REAL_DATA_SRV_REAL>>(men1.ToString());
+                            
 
                             Common converter = new Common();
 
@@ -192,8 +234,7 @@ namespace PennaScheduler
                             {
                                 dtYREALIZATION.Merge(dt);
                             }
-                            //dtYREALIZATION = new DataTable();
-                            //dtYREALIZATION.Rows.Add(dt);
+                          
 
 
 
@@ -342,7 +383,7 @@ namespace PennaScheduler
 
                                     /* new Added code 2022/01/31*/
                                     i += 1;
-                                    Console.WriteLine("Row No : " + i);
+                                  
                                     query = "";
                                     int isExists = 0;
                                     query += " SELECT EXISTS(SELECT vbeln FROM YREALIZATION WHERE vbeln = '" + row["VBELN"].ToString() + "') isexist";
@@ -539,6 +580,16 @@ namespace PennaScheduler
 
 
                         }
+                        else if (response.StatusCode.ToString().ToUpper() == "BADREQUEST")
+                        {
+                            string res = response.Content.ReadAsStringAsync().Result;
+                            if (res.ToUpper().Contains("NO DATA FOUND") == true)
+                            {
+                                Console.WriteLine("HTTP Response : True");
+                                Console.WriteLine("Row Count : 0");
+                            }
+                        
+                        }
                         else
                         {
                             Console.WriteLine("Web API Response Status Code: " + Convert.ToInt16(response.StatusCode) + ", Status : " + response.StatusCode);
@@ -604,8 +655,8 @@ namespace PennaScheduler
             }
             catch (Exception ex)
             {
-                Console.WriteLine("YREALIZATION Error Message : " + ex.Message);
-                log1.WriteLine("YREALIZATION Error Message : " +  ex.Message);
+                Console.WriteLine($"YREALIZATION From date : {ptstartdate} End Date : {ptendate} : Error Message : {ex.Message}");
+                log1.WriteLine($"YREALIZATION From date : {ptstartdate} End Date : {ptendate} : Error Message : {ex.Message}");
                 log1.Close();
          
             }
@@ -615,11 +666,13 @@ namespace PennaScheduler
 
         public void LogiCost(string startDate, string endDate, string InputID)
         {
+            string ptstartdate = "";
+            string ptendate = "";
             try
             {
 
                 string filename = System.Configuration.ConfigurationManager.AppSettings["LogFile"].ToString();
-
+              
                 if (!File.Exists(filename))
                 {
                     log1 = new StreamWriter(filename, append: true);
@@ -636,38 +689,13 @@ namespace PennaScheduler
 
 
 
-                //connection_open = false;
-
-                //connection = new MyMySqlConnection();
-                ////connection = DB_Connect.Make_Connnection(ConfigurationManager.ConnectionStrings["SQLConnection"].ConnectionString);
-                //connection.ConnectionString = ConfigurationManager.ConnectionStrings["cnstr"].ConnectionString;
-
-                //string CS = connection.ConnectionString;
-                ////            if (db_manage_connnection.DB_Connect.OpenTheConnection(connection))
-                //if (Open_Local_Connection())
-                //{
-                //    connection_open = true;
-                //}
-                //else
-                //{
-                //    //					MessageBox::Show("No database connection connection made...\n Exiting now", "Database Connection Error");
-                //    //					 Application::Exit();
-
-                //}
-
-
-                //ViewData["Category"] = mySkills;
-                //var url = "";
+                
                 string query = "";
                 int reccount = 0;
                 List<ZSD_LCOST_DATA_SRV> lstsrvdeal = new List<ZSD_LCOST_DATA_SRV>();
                 
                 var formats = new[] { "ddMMyyyy", "yyyyMMdd", "yyyyMMdd" };
-                //if (!DateTime.TryParseExact(startDate.Trim(), formats, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out fromDateValue) || !(DateTime.TryParseExact(endDate.Trim(), formats, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out fromDateValue)))
-                //{
-                //    return RedirectToAction("About");
-                //    //return View("About");
-                //}
+               
 
                 string startDateOrig = startDate;
                 string endDateOrig = endDate;
@@ -677,7 +705,7 @@ namespace PennaScheduler
                 log1.WriteLine("Insert/Update Table : ZSD_LCOST_DATA_SRV");
 
                 List<Schdates> schdt = new List<Schdates>();
-                //schdt = PennaScdlr.schdat(startDate, endDate);
+               
                 schdt = PennaScdlr.schdatNew();
                 Console.WriteLine("zsd_lcost_data_srv");
 
@@ -702,16 +730,37 @@ namespace PennaScheduler
 
                 query = "";
                 reccount = 0;
+                query = "";
+                query += " Delete from zsd_lcost_data_srv ";
+                query += " where date_format(cast(fkdat as date),'%Y%m%d') ";
+                query += " between '" + startDate.Trim() + "' and '" + endDate.Trim() + "'";
 
+                using (MySqlConnection sqlCon = new MySqlConnection(CS))
+                {
+                    sqlCon.Open();
+                    MySqlCommand Cmnd = new MySqlCommand(query, sqlCon);
+
+                    object resultexscalar = Cmnd.ExecuteNonQuery();
+
+                    if (resultexscalar != null)
+                    {
+                        reccount = Convert.ToInt32(resultexscalar);
+                    }
+
+                    sqlCon.Close();
+                }
 
                 foreach (Schdates scdat in schdt)
                 {
 
                     Console.WriteLine(scdat.startdate);
                     Console.WriteLine(scdat.enddate);
+                    ptstartdate = scdat.startdate;
+                    ptendate = scdat.enddate;
 
                     if (InputID == "I")
                     {
+                        
                         //url = "https://netwaver-dev.pennacement.com:443/sap/opu/odata/sap/ZSD_REAL_DATA_SRV/REALSet?$format=json&$filter=Erdat ge '" + startDate.Trim() + "' and Erdat le '" + endDate.Trim() + "'";
                         //var url = "https://netwaver-dev.pennacement.com:443/sap/opu/odata/sap/ZSD_LCOST_DATA_SRV/LOGI_COSTSet?$format=json&$filter=Fkdat ge '" + startDate.Trim() + "' and Erdat le '"+ endDate.Trim() + "'";
                         //Test Service
@@ -744,11 +793,7 @@ namespace PennaScheduler
                             JToken token1 = JToken.Parse(httpResponseResult);
                             JArray men1 = (JArray)token1.SelectToken("['d']['results']");
                             List<ZSD_LCOST_DATA_SRV> varoutput = men1.ToObject<List<ZSD_LCOST_DATA_SRV>>();
-                            var o = JsonConvert.DeserializeObject<List<ZSD_LCOST_DATA_SRV>>(men1.ToString());
-
-                            //DataTable dt = (DataTable)JsonConvert.DeserializeObject(men1.ToString(), (typeof(DataTable)));
-                            //var qry = from idata in varoutput select idata;
-                            //DataTable dtable = 
+                            
                             Common converter = new Common();
 
 
@@ -762,228 +807,7 @@ namespace PennaScheduler
                             {
                                 dtZSD_LCOST_DATA_SRV.Merge(dt);
                             }
-                            //if (dt.Rows.Count > 0)
-                            //{
-                            //    Console.WriteLine();
-                            //    log1.WriteLine("WebApi Record Count : " + dt.Rows.Count);
-
-                            //}
-                            //else
-                            //{
-                            //    log1.WriteLine("WebApi Record Count : 0");
-                            //}
-                            //query = " declare @maxid int ";
-                            //query += " set @maxid = (select max(GroupID) from [ZSD_REAL_DATA_SRV_REAL]) ";
-                            //query += " select isnull(@maxid,0) +1 ";
-
-                            //using (MySqlConnection sqlCon = new MySqlConnection(CS))
-                            //{
-                            //    sqlCon.Open();
-                            //    MySqlCommand Cmnd = new MySqlCommand(query, sqlCon);
-
-                            //    object result = Cmnd.ExecuteScalar();
-                            //    if (result != null)
-                            //    {
-                            //        Maxid = Convert.ToInt32(result.ToString());
-                            //    }
-                            //    sqlCon.Close();
-                            //}
-                            ////objbulk.ColumnMappings.Add("GroupID", 1);
-                            //DataColumn dc = new DataColumn("GroupID");
-                            //dc.DataType = typeof(int);
-                            //dc.DefaultValue = Maxid;
-                            //dt.Columns.Add(dc);
-                            //ViewData["GroupID"] = Maxid;
-
-
-                            //dt.Columns.Add("GroupID", typeof(int));
-                            //dt.Columns["GroupID"].DefaultValue = 0;
-                            //dt.Columns.Add("GroupID", typeof(long)).DefaultValue = 1;
-
-
-                            //query = "";
-                            //query = " Delete from ZSD_LCOST_DATA_SRV ";
-                            //query += " where date_format(cast(Fkdat as date),'%Y%m%d') ";
-                            //query += " between '" + startDate.Trim() + "' and '" + endDate.Trim() + "'";
-
-                            //using (MySqlConnection sqlCon = new MySqlConnection(CS))
-                            //{
-                            //    sqlCon.Open();
-                            //    MySqlCommand Cmnd = new MySqlCommand(query, sqlCon);
-
-                            //    int result = Cmnd.ExecuteNonQuery();
-
-                            //    sqlCon.Close();
-                            //}
-
-                            //using (SqlConnection con = new SqlConnection(CS))
-                            //{
-                            //    con.Open();
-                            //    SqlBulkCopy objbulk = new SqlBulkCopy(con);
-                            //    //assigning Destination table name    
-                            //    objbulk.DestinationTableName = "ZSD_LCOST_DATA_SRV";
-                            //    //Mapping Table column    
-
-                            //    objbulk.ColumnMappings.Add("Vbeln", "VBELN");
-                            //    objbulk.ColumnMappings.Add("Fkart", "FKART");
-                            //    objbulk.ColumnMappings.Add("Fkdat", "FKDAT");
-                            //    objbulk.ColumnMappings.Add("Fkimg", "FKIMG");
-                            //    objbulk.ColumnMappings.Add("Meins", "MEINS");
-                            //    objbulk.ColumnMappings.Add("Werks", "WERKS");
-                            //    objbulk.ColumnMappings.Add("WName1", "W_NAME1");
-                            //    objbulk.ColumnMappings.Add("Zsource", "ZSOURCE");
-                            //    objbulk.ColumnMappings.Add("Zsourced", "ZSOURCED");
-                            //    objbulk.ColumnMappings.Add("Ztratyp", "ZTRATYP");
-                            //    objbulk.ColumnMappings.Add("Ztratypd", "ZTRATYPD");
-                            //    objbulk.ColumnMappings.Add("Kunnr", "KUNNR");
-                            //    objbulk.ColumnMappings.Add("KunnrN", "KUNNR_N");
-                            //    objbulk.ColumnMappings.Add("Kunag", "KUNAG");
-                            //    objbulk.ColumnMappings.Add("KunagN", "KUNAG_N");
-                            //    objbulk.ColumnMappings.Add("Ptnr", "PTNR");
-                            //    objbulk.ColumnMappings.Add("PtnrN", "PTNR_N");
-                            //    objbulk.ColumnMappings.Add("Salsrep", "SALSREP");
-                            //    objbulk.ColumnMappings.Add("SalsrepN", "SALSREP_N");
-                            //    objbulk.ColumnMappings.Add("Regio", "REGIO");
-                            //    objbulk.ColumnMappings.Add("RegioN", "REGIO_N");
-                            //    objbulk.ColumnMappings.Add("Dstrc", "DSTRC");
-                            //    objbulk.ColumnMappings.Add("DstrcN", "DSTRC_N");
-                            //    objbulk.ColumnMappings.Add("Block", "BLOCK");
-                            //    objbulk.ColumnMappings.Add("BlockN", "BLOCK_N");
-                            //    objbulk.ColumnMappings.Add("Destint", "DESTINT");
-                            //    objbulk.ColumnMappings.Add("DestintN", "DESTINT_N");
-                            //    objbulk.ColumnMappings.Add("Kdgrp", "KDGRP");
-                            //    objbulk.ColumnMappings.Add("Ktext", "KTEXT");
-                            //    objbulk.ColumnMappings.Add("PrimaryFrt", "PRIMARY_FRT");
-                            //    objbulk.ColumnMappings.Add("SecondryFrt", "SECONDRY_FRT");
-                            //    objbulk.ColumnMappings.Add("Rakno", "RAKNO");
-                            //    objbulk.ColumnMappings.Add("Rakpt", "RAKPT");
-                            //    objbulk.ColumnMappings.Add("Matkl", "MATKL");
-                            //    objbulk.ColumnMappings.Add("Lgort", "LGORT");
-                            //    objbulk.ColumnMappings.Add("Lgobe", "LGOBE");
-                            //    objbulk.ColumnMappings.Add("Inco1", "INCO1");
-                            //    objbulk.ColumnMappings.Add("Inco2", "INCO2");
-                            //    objbulk.ColumnMappings.Add("UldgChgs", "ULDG_CHGS");
-                            //    objbulk.ColumnMappings.Add("TrnsChgs", "TRNS_CHGS");
-                            //    objbulk.ColumnMappings.Add("DpulChgs", "DPUL_CHGS");
-                            //    objbulk.ColumnMappings.Add("DpldChgs", "DPLD_CHGS");
-                            //    objbulk.ColumnMappings.Add("DivrChgs", "DIVR_CHGS");
-                            //    objbulk.ColumnMappings.Add("LdngChgs", "LDNG_CHGS");
-                            //    objbulk.ColumnMappings.Add("CfagChgs", "CFAG_CHGS");
-                            //    objbulk.ColumnMappings.Add("RksrChgs", "RKSR_CHGS");
-                            //    objbulk.ColumnMappings.Add("PuldChgs", "PULD_CHGS");
-                            //    objbulk.ColumnMappings.Add("RkclChgs", "RKCL_CHGS");
-                            //    objbulk.ColumnMappings.Add("ShntChgs", "SHNT_CHGS");
-                            //    objbulk.ColumnMappings.Add("RkcfChgs", "RKCF_CHGS");
-                            //    objbulk.ColumnMappings.Add("BlndChgs", "BLND_CHGS");
-                            //    objbulk.ColumnMappings.Add("BlnbChgs", "BLNB_CHGS");
-                            //    objbulk.ColumnMappings.Add("MiscMisc", "MISC_MISC");
-                            //    objbulk.ColumnMappings.Add("Zzzone1", "ZZZONE1");
-                            //    objbulk.ColumnMappings.Add("Zzzone1N", "ZZZONE1_N");
-                            //    objbulk.ColumnMappings.Add("Zzbzirk", "ZZBZIRK");
-                            //    objbulk.ColumnMappings.Add("ZzbzirkN", "ZZBZIRK_N");
-                            //    objbulk.ColumnMappings.Add("Zzregio", "ZZREGIO");
-                            //    objbulk.ColumnMappings.Add("ZzregioN", "ZZREGIO_N");
-                            //    objbulk.ColumnMappings.Add("Vkbur", "VKBUR");
-                            //    objbulk.ColumnMappings.Add("VkburN", "VKBUR_N");
-                            //    objbulk.ColumnMappings.Add("Vkgrp", "VKGRP");
-                            //    objbulk.ColumnMappings.Add("VkgrpN", "VKGRP_N");
-                            //    objbulk.ColumnMappings.Add("Zzbranch", "ZZBRANCH");
-                            //    objbulk.ColumnMappings.Add("ZzbranchN", "ZZBRANCH_N");
-                            //    objbulk.ColumnMappings.Add("Pdstn", "PDSTN");
-                            //    objbulk.ColumnMappings.Add("Sdstn", "SDSTN");
-                            //    objbulk.ColumnMappings.Add("BlockCt", "BLOCK_CT");
-                            //    objbulk.ColumnMappings.Add("Belnr", "BELNR");
-                            //    objbulk.ColumnMappings.Add("Gjahr", "GJAHR");
-                            //    objbulk.ColumnMappings.Add("InvType", "INV_TYPE");
-                            //    objbulk.ColumnMappings.Add("FrtType", "FRT_TYPE");
-                            //    objbulk.ColumnMappings.Add("Zzvlfkz", "ZZVLFKZ");
-                            //    objbulk.ColumnMappings.Add("SuppPlantName", "SUPP_PLANT_NAME");
-                            //    objbulk.ColumnMappings.Add("DepoRkMvt", "DEPO_RK_MVT");
-                            //    objbulk.ColumnMappings.Add("IndPriFrt", "IND_PRI_FRT");
-                            //    objbulk.ColumnMappings.Add("ShipFrtChrgs", "SHIP_FRT_CHRGS");
-                            //    objbulk.ColumnMappings.Add("ShipHandChrgs", "SHIP_HAND_CHRGS");
-                            //    objbulk.ColumnMappings.Add("Clkmnfplant", "CLKMNFPLANT");
-                            //    objbulk.ColumnMappings.Add("Suppplant", "SUPPPLANT");
-                            //    objbulk.ColumnMappings.Add("Distance", "DISTANCE");
-                            //    objbulk.ColumnMappings.Add("Indpdistance", "INDPDISTANCE");
-                            //    objbulk.ColumnMappings.Add("ClkPltName", "CLK_PLT_NAME");
-                            //    objbulk.ColumnMappings.Add("MnfPltName", "MNF_PLT_NAME");
-                            //    objbulk.ColumnMappings.Add("GeindPlt", "GEIND_PLT");
-                            //    objbulk.ColumnMappings.Add("GeindPltName", "GEIND_PLT_NAME");
-                            //    objbulk.ColumnMappings.Add("SupplDepo", "SUPPL_DEPO");
-                            //    objbulk.ColumnMappings.Add("SupplDepoName", "SUPPL_DEPO_NAME");
-                            //    objbulk.ColumnMappings.Add("Waerk", "WAERK");
-                            //    objbulk.ColumnMappings.Add("Rent", "RENT");
-                            //    objbulk.ColumnMappings.Add("Rakedemchrg", "RAKEDEMCHRG");
-                            //    objbulk.ColumnMappings.Add("Ldistance", "LDISTANCE");
-                            //    objbulk.ColumnMappings.Add("LdistanceClk", "LDISTANCE_CLK");
-                            //    objbulk.ColumnMappings.Add("Matnr", "MATNR");
-                            //    objbulk.ColumnMappings.Add("Vtext", "VTEXT");
-                            //    objbulk.ColumnMappings.Add("Matnr1", "MATNR1");
-                            //    objbulk.ColumnMappings.Add("Maktx", "MAKTX");
-                            //    objbulk.ColumnMappings.Add("Incurredcost", "INCURREDCOST");
-                            //    objbulk.ColumnMappings.Add("Unincurredcost", "UNINCURREDCOST");
-                            //    objbulk.ColumnMappings.Add("ShRegio", "SH_REGIO");
-                            //    objbulk.ColumnMappings.Add("ShDstrc", "SH_DSTRC");
-                            //    objbulk.ColumnMappings.Add("ShBlock", "SH_BLOCK");
-                            //    objbulk.ColumnMappings.Add("ShDestint", "SH_DESTINT");
-                            //    objbulk.ColumnMappings.Add("Kalks", "KALKS");
-                            //    objbulk.ColumnMappings.Add("DeliveryNo", "DELIVERY_NO");
-                            //    objbulk.ColumnMappings.Add("Tknum", "TKNUM");
-                            //    objbulk.ColumnMappings.Add("Mnfplant", "MNFPLANT");
-                            //    objbulk.ColumnMappings.Add("Mnfdesc", "MNFDESC");
-                            //    objbulk.ColumnMappings.Add("Mvgr1", "MVGR1");
-                            //    objbulk.ColumnMappings.Add("Grossturn", "GROSSTURN");
-                            //    objbulk.ColumnMappings.Add("Netturn", "NETTURN");
-                            //    objbulk.ColumnMappings.Add("Nakedreal", "NAKEDREAL");
-                            //    objbulk.ColumnMappings.Add("TransIncentive", "TRANS_INCENTIVE");
-                            //    objbulk.ColumnMappings.Add("PltFrt", "PLT_FRT");
-                            //    objbulk.ColumnMappings.Add("SpRegio", "SP_REGIO");
-                            //    objbulk.ColumnMappings.Add("SpDstrc", "SP_DSTRC");
-                            //    objbulk.ColumnMappings.Add("SpBlock", "SP_BLOCK");
-                            //    objbulk.ColumnMappings.Add("SpDestint", "SP_DESTINT");
-                            //    objbulk.ColumnMappings.Add("Traid", "TRAID");
-                            //    objbulk.ColumnMappings.Add("TruckType", "TRUCK_TYPE");
-                            //    objbulk.ColumnMappings.Add("EwbNo", "EWB_NO");
-                            //    objbulk.ColumnMappings.Add("Edate", "EDATE");
-                            //    objbulk.ColumnMappings.Add("Evdate", "EVDATE");
-                            //    objbulk.ColumnMappings.Add("Steuc", "STEUC");
-                            //    objbulk.ColumnMappings.Add("PaidPrice", "PAID_PRICE");
-                            //    objbulk.ColumnMappings.Add("KalksDesc", "KALKS_DESC");
-                            //    objbulk.ColumnMappings.Add("SpRegioDesc", "SP_REGIO_DESC");
-                            //    objbulk.ColumnMappings.Add("SpDstrcDesc", "SP_DSTRC_DESC");
-                            //    objbulk.ColumnMappings.Add("SpBlockDesc", "SP_BLOCK_DESC");
-                            //    objbulk.ColumnMappings.Add("SpDestintDesc", "SP_DESTINT_DESC");
-                            //    objbulk.ColumnMappings.Add("MfPlantType", "MF_PLANT_TYPE");
-                            //    objbulk.ColumnMappings.Add("TotalTdcCost", "TOTAL_TDC_COST");
-                            //    objbulk.ColumnMappings.Add("TotalDistance", "TOTAL_DISTANCE");
-                            //    objbulk.ColumnMappings.Add("DepotIndFrieght", "DEPOT_IND_FRIEGHT");
-                            //    objbulk.ColumnMappings.Add("TotalInvoiceFrt", "TOTAL_INVOICE_FRT");
-                            //    objbulk.ColumnMappings.Add("RoadPfIncurred", "ROAD_PF_INCURRED");
-                            //    objbulk.ColumnMappings.Add("RoadPfUnincurred", "ROAD_PF_UNINCURRED");
-                            //    objbulk.ColumnMappings.Add("RoadSfIncurred", "ROAD_SF_INCURRED");
-                            //    objbulk.ColumnMappings.Add("RoadSfUnincurred", "ROAD_SF_UNINCURRED");
-                            //    objbulk.ColumnMappings.Add("RailPfIncurred", "RAIL_PF_INCURRED");
-                            //    objbulk.ColumnMappings.Add("RailPfUnincurred", "RAIL_PF_UNINCURRED");
-                            //    objbulk.ColumnMappings.Add("DrdlChgs", "DRDL_CHGS");
-                            //    objbulk.ColumnMappings.Add("DbLabChgs", "DB_LAB_CHGS");
-                            //    objbulk.ColumnMappings.Add("ZinvCancel", "ZINV_CANCEL");
-                            //    objbulk.ColumnMappings.Add("ShDestintDesc", "SH_DESTINT_DESC");
-                            //    objbulk.ColumnMappings.Add("ShipDistance", "SHIP_DISTANCE");
-
-
-                            //    //objbulk.ColumnMappings.Add("FileName", "Filename + "_" + DateTime.Now.ToString("yyyyMMddHHmmssffff")");
-
-                            //    //inserting Datatable Records to DataBase    
-                            //    //con.Open();
-                            //    objbulk.WriteToServer(dt);
-
-
-
-
-                            //    con.Close();
-
-                            //}
+                           
 
 
                             int i = 0;
@@ -1182,7 +1006,7 @@ namespace PennaScheduler
                                     result = 0;
 
                                     i += 1;
-                                    Console.WriteLine("Row No : " + i);
+                                    
                                     query = "";
                                     int isExists = 0;
                                     query += " SELECT EXISTS(SELECT vbeln FROM zsd_lcost_data_srv WHERE vbeln = '" + row["VBELN"].ToString() + "') isexist";
@@ -1273,10 +1097,10 @@ namespace PennaScheduler
                                         query += "SHIP_DISTANCE=@SHIP_DISTANCE";
                                         query += " Where VBELN=@VBELN";
                                     }
-                                    //flag = false;
+                                   
 
                                     MySqlCommand cmdt = new MySqlCommand(query, con);
-                                    //cmd.Parameters.AddWithValue("@YREALIZATION_PKID", i);
+                                    
                                     cmdt.Parameters.AddWithValue("@VBELN", row["VBELN"].ToString());
                                     cmdt.Parameters.AddWithValue("@FKART", row["FKART"].ToString());
                                     cmdt.Parameters.AddWithValue("@FKDAT", row["FKDAT"].ToString());
@@ -1442,54 +1266,20 @@ namespace PennaScheduler
 
 
                         }
+                        else if (response.StatusCode.ToString().ToUpper() == "BADREQUEST")
+                        {
+                            string res = response.Content.ReadAsStringAsync().Result;
+                            if (res.ToUpper().Contains("NO DATA FOUND") == true)
+                            {
+                                Console.WriteLine("HTTP Response : True");
+                                Console.WriteLine("Row Count : 0");
+                            }
+                         
+                        }
                         else
                         {
                             log1.WriteLine("Web API Response Status Code: " + Convert.ToInt16(response.StatusCode) + ", Status : " + response.StatusCode);
-                            //if (Convert.ToInt16(response.StatusCode) == 400)
-                            //{
-                            //    query = "";
-                            //    query = " Delete from ZSD_LCOST_DATA_SRV ";
-                            //    query += " where date_format(cast(Fkdat as date),'%Y%m%d') ";
-                            //    query += " between '" + startDate.Trim() + "' and '" + endDate.Trim() + "'";
-
-                            //    using (MySqlConnection sqlCon = new MySqlConnection(CS))
-                            //    {
-                            //        sqlCon.Open();
-                            //        MySqlCommand Cmnd = new MySqlCommand(query, sqlCon);
-
-                            //        int result = Cmnd.ExecuteNonQuery();
-
-                            //        sqlCon.Close();
-                            //    }
-
-                            //    query = "";
-                            //    query += " Select Count(*) Cnt from YREALIZATION ";
-                            //    query += " where date_format(cast(Fkdat as date),'%Y%m%d') ";
-                            //    query += " between '" + startDate.Trim() + "' and '" + endDate.Trim() + "'";
-
-                            //    using (MySqlConnection sqlCon = new MySqlConnection(CS))
-                            //    {
-                            //        sqlCon.Open();
-                            //        MySqlCommand Cmnd = new MySqlCommand(query, sqlCon);
-
-                            //        object resultexscalar = Cmnd.ExecuteScalar();
-
-                            //        if (resultexscalar != null)
-                            //        {
-                            //            reccount = Convert.ToInt32(resultexscalar);
-                            //        }
-                            //        sqlCon.Close();
-                            //    }
-
-                            //    if (reccount == 0)
-                            //    {
-                            //        log1.WriteLine("No Records found in API");
-                            //    }
-                            //}
-                            //else
-                            //{
-                            //    log1.WriteLine("Web API Response Status Code: " + Convert.ToInt16(response.StatusCode) + ", Status : " + response.StatusCode);
-                            //}
+ 
                         }
                     }
                 }
@@ -1545,24 +1335,1498 @@ namespace PennaScheduler
                     Console.WriteLine("Table record Count : " + reccount);
                     Console.WriteLine("Record Mathing");
                 }
-                //Maxid = 19;
-
-                // return View(lstsrvdeal);
+             
 
             }
             catch (Exception ex)
             {
                 
-                Console.WriteLine("ZSD_LCOST_DATA_SRV Error Message : " + ex.Message);
-                log1.WriteLine("ZSD_LCOST_DATA_SRV Error Message : " + ex.Message);
-                log1.WriteLine("===========================================");
+                Console.WriteLine($"ZSD_LCOST_DATA_SRV From date : {ptstartdate} End Date : {ptendate} : Error Message : {ex.Message}");
+ 
+                log1.WriteLine($"ZSD_LCOST_DATA_SRV From date : {ptstartdate} End Date : {ptendate} : Error Message : {ex.Message}");
+ 
             }
-            log1.WriteLine("===========================================");
+ 
             log1.Close();
     
         }
 
+        public void Dash_Board_Details(string startDate, string endDate, string InputID)
 
+        {
+
+            string ptstartdate = "";
+            string ptendate = "";
+            try
+            {
+
+                string filename = System.Configuration.ConfigurationManager.AppSettings["LogFile"].ToString();
+
+                if (!File.Exists(filename))
+                {
+                    log1 = new StreamWriter(filename, append: true);
+                }
+                else
+                {
+                    log1 = File.AppendText(filename);
+                }
+
+                log1.WriteLine("Executed on : " + DateTime.Now);
+
+
+
+                var url = "";
+                string query = "";
+                int reccount = 0;
+                int result = 0;
+                List<ZSD_COLLN_SRV> lstsrvdeal = new List<ZSD_COLLN_SRV>();
+
+                var formats = new[] { "ddMMyyyy", "yyyyMMdd", "yyyyMMdd" };
+
+                List<Schdates> schdt = new List<Schdates>();
+           
+
+
+
+
+                schdt = PennaScdlr.schdatNew();
+
+                log1.WriteLine("Insert / Upddate Table : ZSD_COLLN_SRV");
+                Console.WriteLine("ZSD_COLLN_SRV");
+                query = "";
+
+           
+
+                query = "";
+                reccount = 0;
+
+                query = "";
+                query += " Delete from ZSD_COLLN_SRV ";
+             
+                query += " where date_format(cast( str_to_date(Billdate,'%d.%m.%Y') as date),'%Y%m%d')  ";
+                query += " between '" + startDate.Trim() + "' and '" + endDate.Trim() + "'";
+
+                using (MySqlConnection sqlCon = new MySqlConnection(CS))
+                {
+                    sqlCon.Open();
+                    MySqlCommand Cmnd = new MySqlCommand(query, sqlCon);
+
+                    object resultexscalar = Cmnd.ExecuteNonQuery();
+
+                    if (resultexscalar != null)
+                    {
+                        reccount = Convert.ToInt32(resultexscalar);
+                    }
+
+                    sqlCon.Close();
+                }
+
+                query = "";
+                reccount = 0;
+
+                foreach (Schdates scdat in schdt)
+                {
+                    if (InputID == "I")
+                    {
+
+
+
+                        //Prod
+                        //url = "https://netwaver-prd.pennacement.com:443/sap/opu/odata/sap/ZSD_COLLN_SRV/COLLECTIONSet/?$filter=(BillDate eq '"+ scdat.startdate.Trim() + "')&$format=json";
+                        //string userName = "NWGW037";
+                        //string passwd = "Admin@123456";
+                        //Dev
+                        url = "https://netwaver-dev.pennacement.com:443/sap/opu/odata/sap/ZSD_COLLN_SRV/COLLECTIONSet/?$filter=(BillDate eq '"+ scdat.startdate.Trim() + "')&$format=json";
+                        string userName = "NWGW001";
+                        string passwd = "Penna@123";
+
+
+                        HttpClient client = new HttpClient();
+
+                        string authInfo = userName + ":" + passwd;
+                        authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(authInfo));
+                        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authInfo);
+
+                        client.BaseAddress = new Uri(url);
+
+                        HttpResponseMessage response = client.GetAsync(url).ContinueWith(task => task.Result).Result;
+                        // Parse the response body. Blocking!
+                        if (response.IsSuccessStatusCode)
+                        {
+
+                            Console.WriteLine("HTTP Response : " + response.IsSuccessStatusCode);
+                            var httpResponseResult = response.Content.ReadAsStringAsync().ContinueWith(task => task.Result).Result;
+
+
+                            JToken token1 = JToken.Parse(httpResponseResult);
+                            JArray men1 = (JArray)token1.SelectToken("['d']['results']");
+                            List<ZSD_COLLN_SRV> varoutput = men1.ToObject<List<ZSD_COLLN_SRV>>();
+                            
+
+                            Common converter = new Common();
+
+
+                            DataTable dt = converter.ToDataTable(varoutput);
+                            Console.WriteLine("Row Count : " + dt.Rows.Count);
+                            if (dtZSD_COLLN_SRV == null)
+                            {
+                                dtZSD_COLLN_SRV = converter.ToDataTable(varoutput);
+                            }
+                            else
+                            {
+                                dtZSD_COLLN_SRV.Merge(dt);
+                            }
+                        
+
+
+
+
+
+                            int i = 0;
+                            using (MySqlConnection con = new MySqlConnection(CS))
+                            {
+
+                                con.Open();
+                                foreach (DataRow row in dt.Rows)
+                                {
+                                    
+                                    i += 1;
+                                    
+                                    query = "";
+
+
+                                    query = "Insert into ZSD_COLLN_SRV(BILLDATE,DEPART,SNO,REGIO,";
+                                    query += "DAYTAGT,DAYACTLS,DAYDIF,MTAR,MTDTAR,MTDACT,DISHONRSAMT,";
+                                    query += "CNT,ACTINBANK,MTDDIFF,ACHVD,TOTPARMON,TOTPARDAT,TOTPARREM) Values ";
+                                    query += "(@BILLDATE,@DEPART,@SNO,@REGIO,@DAYTAGT,@DAYACTLS,@DAYDIF,";
+                                    query += "@MTAR,@MTDTAR,@MTDACT,@DISHONRSAMT,@CNT,@ACTINBANK,";
+                                    query += "@MTDDIFF,@ACHVD,@TOTPARMON,@TOTPARDAT,@TOTPARREM);";
+
+                                    MySqlCommand cmd = new MySqlCommand(query, con);
+
+                                    cmd.Parameters.AddWithValue("@BILLDATE", row["BILLDATE"].ToString());
+                                    cmd.Parameters.AddWithValue("@DEPART", row["DEPART"].ToString());
+                                    cmd.Parameters.AddWithValue("@SNO", row["SNO"].ToString());
+                                    cmd.Parameters.AddWithValue("@REGIO", row["REGIO"].ToString());
+                                    cmd.Parameters.AddWithValue("@DAYTAGT", row["DAYTAGT"].ToString());
+                                    cmd.Parameters.AddWithValue("@DAYACTLS", row["DAYACTLS"].ToString());
+                                    cmd.Parameters.AddWithValue("@DAYDIF", row["DAYDIF"].ToString());
+                                    cmd.Parameters.AddWithValue("@MTAR", row["MTAR"].ToString());
+                                    cmd.Parameters.AddWithValue("@MTDTAR", row["MTDTAR"].ToString());
+                                    cmd.Parameters.AddWithValue("@MTDACT", row["MTDACT"].ToString());
+                                    cmd.Parameters.AddWithValue("@DISHONRSAMT", row["DISHONRSAMT"].ToString());
+                                    cmd.Parameters.AddWithValue("@CNT", row["CNT"].ToString());
+                                    cmd.Parameters.AddWithValue("@ACTINBANK", row["ACTINBANK"].ToString());
+                                    cmd.Parameters.AddWithValue("@MTDDIFF", row["MTDDIFF"].ToString());
+                                    cmd.Parameters.AddWithValue("@ACHVD", row["ACHVD"].ToString());
+                                    cmd.Parameters.AddWithValue("@TOTPARMON", row["TOTPARMON"].ToString());
+                                    cmd.Parameters.AddWithValue("@TOTPARDAT", row["TOTPARDAT"].ToString());
+                                    cmd.Parameters.AddWithValue("@TOTPARREM", row["TOTPARREM"].ToString());
+
+                                    cmd.CommandType = CommandType.Text;
+                                    result = cmd.ExecuteNonQuery();
+
+ 
+
+                                }
+
+                            }
+
+
+
+                        }
+                        else if (response.StatusCode.ToString().ToUpper() == "BADREQUEST")
+                        {
+                            string res = response.Content.ReadAsStringAsync().Result;
+                            if (res.ToUpper().Contains("No Collection data found for given date".ToUpper()) == true)
+                            {
+                                Console.WriteLine("HTTP Response : True");
+                                Console.WriteLine("Row Count : 0");
+                            }
+                           
+                        }
+                        else
+                        {
+                            Console.WriteLine("Web API Response Status Code: " + Convert.ToInt16(response.StatusCode) + ", Status : " + response.StatusCode);
+                            log1.WriteLine("Web API Response Status Code: " + Convert.ToInt16(response.StatusCode) + ", Status : " + response.StatusCode);
+                        }
+
+
+                    }
+                }
+
+          
+
+                if (dtZSD_COLLN_SRV != null && dtZSD_COLLN_SRV.Rows.Count > 0)
+                {
+                    log1.WriteLine("WebApi Record Count : " + dtZSD_COLLN_SRV.Rows.Count);
+                    Console.WriteLine("WebApi Record Count : " + dtZSD_COLLN_SRV.Rows.Count);
+                }
+                else
+                {
+                    log1.WriteLine("WebApi Record Count : 0");
+                    Console.WriteLine("WebApi Record Count : 0");
+                }
+
+                query = "";
+                query += " Select Count(*) Cnt from ZSD_COLLN_SRV ";
+                query += " where date_format(cast( str_to_date(Billdate,'%d.%m.%Y') as date),'%Y%m%d')  ";
+                query += " between '" + startDate.Trim() + "' and '" + endDate.Trim() + "'";
+
+              
+
+                using (MySqlConnection sqlCon = new MySqlConnection(CS))
+                {
+                    sqlCon.Open();
+                    MySqlCommand Cmnd = new MySqlCommand(query, sqlCon);
+
+                    object resultexscalar = Cmnd.ExecuteScalar();
+
+                    if (resultexscalar != null)
+                    {
+                        reccount = Convert.ToInt32(resultexscalar);
+                    }
+                    sqlCon.Close();
+                }
+
+
+
+                if ((dtZSD_COLLN_SRV == null ? 0 : dtZSD_COLLN_SRV.Rows.Count) == reccount)
+                {
+                    log1.WriteLine("Table record Count : " + reccount);
+                    log1.WriteLine("Record Mathing");
+                    Console.WriteLine("Table record Count : " + reccount);
+                    Console.WriteLine("Record Mathing");
+
+                }
+                else
+                {
+                    log1.WriteLine("Table record Count : " + reccount);
+                    log1.WriteLine("Record Insert Failed");
+                    Console.WriteLine("Table record Count : " + reccount);
+                    Console.WriteLine("Record Insert Failed");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"ZSD_COLLN_SRV From date : {ptstartdate} End Date : {ptendate} : Error Message : {ex.Message}");
+                log1.WriteLine($"ZSD_COLLN_SRV From date : {ptstartdate} End Date : {ptendate} : Error Message : {ex.Message}");
+                log1.Close();
+
+            }
+            log1.Close();
+
+        }
+
+        public void ZSD_MW_SALES_Details(string startDate, string endDate, string InputID)
+
+        {
+            string ptstartdate = "";
+            string ptendate = "";
+            try
+            {
+
+                string filename = System.Configuration.ConfigurationManager.AppSettings["LogFile"].ToString();
+
+                if (!File.Exists(filename))
+                {
+                    log1 = new StreamWriter(filename, append: true);
+                }
+                else
+                {
+                    log1 = File.AppendText(filename);
+                }
+
+                log1.WriteLine("Executed on : " + DateTime.Now);
+
+
+
+                var url = "";
+                string query = "";
+                int reccount = 0;
+                int result = 0;
+                List<ZSD_MW_SALES_SRV> lstsrvdeal = new List<ZSD_MW_SALES_SRV>();
+
+                var formats = new[] { "ddMMyyyy", "yyyyMMdd", "yyyyMMdd" };
+
+                List<Schdates> schdt = new List<Schdates>();
+      
+                schdt = PennaScdlr.schdatNew();
+
+                log1.WriteLine("Insert / Upddate Table : ZSD_MW_SALES_SRV");
+                Console.WriteLine("ZSD_MW_SALES_SRV");
+                query = "";
+
+               
+
+                query = "";
+                reccount = 0;
+
+                query = "";
+                query += " Delete from zsd_mw_sales_srv ";
+                query += " where date_format(cast( str_to_date(BillDate,'%d.%m.%Y') as date),'%Y%m%d')  ";
+                query += " between '" + startDate.Trim() + "' and '" + endDate.Trim() + "'";
+
+                using (MySqlConnection sqlCon = new MySqlConnection(CS))
+                {
+                    sqlCon.Open();
+                    MySqlCommand Cmnd = new MySqlCommand(query, sqlCon);
+
+                    object resultexscalar = Cmnd.ExecuteNonQuery();
+
+                    if (resultexscalar != null)
+                    {
+                        reccount = Convert.ToInt32(resultexscalar);
+                    }
+
+                    sqlCon.Close();
+                }
+
+                query = "";
+                reccount = 0;
+
+                foreach (Schdates scdat in schdt)
+                {
+                    if (InputID == "I")
+                    {
+
+                       
+                 
+                    
+                        url = "https://netwaver-dev.pennacement.com:443/sap/opu/odata/sap/ZSD_MW_SALES_SRV/SALESSet/?$filter=(BillDate ge '" + scdat.startdate.Trim() + "' and BillDate le '" + scdat.enddate.Trim() + "')&format=json";
+                        //url = "https://netwaver-prd.pennacement.com:443/sap/opu/odata/sap/ZSD_MW_SALES_SRV/SALESSet/?$filter=(BillDate ge '" + scdat.startdate.Trim() + "' and BillDate le '" + scdat.enddate.Trim() + "')&format=json";
+                        //string userName = "NWGW037";
+                        //string passwd = "Admin@123456";
+                        string userName = "NWGW001";
+                        string passwd = "Penna@123";
+
+
+                        HttpClient client = new HttpClient();
+
+                        string authInfo = userName + ":" + passwd;
+                        authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(authInfo));
+                        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authInfo);
+
+                        client.BaseAddress = new Uri(url);
+
+                        HttpResponseMessage response = client.GetAsync(url).ContinueWith(task => task.Result).Result;
+                        // Parse the response body. Blocking!
+                        if (response.IsSuccessStatusCode)
+                        {
+
+                            Console.WriteLine("HTTP Response : " + response.IsSuccessStatusCode);
+                            var httpResponseResult = response.Content.ReadAsStringAsync().ContinueWith(task => task.Result).Result;
+
+                            JToken token1 = JToken.Parse(httpResponseResult);
+                            JArray men1 = (JArray)token1.SelectToken("['d']['results']");
+                            List<ZSD_MW_SALES_SRV> varoutput = men1.ToObject<List<ZSD_MW_SALES_SRV>>();
+
+                            //XElement elem = XElement.Parse(httpResponseResult);
+                            //List<ZSD_MW_SALES_SRV> varoutput = new List<ZSD_MW_SALES_SRV>();
+
+                            //foreach (XElement xo in elem.Elements())
+                            //{
+                            //    if(xo.Name.LocalName == "entry")
+                            //    {
+                            //        foreach(XElement xi in xo.Elements())
+                            //        {
+                            //            if(xi.Name.LocalName == "content")
+                            //            {
+                            //                foreach(XElement xc in xi.Elements())
+                            //                {
+                            //                    ZSD_MW_SALES_SRV objSW = new ZSD_MW_SALES_SRV();
+
+                            //                    objSW.BillDate = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[0]).Value;
+                            //                    objSW.Depart = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[1]).Value;
+                            //                    objSW.Sno = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[2]).Value;
+                            //                    objSW.Regio = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[3]).Value;
+                            //                    objSW.DayTagt = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[4]).Value;
+                            //                    objSW.DayActls = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[5]).Value;
+                            //                    objSW.DayDif = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[6]).Value;
+                            //                    objSW.MTar = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[7]).Value;
+                            //                    objSW.MtdTar = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[8]).Value;
+                            //                    objSW.MtdAct = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[9]).Value;
+                            //                    objSW.MtdDiff = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[10]).Value;
+                            //                    objSW.Achd = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[11]).Value;
+                            //                    objSW.Opc = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[12]).Value;
+                            //                    objSW.Blnd = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[13]).Value;
+                            //                    objSW.Tr = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[14]).Value;
+                            //                    objSW.Ntr = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[15]).Value;
+                            //                    objSW.Dtr = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[16]).Value;
+                            //                    objSW.Dntr = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[17]).Value;
+                            //                    objSW.PrRerata = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[18]).Value;
+                            //                    objSW.PltrOndate = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[19]).Value;
+                            //                    objSW.PltrMondate = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[20]).Value;
+
+
+
+                            //                    varoutput.Add(objSW);
+
+                            //                }
+
+                            //            }
+
+                            //        }
+
+                            //    }
+
+                            //}
+
+
+                            Common converter = new Common();
+
+
+                            DataTable dt = converter.ToDataTable(varoutput);
+                            Console.WriteLine("Row Count : " + dt.Rows.Count);
+                            if (dtZSD_MW_SALES_SRV == null)
+                            {
+                                dtZSD_MW_SALES_SRV = converter.ToDataTable(varoutput);
+                            }
+                            else
+                            {
+                                dtZSD_MW_SALES_SRV.Merge(dt);
+                            }
+                      
+
+
+
+
+
+                           // int i = 0;
+                            using (MySqlConnection con = new MySqlConnection(CS))
+                            {
+
+                                con.Open();
+                                foreach (DataRow row in dt.Rows)
+                                {
+                                    /* new Added code 2022/01/31 */
+                                    query = "";
+                                    query = "Insert into zsd_mw_sales_srv(BillDate,Depart,Sno,Regio,DayTagt,";
+                                    query += "DayActls,DayDif,MTar,MtdTar,MtdAct,MtdDiff,Achd,";
+                                    query += "Opc,Blnd,Tr,Ntr,Dtr,Dntr,PrRerata,";
+                                    query += "PltrOndate,PltrMondate) Values ";
+                                    query += "(@BillDate,@Depart,@Sno,@Regio,@DayTagt,";
+                                    query += "@DayActls,@DayDif,@MTar,@MtdTar,@MtdAct,";
+                                    query += "@MtdDiff,@Achd,@Opc,@Blnd,@Tr,@Ntr,";
+                                    query += "@Dtr,@Dntr,@PrRerata,@PltrOndate,@PltrMondate);";
+                                    
+                                    MySqlCommand cmdt = new MySqlCommand(query, con);
+
+                                    cmdt.Parameters.AddWithValue("@BILLDATE", row["BILLDATE"].ToString());
+                                    cmdt.Parameters.AddWithValue("@DEPART", row["DEPART"].ToString());
+                                    cmdt.Parameters.AddWithValue("@SNO", row["SNO"].ToString());
+                                    cmdt.Parameters.AddWithValue("@REGIO", row["REGIO"].ToString());
+                                    cmdt.Parameters.AddWithValue("@DAYTAGT", row["DAYTAGT"].ToString());
+                                    cmdt.Parameters.AddWithValue("@DAYACTLS", row["DAYACTLS"].ToString());
+                                    cmdt.Parameters.AddWithValue("@DAYDIF", row["DAYDIF"].ToString());
+                                    cmdt.Parameters.AddWithValue("@MTAR", row["MTAR"].ToString());
+                                    cmdt.Parameters.AddWithValue("@MTDTAR", row["MTDTAR"].ToString());
+                                    cmdt.Parameters.AddWithValue("@MTDACT", row["MTDACT"].ToString());
+                                    cmdt.Parameters.AddWithValue("@MTDDIFF", row["MTDDIFF"].ToString());
+                                    cmdt.Parameters.AddWithValue("@ACHD", row["ACHD"].ToString());
+                                    cmdt.Parameters.AddWithValue("@OPC", row["OPC"].ToString());
+                                    cmdt.Parameters.AddWithValue("@BLND", row["BLND"].ToString());
+                                    cmdt.Parameters.AddWithValue("@TR", row["TR"].ToString());
+                                    cmdt.Parameters.AddWithValue("@NTR", row["NTR"].ToString());
+                                    cmdt.Parameters.AddWithValue("@DTR", row["DTR"].ToString());
+                                    cmdt.Parameters.AddWithValue("@DNTR", row["DNTR"].ToString());
+                                    cmdt.Parameters.AddWithValue("@PRRERATA", row["PRRERATA"].ToString());
+                                    cmdt.Parameters.AddWithValue("@PLTRONDATE", row["PLTRONDATE"].ToString());
+                                    cmdt.Parameters.AddWithValue("@PLTRMONDATE", row["PLTRMONDATE"].ToString());
+
+
+
+                                    cmdt.CommandType = CommandType.Text;
+                                    result = cmdt.ExecuteNonQuery();
+
+                              
+
+
+                                }
+
+                            }
+
+
+
+                        }
+                        else if (response.StatusCode.ToString().ToUpper() == "BADREQUEST")
+                        {
+                            string res = response.Content.ReadAsStringAsync().Result;
+                            if (res.ToUpper().Contains("No Over Due data found for given ".ToUpper()) == true)
+                            {
+                                Console.WriteLine("HTTP Response : True");
+                                Console.WriteLine("Row Count : 0");
+                            }
+                       
+                        }
+                        else
+                        {
+                            Console.WriteLine("Web API Response Status Code: " + Convert.ToInt16(response.StatusCode) + ", Status : " + response.StatusCode);
+                            log1.WriteLine("Web API Response Status Code: " + Convert.ToInt16(response.StatusCode) + ", Status : " + response.StatusCode);
+                        }
+
+
+                    }
+                }
+
+     
+                
+                if (dtZSD_MW_SALES_SRV != null && dtZSD_MW_SALES_SRV.Rows.Count > 0)
+                {
+                    log1.WriteLine("WebApi Record Count : " + dtZSD_MW_SALES_SRV.Rows.Count);
+                    Console.WriteLine("WebApi Record Count : " + dtZSD_MW_SALES_SRV.Rows.Count);
+                }
+                else
+                {
+                    log1.WriteLine("WebApi Record Count : 0");
+                    Console.WriteLine("WebApi Record Count : 0");
+                }
+
+                query = "";
+                query += " Select Count(*) Cnt from zsd_mw_sales_srv ";
+                query += " where date_format(cast( str_to_date(BillDate,'%d.%m.%Y') as date),'%Y%m%d')  ";
+                query += " between '" + startDate.Trim() + "' and '" + endDate.Trim() + "'";
+
+          
+                using (MySqlConnection sqlCon = new MySqlConnection(CS))
+                {
+                    sqlCon.Open();
+                    MySqlCommand Cmnd = new MySqlCommand(query, sqlCon);
+
+                    object resultexscalar = Cmnd.ExecuteScalar();
+
+                    if (resultexscalar != null)
+                    {
+                        reccount = Convert.ToInt32(resultexscalar);
+                    }
+                    sqlCon.Close();
+                }
+
+
+
+                if ( (dtZSD_MW_SALES_SRV == null ? 0 : dtZSD_MW_SALES_SRV.Rows.Count) == reccount)
+                {
+                    log1.WriteLine("Table record Count : " + reccount);
+                    log1.WriteLine("Record Mathing");
+                    Console.WriteLine("Table record Count : " + reccount);
+                    Console.WriteLine("Record Mathing");
+
+                }
+                else
+                {
+                    log1.WriteLine("Table record Count : " + reccount);
+                    log1.WriteLine("Record Insert Failed");
+                    Console.WriteLine("Table record Count : " + reccount);
+                    Console.WriteLine("Record Insert Failed");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"ZSD_MW_SALES_SRV From date : {ptstartdate} End Date : {ptendate} : Error Message : {ex.Message}");
+                log1.WriteLine($"ZSD_MW_SALES_SRV From date : {ptstartdate} End Date : {ptendate} : Error Message : {ex.Message}");
+                log1.Close();
+
+            }
+            log1.Close();
+
+        }
+
+        public void ZSD_MW_SALES_DIS_SRV_Details(string startDate, string endDate, string InputID)
+
+        {
+            string ptstartdate = "";
+            string ptendate = "";
+            try
+            {
+
+                string filename = System.Configuration.ConfigurationManager.AppSettings["LogFile"].ToString();
+
+                if (!File.Exists(filename))
+                {
+                    log1 = new StreamWriter(filename, append: true);
+                }
+                else
+                {
+                    log1 = File.AppendText(filename);
+                }
+
+                log1.WriteLine("Executed on : " + DateTime.Now);
+
+
+
+                var url = "";
+                string query = "";
+                int reccount = 0;
+                int result = 0;
+                List<ZSD_MW_SALES_DIS_SRV> lstsrvdeal = new List<ZSD_MW_SALES_DIS_SRV>();
+
+                var formats = new[] { "ddMMyyyy", "yyyyMMdd", "yyyyMMdd" };
+
+                List<Schdates> schdt = new List<Schdates>();
+            
+                schdt = PennaScdlr.schdatNew();
+
+                log1.WriteLine("Insert / Upddate Table : ZSD_MW_SALES_DIS_SRV");
+                Console.WriteLine("ZSD_MW_SALES_DIS_SRV");
+                query = "";
+
+           
+
+                query = "";
+                reccount = 0;
+
+                query = "";
+                query += " Delete from zsd_mw_sales_dis_srv ";
+                query += " where date_format(cast( str_to_date(BillDate,'%d.%m.%Y') as date),'%Y%m%d')  ";
+                query += " between '" + startDate.Trim() + "' and '" + endDate.Trim() + "'";
+
+                using (MySqlConnection sqlCon = new MySqlConnection(CS))
+                {
+                    sqlCon.Open();
+                    MySqlCommand Cmnd = new MySqlCommand(query, sqlCon);
+
+                    object resultexscalar = Cmnd.ExecuteNonQuery();
+
+                    if (resultexscalar != null)
+                    {
+                        reccount = Convert.ToInt32(resultexscalar);
+                    }
+
+                    sqlCon.Close();
+                }
+
+                query = "";
+                reccount = 0;
+
+                foreach (Schdates scdat in schdt)
+                {
+                    if (InputID == "I")
+                    {
+
+                      
+                       
+
+                        url = "https://netwaver-dev.pennacement.com:443/sap/opu/odata/sap/ZSD_MW_SALES_DIS_SRV/SALES_DISSet/?$filter=(BillDate ge '" + scdat.startdate.Trim() + "' and BillDate le '" + scdat.enddate.Trim() + "')&format=json";
+                        //url = "https://netwaver-prd.pennacement.com:443/sap/opu/odata/sap/ZSD_MW_SALES_DIS_SRV/SALES_DISSet/?$filter=(BillDate ge '" + scdat.startdate.Trim() + "' and BillDate le '" + scdat.enddate.Trim() + "')&format=json";
+                        //string userName = "NWGW037";
+                        //string passwd = "Admin@123456";
+                        string userName = "NWGW001";
+                        string passwd = "Penna@123";
+
+
+                        HttpClient client = new HttpClient();
+
+                        string authInfo = userName + ":" + passwd;
+                        authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(authInfo));
+                        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authInfo);
+
+                        client.BaseAddress = new Uri(url);
+
+                        HttpResponseMessage response = client.GetAsync(url).ContinueWith(task => task.Result).Result;
+                        // Parse the response body. Blocking!
+                        if (response.IsSuccessStatusCode)
+                        {
+
+                            Console.WriteLine("HTTP Response : " + response.IsSuccessStatusCode);
+                             var httpResponseResult = response.Content.ReadAsStringAsync().ContinueWith(task => task.Result).Result;
+
+                            JToken token1 = JToken.Parse(httpResponseResult);
+                            JArray men1 = (JArray)token1.SelectToken("['d']['results']");
+                            List<ZSD_MW_SALES_DIS_SRV> varoutput = men1.ToObject<List<ZSD_MW_SALES_DIS_SRV>>();
+
+                            //XElement elem = XElement.Parse(httpResponseResult);
+                            //List<ZSD_MW_SALES_DIS_SRV> varoutput = new List<ZSD_MW_SALES_DIS_SRV>();
+
+                            //foreach (XElement xo in elem.Elements())
+                            //{
+                            //    if (xo.Name.LocalName == "entry")
+                            //    {
+                            //        foreach (XElement xi in xo.Elements())
+                            //        {
+                            //            if (xi.Name.LocalName == "content")
+                            //            {
+                            //                foreach (XElement xc in xi.Elements())
+                            //                {
+                            //                    ZSD_MW_SALES_DIS_SRV objSW = new ZSD_MW_SALES_DIS_SRV();
+
+                            //                    objSW.BillDate = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[0]).Value;
+                            //                    objSW.Depart = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[1]).Value;
+                            //                    objSW.Sno = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[2]).Value;
+                            //                    objSW.Regio = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[3]).Value;
+                            //                    objSW.DayTagt = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[4]).Value;
+                            //                    objSW.DayActls = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[5]).Value;
+                            //                    objSW.DayDif = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[6]).Value;
+                            //                    objSW.MTar = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[7]).Value;
+                            //                    objSW.MtdTar = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[8]).Value;
+                            //                    objSW.MtdAct = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[9]).Value;
+                            //                    objSW.MtdDiff = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[10]).Value;
+                            //                    objSW.Achd = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[11]).Value;
+                            //                    objSW.Opc = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[12]).Value;
+                            //                    objSW.Blnd = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[13]).Value;
+                            //                    objSW.ProRata = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[14]).Value;
+                            //                    objSW.PrRrata = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[15]).Value;
+                            //                    objSW.PrRerata = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[16]).Value;
+                            //                    objSW.PltrOndate = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[17]).Value;
+                            //                    objSW.PltrMondate = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[18]).Value;
+
+
+
+                            //                    varoutput.Add(objSW);
+                            //                    //var nodeValue = xc.Value;
+                            //                }
+
+                            //            }
+
+                            //        }
+
+                            //    }
+
+                            //}
+
+                            Common converter = new Common();
+
+
+                            DataTable dt = converter.ToDataTable(varoutput);
+                            Console.WriteLine("Row Count : " + dt.Rows.Count);
+                            if (dtZSD_MW_SALES_DIS_SRV == null)
+                            {
+                                dtZSD_MW_SALES_DIS_SRV = converter.ToDataTable(varoutput);
+                            }
+                            else
+                            {
+                                dtZSD_MW_SALES_DIS_SRV.Merge(dt);
+                            }
+           
+
+
+
+
+                            //int i = 0;
+                            using (MySqlConnection con = new MySqlConnection(CS))
+                            {
+
+                                con.Open();
+                                foreach (DataRow row in dt.Rows)
+                                {
+                                    /* new Added code 2022/01/31 */
+                                    query = "";
+                                    query = "Insert into zsd_mw_sales_dis_srv(BillDate,Depart,Sno,Regio,DayTagt,";
+                                    query += "DayActls,DayDif,MTar,MtdTar,MtdAct,";
+                                    query += "MtdDiff,Achd,Opc,Blnd,ProRata,";
+                                    query += "PrRrata,PrRerata,PltrOndate,PltrMondate) Values ";
+                                    query += "(@BillDate,@Depart,@Sno,@Regio,@DayTagt,";
+                                    query += "@DayActls,@DayDif,@MTar,@MtdTar,@MtdAct,";
+                                    query += "@MtdDiff,@Achd,@Opc,@Blnd,@ProRata,";
+                                    query += "@PrRrata,@PrRerata,@PltrOndate,@PltrMondate);";
+
+                                    MySqlCommand cmdt = new MySqlCommand(query, con);
+
+                                    cmdt.Parameters.AddWithValue("@BILLDATE", row["BILLDATE"].ToString());
+                                    cmdt.Parameters.AddWithValue("@DEPART", row["DEPART"].ToString());
+                                    cmdt.Parameters.AddWithValue("@SNO", row["SNO"].ToString());
+                                    cmdt.Parameters.AddWithValue("@REGIO", row["REGIO"].ToString());
+                                    cmdt.Parameters.AddWithValue("@DAYTAGT", row["DAYTAGT"].ToString());
+                                    cmdt.Parameters.AddWithValue("@DAYACTLS", row["DAYACTLS"].ToString());
+                                    cmdt.Parameters.AddWithValue("@DAYDIF", row["DAYDIF"].ToString());
+                                    cmdt.Parameters.AddWithValue("@MTAR", row["MTAR"].ToString());
+                                    cmdt.Parameters.AddWithValue("@MTDTAR", row["MTDTAR"].ToString());
+                                    cmdt.Parameters.AddWithValue("@MTDACT", row["MTDACT"].ToString());
+                                    cmdt.Parameters.AddWithValue("@MTDDIFF", row["MTDDIFF"].ToString());
+                                    cmdt.Parameters.AddWithValue("@ACHD", row["ACHD"].ToString());
+                                    cmdt.Parameters.AddWithValue("@OPC", row["OPC"].ToString());
+                                    cmdt.Parameters.AddWithValue("@BLND", row["BLND"].ToString());
+                                    cmdt.Parameters.AddWithValue("@PRORATA", row["PRORATA"].ToString());
+                                    cmdt.Parameters.AddWithValue("@PRRRATA", row["PRRRATA"].ToString());
+                                    cmdt.Parameters.AddWithValue("@PRRERATA", row["PRRERATA"].ToString());
+                                    cmdt.Parameters.AddWithValue("@PLTRONDATE", row["PLTRONDATE"].ToString());
+                                    cmdt.Parameters.AddWithValue("@PLTRMONDATE", row["PLTRMONDATE"].ToString());
+
+
+
+
+                                    cmdt.CommandType = CommandType.Text;
+                                    result = cmdt.ExecuteNonQuery();
+
+                                  
+
+                                }
+
+                            }
+
+
+
+                        }
+                        else if (response.StatusCode.ToString().ToUpper() == "BADREQUEST")
+                        {
+                            string res = response.Content.ReadAsStringAsync().Result;
+                            if (res.ToUpper().Contains("No Sales,Dispatch data found for given date".ToUpper()) == true)
+                            {
+                                Console.WriteLine("HTTP Response : True");
+                                Console.WriteLine("Row Count : 0");
+                            }
+ 
+                        }
+                        else
+                        {
+                            Console.WriteLine("Web API Response Status Code: " + Convert.ToInt16(response.StatusCode) + ", Status : " + response.StatusCode);
+                            log1.WriteLine("Web API Response Status Code: " + Convert.ToInt16(response.StatusCode) + ", Status : " + response.StatusCode);
+                        }
+
+
+                    }
+                }
+
+        
+
+                if (dtZSD_MW_SALES_DIS_SRV != null && dtZSD_MW_SALES_DIS_SRV.Rows.Count > 0)
+                {
+                    log1.WriteLine("WebApi Record Count : " + dtZSD_MW_SALES_DIS_SRV.Rows.Count);
+                    Console.WriteLine("WebApi Record Count : " + dtZSD_MW_SALES_DIS_SRV.Rows.Count);
+                }
+                else
+                {
+                    log1.WriteLine("WebApi Record Count : 0");
+                    Console.WriteLine("WebApi Record Count : 0");
+                }
+
+                query = "";
+                query += " Select Count(*) Cnt from zsd_mw_sales_dis_srv ";
+                query += " where date_format(cast( str_to_date(BillDate,'%d.%m.%Y') as date),'%Y%m%d')  ";
+                query += " between '" + startDate.Trim() + "' and '" + endDate.Trim() + "'";
+
+       
+                using (MySqlConnection sqlCon = new MySqlConnection(CS))
+                {
+                    sqlCon.Open();
+                    MySqlCommand Cmnd = new MySqlCommand(query, sqlCon);
+
+                    object resultexscalar = Cmnd.ExecuteScalar();
+
+                    if (resultexscalar != null)
+                    {
+                        reccount = Convert.ToInt32(resultexscalar);
+                    }
+                    sqlCon.Close();
+                }
+
+
+
+                if ((dtZSD_MW_SALES_DIS_SRV == null ? 0 : dtZSD_MW_SALES_DIS_SRV.Rows.Count) == reccount)
+                {
+                    log1.WriteLine("Table record Count : " + reccount);
+                    log1.WriteLine("Record Mathing");
+                    Console.WriteLine("Table record Count : " + reccount);
+                    Console.WriteLine("Record Mathing");
+
+                }
+                else
+                {
+                    log1.WriteLine("Table record Count : " + reccount);
+                    log1.WriteLine("Record Insert Failed");
+                    Console.WriteLine("Table record Count : " + reccount);
+                    Console.WriteLine("Record Insert Failed");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"ZSD_MW_SALES_DIS_SRV From date : {ptstartdate} End Date : {ptendate} : Error Message : {ex.Message}");
+                log1.WriteLine($"ZSD_MW_SALES_DIS_SRV From date : {ptstartdate} End Date : {ptendate} : Error Message : {ex.Message}");
+                log1.Close();
+
+            }
+            log1.Close();
+
+        }
+
+        public void ZSD_MW_REALISATION_SRV(string startDate, string endDate, string InputID)
+
+        {
+            string ptstartdate = "";
+            string ptendate = "";
+            try
+            {
+
+                string filename = System.Configuration.ConfigurationManager.AppSettings["LogFile"].ToString();
+
+                if (!File.Exists(filename))
+                {
+                    log1 = new StreamWriter(filename, append: true);
+                }
+                else
+                {
+                    log1 = File.AppendText(filename);
+                }
+
+                log1.WriteLine("Executed on : " + DateTime.Now);
+
+
+
+                var url = "";
+                string query = "";
+                int reccount = 0;
+                int result = 0;
+                List<ZSD_MW_REALISATION_SRV> lstsrvdeal = new List<ZSD_MW_REALISATION_SRV>();
+
+                var formats = new[] { "ddMMyyyy", "yyyyMMdd", "yyyyMMdd" };
+
+                List<Schdates> schdt = new List<Schdates>();
+   
+                schdt = PennaScdlr.schdatNew();
+
+                log1.WriteLine("Insert / Upddate Table : ZSD_MW_REALISATION_SRV");
+                Console.WriteLine("ZSD_MW_REALISATION_SRV");
+                query = "";
+
+            
+
+                query = "";
+                reccount = 0;
+
+                query = "";
+                query += " Delete from zsd_mw_realization_srv ";
+                query += " where date_format(cast( str_to_date(BillDate,'%d.%m.%Y') as date),'%Y%m%d')  ";
+                query += " between '" + startDate.Trim() + "' and '" + endDate.Trim() + "'";
+
+                using (MySqlConnection sqlCon = new MySqlConnection(CS))
+                {
+                    sqlCon.Open();
+                    MySqlCommand Cmnd = new MySqlCommand(query, sqlCon);
+
+                    object resultexscalar = Cmnd.ExecuteNonQuery();
+
+                    if (resultexscalar != null)
+                    {
+                        reccount = Convert.ToInt32(resultexscalar);
+                    }
+
+                    sqlCon.Close();
+                }
+
+                query = "";
+                reccount = 0;
+
+                foreach (Schdates scdat in schdt)
+                {
+                    if (InputID == "I")
+                    {
+
+                        Console.WriteLine(scdat.startdate);
+                        Console.WriteLine(scdat.enddate);
+                        ptstartdate = scdat.startdate;
+                        ptendate = scdat.enddate;
+                
+
+                        url = "https://netwaver-dev.pennacement.com:443/sap/opu/odata/sap/ZSD_MW_REALISATION_SRV/REALISATIONSet/?$filter=(BillDate ge '" + scdat.startdate.Trim() + "' and BillDate le '" + scdat.enddate.Trim() + "')&format=json";
+                        //url = "https://netwaver-prd.pennacement.com:443/sap/opu/odata/sap/ZSD_MW_REALISATION_SRV/REALISATIONSet/?$filter=(BillDate ge '" + scdat.startdate.Trim() + "' and BillDate le '" + scdat.enddate.Trim() + "')&format=json";
+                        //string userName = "NWGW037";
+                        //string passwd = "Admin@123456";
+                        string userName = "NWGW001";
+                        string passwd = "Penna@123";
+
+
+                        HttpClient client = new HttpClient();
+
+                        string authInfo = userName + ":" + passwd;
+                        authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(authInfo));
+                        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authInfo);
+
+                        client.BaseAddress = new Uri(url);
+
+                        HttpResponseMessage response = client.GetAsync(url).ContinueWith(task => task.Result).Result;
+                        // Parse the response body. Blocking!
+                        if (response.IsSuccessStatusCode)
+                        {
+
+                            Console.WriteLine("HTTP Response : " + response.IsSuccessStatusCode);
+                            var httpResponseResult = response.Content.ReadAsStringAsync().ContinueWith(task => task.Result).Result;
+
+                            JToken token1 = JToken.Parse(httpResponseResult);
+                            JArray men1 = (JArray)token1.SelectToken("['d']['results']");
+                            List<ZSD_MW_REALISATION_SRV> varoutput = men1.ToObject<List<ZSD_MW_REALISATION_SRV>>();
+
+                            //XElement elem = XElement.Parse(httpResponseResult);
+                            //List<ZSD_MW_REALISATION_SRV> varoutput = new List<ZSD_MW_REALISATION_SRV>();
+
+                            //foreach (XElement xo in elem.Elements())
+                            //{
+                            //    if (xo.Name.LocalName == "entry")
+                            //    {
+                            //        foreach (XElement xi in xo.Elements())
+                            //        {
+                            //            if (xi.Name.LocalName == "content")
+                            //            {
+                            //                foreach (XElement xc in xi.Elements())
+                            //                {
+                            //                    ZSD_MW_REALISATION_SRV objSW = new ZSD_MW_REALISATION_SRV();
+
+
+                            //                    objSW.BillDate = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[0]).Value;
+                            //                    objSW.Depart = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[1]).Value;
+                            //                    objSW.Sno = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[2]).Value;
+                            //                    objSW.Statedesc = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[3]).Value;
+                            //                    objSW.TNetper = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[4]).Value;
+                            //                    objSW.TPerton = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[5]).Value;
+                            //                    objSW.NNetper = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[6]).Value;
+                            //                    objSW.NPerton = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[7]).Value;
+                            //                    objSW.TotNetper = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[8]).Value;
+                            //                    objSW.TotPerton = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[9]).Value;
+                            //                    objSW.MtNetper = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[10]).Value;
+                            //                    objSW.MtPerton = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[11]).Value;
+                            //                    objSW.MnNetper = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[12]).Value;
+                            //                    objSW.MnPerton = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[13]).Value;
+                            //                    objSW.MtotPerton = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[14]).Value;
+                            //                    objSW.MtotNetper = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[15]).Value;
+                            //                    objSW.Regio = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[16]).Value;
+
+                            //                    varoutput.Add(objSW);
+
+                            //                }
+
+                            //            }
+
+                            //        }
+
+                            //    }
+
+                            //}
+                            Common converter = new Common();
+
+
+                            DataTable dt = converter.ToDataTable(varoutput);
+                            Console.WriteLine("Row Count : " + dt.Rows.Count);
+                            if (dtZSD_MW_REALISATION_SRV == null)
+                            {
+                                dtZSD_MW_REALISATION_SRV = converter.ToDataTable(varoutput);
+                            }
+                            else
+                            {
+                                dtZSD_MW_REALISATION_SRV.Merge(dt);
+                            }
+                 
+
+
+
+
+
+                            //int i = 0;
+                            using (MySqlConnection con = new MySqlConnection(CS))
+                            {
+
+                                con.Open();
+                                foreach (DataRow row in dt.Rows)
+                                {
+                                    /* new Added code 2022/01/31 */
+                                    query = "";
+                                    query = "Insert into zsd_mw_realization_srv(BillDate,Depart,Sno,Statedesc,TNetper,";
+                                    query += "TPerton,NNetper,NPerton,TotNetper,TotPerton,";
+                                    query += "MtNetper,MtPerton,MnNetper,MnPerton,MtotPerton,";
+                                    query += "MtotNetper,Regio) Values ";
+                                    query += "(@BillDate,@Depart,@Sno,@Statedesc,@TNetper,";
+                                    query += "@TPerton,@NNetper,@NPerton,@TotNetper,@TotPerton,";
+                                    query += "@MtNetper,@MtPerton,@MnNetper,@MnPerton,@MtotPerton,";
+                                    query += "@MtotNetper,@Regio);";
+
+                                    MySqlCommand cmdt = new MySqlCommand(query, con);
+
+                                    cmdt.Parameters.AddWithValue("@BILLDATE", row["BILLDATE"].ToString());
+                                    cmdt.Parameters.AddWithValue("@DEPART", row["DEPART"].ToString());
+                                    cmdt.Parameters.AddWithValue("@SNO", row["SNO"].ToString());
+                                    cmdt.Parameters.AddWithValue("@STATEDESC", row["STATEDESC"].ToString());
+                                    cmdt.Parameters.AddWithValue("@TNETPER", row["TNETPER"].ToString());
+                                    cmdt.Parameters.AddWithValue("@TPERTON", row["TPERTON"].ToString());
+                                    cmdt.Parameters.AddWithValue("@NNETPER", row["NNETPER"].ToString());
+                                    cmdt.Parameters.AddWithValue("@NPERTON", row["NPERTON"].ToString());
+                                    cmdt.Parameters.AddWithValue("@TOTNETPER", row["TOTNETPER"].ToString());
+                                    cmdt.Parameters.AddWithValue("@TOTPERTON", row["TOTPERTON"].ToString());
+                                    cmdt.Parameters.AddWithValue("@MTNETPER", row["MTNETPER"].ToString());
+                                    cmdt.Parameters.AddWithValue("@MTPERTON", row["MTPERTON"].ToString());
+                                    cmdt.Parameters.AddWithValue("@MNNETPER", row["MNNETPER"].ToString());
+                                    cmdt.Parameters.AddWithValue("@MNPERTON", row["MNPERTON"].ToString());
+                                    cmdt.Parameters.AddWithValue("@MTOTPERTON", row["MTOTPERTON"].ToString());
+                                    cmdt.Parameters.AddWithValue("@MTOTNETPER", row["MTOTNETPER"].ToString());
+                                    cmdt.Parameters.AddWithValue("@REGIO", row["REGIO"].ToString());
+
+
+
+
+                                    cmdt.CommandType = CommandType.Text;
+                                    result = cmdt.ExecuteNonQuery();
+
+           
+                                }
+
+                            }
+
+
+
+                        }
+                        else if (response.StatusCode.ToString().ToUpper() == "BADREQUEST")
+                        {
+                            string res = response.Content.ReadAsStringAsync().Result;
+                            if (res.ToUpper().Contains("No Realization data found for given date".ToUpper()) == true)
+                            {
+                                Console.WriteLine("HTTP Response : True");
+                                Console.WriteLine("Row Count : 0");
+                            }
+    
+                        }
+                        else
+                        {
+                            Console.WriteLine("Web API Response Status Code: " + Convert.ToInt16(response.StatusCode) + ", Status : " + response.StatusCode);
+                            log1.WriteLine("Web API Response Status Code: " + Convert.ToInt16(response.StatusCode) + ", Status : " + response.StatusCode);
+                        }
+
+
+                    }
+                }
+
+         
+
+                if (dtZSD_MW_REALISATION_SRV != null && dtZSD_MW_REALISATION_SRV.Rows.Count > 0)
+                {
+                    log1.WriteLine("WebApi Record Count : " + dtZSD_MW_REALISATION_SRV.Rows.Count);
+                    Console.WriteLine("WebApi Record Count : " + dtZSD_MW_REALISATION_SRV.Rows.Count);
+                }
+                else
+                {
+                    log1.WriteLine("WebApi Record Count : 0");
+                    Console.WriteLine("WebApi Record Count : 0");
+                }
+
+                query = "";
+                query += " Select Count(*) Cnt from zsd_mw_realization_srv ";
+                query += " where date_format(cast( str_to_date(BillDate,'%d.%m.%Y') as date),'%Y%m%d')  ";
+                query += " between '" + startDate.Trim() + "' and '" + endDate.Trim() + "'";
+
+           
+                using (MySqlConnection sqlCon = new MySqlConnection(CS))
+                {
+                    sqlCon.Open();
+                    MySqlCommand Cmnd = new MySqlCommand(query, sqlCon);
+
+                    object resultexscalar = Cmnd.ExecuteScalar();
+
+                    if (resultexscalar != null)
+                    {
+                        reccount = Convert.ToInt32(resultexscalar);
+                    }
+                    sqlCon.Close();
+                }
+
+
+
+                if ((dtZSD_MW_REALISATION_SRV == null ? 0 : dtZSD_MW_REALISATION_SRV.Rows.Count) == reccount)
+                {
+                    log1.WriteLine("Table record Count : " + reccount);
+                    log1.WriteLine("Record Mathing");
+                    Console.WriteLine("Table record Count : " + reccount);
+                    Console.WriteLine("Record Mathing");
+
+                }
+                else
+                {
+                    log1.WriteLine("Table record Count : " + reccount);
+                    log1.WriteLine("Record Insert Failed");
+                    Console.WriteLine("Table record Count : " + reccount);
+                    Console.WriteLine("Record Insert Failed");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"ZSD_MW_REALISATION_SRV From date : {ptstartdate} End Date : {ptendate} : Error Message : {ex.Message}");
+                log1.WriteLine($"ZSD_MW_REALISATION_SRV From date : {ptstartdate} End Date : {ptendate} : Error Message : {ex.Message}");
+                log1.Close();
+
+            }
+            log1.Close();
+
+        }
+
+        //StateWise_OD_Details
+        public void StateWise_OD_Details(string startDate, string endDate, string InputID)
+
+        {
+            string ptstartdate = "";
+            string ptendate = "";
+            try
+            {
+
+                string filename = System.Configuration.ConfigurationManager.AppSettings["LogFile"].ToString();
+
+                if (!File.Exists(filename))
+                {
+                    log1 = new StreamWriter(filename, append: true);
+                }
+                else
+                {
+                    log1 = File.AppendText(filename);
+                }
+
+                log1.WriteLine("Executed on : " + DateTime.Now);
+
+
+
+                var url = "";
+                string query = "";
+                int reccount = 0;
+                int result = 0;
+                List<ZFI_MW_STATEWISE_OD_SRV> lstsrvdeal = new List<ZFI_MW_STATEWISE_OD_SRV>();
+
+                var formats = new[] { "ddMMyyyy", "yyyyMMdd", "yyyyMMdd" };
+
+                List<Schdates> schdt = new List<Schdates>();
+        
+                schdt = PennaScdlr.schdatNew();
+
+                log1.WriteLine("Insert / Upddate Table : ZFI_MW_STATEWISE_OD_SRV");
+                Console.WriteLine("ZFI_MW_STATEWISE_OD_SRV");
+                query = "";
+
+
+
+                query = "";
+                reccount = 0;
+
+                query = "";
+                query += " Delete from zsd_mw_statewise_od_srv ";
+                query += " where date_format(cast( str_to_date(CreationDate,'%d.%m.%Y') as date),'%Y%m%d')  ";
+                query += " between '" + startDate.Trim() + "' and '" + endDate.Trim() + "'";
+
+                using (MySqlConnection sqlCon = new MySqlConnection(CS))
+                {
+                    sqlCon.Open();
+                    MySqlCommand Cmnd = new MySqlCommand(query, sqlCon);
+
+                    object resultexscalar = Cmnd.ExecuteNonQuery();
+
+                    if (resultexscalar != null)
+                    {
+                        reccount = Convert.ToInt32(resultexscalar);
+                    }
+
+                    sqlCon.Close();
+                }
+
+                query = "";
+                reccount = 0;
+
+                foreach (Schdates scdat in schdt)
+                {
+                    if (InputID == "I")
+                    {
+
+                     
+ 
+                        url = "https://netwaver-dev.pennacement.com:443/sap/opu/odata/sap/ZFI_MW_STATEWISE_OD_SRV/STATEWISE_ODSet/?$filter=(CreationDate ge '" + scdat.startdate.Trim() + "' and CreationDate le '" + scdat.enddate.Trim() + "')&format=json";
+                        //url = "https://netwaver-prd.pennacement.com:443/sap/opu/odata/sap/ZFI_MW_STATEWISE_OD_SRV/STATEWISE_ODSet/?$filter=(CreationDate ge '" + scdat.startdate.Trim() + "' and CreationDate le '" + scdat.enddate.Trim() + "')&format=json";
+                        //string userName = "NWGW037";
+                        //string passwd = "Admin@123456";
+                        string userName = "NWGW001";
+                        string passwd = "Penna@123";
+
+
+                        HttpClient client = new HttpClient();
+
+                        string authInfo = userName + ":" + passwd;
+                        authInfo = Convert.ToBase64String(Encoding.Default.GetBytes(authInfo));
+                        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authInfo);
+
+                        client.BaseAddress = new Uri(url);
+
+                        HttpResponseMessage response = client.GetAsync(url).ContinueWith(task => task.Result).Result;
+                        // Parse the response body. Blocking!
+                        if (response.IsSuccessStatusCode)
+                        {
+
+                            Console.WriteLine("HTTP Response : " + response.IsSuccessStatusCode);
+                            var httpResponseResult = response.Content.ReadAsStringAsync().ContinueWith(task => task.Result).Result;
+
+                            JToken token1 = JToken.Parse(httpResponseResult);
+                            JArray men1 = (JArray)token1.SelectToken("['d']['results']");
+                            List<ZFI_MW_STATEWISE_OD_SRV> varoutput = men1.ToObject<List<ZFI_MW_STATEWISE_OD_SRV>>();
+
+
+                            //XElement elem = XElement.Parse(httpResponseResult);
+                            //List<ZFI_MW_STATEWISE_OD_SRV> varoutput = new List<ZFI_MW_STATEWISE_OD_SRV>();
+                            //foreach (XElement xo in elem.Elements())
+                            //{
+                            //    if (xo.Name.LocalName == "entry")
+                            //    {
+                            //        foreach (XElement xi in xo.Elements())
+                            //        {
+                            //            if (xi.Name.LocalName == "content")
+                            //            {
+                            //                foreach (XElement xc in xi.Elements())
+                            //                {
+                            //                    ZFI_MW_STATEWISE_OD_SRV objSW = new ZFI_MW_STATEWISE_OD_SRV();
+                            //                    objSW.CreationDate = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[0]).Value;
+                            //                    objSW.Regio = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[1]).Value;
+                            //                    objSW.Ktokd = ((System.Xml.Linq.XElement)xc.Nodes().ToList()[2]).Value;
+                            //                    objSW.TotalOs = Convert.ToDecimal(((System.Xml.Linq.XElement)xc.Nodes().ToList()[3]).Value);
+                            //                    objSW.TotalOverdue = Convert.ToDecimal(((System.Xml.Linq.XElement)xc.Nodes().ToList()[4]).Value);
+                            //                    objSW.TotalChqnrAmt = Convert.ToDecimal(((System.Xml.Linq.XElement)xc.Nodes().ToList()[5]).Value);
+                            //                    objSW.CurrFyOdOs = Convert.ToDecimal(((System.Xml.Linq.XElement)xc.Nodes().ToList()[6]).Value);
+                            //                    objSW.PreFyOdOs = Convert.ToDecimal(((System.Xml.Linq.XElement)xc.Nodes().ToList()[7]).Value);
+                            //                    objSW.PreFyClsOdOs = Convert.ToDecimal(((System.Xml.Linq.XElement)xc.Nodes().ToList()[8]).Value);
+                            //                    varoutput.Add(objSW);
+                                              
+                            //                }
+
+                            //            }
+
+                            //        }
+
+                            //    }
+
+                            //}
+                            Common converter = new Common();
+
+
+                            DataTable dt = converter.ToDataTable(varoutput);
+                            Console.WriteLine("Row Count : " + dt.Rows.Count);
+                            if (dtZFI_MW_STATEWISE_OD_SRV == null)
+                            {
+                                dtZFI_MW_STATEWISE_OD_SRV = converter.ToDataTable(varoutput);
+                            }
+                            else
+                            {
+                                dtZFI_MW_STATEWISE_OD_SRV.Merge(dt);
+                            }
+                     
+
+
+
+
+                            //int i = 0;
+                            using (MySqlConnection con = new MySqlConnection(CS))
+                            {
+
+                                con.Open();
+                                foreach (DataRow row in dt.Rows)
+                                {
+                                    /* new Added code 2022/01/31 */
+                                    query = "";
+                                    query = "Insert into zsd_mw_statewise_od_srv(CreationDate,Regio,Ktokd,TotalOs,";
+                                    query += "TotalOverdue,TotalChqnrAmt,CurrFyOdOs,PreFyOdOs,PreFyClsOdOs) Values ";
+                                    query += "(@CreationDate,@Regio,@Ktokd,@TotalOs,@TotalOverdue,";
+                                    query += "@TotalChqnrAmt,@CurrFyOdOs,@PreFyOdOs,@PreFyClsOdOs);";
+
+                                    MySqlCommand cmdt = new MySqlCommand(query, con);
+
+                                    cmdt.Parameters.AddWithValue("@CREATIONDATE", row["CREATIONDATE"].ToString());
+                                    cmdt.Parameters.AddWithValue("@REGIO", row["REGIO"].ToString());
+                                    cmdt.Parameters.AddWithValue("@KTOKD", row["KTOKD"].ToString());
+                                    cmdt.Parameters.AddWithValue("@TOTALOS", Convert.ToDecimal(row["TOTALOS"]));
+                                    cmdt.Parameters.AddWithValue("@TOTALOVERDUE", Convert.ToDecimal(row["TOTALOVERDUE"]));
+                                    cmdt.Parameters.AddWithValue("@TOTALCHQNRAMT", Convert.ToDecimal(row["TOTALCHQNRAMT"]));
+                                    cmdt.Parameters.AddWithValue("@CURRFYODOS", Convert.ToDecimal(row["CURRFYODOS"]));
+                                    cmdt.Parameters.AddWithValue("@PREFYODOS", Convert.ToDecimal(row["PREFYODOS"]));
+                                    cmdt.Parameters.AddWithValue("@PREFYCLSODOS", Convert.ToDecimal(row["PREFYCLSODOS"]));
+
+
+
+
+
+                                    cmdt.CommandType = CommandType.Text;
+                                    result = cmdt.ExecuteNonQuery();
+
+                                }
+
+                            }
+
+
+
+                        }
+                        else if (response.StatusCode.ToString().ToUpper() == "BADREQUEST")
+                        {
+                            string res = response.Content.ReadAsStringAsync().Result;
+                            if (res.ToUpper().Contains("No Over Due data found for given date".ToUpper()) == true)
+                            {
+                                Console.WriteLine("HTTP Response : True");
+                                Console.WriteLine("Row Count : 0");
+                            }
+ 
+                        }
+                        else
+                        {
+                            Console.WriteLine("Web API Response Status Code: " + Convert.ToInt16(response.StatusCode) + ", Status : " + response.StatusCode);
+                            log1.WriteLine("Web API Response Status Code: " + Convert.ToInt16(response.StatusCode) + ", Status : " + response.StatusCode);
+                        }
+
+
+                    }
+                }
+
+     
+
+                if (dtZFI_MW_STATEWISE_OD_SRV != null && dtZFI_MW_STATEWISE_OD_SRV.Rows.Count > 0)
+                {
+                    log1.WriteLine("WebApi Record Count : " + dtZFI_MW_STATEWISE_OD_SRV.Rows.Count);
+                    Console.WriteLine("WebApi Record Count : " + dtZFI_MW_STATEWISE_OD_SRV.Rows.Count);
+                }
+                else
+                {
+                    log1.WriteLine("WebApi Record Count : 0");
+                    Console.WriteLine("WebApi Record Count : 0");
+                }
+
+                query = "";
+                query += " Select Count(*) Cnt from zsd_mw_statewise_od_srv ";
+                query += " where date_format(cast( str_to_date(CreationDate,'%d.%m.%Y') as date),'%Y%m%d')  ";
+                query += " between '" + startDate.Trim() + "' and '" + endDate.Trim() + "'";
+
+                using (MySqlConnection sqlCon = new MySqlConnection(CS))
+                {
+                    sqlCon.Open();
+                    MySqlCommand Cmnd = new MySqlCommand(query, sqlCon);
+
+                    object resultexscalar = Cmnd.ExecuteScalar();
+
+                    if (resultexscalar != null)
+                    {
+                        reccount = Convert.ToInt32(resultexscalar);
+                    }
+                    sqlCon.Close();
+                }
+
+
+
+                if ((dtZFI_MW_STATEWISE_OD_SRV == null ? 0 : dtZFI_MW_STATEWISE_OD_SRV.Rows.Count) == reccount)
+                {
+                    log1.WriteLine("Table record Count : " + reccount);
+                    log1.WriteLine("Record Mathing");
+                    Console.WriteLine("Table record Count : " + reccount);
+                    Console.WriteLine("Record Mathing");
+
+                }
+                else
+                {
+                    log1.WriteLine("Table record Count : " + reccount);
+                    log1.WriteLine("Record Insert Failed");
+                    Console.WriteLine("Table record Count : " + reccount);
+                    Console.WriteLine("Record Insert Failed");
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"ZFI_MW_STATEWISE_OD_SRV From date : {ptstartdate} End Date : {ptendate} : Error Message : {ex.Message}");
+                log1.WriteLine($"ZFI_MW_STATEWISE_OD_SRV From date : {ptstartdate} End Date : {ptendate} : Error Message : {ex.Message}");
+                log1.Close();
+
+            }
+            log1.Close();
+
+        }
         public void Export_Mismatch(string startDate, string endDate)
         {
             try
@@ -1848,6 +3112,10 @@ namespace PennaScheduler
                         new DataColumn("Ship Distance")
 
                  });
+
+                
+              
+
                 using (MySqlConnection con = new MySqlConnection(CS))
                 {
                     query = "";
@@ -2559,6 +3827,8 @@ namespace PennaScheduler
                         }
                     }
                 }
+
+             
             }
             catch (Exception ex)
             {
@@ -2566,9 +3836,14 @@ namespace PennaScheduler
                 log1.WriteLine("MisMatch Report Error Message : " + ex.Message);
                 log1.WriteLine("===========================================");
                 log1.Close();
+                //log1.Flush();
             }
-            log1.WriteLine("===========================================");
-            log1.Close();
+            if(log1.BaseStream != null)
+            {
+                log1.WriteLine("===========================================");
+                log1.Close();
+            }
+          
         }
         public static List<Schdates> schdat(string stdate, string eddate)
         {
@@ -2656,6 +3931,6 @@ namespace PennaScheduler
         }
     }
 
-    
+ 
     
 }
