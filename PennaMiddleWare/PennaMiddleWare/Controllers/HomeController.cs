@@ -67,20 +67,20 @@ namespace PennaMiddleWare.Controllers
               
             }
           
-            ViewData["SelCategory"] = 0;
-            List<SelectListItem> mySkills = new List<SelectListItem>() {
-                new SelectListItem {
-            Text = "Select", Value = "0"
-        },
-        new SelectListItem {
-            Text = "Report 1", Value = "1"
-        },
-        new SelectListItem {
-            Text = "Report 2", Value = "2"
-        },
+        //    ViewData["SelCategory"] = 0;
+        //    List<SelectListItem> mySkills = new List<SelectListItem>() {
+        //        new SelectListItem {
+        //    Text = "Select", Value = "0"
+        //},
+        //new SelectListItem {
+        //    Text = "Report 1", Value = "1"
+        //},
+        //new SelectListItem {
+        //    Text = "Report 2", Value = "2"
+        //},
 
-        };
-            ViewData["Category"] = mySkills;
+        //};
+        //    ViewData["Category"] = mySkills;
 
             //var url = "https://netwaver-dev.pennacement.com:443/sap/opu/odata/sap/ZSD_REAL_DATA_SRV/REALSet?$format=json&$filter=Erdat ge '20160701' and Erdat le '20161231'";
             //string userName = "NWGW001";
@@ -894,11 +894,11 @@ namespace PennaMiddleWare.Controllers
                     //url = "https://netwaver-dev.pennacement.com:443/sap/opu/odata/sap/ZSD_REAL_DATA_SRV/REALSet?$format=json&$filter=Erdat ge '" + startDate.Trim() + "' and Erdat le '" + endDate.Trim() + "'";
                     //string userName = "NWGW001";
                     //string passwd = "Penna@123";
-
+                    //string logicostrpt = System.Configuration.ConfigurationManager.AppSettings["LogiCost"].ToString();
                     url = "https://netwaver-prd.pennacement.com:443/sap/opu/odata/sap/ZSD_REAL_DATA_SRV/REALSet?$format=json&$filter=Erdat ge '" + startDate.Trim() + "' and Erdat le '" + endDate.Trim() + "'";
                     string userName = "NWGW037";
                     string passwd = "Admin@123456";
-                    log1.WriteLine("Insert Tabel : YREALIZATION");
+                    log1.WriteLine("Insert Table : YREALIZATION");
 
                     HttpClient client = new HttpClient();
 
@@ -1120,14 +1120,14 @@ namespace PennaMiddleWare.Controllers
                         }
                         if (dt.Rows.Count == reccount)
                         {
-                            log1.WriteLine("Tabel record Count : " + reccount);
+                            log1.WriteLine("Table record Count : " + reccount);
                             log1.WriteLine("Record Mathing");
 
 
                         }
                         else
                         {
-                            log1.WriteLine("Tabel record Count : " + reccount);
+                            log1.WriteLine("Table record Count : " + reccount);
                             log1.WriteLine("Record Insert Failed");
                         }
                     }
@@ -1606,7 +1606,7 @@ namespace PennaMiddleWare.Controllers
                 }
                 int page1=1;
                 int pageNumber = (page ?? 1);
-                if (page1 != null)
+                if (page1 != 0)
                 {
 
                     pageNumber = Convert.ToInt16(page1);
@@ -1691,20 +1691,20 @@ namespace PennaMiddleWare.Controllers
                 endDate = endDate.Replace("-", string.Empty);
 
             }
-            ViewData["SelCategory"] = 0;
-            List<SelectListItem> mySkills = new List<SelectListItem>() {
-                new SelectListItem {
-            Text = "Select", Value = "0"
-        },
-        new SelectListItem {
-            Text = "Report 1", Value = "1"
-        },
-        new SelectListItem {
-            Text = "Report 2", Value = "2"
-        },
+        //    ViewData["SelCategory"] = 0;
+        //    List<SelectListItem> mySkills = new List<SelectListItem>() {
+        //        new SelectListItem {
+        //    Text = "Select", Value = "0"
+        //},
+        //new SelectListItem {
+        //    Text = "Report 1", Value = "1"
+        //},
+        //new SelectListItem {
+        //    Text = "Report 2", Value = "2"
+        //},
 
-        };
-            ViewData["Category"] = mySkills;
+        //};
+        //    ViewData["Category"] = mySkills;
 
 
             int Maxid = 0;
@@ -2253,7 +2253,7 @@ namespace PennaMiddleWare.Controllers
                 string userName = "NWGW037";
                 string passwd = "Admin@123456";
 
-                log1.WriteLine("Insert Tabel : ZSD_LCOST_DATA_SRV");
+                log1.WriteLine("Insert Table : ZSD_LCOST_DATA_SRV");
 
                 HttpClient client = new HttpClient();
 
@@ -2531,14 +2531,14 @@ namespace PennaMiddleWare.Controllers
                     }
                     if (dt.Rows.Count == reccount)
                     {
-                        log1.WriteLine("Tabel record Count : " + reccount);
+                        log1.WriteLine("Table record Count : " + reccount);
                         log1.WriteLine("Record Mathing");
 
 
                     }
                     else
                     {
-                        log1.WriteLine("Tabel record Count : " + reccount);
+                        log1.WriteLine("Table record Count : " + reccount);
                         log1.WriteLine("Record Insert Failed");
                     }
 
@@ -2564,8 +2564,8 @@ namespace PennaMiddleWare.Controllers
                         }
 
                         query = "";
-                        query += " Select Count(*) Cnt from YREALIZATION ";
-                        query += " where date_format(cast(Erdat as date),'%Y%m%d') ";
+                        query += " Select Count(*) Cnt from ZSD_LCOST_DATA_SRV ";
+                        query += " where date_format(cast(Fkdat as date),'%Y%m%d') ";
                         query += " between '" + startDate.Trim() + "' and '" + endDate.Trim() + "'";
 
                         using (MySqlConnection sqlCon = new MySqlConnection(CS))
@@ -2877,7 +2877,7 @@ namespace PennaMiddleWare.Controllers
                     string userName = "NWGW037";
                     string passwd = "Admin@123456";
 
-                    log1.WriteLine("Insert Tabel : ZSD_LCOST_DATA_SRV");
+                    log1.WriteLine("Insert Table : ZSD_LCOST_DATA_SRV");
 
                     HttpClient client = new HttpClient();
 
@@ -3155,14 +3155,14 @@ namespace PennaMiddleWare.Controllers
                         }
                         if (dt.Rows.Count == reccount)
                         {
-                            log1.WriteLine("Tabel record Count : " + reccount);
+                            log1.WriteLine("Table record Count : " + reccount);
                             log1.WriteLine("Record Mathing");
 
 
                         }
                         else
                         {
-                            log1.WriteLine("Tabel record Count : " + reccount);
+                            log1.WriteLine("Table record Count : " + reccount);
                             log1.WriteLine("Record Insert Failed");
                         }
 
@@ -3752,7 +3752,7 @@ namespace PennaMiddleWare.Controllers
                 }
                 int page1 = 1;
                 int pageNumber = (page ?? 1);
-                if (page1 != null)
+                if (page1 != 0)
                 {
 
                     pageNumber = Convert.ToInt16(page1);
@@ -3820,7 +3820,7 @@ namespace PennaMiddleWare.Controllers
                 string userName = "NWGW001";
                 string passwd = "Penna@123";
 
-                log1.WriteLine("Insert Tabel : YREALIZATION");
+                log1.WriteLine("Insert Table : YREALIZATION");
 
                 HttpClient client = new HttpClient();
 
@@ -4042,14 +4042,14 @@ namespace PennaMiddleWare.Controllers
                     }
                     if (dt.Rows.Count == reccount)
                     {
-                        log1.WriteLine("Tabel record Count : " + reccount);
+                        log1.WriteLine("Table record Count : " + reccount);
                         log1.WriteLine("Record Mathing");
 
 
                     }
                     else
                     {
-                        log1.WriteLine("Tabel record Count : " + reccount);
+                        log1.WriteLine("Table record Count : " + reccount);
                         log1.WriteLine("Record Insert Failed");
                     }
                 }
@@ -4152,7 +4152,7 @@ namespace PennaMiddleWare.Controllers
                 string userName = "NWGW001";
                 string passwd = "Penna@123";
 
-                log1.WriteLine("Insert Tabel : ZSD_LCOST_DATA_SRV");
+                log1.WriteLine("Insert Table : ZSD_LCOST_DATA_SRV");
 
                 HttpClient client = new HttpClient();
 
@@ -4430,14 +4430,14 @@ namespace PennaMiddleWare.Controllers
                     }
                     if (dt.Rows.Count == reccount)
                     {
-                        log1.WriteLine("Tabel record Count : " + reccount);
+                        log1.WriteLine("Table record Count : " + reccount);
                         log1.WriteLine("Record Mathing");
 
 
                     }
                     else
                     {
-                        log1.WriteLine("Tabel record Count : " + reccount);
+                        log1.WriteLine("Table record Count : " + reccount);
                         log1.WriteLine("Record Insert Failed");
                     }
 
@@ -4567,7 +4567,7 @@ namespace PennaMiddleWare.Controllers
                     url = "https://netwaver-prd.pennacement.com:443/sap/opu/odata/sap/ZSD_REAL_DATA_SRV/REALSet?$format=json&$filter=Erdat ge '" + startDate.Trim() + "' and Erdat le '" + endDate.Trim() + "'";
                     string userName = "NWGW037";
                     string passwd = "Admin@123456";
-                    log1.WriteLine("Insert Tabel : YREALIZATION");
+                    log1.WriteLine("Insert Table : YREALIZATION");
 
                     HttpClient client = new HttpClient();
 
@@ -4789,14 +4789,14 @@ namespace PennaMiddleWare.Controllers
                         }
                         if (dt.Rows.Count == reccount)
                         {
-                            log1.WriteLine("Tabel record Count : " + reccount);
+                            log1.WriteLine("Table record Count : " + reccount);
                             log1.WriteLine("Record Mathing");
 
 
                         }
                         else
                         {
-                            log1.WriteLine("Tabel record Count : " + reccount);
+                            log1.WriteLine("Table record Count : " + reccount);
                             log1.WriteLine("Record Insert Failed");
                         }
                     }
@@ -5519,7 +5519,7 @@ namespace PennaMiddleWare.Controllers
                 url = "https://netwaver-prd.pennacement.com:443/sap/opu/odata/sap/ZSD_REAL_DATA_SRV/REALSet?$format=json&$filter=Erdat ge '" + startDate.Trim() + "' and Erdat le '" + endDate.Trim() + "'";
                 string userName = "NWGW037";
                 string passwd = "Admin@123456";
-                log1.WriteLine("Insert Tabel : YREALIZATION");
+                log1.WriteLine("Insert Table : YREALIZATION");
 
                 HttpClient client = new HttpClient();
 
@@ -5746,14 +5746,14 @@ namespace PennaMiddleWare.Controllers
                     }
                     if (dt.Rows.Count == reccount)
                     {
-                        log1.WriteLine("Tabel record Count : " + reccount);
+                        log1.WriteLine("Table record Count : " + reccount);
                         log1.WriteLine("Record Mathing");
 
 
                     }
                     else
                     {
-                        log1.WriteLine("Tabel record Count : " + reccount);
+                        log1.WriteLine("Table record Count : " + reccount);
                         log1.WriteLine("Record Insert Failed");
                     }
                 }
@@ -5815,7 +5815,7 @@ namespace PennaMiddleWare.Controllers
                 return Json(new { errorcode = 0, errormessage = 0 }, JsonRequestBehavior.AllowGet);
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return Json(new { errorcode = 1, errormessage = 1 }, JsonRequestBehavior.AllowGet);
             }
@@ -6093,7 +6093,7 @@ namespace PennaMiddleWare.Controllers
                //return Json(new { errorcode = 0, errormessage = 0 }, JsonRequestBehavior.AllowGet);
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return Json(new { errorcode = 0, errormessage = 0 }, JsonRequestBehavior.AllowGet);
 
@@ -6144,7 +6144,7 @@ namespace PennaMiddleWare.Controllers
                     string userName = "NWGW037";
                     string passwd = "Admin@123456";
 
-                    log1.WriteLine("Insert Tabel : ZSD_LCOST_DATA_SRV");
+                    log1.WriteLine("Insert Table : ZSD_LCOST_DATA_SRV");
 
                     HttpClient client = new HttpClient();
 
@@ -6422,14 +6422,14 @@ namespace PennaMiddleWare.Controllers
                         }
                         if (dt.Rows.Count == reccount)
                         {
-                            log1.WriteLine("Tabel record Count : " + reccount);
+                            log1.WriteLine("Table record Count : " + reccount);
                             log1.WriteLine("Record Mathing");
 
 
                         }
                         else
                         {
-                            log1.WriteLine("Tabel record Count : " + reccount);
+                            log1.WriteLine("Table record Count : " + reccount);
                             log1.WriteLine("Record Insert Failed");
                         }
 
@@ -6493,7 +6493,7 @@ namespace PennaMiddleWare.Controllers
                 return View();;
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return View();
             }
@@ -6508,6 +6508,8 @@ namespace PennaMiddleWare.Controllers
             {
                 string filename = System.Configuration.ConfigurationManager.AppSettings["LogFile"].ToString();
                 string SchLogFile = System.Configuration.ConfigurationManager.AppSettings["SchLogFile"].ToString();
+                string OSODSchLogFile = System.Configuration.ConfigurationManager.AppSettings["OSODSchLogFile"].ToString();
+
                 //string destinationFile = System.IO.Path.GetDirectoryName(SchLogFile) + @"\PennaScheduler.log";
                 List<PennaMiddleWare.BLL.FileInfo> listFiles = new List<PennaMiddleWare.BLL.FileInfo>();
                 //using (ZipFile zip = new ZipFile())
@@ -6576,6 +6578,21 @@ namespace PennaMiddleWare.Controllers
                     //return File(destinationFile, "video/" + fileextn, filename);
 
                 }
+
+                if (System.IO.File.Exists(OSODSchLogFile))
+                {
+
+                    listFiles.Add(new PennaMiddleWare.BLL.FileInfo()
+                    {
+
+                        FileId = listFiles.Count + 1,
+                        FileName = Path.GetFileName(OSODSchLogFile),
+                        FilePath = OSODSchLogFile
+
+                    });
+
+
+                }
                 using (var memoryStream = new MemoryStream())
                 {
                     using (var ziparchive = new ZipArchive(memoryStream, ZipArchiveMode.Create, true))
@@ -6608,7 +6625,7 @@ namespace PennaMiddleWare.Controllers
 
                 //}
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return RedirectToAction("Index", "Home");
             }

@@ -10,7 +10,7 @@
             if (ActionName.ToLower() == "index")
             {
 
-                ViewBag.mainmenu = "Realization Report";
+                ViewBag.mainmenu = "Realisation Report";
             }
             else if (ActionName.ToLower() == "logicost")
             {
@@ -25,9 +25,29 @@
 
 
         }
-        else if (ContollerName.ToLower() == "StatewiseODdetails".ToLower())
+        else if (ContollerName.ToLower() == "AgingODdetails".ToLower())
         {
-            ViewBag.mainmenu = "State wise OD details";
+            ViewBag.mainmenu = "Ageing OD Details";
+        }
+        else if (ContollerName.ToLower() == "Colln".ToLower())
+        {
+            ViewBag.mainmenu = "Collection Details";
+        }
+        else if (ContollerName.ToLower() == "Realisation".ToLower())
+        {
+            ViewBag.mainmenu = "Realisation Details";
+        }
+        else if (ContollerName.ToLower() == "Sales".ToLower())
+        {
+            ViewBag.mainmenu = "Sales Details";
+        }
+        else if (ContollerName.ToLower() == "SalesDiv".ToLower())
+        {
+            ViewBag.mainmenu = "Sales Division Details";
+        }
+        else if (ContollerName.ToLower() == "StateWiseOD".ToLower())
+        {
+            ViewBag.mainmenu = "SalesWise OD Details";
         }
         else
         {
@@ -37,7 +57,7 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title  Penna Middleware</title>
+    <title>@ViewBag.Title - My ASP.NET Application</title>
     @*@Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")*@
     <style type="text/css">
@@ -465,8 +485,23 @@
                                     Logi Cost Report
                                 </a>
 
-                                <a href=@Url.Action("Index","StatewiseODdetails")>
-                                    State wise OD details
+                                <a href=@Url.Action("Index","AgingODdetails")>
+                                    Ageing OD Details
+                                </a>
+                                <a href=@Url.Action("Index","Colln")>
+                                    Collection Details
+                                </a>
+                                <a href=@Url.Action("Index","Realisation")>
+                                    Realisation Details
+                                </a>
+                                <a href=@Url.Action("Index","Sales")>
+                                    Sales Details
+                                </a>
+                                <a href=@Url.Action("Index","SalesDiv")>
+                                    Sales Division Details
+                                </a>
+                                <a href=@Url.Action("Index","StateWiseOD")>
+                                    SalesWise OD Details
                                 </a>
                             </div>
                         </div>

@@ -278,4 +278,182 @@ namespace PennaMiddleWare.Models
         public decimal ShipDistance { get; set; }
 
     }
+
+    public class Schdates
+    {
+        public int RowNo { get; set; }
+        public string startdate { get; set; }
+
+        public string enddate { get; set; }
+    }
+
+    public class ZFI_AGEING_OD_SRV
+    {
+        public string Bukrs { get; set; }
+        public string Budat { get; set; }
+        public string Kunnr { get; set; }
+        public string Ktokd { get; set; }
+        public string Name1 { get; set; }
+        public string Kunn2 { get; set; }
+        public string Name2 { get; set; }
+        public string Kunn3 { get; set; }
+        public string Name3 { get; set; }
+        public decimal Slab1 { get; set; }
+        public decimal Slab2 { get; set; }
+        public decimal Slab3 { get; set; }
+        public decimal Slab4 { get; set; }
+        public decimal Slab5 { get; set; }
+        public decimal Slab6 { get; set; }
+        public decimal Slab7 { get; set; }
+        public decimal Slab8 { get; set; }
+        public decimal Slab9 { get; set; }
+        public string Waers { get; set; }
+        public string Regio { get; set; }
+        public string Dstrc { get; set; }
+        public string Dstxt { get; set; }
+        public string Regtxt { get; set; }
+        public string Zzzone { get; set; }
+        public string Zzbranch { get; set; }
+        public string Vkorg { get; set; }
+        public string Vkgrp { get; set; }
+        public string Vkbur { get; set; }
+        public string Zzbzirk { get; set; }
+        public decimal CreditLimit { get; set; }
+        public decimal AvailableCl { get; set; }
+        public string CreditPeriod { get; set; }
+        public string OsDays { get; set; }
+        public decimal OsAmt { get; set; }
+        public decimal OsOdAmt { get; set; }
+        public string OsOdDays { get; set; }
+        public decimal SecurityDep { get; set; }
+        public decimal ChqnrAmt { get; set; }
+        public decimal CurrFyOdOs { get; set; }
+        public decimal PreFyOdOs { get; set; }
+        public decimal PreFyClsOdOs { get; set; }
+        public decimal ActualOd { get; set; }
+
+    }
+
+    public class ZSD_MRP_PRINTING_SRV
+    {
+        public string Plant { get; set; }
+        public string Vbeln { get; set; }
+        public string Bags { get; set; }
+        public string Traid { get; set; }
+        public string Vtext { get; set; }
+        public string Mrp { get; set; }
+        
+
+    }
+
+
+    public class ZSD_COLLN_SRV
+    {
+        public string BillDate { get; set; }
+        public string Depart { get; set; }
+        public string Sno { get; set; }
+        public string Regio { get; set; }
+        public string DayTagt { get; set; }
+        public string DayActls { get; set; }
+        public string DayDif { get; set; }
+        public string MTar { get; set; }
+        public string MtdTar { get; set; }
+        public string MtdAct { get; set; }
+        public string DishonrsAmt { get; set; }
+        public string Cnt { get; set; }
+        public string ActInBank { get; set; }
+        public string MtdDiff { get; set; }
+        public string Achvd { get; set; }
+        public string TotParMon { get; set; }
+        public string TotParDat { get; set; }
+        public string TotParRem { get; set; }
+
+    }
+
+    public class ZSD_MW_SALES_SRV
+    {
+        public string BillDate { get; set; }
+        public string Depart { get; set; }
+        public string Sno { get; set; }
+        public string Regio { get; set; }
+        public string DayTagt { get; set; }
+        public string DayActls { get; set; }
+        public string DayDif { get; set; }
+        public string MTar { get; set; }
+        public string MtdTar { get; set; }
+        public string MtdAct { get; set; }
+        public string MtdDiff { get; set; }
+        public string Achd { get; set; }
+        public string Opc { get; set; }
+        public string Blnd { get; set; }
+        public string Tr { get; set; }
+        public string Ntr { get; set; }
+        public string Dtr { get; set; }
+        public string Dntr { get; set; }
+        public string PrRerata { get; set; }
+        public string PltrOndate { get; set; }
+        public string PltrMondate { get; set; }
+
+    }
+    public class ZSD_MW_SALES_DIS_SRV
+    {
+        public string BillDate { get; set; }
+        public string Depart { get; set; }
+        public string Sno { get; set; }
+        public string Regio { get; set; }
+        public string DayTagt { get; set; }
+        public string DayActls { get; set; }
+        public string DayDif { get; set; }
+        public string MTar { get; set; }
+        public string MtdTar { get; set; }
+        public string MtdAct { get; set; }
+        public string MtdDiff { get; set; }
+        public string Achd { get; set; }
+        public string Opc { get; set; }
+        public string Blnd { get; set; }
+        public string ProRata { get; set; }
+        public string PrRrata { get; set; }
+        public string PrRerata { get; set; }
+        public string PltrOndate { get; set; }
+        public string PltrMondate { get; set; }
+
+    }
+
+    public class ZSD_MW_REALISATION_SRV
+    {
+        public string BillDate { get; set; }
+        public string Depart { get; set; }
+        public string Sno { get; set; }
+        public string Statedesc { get; set; }
+        public string TNetper { get; set; }
+        public string TPerton { get; set; }
+        public string NNetper { get; set; }
+        public string NPerton { get; set; }
+        public string TotNetper { get; set; }
+        public string TotPerton { get; set; }
+        public string MtNetper { get; set; }
+        public string MtPerton { get; set; }
+        public string MnNetper { get; set; }
+        public string MnPerton { get; set; }
+        public string MtotPerton { get; set; }
+        public string MtotNetper { get; set; }
+        public string Regio { get; set; }
+
+    }
+
+    public class ZFI_MW_STATEWISE_OD_SRV
+    {
+
+
+        public String CreationDate { get; set; }
+        public String Regio { get; set; }
+        public String Ktokd { get; set; }
+        public Decimal TotalOs { get; set; }
+        public Decimal TotalOverdue { get; set; }
+        public Decimal TotalChqnrAmt { get; set; }
+        public Decimal CurrFyOdOs { get; set; }
+        public Decimal PreFyOdOs { get; set; }
+        public Decimal PreFyClsOdOs { get; set; }
+
+    }
 }

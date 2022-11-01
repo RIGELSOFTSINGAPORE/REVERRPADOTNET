@@ -1,0 +1,478 @@
+﻿@model List<PennaMiddleWare.Models.ZSD_MW_SALES_SRV>
+@using PagedList.Mvc
+@{
+    //Layout = null;
+    var srvageing = ViewData["lstsrvdeal"] as PagedList.PagedList<PennaMiddleWare.Models.ZSD_MW_SALES_SRV>;
+    WebGrid webGrid = new WebGrid(source: Model, canSort: false, canPage: false);
+    //var maxid = ViewData["GroupID"].ToString();
+    ViewBag.keyframes = "@keyframes";
+    ViewBag.webkit = "@-webkit-keyframes";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="~/Scripts/ddmmyyyy-validation.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="~/Scripts/table2excel.js"></script>
+
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <title>Penna-MiddleWare</title>
+    <script>
+        function Exportsubmit() {
+
+            document.getElementById("InputID").value = "E";
+
+            var startDate = document.getElementById("startDate").value
+            var endDate = document.getElementById("endDate").value
+            var chkstartDate = startDate;
+            var chkendDate = endDate;
+
+            if (chkstartDate.length == 8) {
+                chkstartDate = chkstartDate.slice(0, 2) + '/' + chkstartDate.slice(2, 4) + '/' + chkstartDate.slice(4);
+            }
+
+            //alert("startDate" + chkstartDate);
+            if (validatedate(chkstartDate) == false) {
+                $('#MSG').text("Please Enter Valid From Date(DDMMYYYY)")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+            if (chkendDate.length == 8) {
+                chkendDate = chkendDate.slice(0, 2) + '/' + chkendDate.slice(2, 4) + '/' + chkendDate.slice(4);
+            }
+
+            //alert("endDate" + chkendDate);
+            validatedate(chkendDate);
+
+            if (validatedate(chkendDate) == false) {
+                $('#MSG').text("Please Enter Valid To Date(DDMMYYYY)")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+
+            if (process(chkstartDate) > process(chkendDate)) {
+                $('#MSG').text("To Date Greathen or Equal to From Date")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+
+             var startDate = document.getElementById("startDate").value
+             var endDate = document.getElementById("endDate").value
+             var url2 = "?startDate=" + startDate + "&endDate=" + endDate + "&InputID=E&page=1";
+              var url1 = '@Url.Action("Index", "Sales")';
+              var url=url1+url2
+            window.location.href = url;
+
+        }
+    </script>
+</head>
+
+
+
+<body>
+    <div class="body">
+
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        @using (Html.BeginForm("Index", "Sales", FormMethod.Post, new { @id = "WebGridForm" }))
+        {
+            <div class="hero-image">
+                <img src="~/assets/img/API_bg.jpg" alt="Image" style="width: 100%;margin-top: -27px;">
+            </div>
+            <div class="container" style="font-size: 30px;">
+
+                Sales Details
+
+            </div>
+            <div class="container">
+                <div>
+
+                    @Html.Hidden("InputID")
+                    From Date : @Html.TextBox("startDate", String.Format("{0:d}", ViewBag.startDate as string), new { placeholder = "DDMMYYYY" })
+
+
+                    @*Datepicker changed by sabeena*@
+
+                    To Date : @Html.TextBox("endDate", String.Format("{0:d}", ViewBag.endDate as string), new { placeholder = "DDMMYYYY" })
+                    <div style="padding-top: 20px;">
+
+                        <a class=" btn-info btn clearright" onclick="Importsubmit()" style=" margin-left: 10px; margin-left: 10px; color: #fff;background-color: #17a2b8; border-color: #17a2b8;">
+                            Import
+                        </a>
+                        <a class=".btn-info btn clearright" onclick="Searchsubmit()" style=" margin-left: 10px; margin-left: 10px; color: #fff;background-color: #17a2b8; border-color: #17a2b8;">
+                            Search
+                        </a>
+
+                        <a class=".btn-info btn clearright" onclick="Exportsubmit()" style=" margin-left: 10px; margin-left: 10px; color: #fff;background-color: #17a2b8; border-color: #17a2b8;">
+                            Export
+                        </a>
+
+                        <a href=@Url.Action("DownloadLogRealization","Home") class="btn btn-secondary clearright" style=" margin-left: 10px; background-color: #117a8b;">
+                            DownLoad Log
+                        </a>
+                        <a href=@Url.Action("Index","Sales") class="btn btn-secondary clearright" style=" margin-left: 10px; background-color: #117a8b;">
+                            Clear
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        }
+        <div class="card " style="padding: 20px;margin-top: 10px;margin-bottom: 5%; ">
+            @if (srvageing != null)
+            {
+
+
+
+                <div class="" @*style="overflow-x: scroll;"*@>
+
+
+
+                    <table id="WebGrid1" class="table Grid table-striped table-responsive table-bordered dt-responsive nowrap" width="100%" cellspacing="0" cellpadding="5">
+                        <thead>
+                            <tr>
+
+                                <th>Date</th>
+                                <th>Department</th>
+                                <th>Serial Number</th>
+                                <th>Region</th>
+                                <th>Day Target</th>
+                                <th>Day Actuals</th>
+                                <th>Day + or -</th>
+                                <th>Month Target</th>
+                                <th>MTD Target</th>
+                                <th>MTD Actuals</th>
+                                <th>MTD + or -</th>
+                                <th>Achvd %</th>
+                                <th>OPC %</th>
+                                <th>Blended %</th>
+                                <th>On date Trade%</th>
+                                <th>On date Non Trade%</th>
+                                <th>MTD Trade</th>
+                                <th>MTD Non Trade</th>
+                                <th>Total Pro RataTarget</th>
+                                <th>Prorata Tar pr Day</th>
+                                <th>Prorata per Day</th>
+
+
+                            </tr>
+                        </thead>
+                        @if (srvageing.Count > 0)
+                        {
+
+                            foreach (var item in srvageing)
+                            {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.BillDate)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Depart)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Sno)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Regio)</td>
+                        <td>@Html.DisplayFor(modelItem => item.DayTagt)</td>
+                        <td>@Html.DisplayFor(modelItem => item.DayActls)</td>
+                        <td>@Html.DisplayFor(modelItem => item.DayDif)</td>
+                        <td>@Html.DisplayFor(modelItem => item.MTar)</td>
+                        <td>@Html.DisplayFor(modelItem => item.MtdTar)</td>
+                        <td>@Html.DisplayFor(modelItem => item.MtdAct)</td>
+                        <td>@Html.DisplayFor(modelItem => item.MtdDiff)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Achd)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Opc)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Blnd)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Tr)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Ntr)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Dtr)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Dntr)</td>
+                        <td>@Html.DisplayFor(modelItem => item.PrRerata)</td>
+                        <td>@Html.DisplayFor(modelItem => item.PltrOndate)</td>
+                        <td>@Html.DisplayFor(modelItem => item.PltrMondate)</td>
+                    </tr>
+
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="21" style="font: bold; text-align: center">No Records Found</td>
+                            </tr>
+                        }
+
+                    </table>
+                </div>
+
+
+                if (srvageing.PageSize < srvageing.TotalItemCount)
+                {
+                    <br />
+                    <div style="text-align:right;font-size:16px">
+
+                        page @(srvageing.PageCount < srvageing.PageNumber ? 0 : srvageing.PageNumber) to @srvageing.PageCount
+
+                        @Html.PagedListPager(srvageing, page => Url.Action("Index", new { startDate = ViewBag.startDate, endDate = ViewBag.endDate, InputID = "S", page }), new PagedListRenderOptions() { LiElementClasses = new List<string> { "myClass", "aff" } })
+
+                    </div>
+                }
+            }
+        </div>
+
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+        <div id="SucMSG" role="dialog" class="modalpopup SucMSG" style=" display:none">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <h1 style="padding:20px 10px;font-size:18px">
+                        <label id="MSG"></label>
+                    </h1>
+
+                    <div style="padding: 5px 20px">
+
+                        <button style="width:15%;float: right" onclick="modalDismiss()" type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @if (ViewBag.export == "success")
+        {
+            <div id="SucMSG" role="dialog" class="modalpopup SucMSG" style=" display:block">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <h1 style="padding:20px 10px;font-size:18px">
+                            <label id="MSG">Data Export Successfully</label>
+                        </h1>
+
+                        <div style="padding: 5px 20px">
+
+                            <button style="width:15%;float: right" onclick="modalDismiss()" type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        <script type="text/javascript" src="~/Scripts/ScrollableTablePlugin_1.0_min.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                //$('#WebGrid').Scrollable({
+                //    ScrollHeight: 280
+                //});
+            });
+        </script>
+
+
+    </div>
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
+    <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
+    <script>
+
+        var els = document.getElementsByClassName("aff");
+        // loops els
+        for (var i = 0, x = els.length; i < x; i++) {
+
+            els[i].onclick = function () {
+
+                var body = document.getElementsByClassName('body')[0];
+                body.style.opacity = "0.5";
+                document.querySelector("#loader").style.display = "block";
+
+
+            }
+        }
+        function modalDismiss() {
+            $('#MSG').text("")
+            var element = document.getElementsByClassName('SucMSG')[0];
+            element.style.display = "none";
+        }
+
+
+        function Importsubmit() {
+            var startDate = document.getElementById("startDate").value
+            var endDate = document.getElementById("endDate").value
+            var chkstartDate = startDate;
+            var chkendDate = endDate;
+
+            if (chkstartDate.length == 8) {
+                chkstartDate = chkstartDate.slice(0, 2) + '/' + chkstartDate.slice(2, 4) + '/' + chkstartDate.slice(4);
+            }
+
+            //alert("startDate" + chkstartDate);
+            if (validatedate(chkstartDate) == false) {
+                $('#MSG').text("Please Enter Valid From Date(DDMMYYYY)")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+            if (chkendDate.length == 8) {
+                chkendDate = chkendDate.slice(0, 2) + '/' + chkendDate.slice(2, 4) + '/' + chkendDate.slice(4);
+            }
+
+            //alert("endDate" + chkendDate);
+            validatedate(chkendDate);
+
+            if (validatedate(chkendDate) == false) {
+                $('#MSG').text("Please Enter Valid To Date(DDMMYYYY)")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+
+            if (process(chkstartDate) > process(chkendDate)) {
+                $('#MSG').text("To Date Greathen or Equal to From Date")
+                var element = document.getElementsByClassName('SucMSG')[0];
+                element.style.display = "block";
+                return false;
+            }
+            document.getElementById("InputID").value = "I";
+            var body = document.getElementsByClassName('body')[0];
+            body.style.opacity = "0.5";
+            document.querySelector("#loader").style.display = "block";
+
+            $.ajax({
+                url: '@Url.Action("Index", "Sales")',
+                type: 'POST',
+                data: { 'startDate': startDate, 'endDate': endDate, 'InputID': "I" },
+                success: function (result) {
+
+                    if (result.errorcode == 0) {
+                        //$('#MSG').text("Data Imported successfully")
+                        //$("#SucMSG").modal('show');
+
+                        var startDate = document.getElementById("startDate").value
+                        var endDate = document.getElementById("endDate").value
+                        var url2 = "?startDate=" + startDate + "&endDate=" + endDate + "&InputID=S&page=1";
+                        var url1 = '@Url.Action("Index", "Sales")';
+                        var url=url1+url2
+                        window.location.href = url;
+                    } else {
+                         var startDate = document.getElementById("startDate").value
+                        var endDate = document.getElementById("endDate").value
+                        var url2 = "?startDate=" + startDate + "&endDate=" + endDate + "&InputID=S&page=1";
+                        var url1 = '@Url.Action("Index", "Sales")';
+                        var url=url1+url2
+                        window.location.href = url;
+
+                    }
+                        },
+                error: function (error) {
+                            //$('#MSG').text("Data Imported Failed")
+                            //$("#SucMSG").modal('show');
+                            element.style.display = "none";
+                            body.style.opacity = "1";
+                            console.log(error);
+                            document.body.style.overflow = "auto";
+                            body.style.overflow = "auto";
+                        }
+
+            });
+
+        }
+        function pageonclick() {
+
+            var body = document.getElementsByClassName('body')[0];
+            body.style.opacity = "0.5";
+            document.querySelector("#loader").style.display = "block";
+        }
+
+         function Searchsubmit() {
+
+             var startDate = document.getElementById("startDate").value
+             var endDate = document.getElementById("endDate").value
+             var chkstartDate = startDate;
+             var chkendDate = endDate;
+
+             if (chkstartDate.length == 8) {
+                 chkstartDate = chkstartDate.slice(0, 2) + '/' + chkstartDate.slice(2, 4) + '/' + chkstartDate.slice(4);
+             }
+
+             //alert("startDate" + chkstartDate);
+             if (validatedate(chkstartDate) == false) {
+                 $('#MSG').text("Please Enter Valid From Date(DDMMYYYY)")
+                 var element = document.getElementsByClassName('SucMSG')[0];
+                 element.style.display = "block";
+                 return false;
+             }
+             if (chkendDate.length == 8) {
+                 chkendDate = chkendDate.slice(0, 2) + '/' + chkendDate.slice(2, 4) + '/' + chkendDate.slice(4);
+             }
+
+             //alert("endDate" + chkendDate);
+             validatedate(chkendDate);
+
+             if (validatedate(chkendDate) == false) {
+                 $('#MSG').text("Please Enter Valid To Date(DDMMYYYY)")
+                 var element = document.getElementsByClassName('SucMSG')[0];
+                 element.style.display = "block";
+                 return false;
+             }
+
+             if (process(chkstartDate) > process(chkendDate)) {
+                 $('#MSG').text("To Date Greathen or Equal to From Date")
+                 var element = document.getElementsByClassName('SucMSG')[0];
+                 element.style.display = "block";
+                 return false;
+             }
+
+
+             document.getElementById("InputID").value = "S";
+             var body = document.getElementsByClassName('body')[0];
+             body.style.opacity = "0.5";
+             document.querySelector("#loader").style.display = "block";
+
+             //startDate = chkstartDate.toString().split("/").reverse().join("/");
+
+                        var url2 = "?startDate=" + startDate + "&endDate=" + endDate + "&InputID=S&page=1";
+                        var url1 = '@Url.Action("Index", "Sales")';
+                        var url=url1+url2
+                        window.location.href = url;
+
+
+        }
+
+
+
+
+        function download(filename, Name,stream) {
+
+            var element = document.createElement('a');
+            element.setAttribute('href', Name + encodeURIComponent(filename));
+            element.setAttribute('download', filename);
+            document.body.appendChild(element);
+            element.click();
+
+        }
+
+         document.onreadystatechange = function () {
+            var body = document.getElementsByClassName('body')[0];
+            if (document.readyState !== "complete") {
+
+                body.style.opacity = "0.5";
+                document.querySelector("#loader").style.display = "block";
+            } else {
+                document.querySelector("#loader").style.display = "none";
+                body.style.opacity = "1";
+            }
+        };
+    </script>
+</body>
+</html>
+
