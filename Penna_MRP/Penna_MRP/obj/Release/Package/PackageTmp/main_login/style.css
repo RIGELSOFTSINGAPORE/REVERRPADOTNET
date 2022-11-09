@@ -1,0 +1,248 @@
+html {
+    /*background-image: url('robo.jpg');*/
+    /*background-image: url('login.png');*/
+    background-image: url('RPA.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+}
+
+img{
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+#login-button {
+    cursor: pointer;
+    position: absolute;
+    /* top: -540px;*/
+    top: 0;
+    left: 0;
+    right: 120px;
+    bottom: 0;
+    padding: 20px;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 90%;
+    background: rgba(3, 3, 3, 0.9);
+    overflow: hidden;
+    opacity: 0.7;
+    box-shadow: 10px 10px 30px #000;
+}
+
+/* Login container */
+#container{
+  position: absolute;
+  width: 400px;
+  height: 350px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.70);
+  box-shadow: 0 15px 25px rgba(0,0,0,.5);
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: #fff;
+  position: absolute;
+  padding: 30px 30px;
+  display: none;
+}
+
+.close-btn{
+  position: absolute;
+  cursor: pointer;
+  font-family: 'Open Sans Condensed', sans-serif;
+  line-height: 18px;
+  top: 3px;
+  right: 3px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 10px;
+  opacity: inherit;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.close-btn:hover{
+  opacity: .5;
+}
+
+/* Heading */
+h1{
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  margin-top: 0px;
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+  text-shadow: 3px 3px 10px #000;
+}
+
+/* Inputs */
+a,
+input{
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  position: relative;
+  width: 85%;
+  display: block;
+  margin: 20px auto;
+  font-size: 17px;
+  color: #fff;
+  padding: 9px;
+  border-radius: 6px;
+  border: none;
+  background: rgba(3, 3, 3, 0.65);
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus{
+  outline: none;
+  box-shadow: 3px 3px 10px #333;
+  background: rgba(3,3,3,.35);
+}
+
+/* Placeholders */
+::-webkit-input-placeholder {
+   color: #ddd;  }
+:-moz-placeholder { /* Firefox 18- */
+   color: red;  }
+::-moz-placeholder {  /* Firefox 19+ */
+   color: red;  }
+:-ms-input-placeholder {  
+   color: #333;  }
+
+/* Link */
+a{
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 10px 10px;
+  background: rgba(135, 136, 138, 0.44);
+}
+
+a:hover{
+  opacity: 0.7;
+}
+
+#remember-container{
+  position: relative;
+  margin: -5px 20px;
+}
+
+.checkbox {
+  position: relative;
+  cursor: pointer;
+	-webkit-appearance: none;
+	padding: 5px;
+	border-radius: 4px;
+  background: rgba(0, 0, 0, 0.70);
+	display: inline-block;
+	top: -13px;
+  width: 16px;
+  height: 15px;
+}
+
+.checkbox:checked:active {
+	box-shadow: rgba(135, 136, 138, 0.35);, inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.checkbox:checked {
+  background: rgba(0, 0, 0, 0.70);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.5);
+	color: #fff;
+}
+
+.checkbox:checked:after {
+	content: '\2714';
+	font-size: 10px;
+	position: absolute;
+	top: 0px;
+	left: 4px;
+	color: #fff;
+}
+
+#remember{
+  position: absolute;
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
+  color: rgba(255, 255, 255, 0.70);
+  top: 7px;
+  left: 20px;
+}
+
+#forgotten{
+  position: absolute;
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
+  color: rgba(255, 255, 255, 0.85);
+  right: 0px;
+  top: 8px;
+  cursor: pointer;
+  -webkit-transition: all 2s ease-in-out;
+  -moz-transition: all 2s ease-in-out;
+  -o-transition: all 2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+#forgotten:hover{
+  color: rgba(255, 255, 255, 0.85);
+}
+
+#forgotten-container{
+  position: absolute;
+  width: 400px;
+  height: 250px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.65);
+  box-shadow: 0 15px 25px rgba(0,0,0,.5);
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: #fff;
+  position: absolute;
+  padding: 30px 30px;
+  display: none;
+}
+
+.password-btn{
+  background: rgba(135, 136, 138, 0.44);
+}
+
+.btnlogin {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    position: relative;
+    width: 85%;
+    display: block;
+    margin: 20px auto;
+    font-size: 17px;
+    color: #fff;
+    padding: 9px;
+    border-radius: 6px;
+    border: none;
+    background: rgba(3, 3, 3, 0.65);
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 10px 10px;
+    background: rgba(135, 136, 138, 0.44);
+}

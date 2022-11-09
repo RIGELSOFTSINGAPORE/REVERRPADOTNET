@@ -1,0 +1,56 @@
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Common\bin\Debug\Kaisokku_Common.dll.config
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Common\bin\Debug\Kaisokku_Common.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Common\bin\Debug\Kaisokku_Common.pdb
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Common\bin\Debug\EntityFramework.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Common\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Common\bin\Debug\log4net.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Common\bin\Debug\EntityFramework.xml
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Common\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Common\bin\Debug\log4net.xml
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Common\obj\Debug\Kaisokku_Common.csproj.AssemblyReference.cache
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Common\obj\Debug\Kaisokku_Common.csproj.CoreCompileInputs.cache
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Common\obj\Debug\Kaisokku_Common.csproj.CopyComplete
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Common\obj\Debug\Kaisokku_Common.dll
+D:\Projects\Kaisokku\Source code backup\2021-10-27\Kaisokku\Kaisokku_Common\obj\Debug\Kaisokku_Common.pdb
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Common\bin\Debug\Kaisokku_Common.dll.config
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Common\bin\Debug\Kaisokku_Common.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Common\bin\Debug\Kaisokku_Common.pdb
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Common\bin\Debug\EntityFramework.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Common\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Common\bin\Debug\log4net.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Common\bin\Debug\EntityFramework.xml
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Common\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Common\bin\Debug\log4net.xml
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Common\obj\Debug\Kaisokku_Common.csproj.AssemblyReference.cache
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Common\obj\Debug\Kaisokku_Common.csproj.CoreCompileInputs.cache
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Common\obj\Debug\Kaisokku_Common.csproj.CopyComplete
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Common\obj\Debug\Kaisokku_Common.dll
+D:\Projects\Kaisokku\Kaisokku_New\Kaisokku_Common\obj\Debug\Kaisokku_Common.pdb
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\bin\Debug\Kaisokku_Common.dll.config
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\bin\Debug\Kaisokku_Common.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\bin\Debug\Kaisokku_Common.pdb
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\bin\Debug\EntityFramework.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\bin\Debug\log4net.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\bin\Debug\EntityFramework.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\bin\Debug\log4net.xml
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\obj\Debug\Kaisokku_Common.csproj.CoreCompileInputs.cache
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\obj\Debug\Kaisokku_Common.csproj.CopyComplete
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\obj\Debug\Kaisokku_Common.dll
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\obj\Debug\Kaisokku_Common.pdb
+D:\Projects\Kaisokku\Kaisokku\Kaisokku\Kaisokku_Common\obj\Debug\Kaisokku_Common.csproj.AssemblyReference.cache
+D:\Kaisokku\Kaisokku\Kaisokku_Common\bin\Debug\Kaisokku_Common.dll.config
+D:\Kaisokku\Kaisokku\Kaisokku_Common\bin\Debug\Kaisokku_Common.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Common\bin\Debug\Kaisokku_Common.pdb
+D:\Kaisokku\Kaisokku\Kaisokku_Common\bin\Debug\EntityFramework.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Common\bin\Debug\EntityFramework.SqlServer.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Common\bin\Debug\log4net.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Common\bin\Debug\EntityFramework.xml
+D:\Kaisokku\Kaisokku\Kaisokku_Common\bin\Debug\EntityFramework.SqlServer.xml
+D:\Kaisokku\Kaisokku\Kaisokku_Common\bin\Debug\log4net.xml
+D:\Kaisokku\Kaisokku\Kaisokku_Common\obj\Debug\Kaisokku_Common.csproj.AssemblyReference.cache
+D:\Kaisokku\Kaisokku\Kaisokku_Common\obj\Debug\Kaisokku_Common.csproj.CoreCompileInputs.cache
+D:\Kaisokku\Kaisokku\Kaisokku_Common\obj\Debug\Kaisokku_Common.csproj.CopyComplete
+D:\Kaisokku\Kaisokku\Kaisokku_Common\obj\Debug\Kaisokku_Common.dll
+D:\Kaisokku\Kaisokku\Kaisokku_Common\obj\Debug\Kaisokku_Common.pdb

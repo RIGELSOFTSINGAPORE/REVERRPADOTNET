@@ -1,0 +1,27 @@
+D:\Penna\PennaMRP\Kaisokku\Penna_Common\bin\Debug\Penna_Common.dll.config
+D:\Penna\PennaMRP\Kaisokku\Penna_Common\bin\Debug\Penna_Common.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_Common\bin\Debug\Penna_Common.pdb
+D:\Penna\PennaMRP\Kaisokku\Penna_Common\bin\Debug\EntityFramework.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_Common\bin\Debug\EntityFramework.SqlServer.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_Common\bin\Debug\log4net.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_Common\bin\Debug\EntityFramework.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_Common\bin\Debug\EntityFramework.SqlServer.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_Common\bin\Debug\log4net.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_Common\obj\Debug\Penna_Common.csproj.CoreCompileInputs.cache
+D:\Penna\PennaMRP\Kaisokku\Penna_Common\obj\Debug\Penna_Common.csproj.CopyComplete
+D:\Penna\PennaMRP\Kaisokku\Penna_Common\obj\Debug\Penna_Common.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_Common\obj\Debug\Penna_Common.pdb
+D:\Penna\PennaMRP\Penna MRP\Penna_Common\bin\Debug\Penna_Common.dll.config
+D:\Penna\PennaMRP\Penna MRP\Penna_Common\bin\Debug\Penna_Common.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Common\bin\Debug\Penna_Common.pdb
+D:\Penna\PennaMRP\Penna MRP\Penna_Common\bin\Debug\EntityFramework.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Common\bin\Debug\EntityFramework.SqlServer.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Common\bin\Debug\log4net.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Common\bin\Debug\EntityFramework.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_Common\bin\Debug\EntityFramework.SqlServer.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_Common\bin\Debug\log4net.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_Common\obj\Debug\Penna_Common.csproj.AssemblyReference.cache
+D:\Penna\PennaMRP\Penna MRP\Penna_Common\obj\Debug\Penna_Common.csproj.CoreCompileInputs.cache
+D:\Penna\PennaMRP\Penna MRP\Penna_Common\obj\Debug\Penna_Common.csproj.CopyComplete
+D:\Penna\PennaMRP\Penna MRP\Penna_Common\obj\Debug\Penna_Common.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Common\obj\Debug\Penna_Common.pdb

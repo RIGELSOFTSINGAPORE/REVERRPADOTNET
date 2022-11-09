@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+@{Layout = null;
+   }
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+    <style>
+        .demo {
+            color: white;
+            padding: 10px 25px;
+            border-radius: 20px;
+            background: #da291c;
+        }
+    </style>
+</head>
+<body>
+
+    @if (Session["UserName"] == null || Session["UserName"] == "")
+    {
+        <h1>Session Expired</h1>
+        <h2>Session was Expired please goto the login page</h2>
+       
+       
+            <a href="@Url.Action("Index","Login")" class="demo" >Login</a>
+        
+    }
+    else
+    {
+        <h1>Error.</h1>
+        <h2>An error occurred while processing your request.</h2>
+
+    }
+
+</body>
+</html>

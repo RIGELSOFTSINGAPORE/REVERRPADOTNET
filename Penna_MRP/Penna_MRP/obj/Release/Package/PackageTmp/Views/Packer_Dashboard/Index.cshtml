@@ -1,0 +1,981 @@
+﻿@using Penna_Common;
+@*@model Penna_PackerDetails*@
+@model IEnumerable<Penna_Common.Penna_PackerDetails>
+@{
+    Layout = "~/Views/Shared/_Layout_packer.cshtml";
+    var busted = ViewData["bustedbags"] as PagedList.PagedList<Penna_PackerDetails>;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Packer Dashboard</title>
+    <style>
+        input[type=button]:hover {
+            cursor: pointer;
+        }
+
+        body {
+            font-size: 14px;
+        }
+
+        .boxshadow {
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+
+        .contain1 {
+            min-height: 300px;
+            width: 100%;
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px 50px;
+        }
+
+        .contain2 {
+            min-height: 300px;
+            width: 100%;
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px 50px;
+            margin-top: 40px;
+        }
+
+        h1 {
+            background: none;
+            color: black;
+            padding: 0;
+            font-size: 26px;
+        }
+
+        .drpdown {
+            border: 1.5px solid rgba(112,112,112,1);
+            width: 152px;
+            height: 32px;
+            border-radius: 4px;
+        }
+
+        .txtbox {
+            border: 1.5px solid rgba(112,112,112,1);
+            width: 90px;
+            height: 32px !important;
+            border-radius: 4px;
+        }
+
+        th {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        .startbatch {
+            background: rgba(5,133,186,1);
+            color: white;
+            font-weight: bold;
+            width: 100%;
+            height: 32px !important;
+            border-radius: 4px;
+            border: 2px solid rgba(5,133,186,1);
+        }
+
+        .stopbatch {
+            background: #fff;
+            color: black;
+            font-weight: bold;
+            border: 2px solid rgba(5,133,186,1);
+            width: 100%;
+            height: 32px !important;
+            border-radius: 4px;
+        }
+
+        .activeh1 {
+            background: rgba(244,244,244,1);
+            border-bottom: 2px solid rgba(5,133,186,1);
+        }
+
+        .h1border {
+            border-bottom: 2px solid #dcbfe9;
+            border-radius: 0px;
+        }
+
+        .table2 {
+            border: 2px solid #dcbfe9 !important;
+            border-left: 2px solid #dcbfe9 !important;
+            border-radius: 16px !important;
+            padding: 10px;
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 1em;
+            overflow: hidden;
+        }
+
+        .table2header {
+            border-collapse: collapse;
+            border: 2px solid #dcbfe9;
+            border-radius: 16px;
+            background: #F1F1F1;
+            padding: 10px;
+            height: 32px;
+            text-align: left;
+        }
+
+        .tr {
+            border: 2px solid #dcbfe9;
+        }
+
+        .hoverbackground::after {
+            background-color: purple;
+        }
+
+        .hoverbackground:hover {
+            background-color: purple;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+
+        <div class="boxshadow contain1">
+            <div>
+
+
+                @*<h1>
+                        Dashboard
+                    </h1>*@
+                <div>
+                    <table class="table-responsive">
+                        <tr>
+                            <th></th>
+                            <th>Delivery No</th>
+                            <th>Vehcile No</th>
+                            <th>MRP</th>
+                            <th>Set Count</th>
+                            <th>Status</th>
+                            <th>Counter</th>
+                            <th>Grade</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:bold">Packer1</td>
+                            <td>
+                                @Html.DropDownList("DeliveryNo1", null, "", htmlAttributes: new { onchange = "Packer1changed()", @class = "txtbox", @style = "Width:115px" })
+                            </td>
+
+                            <td><input readonly="readonly" id="VNo1" type="text" class="txtbox" /></td>
+                            <td><input readonly="readonly" id="MRP1" type="text" class="txtbox" /></td>
+                            <td><input readonly="readonly" id="Setcount1" type="text" class="txtbox" /></td>
+                            <td><input readonly="readonly" id="Status1" type="text" class="txtbox" /></td>
+                            <td><input readonly="readonly" id="Counter1" type="text" class="txtbox" /></td>
+                            <td><input readonly="readonly" id="Grade1" type="text" class="txtbox" /></td>
+                            <td><input type="button" onclick="startbatch1()" id="startbatch1" style="pointer-events:none;" class="startbatch" value="Start Batch" /></td>
+                            <td><input type="button" onclick="stopbatch1()" id="stopbatch1" style="pointer-events:none;" class="stopbatch" value="stop Batch" /></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:bold">Packer2</td>
+                            <td>
+                                @Html.DropDownList("DeliveryNo2", null, "", htmlAttributes: new { onchange = "Packer2changed()", @class = "txtbox", @style = "Width:115px" })
+                            </td>
+                            <td><input id="VNo2" readonly="readonly" type="text" class="txtbox" /></td>
+                            <td><input readonly="readonly" id="MRP2" type="text" class="txtbox" /></td>
+                            <td><input readonly="readonly" id="Setcount2" type="text" class="txtbox" /></td>
+                            <td><input readonly="readonly" id="Status2" type="text" class="txtbox" /></td>
+                            <td><input readonly="readonly" id="Counter2" type="text" class="txtbox" /></td>
+                            <td><input readonly="readonly" id="Grade2" type="text" class="txtbox" /></td>
+                            <td><input type="button" onclick="startbatch2()" id="startbatch2" style="pointer-events:none;" class="startbatch" value="Start Batch" /></td>
+                            <td><input type="button" onclick="stopbatch2()" id="stopbatch2" style="pointer-events:none;" class="stopbatch" value="stop Batch" /></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:bold">Packer3</td>
+                            <td>
+                                @Html.DropDownList("DeliveryNo3", null, "", htmlAttributes: new { onchange = "Packer3changed()", @class = "txtbox", @style = "Width:115px" })
+                            </td>
+                            <td><input readonly="readonly" id="VNo3" type="text" class="txtbox" /></td>
+                            <td><input readonly="readonly" id="MRP3" type="text" class="txtbox" /></td>
+                            <td><input readonly="readonly" id="Setcount3" type="text" class="txtbox" /></td>
+                            <td><input readonly="readonly" id="Status3" type="text" class="txtbox" /></td>
+                            <td><input readonly="readonly" id="Counter3" type="text" class="txtbox" /></td>
+                            <td><input readonly="readonly" id="Grade3" type="text" class="txtbox" /></td>
+                            <td><input type="button" onclick="startbatch3()" id="startbatch3" style="pointer-events:none;" class="startbatch" value="Start Batch" /></td>
+                            <td><input type="button" onclick="stopbatch3()" id="stopbatch3" style="pointer-events:none;" class="stopbatch" value="stop Batch" /></td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:bold">Packer4</td>
+                            <td>
+                                @Html.DropDownList("DeliveryNo4", null, "", htmlAttributes: new { onchange = "Packer4changed()", @class = "txtbox", @style = "Width:115px" })
+                            </td>
+                            <td><input readonly="readonly" id="VNo4" type="text" class="txtbox" /></td>
+                            <td><input readonly="readonly" id="MRP4" type="text" class="txtbox" /></td>
+                            <td><input readonly="readonly" id="Setcount4" type="text" class="txtbox" /></td>
+                            <td><input readonly="readonly" id="Status4" type="text" class="txtbox" /></td>
+                            <td><input readonly="readonly" id="Counter4" type="text" class="txtbox" /></td>
+                            <td><input readonly="readonly" id="Grade4" type="text" class="txtbox" /></td>
+                            <td><input type="button" onclick="startbatch4()" id="startbatch4" style="pointer-events:none;" class="startbatch" value="Start Batch" /></td>
+                            <td><input type="button" onclick="stopbatch4()" id="stopbatch4" style="pointer-events:none;" class="stopbatch" value="stop Batch" /></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="boxshadow contain2">
+                <h1 class="h1border" style="display:block" id="BagsH1">
+
+                    <a class="activeh1" onclick="bags()">
+                        Bags
+                    </a>
+                    <a style="margin-left:20px" onclick="bustedbag()">
+                        Busted Bags
+                    </a>
+
+
+
+                </h1>
+                <h1 class="h1border" style="display:none" id="BustedBagsH1">
+                    <a onclick="bags()">
+                        Bags
+                    </a>
+                    <a class="activeh1" style="margin-left:20px" onclick="bustedbag()">
+                        Busted Bags
+                    </a>
+                </h1>
+
+                <div id="bustedbag" style="display:none">
+                    <br />
+                    <label>Packer</label>
+                    @Html.DropDownList("packer", null, "", htmlAttributes: new { @class = "txtbox", @style = "Width:140px", @id = "packers" })
+                    @Html.TextBox("NoofBustedbags", "", new { @class = "txtbox", @style = "width:20%", @id = "NoofBustedbags" })
+                    <button style="width: 10%;" id="GetBustedBag" onclick="GetBustedBag()" class="startbatch">Search</button>
+                    <button style="width: 10%; pointer-events: none" id="clickStartbatch" onclick="clickStartbatch()" class="startbatch">Start Batch</button>
+                </div>
+                <div class="table-responsive">
+                    <table class="table2">
+
+                        <tr class="table2header">
+                            <th style="text-align:left;padding:15px;">Delivery No</th>
+                            <th style="text-align:left;padding:15px;">Vehicle No</th>
+                            <th style="text-align:left;padding:15px;">Message Format</th>
+                            <th style="text-align:left;padding:15px;">MRP</th>
+                            <th style="text-align:left;padding:15px;">Grade</th>
+                            <th style="text-align:left;padding:15px;">Set Count</th>
+                        </tr>
+
+                        @if (Model != null)
+                        {
+                            <tbody id="busted" style="display: contents">
+
+                                @if (ViewBag.bustedbag == "yes")
+                                {
+                                    foreach (var item in TempData["bustedbags"] as List<Penna_PackerDetails>)
+                                    {
+
+                                        <tr class="tr" id="@item.packing_Status_details_PKID" onclick="busted(@item.packing_Status_details_PKID)">
+                                            <td>
+                                                @item.Delivery_Number
+                                            </td>
+                                            <td>
+                                                @item.Vehicle_Number
+                                            </td>
+                                            <td>
+                                                @item.Message_Format
+                                            </td>
+                                            <td>
+                                                @item.MRP
+                                            </td>
+                                            <td>
+                                                @item.Grade
+                                            </td>
+                                            <td>
+                                                @item.Set_Count
+                                            </td>
+
+                                        </tr>
+
+                                    }
+                                }
+                            </tbody>
+                            <tbody id="Bags" style="display: contents">
+                                @foreach (var item in Model)
+                                {
+                                    <tr class="tr">
+                                        <td>
+                                            @item.Delivery_Number
+                                        </td>
+                                        <td>
+                                            @item.Vehicle_Number
+                                        </td>
+                                        <td>
+                                            @item.Message_Format
+                                        </td>
+                                        <td>
+                                            @item.MRP
+                                        </td>
+                                        <td>
+                                            @item.Grade
+                                        </td>
+                                        <td>
+                                            @item.Set_Count
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    @if (ViewBag.JavaScriptFunction != null)
+    {
+        <script type="text/javascript">
+
+            document.getElementById("BagsH1").style.display = "none";
+            document.getElementById("BustedBagsH1").style.display = "contents";
+            document.getElementById("Bags").style.display = "none";
+            document.getElementById("bustedbag").style.display = "block";
+            document.getElementById("busted").style.display = "contents";
+
+        </script>
+    }
+<script>
+            function bags() {
+                document.getElementById("BagsH1").style.display = "contents";
+                document.getElementById("BustedBagsH1").style.display = "none";
+                document.getElementById("Bags").style.display = "contents";
+                document.getElementById("busted").style.display = "none";
+                document.getElementById("bustedbag").style.display = "none";
+        }
+        function bustedbagchanged() {
+        }
+        function bustedbag() {
+                document.getElementById("BagsH1").style.display = "none";
+                document.getElementById("BustedBagsH1").style.display = "contents";
+                document.getElementById("Bags").style.display = "none";
+                document.getElementById("bustedbag").style.display = "block";
+                document.getElementById("busted").style.display = "contents";
+            }
+            function Packer1changed() {
+                var DeliveryNo1 = $('#DeliveryNo1 :selected').val();
+                var fileData = new FormData();
+                fileData.append('ID', DeliveryNo1)
+
+                 $.ajax({
+                     url: '@Url.Action("GetPacker", "Packer_Dashboard")',
+                     type: 'POST',
+                     contentType: false,
+                     processData: false,
+                     data: fileData,
+                     success: function (result) {
+
+                        $('#VNo1').val(result.penna_PackerDetails.Vehicle_Number)
+                         $('#MRP1').val(result.penna_PackerDetails.MRP)
+                         $('#Setcount1').val(result.penna_PackerDetails.Set_Count)
+                         $('#Status1').val(result.penna_PackerDetails.Status)
+                         $('#Counter1').val(result.penna_PackerDetails.Busted_Bag_Count)
+                         $('#Grade1').val(result.penna_PackerDetails.Grade)
+
+                         if (result.penna_PackerDetails.Status == "STOPED") {
+                             document.getElementById("startbatch1").style.pointerEvents = "all";
+                             document.getElementById("stopbatch1").style.pointerEvents = "none";
+                         }
+                         else if (result.penna_PackerDetails.Status == "STARTED") {
+                             document.getElementById("startbatch1").style.pointerEvents = "none";
+                             document.getElementById("stopbatch1").style.pointerEvents = "all";
+                         }
+                         else {
+                             document.getElementById("startbatch1").style.pointerEvents = "all";
+                             document.getElementById("stopbatch1").style.pointerEvents = "none";
+                         }
+
+                     },
+                     error: function (error) {
+                         $('#VNo1').val("")
+                         $('#MRP1').val("")
+                         $('#Setcount1').val("")
+                         $('#Status1').val("")
+                         $('#Counter1').val("")
+                         $('#Grade1').val("")
+                         console.log(error);
+                     }
+
+                 });
+
+            }
+            function Packer2changed() {
+                var DeliveryNo2 = $('#DeliveryNo2 :selected').val();
+                var fileData = new FormData();
+                fileData.append('ID', DeliveryNo2)
+                 $.ajax({
+                     url: '@Url.Action("GetPacker", "Packer_Dashboard")',
+                     type: 'POST',
+                     contentType: false,
+                     processData: false,
+                     data: fileData,
+                     success: function (result) {
+
+                         $('#VNo2').val(result.penna_PackerDetails.Vehicle_Number)
+                         $('#MRP2').val(result.penna_PackerDetails.MRP)
+                         $('#Setcount2').val(result.penna_PackerDetails.Set_Count)
+                         $('#Status2').val(result.penna_PackerDetails.Status)
+                         $('#Counter2').val(result.penna_PackerDetails.Busted_Bag_Count)
+                         $('#Grade2').val(result.penna_PackerDetails.Grade)
+                         if (result.penna_PackerDetails.Status == "STOPED") {
+                             document.getElementById("startbatch2").style.pointerEvents = "all";
+                             document.getElementById("stopbatch2").style.pointerEvents = "none";
+                         }
+                         else if (result.penna_PackerDetails.Status == "STARTED") {
+                             document.getElementById("startbatch2").style.pointerEvents = "none";
+                             document.getElementById("stopbatch2").style.pointerEvents = "all";
+                         }
+                         else {
+                             document.getElementById("startbatch2").style.pointerEvents = "all";
+                             document.getElementById("stopbatch2").style.pointerEvents = "none";
+                         }
+                     },
+                     error: function (error) {
+                         console.log(error);
+                         $('#VNo2').val("")
+                         $('#MRP2').val("")
+                         $('#Setcount2').val("")
+                         $('#Status2').val("")
+                         $('#Counter2').val("")
+                         $('#Grade2').val("")
+                     }
+
+                 });
+
+            }
+            function Packer3changed() {
+                var DeliveryNo3 = $('#DeliveryNo3 :selected').val();
+                var fileData = new FormData();
+                fileData.append('ID', DeliveryNo3)
+
+                 $.ajax({
+                     url: '@Url.Action("GetPacker", "Packer_Dashboard")',
+                     type: 'POST',
+                     contentType: false,
+                     processData: false,
+                     data: fileData,
+                     success: function (result) {
+
+                         //console.log(result)
+                        $('#VNo3').val(result.penna_PackerDetails.Vehicle_Number)
+                         $('#MRP3').val(result.penna_PackerDetails.MRP)
+                         $('#Setcount3').val(result.penna_PackerDetails.Set_Count)
+                         $('#Status3').val(result.penna_PackerDetails.Status)
+                         $('#Counter3').val(result.penna_PackerDetails.Busted_Bag_Count)
+                         $('#Grade3').val(result.penna_PackerDetails.Grade)
+                         if (result.penna_PackerDetails.Status == "STOPED") {
+                             document.getElementById("startbatch3").style.pointerEvents = "all";
+                             document.getElementById("stopbatch3").style.pointerEvents = "none";
+                         }
+                         else if (result.penna_PackerDetails.Status == "STARTED") {
+                             document.getElementById("startbatch3").style.pointerEvents = "none";
+                             document.getElementById("stopbatch3").style.pointerEvents = "all";
+                         }
+                         else {
+                             document.getElementById("startbatch3").style.pointerEvents = "all";
+                             document.getElementById("stopbatch3").style.pointerEvents = "none";
+                         }
+                     },
+                     error: function (error) {
+                         console.log(error);
+                         $('#VNo3').val("")
+                         $('#MRP3').val("")
+                         $('#Setcount3').val("")
+                         $('#Status3').val("")
+                         $('#Counter3').val("")
+                         $('#Grade3').val("")
+                     }
+                 });
+            }
+            function Packer4changed() {
+                var DeliveryNo4 = $('#DeliveryNo4 :selected').val();
+                var fileData = new FormData();
+                fileData.append('ID', DeliveryNo4)
+                 $.ajax({
+                     url: '@Url.Action("GetPacker", "Packer_Dashboard")',
+                     type: 'POST',
+                     contentType: false,
+                     processData: false,
+                     data: fileData,
+                     success: function (result) {
+                        // console.log(result)
+                        $('#VNo4').val(result.penna_PackerDetails.Vehicle_Number)
+                         $('#MRP4').val(result.penna_PackerDetails.MRP)
+                         $('#Setcount4').val(result.penna_PackerDetails.Set_Count)
+                         $('#Status4').val(result.penna_PackerDetails.Status)
+                         $('#Counter4').val(result.penna_PackerDetails.Busted_Bag_Count)
+                         $('#Grade4').val(result.penna_PackerDetails.Grade)
+                         if (result.penna_PackerDetails.Status == "STOPED") {
+                             document.getElementById("startbatch4").style.pointerEvents = "all";
+                             document.getElementById("stopbatch4").style.pointerEvents = "none";
+                         }
+                         else if (result.penna_PackerDetails.Status == "STARTED") {
+                             document.getElementById("startbatch4").style.pointerEvents = "none";
+                             document.getElementById("stopbatch4").style.pointerEvents = "all";
+                         }
+                         else {
+                             document.getElementById("startbatch4").style.pointerEvents = "all";
+                             document.getElementById("stopbatch4").style.pointerEvents = "none";
+                         }
+                     },
+                     error: function (error) {
+                         console.log(error);
+                         $('#VNo4').val("")
+                         $('#MRP4').val("")
+                         $('#Setcount4').val("")
+                         $('#Status4').val("")
+                         $('#Counter4').val("")
+                         $('#Grade4').val("")
+                     }
+                 });
+            }
+    function startbatch1(deliverno) {
+        debugger;
+        document.getElementById("loading").style.display = "block";
+            var DeliveryNo1;
+            var fileData = new FormData();
+            if (deliverno == null) {
+                DeliveryNo1 = $('#DeliveryNo1 :selected').val();
+
+            }
+            else {
+                DeliveryNo1 = deliverno;
+                var NoofBustedbags = $('#NoofBustedbags').val();
+                fileData.append('NoofBustedbags', NoofBustedbags)
+            }
+
+                fileData.append('ID', DeliveryNo1)
+                fileData.append('Packer', 1)
+                 $.ajax({
+                     url: '@Url.Action("Startpacker", "Packer_Dashboard")',
+                     type: 'POST',
+                     contentType: false,
+                     processData: false,
+                     data: fileData,
+                     success: function (result) {
+
+                         console.log(result.Penna_PackerDetails);
+                         if (result.result <3) {
+                             document.getElementById("DeliveryNo1").style.pointerEvents = "none";
+                             document.getElementById("startbatch1").style.pointerEvents = "none";
+                             document.getElementById("startbatch1").style.background = "midnightblue";
+                             document.getElementById("stopbatch1").style.pointerEvents = "all";
+
+                            // var Vehicle_Number = result.packer. Vehicle_Number;
+                             $('#VNo1').val(result.Penna_PackerDetails[0].Vehicle_Number);
+                             $('#MRP1').val(result.Penna_PackerDetails[0]. MRP);
+                             $('#Setcount1').val(result.Penna_PackerDetails[0].Set_Count);
+                             $('#Counter1').val(result.Penna_PackerDetails[0].Busted_Bag_Count);
+                             $('#Grade1').val(result.Penna_PackerDetails[0].Grade);
+                             $('#Counter1').val(result.counter);
+                             $('#Status1').val("STARTED");
+                             document.getElementById("loading").style.display = "none";
+                             debugger
+                           //  sendRequest()
+                             function sendRequest() {
+                                 $.ajax({
+                                     url: '@Url.Action("getdata", "Packer_Dashboard")',
+                                     data: fileData,
+                                     success:
+                                         function (data) {
+                                             debugger;
+
+                                             if (data.data == 0) {
+                                                 $('#Counter1').val(data.result);
+                                                 sendRequest();
+                                             }
+                                             else {
+
+                                                 document.getElementById("DeliveryNo1").style.pointerEvents = "all";
+                                                 document.getElementById("startbatch1").style.pointerEvents = "all";
+                                                 document.getElementById("stopbatch1").style.pointerEvents = "none";
+                                                 document.getElementById("startbatch1").style.background = "rgba(5,133,186,1)";
+                                                 $('#Status1').val("STOPED")
+                                             }
+                                         }
+                                 });
+                             };
+                         }
+                         else {
+                             document.getElementById("loading").style.display = "none";
+                             document.getElementById("MSG").style.display = "block";
+                             document.getElementById("message").innerText = "Please check your connection";
+                         }
+                     },
+                     error: function (error) {
+                         document.getElementById("loading").style.display = "none";
+                         document.getElementById("MSG").style.display = "block";
+                         document.getElementById("message").innerText = "Please check your connection";
+                         console.log(error);
+                     }
+
+                 });
+            }
+    function startbatch2(deliverno) {
+        document.getElementById("loading").style.display = "block";
+            var DeliveryNo2;
+            var fileData = new FormData();
+            if (deliverno == null) {
+                DeliveryNo2 = $('#DeliveryNo2 :selected').val();
+
+            }
+            else {
+                DeliveryNo2 = deliverno;
+                var NoofBustedbags = $('#NoofBustedbags').val();
+                fileData.append('NoofBustedbags', NoofBustedbags)
+            }
+
+                fileData.append('ID', DeliveryNo2)
+                fileData.append('Packer', 2)
+                 $.ajax({
+                     url: '@Url.Action("Startpacker", "Packer_Dashboard")',
+                     type: 'POST',
+                     contentType: false,
+                     processData: false,
+                     data: fileData,
+                     success: function (result) {
+                         if (result.result <3) {
+                             document.getElementById("DeliveryNo2").style.pointerEvents = "none";
+                             document.getElementById("startbatch2").style.pointerEvents = "none";
+                             document.getElementById("stopbatch2").style.pointerEvents = "all";
+                             document.getElementById("startbatch2").style.background = "midnightblue";
+                             $('#Status2').val("STARTED")
+                             $('#VNo2').val(result.packerdetails[0].Vehicle_Number);
+                             $('#MRP2').val(result.packerdetails[0].MRP);
+                             $('#Setcount2').val(result.packerdetails[0].Set_Count);
+                            // $('#Counter2').val(result.packerdetails.Busted_Bag_Count);
+                             $('#Grade2').val(result.packerdetails[0].Grade);
+                             $('#Counter2').val(result.counter);
+                             document.getElementById("loading").style.display = "none";
+                             //sendRequest2()
+                             function sendRequest2() {
+                                 $.ajax({
+                                     url: '@Url.Action("getdata", "Packer_Dashboard")',
+                                     data: fileData,
+                                     success:
+                                         function (data) {
+                                             debugger;
+
+                                             if (data.data == 0) {
+                                                 $('#Counter2').val(data.result);
+                                                 sendRequest2();
+                                             }
+                                             else {
+
+                                                 document.getElementById("DeliveryNo2").style.pointerEvents = "all";
+                                                 document.getElementById("startbatch2").style.pointerEvents = "all";
+                                                 document.getElementById("stopbatch2").style.pointerEvents = "none";
+                                                 document.getElementById("startbatch2").style.background = "rgba(5,133,186,1)";
+                                                 $('#Status2').val("STOPED")
+                                             }
+                                         }
+                                 });
+                             };
+                         }
+                         else {
+                             document.getElementById("loading").style.display = "none";
+                             document.getElementById("MSG").style.display = "block";
+                             document.getElementById("message").innerText = "Please check your connection";
+                         }
+                     },
+                     error: function (error) {
+                         document.getElementById("loading").style.display = "none";
+                         document.getElementById("MSG").style.display = "block";
+                         document.getElementById("message").innerText = "Please check your connection";
+                         console.log(error);
+                     }
+                 });
+            }
+    function startbatch3(deliverno) {
+        document.getElementById("loading").style.display = "block";
+            var DeliveryNo3;
+            var fileData = new FormData();
+            if (deliverno == null) {
+                DeliveryNo3 = $('#DeliveryNo3 :selected').val();
+
+            }
+            else {
+                DeliveryNo3 = deliverno;
+                var NoofBustedbags = $('#NoofBustedbags').val();
+                fileData.append('NoofBustedbags', NoofBustedbags)
+            }
+
+            fileData.append('ID', DeliveryNo3)
+            fileData.append('Packer', 3)
+                 $.ajax({
+                     url: '@Url.Action("Startpacker", "Packer_Dashboard")',
+                     type: 'POST',
+                     contentType: false,
+                     processData: false,
+                     data: fileData,
+                     success: function (result) {
+                         if (result.result <3) {
+                             document.getElementById("DeliveryNo3").style.pointerEvents = "none";
+                             document.getElementById("startbatch3").style.pointerEvents = "none";
+                             document.getElementById("stopbatch3").style.pointerEvents = "all";
+                             document.getElementById("startbatch3").style.background = "midnightblue";
+                             $('#Status3').val("STARTED")
+                             $('#VNo3').val(result.packerdetails[0].Vehicle_Number);
+                             $('#MRP3').val(result.packerdetails[0].MRP);
+                             $('#Setcount3').val(result.packerdetails[0].Set_Count);
+                             $('#Counter3').val(result.counter);
+                             $('#Grade3').val(result.packerdetails[0].Grade);
+                             document.getElementById("loading").style.display = "none";
+                             //sendRequest3()
+                             function sendRequest3() {
+                                 $.ajax({
+                                     url: '@Url.Action("getdata", "Packer_Dashboard")',
+                                     success:
+                                         function (data) {
+                                             debugger;
+
+                                             if (data.data == 0) {
+                                                 $('#Counter3').val(data.result);
+                                                 sendRequest3();
+                                             }
+                                             else {
+
+                                                 document.getElementById("DeliveryNo3").style.pointerEvents = "all";
+                                                 document.getElementById("startbatch3").style.pointerEvents = "all";
+                                                 document.getElementById("stopbatch3").style.pointerEvents = "none";
+                                                 document.getElementById("startbatch3").style.background = "rgba(5,133,186,1)";
+                                                 $('#Status3').val("STOPED")
+                                             }
+                                         }
+                                 });
+                             };
+                         }
+                         else {
+                             document.getElementById("loading").style.display = "none";
+                             document.getElementById("MSG").style.display = "block";
+                             document.getElementById("message").innerText = "Please check your connection";
+                         }
+                     },
+                     error: function (error) {
+                         document.getElementById("loading").style.display = "none";
+                         document.getElementById("MSG").style.display = "block";
+                         document.getElementById("message").innerText = "Please check your connection";
+                         console.log(error);
+                     }
+                 });
+            }
+    function startbatch4(deliverno) {
+        document.getElementById("loading").style.display = "block";
+            var fileData = new FormData();
+            var DeliveryNo4;
+            if (deliverno == null) {
+                DeliveryNo4 = $('#DeliveryNo4 :selected').val();
+            }
+            else {
+                DeliveryNo4 = deliverno;
+                var NoofBustedbags = $('#NoofBustedbags').val();
+                fileData.append('NoofBustedbags', NoofBustedbags)
+            }
+
+                fileData.append('ID', DeliveryNo4)
+                fileData.append('Packer', 3)
+                 $.ajax({
+                     url: '@Url.Action("Startpacker", "Packer_Dashboard")',
+                     type: 'POST',
+                     contentType: false,
+                     processData: false,
+                     data: fileData,
+                     success: function (result) {
+                         if (result.result < 3) {
+                             $('#Status4').val("STARTED")
+                             document.getElementById("DeliveryNo4").style.pointerEvents = "none";
+                             document.getElementById("startbatch4").style.pointerEvents = "none";
+                             document.getElementById("stopbatch4").style.pointerEvents = "all";
+                             document.getElementById("startbatch4").style.background = "midnightblue";
+                             $('#VNo4').val(result.packerdetails[0].Vehicle_Number);
+                             $('#MRP4').val(result.packerdetails[0].MRP);
+                             $('#Setcount4').val(result.packerdetails[0].Set_Count);
+                             $('#Counter4').val(result.counter);
+                             $('#Grade4').val(result.packerdetails[0].Grade);
+                             document.getElementById("loading").style.display = "none";
+                           //  sendRequest4()
+                             function sendRequest4() {
+                                 $.ajax({
+                                     url: '@Url.Action("getdata", "Packer_Dashboard")',
+                                     success:
+                                         function (data) {
+                                             debugger;
+
+                                             if (data.data == 0) {
+                                                 $('#Counter4').val(data.result);
+                                                 sendRequest4();
+                                             }
+                                             else {
+
+                                                 document.getElementById("DeliveryNo4").style.pointerEvents = "all";
+                                                 document.getElementById("startbatch4").style.pointerEvents = "all";
+                                                 document.getElementById("stopbatch4").style.pointerEvents = "none";
+                                                 document.getElementById("startbatch4").style.background = "rgba(5,133,186,1)";
+                                                 $('#Status4').val("STOPED")
+                                             }
+                                         }
+                                 });
+                             };
+                         }
+                         else {
+                             document.getElementById("loading").style.display = "none";
+                             document.getElementById("MSG").style.display = "block";
+                             document.getElementById("message").innerText = "Please check your connection";
+                         }
+                     },
+                     error: function (error) {
+                         document.getElementById("MSG").style.display = "block";
+                         document.getElementById("message").innerText = "Please check your connection";
+                         console.log(error);
+                     }
+
+                 });
+
+            }
+
+            function stopbatch1() {
+                var DeliveryNo1 = $('#DeliveryNo1 :selected').val();
+                var fileData = new FormData();
+                fileData.append('ID', DeliveryNo1)
+                fileData.append('Packer', 1)
+                $.ajax({
+                    url: '@Url.Action("Stoppacker", "Packer_Dashboard")',
+                    type: 'POST',
+                    contentType: false,
+                    processData: false,
+                    data: fileData,
+                    success: function (result) {
+                        document.getElementById("DeliveryNo1").style.pointerEvents = "all";
+                        document.getElementById("startbatch1").style.pointerEvents = "all";
+                        document.getElementById("stopbatch1").style.pointerEvents = "none";
+                        document.getElementById("startbatch1").style.background = "rgba(5,133,186,1)";
+                        $('#Status1').val("STOPED")
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+
+                });
+            }
+            function stopbatch2() {
+                var DeliveryNo2 = $('#DeliveryNo2 :selected').val();
+                var fileData = new FormData();
+                fileData.append('ID', DeliveryNo2)
+                fileData.append('Packer', 2)
+
+                $.ajax({
+                    url: '@Url.Action("Stoppacker", "Packer_Dashboard")',
+                    type: 'POST',
+                    contentType: false,
+                    processData: false,
+                    data: fileData,
+                    success: function (result) {
+                        document.getElementById("DeliveryNo2").style.pointerEvents = "all";
+                        document.getElementById("startbatch2").style.pointerEvents = "all";
+                        document.getElementById("stopbatch2").style.pointerEvents = "none";
+                        document.getElementById("startbatch2").style.background = "rgba(5,133,186,1)";
+                        $('#Status2').val("STOPED")
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+
+                });
+            }
+        function stopbatch3() {
+                var DeliveryNo3 = $('#DeliveryNo3 :selected').val();
+                var fileData = new FormData();
+                fileData.append('ID', DeliveryNo3)
+            fileData.append('Packer', 3)
+                $.ajax({
+                    url: '@Url.Action("Stoppacker", "Packer_Dashboard")',
+                    type: 'POST',
+                    contentType: false,
+                    processData: false,
+                    data: fileData,
+                    success: function (result) {
+                        document.getElementById("DeliveryNo3").style.pointerEvents = "all";
+                        document.getElementById("startbatch3").style.pointerEvents = "all";
+                        document.getElementById("stopbatch3").style.pointerEvents = "none";
+                        document.getElementById("startbatch3").style.background = "rgba(5,133,186,1)";
+                        $('#Status3').val("STOPED")
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+
+                });
+            }
+            function stopbatch4() {
+                var DeliveryNo4 = $('#DeliveryNo3 :selected').val();
+                var fileData = new FormData();
+                fileData.append('ID', DeliveryNo4)
+                fileData.append('Packer', 4)
+                $.ajax({
+                    url: '@Url.Action("Stoppacker", "Packer_Dashboard")',
+                    type: 'POST',
+                    contentType: false,
+                    processData: false,
+                    data: fileData,
+                    success: function (result) {
+                        document.getElementById("DeliveryNo4").style.pointerEvents = "all";
+                        document.getElementById("startbatch4").style.pointerEvents = "all";
+                        document.getElementById("stopbatch4").style.pointerEvents = "none";
+                        document.getElementById("startbatch4").style.background = "rgba(5,133,186,1)";
+
+                        $('#Status4').val("STOPED")
+                    },
+                    error: function (error) {
+                        console.log(error);
+                    }
+
+                });
+        }
+        function GetBustedBag() {
+            var Packer = $('#packers  :selected').val();
+            var NoofBustedbags = $('#NoofBustedbags').val();
+            debugger;
+            if (Packer != "") {
+            var url = '@Url.Action("GetBustedbag", "Packer_Dashboard")';
+            var mainurl = url + "?packer=" + Packer+"&NoofBustedbags="+NoofBustedbags;
+                window.location.href = mainurl;
+            }
+        }
+        function busted(id) {
+            var bustedid = document.getElementById("bustedid").innerText;
+            if (bustedid.trim() != "") {
+                document.getElementById(bustedid).style.background = "none";
+            }
+            var ids = id;
+            console.log(ids)
+            document.getElementById(ids).style.background = "rgba(5,133,186,1)";
+            document.getElementById("clickStartbatch").style.pointerEvents = "all";
+            document.getElementById(ids).style.color = "white";
+            document.getElementById("bustedid").innerText = ids;
+        }
+        function clickStartbatch() {
+            var Packer = $('#packers option:selected').val();
+            var deliverno = document.getElementById("bustedid").innerText;
+
+            if (Packer == "Packer1") {
+                startbatch1(deliverno);
+            }
+            else if (Packer == "Packer2") {
+                startbatch2(deliverno);
+            }
+            else if (Packer == "Packer3") {
+                startbatch3(deliverno);
+            }
+            else if (Packer == "Packer4") {
+                startbatch4(deliverno)
+            }
+        }
+</script>
+    <label id="bustedid" style="display:none"> </label>
+</body>
+</html>

@@ -1,0 +1,478 @@
+﻿<!DOCTYPE html>
+<html>
+@{
+    var RoleId = "";
+    if (Session["RoleId"] != null)
+    {
+        RoleId = Session["RoleId"].ToString();
+    }
+
+    var ActionName = this.Request.RequestContext.RouteData.Values["action"].ToString();
+    var ContollerName = this.Request.RequestContext.RouteData.Values["controller"].ToString();
+    if (ContollerName.ToLower() == "pricemgt".ToLower())
+    {
+        if (ActionName.ToLower() == "index".ToLower())
+        {
+            ViewBag.classpricemgt = "treeview menu-open";
+        }
+
+    }
+    else
+    {
+        ViewBag.classpricemgt = "treeview ";
+    }
+    if (ContollerName.ToLower() == "Home".ToLower())
+    {
+        if (ActionName.ToLower() == "UserManagement".ToLower())
+        {
+            ViewBag.classUser = "treeview menu-open";
+        }
+        else if (ActionName.ToLower() == "VideoManagement".ToLower())
+        {
+            ViewBag.classVideo = "treeview menu-open";
+        }
+        else
+        {
+            ViewBag.classVideo = "treeview ";
+            ViewBag.classUser = "treeview ";
+        }
+    }
+    else
+    {
+        ViewBag.classUser = "treeview ";
+    }
+
+
+
+
+    if (ContollerName.ToLower() == "content".ToLower())
+    {
+        if (ActionName.ToLower() == "index".ToLower())
+        {
+            ViewBag.classcontent = "treeview active";
+        }
+
+    }
+    else
+    {
+        ViewBag.classcontent = "treeview ";
+    }
+    if (ContollerName.ToLower() == "ClintMGT".ToLower())
+    {
+
+        ViewBag.classClint = "treeview active";
+
+
+    }
+    else
+    {
+        ViewBag.classcontent = "treeview ";
+    }
+    if (ContollerName.ToLower() == "DemoMGT".ToLower())
+    {
+
+        ViewBag.classDemo = "treeview active";
+
+
+    }
+    else
+    {
+        ViewBag.classDemo = "treeview ";
+    }
+
+
+}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script src="https://use.fontawesome.com/6e2e2c871f.js"></script>
+
+
+    <link href="~/assets/vendor_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+    <!-- Bootstrap extend-->
+
+    <link href="~/main/css/bootstrap-extend.css" rel="stylesheet" />
+
+    <!-- theme style -->
+
+    <link href="~/main/css/master_style.css" rel="stylesheet" />
+
+    <!-- Qixa Admin skins -->
+
+    <link href="~/main/css/skins/_all-skins.css" rel="stylesheet" />
+
+    <!-- morris CSS -->
+
+    <link href="~/assets/vendor_components/morris.js/morris.css" rel="stylesheet" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="~/WYSIWY/editor.css" rel="stylesheet" />
+
+    <link href="~/Content/Datatable/datatables.min.css" rel="stylesheet" />
+    <link href="~/Content/Datatable/datatables.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    @*<script src="~/assets/vendor_components/sweetalert/sweetalert.min.js"></script>
+        <link href="~/assets/vendor_components/sweetalert/sweetalert.css" rel="stylesheet" />
+        <script src="~/assets/vendor_components/sweetalert/jquery.sweet-alert.custom.js"></script>*@
+    <style>
+        /*.content-wrapper {
+            margin-left: 15% !important;
+        }*/
+
+        select::-ms-expand {
+            display: none;
+        }
+        /*body {
+            width: 610px;
+        }*/
+        button:hover {
+            cursor: pointer
+        }
+
+        a:hover {
+            cursor: pointer
+        }
+
+        .frmSearch {
+            border: 1px solid #a8d4b1;
+            background-color: #c6f7d0;
+            margin: 2px 0px;
+            padding: 40px;
+            border-radius: 4px;
+        }
+
+        /*.ulsearch1 {
+            float: left;
+            list-style: none;
+            margin-top: -3px;
+            padding: 0;
+            width: 190px;
+            position: absolute;
+        }*/
+
+        .ulsearch1 {
+            float: left;
+            list-style: none;
+            margin-top: 2px;
+            padding: 0;
+            margin-left: -885px;
+            width: 1260px;
+            position: absolute;
+            text-align: left;
+        }
+            /*.ulsearch1 {
+            border-style: solid;
+            visibility: hidden;
+        }*/
+            .ulsearch1 li {
+                padding: 10px;
+                background: #f0f0f0;
+                border-bottom: #bbb9b9 1px solid;
+            }
+
+                .ulsearch1 li:hover {
+                    background: #ece3d2;
+                    cursor: pointer;
+                }
+
+        /*#search-box {
+            padding: 10px;
+            border: #a8d4b1 1px solid;
+            border-radius: 4px;
+        }*/
+
+        .SearchLeft {
+            margin-left: 30px;
+        }
+
+        body {
+            font-family: Roboto !important;
+        }
+    </style>
+
+
+</head>
+<body class="hold-transition skin-black dark-sidebar sidebar-mini">
+    <div id="loading" style="text-align: center; width: 100%; height: 750px; z-index: 10202; position: absolute; background: #00000066;display:none">
+        <img style="margin-top:200px" src="~/assets/img/loading.gif" />
+    </div>
+    <div class="wrapper">
+
+        <header class="main-header" style="height:70px">
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <div style="width:60%">
+                    <a>
+                        @*<img style="width: 225px;float:right;padding:15px" src="~/assets/logo.jpg" />*@
+                        <img style="width:22%" src="~/assets/img/Image_1.png" />
+                    </a>
+                    <a>
+                        <span class="navclose" style="font-size:24px;cursor:pointer" onclick="openNav()">&#9776; </span>
+                    </a>
+                </div>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span style="color: black; position: absolute; margin-left: -159px;margin-top: -8px;"> @Session["UserName"]</span>
+                                @*  <i class="fa fa-user"></i>*@
+                                <svg style="width:80%" xmlns="http://www.w3.org/2000/svg" width="34.875" height="34.875" viewBox="0 0 34.875 34.875">
+                                    <path id="Icon_awesome-user-circle" data-name="Icon awesome-user-circle" d="M17.438.563A17.438,17.438,0,1,0,34.875,18,17.434,17.434,0,0,0,17.438.563Zm0,6.75A6.188,6.188,0,1,1,11.25,13.5,6.188,6.188,0,0,1,17.438,7.313Zm0,24.188a13.474,13.474,0,0,1-10.3-4.8,7.839,7.839,0,0,1,6.926-4.2,1.72,1.72,0,0,1,.5.077,9.309,9.309,0,0,0,2.876.485,9.274,9.274,0,0,0,2.876-.485,1.72,1.72,0,0,1,.5-.077,7.839,7.839,0,0,1,6.926,4.2A13.474,13.474,0,0,1,17.438,31.5Z" transform="translate(0 -0.563)" />
+                                </svg>
+                            </a>
+                        </li>
+                        <!-- Control Sidebar Toggle Button -->
+                        <li class="dropdown user user-menu">
+                            <a href="@Url.Action("Index","Login")" style="color: black; " data-toggle="tooltip" title="Logout" data-original-title="Logout">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30.425" height="30.311" viewBox="0 0 30.425 30.311">
+                                    <g id="Icon_feather-upload" data-name="Icon feather-upload" transform="matrix(0.017, 1, -1, 0.017, 32.943, -3.26)">
+                                        <path id="Path_123" data-name="Path 123" d="M31.5,22.5V32.564c0,2.779-1.343,5.032-3,5.032H7.5c-1.657,0-3-2.253-3-5.032V22.5" transform="translate(0 -6.096)" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                                        <path id="Path_124" data-name="Path 124" d="M25.5,12,18,4.5,10.5,12" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                                        <path id="Path_125" data-name="Path 125" d="M18,4.5v18" stroke="#0585ba" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <aside class="main-sidebar" id="main-sidebar" style="z-index: 1800;top:0px ">
+            <div class="navclose" style="margin-top: -75px; text-align: right; padding-right: 10px; font-size: 40px;">
+                <a href="javascript:void(0)" class="closebtn" style="color:black" onclick="closeNav()">&times;</a>
+            </div>
+            <a>
+                @*<img style="width: 225px;float:right;padding:15px" src="~/assets/logo.jpg" />*@
+                <img style="width: 76%; margin-top: -50px;" src="~/assets/img/Image_1.png" />
+            </a>
+            <!-- sidebar-->
+            <section class="sidebar">
+                
+                        <ul class="sidebar-menu mainmenu">
+                            <li id="User" class="@ViewBag.classUser">
+                                <a href="@Url.Action("Index", "Packer_Dashboard")">
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36.51" height="25.557" viewBox="0 0 36.51 25.557">
+                                            <path id="Icon_awesome-users" data-name="Icon awesome-users" d="M5.477,13.2A3.651,3.651,0,1,0,1.826,9.552,3.654,3.654,0,0,0,5.477,13.2Zm25.557,0a3.651,3.651,0,1,0-3.651-3.651A3.654,3.654,0,0,0,31.034,13.2Zm1.826,1.826H29.208a3.64,3.64,0,0,0-2.573,1.061,8.344,8.344,0,0,1,4.284,6.241h3.765a1.824,1.824,0,0,0,1.826-1.826V18.68A3.654,3.654,0,0,0,32.859,15.029Zm-14.6,0a6.389,6.389,0,1,0-6.389-6.389A6.386,6.386,0,0,0,18.255,15.029Zm4.381,1.826h-.473a8.821,8.821,0,0,1-7.815,0h-.473A6.574,6.574,0,0,0,7.3,23.426v1.643a2.739,2.739,0,0,0,2.738,2.738H26.47a2.739,2.739,0,0,0,2.738-2.738V23.426A6.574,6.574,0,0,0,22.636,16.854ZM9.875,16.09A3.64,3.64,0,0,0,7.3,15.029H3.651A3.654,3.654,0,0,0,0,18.68v1.826a1.824,1.824,0,0,0,1.826,1.826H5.585A8.366,8.366,0,0,1,9.875,16.09Z" transform="translate(0 -2.25)" fill="#0585ba" />
+                                        </svg>
+                                        <span style="margin-left:15px"> Dashboard</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    
+                  
+                   
+                    <ul class="sidebar-menu mainmenu">
+                        <li id="User" class="@ViewBag.classVideo ">
+                            <a href="@Url.Action("Index","Reports")">
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36.51" height="25.557" viewBox="0 0 21.431 28.574">
+                                        <path id="Icon_awesome-file" data-name="Icon awesome-file" d="M12.5,7.59V0H1.339A1.336,1.336,0,0,0,0,1.339v25.9a1.336,1.336,0,0,0,1.339,1.339H20.091a1.336,1.336,0,0,0,1.339-1.339V8.929h-7.59A1.343,1.343,0,0,1,12.5,7.59ZM21.431,6.8v.34H14.287V0h.34a1.338,1.338,0,0,1,.949.391L21.04,5.86A1.335,1.335,0,0,1,21.431,6.8Z" fill="#0585ba" />
+                                    </svg>
+                                    <span style="margin-left:15px"> Reports</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+               
+            </section>
+        </aside>
+        <div style="background:#fff">
+            <footer class="main-footer">
+                <div class="pull-right d-none d-sm-inline-block">
+                    <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end"></ul>
+                </div>
+                <div style=" margin-left: 30%;">
+                    © Copyright: Penna.All Rights Reserved
+                </div>
+            </footer>
+
+            <div class="content-wrapper">
+                <section class="content">
+                    @RenderBody()
+                    <hr />
+                </section>
+
+            </div>
+        </div>
+
+
+    </div>
+    @if (ViewBag.suumsg == "success")
+    {
+        <div id="modalpopup" style="width: 100%;  height: 700px; position: absolute; top: 0; z-index: 2000; background-color: rgba(0,0,0,0.4);">
+            <div style="background: white; width: 30%; padding: 10px 15px; min-height: 150px; border-radius: 7px; margin-left: 35%; margin-top: 70px; ">
+                <div>
+                    <button type="button" onclick="close()" id="close" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div>
+                    <h3>
+                        Data Saved Successfully
+                    </h3>
+                </div>
+                <br />
+
+                <input class="btn" type="button" value="OK" id="close1" onclick="close()" style=" float: right; color:white; background: slateblue;" />
+
+            </div>
+        </div>
+    }
+    @if (ViewBag.failure == "failure")
+    {
+        <div id="modalpopup" style="width: 100%;  height: 700px; position: absolute; top: 0; z-index: 2000; background-color: rgba(0,0,0,0.4);">
+            <div style="background: white; width: 30%; padding: 10px 15px; min-height: 150px; border-radius: 7px; margin-left: 35%; margin-top: 70px; ">
+                <div>
+                    <button type="button" onclick="close()" id="close" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div>
+                    <h3>
+                        Data Failed to Save
+                    </h3>
+                </div>
+                <br />
+
+                <input class="btn" type="button" value="OK" id="close1" onclick="close()" style=" float: right; color:white; background: slateblue;" />
+
+            </div>
+        </div>
+    }
+    @if (ViewBag.delete == "delete")
+    {
+        <div id="modalpopup" style="width: 100%;  height: 700px; position: absolute; top: 0; z-index: 2000; background-color: rgba(0,0,0,0.4);">
+            <div style="background: white; width: 30%; padding: 10px 15px; min-height: 130px; border-radius: 7px; margin-left: 35%; margin-top: 70px; ">
+                <div>
+                    <button type="button" onclick="close()" id="close" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div>
+                    <h3>
+                        Data Deleted Successfully
+                    </h3>
+                </div>
+                <br />
+
+                <input class="btn" type="button" value="OK" id="close" onclick="close()" style=" float: right; color:white; background: slateblue;" />
+
+            </div>
+        </div>
+    }
+    <div id="MSG" style="width: 100%;  height: 700px;display:none; position: absolute; top: 0; z-index: 2000; background-color: rgba(0,0,0,0.4);">
+        <div style="background: white; width: 30%; padding: 10px 15px; min-height: 150px; border-radius: 7px; margin-left: 35%; margin-top: 70px; ">
+            <div>
+                <button type="button" onclick="close()" id="closeone" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div>
+                <h3>
+                    <label id="message"></label>
+                </h3>
+            </div>
+            <br />
+
+            <input class="btn" type="button" value="OK" id="closeone1" onclick="close()" style=" float: right; color:white; background: slateblue;" />
+
+        </div>
+    </div>
+    <!-- jQuery 3 -->
+    @*<script src="../assets/vendor_components/jquery-3.3.1/jquery-3.3.1.min.js"></script>*@
+    <script src="~/Scripts/jquery-2.2.4.min.js"></script>
+
+    <script src="~/Scripts/Datatable/datatables.min.js"></script>
+    <script src="~/Scripts/Datatable/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/Datatable/datatables.bootstrap.min.js"></script>
+    <script src="~/Scripts/Datatable/sum.js"></script>
+
+    <!-- jQuery UI 1.11.4 -->
+
+    <script src="~/assets/vendor_components/jquery-ui/jquery-ui.js"></script>
+
+    <!-- popper -->
+
+    <script src="~/assets/vendor_components/popper/dist/popper.min.js"></script>
+
+    <!-- Bootstrap 4.0-->
+
+    <script src="~/assets/vendor_components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!-- Slimscroll -->
+
+    <script src="~/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js"></script>
+
+    <!-- FastClick -->
+
+    <script src="~/assets/vendor_components/fastclick/lib/fastclick.js"></script>
+
+    <!-- Sparkline -->
+
+    <script src="~/assets/vendor_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+
+    <!-- morris-->
+    @*<script src="../assets/vendor_components/raphael/raphael.js"></script>
+        <script src="../assets/vendor_components/morris.js/morris.js"></script>*@
+
+    <!-- peity -->
+
+    <script src="~/assets/vendor_components/jquery.peity/jquery.peity.js"></script>
+
+    <!-- Qixa Admin App -->
+
+    <script src="~/main/js/template.js"></script>
+
+    <!-- Qixa Admin dashboard demo (This is only for demo purposes) -->
+    @*<script src="../main/js/pages/dashboard.js"></script>*@
+
+
+    <script>
+        function openNav() {
+            document.getElementById("main-sidebar").style.display = "block";
+        }
+
+        function closeNav() {
+            document.getElementById("main-sidebar").style.display = "none";
+        }
+        $('#close').click(function () {
+            document.getElementById("modalpopup").style.display = "none";
+        });
+        $('#close1').click(function () {
+            document.getElementById("modalpopup").style.display = "none";
+        });
+        $('#closeone').click(function () {
+            document.getElementById("MSG").style.display = "none";
+        });
+        $('#closeone1').click(function () {
+            document.getElementById("MSG").style.display = "none";
+        });
+        $(document).on('click', '.treeview a', function () {
+            $('.mainmenu li').each(function () {
+                if ($(this).hasClass('menu-open')) {
+                    $(this).removeClass('menu-open');
+                    $(this).find('.submenu').css('display', 'none');
+                }
+            });
+            $(this).closest('li').addClass('menu-open');
+            $(this).siblings('.submenu').css('display', 'block');
+        });
+
+    </script>
+
+
+    @RenderSection("ScriptSection", false)
+</body>
+</html>

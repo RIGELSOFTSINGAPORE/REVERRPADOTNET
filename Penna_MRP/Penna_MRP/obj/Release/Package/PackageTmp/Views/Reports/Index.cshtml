@@ -1,0 +1,241 @@
+﻿@using Penna_Common;
+
+@model Penna_PackerDetails
+@{
+    var Modeldata = ViewData["PackerDetails"] as List<Penna_PackerDetails>;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Packer Dashboard</title>
+    <style>
+        body {
+            font-size: 14px;
+        }
+
+        .boxshadow {
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+
+        .contain1 {
+            /*min-height: 300px;*/
+            width: 100%;
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px 50px;
+        }
+
+        .contain2 {
+            /*min-height: 300px;*/
+            width: 100%;
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px 50px;
+            margin-top: 40px;
+        }
+
+        h1 {
+            background: none;
+            color: black;
+            padding: 0;
+            font-size: 26px;
+        }
+
+        .drpdown {
+            border: 1.5px solid rgba(112,112,112,1);
+            width: 152px;
+            height: 32px;
+            border-radius: 4px;
+        }
+
+        .txtbox {
+            border: 1.5px solid rgba(112,112,112,1);
+            width: 90%;
+            height: 32px !important;
+            border-radius: 4px;
+        }
+
+        th {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        .startbatch {
+            background: rgba(5,133,186,1);
+            color: white;
+            font-weight: bold;
+            width: 100%;
+            height: 32px !important;
+            border-radius: 4px;
+            border: 2px solid rgba(5,133,186,1);
+        }
+
+        .stopbatch {
+            background: #fff;
+            color: black;
+            font-weight: bold;
+            border: 2px solid rgba(5,133,186,1);
+            width: 100%;
+            height: 32px !important;
+            border-radius: 4px;
+        }
+
+        .activeh1 {
+            background: rgba(244,244,244,1);
+            border-bottom: 2px solid rgba(5,133,186,1);
+        }
+
+        .h1border {
+            border-bottom: 2px solid #dcbfe9;
+            border-radius: 0px;
+        }
+
+        .table2 {
+            border: 2px solid #dcbfe9 !important;
+            border-left: 2px solid #dcbfe9 !important;
+            border-radius: 16px !important;
+            padding: 10px;
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 1em;
+            overflow: hidden;
+        }
+
+        .table2header {
+            border-collapse: collapse;
+            border: 2px solid #dcbfe9;
+            border-radius: 16px;
+            background: #F1F1F1;
+            padding: 10px;
+            height: 32px;
+            text-align: left;
+        }
+        /* table {
+                border-collapse: collapse;
+                border-radius: 1em;
+                overflow: hidden;
+            }*/
+
+        .tr {
+            border: 2px solid #dcbfe9;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+
+        <div class="boxshadow contain1">
+            @*<h1>
+                    Dashboard
+                </h1>*@
+            <div>
+                <table class="table-responsive">
+                    @using (Html.BeginForm("ClickQuery", "Reports", FormMethod.Post))
+                    {
+                        <tr>
+                                <td style="font-weight:bold">Select Packer</td>
+                                <td>
+                                    @Html.DropDownListFor(model => model.Packer, ViewBag.Packer as List<SelectListItem>, htmlAttributes: new {@id= "packer", @class = "txtbox",@style="width:140px"})
+                                </td>
+                                <td style="font-weight:bold">Start Date</td>
+                                <td> @Html.TextBoxFor(model => model.Start_Date_Time,new {@class= "txtbox",@id= "startdate",@type="date" })</td>
+                                <td style="font-weight:bold">End Date</td>
+                                <td> @Html.TextBoxFor(model => model.End_Date_Time, new { @class = "txtbox",@id= "Enddate", @type = "date" })</td>
+                                <td style="font-weight:bold">Only Busted bags</td>
+                                <td> @Html.TextBoxFor(model => model.Busted_Bag_Count, new { @class = "txtbox",@id= "bustedbag" })</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight:bold"></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <div class="row" style=" margin: 0px;">
+                                    <div class="col-sm-6">
+                                       @* <input type="button" class="startbatch " style="margin-top: -5px;" value="Query" />*@
+                                        <button class="startbatch " style="margin-top: -5px;">Query</button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a class="stopbatch " style="padding:5px;" onclick="Export()" value="Cancel">Export</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+        <div class="boxshadow contain2">
+            <div>
+                <table class="table2">
+                    <tr class="table2header">
+                        <th style="text-align:left;padding:15px;">Delivery No</th>
+                        <th style="text-align:left;padding:15px;">Vehicle No</th>
+                        <th style="text-align:left;padding:15px;">Message Format</th>
+                        <th style="text-align:left;padding:15px;">MRP</th>
+                        <th style="text-align:left;padding:15px;">Grade</th>
+                        <th style="text-align:left;padding:15px;">Set Count</th>
+                    </tr>
+                    <tbody>
+                        @if (Modeldata != null)
+                        {
+                            foreach (var item in Modeldata)
+                            {
+                                <tr class="tr">
+                                    <td>
+                                        @item.Delivery_Number
+                                    </td>
+                                    <td>
+                                        @item.Vehicle_Number
+                                    </td>
+                                    <td>
+                                        @item.Message_Format
+                                    </td>
+                                    <td>
+                                        @item.MRP
+                                    </td>
+                                    <td>
+                                        @item.Grade
+                                    </td>
+                                    <td>
+                                        @item.Set_Count
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        function Export() {
+            var packer = document.getElementById('packer').value;
+            var startdate = document.getElementById('startdate').value;
+            var Enddate = document.getElementById('Enddate').value;
+            var bustedbag = document.getElementById('bustedbag').value;
+            var baseUrl = '@Url.Action("Export","Reports")';
+            var parm = "";
+         parm += '?packer=' + packer;
+         parm += '&startdate=' + startdate;
+         parm += '&Enddate=' + Enddate;
+         parm += '&bustedbag=' + bustedbag;
+            baseUrl += parm;
+            window.location.href = baseUrl;
+        }
+    </script>
+</body>
+
+</html>

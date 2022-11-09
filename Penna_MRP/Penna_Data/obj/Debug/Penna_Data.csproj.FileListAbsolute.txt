@@ -1,0 +1,44 @@
+D:\Penna\PennaMRP\Kaisokku\Penna_Data\bin\Debug\Penna_Data.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_Data\bin\Debug\Penna_Data.pdb
+D:\Penna\PennaMRP\Kaisokku\Penna_Data\bin\Debug\Dapper.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_Data\bin\Debug\Penna_Common.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_Data\bin\Debug\log4net.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_Data\bin\Debug\Penna_Common.pdb
+D:\Penna\PennaMRP\Kaisokku\Penna_Data\bin\Debug\Penna_Common.dll.config
+D:\Penna\PennaMRP\Kaisokku\Penna_Data\bin\Debug\Dapper.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_Data\bin\Debug\log4net.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_Data\obj\Debug\Penna_Data.csproj.AssemblyReference.cache
+D:\Penna\PennaMRP\Kaisokku\Penna_Data\obj\Debug\Penna_Data.csproj.CoreCompileInputs.cache
+D:\Penna\PennaMRP\Kaisokku\Penna_Data\obj\Debug\Penna_Data.csproj.CopyComplete
+D:\Penna\PennaMRP\Kaisokku\Penna_Data\obj\Debug\Penna_Data.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_Data\obj\Debug\Penna_Data.pdb
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\Penna_Data.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\Penna_Data.pdb
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\Dapper.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\MySql.Data.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\MySql.Data.EntityFramework.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\MySql.Web.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\Penna_Common.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\log4net.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\Google.Protobuf.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\ZstdNet.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\BouncyCastle.Crypto.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\Ubiety.Dns.Core.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\System.Memory.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\System.Buffers.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\K4os.Compression.LZ4.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\K4os.Hash.xxHash.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\System.Numerics.Vectors.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\Penna_Common.pdb
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\Penna_Common.dll.config
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\Dapper.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\MySql.Data.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\MySql.Data.EntityFramework.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\MySql.Web.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\bin\Debug\log4net.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\obj\Debug\Penna_Data.csproj.AssemblyReference.cache
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\obj\Debug\Penna_Data.csproj.CoreCompileInputs.cache
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\obj\Debug\Penna_Data.csproj.CopyComplete
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\obj\Debug\Penna_Data.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_Data\obj\Debug\Penna_Data.pdb

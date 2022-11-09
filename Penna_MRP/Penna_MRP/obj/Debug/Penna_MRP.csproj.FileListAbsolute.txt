@@ -1,0 +1,239 @@
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\obj\Debug\Penna_MRP.csproj.AssemblyReference.cache
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\obj\Debug\Penna_MRP.Resources.Resource.resources
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\obj\Debug\Penna_MRP.Resources.Resource.ja.resources
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\obj\Debug\Penna_MRP.csproj.GenerateResource.cache
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\obj\Debug\Penna_MRP.csproj.CoreCompileInputs.cache
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Penna_MRP.dll.config
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Penna_MRP.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Penna_MRP.pdb
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\ja\Penna_MRP.resources.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\csc.exe
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\csc.exe.config
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\csc.rsp
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\csi.exe
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\csi.exe.config
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\csi.rsp
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.AppContext.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.Collections.Immutable.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.Console.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.IO.Compression.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.IO.FileSystem.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.IO.Pipes.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.Reflection.Metadata.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.Security.AccessControl.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.Security.Claims.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.ValueTuple.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.Xml.XPath.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\vbc.exe
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\vbc.exe.config
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\vbc.rsp
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\VBCSCompiler.exe
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\roslyn\VBCSCompiler.exe.config
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Antlr3.Runtime.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\ClosedXML.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\DocumentFormat.OpenXml.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\EntityFramework.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\EntityFramework.SqlServer.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\ExcelNumberFormat.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\log4net.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Microsoft.Office.Interop.PowerPoint.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Microsoft.Web.Infrastructure.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Newtonsoft.Json.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Office.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\PagedList.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Penna_Business.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Penna_Common.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Rotativa.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\System.IO.Packaging.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\System.Web.Helpers.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\System.Web.Mvc.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\System.Web.Optimization.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\System.Web.Razor.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\System.Web.WebPages.Deployment.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\System.Web.WebPages.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\System.Web.WebPages.Razor.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\WebGrease.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Penna_Data.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\stdole.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Dapper.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Penna_Business.pdb
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Penna_Common.pdb
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Penna_Common.dll.config
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\ClosedXML.pdb
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\ClosedXML.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\DocumentFormat.OpenXml.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\EntityFramework.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\EntityFramework.SqlServer.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\ExcelNumberFormat.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\log4net.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\PagedList.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\System.Web.Helpers.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\System.Web.Mvc.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\System.Web.Optimization.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\System.Web.Razor.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\System.Web.WebPages.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\System.Web.WebPages.Deployment.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\System.Web.WebPages.Razor.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Newtonsoft.Json.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Antlr3.Runtime.pdb
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Penna_Data.pdb
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\bin\Dapper.xml
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\obj\Debug\ja\Penna_MRP.resources.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\obj\Debug\Penna_MRP.csproj.CopyComplete
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\obj\Debug\Penna_MRP.dll
+D:\Penna\PennaMRP\Kaisokku\Penna_MRP\obj\Debug\Penna_MRP.pdb
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\harfbuzz.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Penna_MRP.dll.config
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Penna_MRP.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Penna_MRP.pdb
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\ja\Penna_MRP.resources.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\csc.exe
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\csc.exe.config
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\csc.rsp
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\csi.exe
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\csi.exe.config
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\csi.rsp
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.AppContext.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.Collections.Immutable.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.Console.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.IO.Compression.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.IO.FileSystem.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.IO.Pipes.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.Reflection.Metadata.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.Security.AccessControl.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.Security.Claims.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.ValueTuple.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.Xml.XPath.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\vbc.exe
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\vbc.exe.config
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\vbc.rsp
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\VBCSCompiler.exe
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\roslyn\VBCSCompiler.exe.config
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Antlr3.Runtime.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\ClosedXML.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\DocumentFormat.OpenXml.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\EntityFramework.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\EntityFramework.SqlServer.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\ExcelNumberFormat.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\GroupDocs.Conversion.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\log4net.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Microsoft.Office.Interop.PowerPoint.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Microsoft.Web.Infrastructure.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Newtonsoft.Json.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Office.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\PagedList.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Penna_Business.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Penna_Common.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Rotativa.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\SimpleTCP.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\System.IO.Packaging.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\System.Json.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\System.Web.Helpers.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\System.Web.Mvc.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\System.Web.Optimization.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\System.Web.Razor.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\System.Web.WebPages.Deployment.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\System.Web.WebPages.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\System.Web.WebPages.Razor.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\UnityEngine.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\WebGrease.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Penna_Data.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\stdole.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Dapper.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\MySql.Data.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Google.Protobuf.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\ZstdNet.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\K4os.Compression.LZ4.Streams.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\BouncyCastle.Crypto.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Ubiety.Dns.Core.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\System.Memory.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\System.Buffers.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\K4os.Compression.LZ4.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\K4os.Hash.xxHash.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\System.Numerics.Vectors.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Penna_Business.pdb
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Penna_Common.pdb
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Penna_Common.dll.config
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\ClosedXML.pdb
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\ClosedXML.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\DocumentFormat.OpenXml.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\EntityFramework.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\EntityFramework.SqlServer.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\ExcelNumberFormat.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\GroupDocs.Conversion.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\log4net.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\PagedList.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\System.Json.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\System.Web.Helpers.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\System.Web.Mvc.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\System.Web.Optimization.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\System.Web.Razor.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\System.Web.WebPages.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\System.Web.WebPages.Deployment.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\System.Web.WebPages.Razor.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Newtonsoft.Json.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Antlr3.Runtime.pdb
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Penna_Data.pdb
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\Dapper.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\bin\MySql.Data.xml
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\obj\Debug\Penna_MRP.csproj.AssemblyReference.cache
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\obj\Debug\Penna_MRP.Resources.Resource.resources
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\obj\Debug\Penna_MRP.Resources.Resource.ja.resources
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\obj\Debug\Penna_MRP.csproj.GenerateResource.cache
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\obj\Debug\Penna_MRP.csproj.CoreCompileInputs.cache
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\obj\Debug\ja\Penna_MRP.resources.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\obj\Debug\Penna_MRP.csproj.CopyComplete
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\obj\Debug\Penna_MRP.dll
+D:\Penna\PennaMRP\Penna MRP\Penna_MRP\obj\Debug\Penna_MRP.pdb

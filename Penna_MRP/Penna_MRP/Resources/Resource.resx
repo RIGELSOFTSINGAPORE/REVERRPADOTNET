@@ -1,0 +1,789 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="ActivityManagement" xml:space="preserve">
+    <value>ActivityManagement</value>
+  </data>
+  <data name="AdminPanel" xml:space="preserve">
+    <value>Admin Panel</value>
+  </data>
+  <data name="AllRightsReserved" xml:space="preserve">
+    <value>All Rights Reserved</value>
+  </data>
+  <data name="Approve" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="ApprovedBy" xml:space="preserve">
+    <value>ApprovedBy</value>
+  </data>
+  <data name="ApproveUpdatedSuccessfully" xml:space="preserve">
+    <value>Approve Updated Successfully</value>
+  </data>
+  <data name="ApproveUpdationFailed" xml:space="preserve">
+    <value>Approve Updation Failed</value>
+  </data>
+  <data name="Areyousuretodeletepage" xml:space="preserve">
+    <value>Are you sure to delete page?</value>
+  </data>
+  <data name="Areyousuretodeleteuser" xml:space="preserve">
+    <value>Are you sure to delete user?</value>
+  </data>
+  <data name="AreyousureyouwanttodeleteImage" xml:space="preserve">
+    <value>Are you sure you want to delete Image?</value>
+  </data>
+  <data name="Areyousureyouwanttodeletemenu" xml:space="preserve">
+    <value>Are you sure you want to delete menu?</value>
+  </data>
+  <data name="AreyousureyouwanttodeletePPT" xml:space="preserve">
+    <value>Are you sure you want to delete PPT?</value>
+  </data>
+  <data name="AreyousureyouwanttodeletetheTask" xml:space="preserve">
+    <value>Are you sure you want to delete the Task?</value>
+  </data>
+  <data name="AreyousureyouwanttodeleteVideo" xml:space="preserve">
+    <value>Are you sure you want to delete Video?</value>
+  </data>
+  <data name="AssignTo" xml:space="preserve">
+    <value>Assign To</value>
+  </data>
+  <data name="CC" xml:space="preserve">
+    <value>CC</value>
+  </data>
+  <data name="Client" xml:space="preserve">
+    <value>Clients</value>
+  </data>
+  <data name="Clint" xml:space="preserve">
+    <value>Clint</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="CommentsUpdatedSuccessfully" xml:space="preserve">
+    <value>Comments Updated Successfully</value>
+  </data>
+  <data name="CommentsUpdationFailed" xml:space="preserve">
+    <value>Comments Updation Failed</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Count</value>
+  </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>CreatedBy</value>
+  </data>
+  <data name="CreatedDate" xml:space="preserve">
+    <value>CreatedDate</value>
+  </data>
+  <data name="CreateMenu" xml:space="preserve">
+    <value>CreateMenu</value>
+  </data>
+  <data name="CreateNewImages" xml:space="preserve">
+    <value>Create New Images</value>
+  </data>
+  <data name="CreateNewPPT" xml:space="preserve">
+    <value>Create New PPT</value>
+  </data>
+  <data name="CreateNewTask" xml:space="preserve">
+    <value>Create New Task</value>
+  </data>
+  <data name="CreateNewVideo" xml:space="preserve">
+    <value>Create New Video</value>
+  </data>
+  <data name="CreatePPT" xml:space="preserve">
+    <value>Create PPT</value>
+  </data>
+  <data name="CreateTask" xml:space="preserve">
+    <value>Create Task</value>
+  </data>
+  <data name="CreateUploadImage" xml:space="preserve">
+    <value>Create Upload Image</value>
+  </data>
+  <data name="CreateVideo" xml:space="preserve">
+    <value>Create Video</value>
+  </data>
+  <data name="CRM" xml:space="preserve">
+    <value>CRM</value>
+  </data>
+  <data name="CustomerType" xml:space="preserve">
+    <value>Customer Type</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteImage" xml:space="preserve">
+    <value>Delete Image</value>
+  </data>
+  <data name="DeleteMenu" xml:space="preserve">
+    <value>Delete Menu</value>
+  </data>
+  <data name="DeletePage" xml:space="preserve">
+    <value>Delete Page</value>
+  </data>
+  <data name="DeletePPT" xml:space="preserve">
+    <value>Delete PPT</value>
+  </data>
+  <data name="DeleteTask" xml:space="preserve">
+    <value>Delete Task</value>
+  </data>
+  <data name="DeleteUser" xml:space="preserve">
+    <value>Delete User</value>
+  </data>
+  <data name="DeleteVideo" xml:space="preserve">
+    <value>Delete Video</value>
+  </data>
+  <data name="demovideo" xml:space="preserve">
+    <value>demovideo</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DownloadPPT" xml:space="preserve">
+    <value>Download PPT</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EditImage" xml:space="preserve">
+    <value>Edit Image</value>
+  </data>
+  <data name="EditMenu" xml:space="preserve">
+    <value>Edit Menu</value>
+  </data>
+  <data name="EditPPT" xml:space="preserve">
+    <value>Edit PPT</value>
+  </data>
+  <data name="EditTask" xml:space="preserve">
+    <value>Edit Task</value>
+  </data>
+  <data name="EditUser" xml:space="preserve">
+    <value>Edit User</value>
+  </data>
+  <data name="EditVideo" xml:space="preserve">
+    <value>Edit Video</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailTo" xml:space="preserve">
+    <value>Email To</value>
+  </data>
+  <data name="Enddate" xml:space="preserve">
+    <value>Enddate:</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="entries" xml:space="preserve">
+    <value>entries</value>
+  </data>
+  <data name="ExistingCustomer" xml:space="preserve">
+    <value>Existing Customer</value>
+  </data>
+  <data name="ExporttoCSV" xml:space="preserve">
+    <value>Export to CSV</value>
+  </data>
+  <data name="ExporttoExcel" xml:space="preserve">
+    <value>Export to Excel</value>
+  </data>
+  <data name="ExporttoPDF" xml:space="preserve">
+    <value>Export to PDF</value>
+  </data>
+  <data name="FileName" xml:space="preserve">
+    <value>FileName</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="Forgotten" xml:space="preserve">
+    <value>Forgotten</value>
+  </data>
+  <data name="Forgottenpassword" xml:space="preserve">
+    <value>Forgotten password?</value>
+  </data>
+  <data name="GeneralCustomer" xml:space="preserve">
+    <value>General Customer</value>
+  </data>
+  <data name="GenerateReport" xml:space="preserve">
+    <value>Generate Report</value>
+  </data>
+  <data name="GetnewPassword" xml:space="preserve">
+    <value>Get new Password</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="ImageCreationFailed" xml:space="preserve">
+    <value>Image Creation Failed.</value>
+  </data>
+  <data name="ImageDeletedSuccessfully" xml:space="preserve">
+    <value>Image Deleted Successfully</value>
+  </data>
+  <data name="ImageDeletionFailed" xml:space="preserve">
+    <value>Image Deletion Failed.</value>
+  </data>
+  <data name="ImageUploadSuccessfully" xml:space="preserve">
+    <value>Image Upload Successfully</value>
+  </data>
+  <data name="IpAddress" xml:space="preserve">
+    <value>IpAddress</value>
+  </data>
+  <data name="IsActive" xml:space="preserve">
+    <value>IsActive</value>
+  </data>
+  <data name="IsApproved" xml:space="preserve">
+    <value>IsApproved</value>
+  </data>
+  <data name="Japanese" xml:space="preserve">
+    <value>Japanese</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Log In</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="ManageComments" xml:space="preserve">
+    <value>ManageComments</value>
+  </data>
+  <data name="ManageVideos" xml:space="preserve">
+    <value>ManageVideos</value>
+  </data>
+  <data name="MenuAddesSuccessfully" xml:space="preserve">
+    <value>Menu Addes Successfully</value>
+  </data>
+  <data name="MenuDeletionFailed" xml:space="preserve">
+    <value>Menu Deletion Failed.</value>
+  </data>
+  <data name="MenuId" xml:space="preserve">
+    <value>MenuId</value>
+  </data>
+  <data name="MenuManagement" xml:space="preserve">
+    <value>MenuManagement</value>
+  </data>
+  <data name="MenuName" xml:space="preserve">
+    <value>MenuName</value>
+  </data>
+  <data name="MenuUpdatedSuccessfully" xml:space="preserve">
+    <value>Menu Updated Successfully</value>
+  </data>
+  <data name="MenuUpdationFailed" xml:space="preserve">
+    <value>Menu Updation Failed.</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="next" xml:space="preserve">
+    <value>next</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Nofilechosen" xml:space="preserve">
+    <value>No file chosen</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="PageDeletedSuccessfully" xml:space="preserve">
+    <value>Page Deleted Successfully</value>
+  </data>
+  <data name="PageDeletionFailed" xml:space="preserve">
+    <value>Page Deletion Failed.</value>
+  </data>
+  <data name="PageDescription" xml:space="preserve">
+    <value>Page Description</value>
+  </data>
+  <data name="PageManagement" xml:space="preserve">
+    <value>Page Management</value>
+  </data>
+  <data name="PageSavedSuccessfully" xml:space="preserve">
+    <value>Page Saved Successfully.</value>
+  </data>
+  <data name="PageSaveFailed" xml:space="preserve">
+    <value>Page Save Failed.</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Phoneno" xml:space="preserve">
+    <value>Phone No</value>
+  </data>
+  <data name="PPTCreatedSuccessfully" xml:space="preserve">
+    <value>PPT Created Successfully</value>
+  </data>
+  <data name="PPTCreationFailed" xml:space="preserve">
+    <value>PPT Creation Failed.</value>
+  </data>
+  <data name="PPTDeletedSuccessfully" xml:space="preserve">
+    <value>PPT Deleted Successfully</value>
+  </data>
+  <data name="PPTDeletionFailed" xml:space="preserve">
+    <value>PPT Deletion Failed.</value>
+  </data>
+  <data name="PPTList" xml:space="preserve">
+    <value>PPT List</value>
+  </data>
+  <data name="PPTManagement" xml:space="preserve">
+    <value>PPT Management</value>
+  </data>
+  <data name="Presentation" xml:space="preserve">
+    <value>Presentation</value>
+  </data>
+  <data name="previous" xml:space="preserve">
+    <value>pre</value>
+  </data>
+  <data name="records" xml:space="preserve">
+    <value>records</value>
+  </data>
+  <data name="RegisteredTaskExport" xml:space="preserve">
+    <value>Registered Task Export</value>
+  </data>
+  <data name="RegisteredTaskReport" xml:space="preserve">
+    <value>Registered Task Report</value>
+  </data>
+  <data name="Reject" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="RejectedUpdationSuccessfully" xml:space="preserve">
+    <value>Rejected Updation Successfully</value>
+  </data>
+  <data name="RejectUpdationFailed" xml:space="preserve">
+    <value>Reject Updation Failed</value>
+  </data>
+  <data name="Rememberme" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="PennaSampleReport" xml:space="preserve">
+    <value>Penna Sample Report</value>
+  </data>
+  <data name="PennaSampleReports" xml:space="preserve">
+    <value>Penna Sample Reports</value>
+  </data>
+  <data name="PennaSampleReports1" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>Save Changes</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="SelectCustomer" xml:space="preserve">
+    <value>Select Customer</value>
+  </data>
+  <data name="SelectOption" xml:space="preserve">
+    <value>Select Option</value>
+  </data>
+  <data name="SelectVideo" xml:space="preserve">
+    <value>Select Video</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="SenderFrom" xml:space="preserve">
+    <value>Sender From</value>
+  </data>
+  <data name="SerialNo" xml:space="preserve">
+    <value>SerialNo</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>Showing</value>
+  </data>
+  <data name="SocialMedia" xml:space="preserve">
+    <value>Social Media</value>
+  </data>
+  <data name="Startdate" xml:space="preserve">
+    <value>Startdate</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Success!</value>
+  </data>
+  <data name="TaskCreatedSuccessfully" xml:space="preserve">
+    <value>Task Created Successfully</value>
+  </data>
+  <data name="TaskCreationFailed" xml:space="preserve">
+    <value>Task Creation Failed.</value>
+  </data>
+  <data name="TaskDeletedSuccessfully" xml:space="preserve">
+    <value>Task Deleted Successfully</value>
+  </data>
+  <data name="TaskDeletionFailed" xml:space="preserve">
+    <value>Task Deletion Failed.</value>
+  </data>
+  <data name="TaskManagement" xml:space="preserve">
+    <value>Task Management</value>
+  </data>
+  <data name="TaskUpdatedSuccessfully" xml:space="preserve">
+    <value>Task Updated Successfully</value>
+  </data>
+  <data name="TaskUpdationFailed" xml:space="preserve">
+    <value>Task Updation Failed.</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="to" xml:space="preserve">
+    <value>to</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="UpdatedBy" xml:space="preserve">
+    <value>Updated By</value>
+  </data>
+  <data name="UploadIcon" xml:space="preserve">
+    <value>Upload Icon</value>
+  </data>
+  <data name="UploadImage" xml:space="preserve">
+    <value>Upload Image</value>
+  </data>
+  <data name="UploadImages" xml:space="preserve">
+    <value>Upload Images</value>
+  </data>
+  <data name="UploadPPT" xml:space="preserve">
+    <value>Upload PPT</value>
+  </data>
+  <data name="UploadVideo" xml:space="preserve">
+    <value>Upload Video</value>
+  </data>
+  <data name="URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="UserComments" xml:space="preserve">
+    <value>User Comments</value>
+  </data>
+  <data name="UserDeletedSuccessfully" xml:space="preserve">
+    <value>User Deleted Successfully</value>
+  </data>
+  <data name="UserDeletionFailed" xml:space="preserve">
+    <value>User Deletion Failed</value>
+  </data>
+  <data name="UserId" xml:space="preserve">
+    <value>UserId</value>
+  </data>
+  <data name="UserManagement" xml:space="preserve">
+    <value>User Management</value>
+  </data>
+  <data name="UserMenu" xml:space="preserve">
+    <value>User Menu</value>
+  </data>
+  <data name="UserMenu1" xml:space="preserve">
+    <value>User Menu</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="UserPowerPointPresentation" xml:space="preserve">
+    <value>User PowerPoint Presentation</value>
+  </data>
+  <data name="UserSavedSuccessfully" xml:space="preserve">
+    <value>User Saved Successfully</value>
+  </data>
+  <data name="UserSaveFailed" xml:space="preserve">
+    <value>User Save Failed</value>
+  </data>
+  <data name="UsersImages" xml:space="preserve">
+    <value>UsersImages</value>
+  </data>
+  <data name="UserUpdatedSuccessfully" xml:space="preserve">
+    <value>User Updated Successfully</value>
+  </data>
+  <data name="UserUpdationFailed" xml:space="preserve">
+    <value>User Updation Failed</value>
+  </data>
+  <data name="UserVideo" xml:space="preserve">
+    <value>UserVideo</value>
+  </data>
+  <data name="Video" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="VideoComments" xml:space="preserve">
+    <value>VideoComments</value>
+  </data>
+  <data name="VideoCreatedSuccessfully" xml:space="preserve">
+    <value>Video Created Successfully</value>
+  </data>
+  <data name="VideoDeletedSuccessfully" xml:space="preserve">
+    <value>Video Deleted Successfully</value>
+  </data>
+  <data name="VideoDeletionFailed" xml:space="preserve">
+    <value>Video Deletion Failed</value>
+  </data>
+  <data name="VideoList" xml:space="preserve">
+    <value>Video List</value>
+  </data>
+  <data name="VideoManagement" xml:space="preserve">
+    <value>Video  Management</value>
+  </data>
+  <data name="VideoName" xml:space="preserve">
+    <value>VideoName</value>
+  </data>
+  <data name="VideoUpdatedSuccessfully" xml:space="preserve">
+    <value>Video Updated Successfully</value>
+  </data>
+  <data name="VideoUpdationFailed" xml:space="preserve">
+    <value>Video Updation Failed</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="ViewCount" xml:space="preserve">
+    <value>ViewCount</value>
+  </data>
+  <data name="ViewImage" xml:space="preserve">
+    <value>View Image</value>
+  </data>
+  <data name="ViewLogHistory" xml:space="preserve">
+    <value>View Log History</value>
+  </data>
+  <data name="ViewPPT" xml:space="preserve">
+    <value>View PPT</value>
+  </data>
+  <data name="ViewVideo" xml:space="preserve">
+    <value>View Video</value>
+  </data>
+  <data name="VisitedDate" xml:space="preserve">
+    <value>VisitedDate</value>
+  </data>
+  <data name="VisitedName" xml:space="preserve">
+    <value>VisitedName</value>
+  </data>
+  <data name="VisitorName" xml:space="preserve">
+    <value>VisitorName</value>
+  </data>
+  <data name="VisitorsCount" xml:space="preserve">
+    <value>VisitorsCount</value>
+  </data>
+  <data name="WelcometoGSS" xml:space="preserve">
+    <value>Welcome to GSS</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="PreviewImage" xml:space="preserve">
+    <value>PreviewImage</value>
+  </data>
+  <data name="areyousuretodeleeDocument" xml:space="preserve">
+    <value>Are you sure you want to delete Document?</value>
+  </data>
+  <data name="ClientUser" xml:space="preserve">
+    <value>Client/User</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>CompanyName</value>
+  </data>
+  <data name="ContactName" xml:space="preserve">
+    <value>ContactName</value>
+  </data>
+  <data name="CreateDocument" xml:space="preserve">
+    <value>Create Document</value>
+  </data>
+  <data name="CRMContact" xml:space="preserve">
+    <value>CRM Contact</value>
+  </data>
+  <data name="DeleteCRM" xml:space="preserve">
+    <value>Delete CRM</value>
+  </data>
+  <data name="DeleteDocument" xml:space="preserve">
+    <value>Delete Document</value>
+  </data>
+  <data name="DocumentCreatedSuccessfully" xml:space="preserve">
+    <value>Document Created Successfully.</value>
+  </data>
+  <data name="DocumentCreationFailed" xml:space="preserve">
+    <value>Document Creation Failed.</value>
+  </data>
+  <data name="DocumentDeletedSuccessfully" xml:space="preserve">
+    <value>Document Deleted Successfully.</value>
+  </data>
+  <data name="DocumentDeletionFailed" xml:space="preserve">
+    <value>Document Deletion Failed</value>
+  </data>
+  <data name="DocumenteletedSuccessfully" xml:space="preserve">
+    <value>Document Deleted Successfully.</value>
+  </data>
+  <data name="DocumentList" xml:space="preserve">
+    <value>Document List</value>
+  </data>
+  <data name="DocumentManagement" xml:space="preserve">
+    <value>Document Management</value>
+  </data>
+  <data name="DocumentUpdationFailed" xml:space="preserve">
+    <value>Document Updation Failed.</value>
+  </data>
+  <data name="EditDocument" xml:space="preserve">
+    <value>Edit Document</value>
+  </data>
+  <data name="ImageUpdatefailed" xml:space="preserve">
+    <value>Image Updation Failed.</value>
+  </data>
+  <data name="ImageUpdateSuccessfully" xml:space="preserve">
+    <value>Image Updated Successfully.</value>
+  </data>
+  <data name="PhoneNo1" xml:space="preserve">
+    <value>PhoneNo</value>
+  </data>
+  <data name="PPTUpdateSuccess" xml:space="preserve">
+    <value>PPT Update Success.</value>
+  </data>
+  <data name="PPTUpdationFailed" xml:space="preserve">
+    <value>PPT Updation Failed.</value>
+  </data>
+  <data name="UpdatedSuccessfullyDocument" xml:space="preserve">
+    <value>Updated Successfully Document.</value>
+  </data>
+  <data name="UploadDocument" xml:space="preserve">
+    <value>Upload Document</value>
+  </data>
+  <data name="ViewDocument" xml:space="preserve">
+    <value>View Document</value>
+  </data>
+  <data name="CustomerTypeName" xml:space="preserve">
+    <value>Customer Type</value>
+  </data>
+</root>
