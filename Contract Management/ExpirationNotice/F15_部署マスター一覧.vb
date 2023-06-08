@@ -3,6 +3,9 @@ Imports MySql.Data.MySqlClient
 Public Class F15_部署マスター一覧
     Private Sub F15_部署マスター一覧_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.MaximizeBox = False
+        ' Me. = False;
+        Del.Visible = False
+        Label3.Visible = False
         binddata()
     End Sub
     Private Sub binddata()
@@ -70,7 +73,7 @@ Public Class F15_部署マスター一覧
             DataGridView1.Columns(0).ReadOnly = True
             DataGridView1.Columns(1).ReadOnly = True
             DataGridView1.Columns(2).ReadOnly = True
-            DataGridView1.Columns(3).Visible = False
+            DataGridView1.Columns(3).Visible = True
             DataGridView1.Columns(4).Visible = False
         Catch ex As Exception
 
@@ -95,6 +98,8 @@ Public Class F15_部署マスター一覧
         MgtDpt.Text = ""
         Remarks.Text = ""
         Del.Checked = False
+        Me.Close()
+
 
     End Sub
 
@@ -204,6 +209,43 @@ Public Class F15_部署マスター一覧
             ErrorProvider1.SetError(MgtDpt, String.Empty)
         End If
     End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        If e.ColumnIndex = 3 Then
+
+            Dim delete = DataGridView1.Rows(e.RowIndex).Cells(3).Value.ToString()
+            Dim Id = DataGridView1.Rows(e.RowIndex).Cells(4).Value.ToString()
+            DataGridView1.Rows(e.RowIndex).Cells(3).Value = True
+            DataGridView1.Refresh()
+            If delete = False Then
+                DoSomethingAsync(Id)
+            End If
+        End If
+
+    End Sub
+    Private Async Function DoSomethingAsync(Id As String) As Task
+        Await Task.Delay(5)
+        Dim dialogResult As DialogResult = MessageBox.Show("選択したレコードを削除してもよろしいですか？", "確認", MessageBoxButtons.YesNo)
+
+        If dialogResult = DialogResult.Yes Then
+            DB_OPEN()
+            Dim command As MySqlCommand = cnn.CreateCommand()
+            Dim query As String = "Update tm15_department_master set "
+            query += "`delete` =1  where ID = " + Id + " "
+            command.CommandText = query
+            Dim result As Int16 = command.ExecuteNonQuery()
+
+            If (result = 1) Then
+                MessageBox.Show("データが正常に削除されました")
+            End If
+            DB_CLOSE()
+            binddata()
+        ElseIf dialogResult = DialogResult.No Then
+            binddata()
+
+        End If
+    End Function
+
     Public Enum DialogResult1
         はい = 6
         いいえ = 7
@@ -211,5 +253,17 @@ Public Class F15_部署マスター一覧
     Public Enum MessageBoxButtons1
         はいいいえ = 1
     End Enum
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs)
+        Me.MinimizeBox = True
+    End Sub
+    'Private Const CP_DISABLE_CLOSE_BUTTON As Integer = &H200
+    'Protected Overrides ReadOnly Property CreateParams As CreateParams
+    '    Get
+    '        Dim cp As CreateParams = MyBase.CreateParams
+    '        cp.ClassStyle = cp.ClassStyle Or CP_DISABLE_CLOSE_BUTTON
+    '        Return cp
+    '    End Get
+    'End Property
 End Class
 

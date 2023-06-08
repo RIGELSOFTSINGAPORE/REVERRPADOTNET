@@ -12,7 +12,11 @@ Module Module_DB
         '*****  接続文字列を作成して接続を開始する  *****
         ' Dim cnn As MySqlConnection = New MySqlConnection("cnstr")
         Try
+            'If cnn.State = ConnectionState.Open Then
+            'cnn.Close()
+            ' Else
             cnn.Open()
+            'End If
 
         Catch ex As Exception
             MessageBox.Show("Cannot open connection!")

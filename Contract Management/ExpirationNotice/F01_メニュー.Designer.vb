@@ -33,6 +33,7 @@ Partial Class F01_メニュー
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'マスター入力
@@ -139,8 +140,22 @@ Partial Class F01_メニュー
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(269, 73)
         Me.Button4.TabIndex = 9
-        Me.Button4.Text = "調査用"
+        Me.Button4.Text = "信用調査用"
         Me.Button4.UseVisualStyleBackColor = False
+        '
+        'Button5
+        '
+        Me.Button5.AllowDrop = True
+        Me.Button5.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(207, Byte), Integer), CType(CType(246, Byte), Integer))
+        Me.Button5.Font = New System.Drawing.Font("Calibri", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Button5.Location = New System.Drawing.Point(852, 408)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(112, 38)
+        Me.Button5.TabIndex = 10
+        Me.Button5.Text = "閉じる"
+        Me.Button5.UseVisualStyleBackColor = False
         '
         'F01_メニュー
         '
@@ -149,6 +164,7 @@ Partial Class F01_メニュー
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(244, Byte), Integer))
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(1053, 501)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -179,4 +195,5 @@ Partial Class F01_メニュー
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Button4 As Button
+    Friend WithEvents Button5 As Button
 End Class

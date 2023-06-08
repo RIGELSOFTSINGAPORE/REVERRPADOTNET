@@ -15,6 +15,7 @@ Public Class F20_契約書一覧_WHExcel
     Dim adapter As New MySqlDataAdapter()
     Dim ds, ds1 As New DataSet()
     Dim boolbtn As Boolean
+    Dim flag As Boolean = False
     'Dim SqlCmd1 As mysqlcl
     'Dim connection As MySqlConnection
     Dim sql As String = Nothing
@@ -32,29 +33,41 @@ Public Class F20_契約書一覧_WHExcel
         DateTimePicker2.Format = DateTimePickerFormat.Custom
         DateTimePicker2.CustomFormat = " "
     End Sub
-
+    'Private Const CP_NOCLOSE_BUTTON As Integer = &H200
+    'Protected Overloads Overrides ReadOnly Property CreateParams() As CreateParams
+    '    Get
+    '        Dim myCp As CreateParams = MyBase.CreateParams
+    '        myCp.ClassStyle = myCp.ClassStyle Or CP_NOCLOSE_BUTTON
+    '        Return myCp
+    '    End Get
+    'End Property
     Sub ComboBox()
         Dim strSQL As String = Nothing
         Dim BindValues As String = Nothing
         sql = "SELECT Update_code, CONCAT(Update_code,' : ',Update_code_details) as Update_code_details , ID "
         sql += "FROM tm19_update_code_master"
         Try
-            DB_OPEN()
-            Dim command As MySqlCommand = cnn.CreateCommand()
-            command.CommandText = sql
-            Dim Reader As MySqlDataReader
-            Dim dt = New DataTable()
+            'DB_OPEN()
+            flag = DB_OPEN()
+            If flag = True Then
+                Dim command As MySqlCommand = cnn.CreateCommand()
+                command.CommandText = sql
+                Dim Reader As MySqlDataReader
+                Dim dt = New DataTable()
 
-            command.CommandText = sql
-            Reader = command.ExecuteReader()
-            dt.Load(Reader)
-            DB_CLOSE()
+                command.CommandText = sql
+                Reader = command.ExecuteReader()
+                dt.Load(Reader)
+                DB_CLOSE()
 
-            ComboBox1.ValueMember = "Update_code"
-            ComboBox1.DisplayMember = "Update_code_details"
-            ComboBox1.DataSource = dt
-            ComboBox1.SelectedValue = ""
-            ComboBox1.Text = ""
+                ComboBox1.ValueMember = "Update_code"
+                ComboBox1.DisplayMember = "Update_code_details"
+                ComboBox1.DataSource = dt
+                ComboBox1.SelectedValue = ""
+                ComboBox1.Text = ""
+            End If
+
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -121,7 +134,7 @@ Public Class F20_契約書一覧_WHExcel
                 'strData += "取引先名_全,ヨミガナ_全,契約書名,部署番号,管理部署,契約担当,備考,削除,インド"
                 'swFile.WriteLine(strData)
                 Dim ExportCSV = New DataTable("契約書一覧")
-                ExportCSV.Columns.Add("ID").ToString()
+                ExportCSV.Columns.Add("キー番号").ToString()
                 ExportCSV.Columns.Add("管理番号")
                 ExportCSV.Columns.Add("仮番号")
                 ExportCSV.Columns.Add("枝番")
@@ -152,7 +165,7 @@ Public Class F20_契約書一覧_WHExcel
 
                     For i = 0 To DtView1.Count - 1
                         Dim _dr As DataRow = ExportCSV.NewRow()
-                        _dr("ID") = Convert.ToString(DtView1(i)("ID"))
+                        _dr("キー番号") = Convert.ToString(DtView1(i)("キー番号"))
                         _dr("管理番号") = Convert.ToString(DtView1(i)("管理番号"))
                         _dr("仮番号") = Convert.ToString(DtView1(i)("仮番号"))
                         _dr("枝番") = Convert.ToString(DtView1(i)("枝番"))
@@ -279,7 +292,7 @@ Public Class F20_契約書一覧_WHExcel
             'strData += "取引先名_全,ヨミガナ_全,契約書名,部署番号,管理部署,契約担当,備考,削除,インド"
             'swFile.WriteLine(strData)
             Dim ExportCSV = New DataTable("契約書_全データ")
-            ExportCSV.Columns.Add("ID").ToString()
+            ExportCSV.Columns.Add("キー番号").ToString()
             ExportCSV.Columns.Add("管理番号")
             ExportCSV.Columns.Add("仮番号")
             ExportCSV.Columns.Add("枝番")
@@ -334,7 +347,7 @@ Public Class F20_契約書一覧_WHExcel
                     For i = 0 To DtView1.Count - 1
                         cout += 1
                         Dim _dr As DataRow = ExportCSV.NewRow()
-                        _dr("ID") = Convert.ToString(DtView1(i)("ID"))
+                        _dr("キー番号") = Convert.ToString(DtView1(i)("ID"))
                         _dr("管理番号") = Convert.ToString(DtView1(i)("Control_number"))
                         _dr("仮番号") = Convert.ToString(DtView1(i)("Temporary_number"))
                         _dr("枝番") = Convert.ToString(DtView1(i)("Branch_number"))
@@ -739,1093 +752,1138 @@ Public Class F20_契約書一覧_WHExcel
             'ダイアログボックスを表示し、［開く]をクリックした場合
             Dim filePath As String = String.Empty
             Dim fileExt As String = String.Empty
-            If .ShowDialog = DialogResult.OK Then
-                'Try
-                '    Dim srFile As New System.IO.StreamReader(.FileName, System.Text.Encoding.Default)
-                '    Dim strLine As String = srFile.ReadLine()
-                'Catch ex As Exception
-                '    If TypeOf ex Is IO.IOException Then
-                '        MsgBox("ファイルはすでに開いています。閉じてください")
-                '        Cursor = System.Windows.Forms.Cursors.Default
-                '        Exit Sub
-                '    End If
-                'End Try
-                filename = .FileName
-                Dim fi As New IO.FileInfo(filename)
-
-                Dim extn As String = fi.Extension
-                Dim ImpExcelData As DataTable
-                Dim ImpExcelDataNew As DataTable
-                Dim impdatastdate As DateTime
-                Dim impdataeddate As DateTime
-                impdatastdate = DateTime.Now
-                'ImpExcelData = Import_To_DataTable(filename, extn, True)
-                ImpExcelData = Import_Excel_DT(filename, fi.Name, extn, True)
-
-
-                'Dim excelApp As ExcelApp.Application = New ExcelApp.Application()
-                'Dim myNewRow As DataRow
-                'Dim myTable As DataTable
-                'Cursor = System.Windows.Forms.Cursors.WaitCursor
-                waitDlg = New WaitDialog
-                waitDlg.Owner = Me
-                waitDlg.MainMsg = Nothing
-                waitDlg.ProgressMax = 0
-                waitDlg.ProgressMin = 0
-                waitDlg.ProgressStep = 1
-                waitDlg.ProgressValue = 0
-                waitDlg.Show()
-
-                waitDlg.MainMsg = ""
-                waitDlg.ProgressMsg = ""
-                waitDlg.ProgressMax = 0
-                waitDlg.ProgressValue = 0
-
-                'If excelApp Is Nothing Then
-                '    Console.WriteLine("Excel is not installed!!")
-                '    Return
-                'End If
-                Dim count = 0
-                'Dim excelBook As ExcelApp.Workbook = excelApp.Workbooks.Open(filename)
-                'Dim excelSheet As ExcelApp._Worksheet = excelBook.Sheets(1)
-                ' Dim excelRange As ExcelApp.Range = excelSheet.UsedRange
-                'Dim rows As Integer = excelRange.Rows.Count
-                'Dim column As Integer = excelRange.Columns.Count
-
-                'myTable = New DataTable("MyDataTable")
-                'myTable.Columns.Add("ID", GetType(Integer))
-                'myTable.Columns.Add("mgtnumber", GetType(String))
-                'myTable.Columns.Add("Temporarynumber", GetType(String))
-                'myTable.Columns.Add("Branchnumber", GetType(String))
-                'myTable.Columns.Add("Oldnumber", GetType(String))
-                'myTable.Columns.Add("ContractDate", GetType(Date))
-                'myTable.Columns.Add("Contractperiodcommencement", GetType(Date))
-                'myTable.Columns.Add("ScheduledEndDate", GetType(Date))
-                'myTable.Columns.Add("EndDate", GetType(Date))
-                'myTable.Columns.Add("Updatecode", GetType(String))
-                'myTable.Columns.Add("Automaticupdateinterval", GetType(String))
-                'myTable.Columns.Add("Accountnumberall", GetType(String))
-                'myTable.Columns.Add("Customernameall", GetType(String))
-                'myTable.Columns.Add("YomiganaAll", GetType(String))
-                'myTable.Columns.Add("Contractname", GetType(String))
-                'myTable.Columns.Add("Departmentnumber", GetType(String))
-                'myTable.Columns.Add("Managementdepartment", GetType(String))
-                'myTable.Columns.Add("Contractor", GetType(String))
-                'myTable.Columns.Add("Remarks", GetType(String))
-                'myTable.Columns.Add("Delete", GetType(String))
-                'myTable.Columns.Add("India", GetType(String))
-
-                Dim filenamget As String = System.IO.Path.GetFileName(filename)
-                Dim filenamgetext As String = System.IO.Path.GetExtension(filename)
-
-                'If filenamget <> "契約書管理.xlsx" Then
-                '    MsgBox("ファイル名InValid !")
-                '    Exit Sub
-                'Else
-                'Dim csvData As String = System.IO.File.ReadAllText(Path.Combine(filename))
-                Dim bool As Boolean = False
-                'If csvData.Split(vbLf).Length > 1 Then
-                '    'bool = checkColheader(csvData.Split(vbLf)(0))
-                '    'ConvertCSVtoDataTable(filename)
-                'End If
-
-                'Dim dtNew As DataTable = New DataTable()
-                'dtNew = ConvertCSVtoDataTable(filename)
-
-                'If Convert.ToString(dtNew.Columns(0)).ToLower() <> "lookupcode" Then
-                '    MessageBox.Show("Invalid Items File")
-                'End If
-                Dim flag As Boolean = False
-                Dim j As Integer = 0
-                Try
-
-
-                    'Dim headers As String() = SR.ReadLine().Split(","c)
-                    'If (column = 21) Then
-
-
-                    '    If excelRange.Cells(1, 1).Value.ToString().ToUpper() = "ID".ToUpper() Then
-                    '        j += 1
-                    '    End If
-                    '    If excelRange.Cells(1, 2).Value.ToString().ToUpper() = "管理番号".ToUpper() Then
-                    '        j += 1
-                    '    End If
-
-                    '    If excelRange.Cells(1, 3).Value.ToString().ToUpper() = "仮番号".ToUpper() Then
-                    '        j += 1
-                    '    End If
-
-                    '    If excelRange.Cells(1, 4).Value.ToString().ToUpper() = "枝番".ToUpper() Then
-                    '        j += 1
-                    '    End If
-
-                    '    If excelRange.Cells(1, 5).Value.ToString().ToUpper() = "旧番号".ToUpper() Then
-                    '        j += 1
-                    '    End If
-
-                    '    If excelRange.Cells(1, 6).Value.ToString().ToUpper() = "契約日".ToUpper() Then
-                    '        j += 1
-                    '    End If
-
-                    '    If excelRange.Cells(1, 7).Value.ToString().ToUpper() = "契約期間開始".ToUpper() Then
-                    '        j += 1
-                    '    End If
-
-                    '    If excelRange.Cells(1, 8).Value.ToString().ToUpper() = "契約期間終了予定日".ToUpper() Then
-                    '        j += 1
-                    '    End If
-
-                    '    If excelRange.Cells(1, 9).Value.ToString().ToUpper() = "終了日".ToUpper() Then
-                    '        j += 1
-                    '    End If
-
-                    '    If excelRange.Cells(1, 10).Value.ToString().ToUpper() = "更新コード".ToUpper() Then
-                    '        j += 1
-                    '    End If
-
-                    '    If excelRange.Cells(1, 11).Value.ToString().ToUpper() = "自動更新間隔".ToUpper() Then
-                    '        j += 1
-                    '    End If
-
-                    '    If excelRange.Cells(1, 12).Value.ToString().ToUpper() = "取引先番号_全".ToUpper() Then
-                    '        j += 1
-                    '    End If
-                    '    If excelRange.Cells(1, 13).Value.ToString().ToUpper() = "取引先名_全".ToUpper() Then
-                    '        j += 1
-                    '    End If
-
-                    '    If excelRange.Cells(1, 14).Value.ToString().ToUpper() = "ヨミガナ_全".ToUpper() Then
-                    '        j += 1
-                    '    End If
-
-                    '    If excelRange.Cells(1, 15).Value.ToString().ToUpper() = "契約書名".ToUpper() Then
-                    '        j += 1
-                    '    End If
-
-                    '    If excelRange.Cells(1, 16).Value.ToString().ToUpper() = "部署番号".ToUpper() Then
-                    '        j += 1
-                    '    End If
-
-                    '    If excelRange.Cells(1, 17).Value.ToString().ToUpper() = "管理部署".ToUpper() Then
-                    '        j += 1
-                    '    End If
-
-                    '    If excelRange.Cells(1, 18).Value.ToString().ToUpper() = "契約担当".ToUpper() Then
-                    '        j += 1
-                    '    End If
-
-                    '    If excelRange.Cells(1, 19).Value.ToString().ToUpper() = "備考".ToUpper() Then
-                    '        j += 1
-                    '    End If
-
-                    '    If excelRange.Cells(1, 20).Value.ToString().ToUpper() = "削除".ToUpper() Then
-                    '        j += 1
-                    '    End If
-
-                    '    If excelRange.Cells(1, 21).Value.ToString().ToUpper() = "インド".ToUpper() Then
-                    '        j += 1
-                    '    End If
-
-                    '    If j = 21 Then
-                    '        flag = True
-                    '    Else
-                    '        flag = False
-                    '    End If
-
-                    '    If flag = False Then
-                    '        MessageBox.Show("ヘッダーが一致しません", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    '        excelApp.Quit()
-                    '        waitDlg.Close()
+            flag = DB_OPEN()
+            If flag = True Then
+                DB_CLOSE()
+                If .ShowDialog = DialogResult.OK Then
+                    'Try
+                    '    Dim srFile As New System.IO.StreamReader(.FileName, System.Text.Encoding.Default)
+                    '    Dim strLine As String = srFile.ReadLine()
+                    'Catch ex As Exception
+                    '    If TypeOf ex Is IO.IOException Then
+                    '        MsgBox("ファイルはすでに開いています。閉じてください")
+                    '        Cursor = System.Windows.Forms.Cursors.Default
                     '        Exit Sub
                     '    End If
-                    'Else
-                    '    MessageBox.Show("ヘッダーが一致しません", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    '    excelApp.Quit()
-                    '    waitDlg.Close()
-                    '    Exit Sub
+                    'End Try
+                    filename = .FileName
+                    Dim fi As New IO.FileInfo(filename)
+
+                    Dim extn As String = fi.Extension
+                    Dim ImpExcelData As DataTable
+                    Dim ImpExcelDataNew As DataTable
+                    Dim impdatastdate As DateTime
+                    Dim impdataeddate As DateTime
+                    impdatastdate = DateTime.Now
+                    'ImpExcelData = Import_To_DataTable(filename, extn, True)
+                    ImpExcelData = Import_Excel_DT(filename, fi.Name, extn, True)
+
+
+                    'Dim excelApp As ExcelApp.Application = New ExcelApp.Application()
+                    'Dim myNewRow As DataRow
+                    'Dim myTable As DataTable
+                    'Cursor = System.Windows.Forms.Cursors.WaitCursor
+                    waitDlg = New WaitDialog
+                    waitDlg.Owner = Me
+                    waitDlg.MainMsg = Nothing
+                    waitDlg.ProgressMax = 0
+                    waitDlg.ProgressMin = 0
+                    waitDlg.ProgressStep = 1
+                    waitDlg.ProgressValue = 0
+                    waitDlg.Show()
+
+                    waitDlg.MainMsg = ""
+                    waitDlg.ProgressMsg = ""
+                    waitDlg.ProgressMax = 0
+                    waitDlg.ProgressValue = 0
+
+                    'If excelApp Is Nothing Then
+                    '    Console.WriteLine("Excel is not installed!!")
+                    '    Return
                     'End If
-                    If (ImpExcelData.Columns.Count = 22) Then
+                    Dim count = 0
+                    'Dim excelBook As ExcelApp.Workbook = excelApp.Workbooks.Open(filename)
+                    'Dim excelSheet As ExcelApp._Worksheet = excelBook.Sheets(1)
+                    ' Dim excelRange As ExcelApp.Range = excelSheet.UsedRange
+                    'Dim rows As Integer = excelRange.Rows.Count
+                    'Dim column As Integer = excelRange.Columns.Count
+
+                    'myTable = New DataTable("MyDataTable")
+                    'myTable.Columns.Add("ID", GetType(Integer))
+                    'myTable.Columns.Add("mgtnumber", GetType(String))
+                    'myTable.Columns.Add("Temporarynumber", GetType(String))
+                    'myTable.Columns.Add("Branchnumber", GetType(String))
+                    'myTable.Columns.Add("Oldnumber", GetType(String))
+                    'myTable.Columns.Add("ContractDate", GetType(Date))
+                    'myTable.Columns.Add("Contractperiodcommencement", GetType(Date))
+                    'myTable.Columns.Add("ScheduledEndDate", GetType(Date))
+                    'myTable.Columns.Add("EndDate", GetType(Date))
+                    'myTable.Columns.Add("Updatecode", GetType(String))
+                    'myTable.Columns.Add("Automaticupdateinterval", GetType(String))
+                    'myTable.Columns.Add("Accountnumberall", GetType(String))
+                    'myTable.Columns.Add("Customernameall", GetType(String))
+                    'myTable.Columns.Add("YomiganaAll", GetType(String))
+                    'myTable.Columns.Add("Contractname", GetType(String))
+                    'myTable.Columns.Add("Departmentnumber", GetType(String))
+                    'myTable.Columns.Add("Managementdepartment", GetType(String))
+                    'myTable.Columns.Add("Contractor", GetType(String))
+                    'myTable.Columns.Add("Remarks", GetType(String))
+                    'myTable.Columns.Add("Delete", GetType(String))
+                    'myTable.Columns.Add("India", GetType(String))
+
+                    Dim filenamget As String = System.IO.Path.GetFileName(filename)
+                    Dim filenamgetext As String = System.IO.Path.GetExtension(filename)
+
+                    'If filenamget <> "契約書管理.xlsx" Then
+                    '    MsgBox("ファイル名InValid !")
+                    '    Exit Sub
+                    'Else
+                    'Dim csvData As String = System.IO.File.ReadAllText(Path.Combine(filename))
+                    Dim bool As Boolean = False
+                    'If csvData.Split(vbLf).Length > 1 Then
+                    '    'bool = checkColheader(csvData.Split(vbLf)(0))
+                    '    'ConvertCSVtoDataTable(filename)
+                    'End If
+
+                    'Dim dtNew As DataTable = New DataTable()
+                    'dtNew = ConvertCSVtoDataTable(filename)
+
+                    'If Convert.ToString(dtNew.Columns(0)).ToLower() <> "lookupcode" Then
+                    '    MessageBox.Show("Invalid Items File")
+                    'End If
+                    Dim flag As Boolean = False
+                    Dim j As Integer = 0
+                    Try
 
 
-                        If ImpExcelData.Columns(0).ColumnName.ToUpper = "ID".ToUpper() Then
-                            j += 1
-                        End If
-                        If ImpExcelData.Columns(1).ColumnName.ToUpper() = "管理番号".ToUpper() Then
-                            j += 1
-                        End If
+                        'Dim headers As String() = SR.ReadLine().Split(","c)
+                        'If (column = 21) Then
 
-                        If ImpExcelData.Columns(2).ColumnName.ToUpper() = "仮番号".ToUpper() Then
-                            j += 1
-                        End If
 
-                        If ImpExcelData.Columns(3).ColumnName.ToUpper() = "枝番".ToUpper() Then
-                            j += 1
-                        End If
+                        '    If excelRange.Cells(1, 1).Value.ToString().ToUpper() = "ID".ToUpper() Then
+                        '        j += 1
+                        '    End If
+                        '    If excelRange.Cells(1, 2).Value.ToString().ToUpper() = "管理番号".ToUpper() Then
+                        '        j += 1
+                        '    End If
 
-                        If ImpExcelData.Columns(4).ColumnName.ToUpper() = "旧番号".ToUpper() Then
-                            j += 1
-                        End If
+                        '    If excelRange.Cells(1, 3).Value.ToString().ToUpper() = "仮番号".ToUpper() Then
+                        '        j += 1
+                        '    End If
 
-                        If ImpExcelData.Columns(5).ColumnName.ToUpper() = "契約日".ToUpper() Then
-                            j += 1
-                        End If
+                        '    If excelRange.Cells(1, 4).Value.ToString().ToUpper() = "枝番".ToUpper() Then
+                        '        j += 1
+                        '    End If
 
-                        If ImpExcelData.Columns(6).ColumnName.ToUpper() = "契約期間開始".ToUpper() Then
-                            j += 1
-                        End If
+                        '    If excelRange.Cells(1, 5).Value.ToString().ToUpper() = "旧番号".ToUpper() Then
+                        '        j += 1
+                        '    End If
 
-                        If ImpExcelData.Columns(7).ColumnName.ToUpper() = "契約期間終了予定日".ToUpper() Then
-                            j += 1
-                        End If
+                        '    If excelRange.Cells(1, 6).Value.ToString().ToUpper() = "契約日".ToUpper() Then
+                        '        j += 1
+                        '    End If
 
-                        If ImpExcelData.Columns(8).ColumnName.ToUpper() = "終了日".ToUpper() Then
-                            j += 1
-                        End If
+                        '    If excelRange.Cells(1, 7).Value.ToString().ToUpper() = "契約期間開始".ToUpper() Then
+                        '        j += 1
+                        '    End If
 
-                        If ImpExcelData.Columns(9).ColumnName.ToUpper() = "更新コード".ToUpper() Then
-                            j += 1
-                        End If
+                        '    If excelRange.Cells(1, 8).Value.ToString().ToUpper() = "契約期間終了予定日".ToUpper() Then
+                        '        j += 1
+                        '    End If
 
-                        If ImpExcelData.Columns(10).ColumnName.ToUpper() = "自動更新間隔".ToUpper() Then
-                            j += 1
-                        End If
-                        If ImpExcelData.Columns(11).ColumnName.ToUpper() = "調査日".ToUpper() Then
-                            j += 1
-                        End If
-                        If ImpExcelData.Columns(12).ColumnName.ToUpper() = "取引先番号_全".ToUpper() Then
-                            j += 1
-                        End If
-                        If ImpExcelData.Columns(13).ColumnName.ToUpper() = "取引先名_全".ToUpper() Then
-                            j += 1
-                        End If
+                        '    If excelRange.Cells(1, 9).Value.ToString().ToUpper() = "終了日".ToUpper() Then
+                        '        j += 1
+                        '    End If
 
-                        If ImpExcelData.Columns(14).ColumnName.ToUpper() = "ヨミガナ_全".ToUpper() Then
-                            j += 1
-                        End If
+                        '    If excelRange.Cells(1, 10).Value.ToString().ToUpper() = "更新コード".ToUpper() Then
+                        '        j += 1
+                        '    End If
 
-                        If ImpExcelData.Columns(15).ColumnName.ToUpper() = "契約書名".ToUpper() Then
-                            j += 1
-                        End If
+                        '    If excelRange.Cells(1, 11).Value.ToString().ToUpper() = "自動更新間隔".ToUpper() Then
+                        '        j += 1
+                        '    End If
 
-                        If ImpExcelData.Columns(16).ColumnName.ToUpper() = "部署番号".ToUpper() Then
-                            j += 1
-                        End If
+                        '    If excelRange.Cells(1, 12).Value.ToString().ToUpper() = "取引先番号_全".ToUpper() Then
+                        '        j += 1
+                        '    End If
+                        '    If excelRange.Cells(1, 13).Value.ToString().ToUpper() = "取引先名_全".ToUpper() Then
+                        '        j += 1
+                        '    End If
 
-                        If ImpExcelData.Columns(17).ColumnName.ToUpper() = "管理部署".ToUpper() Then
-                            j += 1
-                        End If
+                        '    If excelRange.Cells(1, 14).Value.ToString().ToUpper() = "ヨミガナ_全".ToUpper() Then
+                        '        j += 1
+                        '    End If
 
-                        If ImpExcelData.Columns(18).ColumnName.ToUpper() = "契約担当".ToUpper() Then
-                            j += 1
-                        End If
+                        '    If excelRange.Cells(1, 15).Value.ToString().ToUpper() = "契約書名".ToUpper() Then
+                        '        j += 1
+                        '    End If
 
-                        If ImpExcelData.Columns(19).ColumnName.ToUpper() = "備考".ToUpper() Then
-                            j += 1
-                        End If
+                        '    If excelRange.Cells(1, 16).Value.ToString().ToUpper() = "部署番号".ToUpper() Then
+                        '        j += 1
+                        '    End If
 
-                        If ImpExcelData.Columns(20).ColumnName.ToUpper() = "削除".ToUpper() Then
-                            j += 1
-                        End If
+                        '    If excelRange.Cells(1, 17).Value.ToString().ToUpper() = "管理部署".ToUpper() Then
+                        '        j += 1
+                        '    End If
 
-                        If ImpExcelData.Columns(21).ColumnName.ToUpper() = "インド".ToUpper() Then
-                            j += 1
-                        End If
+                        '    If excelRange.Cells(1, 18).Value.ToString().ToUpper() = "契約担当".ToUpper() Then
+                        '        j += 1
+                        '    End If
 
-                        If j = 22 Then
-                            flag = True
-                            ImpExcelData.Columns("ID").ColumnName = "ID"
-                            ImpExcelData.Columns("管理番号").ColumnName = "Control_number"
-                            ImpExcelData.Columns("仮番号").ColumnName = "Temporary_number"
-                            ImpExcelData.Columns("枝番").ColumnName = "Branch_number"
-                            ImpExcelData.Columns("旧番号").ColumnName = "Old_number"
-                            ImpExcelData.Columns("契約日").ColumnName = "Contract_date"
-                            ImpExcelData.Columns("契約期間開始").ColumnName = "Contract_period_starts"
-                            ImpExcelData.Columns("契約期間終了予定日").ColumnName = "Scheduled_end _date_of_contract_period"
-                            ImpExcelData.Columns("終了日").ColumnName = "End_date"
-                            ImpExcelData.Columns("更新コード").ColumnName = "Update_code"
-                            ImpExcelData.Columns("自動更新間隔").ColumnName = "Automatic_update_interval"
-                            ImpExcelData.Columns("調査日").ColumnName = "Survey_Date"
-                            ImpExcelData.Columns("取引先番号_全").ColumnName = "Account_number_all"
-                            ImpExcelData.Columns("取引先名_全").ColumnName = "Account_name_all"
-                            ImpExcelData.Columns("ヨミガナ_全").ColumnName = "Yomigana_All"
-                            ImpExcelData.Columns("契約書名").ColumnName = "Contract_name"
-                            ImpExcelData.Columns("部署番号").ColumnName = "Department_number"
-                            ImpExcelData.Columns("管理部署").ColumnName = "Management_department"
-                            ImpExcelData.Columns("契約担当").ColumnName = "Contractor"
-                            ImpExcelData.Columns("備考").ColumnName = "remarks"
-                            ImpExcelData.Columns("削除").ColumnName = "delete"
-                            ImpExcelData.Columns("インド").ColumnName = "India"
+                        '    If excelRange.Cells(1, 19).Value.ToString().ToUpper() = "備考".ToUpper() Then
+                        '        j += 1
+                        '    End If
 
+                        '    If excelRange.Cells(1, 20).Value.ToString().ToUpper() = "削除".ToUpper() Then
+                        '        j += 1
+                        '    End If
+
+                        '    If excelRange.Cells(1, 21).Value.ToString().ToUpper() = "インド".ToUpper() Then
+                        '        j += 1
+                        '    End If
+
+                        '    If j = 21 Then
+                        '        flag = True
+                        '    Else
+                        '        flag = False
+                        '    End If
+
+                        '    If flag = False Then
+                        '        MessageBox.Show("ヘッダーが一致しません", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        '        excelApp.Quit()
+                        '        waitDlg.Close()
+                        '        Exit Sub
+                        '    End If
+                        'Else
+                        '    MessageBox.Show("ヘッダーが一致しません", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        '    excelApp.Quit()
+                        '    waitDlg.Close()
+                        '    Exit Sub
+                        'End If
+                        If (ImpExcelData.Columns.Count = 22) Then
+
+
+                            If ImpExcelData.Columns(0).ColumnName.ToUpper = "キー番号".ToUpper() Then
+                                j += 1
+                            End If
+                            If ImpExcelData.Columns(1).ColumnName.ToUpper() = "管理番号".ToUpper() Then
+                                j += 1
+                            End If
+
+                            If ImpExcelData.Columns(2).ColumnName.ToUpper() = "仮番号".ToUpper() Then
+                                j += 1
+                            End If
+
+                            If ImpExcelData.Columns(3).ColumnName.ToUpper() = "枝番".ToUpper() Then
+                                j += 1
+                            End If
+
+                            'If ImpExcelData.Columns(4).ColumnName.ToUpper() = "旧番号".ToUpper() Then
+                            '    j += 1
+                            'End If
+                            If ImpExcelData.Columns(4).ColumnName.ToUpper() = "旧番号".ToUpper() Then
+                                j += 1
+                            End If
+
+                            If ImpExcelData.Columns(5).ColumnName.ToUpper() = "契約日".ToUpper() Then
+                                j += 1
+                            End If
+
+                            If ImpExcelData.Columns(6).ColumnName.ToUpper() = "契約期間開始".ToUpper() Then
+                                j += 1
+                            End If
+
+                            If ImpExcelData.Columns(7).ColumnName.ToUpper() = "契約期間終了予定日".ToUpper() Then
+                                j += 1
+                            End If
+
+                            If ImpExcelData.Columns(8).ColumnName.ToUpper() = "終了日".ToUpper() Then
+                                j += 1
+                            End If
+
+                            If ImpExcelData.Columns(9).ColumnName.ToUpper() = "更新コード".ToUpper() Then
+                                j += 1
+                            End If
+
+                            If ImpExcelData.Columns(10).ColumnName.ToUpper() = "自動更新間隔".ToUpper() Then
+                                j += 1
+                            End If
+                            If ImpExcelData.Columns(11).ColumnName.ToUpper() = "調査日".ToUpper() Then
+                                j += 1
+                            End If
+                            If ImpExcelData.Columns(12).ColumnName.ToUpper() = "取引先番号_全".ToUpper() Then
+                                j += 1
+                            End If
+                            If ImpExcelData.Columns(13).ColumnName.ToUpper() = "取引先名_全".ToUpper() Then
+                                j += 1
+                            End If
+
+                            If ImpExcelData.Columns(14).ColumnName.ToUpper() = "ヨミガナ_全".ToUpper() Then
+                                j += 1
+                            End If
+
+                            If ImpExcelData.Columns(15).ColumnName.ToUpper() = "契約書名".ToUpper() Then
+                                j += 1
+                            End If
+
+                            If ImpExcelData.Columns(16).ColumnName.ToUpper() = "部署番号".ToUpper() Then
+                                j += 1
+                            End If
+
+                            If ImpExcelData.Columns(17).ColumnName.ToUpper() = "管理部署".ToUpper() Then
+                                j += 1
+                            End If
+
+                            If ImpExcelData.Columns(18).ColumnName.ToUpper() = "契約担当".ToUpper() Then
+                                j += 1
+                            End If
+
+                            If ImpExcelData.Columns(19).ColumnName.ToUpper() = "備考".ToUpper() Then
+                                j += 1
+                            End If
+
+                            If ImpExcelData.Columns(20).ColumnName.ToUpper() = "削除".ToUpper() Then
+                                j += 1
+                            End If
+
+                            If ImpExcelData.Columns(21).ColumnName.ToUpper() = "インド".ToUpper() Then
+                                j += 1
+                            End If
+
+                            If j = 22 Then
+                                flag = True
+                                ImpExcelData.Columns("キー番号").ColumnName = "ID"
+                                ImpExcelData.Columns("管理番号").ColumnName = "Control_number"
+                                ImpExcelData.Columns("仮番号").ColumnName = "Temporary_number"
+                                ImpExcelData.Columns("枝番").ColumnName = "Branch_number"
+                                ImpExcelData.Columns("旧番号").ColumnName = "Old_number"
+                                ImpExcelData.Columns("契約日").ColumnName = "Contract_date"
+                                ImpExcelData.Columns("契約期間開始").ColumnName = "Contract_period_starts"
+                                ImpExcelData.Columns("契約期間終了予定日").ColumnName = "Scheduled_end _date_of_contract_period"
+                                ImpExcelData.Columns("終了日").ColumnName = "End_date"
+                                ImpExcelData.Columns("更新コード").ColumnName = "Update_code"
+                                ImpExcelData.Columns("自動更新間隔").ColumnName = "Automatic_update_interval"
+                                ImpExcelData.Columns("調査日").ColumnName = "Survey_Date"
+                                ImpExcelData.Columns("取引先番号_全").ColumnName = "Account_number_all"
+                                ImpExcelData.Columns("取引先名_全").ColumnName = "Account_name_all"
+                                ImpExcelData.Columns("ヨミガナ_全").ColumnName = "Yomigana_All"
+                                ImpExcelData.Columns("契約書名").ColumnName = "Contract_name"
+                                ImpExcelData.Columns("部署番号").ColumnName = "Department_number"
+                                ImpExcelData.Columns("管理部署").ColumnName = "Management_department"
+                                ImpExcelData.Columns("契約担当").ColumnName = "Contractor"
+                                ImpExcelData.Columns("備考").ColumnName = "remarks"
+                                ImpExcelData.Columns("削除").ColumnName = "delete"
+                                ImpExcelData.Columns("インド").ColumnName = "India"
+
+                            Else
+                                flag = False
+                            End If
+
+                            If flag = False Then
+                                MessageBox.Show("ヘッダーが一致しません", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                                'ExcelApp.Quit()
+                                waitDlg.Close()
+                                Exit Sub
+                            End If
                         Else
-                            flag = False
-                        End If
-
-                        If flag = False Then
                             MessageBox.Show("ヘッダーが一致しません", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
                             'ExcelApp.Quit()
                             waitDlg.Close()
                             Exit Sub
                         End If
-                    Else
+                    Catch ex As Exception
                         MessageBox.Show("ヘッダーが一致しません", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                        'ExcelApp.Quit()
+                        'excelApp.Quit()
                         waitDlg.Close()
                         Exit Sub
-                    End If
-                Catch ex As Exception
-                    MessageBox.Show("ヘッダーが一致しません", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    'excelApp.Quit()
-                    waitDlg.Close()
-                    Exit Sub
 
-                End Try
-                'Dim rowst As Integer
-                'rowst = 12345678
-                Dim checkdata = True
-                Dim rowerror = ""
-                Dim errorcount = 0
-                Dim rows As Integer = ImpExcelData.Rows.Count
-                Dim k = rows
+                    End Try
+                    'Dim rowst As Integer
+                    'rowst = 12345678
+                    Dim checkdata = True
+                    Dim rowerror = ""
+                    Dim errorcount = 0
+                    Dim rows As Integer = ImpExcelData.Rows.Count
+                    Dim k = rows
 
-                Dim i As Integer
-                i = 0
+                    Dim i As Integer
+                    i = 0
 
-                'For i As Integer = 0 To rows - 2
+                    'For i As Integer = 0 To rows - 2
 
-                '    waitDlg.ProgressMsg = Fix((i) * 100 / (rows - 1)) & "%　" & "（" & Format((i), "##,##0") & " / " & Format((rows - 1), "##,##0") & " 件）"
-                '    waitDlg.Text = "実行中・・・" & Fix((i) * 100 / (rows - 1)) & "%　"
-                '    waitDlg.PerformStep()
+                    '    waitDlg.ProgressMsg = Fix((i) * 100 / (rows - 1)) & "%　" & "（" & Format((i), "##,##0") & " / " & Format((rows - 1), "##,##0") & " 件）"
+                    '    waitDlg.Text = "実行中・・・" & Fix((i) * 100 / (rows - 1)) & "%　"
+                    '    waitDlg.PerformStep()
 
 
-                '    'Try
-                '    '    checkdata = True
-                '    'Dim cols As Integer = excelRange.Columns.Count
-                '    'myNewRow = myTable.NewRow()
-                '    Dim ID As Int16
-                '    If (excelRange.Cells(i + 2, 1).Text <> "") Then
-                '        ID = excelRange.Cells(i + 2, 1).Text
-                '    Else
-                '        ID = 0
-                '    End If
+                    '    'Try
+                    '    '    checkdata = True
+                    '    'Dim cols As Integer = excelRange.Columns.Count
+                    '    'myNewRow = myTable.NewRow()
+                    '    Dim ID As Int16
+                    '    If (excelRange.Cells(i + 2, 1).Text <> "") Then
+                    '        ID = excelRange.Cells(i + 2, 1).Text
+                    '    Else
+                    '        ID = 0
+                    '    End If
 
-                '    Dim mgtnumber As String = excelRange.Cells(i + 2, 2).Text
-                '    Dim Temporarynumber As String
-                '    If (excelRange.Cells(i + 2, 3).Text <> "") Then
-                '        Temporarynumber = excelRange.Cells(i + 2, 3).Text
-                '    Else
-                '        Temporarynumber = 0
-                '    End If
-
-
-                '    Dim Branchnumber As String = excelRange.Cells(i + 2, 4).Text
-                '    Dim Oldnumber As String = excelRange.Cells(i + 2, 5).Text
-                '    Dim ContractDate As String = excelRange.Cells(i + 2, 6).Text
-                '    Dim Contractperiodstarts As String = excelRange.Cells(i + 2, 7).Text
-                '    Dim ScheduledEndDate As String = excelRange.Cells(i + 2, 8).Text
-                '    Dim EndDate As String = excelRange.Cells(i + 2, 9).Text
-                '    Dim Updatecode As String = excelRange.Cells(i + 2, 10).Text
-                '    Dim AutomaUpdateinter As String = excelRange.Cells(i + 2, 11).Text
-                '    Dim Accountnumberall As String
-                '    If (excelRange.Cells(i + 2, 12).Text <> "") Then
-                '        Accountnumberall = excelRange.Cells(i + 2, 12).Text
-                '    Else
-                '        Accountnumberall = 0
-                '    End If
-
-                '    Dim specialChar As String = "／"
-                '    ' Dim specialChar As String = "\|!#$%&/()=?»«@£§€{}.-;'<>_,"
-
-                '    For Each item In specialChar
-                '        If Accountnumberall.Contains(item) Then
-                '            Accountnumberall = 0
-                '        End If
-                '    Next
-
-                '    Dim Customernameall As String = excelRange.Cells(i + 2, 13).Text
-                '    Dim YomiganaAll As String = excelRange.Cells(i + 2, 14).Text
-                '    Dim Contractname As String = excelRange.Cells(i + 2, 15).Text
-                '    Dim Departmentnumber As Int16
-                '    If (excelRange.Cells(i + 2, 16).Text <> "") Then
-                '        Departmentnumber = excelRange.Cells(i + 2, 16).Text
-                '    Else
-                '        Departmentnumber = 0
-                '    End If
-
-                '    Dim Managementdepartment As String = excelRange.Cells(i + 2, 17).Text
-                '    Dim Contractor As String = excelRange.Cells(i + 2, 18).Text
-                '    Dim Remarks As String = excelRange.Cells(i + 2, 19).Text
-                '    Dim Delete As Boolean
-                '    Dim India As Boolean
-                '    If (excelRange.Cells(i + 2, 20).Text = "") Then
-                '        Delete = 0
-                '    Else
-                '        Delete = excelRange.Cells(i + 2, 20).Text
-                '    End If
-                '    If (excelRange.Cells(i + 2, 20).Text = "") Then
-                '        India = 0
-                '    Else
-                '        India = excelRange.Cells(i + 2, 21).Text
-                '    End If
-
-                '    If ID = 0 Then
-                '        checkdata = False
-                '        'If rowerror = "" Then
-                '        '    rowerror += Convert.ToString(count + 1)
-                '        '    errorcount = errorcount + 1
-                '        'Else
-                '        '    rowerror += "," + Convert.ToString(count + 1)
-                '        '    errorcount = errorcount + 1
-                '        'End If
-                '        errorcount = errorcount + 1
-                '    End If
-
-                '    'Catch ex As Exception
-                '    'checkdata = False
-                '    'If rowerror = "" Then
-                '    '    rowerror += Convert.ToString(count + 1)
-                '    '    errorcount = +1
-                '    'Else
-                '    '    rowerror += "," + Convert.ToString(count + 1)
-                '    '    errorcount = +1
-                '    'End If
-                '    'End Try
-                '    If checkdata = True Then
-                '        If (Departmentnumber <> 0) Then
+                    '    Dim mgtnumber As String = excelRange.Cells(i + 2, 2).Text
+                    '    Dim Temporarynumber As String
+                    '    If (excelRange.Cells(i + 2, 3).Text <> "") Then
+                    '        Temporarynumber = excelRange.Cells(i + 2, 3).Text
+                    '    Else
+                    '        Temporarynumber = 0
+                    '    End If
 
 
-                '            Try
-                '                DB_OPEN()
-                '                Dim command As MySqlCommand = cnn.CreateCommand()
-                '                Dim Reader As MySqlDataReader
-                '                Dim query1 As String = "select tm15_department_master.Department_number from tm15_department_master where tm15_department_master.Department_number= @Department_number "
-                '                command.CommandText = query1
-                '                command.Parameters.AddWithValue("Department_number", (Departmentnumber).ToString())
-                '                Reader = command.ExecuteReader()
-                '                While Reader.Read
-                '                    dptnum = Reader("Department_number")
-                '                End While
-                '                DB_CLOSE()
-                '            Catch ex As Exception
-                '                'MessageBox.Show(ex.Message)
-                '                DB_CLOSE()
-                '                checkdata = False
-                '                'If rowerror = "" Then
-                '                '    rowerror += Convert.ToString(count + 1)
-                '                '    errorcount = errorcount + 1
-                '                'Else
-                '                '    rowerror += "," + Convert.ToString(count + 1)
-                '                '    errorcount = errorcount + 1
-                '                'End If
-                '                errorcount = errorcount + 1
-                '            End Try
-                '            If dptnum > 0 Then
-                '                Try
-                '                    DB_OPEN()
-                '                    Dim query1 As String = "UPDATE tm15_department_master SET tm15_department_master.Management_department = '" & Managementdepartment & "' "
-                '                    query1 += " WHERE (tm15_department_master.Department_number = '" & Departmentnumber & "')"
-                '                    Dim command As MySqlCommand = cnn.CreateCommand()
-                '                    command.CommandText = query1
-                '                    command.ExecuteNonQuery()
-                '                    DB_CLOSE()
-                '                Catch ex As Exception
-                '                    'MessageBox.Show(ex.Message)
-                '                    DB_CLOSE()
-                '                    If (checkdata <> False) Then
-                '                        If rowerror = "" Then
-                '                            rowerror += Convert.ToString(count + 1)
-                '                            errorcount = errorcount + 1
-                '                        Else
-                '                            rowerror += "," + Convert.ToString(count + 1)
-                '                            errorcount = errorcount + 1
-                '                        End If
-                '                        errorcount = errorcount + 1
-                '                    End If
-                '                End Try
-                '            Else
-                '                Try
-                '                    DB_OPEN()
-                '                    Dim command1 As MySqlCommand = cnn.CreateCommand()
-                '                    Dim Reader As MySqlDataReader
-                '                    Dim id1 = 0
-                '                    Dim query2 As String = "SELECT MAX(Id)+1 as Id FROM tm15_department_master "
-                '                    command1.CommandText = query2
-                '                    Reader = command1.ExecuteReader()
-                '                    While Reader.Read
-                '                        id1 = Reader("Id")
-                '                    End While
-                '                    DB_CLOSE()
-                '                    DB_OPEN()
-                '                    Dim query1 As String = "insert into tm15_department_master (id, Management_department, Department_number, `delete`  ) values "
-                '                    query1 += " ('" & ID & "','" & Managementdepartment & "', '" & Departmentnumber & "',0)"
-                '                    Dim command As MySqlCommand = cnn.CreateCommand()
-                '                    command.CommandText = query1
-                '                    command.ExecuteNonQuery()
-                '                    DB_CLOSE()
-                '                Catch ex As Exception
-                '                    DB_CLOSE()
-                '                    'MessageBox.Show(ex.Message)
-                '                    If (checkdata <> False) Then
-                '                        'If rowerror = "" Then
-                '                        '    rowerror += Convert.ToString(count + 1)
-                '                        '    errorcount = errorcount + 1
-                '                        'Else
-                '                        '    rowerror += "," + Convert.ToString(count + 1)
-                '                        '    errorcount = errorcount + 1
-                '                        'End If
-                '                        checkdata = False
-                '                        errorcount = errorcount + 1
-                '                    End If
-                '                End Try
-                '            End If
-                '        End If
-                '        If (Accountnumberall <> 0) Then
+                    '    Dim Branchnumber As String = excelRange.Cells(i + 2, 4).Text
+                    '    Dim Oldnumber As String = excelRange.Cells(i + 2, 5).Text
+                    '    Dim ContractDate As String = excelRange.Cells(i + 2, 6).Text
+                    '    Dim Contractperiodstarts As String = excelRange.Cells(i + 2, 7).Text
+                    '    Dim ScheduledEndDate As String = excelRange.Cells(i + 2, 8).Text
+                    '    Dim EndDate As String = excelRange.Cells(i + 2, 9).Text
+                    '    Dim Updatecode As String = excelRange.Cells(i + 2, 10).Text
+                    '    Dim AutomaUpdateinter As String = excelRange.Cells(i + 2, 11).Text
+                    '    Dim Accountnumberall As String
+                    '    If (excelRange.Cells(i + 2, 12).Text <> "") Then
+                    '        Accountnumberall = excelRange.Cells(i + 2, 12).Text
+                    '    Else
+                    '        Accountnumberall = 0
+                    '    End If
+
+                    '    Dim specialChar As String = "／"
+                    '    ' Dim specialChar As String = "\|!#$%&/()=?»«@£§€{}.-;'<>_,"
+
+                    '    For Each item In specialChar
+                    '        If Accountnumberall.Contains(item) Then
+                    '            Accountnumberall = 0
+                    '        End If
+                    '    Next
+
+                    '    Dim Customernameall As String = excelRange.Cells(i + 2, 13).Text
+                    '    Dim YomiganaAll As String = excelRange.Cells(i + 2, 14).Text
+                    '    Dim Contractname As String = excelRange.Cells(i + 2, 15).Text
+                    '    Dim Departmentnumber As Int16
+                    '    If (excelRange.Cells(i + 2, 16).Text <> "") Then
+                    '        Departmentnumber = excelRange.Cells(i + 2, 16).Text
+                    '    Else
+                    '        Departmentnumber = 0
+                    '    End If
+
+                    '    Dim Managementdepartment As String = excelRange.Cells(i + 2, 17).Text
+                    '    Dim Contractor As String = excelRange.Cells(i + 2, 18).Text
+                    '    Dim Remarks As String = excelRange.Cells(i + 2, 19).Text
+                    '    Dim Delete As Boolean
+                    '    Dim India As Boolean
+                    '    If (excelRange.Cells(i + 2, 20).Text = "") Then
+                    '        Delete = 0
+                    '    Else
+                    '        Delete = excelRange.Cells(i + 2, 20).Text
+                    '    End If
+                    '    If (excelRange.Cells(i + 2, 20).Text = "") Then
+                    '        India = 0
+                    '    Else
+                    '        India = excelRange.Cells(i + 2, 21).Text
+                    '    End If
+
+                    '    If ID = 0 Then
+                    '        checkdata = False
+                    '        'If rowerror = "" Then
+                    '        '    rowerror += Convert.ToString(count + 1)
+                    '        '    errorcount = errorcount + 1
+                    '        'Else
+                    '        '    rowerror += "," + Convert.ToString(count + 1)
+                    '        '    errorcount = errorcount + 1
+                    '        'End If
+                    '        errorcount = errorcount + 1
+                    '    End If
+
+                    '    'Catch ex As Exception
+                    '    'checkdata = False
+                    '    'If rowerror = "" Then
+                    '    '    rowerror += Convert.ToString(count + 1)
+                    '    '    errorcount = +1
+                    '    'Else
+                    '    '    rowerror += "," + Convert.ToString(count + 1)
+                    '    '    errorcount = +1
+                    '    'End If
+                    '    'End Try
+                    '    If checkdata = True Then
+                    '        If (Departmentnumber <> 0) Then
 
 
-                '            Try
-
-                '                DB_OPEN()
-                '                Dim command As MySqlCommand = cnn.CreateCommand()
-                '                Dim Reader As MySqlDataReader
-                '                Dim query1 As String = "select * from  tm14_account_master where Account_number= '" & Accountnumberall & "' "
-                '                command.CommandText = query1
-                '                Reader = command.ExecuteReader()
-                '                dptnum = 0
-                '                While Reader.Read
-                '                    dptnum = Reader("Account_number")
-                '                End While
-                '                DB_CLOSE()
-
-                '            Catch ex As Exception
-                '                'MessageBox.Show(ex.Message)
-                '                DB_CLOSE()
-                '                If (checkdata <> False) Then
-                '                    'If rowerror = "" Then
-                '                    '    rowerror += Convert.ToString(count + 1)
-                '                    '    errorcount = errorcount + 1
-                '                    'Else
-                '                    '    rowerror += "," + Convert.ToString(count + 1)
-                '                    '    errorcount = errorcount + 1
-                '                    'End If
-                '                    errorcount = errorcount + 1
-                '                    checkdata = False
-                '                End If
-
-                '            End Try
-                '            If dptnum > 0 Then
-                '                Try
-
-                '                    DB_OPEN()
-                '                    Dim query1 As String = "UPDATE tm14_account_master SET Account_number = '" & dptnum & "', "
-                '                    query1 += " Customer_name = '" & Customernameall & "', "
-                '                    query1 += " Yomigana = '" & YomiganaAll & "' "
-                '                    query1 += " WHERE (Account_number = '" & dptnum & "')"
-                '                    Dim command As MySqlCommand = cnn.CreateCommand()
-                '                    command.CommandText = query1
-                '                    command.ExecuteNonQuery()
-                '                    DB_CLOSE()
-                '                    Accountnumberall = dptnum
-                '                Catch ex As Exception
-                '                    'MessageBox.Show(ex.Message)
-                '                    DB_CLOSE()
-                '                    If (checkdata <> False) Then
-                '                        'If rowerror = "" Then
-                '                        '    rowerror += Convert.ToString(count + 1)
-                '                        '    errorcount = errorcount + 1
-                '                        'Else
-                '                        '    rowerror += "," + Convert.ToString(count + 1)
-                '                        '    errorcount = errorcount + 1
-                '                        'End If
-                '                        errorcount = errorcount + 1
-                '                        checkdata = False
-                '                    End If
-                '                End Try
-                '            Else
-                '                Try
-                '                    DB_OPEN()
-                '                    Dim query1 As String = "insert into tm14_account_master (Customer_name, Yomigana, Account_number,`delete`) values "
-                '                    query1 += " ('" & Customernameall & "','" & YomiganaAll & "', '" & Accountnumberall & "',0)"
-                '                    Dim command As MySqlCommand = cnn.CreateCommand()
-                '                    command.CommandText = query1
-                '                    command.ExecuteNonQuery()
-                '                    DB_CLOSE()
-                '                Catch ex As Exception
-                '                    DB_CLOSE()
-                '                    'MessageBox.Show(ex.Message)
-                '                    If (checkdata <> False) Then
-                '                        'If rowerror = "" Then
-                '                        '    rowerror += Convert.ToString(count + 1)
-                '                        '    errorcount = errorcount + 1
-                '                        'Else
-                '                        '    rowerror += "," + Convert.ToString(count + 1)
-                '                        '    errorcount = errorcount + 1
-                '                        'End If
-                '                        errorcount = errorcount + 1
-                '                        checkdata = False
-                '                    End If
-                '                End Try
-                '            End If
-                '        End If
-                '        Try
-                '            DB_OPEN()
-                '            Dim command As MySqlCommand = cnn.CreateCommand()
-
-                '            Dim Reader1 As MySqlDataReader
-                '            'Reader.Close()
-                '            Dim query22 As String = "select Count(ID) as cnt from t20_contract_management where t20_contract_management.ID= '" & Convert.ToString(ID).ToString() & "' "
-                '            command.CommandText = query22
-                '            Reader1 = command.ExecuteReader()
-                '            'If Reader.Depth > 0 Then
-
-                '            While Reader1.Read
-                '                dptnum1 = Reader1("cnt")
-                '            End While
-                '            'End If
-                '            DB_CLOSE()
-                '        Catch ex As Exception
-                '            'MessageBox.Show(ex.Message)
-                '            DB_CLOSE()
-                '            If (checkdata <> False) Then
-                '                'If rowerror = "" Then
-                '                '    rowerror += Convert.ToString(count + 1)
-                '                '    errorcount = errorcount + 1
-                '                'Else
-                '                '    rowerror += "," + Convert.ToString(count + 1)
-                '                '    errorcount = errorcount + 1
-                '                'End If
-                '                errorcount = errorcount + 1
-                '                checkdata = False
-                '            End If
-                '        End Try
-                '        Dim sqlupd = ""
-                '        Try
-
-                '            If dptnum1 > 0 Then
-                '                DB_OPEN()
-                '                sqlupd = "UPDATE t20_contract_management"
-                '                sqlupd += " SET t20_contract_management.Control_number = '" & mgtnumber & "'"
-
-                '                'sqlupd += ", t20_contract_management.Control_number = '" & mgtnumber & "'"
-                '                sqlupd += ", t20_contract_management.Temporary_number = '" & Temporarynumber.ToString() & "'"
-                '                sqlupd += ", t20_contract_management.Branch_number = '" & Branchnumber.ToString() & "'"
-                '                sqlupd += ", t20_contract_management.Old_number = '" & Oldnumber.ToString() & "'"
-                '                If ContractDate.Trim() <> "" Then
-                '                    sqlupd += ", t20_contract_management.Contract_date = '" & Convert.ToDateTime(ContractDate).ToString("yyyy/MM/dd") & "'"
-
-                '                Else
-                '                    sqlupd += ", t20_contract_management.Contract_date = '" & DBNull.Value & "'"
+                    '            Try
+                    '                DB_OPEN()
+                    '                Dim command As MySqlCommand = cnn.CreateCommand()
+                    '                Dim Reader As MySqlDataReader
+                    '                Dim query1 As String = "select tm15_department_master.Department_number from tm15_department_master where tm15_department_master.Department_number= @Department_number "
+                    '                command.CommandText = query1
+                    '                command.Parameters.AddWithValue("Department_number", (Departmentnumber).ToString())
+                    '                Reader = command.ExecuteReader()
+                    '                While Reader.Read
+                    '                    dptnum = Reader("Department_number")
+                    '                End While
+                    '                DB_CLOSE()
+                    '            Catch ex As Exception
+                    '                'MessageBox.Show(ex.Message)
+                    '                DB_CLOSE()
+                    '                checkdata = False
+                    '                'If rowerror = "" Then
+                    '                '    rowerror += Convert.ToString(count + 1)
+                    '                '    errorcount = errorcount + 1
+                    '                'Else
+                    '                '    rowerror += "," + Convert.ToString(count + 1)
+                    '                '    errorcount = errorcount + 1
+                    '                'End If
+                    '                errorcount = errorcount + 1
+                    '            End Try
+                    '            If dptnum > 0 Then
+                    '                Try
+                    '                    DB_OPEN()
+                    '                    Dim query1 As String = "UPDATE tm15_department_master SET tm15_department_master.Management_department = '" & Managementdepartment & "' "
+                    '                    query1 += " WHERE (tm15_department_master.Department_number = '" & Departmentnumber & "')"
+                    '                    Dim command As MySqlCommand = cnn.CreateCommand()
+                    '                    command.CommandText = query1
+                    '                    command.ExecuteNonQuery()
+                    '                    DB_CLOSE()
+                    '                Catch ex As Exception
+                    '                    'MessageBox.Show(ex.Message)
+                    '                    DB_CLOSE()
+                    '                    If (checkdata <> False) Then
+                    '                        If rowerror = "" Then
+                    '                            rowerror += Convert.ToString(count + 1)
+                    '                            errorcount = errorcount + 1
+                    '                        Else
+                    '                            rowerror += "," + Convert.ToString(count + 1)
+                    '                            errorcount = errorcount + 1
+                    '                        End If
+                    '                        errorcount = errorcount + 1
+                    '                    End If
+                    '                End Try
+                    '            Else
+                    '                Try
+                    '                    DB_OPEN()
+                    '                    Dim command1 As MySqlCommand = cnn.CreateCommand()
+                    '                    Dim Reader As MySqlDataReader
+                    '                    Dim id1 = 0
+                    '                    Dim query2 As String = "SELECT MAX(Id)+1 as Id FROM tm15_department_master "
+                    '                    command1.CommandText = query2
+                    '                    Reader = command1.ExecuteReader()
+                    '                    While Reader.Read
+                    '                        id1 = Reader("Id")
+                    '                    End While
+                    '                    DB_CLOSE()
+                    '                    DB_OPEN()
+                    '                    Dim query1 As String = "insert into tm15_department_master (id, Management_department, Department_number, `delete`  ) values "
+                    '                    query1 += " ('" & ID & "','" & Managementdepartment & "', '" & Departmentnumber & "',0)"
+                    '                    Dim command As MySqlCommand = cnn.CreateCommand()
+                    '                    command.CommandText = query1
+                    '                    command.ExecuteNonQuery()
+                    '                    DB_CLOSE()
+                    '                Catch ex As Exception
+                    '                    DB_CLOSE()
+                    '                    'MessageBox.Show(ex.Message)
+                    '                    If (checkdata <> False) Then
+                    '                        'If rowerror = "" Then
+                    '                        '    rowerror += Convert.ToString(count + 1)
+                    '                        '    errorcount = errorcount + 1
+                    '                        'Else
+                    '                        '    rowerror += "," + Convert.ToString(count + 1)
+                    '                        '    errorcount = errorcount + 1
+                    '                        'End If
+                    '                        checkdata = False
+                    '                        errorcount = errorcount + 1
+                    '                    End If
+                    '                End Try
+                    '            End If
+                    '        End If
+                    '        If (Accountnumberall <> 0) Then
 
 
-                '                End If
-                '                If (Contractperiodstarts.Trim() <> "") Then
+                    '            Try
 
-                '                    sqlupd += ", t20_contract_management.Contract_period_starts = '" & Convert.ToDateTime(Contractperiodstarts).ToString("yyyy/MM/dd") & "'"
-                '                Else
-                '                    sqlupd += ", t20_contract_management.Contract_period_starts = '" & DBNull.Value & "'"
+                    '                DB_OPEN()
+                    '                Dim command As MySqlCommand = cnn.CreateCommand()
+                    '                Dim Reader As MySqlDataReader
+                    '                Dim query1 As String = "select * from  tm14_account_master where Account_number= '" & Accountnumberall & "' "
+                    '                command.CommandText = query1
+                    '                Reader = command.ExecuteReader()
+                    '                dptnum = 0
+                    '                While Reader.Read
+                    '                    dptnum = Reader("Account_number")
+                    '                End While
+                    '                DB_CLOSE()
 
-                '                End If
-                '                If (ScheduledEndDate.Trim() <> "") Then
+                    '            Catch ex As Exception
+                    '                'MessageBox.Show(ex.Message)
+                    '                DB_CLOSE()
+                    '                If (checkdata <> False) Then
+                    '                    'If rowerror = "" Then
+                    '                    '    rowerror += Convert.ToString(count + 1)
+                    '                    '    errorcount = errorcount + 1
+                    '                    'Else
+                    '                    '    rowerror += "," + Convert.ToString(count + 1)
+                    '                    '    errorcount = errorcount + 1
+                    '                    'End If
+                    '                    errorcount = errorcount + 1
+                    '                    checkdata = False
+                    '                End If
 
-                '                    sqlupd += ", t20_contract_management.Scheduled_end_date_of_contract_period = '" & Convert.ToDateTime(ScheduledEndDate).ToString("yyyy/MM/dd") & "'"
-                '                Else
-                '                    sqlupd += ", t20_contract_management.Scheduled_end_date_of_contract_period = '" & DBNull.Value & "'"
+                    '            End Try
+                    '            If dptnum > 0 Then
+                    '                Try
 
-                '                End If
+                    '                    DB_OPEN()
+                    '                    Dim query1 As String = "UPDATE tm14_account_master SET Account_number = '" & dptnum & "', "
+                    '                    query1 += " Customer_name = '" & Customernameall & "', "
+                    '                    query1 += " Yomigana = '" & YomiganaAll & "' "
+                    '                    query1 += " WHERE (Account_number = '" & dptnum & "')"
+                    '                    Dim command As MySqlCommand = cnn.CreateCommand()
+                    '                    command.CommandText = query1
+                    '                    command.ExecuteNonQuery()
+                    '                    DB_CLOSE()
+                    '                    Accountnumberall = dptnum
+                    '                Catch ex As Exception
+                    '                    'MessageBox.Show(ex.Message)
+                    '                    DB_CLOSE()
+                    '                    If (checkdata <> False) Then
+                    '                        'If rowerror = "" Then
+                    '                        '    rowerror += Convert.ToString(count + 1)
+                    '                        '    errorcount = errorcount + 1
+                    '                        'Else
+                    '                        '    rowerror += "," + Convert.ToString(count + 1)
+                    '                        '    errorcount = errorcount + 1
+                    '                        'End If
+                    '                        errorcount = errorcount + 1
+                    '                        checkdata = False
+                    '                    End If
+                    '                End Try
+                    '            Else
+                    '                Try
+                    '                    DB_OPEN()
+                    '                    Dim query1 As String = "insert into tm14_account_master (Customer_name, Yomigana, Account_number,`delete`) values "
+                    '                    query1 += " ('" & Customernameall & "','" & YomiganaAll & "', '" & Accountnumberall & "',0)"
+                    '                    Dim command As MySqlCommand = cnn.CreateCommand()
+                    '                    command.CommandText = query1
+                    '                    command.ExecuteNonQuery()
+                    '                    DB_CLOSE()
+                    '                Catch ex As Exception
+                    '                    DB_CLOSE()
+                    '                    'MessageBox.Show(ex.Message)
+                    '                    If (checkdata <> False) Then
+                    '                        'If rowerror = "" Then
+                    '                        '    rowerror += Convert.ToString(count + 1)
+                    '                        '    errorcount = errorcount + 1
+                    '                        'Else
+                    '                        '    rowerror += "," + Convert.ToString(count + 1)
+                    '                        '    errorcount = errorcount + 1
+                    '                        'End If
+                    '                        errorcount = errorcount + 1
+                    '                        checkdata = False
+                    '                    End If
+                    '                End Try
+                    '            End If
+                    '        End If
+                    '        Try
+                    '            DB_OPEN()
+                    '            Dim command As MySqlCommand = cnn.CreateCommand()
 
-                '                If (EndDate.Trim() <> "") Then
+                    '            Dim Reader1 As MySqlDataReader
+                    '            'Reader.Close()
+                    '            Dim query22 As String = "select Count(ID) as cnt from t20_contract_management where t20_contract_management.ID= '" & Convert.ToString(ID).ToString() & "' "
+                    '            command.CommandText = query22
+                    '            Reader1 = command.ExecuteReader()
+                    '            'If Reader.Depth > 0 Then
 
-                '                    sqlupd += ", t20_contract_management.End_date = '" & Convert.ToDateTime(EndDate).ToString("yyyy/MM/dd") & "'"
-                '                Else
-                '                    sqlupd += ", t20_contract_management.End_date = '" & DBNull.Value & "'"
+                    '            While Reader1.Read
+                    '                dptnum1 = Reader1("cnt")
+                    '            End While
+                    '            'End If
+                    '            DB_CLOSE()
+                    '        Catch ex As Exception
+                    '            'MessageBox.Show(ex.Message)
+                    '            DB_CLOSE()
+                    '            If (checkdata <> False) Then
+                    '                'If rowerror = "" Then
+                    '                '    rowerror += Convert.ToString(count + 1)
+                    '                '    errorcount = errorcount + 1
+                    '                'Else
+                    '                '    rowerror += "," + Convert.ToString(count + 1)
+                    '                '    errorcount = errorcount + 1
+                    '                'End If
+                    '                errorcount = errorcount + 1
+                    '                checkdata = False
+                    '            End If
+                    '        End Try
+                    '        Dim sqlupd = ""
+                    '        Try
 
-                '                End If
+                    '            If dptnum1 > 0 Then
+                    '                DB_OPEN()
+                    '                sqlupd = "UPDATE t20_contract_management"
+                    '                sqlupd += " SET t20_contract_management.Control_number = '" & mgtnumber & "'"
 
-                '                sqlupd += ", t20_contract_management.Update_code = '" & Updatecode & "'"
-                '                sqlupd += ", t20_contract_management.Automatic_update_interval= '" & AutomaUpdateinter & "'"
-                '                If (Accountnumberall <> 0) Then
+                    '                'sqlupd += ", t20_contract_management.Control_number = '" & mgtnumber & "'"
+                    '                sqlupd += ", t20_contract_management.Temporary_number = '" & Temporarynumber.ToString() & "'"
+                    '                sqlupd += ", t20_contract_management.Branch_number = '" & Branchnumber.ToString() & "'"
+                    '                sqlupd += ", t20_contract_management.Old_number = '" & Oldnumber.ToString() & "'"
+                    '                If ContractDate.Trim() <> "" Then
+                    '                    sqlupd += ", t20_contract_management.Contract_date = '" & Convert.ToDateTime(ContractDate).ToString("yyyy/MM/dd") & "'"
+
+                    '                Else
+                    '                    sqlupd += ", t20_contract_management.Contract_date = '" & DBNull.Value & "'"
 
 
-                '                    sqlupd += ", t20_contract_management.Account_number_all = '" & Accountnumberall & "'"
-                '                    sqlupd += ", t20_contract_management.Temporary_company_number_1 = '" & Accountnumberall & "'"
-                '                    sqlupd += ", t20_contract_management.Account_name_all = '" & Customernameall & "'"
-                '                    sqlupd += ", t20_contract_management.Yomigana_All = '" & YomiganaAll & "'"
-                '                End If
-                '                sqlupd += ", t20_contract_management.Contract_name = @Contractname"
-                '                If (Departmentnumber.ToString() <> "") Then
-                '                    sqlupd += ", t20_contract_management.Department_number = '" & Departmentnumber & "'"                                'Tm15_部署マスター.管理部署 tbl column
-                '                    'sqlupd += ", t20_contract_management.管理部署 = '" & Management_department & "'"
+                    '                End If
+                    '                If (Contractperiodstarts.Trim() <> "") Then
 
-                '                End If
-                '                sqlupd += ", t20_contract_management.Contractor = '" & Contractor & "'"
-                '                sqlupd += ", t20_contract_management.Remarks = @Remarks"
+                    '                    sqlupd += ", t20_contract_management.Contract_period_starts = '" & Convert.ToDateTime(Contractperiodstarts).ToString("yyyy/MM/dd") & "'"
+                    '                Else
+                    '                    sqlupd += ", t20_contract_management.Contract_period_starts = '" & DBNull.Value & "'"
 
-                '                'If (Delete <> "") Then
-                '                sqlupd += ", t20_contract_management.Delete = " & Delete & ""
-                '                ' End If
-                '                ' If (India <> "") Then
-                '                sqlupd += ", t20_contract_management.India = " & India & ""
-                '                'End If
+                    '                End If
+                    '                If (ScheduledEndDate.Trim() <> "") Then
 
-                '                sqlupd += " WHERE (t20_contract_management.ID = '" & ID & "')"
-                '                Dim command As MySqlCommand = cnn.CreateCommand()
-                '                command.Parameters.AddWithValue("Remarks", Remarks.ToString())
-                '                command.Parameters.AddWithValue("Contractname", Contractname.ToString())
-                '                command.CommandText = sqlupd
-                '                command.ExecuteNonQuery()
-                '                DB_CLOSE()
-                '            Else
-                '                DB_OPEN()
-                '                Dim command As MySqlCommand = cnn.CreateCommand()
-                '                Dim query As String = "INSERT INTO `t20_contract_management`"
-                '                query += "(`ID`,"
-                '                query += "`Control_number`,"
-                '                'query += "`管理番号`,"
-                '                query += "`Temporary_number`,"
-                '                query += "`Branch_number`,"
-                '                query += "`Old_number`,"
-                '                query += "`Contract_date`,"
-                '                query += "`Contract_period_starts`,"
-                '                query += "`Scheduled_end_date_of_contract_period`,"
+                    '                    sqlupd += ", t20_contract_management.Scheduled_end_date_of_contract_period = '" & Convert.ToDateTime(ScheduledEndDate).ToString("yyyy/MM/dd") & "'"
+                    '                Else
+                    '                    sqlupd += ", t20_contract_management.Scheduled_end_date_of_contract_period = '" & DBNull.Value & "'"
 
-                '                query += "`End_date`,"
-                '                query += "`Update_code`,"
-                '                query += "`Automatic_update_interval`,"
-                '                If (Accountnumberall <> 0) Then
-                '                    query += "`Account_number_all`,"
-                '                    query += "`Temporary_company_number_1`,"
-                '                    query += "`Account_name_all`,"
-                '                    query += "`Yomigana_All`,"
-                '                End If
+                    '                End If
 
-                '                query += "`Contract_name`,"
-                '                If (Departmentnumber.ToString() <> "") Then
-                '                    query += "`Department_number`,"
-                '                End If
-                '                'query += "`部署番号`,"
-                '                'Tm15_部署マスター.管理部署 tbl column
-                '                'query += "`管理部署`,"
+                    '                If (EndDate.Trim() <> "") Then
 
-                '                query += "`Contractor`,"
-                '                query += "`remarks`,"
-                '                query += "`Delete`,"
-                '                'query += "`削除`,"
-                '                'query += "`インド`,"
-                '                'query += "`仮社番1`,"
-                '                'query += "`仮社番2`,"
-                '                'query += "`仮社番3`,"
-                '                'query += "`仮社番4`,"
-                '                query += "`India`)"
+                    '                    sqlupd += ", t20_contract_management.End_date = '" & Convert.ToDateTime(EndDate).ToString("yyyy/MM/dd") & "'"
+                    '                Else
+                    '                    sqlupd += ", t20_contract_management.End_date = '" & DBNull.Value & "'"
 
-                '                query += "VALUES"
-                '                query += "(@ID,"
-                '                query += "@mgtnumber,"
-                '                'query += "@Indiacontract,"
-                '                query += "@Temporarynumber,"
-                '                query += "@Branchnumber,"
-                '                query += "@Oldnumber,"
-                '                query += "@Contractdate,"
-                '                query += "@Contractperiodcommencement,"
-                '                query += "@ScheduledEndDate,"
-                '                query += "@Enddate,"
-                '                query += "@Updatecode,"
-                '                query += "@Automaticupdateinterval,"
-                '                If (Accountnumberall <> 0) Then
-                '                    query += "@Accountnumber_all,"
-                '                    query += "@Temporary_company_number_1,"
-                '                    query += "@Customername_all,"
-                '                    query += "@Yomigana_All,"
-                '                End If
-                '                query += "@Contractname,"
-                '                If (Departmentnumber.ToString() <> "") Then
-                '                    query += "@Departmentnumber,"
-                '                End If
+                    '                End If
+
+                    '                sqlupd += ", t20_contract_management.Update_code = '" & Updatecode & "'"
+                    '                sqlupd += ", t20_contract_management.Automatic_update_interval= '" & AutomaUpdateinter & "'"
+                    '                If (Accountnumberall <> 0) Then
+
+
+                    '                    sqlupd += ", t20_contract_management.Account_number_all = '" & Accountnumberall & "'"
+                    '                    sqlupd += ", t20_contract_management.Temporary_company_number_1 = '" & Accountnumberall & "'"
+                    '                    sqlupd += ", t20_contract_management.Account_name_all = '" & Customernameall & "'"
+                    '                    sqlupd += ", t20_contract_management.Yomigana_All = '" & YomiganaAll & "'"
+                    '                End If
+                    '                sqlupd += ", t20_contract_management.Contract_name = @Contractname"
+                    '                If (Departmentnumber.ToString() <> "") Then
+                    '                    sqlupd += ", t20_contract_management.Department_number = '" & Departmentnumber & "'"                                'Tm15_部署マスター.管理部署 tbl column
+                    '                    'sqlupd += ", t20_contract_management.管理部署 = '" & Management_department & "'"
+
+                    '                End If
+                    '                sqlupd += ", t20_contract_management.Contractor = '" & Contractor & "'"
+                    '                sqlupd += ", t20_contract_management.Remarks = @Remarks"
+
+                    '                'If (Delete <> "") Then
+                    '                sqlupd += ", t20_contract_management.Delete = " & Delete & ""
+                    '                ' End If
+                    '                ' If (India <> "") Then
+                    '                sqlupd += ", t20_contract_management.India = " & India & ""
+                    '                'End If
+
+                    '                sqlupd += " WHERE (t20_contract_management.ID = '" & ID & "')"
+                    '                Dim command As MySqlCommand = cnn.CreateCommand()
+                    '                command.Parameters.AddWithValue("Remarks", Remarks.ToString())
+                    '                command.Parameters.AddWithValue("Contractname", Contractname.ToString())
+                    '                command.CommandText = sqlupd
+                    '                command.ExecuteNonQuery()
+                    '                DB_CLOSE()
+                    '            Else
+                    '                DB_OPEN()
+                    '                Dim command As MySqlCommand = cnn.CreateCommand()
+                    '                Dim query As String = "INSERT INTO `t20_contract_management`"
+                    '                query += "(`ID`,"
+                    '                query += "`Control_number`,"
+                    '                'query += "`管理番号`,"
+                    '                query += "`Temporary_number`,"
+                    '                query += "`Branch_number`,"
+                    '                query += "`Old_number`,"
+                    '                query += "`Contract_date`,"
+                    '                query += "`Contract_period_starts`,"
+                    '                query += "`Scheduled_end_date_of_contract_period`,"
+
+                    '                query += "`End_date`,"
+                    '                query += "`Update_code`,"
+                    '                query += "`Automatic_update_interval`,"
+                    '                If (Accountnumberall <> 0) Then
+                    '                    query += "`Account_number_all`,"
+                    '                    query += "`Temporary_company_number_1`,"
+                    '                    query += "`Account_name_all`,"
+                    '                    query += "`Yomigana_All`,"
+                    '                End If
+
+                    '                query += "`Contract_name`,"
+                    '                If (Departmentnumber.ToString() <> "") Then
+                    '                    query += "`Department_number`,"
+                    '                End If
+                    '                'query += "`部署番号`,"
+                    '                'Tm15_部署マスター.管理部署 tbl column
+                    '                'query += "`管理部署`,"
+
+                    '                query += "`Contractor`,"
+                    '                query += "`remarks`,"
+                    '                query += "`Delete`,"
+                    '                'query += "`削除`,"
+                    '                'query += "`インド`,"
+                    '                'query += "`仮社番1`,"
+                    '                'query += "`仮社番2`,"
+                    '                'query += "`仮社番3`,"
+                    '                'query += "`仮社番4`,"
+                    '                query += "`India`)"
+
+                    '                query += "VALUES"
+                    '                query += "(@ID,"
+                    '                query += "@mgtnumber,"
+                    '                'query += "@Indiacontract,"
+                    '                query += "@Temporarynumber,"
+                    '                query += "@Branchnumber,"
+                    '                query += "@Oldnumber,"
+                    '                query += "@Contractdate,"
+                    '                query += "@Contractperiodcommencement,"
+                    '                query += "@ScheduledEndDate,"
+                    '                query += "@Enddate,"
+                    '                query += "@Updatecode,"
+                    '                query += "@Automaticupdateinterval,"
+                    '                If (Accountnumberall <> 0) Then
+                    '                    query += "@Accountnumber_all,"
+                    '                    query += "@Temporary_company_number_1,"
+                    '                    query += "@Customername_all,"
+                    '                    query += "@Yomigana_All,"
+                    '                End If
+                    '                query += "@Contractname,"
+                    '                If (Departmentnumber.ToString() <> "") Then
+                    '                    query += "@Departmentnumber,"
+                    '                End If
 
 
 
 
-                '                't15_tbl
-                '                'query += "@mgtdept,"
-                '                'query += "@Accountnumber,"
-                '                query += "@Contractor,"
-                '                query += "@remarks,"
-                '                'query += "@end,"
-                '                query += "@Delete,"
-                '                query += "@India);"
-                '                command.Parameters.AddWithValue("ID", ID.ToString())
-                '                command.Parameters.AddWithValue("mgtnumber", mgtnumber.ToString())
-                '                command.Parameters.AddWithValue("Temporarynumber", Temporarynumber.ToString())
-                '                command.Parameters.AddWithValue("Branchnumber", Branchnumber.ToString())
-                '                command.Parameters.AddWithValue("Oldnumber", Oldnumber.ToString())
-                '                If ContractDate.Trim() <> "" Then
-                '                    command.Parameters.AddWithValue("Contractdate", Convert.ToDateTime(ContractDate).ToString("yyyy/MM/dd"))
+                    '                't15_tbl
+                    '                'query += "@mgtdept,"
+                    '                'query += "@Accountnumber,"
+                    '                query += "@Contractor,"
+                    '                query += "@remarks,"
+                    '                'query += "@end,"
+                    '                query += "@Delete,"
+                    '                query += "@India);"
+                    '                command.Parameters.AddWithValue("ID", ID.ToString())
+                    '                command.Parameters.AddWithValue("mgtnumber", mgtnumber.ToString())
+                    '                command.Parameters.AddWithValue("Temporarynumber", Temporarynumber.ToString())
+                    '                command.Parameters.AddWithValue("Branchnumber", Branchnumber.ToString())
+                    '                command.Parameters.AddWithValue("Oldnumber", Oldnumber.ToString())
+                    '                If ContractDate.Trim() <> "" Then
+                    '                    command.Parameters.AddWithValue("Contractdate", Convert.ToDateTime(ContractDate).ToString("yyyy/MM/dd"))
 
-                '                Else
-                '                    command.Parameters.AddWithValue("Contractdate", DBNull.Value)
-                '                End If
-                '                If Contractperiodstarts.Trim() <> "" Then
-                '                    command.Parameters.AddWithValue("Contractperiodcommencement", Convert.ToDateTime(Contractperiodstarts).ToString("yyyy/MM/dd"))
-                '                Else
-                '                    command.Parameters.AddWithValue("Contractperiodcommencement", DBNull.Value)
-                '                End If
-                '                If ScheduledEndDate.Trim() <> "" Then
-                '                    command.Parameters.AddWithValue("ScheduledEndDate", Convert.ToDateTime(ScheduledEndDate).ToString("yyyy/MM/dd"))
-                '                Else
-                '                    command.Parameters.AddWithValue("ScheduledEndDate", DBNull.Value)
-                '                End If
-                '                If EndDate.Trim() <> "" Then
-                '                    command.Parameters.AddWithValue("Enddate", Convert.ToDateTime(EndDate).ToString("yyyy/MM/dd"))
-                '                Else
-                '                    command.Parameters.AddWithValue("Enddate", DBNull.Value)
-                '                End If
-                '                command.Parameters.AddWithValue("Updatecode", Updatecode.ToString())
-                '                command.Parameters.AddWithValue("Automaticupdateinterval", AutomaUpdateinter.ToString())
-                '                If (Accountnumberall <> 0) Then
+                    '                Else
+                    '                    command.Parameters.AddWithValue("Contractdate", DBNull.Value)
+                    '                End If
+                    '                If Contractperiodstarts.Trim() <> "" Then
+                    '                    command.Parameters.AddWithValue("Contractperiodcommencement", Convert.ToDateTime(Contractperiodstarts).ToString("yyyy/MM/dd"))
+                    '                Else
+                    '                    command.Parameters.AddWithValue("Contractperiodcommencement", DBNull.Value)
+                    '                End If
+                    '                If ScheduledEndDate.Trim() <> "" Then
+                    '                    command.Parameters.AddWithValue("ScheduledEndDate", Convert.ToDateTime(ScheduledEndDate).ToString("yyyy/MM/dd"))
+                    '                Else
+                    '                    command.Parameters.AddWithValue("ScheduledEndDate", DBNull.Value)
+                    '                End If
+                    '                If EndDate.Trim() <> "" Then
+                    '                    command.Parameters.AddWithValue("Enddate", Convert.ToDateTime(EndDate).ToString("yyyy/MM/dd"))
+                    '                Else
+                    '                    command.Parameters.AddWithValue("Enddate", DBNull.Value)
+                    '                End If
+                    '                command.Parameters.AddWithValue("Updatecode", Updatecode.ToString())
+                    '                command.Parameters.AddWithValue("Automaticupdateinterval", AutomaUpdateinter.ToString())
+                    '                If (Accountnumberall <> 0) Then
 
 
-                '                    command.Parameters.AddWithValue("Accountnumber_all", Accountnumberall.ToString())
-                '                    command.Parameters.AddWithValue("Temporary_company_number_1", Accountnumberall.ToString())
-                '                    command.Parameters.AddWithValue("Customername_all", Customernameall.ToString())
-                '                    command.Parameters.AddWithValue("Yomigana_All", YomiganaAll.ToString())
-                '                End If
+                    '                    command.Parameters.AddWithValue("Accountnumber_all", Accountnumberall.ToString())
+                    '                    command.Parameters.AddWithValue("Temporary_company_number_1", Accountnumberall.ToString())
+                    '                    command.Parameters.AddWithValue("Customername_all", Customernameall.ToString())
+                    '                    command.Parameters.AddWithValue("Yomigana_All", YomiganaAll.ToString())
+                    '                End If
 
-                '                command.Parameters.AddWithValue("Contractname", Contractname.ToString())
-                '                If (Departmentnumber.ToString() <> "") Then
-                '                    command.Parameters.AddWithValue("Departmentnumber", Departmentnumber.ToString())
-                '                    'command.Parameters.AddWithValue("mgtdept", Management_department)
-                '                End If
-                '                command.Parameters.AddWithValue("Contractor", Contractor.ToString())
-                '                command.Parameters.AddWithValue("remarks", Remarks.ToString())
-                '                'Delete.Replace("",String.Empty)
-                '                command.Parameters.AddWithValue("Delete", Convert.ToBoolean(Delete))
-                '                command.Parameters.AddWithValue("India", Convert.ToBoolean(India))
+                    '                command.Parameters.AddWithValue("Contractname", Contractname.ToString())
+                    '                If (Departmentnumber.ToString() <> "") Then
+                    '                    command.Parameters.AddWithValue("Departmentnumber", Departmentnumber.ToString())
+                    '                    'command.Parameters.AddWithValue("mgtdept", Management_department)
+                    '                End If
+                    '                command.Parameters.AddWithValue("Contractor", Contractor.ToString())
+                    '                command.Parameters.AddWithValue("remarks", Remarks.ToString())
+                    '                'Delete.Replace("",String.Empty)
+                    '                command.Parameters.AddWithValue("Delete", Convert.ToBoolean(Delete))
+                    '                command.Parameters.AddWithValue("India", Convert.ToBoolean(India))
 
-                '                'sqlins = "UPDATE t20_契約書管理"
-                '                'sqlins += " SET t20_契約書管理.削除 = " & bool & ""
-                '                'sqlins += " WHERE (T20_契約書管理.管理番号 = '" & Convert.ToString(dr("ID")) & "')"
-                '                'Dim command22 As MySqlCommand = cnn.CreateCommand()
-                '                command.CommandText = query
-                '                command.ExecuteNonQuery()
-                '                DB_CLOSE()
-                '            End If
-                '            ' If Lookup <> "" AndAlso description <> "" AndAlso dept <> "" AndAlso UnitPrice <> "" Then
-                '        Catch ex As Exception
-                '            ' MessageBox.Show(ex.Message)
-                '            DB_CLOSE()
-                '            If (checkdata <> False) Then
-                '                '    If rowerror = "" Then
-                '                '        rowerror += Convert.ToString(count + 1)
-                '                '        errorcount = errorcount + 1
-                '                '    Else
-                '                '        rowerror += "," + Convert.ToString(count + 1)
-                '                '        errorcount = errorcount + 1
-                '                '    End If
-                '                errorcount = errorcount + 1
-                '                checkdata = False
-                '            End If
-                '        End Try
+                    '                'sqlins = "UPDATE t20_契約書管理"
+                    '                'sqlins += " SET t20_契約書管理.削除 = " & bool & ""
+                    '                'sqlins += " WHERE (T20_契約書管理.管理番号 = '" & Convert.ToString(dr("ID")) & "')"
+                    '                'Dim command22 As MySqlCommand = cnn.CreateCommand()
+                    '                command.CommandText = query
+                    '                command.ExecuteNonQuery()
+                    '                DB_CLOSE()
+                    '            End If
+                    '            ' If Lookup <> "" AndAlso description <> "" AndAlso dept <> "" AndAlso UnitPrice <> "" Then
+                    '        Catch ex As Exception
+                    '            ' MessageBox.Show(ex.Message)
+                    '            DB_CLOSE()
+                    '            If (checkdata <> False) Then
+                    '                '    If rowerror = "" Then
+                    '                '        rowerror += Convert.ToString(count + 1)
+                    '                '        errorcount = errorcount + 1
+                    '                '    Else
+                    '                '        rowerror += "," + Convert.ToString(count + 1)
+                    '                '        errorcount = errorcount + 1
+                    '                '    End If
+                    '                errorcount = errorcount + 1
+                    '                checkdata = False
+                    '            End If
+                    '        End Try
 
-                '    End If
+                    '    End If
 
-                '    count += 1
-                '    checkdata = True
-                'Next
-                waitDlg.MainMsg = ""
-                waitDlg.ProgressMsg = ""
-                waitDlg.ProgressMax = 0
-                waitDlg.ProgressValue = 0
-                waitDlg.MainMsg = ""
-                Application.DoEvents()
-                waitDlg.PerformStep()
-                waitDlg.ProgressMax = rows
-                For Each row As DataRow In ImpExcelData.Rows
-                    i = i + 1
+                    '    count += 1
+                    '    checkdata = True
+                    'Next
+                    waitDlg.MainMsg = ""
+                    waitDlg.ProgressMsg = ""
+                    waitDlg.ProgressMax = 0
+                    waitDlg.ProgressValue = 0
+                    waitDlg.MainMsg = ""
                     Application.DoEvents()
                     waitDlg.PerformStep()
-                    'waitDlg.ProgressMsg = "実行中・・・"
-                    'Thread.Sleep(1)
-                    waitDlg.ProgressValue = i
-                    waitDlg.ProgressMsg = Fix((i) * 100 / (rows)) & "%　" & "（" & Format((i), "##,##0") & " / " & Format((rows), "##,##0") & " 件）"
-                    'waitDlg.ProgressMsg = Fix((i) * 10 / (rows - 1)) & "%　" & "（" & Format((i), "##,##0") & " / " & Format((rows - 1), "##,##0") & " 件）"
-                    'waitDlg.ProgressMsg = Fix((i) * 100 / (rows - 1)) & "%　" & "（" & Format((i), "##,##0") & " / " & Format((rows - 1), "##,##0") & " 件）"
-                    waitDlg.Text = "実行中・・・" & Fix((i) * 100 / (rows)) & "%　"
-                    waitDlg.PerformStep()
+                    waitDlg.ProgressMax = rows
+                    'flag = DB_OPEN()
+                    'If flag = True Then
+                    For Each row As DataRow In ImpExcelData.Rows
+                        i = i + 1
+                        Application.DoEvents()
+                        waitDlg.PerformStep()
+                        'waitDlg.ProgressMsg = "実行中・・・"
+                        'Thread.Sleep(1)
+                        waitDlg.ProgressValue = i
+                        waitDlg.ProgressMsg = Fix((i) * 100 / (rows)) & "%　" & "（" & Format((i), "##,##0") & " / " & Format((rows), "##,##0") & " 件）"
+                        'waitDlg.ProgressMsg = Fix((i) * 10 / (rows - 1)) & "%　" & "（" & Format((i), "##,##0") & " / " & Format((rows - 1), "##,##0") & " 件）"
+                        'waitDlg.ProgressMsg = Fix((i) * 100 / (rows - 1)) & "%　" & "（" & Format((i), "##,##0") & " / " & Format((rows - 1), "##,##0") & " 件）"
+                        waitDlg.Text = "実行中・・・" & Fix((i) * 100 / (rows)) & "%　"
+                        waitDlg.PerformStep()
 
-                    'waitDlg.ProgressMsg = Fix((i) * 10 / (rowst - 1)) & "%　" & "（" & Format((i), "##,##0") & " / " & Format((rowst - 1), "##,##0") & " 件）"
-                    ''waitDlg.ProgressMsg = Fix((i) * 100 / (rows - 1)) & "%　" & "（" & Format((i), "##,##0") & " / " & Format((rows - 1), "##,##0") & " 件）"
-                    'waitDlg.Text = "実行中・・・" & Fix((i) * 100 / (rowst - 1)) & "%　"
-                    'waitDlg.PerformStep()
-
-
-
-                    'Try
-                    '    checkdata = True
-                    'Dim cols As Integer = excelRange.Columns.Count
-                    'myNewRow = myTable.NewRow()
-                    Dim ID As Int16
-
-                    If (row.Item("ID") <> "") Then
-                        ID = row.Item("ID").ToString()
-
-                    Else
-                        ID = 0
-                    End If
-
-                    Dim mgtnumber As String = row.Item("Control_number").ToString()
-                    Dim Temporarynumber As String
-                    If (row.Item("Temporary_number").ToString() <> "") Then
-                        Temporarynumber = row.Item("Temporary_number").ToString()
-                    Else
-                        Temporarynumber = 0
-                    End If
+                        'waitDlg.ProgressMsg = Fix((i) * 10 / (rowst - 1)) & "%　" & "（" & Format((i), "##,##0") & " / " & Format((rowst - 1), "##,##0") & " 件）"
+                        ''waitDlg.ProgressMsg = Fix((i) * 100 / (rows - 1)) & "%　" & "（" & Format((i), "##,##0") & " / " & Format((rows - 1), "##,##0") & " 件）"
+                        'waitDlg.Text = "実行中・・・" & Fix((i) * 100 / (rowst - 1)) & "%　"
+                        'waitDlg.PerformStep()
 
 
-                    Dim Branchnumber As String = row.Item("Branch_number").ToString()
-                    Dim Oldnumber As String = row.Item("Old_number").ToString()
-                    Dim ContractDate As String = row.Item("Contract_date").ToString()
-                    Dim Contractperiodstarts As String = row.Item("Contract_period_starts").ToString()
-                    Dim ScheduledEndDate As String = row.Item("Scheduled_end _date_of_contract_period").ToString()
-                    Dim EndDate As String = row.Item("End_date").ToString()
-                    Dim Survey_Date As String = row.Item("Survey_Date").ToString()
-                    Dim Updatecode As String = row.Item("Update_code").ToString()
-                    Dim AutomaUpdateinter As String = row.Item("Automatic_update_interval").ToString()
-                    Dim Accountnumberall As String
-                    If (row.Item("Account_number_all").ToString() <> "") Then
-                        Accountnumberall = row.Item("Account_number_all").ToString()
-                    Else
-                        Accountnumberall = 0
-                    End If
 
-                    Dim specialChar As String = "／"
-                    ' Dim specialChar As String = "\|!#$%&/()=?»«@£§€{}.-;'<>_,"
+                        'Try
+                        '    checkdata = True
+                        'Dim cols As Integer = excelRange.Columns.Count
+                        'myNewRow = myTable.NewRow()
+                        Dim ID As Int16
 
-                    For Each item In specialChar
-                        If Accountnumberall.Contains(item) Then
+                        If (row.Item("ID") <> "") Then
+                            ID = row.Item("ID").ToString()
+
+                        Else
+                            ID = 0
+                        End If
+
+                        Dim mgtnumber As String = row.Item("Control_number").ToString()
+                        Dim Temporarynumber As String
+                        If (row.Item("Temporary_number").ToString() <> "") Then
+                            Temporarynumber = row.Item("Temporary_number").ToString()
+                        Else
+                            Temporarynumber = 0
+                        End If
+
+
+                        Dim Branchnumber As String = row.Item("Branch_number").ToString()
+                        Dim Oldnumber As String = row.Item("Old_number").ToString()
+                        Dim ContractDate As String = row.Item("Contract_date").ToString()
+                        Dim Contractperiodstarts As String = row.Item("Contract_period_starts").ToString()
+                        Dim ScheduledEndDate As String = row.Item("Scheduled_end _date_of_contract_period").ToString()
+                        Dim EndDate As String = row.Item("End_date").ToString()
+                        Dim Survey_Date As String = row.Item("Survey_Date").ToString()
+                        Dim Updatecode As String = row.Item("Update_code").ToString()
+                        Dim AutomaUpdateinter As String = row.Item("Automatic_update_interval").ToString()
+                        Dim Accountnumberall As String
+                        If (row.Item("Account_number_all").ToString() <> "") Then
+                            Accountnumberall = row.Item("Account_number_all").ToString()
+                        Else
                             Accountnumberall = 0
                         End If
-                    Next
 
-                    Dim Customernameall As String = row.Item("Account_name_all").ToString()
-                    Dim YomiganaAll As String = row.Item("Yomigana_All").ToString()
-                    Dim Contractname As String = row.Item("Contract_name").ToString()
-                    Dim Departmentnumber As Int16
-                    If (row.Item("Department_number").ToString() <> "") Then
-                        Departmentnumber = row.Item("Department_number").ToString()
-                    Else
-                        Departmentnumber = 0
-                    End If
+                        Dim specialChar As String = "／"
+                        ' Dim specialChar As String = "\|!#$%&/()=?»«@£§€{}.-;'<>_,"
 
-                    Dim Managementdepartment As String = row.Item("Management_department").ToString()
-                    Dim Contractor As String = row.Item("Contractor").ToString()
-                    Dim Remarks As String = row.Item("remarks").ToString()
-                    Dim Delete As Boolean
-                    Dim India As Boolean
-                    If (row.Item("delete").ToString() = "") Then
-                        Delete = 0
-                    Else
-                        Delete = row.Item("delete").ToString()
-                    End If
-                    If (row.Item("delete").ToString() = "") Then
-                        India = 0
-                    Else
-                        India = row.Item("India").ToString()
-                    End If
+                        For Each item In specialChar
+                            If Accountnumberall.Contains(item) Then
+                                Accountnumberall = 0
+                            End If
+                        Next
 
-                    If ID = 0 Then
-                        checkdata = False
+                        Dim Customernameall As String = row.Item("Account_name_all").ToString()
+                        Dim YomiganaAll As String = row.Item("Yomigana_All").ToString()
+                        Dim Contractname As String = row.Item("Contract_name").ToString()
+                        Dim Departmentnumber As Int16
+                        If (row.Item("Department_number").ToString() <> "") Then
+                            Departmentnumber = row.Item("Department_number").ToString()
+                        Else
+                            Departmentnumber = 0
+                        End If
+
+                        Dim Managementdepartment As String = row.Item("Management_department").ToString()
+                        Dim Contractor As String = row.Item("Contractor").ToString()
+                        Dim Remarks As String = row.Item("remarks").ToString()
+                        Dim Delete As Boolean
+                        Dim India As Boolean
+                        If (row.Item("delete").ToString() = "") Then
+                            Delete = 0
+                        Else
+                            Delete = row.Item("delete").ToString()
+                        End If
+                        If (row.Item("delete").ToString() = "") Then
+                            India = 0
+                        Else
+                            India = row.Item("India").ToString()
+                        End If
+
+                        If ID = 0 Then
+                            checkdata = False
+                            'If rowerror = "" Then
+                            '    rowerror += Convert.ToString(count + 1)
+                            '    errorcount = errorcount + 1
+                            'Else
+                            '    rowerror += "," + Convert.ToString(count + 1)
+                            '    errorcount = errorcount + 1
+                            'End If
+                            errorcount = errorcount + 1
+                        End If
+
+                        'Catch ex As Exception
+                        'checkdata = False
                         'If rowerror = "" Then
                         '    rowerror += Convert.ToString(count + 1)
-                        '    errorcount = errorcount + 1
+                        '    errorcount = +1
                         'Else
                         '    rowerror += "," + Convert.ToString(count + 1)
-                        '    errorcount = errorcount + 1
+                        '    errorcount = +1
                         'End If
-                        errorcount = errorcount + 1
-                    End If
+                        'End Try
 
-                    'Catch ex As Exception
-                    'checkdata = False
-                    'If rowerror = "" Then
-                    '    rowerror += Convert.ToString(count + 1)
-                    '    errorcount = +1
-                    'Else
-                    '    rowerror += "," + Convert.ToString(count + 1)
-                    '    errorcount = +1
-                    'End If
-                    'End Try
-                    If checkdata = True Then
-                        If (Departmentnumber <> 0) Then
-
-
-                            Try
-                                DB_OPEN()
-                                Dim command As MySqlCommand = cnn.CreateCommand()
-                                Dim Reader As MySqlDataReader
-                                Dim query1 As String = "select tm15_department_master.Department_number from tm15_department_master where tm15_department_master.Department_number= @Department_number "
-                                command.CommandText = query1
-                                command.Parameters.AddWithValue("Department_number", (Departmentnumber).ToString())
-                                Reader = command.ExecuteReader()
-                                While Reader.Read
-                                    dptnum = Reader("Department_number")
-                                End While
-                                DB_CLOSE()
-                            Catch ex As Exception
-                                'MessageBox.Show(ex.Message)
-                                DB_CLOSE()
-                                checkdata = False
-                                'If rowerror = "" Then
-                                '    rowerror += Convert.ToString(count + 1)
-                                '    errorcount = errorcount + 1
-                                'Else
-                                '    rowerror += "," + Convert.ToString(count + 1)
-                                '    errorcount = errorcount + 1
-                                'End If
-                                errorcount = errorcount + 1
-                            End Try
-                            If dptnum > 0 Then
+                        'DB_CLOSE()
+                        'Exit Sub
+                        If checkdata = True Then
+                            If (Departmentnumber <> 0) Then
                                 Try
                                     DB_OPEN()
-                                    Dim query1 As String = "UPDATE tm15_department_master SET tm15_department_master.Management_department = '" & Managementdepartment & "' "
-                                    query1 += " WHERE (tm15_department_master.Department_number = '" & Departmentnumber & "')"
                                     Dim command As MySqlCommand = cnn.CreateCommand()
-                                    command.CommandText = query1
-                                    command.ExecuteNonQuery()
-                                    DB_CLOSE()
-                                Catch ex As Exception
-                                    'MessageBox.Show(ex.Message)
-                                    DB_CLOSE()
-                                    If (checkdata <> False) Then
-                                        If rowerror = "" Then
-                                            rowerror += Convert.ToString(count + 1)
-                                            errorcount = errorcount + 1
-                                        Else
-                                            rowerror += "," + Convert.ToString(count + 1)
-                                            errorcount = errorcount + 1
-                                        End If
-                                        errorcount = errorcount + 1
-                                    End If
-                                End Try
-                            Else
-                                Try
-                                    DB_OPEN()
-                                    Dim command1 As MySqlCommand = cnn.CreateCommand()
                                     Dim Reader As MySqlDataReader
-                                    Dim id1 = 0
-                                    Dim query2 As String = "SELECT MAX(Id)+1 as Id FROM tm15_department_master "
-                                    command1.CommandText = query2
-                                    Reader = command1.ExecuteReader()
+                                    Dim query1 As String = "select tm15_department_master.Department_number from tm15_department_master where tm15_department_master.Department_number= @Department_number "
+                                    command.CommandText = query1
+                                    command.Parameters.AddWithValue("Department_number", (Departmentnumber).ToString())
+                                    Reader = command.ExecuteReader()
                                     While Reader.Read
-                                        id1 = Reader("Id")
+                                        dptnum = Reader("Department_number")
                                     End While
                                     DB_CLOSE()
-                                    DB_OPEN()
-                                    Dim query1 As String = "insert into tm15_department_master (id, Management_department, Department_number, `delete`  ) values "
-                                    query1 += " ('" & ID & "','" & Managementdepartment & "', '" & Departmentnumber & "',0)"
-                                    Dim command As MySqlCommand = cnn.CreateCommand()
-                                    command.CommandText = query1
-                                    command.ExecuteNonQuery()
-                                    DB_CLOSE()
+
+
                                 Catch ex As Exception
-                                    DB_CLOSE()
                                     'MessageBox.Show(ex.Message)
+                                    DB_CLOSE()
+                                    checkdata = False
+                                    'If rowerror = "" Then
+                                    '    rowerror += Convert.ToString(count + 1)
+                                    '    errorcount = errorcount + 1
+                                    'Else
+                                    '    rowerror += "," + Convert.ToString(count + 1)
+                                    '    errorcount = errorcount + 1
+                                    'End If
+                                    errorcount = errorcount + 1
+                                End Try
+                                If dptnum > 0 Then
+                                    Try
+                                        DB_OPEN()
+                                        Dim query1 As String = "UPDATE tm15_department_master SET tm15_department_master.Management_department = '" & Managementdepartment & "' "
+                                        query1 += " WHERE (tm15_department_master.Department_number = '" & Departmentnumber & "')"
+                                        Dim command As MySqlCommand = cnn.CreateCommand()
+                                        command.CommandText = query1
+                                        command.ExecuteNonQuery()
+                                        DB_CLOSE()
+                                    Catch ex As Exception
+                                        'MessageBox.Show(ex.Message)
+                                        DB_CLOSE()
+                                        If (checkdata <> False) Then
+                                            If rowerror = "" Then
+                                                rowerror += Convert.ToString(count + 1)
+                                                errorcount = errorcount + 1
+                                            Else
+                                                rowerror += "," + Convert.ToString(count + 1)
+                                                errorcount = errorcount + 1
+                                            End If
+                                            errorcount = errorcount + 1
+                                        End If
+                                    End Try
+                                Else
+                                    Try
+                                        DB_OPEN()
+                                        Dim command1 As MySqlCommand = cnn.CreateCommand()
+                                        Dim Reader As MySqlDataReader
+                                        Dim id1 = 0
+                                        Dim query2 As String = "SELECT MAX(Id)+1 as Id FROM tm15_department_master "
+                                        command1.CommandText = query2
+                                        Reader = command1.ExecuteReader()
+                                        While Reader.Read
+                                            id1 = Reader("Id")
+                                        End While
+                                        DB_CLOSE()
+                                        DB_OPEN()
+                                        Dim query1 As String = "insert into tm15_department_master (id, Management_department, Department_number, `delete`  ) values "
+                                        query1 += " ('" & ID & "','" & Managementdepartment & "', '" & Departmentnumber & "',0)"
+                                        Dim command As MySqlCommand = cnn.CreateCommand()
+                                        command.CommandText = query1
+                                        command.ExecuteNonQuery()
+                                        DB_CLOSE()
+                                    Catch ex As Exception
+                                        DB_CLOSE()
+                                        'MessageBox.Show(ex.Message)
+                                        If (checkdata <> False) Then
+                                            'If rowerror = "" Then
+                                            '    rowerror += Convert.ToString(count + 1)
+                                            '    errorcount = errorcount + 1
+                                            'Else
+                                            '    rowerror += "," + Convert.ToString(count + 1)
+                                            '    errorcount = errorcount + 1
+                                            'End If
+                                            checkdata = False
+                                            errorcount = errorcount + 1
+                                        End If
+                                    End Try
+                                End If
+                            End If
+                            If (Accountnumberall <> 0) Then
+
+
+                                Try
+
+                                    DB_OPEN()
+                                    Dim command As MySqlCommand = cnn.CreateCommand()
+                                    Dim Reader As MySqlDataReader
+                                    Dim query1 As String = "select Account_number from  tm14_account_master where Account_number= '" & Accountnumberall & "' "
+                                    command.CommandText = query1
+                                    Reader = command.ExecuteReader()
+                                    dptnum = 0
+                                    While Reader.Read
+                                        dptnum = Reader("Account_number")
+                                    End While
+                                    DB_CLOSE()
+
+                                Catch ex As Exception
+                                    'MessageBox.Show(ex.Message)
+                                    DB_CLOSE()
                                     If (checkdata <> False) Then
                                         'If rowerror = "" Then
                                         '    rowerror += Convert.ToString(count + 1)
@@ -1834,29 +1892,82 @@ Public Class F20_契約書一覧_WHExcel
                                         '    rowerror += "," + Convert.ToString(count + 1)
                                         '    errorcount = errorcount + 1
                                         'End If
-                                        checkdata = False
                                         errorcount = errorcount + 1
+                                        checkdata = False
                                     End If
+
                                 End Try
+                                If dptnum > 0 Then
+                                    Try
+
+                                        DB_OPEN()
+                                        Dim query1 As String = "UPDATE tm14_account_master SET Account_number = '" & dptnum & "', "
+                                        query1 += " Customer_name = '" & Customernameall & "', "
+                                        query1 += " Yomigana = '" & YomiganaAll & "', "
+                                        query1 += " `delete`=0 "
+                                        query1 += " WHERE (Account_number = '" & dptnum & "')"
+                                        Dim command As MySqlCommand = cnn.CreateCommand()
+                                        command.CommandText = query1
+                                        command.ExecuteNonQuery()
+                                        DB_CLOSE()
+                                        Accountnumberall = dptnum
+                                    Catch ex As Exception
+                                        'MessageBox.Show(ex.Message)
+                                        DB_CLOSE()
+                                        If (checkdata <> False) Then
+                                            'If rowerror = "" Then
+                                            '    rowerror += Convert.ToString(count + 1)
+                                            '    errorcount = errorcount + 1
+                                            'Else
+                                            '    rowerror += "," + Convert.ToString(count + 1)
+                                            '    errorcount = errorcount + 1
+                                            'End If
+                                            errorcount = errorcount + 1
+                                            checkdata = False
+                                        End If
+                                    End Try
+                                Else
+                                    Try
+                                        DB_OPEN()
+                                        Dim query1 As String = "insert into tm14_account_master (Customer_name, Yomigana, Account_number,`delete`) values "
+                                        query1 += " ('" & Customernameall & "','" & YomiganaAll & "', '" & Accountnumberall & "',0)"
+                                        Dim command As MySqlCommand = cnn.CreateCommand()
+                                        command.CommandText = query1
+                                        command.ExecuteNonQuery()
+                                        DB_CLOSE()
+                                    Catch ex As Exception
+                                        DB_CLOSE()
+                                        'MessageBox.Show(ex.Message)
+                                        If (checkdata <> False) Then
+                                            'If rowerror = "" Then
+                                            '    rowerror += Convert.ToString(count + 1)
+                                            '    errorcount = errorcount + 1
+                                            'Else
+                                            '    rowerror += "," + Convert.ToString(count + 1)
+                                            '    errorcount = errorcount + 1
+                                            'End If
+                                            errorcount = errorcount + 1
+                                            checkdata = False
+                                        End If
+                                    End Try
+                                End If
                             End If
-                        End If
-                        If (Accountnumberall <> 0) Then
-
-
                             Try
-
                                 DB_OPEN()
                                 Dim command As MySqlCommand = cnn.CreateCommand()
-                                Dim Reader As MySqlDataReader
-                                Dim query1 As String = "select Account_number from  tm14_account_master where Account_number= '" & Accountnumberall & "' "
-                                command.CommandText = query1
-                                Reader = command.ExecuteReader()
-                                dptnum = 0
-                                While Reader.Read
-                                    dptnum = Reader("Account_number")
-                                End While
-                                DB_CLOSE()
 
+                                Dim Reader1 As MySqlDataReader
+                                'Reader.Close()
+                                Dim query22 As String = "select ID as cnt from t20_contract_management where t20_contract_management.ID= '" & Convert.ToString(ID).ToString() & "' "
+                                command.CommandText = query22
+                                Reader1 = command.ExecuteReader()
+                                'If Reader.Depth > 0 Then
+                                dptnum1 = 0
+                                While Reader1.Read
+                                    dptnum1 = Reader1("cnt")
+                                End While
+                                'End If
+                                DB_CLOSE()
                             Catch ex As Exception
                                 'MessageBox.Show(ex.Message)
                                 DB_CLOSE()
@@ -1871,370 +1982,288 @@ Public Class F20_契約書一覧_WHExcel
                                     errorcount = errorcount + 1
                                     checkdata = False
                                 End If
-
                             End Try
-                            If dptnum > 0 Then
-                                Try
+                            Dim sqlupd = ""
+                            Try
 
+                                If dptnum1 > 0 Then
                                     DB_OPEN()
-                                    Dim query1 As String = "UPDATE tm14_account_master SET Account_number = '" & dptnum & "', "
-                                    query1 += " Customer_name = '" & Customernameall & "', "
-                                    query1 += " Yomigana = '" & YomiganaAll & "', "
-                                    query1 += " `delete`=0 "
-                                    query1 += " WHERE (Account_number = '" & dptnum & "')"
+                                    sqlupd = "UPDATE t20_contract_management"
+                                    sqlupd += " SET t20_contract_management.Control_number = '" & mgtnumber & "'"
+
+                                    'sqlupd += ", t20_contract_management.Control_number = '" & mgtnumber & "'"
+                                    sqlupd += ", t20_contract_management.Temporary_number = '" & Temporarynumber.ToString() & "'"
+                                    sqlupd += ", t20_contract_management.Branch_number = '" & Branchnumber.ToString() & "'"
+                                    sqlupd += ", t20_contract_management.Old_number = '" & Oldnumber.ToString() & "'"
+                                    If ContractDate.Trim() <> "" Then
+                                        sqlupd += ", t20_contract_management.Contract_date = '" & Convert.ToDateTime(ContractDate).ToString("yyyy/MM/dd") & "'"
+
+                                    Else
+                                        sqlupd += ", t20_contract_management.Contract_date = '" & DBNull.Value & "'"
+
+
+                                    End If
+                                    If (Contractperiodstarts.Trim() <> "") Then
+
+                                        sqlupd += ", t20_contract_management.Contract_period_starts = '" & Convert.ToDateTime(Contractperiodstarts).ToString("yyyy/MM/dd") & "'"
+                                    Else
+                                        sqlupd += ", t20_contract_management.Contract_period_starts = '" & DBNull.Value & "'"
+
+                                    End If
+                                    If (ScheduledEndDate.Trim() <> "") Then
+
+                                        sqlupd += ", t20_contract_management.Scheduled_end_date_of_contract_period = '" & Convert.ToDateTime(ScheduledEndDate).ToString("yyyy/MM/dd") & "'"
+                                    Else
+                                        sqlupd += ", t20_contract_management.Scheduled_end_date_of_contract_period = '" & DBNull.Value & "'"
+
+                                    End If
+
+                                    If (EndDate.Trim() <> "") Then
+
+                                        sqlupd += ", t20_contract_management.End_date = '" & Convert.ToDateTime(EndDate).ToString("yyyy/MM/dd") & "'"
+                                    Else
+                                        sqlupd += ", t20_contract_management.End_date = '" & DBNull.Value & "'"
+
+                                    End If
+                                    If (Survey_Date.Trim() <> "") Then
+
+                                        sqlupd += ", t20_contract_management.Survey_Date = '" & Convert.ToDateTime(Survey_Date).ToString("yyyy/MM/dd") & "'"
+                                    Else
+                                        'sqlupd += ", t20_contract_management.Survey_Date = '" & DBNull.Value & "'"
+
+                                    End If
+                                    sqlupd += ", t20_contract_management.Update_code = '" & Updatecode & "'"
+                                    sqlupd += ", t20_contract_management.Automatic_update_interval= '" & AutomaUpdateinter & "'"
+                                    If (Accountnumberall <> 0) Then
+
+
+                                        sqlupd += ", t20_contract_management.Account_number_all = '" & Accountnumberall & "'"
+                                        sqlupd += ", t20_contract_management.Temporary_company_number_1 = '" & Accountnumberall & "'"
+                                        sqlupd += ", t20_contract_management.Account_name_all = '" & Customernameall & "'"
+                                        sqlupd += ", t20_contract_management.Yomigana_All = '" & YomiganaAll & "'"
+                                    End If
+                                    sqlupd += ", t20_contract_management.Contract_name = @Contractname"
+                                    If (Departmentnumber.ToString() <> "") Then
+                                        sqlupd += ", t20_contract_management.Department_number = '" & Departmentnumber & "'"                                'Tm15_部署マスター.管理部署 tbl column
+                                        'sqlupd += ", t20_contract_management.管理部署 = '" & Management_department & "'"
+
+                                    End If
+                                    sqlupd += ", t20_contract_management.Contractor = '" & Contractor & "'"
+                                    sqlupd += ", t20_contract_management.Remarks = @Remarks"
+
+                                    'If (Delete <> "") Then
+                                    sqlupd += ", t20_contract_management.Delete = " & Delete & ""
+                                    ' End If
+                                    ' If (India <> "") Then
+                                    sqlupd += ", t20_contract_management.India = " & India & ""
+                                    'End If
+
+                                    sqlupd += " WHERE (t20_contract_management.ID = '" & ID & "')"
                                     Dim command As MySqlCommand = cnn.CreateCommand()
-                                    command.CommandText = query1
+                                    command.Parameters.AddWithValue("Remarks", Remarks.ToString())
+                                    command.Parameters.AddWithValue("Contractname", Contractname.ToString())
+                                    command.CommandText = sqlupd
                                     command.ExecuteNonQuery()
                                     DB_CLOSE()
-                                    Accountnumberall = dptnum
-                                Catch ex As Exception
-                                    'MessageBox.Show(ex.Message)
-                                    DB_CLOSE()
-                                    If (checkdata <> False) Then
-                                        'If rowerror = "" Then
-                                        '    rowerror += Convert.ToString(count + 1)
-                                        '    errorcount = errorcount + 1
-                                        'Else
-                                        '    rowerror += "," + Convert.ToString(count + 1)
-                                        '    errorcount = errorcount + 1
-                                        'End If
-                                        errorcount = errorcount + 1
-                                        checkdata = False
-                                    End If
-                                End Try
-                            Else
-                                Try
+                                Else
                                     DB_OPEN()
-                                    Dim query1 As String = "insert into tm14_account_master (Customer_name, Yomigana, Account_number,`delete`) values "
-                                    query1 += " ('" & Customernameall & "','" & YomiganaAll & "', '" & Accountnumberall & "',0)"
                                     Dim command As MySqlCommand = cnn.CreateCommand()
-                                    command.CommandText = query1
+                                    Dim query As String = "INSERT INTO `t20_contract_management`"
+                                    query += "(`ID`,"
+                                    query += "`Control_number`,"
+                                    'query += "`管理番号`,"
+                                    query += "`Temporary_number`,"
+                                    query += "`Branch_number`,"
+                                    query += "`Old_number`,"
+                                    query += "`Contract_date`,"
+                                    query += "`Contract_period_starts`,"
+                                    query += "`Scheduled_end_date_of_contract_period`,"
+
+                                    query += "`End_date`,"
+                                    query += "`Survey_Date`,"
+                                    query += "`Update_code`,"
+                                    query += "`Automatic_update_interval`,"
+                                    If (Accountnumberall <> 0) Then
+                                        query += "`Account_number_all`,"
+                                        query += "`Temporary_company_number_1`,"
+                                        query += "`Account_name_all`,"
+                                        query += "`Yomigana_All`,"
+                                    End If
+
+                                    query += "`Contract_name`,"
+                                    If (Departmentnumber.ToString() <> "") Then
+                                        query += "`Department_number`,"
+                                    End If
+                                    'query += "`部署番号`,"
+                                    'Tm15_部署マスター.管理部署 tbl column
+                                    'query += "`管理部署`,"
+
+                                    query += "`Contractor`,"
+                                    query += "`remarks`,"
+                                    query += "`Delete`,"
+                                    'query += "`削除`,"
+                                    'query += "`インド`,"
+                                    'query += "`仮社番1`,"
+                                    'query += "`仮社番2`,"
+                                    'query += "`仮社番3`,"
+                                    'query += "`仮社番4`,"
+                                    query += "`India`)"
+
+                                    query += "VALUES"
+                                    query += "(@ID,"
+                                    query += "@mgtnumber,"
+                                    'query += "@Indiacontract,"
+                                    query += "@Temporarynumber,"
+                                    query += "@Branchnumber,"
+                                    query += "@Oldnumber,"
+                                    query += "@Contractdate,"
+                                    query += "@Contractperiodcommencement,"
+                                    query += "@ScheduledEndDate,"
+                                    query += "@Enddate,"
+                                    query += "@Survey_Date,"
+                                    query += "@Updatecode,"
+                                    query += "@Automaticupdateinterval,"
+                                    If (Accountnumberall <> 0) Then
+                                        query += "@Accountnumber_all,"
+                                        query += "@Temporary_company_number_1,"
+                                        query += "@Customername_all,"
+                                        query += "@Yomigana_All,"
+                                    End If
+                                    query += "@Contractname,"
+                                    If (Departmentnumber.ToString() <> "") Then
+                                        query += "@Departmentnumber,"
+                                    End If
+
+
+
+
+                                    't15_tbl
+                                    'query += "@mgtdept,"
+                                    'query += "@Accountnumber,"
+                                    query += "@Contractor,"
+                                    query += "@remarks,"
+                                    'query += "@end,"
+                                    query += "@Delete,"
+                                    query += "@India);"
+                                    command.Parameters.AddWithValue("ID", ID.ToString())
+                                    command.Parameters.AddWithValue("mgtnumber", mgtnumber.ToString())
+                                    command.Parameters.AddWithValue("Temporarynumber", Temporarynumber.ToString())
+                                    command.Parameters.AddWithValue("Branchnumber", Branchnumber.ToString())
+                                    command.Parameters.AddWithValue("Oldnumber", Oldnumber.ToString())
+                                    If ContractDate.Trim() <> "" Then
+                                        command.Parameters.AddWithValue("Contractdate", Convert.ToDateTime(ContractDate).ToString("yyyy/MM/dd"))
+
+                                    Else
+                                        command.Parameters.AddWithValue("Contractdate", DBNull.Value)
+                                    End If
+                                    If Contractperiodstarts.Trim() <> "" Then
+                                        command.Parameters.AddWithValue("Contractperiodcommencement", Convert.ToDateTime(Contractperiodstarts).ToString("yyyy/MM/dd"))
+                                    Else
+                                        command.Parameters.AddWithValue("Contractperiodcommencement", DBNull.Value)
+                                    End If
+                                    If ScheduledEndDate.Trim() <> "" Then
+                                        command.Parameters.AddWithValue("ScheduledEndDate", Convert.ToDateTime(ScheduledEndDate).ToString("yyyy/MM/dd"))
+                                    Else
+                                        command.Parameters.AddWithValue("ScheduledEndDate", DBNull.Value)
+                                    End If
+                                    If EndDate.Trim() <> "" Then
+                                        command.Parameters.AddWithValue("Enddate", Convert.ToDateTime(EndDate).ToString("yyyy/MM/dd"))
+                                    Else
+                                        command.Parameters.AddWithValue("Enddate", DBNull.Value)
+                                    End If
+                                    If Survey_Date.Trim() <> "" Then
+                                        command.Parameters.AddWithValue("Survey_Date", Convert.ToDateTime(Survey_Date).ToString("yyyy/MM/dd"))
+                                    Else
+                                        command.Parameters.AddWithValue("Survey_Date", DBNull.Value)
+                                    End If
+                                    command.Parameters.AddWithValue("Updatecode", Updatecode.ToString())
+                                    command.Parameters.AddWithValue("Automaticupdateinterval", AutomaUpdateinter.ToString())
+                                    If (Accountnumberall <> 0) Then
+
+
+                                        command.Parameters.AddWithValue("Accountnumber_all", Accountnumberall.ToString())
+                                        command.Parameters.AddWithValue("Temporary_company_number_1", Accountnumberall.ToString())
+                                        command.Parameters.AddWithValue("Customername_all", Customernameall.ToString())
+                                        command.Parameters.AddWithValue("Yomigana_All", YomiganaAll.ToString())
+                                    End If
+
+                                    command.Parameters.AddWithValue("Contractname", Contractname.ToString())
+                                    If (Departmentnumber.ToString() <> "") Then
+                                        command.Parameters.AddWithValue("Departmentnumber", Departmentnumber.ToString())
+                                        'command.Parameters.AddWithValue("mgtdept", Management_department)
+                                    End If
+                                    command.Parameters.AddWithValue("Contractor", Contractor.ToString())
+                                    command.Parameters.AddWithValue("remarks", Remarks.ToString())
+                                    'Delete.Replace("",String.Empty)
+                                    command.Parameters.AddWithValue("Delete", Convert.ToBoolean(Delete))
+                                    command.Parameters.AddWithValue("India", Convert.ToBoolean(India))
+
+                                    'sqlins = "UPDATE t20_契約書管理"
+                                    'sqlins += " SET t20_契約書管理.削除 = " & bool & ""
+                                    'sqlins += " WHERE (T20_契約書管理.管理番号 = '" & Convert.ToString(dr("ID")) & "')"
+                                    'Dim command22 As MySqlCommand = cnn.CreateCommand()
+                                    command.CommandText = query
                                     command.ExecuteNonQuery()
                                     DB_CLOSE()
-                                Catch ex As Exception
-                                    DB_CLOSE()
-                                    'MessageBox.Show(ex.Message)
-                                    If (checkdata <> False) Then
-                                        'If rowerror = "" Then
-                                        '    rowerror += Convert.ToString(count + 1)
-                                        '    errorcount = errorcount + 1
-                                        'Else
-                                        '    rowerror += "," + Convert.ToString(count + 1)
-                                        '    errorcount = errorcount + 1
-                                        'End If
-                                        errorcount = errorcount + 1
-                                        checkdata = False
-                                    End If
-                                End Try
-                            End If
+                                End If
+                                ' If Lookup <> "" AndAlso description <> "" AndAlso dept <> "" AndAlso UnitPrice <> "" Then
+                            Catch ex As Exception
+                                ' MessageBox.Show(ex.Message)
+                                DB_CLOSE()
+                                If (checkdata <> False) Then
+                                    '    If rowerror = "" Then
+                                    '        rowerror += Convert.ToString(count + 1)
+                                    '        errorcount = errorcount + 1
+                                    '    Else
+                                    '        rowerror += "," + Convert.ToString(count + 1)
+                                    '        errorcount = errorcount + 1
+                                    '    End If
+                                    errorcount = errorcount + 1
+                                    checkdata = False
+                                End If
+                            End Try
                         End If
-                        Try
-                            DB_OPEN()
-                            Dim command As MySqlCommand = cnn.CreateCommand()
-
-                            Dim Reader1 As MySqlDataReader
-                            'Reader.Close()
-                            Dim query22 As String = "select ID as cnt from t20_contract_management where t20_contract_management.ID= '" & Convert.ToString(ID).ToString() & "' "
-                            command.CommandText = query22
-                            Reader1 = command.ExecuteReader()
-                            'If Reader.Depth > 0 Then
-                            dptnum1 = 0
-                            While Reader1.Read
-                                dptnum1 = Reader1("cnt")
-                            End While
-                            'End If
-                            DB_CLOSE()
-                        Catch ex As Exception
-                            'MessageBox.Show(ex.Message)
-                            DB_CLOSE()
-                            If (checkdata <> False) Then
-                                'If rowerror = "" Then
-                                '    rowerror += Convert.ToString(count + 1)
-                                '    errorcount = errorcount + 1
-                                'Else
-                                '    rowerror += "," + Convert.ToString(count + 1)
-                                '    errorcount = errorcount + 1
-                                'End If
-                                errorcount = errorcount + 1
-                                checkdata = False
-                            End If
-                        End Try
-                        Dim sqlupd = ""
-                        Try
-
-                            If dptnum1 > 0 Then
-                                DB_OPEN()
-                                sqlupd = "UPDATE t20_contract_management"
-                                sqlupd += " SET t20_contract_management.Control_number = '" & mgtnumber & "'"
-
-                                'sqlupd += ", t20_contract_management.Control_number = '" & mgtnumber & "'"
-                                sqlupd += ", t20_contract_management.Temporary_number = '" & Temporarynumber.ToString() & "'"
-                                sqlupd += ", t20_contract_management.Branch_number = '" & Branchnumber.ToString() & "'"
-                                sqlupd += ", t20_contract_management.Old_number = '" & Oldnumber.ToString() & "'"
-                                If ContractDate.Trim() <> "" Then
-                                    sqlupd += ", t20_contract_management.Contract_date = '" & Convert.ToDateTime(ContractDate).ToString("yyyy/MM/dd") & "'"
-
-                                Else
-                                    sqlupd += ", t20_contract_management.Contract_date = '" & DBNull.Value & "'"
+                        'End If
 
 
-                                End If
-                                If (Contractperiodstarts.Trim() <> "") Then
+                        count += 1
+                        checkdata = True
 
-                                    sqlupd += ", t20_contract_management.Contract_period_starts = '" & Convert.ToDateTime(Contractperiodstarts).ToString("yyyy/MM/dd") & "'"
-                                Else
-                                    sqlupd += ", t20_contract_management.Contract_period_starts = '" & DBNull.Value & "'"
-
-                                End If
-                                If (ScheduledEndDate.Trim() <> "") Then
-
-                                    sqlupd += ", t20_contract_management.Scheduled_end_date_of_contract_period = '" & Convert.ToDateTime(ScheduledEndDate).ToString("yyyy/MM/dd") & "'"
-                                Else
-                                    sqlupd += ", t20_contract_management.Scheduled_end_date_of_contract_period = '" & DBNull.Value & "'"
-
-                                End If
-
-                                If (EndDate.Trim() <> "") Then
-
-                                    sqlupd += ", t20_contract_management.End_date = '" & Convert.ToDateTime(EndDate).ToString("yyyy/MM/dd") & "'"
-                                Else
-                                    sqlupd += ", t20_contract_management.End_date = '" & DBNull.Value & "'"
-
-                                End If
-                                If (Survey_Date.Trim() <> "") Then
-
-                                    sqlupd += ", t20_contract_management.Survey_Date = '" & Convert.ToDateTime(Survey_Date).ToString("yyyy/MM/dd") & "'"
-                                Else
-                                    'sqlupd += ", t20_contract_management.Survey_Date = '" & DBNull.Value & "'"
-
-                                End If
-                                sqlupd += ", t20_contract_management.Update_code = '" & Updatecode & "'"
-                                sqlupd += ", t20_contract_management.Automatic_update_interval= '" & AutomaUpdateinter & "'"
-                                If (Accountnumberall <> 0) Then
+                    Next row
+                    'End If
 
 
-                                    sqlupd += ", t20_contract_management.Account_number_all = '" & Accountnumberall & "'"
-                                    sqlupd += ", t20_contract_management.Temporary_company_number_1 = '" & Accountnumberall & "'"
-                                    sqlupd += ", t20_contract_management.Account_name_all = '" & Customernameall & "'"
-                                    sqlupd += ", t20_contract_management.Yomigana_All = '" & YomiganaAll & "'"
-                                End If
-                                sqlupd += ", t20_contract_management.Contract_name = @Contractname"
-                                If (Departmentnumber.ToString() <> "") Then
-                                    sqlupd += ", t20_contract_management.Department_number = '" & Departmentnumber & "'"                                'Tm15_部署マスター.管理部署 tbl column
-                                    'sqlupd += ", t20_contract_management.管理部署 = '" & Management_department & "'"
+                    'MessageBox.Show("completed")
+                    waitDlg.Close()
+                    'If rowerror <> "" Then
+                    '    MessageBox.Show("行 " + rowerror + " のデータが無効です")
+                    '    If (count - errorcount <> 0) Then
+                    '        MessageBox.Show("アイテムが正常にインポートされました, インポートされたレコードの合計 : " & count - errorcount & "", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                                End If
-                                sqlupd += ", t20_contract_management.Contractor = '" & Contractor & "'"
-                                sqlupd += ", t20_contract_management.Remarks = @Remarks"
+                    '    End If
+                    'Else
+                    '    MessageBox.Show("アイテムが正常にインポートされました, インポートされたレコードの合計 : " & count - errorcount & "", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                                'If (Delete <> "") Then
-                                sqlupd += ", t20_contract_management.Delete = " & Delete & ""
-                                ' End If
-                                ' If (India <> "") Then
-                                sqlupd += ", t20_contract_management.India = " & India & ""
-                                'End If
+                    'End If
+                    impdataeddate = DateTime.Now
+                    'MessageBox.Show("Start Date : " & impdatastdate & " End Date time : " & impdataeddate)
+                    Dim msg = ""
+                    msg = "データインポートの詳細"
+                    msg += "" & Environment.NewLine & "成功するレコードの数 : " & count - errorcount & ""
+                    msg += "" & Environment.NewLine & "失敗したレコードの数 : " & errorcount & " "
+                    MessageBox.Show(msg, "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    'MessageBox.Show(rowerror, "", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                                sqlupd += " WHERE (t20_contract_management.ID = '" & ID & "')"
-                                Dim command As MySqlCommand = cnn.CreateCommand()
-                                command.Parameters.AddWithValue("Remarks", Remarks.ToString())
-                                command.Parameters.AddWithValue("Contractname", Contractname.ToString())
-                                command.CommandText = sqlupd
-                                command.ExecuteNonQuery()
-                                DB_CLOSE()
-                            Else
-                                DB_OPEN()
-                                Dim command As MySqlCommand = cnn.CreateCommand()
-                                Dim query As String = "INSERT INTO `t20_contract_management`"
-                                query += "(`ID`,"
-                                query += "`Control_number`,"
-                                'query += "`管理番号`,"
-                                query += "`Temporary_number`,"
-                                query += "`Branch_number`,"
-                                query += "`Old_number`,"
-                                query += "`Contract_date`,"
-                                query += "`Contract_period_starts`,"
-                                query += "`Scheduled_end_date_of_contract_period`,"
-
-                                query += "`End_date`,"
-                                query += "`Survey_Date`,"
-                                query += "`Update_code`,"
-                                query += "`Automatic_update_interval`,"
-                                If (Accountnumberall <> 0) Then
-                                    query += "`Account_number_all`,"
-                                    query += "`Temporary_company_number_1`,"
-                                    query += "`Account_name_all`,"
-                                    query += "`Yomigana_All`,"
-                                End If
-
-                                query += "`Contract_name`,"
-                                If (Departmentnumber.ToString() <> "") Then
-                                    query += "`Department_number`,"
-                                End If
-                                'query += "`部署番号`,"
-                                'Tm15_部署マスター.管理部署 tbl column
-                                'query += "`管理部署`,"
-
-                                query += "`Contractor`,"
-                                query += "`remarks`,"
-                                query += "`Delete`,"
-                                'query += "`削除`,"
-                                'query += "`インド`,"
-                                'query += "`仮社番1`,"
-                                'query += "`仮社番2`,"
-                                'query += "`仮社番3`,"
-                                'query += "`仮社番4`,"
-                                query += "`India`)"
-
-                                query += "VALUES"
-                                query += "(@ID,"
-                                query += "@mgtnumber,"
-                                'query += "@Indiacontract,"
-                                query += "@Temporarynumber,"
-                                query += "@Branchnumber,"
-                                query += "@Oldnumber,"
-                                query += "@Contractdate,"
-                                query += "@Contractperiodcommencement,"
-                                query += "@ScheduledEndDate,"
-                                query += "@Enddate,"
-                                query += "@Survey_Date,"
-                                query += "@Updatecode,"
-                                query += "@Automaticupdateinterval,"
-                                If (Accountnumberall <> 0) Then
-                                    query += "@Accountnumber_all,"
-                                    query += "@Temporary_company_number_1,"
-                                    query += "@Customername_all,"
-                                    query += "@Yomigana_All,"
-                                End If
-                                query += "@Contractname,"
-                                If (Departmentnumber.ToString() <> "") Then
-                                    query += "@Departmentnumber,"
-                                End If
-
-
-
-
-                                't15_tbl
-                                'query += "@mgtdept,"
-                                'query += "@Accountnumber,"
-                                query += "@Contractor,"
-                                query += "@remarks,"
-                                'query += "@end,"
-                                query += "@Delete,"
-                                query += "@India);"
-                                command.Parameters.AddWithValue("ID", ID.ToString())
-                                command.Parameters.AddWithValue("mgtnumber", mgtnumber.ToString())
-                                command.Parameters.AddWithValue("Temporarynumber", Temporarynumber.ToString())
-                                command.Parameters.AddWithValue("Branchnumber", Branchnumber.ToString())
-                                command.Parameters.AddWithValue("Oldnumber", Oldnumber.ToString())
-                                If ContractDate.Trim() <> "" Then
-                                    command.Parameters.AddWithValue("Contractdate", Convert.ToDateTime(ContractDate).ToString("yyyy/MM/dd"))
-
-                                Else
-                                    command.Parameters.AddWithValue("Contractdate", DBNull.Value)
-                                End If
-                                If Contractperiodstarts.Trim() <> "" Then
-                                    command.Parameters.AddWithValue("Contractperiodcommencement", Convert.ToDateTime(Contractperiodstarts).ToString("yyyy/MM/dd"))
-                                Else
-                                    command.Parameters.AddWithValue("Contractperiodcommencement", DBNull.Value)
-                                End If
-                                If ScheduledEndDate.Trim() <> "" Then
-                                    command.Parameters.AddWithValue("ScheduledEndDate", Convert.ToDateTime(ScheduledEndDate).ToString("yyyy/MM/dd"))
-                                Else
-                                    command.Parameters.AddWithValue("ScheduledEndDate", DBNull.Value)
-                                End If
-                                If EndDate.Trim() <> "" Then
-                                    command.Parameters.AddWithValue("Enddate", Convert.ToDateTime(EndDate).ToString("yyyy/MM/dd"))
-                                Else
-                                    command.Parameters.AddWithValue("Enddate", DBNull.Value)
-                                End If
-                                If Survey_Date.Trim() <> "" Then
-                                    command.Parameters.AddWithValue("Survey_Date", Convert.ToDateTime(Survey_Date).ToString("yyyy/MM/dd"))
-                                Else
-                                    command.Parameters.AddWithValue("Survey_Date", DBNull.Value)
-                                End If
-                                command.Parameters.AddWithValue("Updatecode", Updatecode.ToString())
-                                command.Parameters.AddWithValue("Automaticupdateinterval", AutomaUpdateinter.ToString())
-                                If (Accountnumberall <> 0) Then
-
-
-                                    command.Parameters.AddWithValue("Accountnumber_all", Accountnumberall.ToString())
-                                    command.Parameters.AddWithValue("Temporary_company_number_1", Accountnumberall.ToString())
-                                    command.Parameters.AddWithValue("Customername_all", Customernameall.ToString())
-                                    command.Parameters.AddWithValue("Yomigana_All", YomiganaAll.ToString())
-                                End If
-
-                                command.Parameters.AddWithValue("Contractname", Contractname.ToString())
-                                If (Departmentnumber.ToString() <> "") Then
-                                    command.Parameters.AddWithValue("Departmentnumber", Departmentnumber.ToString())
-                                    'command.Parameters.AddWithValue("mgtdept", Management_department)
-                                End If
-                                command.Parameters.AddWithValue("Contractor", Contractor.ToString())
-                                command.Parameters.AddWithValue("remarks", Remarks.ToString())
-                                'Delete.Replace("",String.Empty)
-                                command.Parameters.AddWithValue("Delete", Convert.ToBoolean(Delete))
-                                command.Parameters.AddWithValue("India", Convert.ToBoolean(India))
-
-                                'sqlins = "UPDATE t20_契約書管理"
-                                'sqlins += " SET t20_契約書管理.削除 = " & bool & ""
-                                'sqlins += " WHERE (T20_契約書管理.管理番号 = '" & Convert.ToString(dr("ID")) & "')"
-                                'Dim command22 As MySqlCommand = cnn.CreateCommand()
-                                command.CommandText = query
-                                command.ExecuteNonQuery()
-                                DB_CLOSE()
-                            End If
-                            ' If Lookup <> "" AndAlso description <> "" AndAlso dept <> "" AndAlso UnitPrice <> "" Then
-                        Catch ex As Exception
-                            ' MessageBox.Show(ex.Message)
-                            DB_CLOSE()
-                            If (checkdata <> False) Then
-                                '    If rowerror = "" Then
-                                '        rowerror += Convert.ToString(count + 1)
-                                '        errorcount = errorcount + 1
-                                '    Else
-                                '        rowerror += "," + Convert.ToString(count + 1)
-                                '        errorcount = errorcount + 1
-                                '    End If
-                                errorcount = errorcount + 1
-                                checkdata = False
-                            End If
-                        End Try
-                    End If
-
-                    count += 1
-                    checkdata = True
-
-                Next row
-                'MessageBox.Show("completed")
-                waitDlg.Close()
-                'If rowerror <> "" Then
-                '    MessageBox.Show("行 " + rowerror + " のデータが無効です")
-                '    If (count - errorcount <> 0) Then
-                '        MessageBox.Show("アイテムが正常にインポートされました, インポートされたレコードの合計 : " & count - errorcount & "", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-                '    End If
-                'Else
-                '    MessageBox.Show("アイテムが正常にインポートされました, インポートされたレコードの合計 : " & count - errorcount & "", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-                'End If
-                impdataeddate = DateTime.Now
-                'MessageBox.Show("Start Date : " & impdatastdate & " End Date time : " & impdataeddate)
-                Dim msg = ""
-                msg = "データインポートの詳細"
-                msg += "" & Environment.NewLine & "成功するレコードの数 : " & count - errorcount & ""
-                msg += "" & Environment.NewLine & "失敗したレコードの数 : " & errorcount & " "
-                MessageBox.Show(msg, "", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                'MessageBox.Show(rowerror, "", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-                Cursor = System.Windows.Forms.Cursors.Default
-                'excelApp.Quit()
-                Exit Sub
-                ' Cursor = System.Windows.Forms.Cursors.Default
-                ' dgItems.DataSource = Nothing
-                ' End If
-                ' End If
-
-
+                    Cursor = System.Windows.Forms.Cursors.Default
+                    'excelApp.Quit()
+                    Exit Sub
+                    ' Cursor = System.Windows.Forms.Cursors.Default
+                    ' dgItems.DataSource = Nothing
+                    ' End If
+                    ' End If
+                End If
             End If
+
 
             ' End If
 
@@ -2546,13 +2575,13 @@ Public Class F20_契約書一覧_WHExcel
             If (DataGridView1.Columns(e.ColumnIndex).Name = "Delete") Then
                 If TypeOf senderGrid.Columns(e.ColumnIndex) Is DataGridViewButtonColumn AndAlso e.RowIndex >= 0 Then
                     Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
-                    If MessageBox.Show(String.Format("選択したレコードを削除してもよろしいですか", row.Cells("ID").Value.ToString), "確認", MessageBoxButtons.YesNo) = DialogResult.Yes Then
+                    If MessageBox.Show(String.Format("選択したレコードを削除してもよろしいですか", row.Cells("キー番号").Value.ToString), "確認", MessageBoxButtons.YesNo) = DialogResult.Yes Then
 
                         DB_OPEN()
                         'sql = "UPDATE t20_contract_management"
                         'sql += " SET t20_contract_management.Delete = " & bool & ""
                         sql = " Delete from t20_contract_management "
-                        sql += " WHERE (t20_contract_management.ID = '" & row.Cells("ID").Value.ToString & "')"
+                        sql += " WHERE (t20_contract_management.ID = '" & row.Cells("キー番号").Value.ToString & "')"
                         Dim command As MySqlCommand = cnn.CreateCommand()
                         command.CommandText = sql
                         r = command.ExecuteNonQuery()
@@ -2574,7 +2603,7 @@ Public Class F20_契約書一覧_WHExcel
                     Dim command As MySqlCommand = cnn.CreateCommand()
                     Dim Reader As MySqlDataReader
                     Dim query As String = "SELECT * from t20_contract_management where id = @id"
-                    command.Parameters.AddWithValue("id", row.Cells("id").Value.ToString)
+                    command.Parameters.AddWithValue("id", row.Cells("キー番号").Value.ToString)
                     command.CommandText = query
                     Reader = command.ExecuteReader()
                     Dim dt = New DataTable()
@@ -2649,7 +2678,11 @@ Public Class F20_契約書一覧_WHExcel
                         End If
                         If Not DBNull.Value.Equals(dt.Rows(0)("Temporary_company_number_1")) Then
                             Temporarycompanynumber1 = dt.Rows(0)("Temporary_company_number_1")
+                            'Ram-2023-04-18
+                        ElseIf Not DBNull.Value.Equals(dt.Rows(0)("Account_number_all")) Then
+                            Temporarycompanynumber1 = dt.Rows(0)("Account_number_all")
                         End If
+
                         If Not DBNull.Value.Equals(dt.Rows(0)("Temporary_company_number_2")) Then
 
                             Temporarycompanynumber2 = dt.Rows(0)("Temporary_company_number_2")
@@ -2733,7 +2766,7 @@ Public Class F20_契約書一覧_WHExcel
         Try
             ds.Clear()
             DB_OPEN()
-            sql = "SELECT  t20_contract_management.ID as ID, t20_contract_management.Control_number as 管理番号, t20_contract_management.Temporary_number as 仮番号, t20_contract_management.India_contract as インド契約, t20_contract_management.Branch_number as 枝番, "
+            sql = "SELECT  t20_contract_management.ID as キー番号, t20_contract_management.Control_number as 管理番号, t20_contract_management.Temporary_number as 仮番号, t20_contract_management.India_contract as インド契約, t20_contract_management.Branch_number as 枝番, "
             sql += "t20_contract_management.Old_number as 旧番号, DATE_FORMAT(t20_contract_management.Contract_date, '%Y/%m/%d')  as 契約日, DATE_FORMAT(t20_contract_management.Contract_period_starts,  '%Y/%m/%d')   as 契約開始, DATE_FORMAT(t20_contract_management.Scheduled_end_date_of_contract_period, '%Y/%m/%d') as 契約終了予定日, DATE_FORMAT(t20_contract_management.End_date, '%Y/%m/%d') as 終了日, "
             sql += "t20_contract_management.Update_code as 更新コード, t20_contract_management.Automatic_update_interval as 自動更新間隔,DATE_FORMAT(t20_contract_management.Survey_Date, '%Y/%m/%d')  as 調査日, t20_contract_management.Account_number_all  as 取引先番号_全, t20_contract_management.Account_name_all  as 取引先名, "
             sql += "t20_contract_management.Yomigana_All as ヨミガナ_全, t20_contract_management.Contract_name as 契約書名, t20_contract_management.Department_number as 部署番号, tm15_department_master.Management_department as 管理部署, t20_contract_management.Contractor as 契約担当, "
@@ -2767,32 +2800,32 @@ Public Class F20_契約書一覧_WHExcel
 
             If Not String.IsNullOrEmpty(strtxtbox2) Then
                 'sql += "AND t20_contract_management.備考 = '" & strtxtbox2 & "' "
-                sql += "AND t20_contract_management.remarks LIKE N'" + strtxtbox2 + "%' "
+                sql += "AND t20_contract_management.remarks LIKE N'%" & strtxtbox2 & "%' "
             End If
             If Not String.IsNullOrEmpty(strtxtbox3) Then
                 'sql += "AND t20_contract_management.取引先名_全 = '" & strtxtbox3 & "' "
-                sql += "AND t20_contract_management.Account_name_all LIKE N'%" + strtxtbox3 + "%' "
+                sql += "AND t20_contract_management.Account_name_all LIKE N'%" & strtxtbox3 & "%' "
             End If
             If Not String.IsNullOrEmpty(strtxtbox4) Then
                 'sql += "AND t20_contract_management.契約書名 = '" & strtxtbox4 & "' "
-                sql += "AND t20_contract_management.Contract_name LIKE N'" + strtxtbox4 + "%' "
+                sql += "AND t20_contract_management.Contract_name LIKE N'%" & strtxtbox4 & "%' "
             End If
             'doubt yomikada
             If Not String.IsNullOrEmpty(strtxtbox5) Then
                 'sql += "AND t20_contract_management.契約書名 = '" & strtxtbox4 & "' "
-                sql += "AND t20_contract_management.Contract_name LIKE N'" + strtxtbox5 + "%' "
-                sql += " or t20_contract_management.Yomigana_All LIKE N'" + strtxtbox5 + "%' "
+                sql += "AND t20_contract_management.Contract_name LIKE N'%" & strtxtbox5 & "%' "
+                sql += " or t20_contract_management.Yomigana_All LIKE N'%" & strtxtbox5 & "%' "
             End If
             'If Not String.IsNullOrEmpty(strdatetimepicker) Then
             'sql += "AND '" & strtxtbox5 & "' "
             ' End If
             If Not String.IsNullOrEmpty(strtxtbox6) Then
                 'sql += "AND t20_contract_management.旧番号='" & strtxtbox6 & "' "
-                sql += "AND t20_contract_management.Old_number LIKE N'" + strtxtbox6 + "%' "
+                sql += "AND t20_contract_management.Old_number LIKE N'%" & strtxtbox6 & "%' "
             End If
             If Not String.IsNullOrEmpty(strtxtbox7) Then
                 'sql += "AND t20_contract_management.管理番号='" & strtxtbox7 & "' "
-                sql += "AND t20_contract_management.Control_number LIKE N'" + strtxtbox7 + "%' "
+                sql += "AND t20_contract_management.ID LIKE N'%" & strtxtbox7 & "%' "
             End If
             sql += "ORDER BY t20_contract_management.ID "
             'Dim command As MySqlCommand = cnn.CreateCommand()
@@ -2820,7 +2853,7 @@ Public Class F20_契約書一覧_WHExcel
             'Id.LinkBehavior = LinkBehavior.SystemDefault
             DataGridView1.DataSource = dt
 
-            DataGridView1.Columns("ID").Visible = False
+            DataGridView1.Columns("管理番号").Visible = False
             DataGridView1.Columns("仮番号").Visible = False
             DataGridView1.Columns("インド契約").Visible = False
             DataGridView1.Columns("インド").Visible = False
@@ -2841,8 +2874,8 @@ Public Class F20_契約書一覧_WHExcel
             Else
                 TextBox8.Text = "0"
             End If
-
-            DataGridView1.Columns.Item("管理番号").Width = 60
+            ' DataGridView1.Columns.Item("ID").Width = 60
+            DataGridView1.Columns.Item("キー番号").Width = 60
             DataGridView1.Columns.Item("旧番号").Width = 60
             DataGridView1.Columns.Item("契約開始").Width = 100
             DataGridView1.Columns.Item("契約日").Width = 100
@@ -2921,12 +2954,99 @@ Public Class F20_契約書一覧_WHExcel
             DateTimePicker1.Format = DateTimePickerFormat.Custom
             DateTimePicker1.CustomFormat = " "
         End If
+        If e.KeyCode = Keys.Enter Or e.KeyCode = Keys.Return Then
+            Me.BindGrid()
+        End If
+    End Sub
+
+    Private Sub TextBox3_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox3.KeyDown
+        Try
+            If e.KeyCode = Keys.Enter Or e.KeyCode = Keys.Return Then
+                Me.BindGrid()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub TextBox4_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox4.KeyDown
+        Try
+            If e.KeyCode = Keys.Enter Or e.KeyCode = Keys.Return Then
+                Me.BindGrid()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub ComboBox1_KeyDown(sender As Object, e As KeyEventArgs) Handles ComboBox1.KeyDown
+        Try
+            If e.KeyCode = Keys.Enter Or e.KeyCode = Keys.Return Then
+                Me.BindGrid()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub CheckBox1_KeyDown(sender As Object, e As KeyEventArgs) Handles CheckBox1.KeyDown
+        Try
+            If e.KeyCode = Keys.Enter Or e.KeyCode = Keys.Return Then
+                Me.BindGrid()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub TextBox2_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox2.KeyDown
+        Try
+            If e.KeyCode = Keys.Enter Or e.KeyCode = Keys.Return Then
+                Me.BindGrid()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub TextBox5_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox5.KeyDown
+        Try
+            If e.KeyCode = Keys.Enter Or e.KeyCode = Keys.Return Then
+                'OccurrenceElevation_Changed()
+                Me.BindGrid()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub TextBox6_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox6.KeyDown
+        Try
+            If e.KeyCode = Keys.Enter Or e.KeyCode = Keys.Return Then
+                Me.BindGrid()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub TextBox7_KeyDown(sender As Object, e As KeyEventArgs) Handles TextBox7.KeyDown
+        Try
+            If e.KeyCode = Keys.Enter Or e.KeyCode = Keys.Return Then
+                Me.BindGrid()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
     Private Sub DateTimePicker2_KeyDown(sender As Object, e As KeyEventArgs) Handles DateTimePicker2.KeyDown
         If e.KeyCode = Keys.Delete OrElse e.KeyCode = Keys.Back Then
             DateTimePicker2.Format = DateTimePickerFormat.Custom
             DateTimePicker2.CustomFormat = " "
+        End If
+        If e.KeyCode = Keys.Enter Or e.KeyCode = Keys.Return Then
+            Me.BindGrid()
         End If
     End Sub
     'Private Sub DataGridView1_ButtonClick(sender As DataGridView, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick

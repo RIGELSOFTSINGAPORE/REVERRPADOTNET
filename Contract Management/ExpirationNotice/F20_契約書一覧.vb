@@ -31,6 +31,15 @@ Public Class F20_契約書一覧
         DateTimePicker1.CustomFormat = " "
     End Sub
 
+    'Private Const CP_NOCLOSE_BUTTON As Integer = &H200
+    'Protected Overloads Overrides ReadOnly Property CreateParams() As CreateParams
+    '    Get
+    '        Dim myCp As CreateParams = MyBase.CreateParams
+    '        myCp.ClassStyle = myCp.ClassStyle Or CP_NOCLOSE_BUTTON
+    '        Return myCp
+    '    End Get
+    'End Property
+
     Sub ComboBox()
         Dim strSQL As String = Nothing
         Dim BindValues As String = Nothing
@@ -1517,7 +1526,7 @@ Public Class F20_契約書一覧
         Try
 
             Dim senderGrid = CType(sender, DataGridView)
-        Dim bool As Boolean = True
+            Dim bool As Boolean = True
         If e.RowIndex <> -1 Then
                 If DataGridView1.RowCount > rowcolor Then
                     DataGridView1.Rows(rowcolor).DefaultCellStyle.BackColor = Color.White
@@ -1630,8 +1639,11 @@ Public Class F20_契約書一覧
                         If Not DBNull.Value.Equals(dt.Rows(0)("remarks")) Then
                             Remarks = dt.Rows(0)("remarks")
                         End If
-                        If Not DBNull.Value.Equals(dt.Rows(0)("Temporary_company_number_1")) Then
-                            Temporarycompanynumber1 = dt.Rows(0)("Temporary_company_number_1")
+                        If Not DBNull.Value.Equals(dt.Rows(0)("Account_number_all")) Then
+                            Temporarycompanynumber1 = dt.Rows(0)("Account_number_all")
+                            'Ram-2023-04-18
+                        ElseIf Not DBNull.Value.Equals(dt.Rows(0)("Account_number_all")) Then
+                            Temporarycompanynumber1 = dt.Rows(0)("Account_number_all")
                         End If
                         If Not DBNull.Value.Equals(dt.Rows(0)("Temporary_company_number_2")) Then
 
@@ -1651,8 +1663,8 @@ Public Class F20_契約書一覧
                         If Not DBNull.Value.Equals(dt.Rows(0)("Survey_date")) Then
                             Surveydate = dt.Rows(0)("Survey_date")
                         End If
-                        If Not DBNull.Value.Equals(dt.Rows(0)("company_Number_all")) Then
-                            companynumber_all = dt.Rows(0)("company_Number_all")
+                        If Not DBNull.Value.Equals(dt.Rows(0)("Account_number_all")) Then
+                            companynumber_all = dt.Rows(0)("Account_number_all")
                         End If
                         bool = row.Cells("インド").Value.ToString
                     End If
@@ -1793,7 +1805,7 @@ Public Class F20_契約書一覧
             'Id.LinkBehavior = LinkBehavior.SystemDefault
             DataGridView1.DataSource = dt
 
-            DataGridView1.Columns("ID").Visible = False
+            'DataGridView1.Columns("ID").Visible = False
             DataGridView1.Columns("仮番号").Visible = False
             DataGridView1.Columns("インド契約").Visible = False
             DataGridView1.Columns("インド").Visible = False
@@ -1814,7 +1826,7 @@ Public Class F20_契約書一覧
             Else
                 TextBox8.Text = "0"
             End If
-
+            DataGridView1.Columns.Item("ID").Width = 60
             DataGridView1.Columns.Item("管理番号").Width = 60
             DataGridView1.Columns.Item("旧番号").Width = 60
             DataGridView1.Columns.Item("契約開始").Width = 100
@@ -1879,6 +1891,10 @@ Public Class F20_契約書一覧
         End Try
 
     End Sub
+
+
+
+
 
     Private Sub Button3_ContextMenuStripChanged(sender As Object, e As EventArgs) Handles Button3.ContextMenuStripChanged
 

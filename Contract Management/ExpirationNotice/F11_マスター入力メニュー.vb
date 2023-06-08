@@ -8,6 +8,14 @@
         Me.Show()
         Cursor = System.Windows.Forms.Cursors.Default
     End Sub
+    'Private Const CP_NOCLOSE_BUTTON As Integer = &H200
+    'Protected Overloads Overrides ReadOnly Property CreateParams() As CreateParams
+    '    Get
+    '        Dim myCp As CreateParams = MyBase.CreateParams
+    '        myCp.ClassStyle = myCp.ClassStyle Or CP_NOCLOSE_BUTTON
+    '        Return myCp
+    '    End Get
+    'End Property
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Cursor = System.Windows.Forms.Cursors.WaitCursor
         Dim F12_取引先マスター As New F12_取引先マスター

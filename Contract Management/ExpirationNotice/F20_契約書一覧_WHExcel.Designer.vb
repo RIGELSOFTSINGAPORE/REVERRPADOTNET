@@ -50,11 +50,11 @@ Partial Class F20_契約書一覧_WHExcel
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -77,7 +77,7 @@ Partial Class F20_契約書一覧_WHExcel
         Me.Label1.Font = New System.Drawing.Font("Calibri", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(141, 23)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(100, 27)
+        Me.Label1.Size = New System.Drawing.Size(139, 35)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "検索画面"
         '
@@ -129,7 +129,7 @@ Partial Class F20_契約書一覧_WHExcel
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(9, 18)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(62, 14)
+        Me.Label2.Size = New System.Drawing.Size(78, 18)
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "終了予定日"
         '
@@ -138,7 +138,7 @@ Partial Class F20_契約書一覧_WHExcel
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(9, 47)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(54, 14)
+        Me.Label3.Size = New System.Drawing.Size(67, 18)
         Me.Label3.TabIndex = 15
         Me.Label3.Text = "更新コード"
         '
@@ -147,7 +147,7 @@ Partial Class F20_契約書一覧_WHExcel
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(9, 73)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(29, 14)
+        Me.Label4.Size = New System.Drawing.Size(36, 18)
         Me.Label4.TabIndex = 16
         Me.Label4.Text = "備考"
         '
@@ -157,7 +157,7 @@ Partial Class F20_契約書一覧_WHExcel
         Me.ComboBox1.Location = New System.Drawing.Point(91, 44)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(156, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(156, 25)
         Me.ComboBox1.TabIndex = 18
         '
         'Label5
@@ -165,7 +165,7 @@ Partial Class F20_契約書一覧_WHExcel
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(271, 44)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(55, 14)
+        Me.Label5.Size = New System.Drawing.Size(70, 18)
         Me.Label5.TabIndex = 19
         Me.Label5.Text = "9を非表示"
         '
@@ -175,7 +175,7 @@ Partial Class F20_契約書一覧_WHExcel
         Me.CheckBox1.Location = New System.Drawing.Point(332, 44)
         Me.CheckBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
+        Me.CheckBox1.Size = New System.Drawing.Size(18, 17)
         Me.CheckBox1.TabIndex = 20
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
@@ -184,7 +184,7 @@ Partial Class F20_契約書一覧_WHExcel
         Me.TextBox2.Location = New System.Drawing.Point(91, 70)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(621, 21)
+        Me.TextBox2.Size = New System.Drawing.Size(621, 24)
         Me.TextBox2.TabIndex = 21
         '
         'Label6
@@ -192,7 +192,7 @@ Partial Class F20_契約書一覧_WHExcel
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(366, 18)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(51, 14)
+        Me.Label6.Size = New System.Drawing.Size(64, 18)
         Me.Label6.TabIndex = 22
         Me.Label6.Text = "取引先名"
         '
@@ -201,7 +201,7 @@ Partial Class F20_契約書一覧_WHExcel
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(366, 47)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(51, 14)
+        Me.Label7.Size = New System.Drawing.Size(64, 18)
         Me.Label7.TabIndex = 23
         Me.Label7.Text = "契約書名"
         '
@@ -210,7 +210,7 @@ Partial Class F20_契約書一覧_WHExcel
         Me.TextBox3.Location = New System.Drawing.Point(433, 15)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(279, 21)
+        Me.TextBox3.Size = New System.Drawing.Size(279, 24)
         Me.TextBox3.TabIndex = 24
         '
         'TextBox4
@@ -218,7 +218,7 @@ Partial Class F20_契約書一覧_WHExcel
         Me.TextBox4.Location = New System.Drawing.Point(433, 40)
         Me.TextBox4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(279, 21)
+        Me.TextBox4.Size = New System.Drawing.Size(279, 24)
         Me.TextBox4.TabIndex = 25
         '
         'Label8
@@ -226,7 +226,7 @@ Partial Class F20_契約書一覧_WHExcel
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(727, 21)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(83, 14)
+        Me.Label8.Size = New System.Drawing.Size(103, 18)
         Me.Label8.TabIndex = 26
         Me.Label8.Text = "取引先名ヨミガナ"
         '
@@ -235,7 +235,7 @@ Partial Class F20_契約書一覧_WHExcel
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(727, 47)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(40, 14)
+        Me.Label9.Size = New System.Drawing.Size(50, 18)
         Me.Label9.TabIndex = 27
         Me.Label9.Text = "旧番号"
         '
@@ -244,16 +244,16 @@ Partial Class F20_契約書一覧_WHExcel
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(727, 73)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(51, 14)
+        Me.Label10.Size = New System.Drawing.Size(58, 18)
         Me.Label10.TabIndex = 28
-        Me.Label10.Text = "管理番号"
+        Me.Label10.Text = "キー番号"
         '
         'TextBox5
         '
         Me.TextBox5.Location = New System.Drawing.Point(825, 14)
         Me.TextBox5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(214, 21)
+        Me.TextBox5.Size = New System.Drawing.Size(214, 24)
         Me.TextBox5.TabIndex = 29
         '
         'TextBox6
@@ -261,7 +261,7 @@ Partial Class F20_契約書一覧_WHExcel
         Me.TextBox6.Location = New System.Drawing.Point(825, 44)
         Me.TextBox6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(214, 21)
+        Me.TextBox6.Size = New System.Drawing.Size(214, 24)
         Me.TextBox6.TabIndex = 30
         '
         'TextBox7
@@ -269,7 +269,7 @@ Partial Class F20_契約書一覧_WHExcel
         Me.TextBox7.Location = New System.Drawing.Point(825, 73)
         Me.TextBox7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(214, 21)
+        Me.TextBox7.Size = New System.Drawing.Size(214, 24)
         Me.TextBox7.TabIndex = 31
         '
         'Button5
@@ -300,7 +300,7 @@ Partial Class F20_契約書一覧_WHExcel
         Me.TextBox8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.ReadOnly = True
-        Me.TextBox8.Size = New System.Drawing.Size(99, 21)
+        Me.TextBox8.Size = New System.Drawing.Size(99, 24)
         Me.TextBox8.TabIndex = 34
         '
         'Label11
@@ -308,7 +308,7 @@ Partial Class F20_契約書一覧_WHExcel
         Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(143, 648)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(18, 14)
+        Me.Label11.Size = New System.Drawing.Size(22, 18)
         Me.Label11.TabIndex = 35
         Me.Label11.Text = "件"
         '
@@ -343,13 +343,30 @@ Partial Class F20_契約書一覧_WHExcel
         Me.Panel1.Size = New System.Drawing.Size(1287, 104)
         Me.Panel1.TabIndex = 36
         '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker2.Location = New System.Drawing.Point(1109, 15)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(119, 24)
+        Me.DateTimePicker2.TabIndex = 36
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(1054, 18)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(50, 18)
+        Me.Label12.TabIndex = 35
+        Me.Label12.Text = "調査日"
+        '
         'DateTimePicker1
         '
         Me.DateTimePicker1.CustomFormat = ""
         Me.DateTimePicker1.Location = New System.Drawing.Point(91, 18)
         Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(156, 21)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(156, 24)
         Me.DateTimePicker1.TabIndex = 34
         '
         'DataGridView1
@@ -370,26 +387,9 @@ Partial Class F20_契約書一覧_WHExcel
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(1054, 18)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(40, 14)
-        Me.Label12.TabIndex = 35
-        Me.Label12.Text = "調査日"
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(1109, 15)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(119, 21)
-        Me.DateTimePicker2.TabIndex = 36
-        '
         'F20_契約書一覧_WHExcel
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(244, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1327, 678)

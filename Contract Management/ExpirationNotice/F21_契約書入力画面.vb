@@ -1,4 +1,5 @@
 ﻿Imports System.Data
+Imports System.Threading
 Imports MySql.Data.MySqlClient
 
 Public Class F21_契約書入力画面
@@ -8,15 +9,26 @@ Public Class F21_契約書入力画面
     Dim DtView1 As DataView
     Dim sql As String = Nothing
     Dim dtnow As Date = Today
+    Dim flag As Boolean = False
     Dim insert As Boolean = True
+    Dim flagbool As Boolean = True
+    Dim P_PRAM6 As String
 
     Private Sub F23_枝番入力画面_Load(sender As Object, e As EventArgs) Handles Me.Load
 
         Me.MaximizeBox = False
         ComboBox008()
+
+        ComboBox001()
         cmbremove()
+        Label2.Text = "キー番号"
+        Label4.Text = "信用調査日"
+        'Label3.Text = "管理番号"
         ' binddata()
         inz()
+        'Me.TextBox1t = 100
+        Me.TextBox1.AutoSize = False
+        Me.TextBox1.Size = New System.Drawing.Size(369, 21)
         If F21pageload = True Then
             ComboBox2_Enter(sender, e)
             ComboBox3_Enter(sender, e)
@@ -27,46 +39,82 @@ Public Class F21_契約書入力画面
             ComboBox9_Enter(sender, e)
             F21pageload = False
         End If
-
     End Sub
+    'Private Const CP_NOCLOSE_BUTTON As Integer = &H200
+    'Protected Overloads Overrides ReadOnly Property CreateParams() As CreateParams
+    '    Get
+    '        Dim myCp As CreateParams = MyBase.CreateParams
+    '        myCp.ClassStyle = myCp.ClassStyle Or CP_NOCLOSE_BUTTON
+    '        Return myCp
+    '    End Get
+    'End Property
     Private Sub binddata()
-        'ComboBox001()
-        ComboBox002()
-        ComboBox003()
-        ComboBox004()
-        ComboBox005()
-        ComboBox006()
+
+
+        'ComboBox002()
+        'ComboBox003()
+        'ComboBox004()
+        'ComboBox005()
+        'ComboBox006()
         ComboBox007()
         ComboBox008()
         ComboBox009()
         cmbremove()
-
     End Sub
     Sub inz()
-        If Not String.IsNullOrEmpty(Mgt_number) Then
-            TextBox3.Text = Mgt_number
-            Mgt_number = ""
+        'If Not String.IsNullOrEmpty(contractid) Then
+        'If contractid <> 0 Then
+        '    If Not String.IsNullOrEmpty(Mgt_number) Then
+        '        TextBox3.Text = Mgt_number
+        '        Mgt_number = ""
+        '        OK.Text = "更新"
+        '        Label6.Text = contractid
+        '        contractid = 0
+        '        insert = False
+        '    Else
+        '        TextBox3.Text = ""
+        '        Mgt_number = ""
+        '        Label6.Text = contractid
+        '        Label6.Visible = False
+        '        contractid = 0
+        '        OK.Text = "更新"
+        '        insert = False
+        '    End If
+        'Else
+        '    getID()
+        '    insert = True
+        '    OK.Text = "OK"
+        'End If
+        If contractid <> 0 Then
+            TextBox3.Text = contractid
+            Label6.Text = contractid
+            contractid = 0
             insert = False
+            flagbool = False
+            OK.Text = "更新"
         Else
             getID()
             insert = True
+            flagbool = True
+            OK.Text = "OK"
         End If
-        If Not String.IsNullOrEmpty(contractid) Then
-
-            If contractid <> 0 Then
-                Label6.Text = contractid
-                contractid = 0
-                insert = False
-            End If
 
 
-        End If
+        ' End If
+
+        'If Not String.IsNullOrEmpty(contractid) Then
+        '    If contractid <> 0 Then
+        '        Label6.Text = contractid
+        '        contractid = 0
+        '        insert = False
+        '    End If
+        'End If
+
         If Not String.IsNullOrEmpty(Branch_number) Then
             TextBox5.Text = Branch_number
             Branch_number = ""
         End If
         If Not String.IsNullOrEmpty(Temporarycompanynumber1) Then
-
 
             ComboBox2.SelectedValue = Temporarycompanynumber1
             'Temporarycompanynumber1 = 0
@@ -226,7 +274,6 @@ Public Class F21_契約書入力画面
         If Not String.IsNullOrEmpty(companynumber_all) Then
             sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master  where `Delete` =0  "
 
-
             Dim count1 = companynumber_all.Split(",").Length - 1
             Dim ids = companynumber_all.Substring(0, 1)
 
@@ -260,12 +307,11 @@ Public Class F21_契約書入力画面
 
                 If count = 1 Then
                     ComboBox.Location = New System.Drawing.Point(85, 80)
-
                 ElseIf count = 2 Then
                     ComboBox.Location = New System.Drawing.Point(85, (70 + (23 * count)))
                 ElseIf count = 3 Then
                     ComboBox.Location = New System.Drawing.Point(85, (70 + (25 * count)))
-                ElseIf count = 5 Then
+                ElseIf count = 6 Then
                     ComboBox.Location = New System.Drawing.Point(85, 185)
                 Else
                     ComboBox.Location = New System.Drawing.Point(85, 210)
@@ -286,12 +332,11 @@ Public Class F21_契約書入力画面
                 Dim CheckBox As CheckBox = New CheckBox
                 If count = 1 Then
                     CheckBox.Location = New System.Drawing.Point(620, 80)
-
                 ElseIf count = 2 Then
                     CheckBox.Location = New System.Drawing.Point(620, (70 + (23 * count)))
                 ElseIf count = 3 Then
                     CheckBox.Location = New System.Drawing.Point(620, (70 + (25 * count)))
-                ElseIf count = 5 Then
+                ElseIf count = 6 Then
                     CheckBox.Location = New System.Drawing.Point(620, 185)
                 Else
                     CheckBox.Location = New System.Drawing.Point(620, 210)
@@ -319,29 +364,25 @@ Public Class F21_契約書入力画面
         sql = "SELECT MAX(id)+1 as id FROM t20_contract_management  "
 
         Try
-            DB_OPEN()
-            Dim command As MySqlCommand = cnn.CreateCommand()
-            command.CommandText = sql
-            Dim Reader As MySqlDataReader
-            Reader = command.ExecuteReader()
-            Dim dt = New DataTable()
-            dt.Load(Reader)
-            DB_CLOSE()
+            'DB_OPEN()
+            flag = DB_OPEN()
+            If flag = True Then
+                Dim command As MySqlCommand = cnn.CreateCommand()
+                command.CommandText = sql
+                Dim Reader As MySqlDataReader
+                Reader = command.ExecuteReader()
+                Dim dt = New DataTable()
+                dt.Load(Reader)
+                DB_CLOSE()
 
-
-            If Not IsDBNull(dt.Rows(0)("id")) Then
-                TextBox3.Text = dt.Rows(0)("id")
-                Label6.Text = dt.Rows(0)("id")
-            Else
-                TextBox3.Text = 1
-                Label6.Text = 1
+                If Not IsDBNull(dt.Rows(0)("id")) Then
+                    TextBox3.Text = dt.Rows(0)("id")
+                    Label6.Text = dt.Rows(0)("id")
+                Else
+                    TextBox3.Text = 1
+                    Label6.Text = 1
+                End If
             End If
-
-
-
-
-
-
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -374,146 +415,571 @@ Public Class F21_契約書入力画面
     'End Sub
 
     Sub ComboBox002()
+        'Dim strSQL As String = Nothing
+        'Dim BindValues As String = Nothing
+        'sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master  where `Delete` =0 "
+
+        'Try
+        '    DB_OPEN()
+        '    Dim command As MySqlCommand = cnn.CreateCommand()
+        '    'command.CommandText = sql
+        '    'adapter.SelectCommand = command
+        '    'adapter.Fill(ds)
+        '    'adapter.Dispose()
+        '    'command.Dispose()
+        '    Dim Reader As MySqlDataReader
+        '    Dim dt = New DataTable()
+        '    dt.Columns.Add("Account_number")
+        '    dt.Columns.Add("Customer_name")
+        '    dt.Rows.Add("0", "")
+        '    command.CommandText = sql
+        '    Reader = command.ExecuteReader()
+        '    dt.Load(Reader)
+        '    DB_CLOSE()
+        '    If Not String.IsNullOrEmpty(Temporarycompanynumber1) Then
+        '        ComboBox2.SelectedValue = Temporarycompanynumber1
+        '        Temporarycompanynumber1 = 0
+        '    End If
+        '    ComboBox2.DataSource = dt
+        '    ComboBox2.ValueMember = "Account_number"
+        '    ComboBox2.DisplayMember = "Customer_name"
+        '    'ComboBox1.DisplayMember = "ID"
+        'Catch ex As Exception
+        '    MessageBox.Show(ex.Message)
+        'End Try
         Dim strSQL As String = Nothing
         Dim BindValues As String = Nothing
-        sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master  where `Delete` =0 "
+        'If ComboBox1.SelectedValue <> 0 Then
+        'P_PRAM1 = ComboBox1.SelectedValue
+        'Else
+        If flagbool = False Then
+            If ComboBox2.SelectedValue <> 0 Then
+                P_PRAM1 = ComboBox2.SelectedValue
+            Else
+                P_PRAM1 = ComboBox1.SelectedValue
+            End If
+        Else
+            P_PRAM1 = ComboBox1.SelectedValue
+        End If
+        'End If
+        Dim dt = New DataTable()
+        dt.Columns.Add("Account_number")
+        dt.Columns.Add("Customer_name")
+        'dt.Rows.Add("0", "")
 
         Try
+            If (F21pageload = True) Then
+                sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete`=0 "
+                If Temporarycompanynumber1 <> "0" Then
+                    sql += "and`Account_number`=" + Convert.ToString(Temporarycompanynumber1)
+                End If
+            Else
+                sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where  `Delete`=0"
+
+            End If
+
             DB_OPEN()
             Dim command As MySqlCommand = cnn.CreateCommand()
-            'command.CommandText = sql
-            'adapter.SelectCommand = command
-            'adapter.Fill(ds)
-            'adapter.Dispose()
-            'command.Dispose()
+            If (TextBox1.Text.Trim() <> "") Then
+                sql += " and Customer_name like @CSearch "
+                'command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+                If textinput <> "" Then
+                    command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+                Else
+                    command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+                End If
+                'If ComboBox2.SelectedValue <> 0 Then
+                '    dt.Rows.Add(ComboBox2.SelectedValue, ComboBox2.Text)
+                'End If
+            End If
             Dim Reader As MySqlDataReader
-            Dim dt = New DataTable()
-            dt.Columns.Add("Account_number")
-            dt.Columns.Add("Customer_name")
-            dt.Rows.Add("0", "")
+
             command.CommandText = sql
             Reader = command.ExecuteReader()
             dt.Load(Reader)
             DB_CLOSE()
-            If Not String.IsNullOrEmpty(Temporarycompanynumber1) Then
-                ComboBox2.SelectedValue = Temporarycompanynumber1
-                Temporarycompanynumber1 = 0
+            If (P_PRAM1 <> Nothing) Then
+                Dim exists As Boolean = dt.AsEnumerable().Any(Function(row) P_PRAM1 = row.Field(Of String)("Account_number"))
+                If exists = False Then
+                    If ComboBox2.SelectedValue <> 0 Then
+                        dt.Rows.Add(ComboBox2.SelectedValue, ComboBox2.Text)
+                    End If
+                End If
             End If
+            If dt.Rows.Count < 1 Then
+                dt.Rows.Add("", "")
+            End If
+
+            ComboBox2.DataSource = Nothing
+            ComboBox2.Items.Clear()
             ComboBox2.DataSource = dt
             ComboBox2.ValueMember = "Account_number"
             ComboBox2.DisplayMember = "Customer_name"
             'ComboBox1.DisplayMember = "ID"
+            If (P_PRAM1 <> Nothing) Then
+                ComboBox2.SelectedValue = P_PRAM1
+            Else
+                ComboBox2.SelectedValue = ""
+                ComboBox2.Text = ""
+            End If
+            If (F21pageload = True) Then
+                If Not String.IsNullOrEmpty(Temporarycompanynumber1) Then
+                    ComboBox2.SelectedValue = Temporarycompanynumber1
+                    Temporarycompanynumber1 = 0
+                End If
+            Else
+                'ComboBox2.SelectedValue = ""
+                'ComboBox2.Text = ""
+            End If
+
+            'If dt.Rows.Count = 1 Then
+            '    MessageBox.Show("指定された検索条件に一致するものが見つかりませんでした。")
+            'End If
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
 
     Sub ComboBox003()
+        'Dim strSQL As String = Nothing
+        'Dim BindValues As String = Nothing
+        'sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master  where `Delete` =0 "
+
+        'Try
+        '    DB_OPEN()
+        '    Dim command As MySqlCommand = cnn.CreateCommand()
+        '    'command.CommandText = sql
+        '    'adapter.SelectCommand = command
+        '    'adapter.Fill(ds)
+        '    'adapter.Dispose()
+        '    'command.Dispose()
+        '    Dim Reader As MySqlDataReader
+        '    Dim dt = New DataTable()
+        '    dt.Columns.Add("Account_number")
+        '    dt.Columns.Add("Customer_name")
+        '    dt.Rows.Add("0", "")
+        '    command.CommandText = sql
+        '    Reader = command.ExecuteReader()
+        '    dt.Load(Reader)
+        '    DB_CLOSE()
+
+        '    ComboBox3.DataSource = dt
+        '    ComboBox3.ValueMember = "Account_number"
+        '    ComboBox3.DisplayMember = "Customer_name"
+        '    'ComboBox1.DisplayMember = "ID"
+        'Catch ex As Exception
+        '    MessageBox.Show(ex.Message)
+        'End Try
         Dim strSQL As String = Nothing
         Dim BindValues As String = Nothing
-        sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master  where `Delete` =0 "
+        'P_PRAM2 = ComboBox3.SelectedValue
+        If flagbool = False Then
+            If ComboBox3.SelectedValue <> 0 Then
+                P_PRAM2 = ComboBox3.SelectedValue
+            Else
+                P_PRAM2 = ComboBox1.SelectedValue
+            End If
+        Else
+            P_PRAM2 = ComboBox1.SelectedValue
+        End If
+        Dim dt = New DataTable()
+        dt.Columns.Add("Account_number")
+        dt.Columns.Add("Customer_name")
+        ' dt.Rows.Add("0", "")
+        'sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete` =0"
 
         Try
+
+            If (F21pageload = True) Then
+                sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete`=0 and `Account_number`=" + Convert.ToString(Temporarycompanynumber2)
+
+            Else
+                sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete`=0"
+
+            End If
             DB_OPEN()
             Dim command As MySqlCommand = cnn.CreateCommand()
+            If (TextBox1.Text.Trim() <> "") Then
+                sql += " and Customer_name like @CSearch "
+                ' command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+                If textinput <> "" Then
+                    command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+                Else
+                    command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+                End If
+                'If ComboBox3.SelectedValue <> 0 Then
+                '    dt.Rows.Add(ComboBox3.SelectedValue, ComboBox3.Text)
+                'End If
+            End If
             'command.CommandText = sql
             'adapter.SelectCommand = command
             'adapter.Fill(ds)
             'adapter.Dispose()
             'command.Dispose()
             Dim Reader As MySqlDataReader
-            Dim dt = New DataTable()
-            dt.Columns.Add("Account_number")
-            dt.Columns.Add("Customer_name")
-            dt.Rows.Add("0", "")
+
+
             command.CommandText = sql
             Reader = command.ExecuteReader()
             dt.Load(Reader)
             DB_CLOSE()
-
+            If (P_PRAM2 <> Nothing) Then
+                Dim exists As Boolean = dt.AsEnumerable().Any(Function(row) P_PRAM2 = row.Field(Of String)("Account_number"))
+                If exists = False Then
+                    If ComboBox3.SelectedValue <> 0 Then
+                        dt.Rows.Add(ComboBox3.SelectedValue, ComboBox3.Text)
+                    End If
+                End If
+            End If
+            If dt.Rows.Count < 1 Then
+                dt.Rows.Add("", "")
+            End If
             ComboBox3.DataSource = dt
             ComboBox3.ValueMember = "Account_number"
             ComboBox3.DisplayMember = "Customer_name"
             'ComboBox1.DisplayMember = "ID"
+            If (P_PRAM2 <> Nothing) Then
+                ComboBox3.SelectedValue = P_PRAM2
+            Else
+                ComboBox3.SelectedValue = ""
+                ComboBox3.Text = ""
+            End If
+            If (F21pageload = True) Then
+                If Not String.IsNullOrEmpty(Temporarycompanynumber2) Then
+                    ComboBox3.SelectedValue = Temporarycompanynumber2
+                    Temporarycompanynumber2 = 0
+                End If
+            Else
+                'ComboBox3.SelectedValue = ""
+                'ComboBox3.Text = ""
+            End If
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
 
     Sub ComboBox004()
+        'Dim strSQL As String = Nothing
+        'Dim BindValues As String = Nothing
+        'sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master  where `Delete` =0 "
+
+        'Try
+        '    DB_OPEN()
+        '    Dim command As MySqlCommand = cnn.CreateCommand()
+        '    Dim Reader As MySqlDataReader
+        '    Dim dt = New DataTable()
+        '    dt.Columns.Add("Account_number")
+        '    dt.Columns.Add("Customer_name")
+        '    dt.Rows.Add("0", "")
+        '    command.CommandText = sql
+        '    Reader = command.ExecuteReader()
+        '    dt.Load(Reader)
+        '    DB_CLOSE()
+
+        '    ComboBox4.DataSource = dt
+        '    ComboBox4.ValueMember = "Account_number"
+        '    ComboBox4.DisplayMember = "Customer_name"
+        '    'ComboBox1.DisplayMember = "ID"
+        'Catch ex As Exception
+        '    MessageBox.Show(ex.Message)
+        'End Try
         Dim strSQL As String = Nothing
         Dim BindValues As String = Nothing
-        sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master  where `Delete` =0 "
+        If flagbool = False Then
+            If ComboBox4.SelectedValue <> 0 Then
+                P_PRAM3 = ComboBox4.SelectedValue
+            Else
+                P_PRAM3 = ComboBox1.SelectedValue
+            End If
+        Else
+            P_PRAM3 = ComboBox1.SelectedValue
+        End If
+
+        Dim dt = New DataTable()
+        dt.Columns.Add("Account_number")
+        dt.Columns.Add("Customer_name")
+        'dt.Rows.Add("0", "")
+        'P_PRAM3 = ComboBox4.SelectedValue
+
+        'sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete` =0"
 
         Try
+            If (F21pageload = True) Then
+                sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete`=0 and `Account_number`=" + Convert.ToString(Temporarycompanynumber3)
+
+            Else
+                sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete`=0"
+
+            End If
+
             DB_OPEN()
             Dim command As MySqlCommand = cnn.CreateCommand()
+            If (TextBox1.Text.Trim() <> "") Then
+                sql += " and Customer_name like @CSearch "
+                'command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+                If textinput <> "" Then
+                    command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+                Else
+                    command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+                End If
+                'If ComboBox4.SelectedValue <> 0 Then
+                '    dt.Rows.Add(ComboBox4.SelectedValue, ComboBox4.Text)
+                'End If
+            End If
             Dim Reader As MySqlDataReader
-            Dim dt = New DataTable()
-            dt.Columns.Add("Account_number")
-            dt.Columns.Add("Customer_name")
-            dt.Rows.Add("0", "")
+
             command.CommandText = sql
             Reader = command.ExecuteReader()
             dt.Load(Reader)
             DB_CLOSE()
-
+            If (P_PRAM3 <> Nothing) Then
+                Dim exists As Boolean = dt.AsEnumerable().Any(Function(row) P_PRAM3 = row.Field(Of String)("Account_number"))
+                If exists = False Then
+                    If ComboBox4.SelectedValue <> 0 Then
+                        dt.Rows.Add(ComboBox4.SelectedValue, ComboBox4.Text)
+                    End If
+                End If
+            End If
+            If dt.Rows.Count < 1 Then
+                dt.Rows.Add("", "")
+            End If
             ComboBox4.DataSource = dt
             ComboBox4.ValueMember = "Account_number"
             ComboBox4.DisplayMember = "Customer_name"
             'ComboBox1.DisplayMember = "ID"
+            If (P_PRAM3 <> Nothing) Then
+                ComboBox4.SelectedValue = P_PRAM3
+            Else
+                ComboBox4.SelectedValue = ""
+                ComboBox4.Text = ""
+            End If
+            If (F21pageload = True) Then
+                If Not String.IsNullOrEmpty(Temporarycompanynumber3) Then
+                    ComboBox4.SelectedValue = Temporarycompanynumber3
+                    Temporarycompanynumber3 = 0
+                End If
+            Else
+                'ComboBox4.SelectedValue = ""
+                'ComboBox4.Text = ""
+            End If
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
-
-
     Sub ComboBox005()
+        'Dim strSQL As String = Nothing
+        'Dim BindValues As String = Nothing
+        'sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master  where `Delete` =0 "
+
+        'Try
+        '    DB_OPEN()
+        '    Dim command As MySqlCommand = cnn.CreateCommand()
+        '    Dim Reader As MySqlDataReader
+        '    Dim dt = New DataTable()
+        '    dt.Columns.Add("Account_number")
+        '    dt.Columns.Add("Customer_name")
+        '    dt.Rows.Add("0", "")
+        '    command.CommandText = sql
+        '    Reader = command.ExecuteReader()
+        '    dt.Load(Reader)
+        '    DB_CLOSE()
+
+        '    ComboBox5.DataSource = dt
+        '    ComboBox5.ValueMember = "Account_number"
+        '    ComboBox5.DisplayMember = "Customer_name"
+        'Catch ex As Exception
+        '    MessageBox.Show(ex.Message)
+        'End Try
         Dim strSQL As String = Nothing
         Dim BindValues As String = Nothing
-        sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master  where `Delete` =0 "
+        If flagbool = False Then
+            If ComboBox5.SelectedValue <> 0 Then
+                P_PRAM4 = ComboBox5.SelectedValue
+            Else
+                P_PRAM4 = ComboBox1.SelectedValue
+            End If
+        Else
+            P_PRAM4 = ComboBox1.SelectedValue
+        End If
+        'P_PRAM4 = ComboBox4.SelectedValue
+        Dim dt = New DataTable()
+        dt.Columns.Add("Account_number")
+        dt.Columns.Add("Customer_name")
+        ' dt.Rows.Add("0", "")
+
+        'sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete` =0"
 
         Try
+            If (F21pageload = True) Then
+                sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete`=0 and `Account_number`=" + Convert.ToString(Temporarycompanynumber4)
+
+            Else
+                sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete`=0"
+
+            End If
             DB_OPEN()
             Dim command As MySqlCommand = cnn.CreateCommand()
+            If (TextBox1.Text.Trim() <> "") Then
+                sql += " and Customer_name like @CSearch "
+                'command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+                If textinput <> "" Then
+                    command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+                Else
+                    command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+                End If
+                'If ComboBox5.SelectedValue <> 0 Then
+                '    dt.Rows.Add(ComboBox5.SelectedValue, ComboBox5.Text)
+                'End If
+            End If
             Dim Reader As MySqlDataReader
-            Dim dt = New DataTable()
-            dt.Columns.Add("Account_number")
-            dt.Columns.Add("Customer_name")
-            dt.Rows.Add("0", "")
+
             command.CommandText = sql
             Reader = command.ExecuteReader()
             dt.Load(Reader)
             DB_CLOSE()
-
+            If (P_PRAM4 <> Nothing) Then
+                Dim exists As Boolean = dt.AsEnumerable().Any(Function(row) P_PRAM4 = row.Field(Of String)("Account_number"))
+                If exists = False Then
+                    If ComboBox5.SelectedValue <> 0 Then
+                        dt.Rows.Add(ComboBox5.SelectedValue, ComboBox5.Text)
+                    End If
+                End If
+            End If
+            If dt.Rows.Count < 1 Then
+                dt.Rows.Add("", "")
+            End If
             ComboBox5.DataSource = dt
             ComboBox5.ValueMember = "Account_number"
             ComboBox5.DisplayMember = "Customer_name"
+            If (P_PRAM4 <> Nothing) Then
+                ComboBox5.SelectedValue = P_PRAM4
+            Else
+                ComboBox5.SelectedValue = ""
+                ComboBox5.Text = ""
+            End If
+            If (F21pageload = True) Then
+                If Not String.IsNullOrEmpty(Temporarycompanynumber4) Then
+                    ComboBox5.SelectedValue = Temporarycompanynumber4
+                    Temporarycompanynumber4 = 0
+                End If
+            Else
+                'ComboBox5.SelectedValue = ""
+                'ComboBox5.Text = ""
+            End If
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
     Sub ComboBox006()
+        'Dim strSQL As String = Nothing
+        'Dim BindValues As String = Nothing
+        'sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master  where `Delete` =0 "
+
+        'Try
+        '    DB_OPEN()
+        '    Dim command As MySqlCommand = cnn.CreateCommand()
+        '    Dim Reader As MySqlDataReader
+        '    Dim dt = New DataTable()
+        '    dt.Columns.Add("Account_number")
+        '    dt.Columns.Add("Customer_name")
+        '    dt.Rows.Add("0", "")
+        '    command.CommandText = sql
+        '    Reader = command.ExecuteReader()
+        '    dt.Load(Reader)
+        '    DB_CLOSE()
+
+        '    ComboBox6.DataSource = dt
+        '    ComboBox6.ValueMember = "Account_number"
+        '    ComboBox6.DisplayMember = "Customer_name"
+        'Catch ex As Exception
+        '    MessageBox.Show(ex.Message)
+        'End Try
         Dim strSQL As String = Nothing
         Dim BindValues As String = Nothing
-        sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master  where `Delete` =0 "
+        If flagbool = False Then
+            If ComboBox6.SelectedValue <> 0 Then
+                P_PRAM5 = ComboBox6.SelectedValue
+            Else
+                P_PRAM5 = ComboBox1.SelectedValue
+            End If
+        Else
+            P_PRAM5 = ComboBox1.SelectedValue
+        End If
+        'P_PRAM5 = ComboBox6.SelectedValue
+        Dim dt = New DataTable()
+        dt.Columns.Add("Account_number")
+        dt.Columns.Add("Customer_name")
+        'dt.Rows.Add("0", "")
+        'sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete` =0 "
 
         Try
+            If (F21pageload = True) Then
+                sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete`=0 and `Account_number`=" + Convert.ToString(Temporarycompanynumber5)
+
+            Else
+                sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete`=0"
+
+            End If
             DB_OPEN()
             Dim command As MySqlCommand = cnn.CreateCommand()
+            If (TextBox1.Text.Trim() <> "") Then
+                sql += " and Customer_name like @CSearch "
+                ' command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+                If textinput <> "" Then
+                    command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+                Else
+                    command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+                End If
+                'If ComboBox6.SelectedValue <> 0 Then
+                '    dt.Rows.Add(ComboBox6.SelectedValue, ComboBox6.Text)
+                'End If
+            End If
             Dim Reader As MySqlDataReader
-            Dim dt = New DataTable()
-            dt.Columns.Add("Account_number")
-            dt.Columns.Add("Customer_name")
-            dt.Rows.Add("0", "")
+
+
             command.CommandText = sql
             Reader = command.ExecuteReader()
             dt.Load(Reader)
             DB_CLOSE()
-
+            If (P_PRAM5 <> Nothing) Then
+                Dim exists As Boolean = dt.AsEnumerable().Any(Function(row) P_PRAM5 = row.Field(Of String)("Account_number"))
+                If exists = False Then
+                    If ComboBox6.SelectedValue <> 0 Then
+                        dt.Rows.Add(ComboBox6.SelectedValue, ComboBox6.Text)
+                    End If
+                End If
+            End If
+            If dt.Rows.Count < 1 Then
+                dt.Rows.Add("", "")
+            End If
             ComboBox6.DataSource = dt
             ComboBox6.ValueMember = "Account_number"
             ComboBox6.DisplayMember = "Customer_name"
+            If (P_PRAM5 <> Nothing) Then
+                ComboBox6.SelectedValue = P_PRAM5
+            Else
+                ComboBox6.SelectedValue = ""
+                ComboBox6.Text = ""
+            End If
+            If (F21pageload = True) Then
+                If Not String.IsNullOrEmpty(Temporarycompanynumber5) Then
+                    ComboBox6.SelectedValue = Temporarycompanynumber5
+                    Temporarycompanynumber5 = 0
+                End If
+            Else
+                'ComboBox6.SelectedValue = ""
+                'ComboBox6.Text = ""
+            End If
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -523,30 +989,30 @@ Public Class F21_契約書入力画面
         Try
             If ComboBox2.SelectedValue = 0 Then
                 ComboBox2.Focus()
-                MessageBox.Show("会社名を選択")
+                MessageBox.Show("取引先名を入力してください。")
                 Exit Sub
             End If
             If TextBox21.Text.Trim = "" Then
                 TextBox21.Focus()
-                MessageBox.Show("契約名を選択")
+                MessageBox.Show("契約書名を入力してください。")
                 Exit Sub
             End If
             If DateTimePicker1.Text.Trim = "" Then
                 DateTimePicker1.Focus()
-                MessageBox.Show("契約名を選択")
+                MessageBox.Show("契約日を入力してください。")
                 Exit Sub
             End If
             If ComboBox7.SelectedValue = "none" Then
                 ComboBox7.Focus()
 
-                MessageBox.Show("契約名を選択")
+                MessageBox.Show("更新コードを入力してください。")
 
                 Exit Sub
             End If
             If ComboBox7.SelectedValue = Nothing Then
                 ComboBox7.Focus()
 
-                MessageBox.Show("契約名を選択")
+                MessageBox.Show("更新コードを入力してください。")
 
                 Exit Sub
             End If
@@ -607,21 +1073,20 @@ Public Class F21_契約書入力画面
     End Sub
     Private Sub Updatedata()
 
-
         If ComboBox2.SelectedValue = 0 Then
             ComboBox2.Focus()
-            MessageBox.Show("会社名を選択")
+            MessageBox.Show("取引先名を入力してください。")
             Exit Sub
         End If
         If TextBox21.Text.Trim = "" Then
             TextBox21.Focus()
-            MessageBox.Show("契約名を選択")
+            MessageBox.Show("契約書名を入力してください。")
             Exit Sub
         End If
 
         If ComboBox7.SelectedValue = "none" Then
             ComboBox7.Focus()
-            MessageBox.Show("[コードの更新]を選択します")
+            MessageBox.Show("更新コードを入力してください。")
 
             Exit Sub
         End If
@@ -631,7 +1096,7 @@ Public Class F21_契約書入力画面
         Dim command As MySqlCommand = cnn.CreateCommand()
         Dim id = 0
         Dim Reader As MySqlDataReader
-        Dim query1 As String = "select MAX(Id)+1 as Id FROM t20_contract_management "
+        Dim query1 As String = "select MAX(Id) as Id FROM t20_contract_management "
         command.CommandText = query1
         Reader = command.ExecuteReader()
         While Reader.Read
@@ -660,7 +1125,7 @@ Public Class F21_契約書入力画面
 
         Dim query As String = "Update t20_contract_management set "
 
-
+        query += "`Control_number`=@Controlnumber,"
         query += "`India_contract`=@Indiacontract,"
         query += "`Temporary_number`=@Temporarynumber,"
         query += "`Branch_number`=@Branchnumber,"
@@ -689,14 +1154,17 @@ Public Class F21_契約書入力画面
         query += "`Temporary_company_number_5`=@Temporarycompanynumber5, "
         query += "`Survey_Date`=@Surveydate, "
         query += "`company_Number_all`=@company_Number_all "
-        query += "where Control_number=@Controlnumber"
+        query += "where ID=@ID"
 
 
-
-
-
+        command.Parameters.AddWithValue("ID", TextBox3.Text)
         command.Parameters.AddWithValue("company_Number_all", P_PRAM2)
-        command.Parameters.AddWithValue("Controlnumber", TextBox3.Text)
+        If Not String.IsNullOrEmpty(Mgt_number) Then
+            command.Parameters.AddWithValue("Controlnumber", Mgt_number)
+        Else
+            command.Parameters.AddWithValue("Controlnumber", DBNull.Value)
+        End If
+
         command.Parameters.AddWithValue("Indiacontract", "")
         command.Parameters.AddWithValue("Temporarynumber", id)
         command.Parameters.AddWithValue("Branchnumber", TextBox5.Text)
@@ -759,8 +1227,6 @@ Public Class F21_契約書入力画面
         End If
         If CheckBox5.Checked = True Then
             command.Parameters.AddWithValue("Temporarycompanynumber4", 0)
-
-
         Else
             command.Parameters.AddWithValue("Temporarycompanynumber4", ComboBox5.SelectedValue)
 
@@ -793,8 +1259,11 @@ Public Class F21_契約書入力画面
             P_PRAM3 = ""
             P_PRAM2 = ""
             binddata()
+            'ComboBox008()
             getID()
+            Label2.Text = "キー番号"
             MessageBox.Show("データが正常に更新されました")
+            Mgt_number = ""
             Me.Close()
         End If
 
@@ -805,18 +1274,17 @@ Public Class F21_契約書入力画面
 
         If ComboBox2.SelectedValue = 0 Then
             ComboBox2.Focus()
-            MessageBox.Show("会社名を選択")
+            MessageBox.Show("取引先名を入力してください。")
             Exit Sub
         End If
         If TextBox21.Text.Trim = "" Then
             TextBox21.Focus()
-            MessageBox.Show("契約名を選択")
+            MessageBox.Show("契約書名を入力してください。")
             Exit Sub
         End If
         If ComboBox7.SelectedValue = "none" Then
             ComboBox7.Focus()
-
-            MessageBox.Show("[コードの更新]を選択します")
+            MessageBox.Show("更新コードを入力してください。")
 
             Exit Sub
         End If
@@ -924,8 +1392,9 @@ Public Class F21_契約書入力画面
         query += "@company_Number_all);"
 
         command.Parameters.AddWithValue("company_Number_all", P_PRAM2)
-        command.Parameters.AddWithValue("ID", id)
-        command.Parameters.AddWithValue("Controlnumber", TextBox3.Text)
+        command.Parameters.AddWithValue("ID", TextBox3.Text)
+        'command.Parameters.AddWithValue("Controlnumber", TextBox3.Text)
+        command.Parameters.AddWithValue("Controlnumber", DBNull.Value)
         command.Parameters.AddWithValue("Indiacontract", "")
         command.Parameters.AddWithValue("Temporarynumber", id)
         command.Parameters.AddWithValue("Branchnumber", TextBox5.Text)
@@ -1025,17 +1494,19 @@ Public Class F21_契約書入力画面
             P_PRAM2 = ""
             inz()
             binddata()
+            'ComboBox008()
             getID()
+            Label2.Text = "キー番号"
             MessageBox.Show("データが正常に登録されました。")
+
         End If
-
-
     End Sub
     Sub ComboBox007()
         Dim strSQL As String = Nothing
         Dim BindValues As String = Nothing
-        sql = "SELECT * from tm19_update_code_master"
-
+        'sql = "SELECT * from tm19_update_code_master"
+        sql = "SELECT Update_code, CONCAT(Update_code,' : ',Update_code_details) as Update_code_details , ID "
+        sql += "FROM tm19_update_code_master"
         Try
 
             DB_OPEN()
@@ -1126,20 +1597,20 @@ Public Class F21_契約書入力画面
     End Sub
     Public Function CheckIsEmpty() As String
         Dim Msg As String = ""
-        If TextBox3.Text.Trim() = "" Then
-            Msg = "管理番号 Empty Not Allowed"
-            TextBox3.Focus()
-            Return Msg
-            'ElseIf ComboBox2.SelectedIndex = -1 Then
-            '    Msg = "Please select DropDown"
-            '    ComboBox2.Focus()
-            '    Return Msg
-        ElseIf TextBox21.Text.Trim() = "" Then
-            Msg = "契約書名 Empty Not Allowed"
+        'If TextBox3.Text.Trim() = "" Then
+        '    Msg = "管理番号を入力してください。"
+        '    TextBox3.Focus()
+        '    Return Msg
+        'ElseIf ComboBox2.SelectedIndex = -1 Then
+        '    Msg = "Please select DropDown"
+        '    ComboBox2.Focus()
+        '    Return Msg
+        If TextBox21.Text.Trim() = "" Then
+            Msg = "契約書名を入力してください。"
             TextBox21.Focus()
             Return Msg
         ElseIf DateTimePicker1.CustomFormat = " " Then
-            Msg = "Please select Date"
+            Msg = "契約日を入力してください。"
             DateTimePicker1.Focus()
             Return Msg
             'ElseIf ComboBox7.SelectedIndex = -1 Then
@@ -1187,7 +1658,7 @@ Public Class F21_契約書入力画面
         cmbAdd()
     End Sub
     Sub cmbAdd()
-        Dim i = 5
+        Dim i = 6
         Dim Index As Integer = Panel2.Controls.OfType(Of ComboBox).ToList.Count
         sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master  where `Delete` =0 "
         sql += " and Customer_name like @CSearch "
@@ -1195,11 +1666,18 @@ Public Class F21_契約書入力画面
 
 
 
-            For Index = 6 To Index
+            For Index = 7 To Index
 
                 DB_OPEN()
                 Dim command As MySqlCommand = cnn.CreateCommand()
-                command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+
+                Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+                If textinput <> "" Then
+                    command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+                Else
+                    command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+                End If
+                'command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
                 Dim Reader As MySqlDataReader
                 Dim dt = New DataTable()
                 dt.Columns.Add("Account_number")
@@ -1251,17 +1729,23 @@ Public Class F21_契約書入力画面
         End Try
     End Sub
     Sub cmbremove()
-        Dim i = 5
+        Dim i = 6
         Dim Index As Integer = Panel2.Controls.OfType(Of ComboBox).ToList.Count
         sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master  where `Delete` =0 "
         'sql += "FROM Tm14_取引先マスター"
         Try
 
-            For Index = 6 To Index
+            For Index = 7 To Index
 
                 DB_OPEN()
                 Dim command As MySqlCommand = cnn.CreateCommand()
-                command.Parameters.AddWithValue("CSearch", TextBox1.Text + "%")
+                Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+                If textinput <> "" Then
+                    command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+                Else
+                    command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+                End If
+                'command.Parameters.AddWithValue("CSearch", TextBox1.Text + "%")
                 Dim Reader As MySqlDataReader
                 Dim dt = New DataTable()
                 dt.Columns.Add("Account_number")
@@ -1306,7 +1790,13 @@ Public Class F21_契約書入力画面
 
             DB_OPEN()
             Dim command As MySqlCommand = cnn.CreateCommand()
-            command.Parameters.AddWithValue("CSearch", TextBox1.Text + "%")
+            'command.Parameters.AddWithValue("CSearch", TextBox1.Text + "%")
+            Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+            If textinput <> "" Then
+                command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+            Else
+                command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+            End If
             Dim Reader As MySqlDataReader
             Dim dt = New DataTable()
             dt.Columns.Add("Account_number")
@@ -1339,7 +1829,13 @@ Public Class F21_契約書入力画面
 
             DB_OPEN()
             Dim command As MySqlCommand = cnn.CreateCommand()
-            command.Parameters.AddWithValue("CSearch", TextBox1.Text + "%")
+            'command.Parameters.AddWithValue("CSearch", TextBox1.Text + "%")
+            Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+            If textinput <> "" Then
+                command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+            Else
+                command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+            End If
             Dim Reader As MySqlDataReader
             Dim dt = New DataTable()
             dt.Columns.Add("Account_number")
@@ -1372,7 +1868,13 @@ Public Class F21_契約書入力画面
 
             DB_OPEN()
             Dim command As MySqlCommand = cnn.CreateCommand()
-            command.Parameters.AddWithValue("CSearch", TextBox1.Text + "%")
+            'command.Parameters.AddWithValue("CSearch", TextBox1.Text + "%")
+            Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+            If textinput <> "" Then
+                command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+            Else
+                command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+            End If
             Dim Reader As MySqlDataReader
             Dim dt = New DataTable()
             dt.Columns.Add("Account_number")
@@ -1405,7 +1907,13 @@ Public Class F21_契約書入力画面
 
             DB_OPEN()
             Dim command As MySqlCommand = cnn.CreateCommand()
-            command.Parameters.AddWithValue("CSearch", TextBox1.Text + "%")
+            'command.Parameters.AddWithValue("CSearch", TextBox1.Text + "%")
+            Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+            If textinput <> "" Then
+                command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+            Else
+                command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+            End If
             Dim Reader As MySqlDataReader
             Dim dt = New DataTable()
             dt.Columns.Add("Account_number")
@@ -1436,7 +1944,13 @@ Public Class F21_契約書入力画面
 
             DB_OPEN()
             Dim command As MySqlCommand = cnn.CreateCommand()
-            command.Parameters.AddWithValue("CSearch", TextBox1.Text + "%")
+            'command.Parameters.AddWithValue("CSearch", TextBox1.Text + "%")
+            Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+            If textinput <> "" Then
+                command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+            Else
+                command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+            End If
             Dim Reader As MySqlDataReader
             Dim dt = New DataTable()
             dt.Columns.Add("Account_number")
@@ -1461,8 +1975,9 @@ Public Class F21_契約書入力画面
     End Sub
 
 
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        TextBox1.Text = ""
+
         'Dim cmb1 = ComboBox2.SelectedValue
         'Dim cmb2 = ComboBox3.SelectedValue
         'Dim cmb3 = ComboBox4.SelectedValue
@@ -1474,6 +1989,10 @@ Public Class F21_契約書入力画面
         'ComboBox4.SelectedValue = cmb3
         'ComboBox5.SelectedValue = cmb4
         'ComboBox6.SelectedValue = cmb5
+        ComboBox1.Text = ""
+        TextBox1.Text = ""
+        TextBox1.Focus()
+        SendKeys.Send("{ENTER}")
         cmbremove()
     End Sub
 
@@ -1564,7 +2083,13 @@ Public Class F21_契約書入力画面
             sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master  where `Delete` =0 "
             If (TextBox1.Text.Trim() <> "") Then
                 sql += " and Customer_name like @CSearch "
-                command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                ' command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+                If textinput <> "" Then
+                    command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+                Else
+                    command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+                End If
 
             End If
             DB_OPEN()
@@ -1580,8 +2105,6 @@ Public Class F21_契約書入力画面
             dt.Load(Reader)
             DB_CLOSE()
 
-
-
             Dim ComboBox As ComboBox = New ComboBox
 
             Dim count As Integer = Panel2.Controls.OfType(Of ComboBox).ToList.Count
@@ -1593,7 +2116,7 @@ Public Class F21_契約書入力画面
                     ComboBox.Location = New System.Drawing.Point(85, (70 + (23 * count)))
                 ElseIf count = 3 Then
                     ComboBox.Location = New System.Drawing.Point(85, (70 + (25 * count)))
-                ElseIf count = 5 Then
+                ElseIf count = 6 Then
                     ComboBox.Location = New System.Drawing.Point(85, 185)
                 Else
                     ComboBox.Location = New System.Drawing.Point(85, 210)
@@ -1619,7 +2142,7 @@ Public Class F21_契約書入力画面
                     CheckBox.Location = New System.Drawing.Point(620, (70 + (23 * count)))
                 ElseIf count = 3 Then
                     CheckBox.Location = New System.Drawing.Point(620, (70 + (25 * count)))
-                ElseIf count = 5 Then
+                ElseIf count = 6 Then
                     CheckBox.Location = New System.Drawing.Point(620, 185)
                 Else
                     CheckBox.Location = New System.Drawing.Point(620, 210)
@@ -1815,8 +2338,8 @@ Public Class F21_契約書入力画面
         End If
 
         Dim ij = 7
-        Dim i = 5
-        For Index = 6 To Index
+        Dim i = 6
+        For Index = 7 To Index
             i += 1
             Dim cmb = "drp" + Convert.ToString(i)
             Dim chk = "btnDelete_" + Convert.ToString(i)
@@ -2070,6 +2593,73 @@ Public Class F21_契約書入力画面
         End If
     End Sub
 
+    'Private Sub ComboBox2_Enter(sender As Object, e As EventArgs) Handles ComboBox2.Enter
+    '    Dim strSQL As String = Nothing
+    '    Dim BindValues As String = Nothing
+    '    P_PRAM1 = ComboBox2.SelectedValue
+    '    Dim dt = New DataTable()
+    '    dt.Columns.Add("Account_number")
+    '    dt.Columns.Add("Customer_name")
+    '    'dt.Rows.Add("0", "")
+    '    sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete` =0 and `Account_number`=" + Temporarycompanynumber1
+
+    '    Try
+    '        If (F21pageload = True) Then
+
+    '            If Not String.IsNullOrEmpty(Temporarycompanynumber1) Then
+    '                ComboBox2.SelectedValue = Temporarycompanynumber1
+    '                Temporarycompanynumber1 = 0
+    '            End If
+    '        Else
+    '            DB_OPEN()
+    '            Dim command As MySqlCommand = cnn.CreateCommand()
+    '            If (TextBox1.Text.Trim() <> "") Then
+    '                sql += " and Customer_name like @CSearch "
+    '                command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+    '                'If ComboBox2.SelectedValue <> 0 Then
+    '                '    dt.Rows.Add(ComboBox2.SelectedValue, ComboBox2.Text)
+    '                'End If
+    '            End If
+    '            Dim Reader As MySqlDataReader
+    '            command.CommandText = sql
+    '            Reader = command.ExecuteReader()
+    '            dt.Load(Reader)
+    '            DB_CLOSE()
+    '        End If
+    '        If (P_PRAM1 <> Nothing) Then
+    '            Dim exists As Boolean = dt.AsEnumerable().Any(Function(row) P_PRAM1 = row.Field(Of String)("Account_number"))
+    '            If exists = False Then
+    '                If ComboBox2.SelectedValue <> 0 Then
+    '                    dt.Rows.Add(ComboBox2.SelectedValue, ComboBox2.Text)
+    '                End If
+    '            End If
+    '        End If
+    '        If dt.Rows.Count < 1 Then
+    '            dt.Rows.Add("", "")
+    '        End If
+
+    '        ComboBox2.DataSource = Nothing
+    '        ComboBox2.Items.Clear()
+    '        ComboBox2.DataSource = dt
+    '        ComboBox2.ValueMember = "Account_number"
+    '        ComboBox2.DisplayMember = "Customer_name"
+
+    '        'ComboBox1.DisplayMember = "ID"
+    '        If (P_PRAM1 <> Nothing) Then
+    '            ComboBox2.SelectedValue = P_PRAM1
+    '        Else
+    '            ComboBox2.SelectedValue = ""
+    '            ComboBox2.Text = ""
+    '        End If
+
+    '        'If dt.Rows.Count = 1 Then
+    '        '    MessageBox.Show("指定された検索条件に一致するものが見つかりませんでした。")
+    '        'End If
+
+    '    Catch ex As Exception
+    '        MessageBox.Show(ex.Message)
+    '    End Try
+    'End Sub
     Private Sub ComboBox2_Enter(sender As Object, e As EventArgs) Handles ComboBox2.Enter
         Dim strSQL As String = Nothing
         Dim BindValues As String = Nothing
@@ -2079,15 +2669,29 @@ Public Class F21_契約書入力画面
         dt.Columns.Add("Customer_name")
         'dt.Rows.Add("0", "")
 
-        sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete` =0"
-
-
         Try
+            If (F21pageload = True) Then
+                sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete`=0 "
+                If Temporarycompanynumber1 <> "0" Then
+                    sql += "and`Account_number`=" + Convert.ToString(Temporarycompanynumber1)
+                End If
+
+            Else
+                sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where  `Delete`=0"
+
+            End If
+
             DB_OPEN()
             Dim command As MySqlCommand = cnn.CreateCommand()
             If (TextBox1.Text.Trim() <> "") Then
                 sql += " and Customer_name like @CSearch "
-                command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                'command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+                If textinput <> "" Then
+                    command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+                Else
+                    command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+                End If
                 'If ComboBox2.SelectedValue <> 0 Then
                 '    dt.Rows.Add(ComboBox2.SelectedValue, ComboBox2.Text)
                 'End If
@@ -2150,14 +2754,28 @@ Public Class F21_契約書入力画面
         dt.Columns.Add("Account_number")
         dt.Columns.Add("Customer_name")
         ' dt.Rows.Add("0", "")
-        sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete` =0"
+        'sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete` =0"
 
         Try
+
+            If (F21pageload = True) Then
+                sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete`=0 and `Account_number`=" + Convert.ToString(Temporarycompanynumber2)
+
+            Else
+                sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete`=0"
+
+            End If
             DB_OPEN()
             Dim command As MySqlCommand = cnn.CreateCommand()
             If (TextBox1.Text.Trim() <> "") Then
                 sql += " and Customer_name like @CSearch "
-                command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                ' command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+                If textinput <> "" Then
+                    command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+                Else
+                    command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+                End If
                 'If ComboBox3.SelectedValue <> 0 Then
                 '    dt.Rows.Add(ComboBox3.SelectedValue, ComboBox3.Text)
                 'End If
@@ -2204,6 +2822,7 @@ Public Class F21_契約書入力画面
                 'ComboBox3.SelectedValue = ""
                 'ComboBox3.Text = ""
             End If
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -2218,14 +2837,28 @@ Public Class F21_契約書入力画面
         'dt.Rows.Add("0", "")
         P_PRAM3 = ComboBox4.SelectedValue
 
-        sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete` =0"
+        'sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete` =0"
 
         Try
+            If (F21pageload = True) Then
+                sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete`=0 and `Account_number`=" + Convert.ToString(Temporarycompanynumber3)
+
+            Else
+                sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete`=0"
+
+            End If
+
             DB_OPEN()
             Dim command As MySqlCommand = cnn.CreateCommand()
             If (TextBox1.Text.Trim() <> "") Then
                 sql += " and Customer_name like @CSearch "
-                command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                'command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+                If textinput <> "" Then
+                    command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+                Else
+                    command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+                End If
                 'If ComboBox4.SelectedValue <> 0 Then
                 '    dt.Rows.Add(ComboBox4.SelectedValue, ComboBox4.Text)
                 'End If
@@ -2266,6 +2899,7 @@ Public Class F21_契約書入力画面
                 'ComboBox4.SelectedValue = ""
                 'ComboBox4.Text = ""
             End If
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -2274,20 +2908,33 @@ Public Class F21_契約書入力画面
     Private Sub ComboBox5_Enter(sender As Object, e As EventArgs) Handles ComboBox5.Enter
         Dim strSQL As String = Nothing
         Dim BindValues As String = Nothing
-        P_PRAM4 = ComboBox4.SelectedValue
+        P_PRAM4 = ComboBox5.SelectedValue
         Dim dt = New DataTable()
         dt.Columns.Add("Account_number")
         dt.Columns.Add("Customer_name")
         ' dt.Rows.Add("0", "")
 
-        sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete` =0"
+        'sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete` =0"
 
         Try
+            If (F21pageload = True) Then
+                sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete`=0 and `Account_number`=" + Convert.ToString(Temporarycompanynumber4)
+
+            Else
+                sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete`=0"
+
+            End If
             DB_OPEN()
             Dim command As MySqlCommand = cnn.CreateCommand()
             If (TextBox1.Text.Trim() <> "") Then
                 sql += " and Customer_name like @CSearch "
-                command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                'command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+                If textinput <> "" Then
+                    command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+                Else
+                    command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+                End If
                 'If ComboBox5.SelectedValue <> 0 Then
                 '    dt.Rows.Add(ComboBox5.SelectedValue, ComboBox5.Text)
                 'End If
@@ -2327,6 +2974,7 @@ Public Class F21_契約書入力画面
                 'ComboBox5.SelectedValue = ""
                 'ComboBox5.Text = ""
             End If
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -2340,14 +2988,27 @@ Public Class F21_契約書入力画面
         dt.Columns.Add("Account_number")
         dt.Columns.Add("Customer_name")
         'dt.Rows.Add("0", "")
-        sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete` =0 "
+        'sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete` =0 "
 
         Try
+            If (F21pageload = True) Then
+                sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete`=0 and `Account_number`=" + Convert.ToString(Temporarycompanynumber5)
+
+            Else
+                sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where `Delete`=0"
+
+            End If
             DB_OPEN()
             Dim command As MySqlCommand = cnn.CreateCommand()
             If (TextBox1.Text.Trim() <> "") Then
                 sql += " and Customer_name like @CSearch "
-                command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                ' command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+                If textinput <> "" Then
+                    command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+                Else
+                    command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+                End If
                 'If ComboBox6.SelectedValue <> 0 Then
                 '    dt.Rows.Add(ComboBox6.SelectedValue, ComboBox6.Text)
                 'End If
@@ -2388,6 +3049,7 @@ Public Class F21_契約書入力画面
                 'ComboBox6.SelectedValue = ""
                 'ComboBox6.Text = ""
             End If
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -2396,7 +3058,8 @@ Public Class F21_契約書入力画面
     Private Sub ComboBox7_Enter(sender As Object, e As EventArgs) Handles ComboBox7.Enter
         Dim strSQL As String = Nothing
         Dim BindValues As String = Nothing
-        sql = "SELECT * from tm19_update_code_master"
+        sql = "SELECT Update_code, CONCAT(Update_code,' : ',Update_code_details) as Update_code_details , ID "
+        sql += "FROM tm19_update_code_master"
 
         Try
 
@@ -2414,8 +3077,6 @@ Public Class F21_契約書入力画面
 
             dt.Load(Reader)
             DB_CLOSE()
-
-
             ComboBox7.ValueMember = "Update_code"
             ComboBox7.DisplayMember = "Update_code_details"
             ComboBox7.DataSource = dt
@@ -2431,6 +3092,8 @@ Public Class F21_契約書入力画面
                 End If
 
             End If
+
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -2474,6 +3137,7 @@ Public Class F21_契約書入力画面
                     ComboBox9.Text = ""
                 End If
             End If
+
         Catch ex As Exception
             DB_CLOSE()
             MessageBox.Show(ex.Message)
@@ -2495,7 +3159,13 @@ Public Class F21_契約書入力画面
             Dim command As MySqlCommand = cnn.CreateCommand()
             If (TextBox1.Text.Trim() <> "") Then
                 sql += " and Customer_name like @CSearch "
-                command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                'command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+                If textinput <> "" Then
+                    command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+                Else
+                    command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+                End If
 
             End If
             Dim Reader As MySqlDataReader
@@ -2514,4 +3184,304 @@ Public Class F21_契約書入力画面
         End Try
     End Sub
 
+    Private Sub TextBox1_KeyUp(sender As Object, e As KeyEventArgs) Handles TextBox1.KeyUp
+        Dim strSQL As String = Nothing
+        Dim BindValues As String = Nothing
+        BindValues = ComboBox1.Text
+        sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where  `Delete`=0"
+        sql += " and Customer_name like @CSearch"
+        Try
+
+            DB_OPEN()
+            Dim command As MySqlCommand = cnn.CreateCommand()
+            'command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+            Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+            If textinput <> "" Then
+                command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+            Else
+                command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+            End If
+            Dim Reader As MySqlDataReader
+            Dim dt = New DataTable()
+            dt.Columns.Add("Account_number")
+            dt.Columns.Add("Customer_name")
+
+            dt.Rows.Add("0", "")
+
+            command.CommandText = sql
+            Reader = command.ExecuteReader()
+            dt.Load(Reader)
+            DB_CLOSE()
+
+            ComboBox1.DataSource = dt
+            ComboBox1.ValueMember = "Account_number"
+            ComboBox1.DisplayMember = "Customer_name"
+            cmbAdd()
+        Catch ex As Exception
+            DB_CLOSE()
+            MessageBox.Show(ex.Message)
+        End Try
+        If (TextBox1.Text <> "") Then
+            Me.ComboBox1.DroppedDown = True
+            Me.Cursor = DefaultCursor
+        End If
+    End Sub
+
+    Private Sub ComboBox1_SelectedValueChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedValueChanged
+        Dim item As DataRowView = TryCast(Me.ComboBox1.SelectedItem, DataRowView)
+        If ComboBox1.Text <> "" Then
+            If item.IsEdit = False Then
+                If (ComboBox1.SelectedValue <> 0) Then
+                    TextBox1.Text = ComboBox1.Text
+                    cmbAdd()
+                    If ComboBox2.SelectedValue = 0 Then
+                        ComboBox002()
+                    ElseIf ComboBox3.SelectedValue = 0 Then
+                        ComboBox003()
+                    ElseIf ComboBox4.SelectedValue = 0 Then
+                        ComboBox004()
+                    ElseIf ComboBox5.SelectedValue = 0 Then
+                        ComboBox005()
+                    ElseIf ComboBox6.SelectedValue = 0 Then
+                        ComboBox006()
+                    Else
+                        'Dim count As Integer = Panel2.Controls.OfType(Of ComboBox).ToList.Count
+                        'If count <> 25 Then
+                        '    If count = 7 Then
+                        ComboBoxDynamic()
+                        '    Else
+
+                        '    End If
+
+                        'End If
+                    End If
+                End If
+            End If
+        End If
+
+    End Sub
+    Sub ComboBoxDynamic()
+        ' Try
+        'Edit
+        If flagbool = False Then
+                Try
+                    Dim Index As Integer = Panel2.Controls.OfType(Of ComboBox).ToList.Count
+                    Dim i = 6
+                    For Index = 7 To Index
+                        i += 1
+                        Dim cmb = "drp" + Convert.ToString(i)
+                        Dim chk = "btnDelete_" + Convert.ToString(i)
+                        If cmb <> "drp1" Then
+                            Dim txt As ComboBox = CType(Panel2.Controls.Find((cmb), True)(0), ComboBox)
+                            ' If txt.SelectedValue <> 0 Then
+                            If flagbool = False Then
+                                If txt.SelectedValue <> 0 Then
+                                    P_PRAM6 = txt.SelectedValue
+                                Else
+                                    P_PRAM6 = ComboBox1.SelectedValue
+                                End If
+                            Else
+                                P_PRAM6 = ComboBox1.SelectedValue
+                            End If
+
+                            Dim strSQL As String = Nothing
+                            Dim BindValues As String = Nothing
+
+                            Dim command As MySqlCommand = cnn.CreateCommand()
+                            sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master  where `Delete` =0 "
+                            If (TextBox1.Text.Trim() <> "") Then
+                                sql += " and Customer_name like @CSearch "
+                                ' command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                                Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+                                If textinput <> "" Then
+                                    command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+                                Else
+                                    command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+                                End If
+                            End If
+
+                            DB_OPEN()
+                            Dim ComboBox As ComboBox = New ComboBox
+                            Dim Reader As MySqlDataReader
+                            Dim dt = New DataTable()
+                            dt.Columns.Add("Account_number")
+                            dt.Columns.Add("Customer_name")
+                            'dt.Rows.Add("0", "")
+                            command.CommandText = sql
+                            Reader = command.ExecuteReader()
+                            dt.Load(Reader)
+                            DB_CLOSE()
+                            If Index <> 25 Then
+                                'If count = 1 Then
+                                '    ComboBox.Location = New System.Drawing.Point(85, 80)
+                                'ElseIf count = 2 Then
+                                '    ComboBox.Location = New System.Drawing.Point(85, (70 + (23 * count)))
+                                'ElseIf count = 3 Then
+                                '    ComboBox.Location = New System.Drawing.Point(85, (70 + (25 * count)))
+                                'ElseIf count = 6 Then
+                                '    'ComboBox.Location = New System.Drawing.Point(85, 185)
+                                'Else
+                                '    'ComboBox.Location = New System.Drawing.Point(85, 210)
+                                'End If
+
+                                'ComboBox.Size = New System.Drawing.Size(520, 24)
+                                ComboBox.Name = "drp" & (Index)
+                                ComboBox.DataSource = dt
+                                ComboBox.ValueMember = "Account_number"
+                                ComboBox.DisplayMember = "Customer_name"
+                                'ComboBox.SelectedValue = P_PRAM6
+                                P_PRAM1 = ComboBox.Name
+                                'Panel2.Controls.Add(ComboBox)
+                                Dim txt1 As ComboBox = CType(Panel2.Controls.Find(("drp" & (Index)), True)(0), ComboBox)
+                                txt1.SelectedValue = P_PRAM6
+                                'Panel2.Controls.Add(ComboBox)
+
+                                'ComboBox.SelectedValue = ""
+                            Else
+                                MessageBox.Show("最大25フィールド")
+                            End If
+
+                            '  End If
+                        End If
+
+                    Next
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message)
+                End Try
+
+            'create
+        Else
+                Try
+                    'Panel2.AutoScroll = True
+                    ' Panel2.AutoScrollPosition = New Point(Panel2.AutoScrollPosition.X, Panel2.VerticalScroll.Maximum)
+                    Dim ComboBox As ComboBox = New ComboBox
+                    Dim strSQL As String = Nothing
+                    Dim BindValues As String = Nothing
+
+                    If flagbool = False Then
+                        If ComboBox.SelectedValue <> 0 Then
+                            P_PRAM6 = ComboBox.SelectedValue
+                        Else
+                            P_PRAM6 = ComboBox1.SelectedValue
+                        End If
+                    Else
+                        P_PRAM6 = ComboBox1.SelectedValue
+                    End If
+                    Dim command As MySqlCommand = cnn.CreateCommand()
+                    sql = "SELECT  CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master  where `Delete` =0 "
+                    If (TextBox1.Text.Trim() <> "") Then
+                        sql += " and Customer_name like @CSearch "
+                        ' command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text + "%")
+                        Dim textinput = TextBox1.Text.Substring(0, TextBox1.Text.LastIndexOf(" :") + 1)
+                        If textinput <> "" Then
+                            command.Parameters.AddWithValue("CSearch", "%" + textinput.Trim() + "%")
+                        Else
+                            command.Parameters.AddWithValue("CSearch", "%" + TextBox1.Text.Trim() + "%")
+                        End If
+                    End If
+                    DB_OPEN()
+
+                    Dim Reader As MySqlDataReader
+                    Dim dt = New DataTable()
+                    dt.Columns.Add("Account_number")
+                    dt.Columns.Add("Customer_name")
+                    'dt.Rows.Add("0", "")
+                    command.CommandText = sql
+                    Reader = command.ExecuteReader()
+                    dt.Load(Reader)
+                    DB_CLOSE()
+
+                    Dim count As Integer = Panel2.Controls.OfType(Of ComboBox).ToList.Count
+                    If count <> 25 Then
+                        'If count = 1 Then
+                        '    ComboBox.Location = New System.Drawing.Point(85, 80)
+                        'ElseIf count = 2 Then
+                        '    ComboBox.Location = New System.Drawing.Point(85, (70 + (23 * count)))
+                        'ElseIf count = 3 Then
+                        '    ComboBox.Location = New System.Drawing.Point(85, (70 + (25 * count)))
+                        'ElseIf count = 6 Then
+                        '    'ComboBox.Location = New System.Drawing.Point(85, 185)
+                        'Else
+                        '    'ComboBox.Location = New System.Drawing.Point(85, 210)
+                        'End If
+
+                        'ComboBox.Size = New System.Drawing.Size(520, 24)
+                        ComboBox.Name = "drp" & (count)
+                        ComboBox.DataSource = dt
+                        ComboBox.ValueMember = "Account_number"
+                        ComboBox.DisplayMember = "Customer_name"
+                        'ComboBox.SelectedValue = P_PRAM6
+                        P_PRAM1 = ComboBox.Name
+                        'Panel2.Controls.Add(ComboBox)
+                        Dim txt As ComboBox = CType(Panel2.Controls.Find(("drp" & (count)), True)(0), ComboBox)
+                        txt.SelectedValue = P_PRAM6
+                        'Panel2.Controls.Add(ComboBox)
+                        'ComboBox.SelectedValue = ""
+                    Else
+                        MessageBox.Show("最大25フィールド")
+                    End If
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message)
+                End Try
+
+        End If
+        'Catch ex As Exception
+        '    MessageBox.Show(ex.Message)
+        'End Try
+    End Sub
+    Sub ComboBox001()
+        Dim strSQL As String = Nothing
+        Dim BindValues As String = Nothing
+        sql = "SELECT CONCAT(Customer_name,' : ',Account_number) as Customer_name,Account_number  FROM tm14_account_master where  `Delete`=0"
+
+        Try
+
+            DB_OPEN()
+            Dim command As MySqlCommand = cnn.CreateCommand()
+            'command.Parameters.AddWithValue("CSearch", "%" + ComboBox1.Text + "%")
+            Dim Reader As MySqlDataReader
+            Dim dt = New DataTable()
+            dt.Columns.Add("Account_number")
+            dt.Columns.Add("Customer_name")
+
+            dt.Rows.Add("0", "")
+
+            command.CommandText = sql
+            Reader = command.ExecuteReader()
+            dt.Load(Reader)
+            DB_CLOSE()
+
+            'ComboBox1.DataSource = dt
+            'ComboBox1.ValueMember = "Account_number"
+            'ComboBox1.DisplayMember = "Customer_name"
+
+            Dim ds1 = New DataSet()
+            ds1.Tables.Add(dt)
+            ComboBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+            ComboBox1.AutoCompleteSource = AutoCompleteSource.CustomSource
+            ComboBox1.AutoCompleteSource = AutoCompleteSource.ListItems
+            Dim combData As New AutoCompleteStringCollection()
+            For Each row As DataRow In ds1.Tables(0).Rows
+                combData.Add(row(1).ToString())
+            Next
+
+            ComboBox1.AutoCompleteCustomSource = combData
+
+            'ComboBox1.AutoCompleteSource = AutoCompleteSource.CustomSource
+            'ComboBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+
+
+            'Dim Data = New AutoCompleteStringCollection()
+            '' Data = dt.TableName()
+            'ComboBox1.AutoCompleteCustomSource = Data
+
+
+
+        Catch ex As Exception
+            DB_CLOSE()
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+
+    
 End Class

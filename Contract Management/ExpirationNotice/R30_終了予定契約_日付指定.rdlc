@@ -617,6 +617,9 @@
                                 <Parameter Name="remarks">
                                   <Value>=Fields!remarks.Value</Value>
                                 </Parameter>
+                                <Parameter Name="old_number">
+                                  <Value>=Fields!Old_number.Value</Value>
+                                </Parameter>
                               </Parameters>
                             </Drillthrough>
                           </Action>
@@ -634,7 +637,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -682,7 +684,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Contract_date.Value</Value>
+                              <Value>=Format(Cdate(Fields!Contract_date.Value),"yyyy/MM/dd")</Value>
                               <Style>
                                 <FontFamily>Meiryo UI</FontFamily>
                                 <Format>yyyy/MM/dd</Format>
@@ -718,7 +720,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Contract_period_starts.Value</Value>
+                              <Value>=Format(Cdate(Fields!Contract_period_starts.Value),"yyyy/MM/dd")</Value>
                               <Style>
                                 <FontFamily>Meiryo UI</FontFamily>
                                 <Format>yyyy/MM/dd</Format>
@@ -790,7 +792,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Scheduled_end_date_of_contract_period.Value</Value>
+                              <Value>=Format(Cdate(Fields!Scheduled_end_date_of_contract_period.Value),"yyyy/MM/dd")</Value>
                               <Style>
                                 <FontFamily>Meiryo UI</FontFamily>
                                 <Format>yyyy/MM/dd</Format>

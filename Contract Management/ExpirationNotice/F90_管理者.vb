@@ -95,6 +95,15 @@ Public Class F90_管理者
         End Try
     End Sub
 
+    'Private Const CP_NOCLOSE_BUTTON As Integer = &H200
+    'Protected Overloads Overrides ReadOnly Property CreateParams() As CreateParams
+    '    Get
+    '        Dim myCp As CreateParams = MyBase.CreateParams
+    '        myCp.ClassStyle = myCp.ClassStyle Or CP_NOCLOSE_BUTTON
+    '        Return myCp
+    '    End Get
+    'End Property
+
     Private Sub Submit_Click(sender As Object, e As EventArgs) Handles Submit.Click
         If Idtxt.Text.Trim() = "" Then
             Exit Sub
@@ -312,6 +321,10 @@ Public Class F90_管理者
         ''    ID.Text = ID.Text.Remove(ID.Text.Length - 1)
         ''End If
 
+    End Sub
+
+    Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles Cancel.Click
+        Me.Close()
     End Sub
 
     'Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick

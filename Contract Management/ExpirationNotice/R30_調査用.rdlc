@@ -768,7 +768,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Contract_date.Value</Value>
+                              <Value>=Format(Cdate(Fields!Contract_date.Value),"yyyy/MM/dd")</Value>
                               <Style>
                                 <FontFamily>Meiryo UI</FontFamily>
                                 <Format>yyyy/MM/dd</Format>
@@ -840,7 +840,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!End_date.Value</Value>
+                              <Value>=Format(Cdate(Fields!End_date.Value),"yyyy/MM/dd")</Value>
                               <Style>
                                 <FontFamily>Meiryo UI</FontFamily>
                                 <Format>yyyy/MM/dd</Format>

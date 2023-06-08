@@ -7,37 +7,38 @@ Public Class F13_部署マスター
 
             Dim F15_部署マスター一覧 As New F15_部署マスター一覧
             Dim account As String = ""
-            If Departmentnumber.Text.Trim() = "" Then
-                Exit Sub
-            End If
+
+            'If Departmentnumber.Text.Trim() = "" Then
+            '    Exit Sub
+            'End If
             If Managementdepartment.Text.Trim() = "" Then
                 Exit Sub
             End If
             'If remarks.Text.Trim() = "" Then
             '    Exit Sub
             'End If
-            DB_OPEN()
+            'DB_OPEN()
             Dim command As MySqlCommand = cnn.CreateCommand()
             Dim Reader As MySqlDataReader
-            Dim query3 As String = "SELECT Count(*) as cnt FROM tm15_department_master where Department_number=@Id "
-            command.CommandText = query3
-            command.Parameters.AddWithValue("Id", Departmentnumber.Text)
-            Reader = command.ExecuteReader()
-            While Reader.Read
-                account = Reader("cnt")
-            End While
-            DB_CLOSE()
-            If (account <> 0) Then
-                MessageBox.Show("部門番号はすでに存在します")
-                Exit Sub
-            End If
+            'Dim query3 As String = "SELECT Count(*) as cnt FROM tm15_department_master where Department_number=@Id "
+            'command.CommandText = query3
+            'command.Parameters.AddWithValue("Id", Departmentnumber.Text)
+            'Reader = command.ExecuteReader()
+            'While Reader.Read
+            '    account = Reader("cnt")
+            'End While
+            'DB_CLOSE()
+            'If (account <> 0) Then
+            '    MessageBox.Show("部門番号はすでに存在します")
+            '    Exit Sub
+            'End If
             DB_OPEN()
-
+            Dim dptno = 0
             Dim query1 As String = "SELECT MAX(Department_number)+1 as acc FROM tm15_department_master "
             command.CommandText = query1
             Reader = command.ExecuteReader()
             While Reader.Read
-                account = Reader("acc")
+                dptno = Reader("acc")
             End While
             DB_CLOSE()
             DB_OPEN()
@@ -56,7 +57,7 @@ Public Class F13_部署マスター
 
             command.Parameters.AddWithValue("Id1", id)
             'command.Parameters.AddWithValue("Account", account)
-            command.Parameters.AddWithValue("DepartNo", Departmentnumber.Text)
+            command.Parameters.AddWithValue("DepartNo", dptno)
             command.Parameters.AddWithValue("Mgtdep", Managementdepartment.Text)
             command.Parameters.AddWithValue("remarks", remarks.Text)
             command.CommandText = query
@@ -66,7 +67,7 @@ Public Class F13_部署マスター
                 MessageBox.Show("データが正常に登録されました。")
             End If
             DB_CLOSE()
-            Departmentnumber.Text = ""
+            'Departmentnumber.Text = ""
             Managementdepartment.Text = ""
             remarks.Text = ""
             Me.Hide()
@@ -77,17 +78,26 @@ Public Class F13_部署マスター
         End Try
     End Sub
 
+    'Private Const CP_NOCLOSE_BUTTON As Integer = &H200
+    'Protected Overloads Overrides ReadOnly Property CreateParams() As CreateParams
+    '    Get
+    '        Dim myCp As CreateParams = MyBase.CreateParams
+    '        myCp.ClassStyle = myCp.ClassStyle Or CP_NOCLOSE_BUTTON
+    '        Return myCp
+    '    End Get
+    'End Property
+
     Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles Cancel.Click
         Me.Close()
     End Sub
 
-    Private Sub Departmentnumber_Validating(sender As Object, e As CancelEventArgs) Handles Departmentnumber.Validating
-        If String.IsNullOrEmpty(Departmentnumber.Text.Trim) Then
-            ErrorProvider1.SetError(Departmentnumber, "部門番号が必要です。")
-        Else
-            ErrorProvider1.SetError(Departmentnumber, String.Empty)
-        End If
-    End Sub
+    'Private Sub Departmentnumber_Validating(sender As Object, e As CancelEventArgs) Handles Departmentnumber.Validating
+    '    If String.IsNullOrEmpty(Departmentnumber.Text.Trim) Then
+    '        ErrorProvider1.SetError(Departmentnumber, "部門番号が必要です。")
+    '    Else
+    '        ErrorProvider1.SetError(Departmentnumber, String.Empty)
+    '    End If
+    'End Sub
 
     Private Sub Managementdepartment_Validating(sender As Object, e As CancelEventArgs) Handles Managementdepartment.Validating
         If String.IsNullOrEmpty(Managementdepartment.Text.Trim) Then
@@ -97,28 +107,28 @@ Public Class F13_部署マスター
         End If
     End Sub
 
-    Private Sub Departmentnumber_TextChanged(sender As Object, e As EventArgs) Handles Departmentnumber.TextChanged
-        If System.Text.RegularExpressions.Regex.IsMatch(Departmentnumber.Text, "[^0-9]") Then
-            MessageBox.Show("数字のみを入力してください。")
-            Departmentnumber.Text = Departmentnumber.Text.Remove(Departmentnumber.Text.Length - 1)
-        End If
-        If Departmentnumber.Text.Length > 5 Then
-            Departmentnumber.Text = Departmentnumber.Text.Remove(Departmentnumber.Text.Length - 1)
+    'Private Sub Departmentnumber_TextChanged(sender As Object, e As EventArgs)
+    '    If System.Text.RegularExpressions.Regex.IsMatch(Departmentnumber.Text, "[^0-9]") Then
+    '        MessageBox.Show("数字のみを入力してください。")
+    '        Departmentnumber.Text = Departmentnumber.Text.Remove(Departmentnumber.Text.Length - 1)
+    '    End If
+    '    If Departmentnumber.Text.Length > 5 Then
+    '        Departmentnumber.Text = Departmentnumber.Text.Remove(Departmentnumber.Text.Length - 1)
 
-            MessageBox.Show("最大5文字を入力してください。")
+    '        MessageBox.Show("最大5文字を入力してください。")
 
-        End If
-        If Departmentnumber.Text <> "" Then
+    '    End If
+    '    If Departmentnumber.Text <> "" Then
 
-            If Convert.ToInt32(Departmentnumber.Text) > Convert.ToInt32("30000") Then
-                Departmentnumber.Text = Departmentnumber.Text.Remove(Departmentnumber.Text.Length - 1)
+    '        If Convert.ToInt32(Departmentnumber.Text) > Convert.ToInt32("30000") Then
+    '            Departmentnumber.Text = Departmentnumber.Text.Remove(Departmentnumber.Text.Length - 1)
 
-                MessageBox.Show("30000まで入力してください。")
+    '            MessageBox.Show("30000まで入力してください。")
 
-            End If
+    '        End If
 
-        End If
-    End Sub
+    '    End If
+    'End Sub
 
     Private Sub F13_部署マスター_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.MaximizeBox = False

@@ -61,7 +61,7 @@ Partial Class F15_部署マスター一覧
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(637, 13)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(0, 14)
+        Me.Label2.Size = New System.Drawing.Size(0, 18)
         Me.Label2.TabIndex = 1
         '
         'Label1
@@ -69,7 +69,7 @@ Partial Class F15_部署マスター一覧
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(25, 13)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(111, 14)
+        Me.Label1.Size = New System.Drawing.Size(142, 18)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "F15_部署マスター一覧"
         '
@@ -138,6 +138,7 @@ Partial Class F15_部署マスター一覧
         Me.Departmentnumber.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Departmentnumber.Multiline = True
         Me.Departmentnumber.Name = "Departmentnumber"
+        Me.Departmentnumber.ReadOnly = True
         Me.Departmentnumber.Size = New System.Drawing.Size(213, 33)
         Me.Departmentnumber.TabIndex = 5
         '
@@ -147,7 +148,7 @@ Partial Class F15_部署マスター一覧
         Me.Del.Location = New System.Drawing.Point(605, 20)
         Me.Del.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Del.Name = "Del"
-        Me.Del.Size = New System.Drawing.Size(15, 14)
+        Me.Del.Size = New System.Drawing.Size(18, 17)
         Me.Del.TabIndex = 4
         Me.Del.UseVisualStyleBackColor = True
         '
@@ -157,7 +158,7 @@ Partial Class F15_部署マスター一覧
         Me.Label6.Location = New System.Drawing.Point(205, 114)
         Me.Label6.Name = "Label6"
         Me.Label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label6.Size = New System.Drawing.Size(33, 14)
+        Me.Label6.Size = New System.Drawing.Size(41, 18)
         Me.Label6.TabIndex = 3
         Me.Label6.Text = "備考 "
         '
@@ -167,7 +168,7 @@ Partial Class F15_部署マスター一覧
         Me.Label5.Location = New System.Drawing.Point(205, 71)
         Me.Label5.Name = "Label5"
         Me.Label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label5.Size = New System.Drawing.Size(51, 14)
+        Me.Label5.Size = New System.Drawing.Size(64, 18)
         Me.Label5.TabIndex = 2
         Me.Label5.Text = "管理部署"
         '
@@ -177,7 +178,7 @@ Partial Class F15_部署マスター一覧
         Me.Label4.Location = New System.Drawing.Point(205, 34)
         Me.Label4.Name = "Label4"
         Me.Label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label4.Size = New System.Drawing.Size(51, 14)
+        Me.Label4.Size = New System.Drawing.Size(64, 18)
         Me.Label4.TabIndex = 1
         Me.Label4.Text = "部署番号"
         '
@@ -186,7 +187,7 @@ Partial Class F15_部署マスター一覧
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(563, 19)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(29, 14)
+        Me.Label3.Size = New System.Drawing.Size(36, 18)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "削除"
         '
@@ -206,7 +207,7 @@ Partial Class F15_部署マスター一覧
         '
         'F15_部署マスター一覧
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(700, 587)

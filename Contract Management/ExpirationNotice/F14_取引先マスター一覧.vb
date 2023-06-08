@@ -4,6 +4,7 @@
 Public Class F14_取引先マスター一覧
     Dim SqlCmd1 As SqlClient.SqlCommand
     Dim DaList1 = New SqlClient.SqlDataAdapter
+    Dim flag As Boolean = False
     Dim cmd As MySqlCommand
     Private Sub F14_取引先マスター一覧_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MaximizeBox = False
@@ -11,82 +12,93 @@ Public Class F14_取引先マスター一覧
 
     End Sub
 
+    'Private Const CP_NOCLOSE_BUTTON As Integer = &H200
+    'Protected Overloads Overrides ReadOnly Property CreateParams() As CreateParams
+    '    Get
+    '        Dim myCp As CreateParams = MyBase.CreateParams
+    '        myCp.ClassStyle = myCp.ClassStyle Or CP_NOCLOSE_BUTTON
+    '        Return myCp
+    '    End Get
+    'End Property
+
 
     Private Sub binddata()
         Try
             Dim Data = New DataTable()
-            DB_OPEN()
-            Dim command As MySqlCommand = cnn.CreateCommand()
-            Dim Reader As MySqlDataReader
-            Dim query As String = "SELECT Account_number as 取引先番号, Customer_name as 取引先名, Yomigana as ヨミガナ,`delete` as 削除 "
-            query += "From tm14_account_master where  `delete`=0"
-            If CName.Text.Trim() <> "" Then
-                query += " and  (Customer_name LIKE  @cname or Yomigana LIKE  @cname)"
-                command.Parameters.AddWithValue("cname", CName.Text + "%")
+            'DB_OPEN()
+            flag = DB_OPEN()
+            If flag = True Then
+                Dim command As MySqlCommand = cnn.CreateCommand()
+                Dim Reader As MySqlDataReader
+                Dim query As String = "SELECT Account_number as 取引先番号, Customer_name as 取引先名, Yomigana as ヨミガナ,`delete` as 削除 "
+                query += "From tm14_account_master where  `delete`=0"
+                If CName.Text.Trim() <> "" Then
+                    query += " and  (Customer_name LIKE  @cname or Yomigana LIKE  @cname)"
+                    command.Parameters.AddWithValue("cname", "%" + CName.Text + "%")
+                End If
+                command.CommandText = query
+                Reader = command.ExecuteReader()
+                Dim dt = New DataTable()
+                Data.Load(Reader)
+
+                DB_CLOSE()
+
+                dt.Columns.Add("取引先番号", GetType(Integer))
+                dt.Columns.Add("取引先名", GetType(String))
+                dt.Columns.Add("ヨミガナ", GetType(String))
+                dt.Columns.Add("削除", GetType(Boolean))
+
+                For i As Integer = 0 To Data.Rows.Count - 1
+                    Dim col1 As Integer
+                    Dim col2 As String
+                    Dim col3 As String
+                    Dim col4 As Boolean
+
+                    If Not IsDBNull(Data.Rows(i)("取引先番号")) Then
+                        col1 = Convert.ToInt32(Data.Rows(i)("取引先番号"))
+                    Else
+                        col1 = 0
+                    End If
+
+                    If Not IsDBNull(Data.Rows(i)("取引先名")) Then
+                        col2 = Convert.ToString(Data.Rows(i)("取引先名"))
+                    Else
+                        col2 = ""
+                    End If
+
+                    If Not IsDBNull(Data.Rows(i)("ヨミガナ")) Then
+                        col3 = Convert.ToString(Data.Rows(i)("ヨミガナ"))
+                    Else
+                        col3 = ""
+                    End If
+
+                    If Not IsDBNull(Data.Rows(i)("削除")) Then
+                        col4 = Convert.ToBoolean(Data.Rows(i)("削除"))
+                    Else
+                        col4 = 0
+                    End If
+                    dt.Rows.Add(col1, col2, col3, col4)
+                Next
+
+                DataGridView2.Columns.Clear()
+                DataGridView2.AllowUserToAddRows = False
+                DataGridView2.DataSource = dt
+                Dim Editlink As DataGridViewLinkColumn = New DataGridViewLinkColumn()
+                Editlink.UseColumnTextForLinkValue = True
+                Editlink.HeaderText = "編集"
+                Editlink.DataPropertyName = "取引先番号"
+                Editlink.LinkBehavior = LinkBehavior.SystemDefault
+                Editlink.Text = "編集"
+
+
+
+                DataGridView2.Columns.Add(Editlink)
+
+                DataGridView2.Columns(0).ReadOnly = True
+                DataGridView2.Columns(1).ReadOnly = True
+                DataGridView2.Columns(2).ReadOnly = True
             End If
-            command.CommandText = query
-            Reader = command.ExecuteReader()
-            Dim dt = New DataTable()
-            Data.Load(Reader)
 
-            DB_CLOSE()
-
-            dt.Columns.Add("取引先番号", GetType(Integer))
-            dt.Columns.Add("取引先名", GetType(String))
-            dt.Columns.Add("ヨミガナ", GetType(String))
-            dt.Columns.Add("削除", GetType(Boolean))
-
-            For i As Integer = 0 To Data.Rows.Count - 1
-                Dim col1 As Integer
-                Dim col2 As String
-                Dim col3 As String
-                Dim col4 As Boolean
-
-                If Not IsDBNull(Data.Rows(i)("取引先番号")) Then
-                    col1 = Convert.ToInt32(Data.Rows(i)("取引先番号"))
-                Else
-                    col1 = 0
-                End If
-
-                If Not IsDBNull(Data.Rows(i)("取引先名")) Then
-                    col2 = Convert.ToString(Data.Rows(i)("取引先名"))
-                Else
-                    col2 = ""
-                End If
-
-                If Not IsDBNull(Data.Rows(i)("ヨミガナ")) Then
-                    col3 = Convert.ToString(Data.Rows(i)("ヨミガナ"))
-                Else
-                    col3 = ""
-                End If
-
-                If Not IsDBNull(Data.Rows(i)("削除")) Then
-                    col4 = Convert.ToBoolean(Data.Rows(i)("削除"))
-                Else
-                    col4 = 0
-                End If
-                dt.Rows.Add(col1, col2, col3, col4)
-            Next
-
-            DataGridView2.Columns.Clear()
-            DataGridView2.AllowUserToAddRows = False
-            DataGridView2.DataSource = dt
-            Dim Editlink As DataGridViewLinkColumn = New DataGridViewLinkColumn()
-            Editlink.UseColumnTextForLinkValue = True
-            Editlink.HeaderText = "編集
-"
-            Editlink.DataPropertyName = "取引先番号"
-            Editlink.LinkBehavior = LinkBehavior.SystemDefault
-            Editlink.Text = "編集
-"
-
-
-
-            DataGridView2.Columns.Add(Editlink)
-
-            DataGridView2.Columns(0).ReadOnly = True
-            DataGridView2.Columns(1).ReadOnly = True
-            DataGridView2.Columns(2).ReadOnly = True
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -200,5 +212,19 @@ Public Class F14_取引先マスター一覧
                 'End If
             End If
         End If
+    End Sub
+
+    Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles Cancel.Click
+        Me.Close()
+    End Sub
+
+    Private Sub CName_KeyDown(sender As Object, e As KeyEventArgs) Handles CName.KeyDown
+        Try
+            If e.KeyCode = Keys.Enter Or e.KeyCode = Keys.Return Then
+                Me.binddata()
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 End Class

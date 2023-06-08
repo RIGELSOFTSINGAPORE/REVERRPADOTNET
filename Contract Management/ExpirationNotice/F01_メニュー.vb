@@ -1,4 +1,7 @@
-﻿Public Class F01_メニュー
+﻿Imports MySql.Data.MySqlClient
+Imports System.Configuration
+
+Public Class F01_メニュー
     Private Sub マスター入力_Click(sender As Object, e As EventArgs) Handles マスター入力.Click
         Cursor = System.Windows.Forms.Cursors.WaitCursor
         Dim F00_Form11 As New F11_マスター入力メニュー
@@ -7,7 +10,14 @@
         Me.Show()
         Cursor = System.Windows.Forms.Cursors.Default
     End Sub
-
+    'Private Const CP_NOCLOSE_BUTTON As Integer = &H200
+    'Protected Overloads Overrides ReadOnly Property CreateParams() As CreateParams
+    '    Get
+    '        Dim myCp As CreateParams = MyBase.CreateParams
+    '        myCp.ClassStyle = myCp.ClassStyle Or CP_NOCLOSE_BUTTON
+    '        Return myCp
+    '    End Get
+    'End Property
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Cursor = System.Windows.Forms.Cursors.WaitCursor
         Dim F00_Form30 As New F30_満了レポート
@@ -37,6 +47,7 @@
 
     Private Sub F01_メニュー_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.MaximizeBox = False
+        backup()
 
     End Sub
 
@@ -48,4 +59,34 @@
         Me.Show()
         Cursor = System.Windows.Forms.Cursors.Default
     End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Try
+            'Me.Close()
+            Application.Exit()
+            End
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+    Private Sub backup()
+        Dim ConnectionString1 As String = ConfigurationManager.ConnectionStrings("cnstr").ConnectionString
+        Dim folderName As String = "C:\Backup"
+        Dim pathString As String = System.IO.Path.Combine(folderName, DateTime.Now.ToString("yyyy"))
+        pathString = System.IO.Path.Combine(pathString, DateTime.Now.ToString("MMMM"))
+        System.IO.Directory.CreateDirectory(pathString)
+        Dim filename As String = DateTime.Now.ToString("yyyy-MM-dd") & ".sql"
+
+        Dim file As String = pathString & "\" + filename
+
+
+        Dim cmd As MySqlCommand = New MySqlCommand
+        cmd.Connection = cnn
+        cnn.Open()
+        Dim mb As MySqlBackup = New MySqlBackup(cmd)
+        mb.ExportToFile(file)
+        cnn.Close()
+    End Sub
+
+
 End Class

@@ -242,9 +242,9 @@ Partial Class F20_契約書一覧
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(727, 73)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(64, 18)
+        Me.Label10.Size = New System.Drawing.Size(58, 18)
         Me.Label10.TabIndex = 28
-        Me.Label10.Text = "管理番号"
+        Me.Label10.Text = "キー番号"
         '
         'TextBox5
         '

@@ -48,17 +48,20 @@ Partial Class R30_終了予定契約_日付指定
         Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
         Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "ExpirationNotice.R30_終了予定契約_日付指定.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(1, 2)
+        Me.ReportViewer1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.PageCountMode = Microsoft.Reporting.WinForms.PageCountMode.Actual
         Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(1264, 538)
+        Me.ReportViewer1.Size = New System.Drawing.Size(1685, 662)
         Me.ReportViewer1.TabIndex = 0
         '
         'R30_終了予定契約_日付指定
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1264, 545)
+        Me.ClientSize = New System.Drawing.Size(1685, 671)
         Me.Controls.Add(Me.ReportViewer1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "R30_終了予定契約_日付指定"

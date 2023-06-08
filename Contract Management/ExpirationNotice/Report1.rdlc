@@ -778,6 +778,9 @@
                                     <Parameter Name="remarks">
                                       <Value>=Fields!remarks.Value</Value>
                                     </Parameter>
+                                     <Parameter Name="old_number">
+                                  <Value>=Fields!Old_number.Value</Value>
+                                </Parameter>
                                   </Parameters>
                                 </Drillthrough>
                               </Action>
@@ -1332,6 +1335,9 @@
                       <Parameter Name="備考">
                         <Value>=Fields!remarks.Value</Value>
                       </Parameter>
+                       <Parameter Name="old_number">
+                                  <Value>=Fields!Old_number.Value</Value>
+                                </Parameter>
                     </Parameters>
                   </Drillthrough>
                 </Action>

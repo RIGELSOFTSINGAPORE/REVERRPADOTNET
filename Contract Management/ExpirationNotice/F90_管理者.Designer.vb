@@ -37,6 +37,7 @@ Partial Class F90_管理者
         Me.ID = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Cancel = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,12 +60,13 @@ Partial Class F90_管理者
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label1.Location = New System.Drawing.Point(23, 10)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(109, 24)
+        Me.Label1.Size = New System.Drawing.Size(139, 29)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "F90_管理者"
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.Cancel)
         Me.Panel2.Controls.Add(Me.Submit)
         Me.Panel2.Controls.Add(Me.Remarks)
         Me.Panel2.Controls.Add(Me.Name)
@@ -82,7 +84,7 @@ Partial Class F90_管理者
         '
         'Submit
         '
-        Me.Submit.Location = New System.Drawing.Point(333, 289)
+        Me.Submit.Location = New System.Drawing.Point(256, 288)
         Me.Submit.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Submit.Name = "Submit"
         Me.Submit.Size = New System.Drawing.Size(75, 35)
@@ -134,7 +136,7 @@ Partial Class F90_管理者
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(64, 165)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(29, 14)
+        Me.Label5.Size = New System.Drawing.Size(36, 18)
         Me.Label5.TabIndex = 3
         Me.Label5.Text = "備考"
         '
@@ -143,7 +145,7 @@ Partial Class F90_管理者
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(55, 117)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(29, 14)
+        Me.Label4.Size = New System.Drawing.Size(36, 18)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "名前"
         '
@@ -152,7 +154,7 @@ Partial Class F90_管理者
         Me.Winログイン名.AutoSize = True
         Me.Winログイン名.Location = New System.Drawing.Point(13, 66)
         Me.Winログイン名.Name = "Winログイン名"
-        Me.Winログイン名.Size = New System.Drawing.Size(71, 14)
+        Me.Winログイン名.Size = New System.Drawing.Size(90, 18)
         Me.Winログイン名.TabIndex = 1
         Me.Winログイン名.Text = "Winログイン名"
         '
@@ -161,7 +163,7 @@ Partial Class F90_管理者
         Me.ID.AutoSize = True
         Me.ID.Location = New System.Drawing.Point(79, 19)
         Me.ID.Name = "ID"
-        Me.ID.Size = New System.Drawing.Size(19, 14)
+        Me.ID.Size = New System.Drawing.Size(24, 18)
         Me.ID.TabIndex = 0
         Me.ID.Text = "ID"
         '
@@ -180,9 +182,18 @@ Partial Class F90_管理者
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'Cancel
+        '
+        Me.Cancel.Location = New System.Drawing.Point(338, 288)
+        Me.Cancel.Name = "Cancel"
+        Me.Cancel.Size = New System.Drawing.Size(75, 35)
+        Me.Cancel.TabIndex = 9
+        Me.Cancel.Text = "Cancel"
+        Me.Cancel.UseVisualStyleBackColor = True
+        '
         'F90_管理者
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.ClientSize = New System.Drawing.Size(809, 683)
@@ -191,7 +202,7 @@ Partial Class F90_管理者
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Meiryo UI", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        'Me.Name = "F90_管理者"
+        ' Me.Name = "F90_管理者"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
@@ -216,4 +227,5 @@ Partial Class F90_管理者
     Friend WithEvents Winログイン名 As Label
     Friend WithEvents ID As Label
     Friend WithEvents ErrorProvider1 As ErrorProvider
+    Friend WithEvents Cancel As Button
 End Class

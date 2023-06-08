@@ -7,14 +7,14 @@
     <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Contract Management.exe.manifest" size="60590">
+    <dependentAssembly dependencyType="install" codebase="Contract Management.exe.manifest" size="63427">
       <assemblyIdentity name="Contract Management.exe" version="1.0.0.11" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>wdWZ2eYec44PNpl3Kb53dr4R1zlX36GhLkrB8oBmQns=</dsig:DigestValue>
+        <dsig:DigestValue>lA76I9NvGiPBIFLPVuDu/Z0+iNs+Y4T/87C6vQj823M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
