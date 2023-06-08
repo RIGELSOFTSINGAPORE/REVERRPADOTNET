@@ -370,7 +370,7 @@ namespace PennaMiddleWare.Controllers
 
 
                     List<Schdates> schdt = new List<Schdates>();
-                    schdt = Common.schdatNew(nwstdate, nweddate);
+                    //schdt = Common.schdatNew(nwstdate, nweddate);
                     reccount = 0;
                     WebApiCount = 0;
                     foreach (Schdates scdat in schdt)
