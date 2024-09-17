@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+    </configSections>
+    <startup>
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.8" />
+    </startup>
+	<connectionStrings>
+		 <add name="cnstr" connectionString="Server=localhost; Database=contractmanagement; user id=gssachq; password=togo2@20;"/>
+		<!--		<add name="cnstr" connectionString="Server=localhost; Database=contractmanagement; user id=root; password=123@r;" />  -->
+  
+ </connectionStrings>
+ <system.windows.forms jitDebugging="true" />
+</configuration>
